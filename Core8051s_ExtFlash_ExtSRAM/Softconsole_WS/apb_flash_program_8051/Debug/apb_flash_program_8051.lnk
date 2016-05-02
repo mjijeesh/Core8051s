@@ -1,0 +1,15 @@
+-myuxi
+-Y
+-z
+-b HOME = 0x0000
+-b ISEG = 0x0000
+-b BSEG = 0x0000
+-k E:\Microsemi\Libero_v10.1\SoftConsole\Sourcery-G++\bin\..\lib\small
+-l mcs51
+-l libsdcc
+-l libint
+-l liblong
+-l libfloat
+./apb_flash_loader.rel
+
+-e

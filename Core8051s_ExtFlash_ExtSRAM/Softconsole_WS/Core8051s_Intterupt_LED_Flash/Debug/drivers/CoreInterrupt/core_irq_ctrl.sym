@@ -1,0 +1,1436 @@
+ASxxxx Assembler V01.70 + NoICE + SDCC mods + Flat24 Feb-1999  (Intel 8051), page 1.
+
+Symbol Table
+
+    A                                                              00D6 
+ 14 A$core_irq_ctrl$1000                                           03A3 GR
+ 14 A$core_irq_ctrl$1001                                           03A6 GR
+ 14 A$core_irq_ctrl$1005                                           03A7 GR
+ 14 A$core_irq_ctrl$1006                                           03AA GR
+ 14 A$core_irq_ctrl$1007                                           03AB GR
+ 14 A$core_irq_ctrl$1010                                           03AC GR
+ 14 A$core_irq_ctrl$1013                                           03AF GR
+ 14 A$core_irq_ctrl$1014                                           03B1 GR
+ 14 A$core_irq_ctrl$1018                                           03B4 GR
+ 14 A$core_irq_ctrl$1019                                           03B7 GR
+ 14 A$core_irq_ctrl$1020                                           03B9 GR
+ 14 A$core_irq_ctrl$1023                                           03BA GR
+ 14 A$core_irq_ctrl$1024                                           03BD GR
+ 14 A$core_irq_ctrl$1025                                           03BF GR
+ 14 A$core_irq_ctrl$1028                                           03C0 GR
+ 14 A$core_irq_ctrl$1029                                           03C3 GR
+ 14 A$core_irq_ctrl$1030                                           03C5 GR
+ 14 A$core_irq_ctrl$1033                                           03C6 GR
+ 14 A$core_irq_ctrl$1034                                           03C9 GR
+ 14 A$core_irq_ctrl$1035                                           03CB GR
+ 14 A$core_irq_ctrl$1038                                           03CC GR
+ 14 A$core_irq_ctrl$1039                                           03CF GR
+ 14 A$core_irq_ctrl$1040                                           03D1 GR
+ 14 A$core_irq_ctrl$1043                                           03D2 GR
+ 14 A$core_irq_ctrl$1044                                           03D5 GR
+ 14 A$core_irq_ctrl$1045                                           03D7 GR
+ 14 A$core_irq_ctrl$1048                                           03D8 GR
+ 14 A$core_irq_ctrl$1049                                           03DB GR
+ 14 A$core_irq_ctrl$1050                                           03DD GR
+ 14 A$core_irq_ctrl$1053                                           03DE GR
+ 14 A$core_irq_ctrl$1054                                           03E1 GR
+ 14 A$core_irq_ctrl$1055                                           03E3 GR
+ 14 A$core_irq_ctrl$1058                                           03E4 GR
+ 14 A$core_irq_ctrl$1059                                           03E7 GR
+ 14 A$core_irq_ctrl$1060                                           03E9 GR
+ 14 A$core_irq_ctrl$1063                                           03EA GR
+ 14 A$core_irq_ctrl$1064                                           03ED GR
+ 14 A$core_irq_ctrl$1065                                           03EF GR
+ 14 A$core_irq_ctrl$1068                                           03F0 GR
+ 14 A$core_irq_ctrl$1069                                           03F3 GR
+ 14 A$core_irq_ctrl$1070                                           03F5 GR
+ 14 A$core_irq_ctrl$1073                                           03F6 GR
+ 14 A$core_irq_ctrl$1074                                           03F9 GR
+ 14 A$core_irq_ctrl$1075                                           03FB GR
+ 14 A$core_irq_ctrl$1078                                           03FC GR
+ 14 A$core_irq_ctrl$1079                                           03FF GR
+ 14 A$core_irq_ctrl$1080                                           0401 GR
+ 14 A$core_irq_ctrl$1083                                           0402 GR
+ 14 A$core_irq_ctrl$1084                                           0405 GR
+ 14 A$core_irq_ctrl$1085                                           0407 GR
+ 14 A$core_irq_ctrl$1088                                           0408 GR
+ 14 A$core_irq_ctrl$1089                                           040B GR
+ 14 A$core_irq_ctrl$1090                                           040D GR
+ 14 A$core_irq_ctrl$1093                                           040E GR
+ 14 A$core_irq_ctrl$1094                                           0411 GR
+ 14 A$core_irq_ctrl$1095                                           0413 GR
+ 14 A$core_irq_ctrl$1098                                           0414 GR
+ 14 A$core_irq_ctrl$1099                                           0417 GR
+ 14 A$core_irq_ctrl$1100                                           0419 GR
+ 14 A$core_irq_ctrl$1103                                           041A GR
+ 14 A$core_irq_ctrl$1104                                           041D GR
+ 14 A$core_irq_ctrl$1105                                           041F GR
+ 14 A$core_irq_ctrl$1108                                           0420 GR
+ 14 A$core_irq_ctrl$1109                                           0423 GR
+ 14 A$core_irq_ctrl$1110                                           0425 GR
+ 14 A$core_irq_ctrl$1113                                           0426 GR
+ 14 A$core_irq_ctrl$1114                                           0429 GR
+ 14 A$core_irq_ctrl$1115                                           042B GR
+ 14 A$core_irq_ctrl$1118                                           042C GR
+ 14 A$core_irq_ctrl$1119                                           042F GR
+ 14 A$core_irq_ctrl$1120                                           0431 GR
+ 14 A$core_irq_ctrl$1123                                           0432 GR
+ 14 A$core_irq_ctrl$1124                                           0435 GR
+ 14 A$core_irq_ctrl$1125                                           0437 GR
+ 14 A$core_irq_ctrl$1128                                           0438 GR
+ 14 A$core_irq_ctrl$1129                                           043B GR
+ 14 A$core_irq_ctrl$1130                                           043D GR
+ 14 A$core_irq_ctrl$1133                                           043E GR
+ 14 A$core_irq_ctrl$1134                                           0441 GR
+ 14 A$core_irq_ctrl$1135                                           0443 GR
+ 14 A$core_irq_ctrl$1138                                           0444 GR
+ 14 A$core_irq_ctrl$1139                                           0447 GR
+ 14 A$core_irq_ctrl$1140                                           0449 GR
+ 14 A$core_irq_ctrl$1143                                           044A GR
+ 14 A$core_irq_ctrl$1144                                           044D GR
+ 14 A$core_irq_ctrl$1145                                           044F GR
+ 14 A$core_irq_ctrl$1148                                           0450 GR
+ 14 A$core_irq_ctrl$1149                                           0453 GR
+ 14 A$core_irq_ctrl$1150                                           0455 GR
+ 14 A$core_irq_ctrl$1153                                           0456 GR
+ 14 A$core_irq_ctrl$1154                                           0459 GR
+ 14 A$core_irq_ctrl$1155                                           045B GR
+ 14 A$core_irq_ctrl$1158                                           045C GR
+ 14 A$core_irq_ctrl$1159                                           045F GR
+ 14 A$core_irq_ctrl$1160                                           0461 GR
+ 14 A$core_irq_ctrl$1163                                           0462 GR
+ 14 A$core_irq_ctrl$1164                                           0465 GR
+ 14 A$core_irq_ctrl$1165                                           0467 GR
+ 14 A$core_irq_ctrl$1168                                           0468 GR
+ 14 A$core_irq_ctrl$1169                                           046B GR
+ 14 A$core_irq_ctrl$1170                                           046D GR
+ 14 A$core_irq_ctrl$1173                                           046E GR
+ 14 A$core_irq_ctrl$1174                                           0471 GR
+ 14 A$core_irq_ctrl$1175                                           0473 GR
+ 14 A$core_irq_ctrl$1178                                           0474 GR
+ 14 A$core_irq_ctrl$1179                                           0477 GR
+ 14 A$core_irq_ctrl$1180                                           0479 GR
+ 14 A$core_irq_ctrl$1183                                           047A GR
+ 14 A$core_irq_ctrl$1184                                           047D GR
+ 14 A$core_irq_ctrl$1185                                           047F GR
+ 14 A$core_irq_ctrl$1188                                           0480 GR
+ 14 A$core_irq_ctrl$1189                                           0483 GR
+ 14 A$core_irq_ctrl$1190                                           0485 GR
+ 14 A$core_irq_ctrl$1193                                           0486 GR
+ 14 A$core_irq_ctrl$1194                                           0489 GR
+ 14 A$core_irq_ctrl$1195                                           048B GR
+ 14 A$core_irq_ctrl$1198                                           048C GR
+ 14 A$core_irq_ctrl$1199                                           048F GR
+ 14 A$core_irq_ctrl$1200                                           0491 GR
+ 14 A$core_irq_ctrl$1203                                           0492 GR
+ 14 A$core_irq_ctrl$1204                                           0495 GR
+ 14 A$core_irq_ctrl$1205                                           0497 GR
+ 14 A$core_irq_ctrl$1208                                           0498 GR
+ 14 A$core_irq_ctrl$1209                                           049B GR
+ 14 A$core_irq_ctrl$1210                                           049D GR
+ 14 A$core_irq_ctrl$1213                                           049E GR
+ 14 A$core_irq_ctrl$1214                                           04A1 GR
+ 14 A$core_irq_ctrl$1215                                           04A3 GR
+ 14 A$core_irq_ctrl$1218                                           04A4 GR
+ 14 A$core_irq_ctrl$1219                                           04A7 GR
+ 14 A$core_irq_ctrl$1220                                           04A9 GR
+ 14 A$core_irq_ctrl$1222                                           04AA GR
+ 14 A$core_irq_ctrl$1223                                           04AD GR
+ 14 A$core_irq_ctrl$1224                                           04AF GR
+ 14 A$core_irq_ctrl$1225                                           04B0 GR
+ 14 A$core_irq_ctrl$1226                                           04B1 GR
+ 14 A$core_irq_ctrl$1227                                           04B2 GR
+ 14 A$core_irq_ctrl$1228                                           04B3 GR
+ 14 A$core_irq_ctrl$1229                                           04B4 GR
+ 14 A$core_irq_ctrl$1230                                           04B5 GR
+ 14 A$core_irq_ctrl$1231                                           04B6 GR
+ 14 A$core_irq_ctrl$1233                                           04B7 GR
+ 14 A$core_irq_ctrl$1234                                           04BA GR
+ 14 A$core_irq_ctrl$1235                                           04BD GR
+ 14 A$core_irq_ctrl$1236                                           04C0 GR
+ 14 A$core_irq_ctrl$1241                                           04C3 GR
+ 14 A$core_irq_ctrl$1242                                           04C6 GR
+ 14 A$core_irq_ctrl$1243                                           04C7 GR
+ 14 A$core_irq_ctrl$1245                                           04C8 GR
+ 14 A$core_irq_ctrl$1246                                           04CA GR
+ 14 A$core_irq_ctrl$1247                                           04CC GR
+ 14 A$core_irq_ctrl$1248                                           04CE GR
+ 14 A$core_irq_ctrl$1249                                           04D0 GR
+ 14 A$core_irq_ctrl$1251                                           04D2 GR
+ 14 A$core_irq_ctrl$1252                                           04D3 GR
+ 14 A$core_irq_ctrl$1253                                           04D5 GR
+ 14 A$core_irq_ctrl$1254                                           04D6 GR
+ 14 A$core_irq_ctrl$1255                                           04D7 GR
+ 14 A$core_irq_ctrl$1256                                           04D8 GR
+ 14 A$core_irq_ctrl$1258                                           04D9 GR
+ 14 A$core_irq_ctrl$1260                                           04DC GR
+ 14 A$core_irq_ctrl$1261                                           04DD GR
+ 14 A$core_irq_ctrl$1262                                           04DE GR
+ 14 A$core_irq_ctrl$1263                                           04E0 GR
+ 14 A$core_irq_ctrl$1264                                           04E1 GR
+ 14 A$core_irq_ctrl$1268                                           04E2 GR
+ 14 A$core_irq_ctrl$1269                                           04E5 GR
+ 14 A$core_irq_ctrl$1270                                           04E6 GR
+ 14 A$core_irq_ctrl$1271                                           04E7 GR
+ 14 A$core_irq_ctrl$1272                                           04E8 GR
+ 14 A$core_irq_ctrl$1273                                           04E9 GR
+ 14 A$core_irq_ctrl$1276                                           04EA GR
+ 14 A$core_irq_ctrl$1277                                           04EC GR
+ 14 A$core_irq_ctrl$1278                                           04EE GR
+ 14 A$core_irq_ctrl$1279                                           04EF GR
+ 14 A$core_irq_ctrl$1280                                           04F1 GR
+ 14 A$core_irq_ctrl$1281                                           04F3 GR
+ 14 A$core_irq_ctrl$1283                                           04F4 GR
+ 14 A$core_irq_ctrl$1284                                           04F7 GR
+ 14 A$core_irq_ctrl$1285                                           04F8 GR
+ 14 A$core_irq_ctrl$1286                                           04F9 GR
+ 14 A$core_irq_ctrl$1287                                           04FA GR
+ 14 A$core_irq_ctrl$1288                                           04FB GR
+ 14 A$core_irq_ctrl$1289                                           04FC GR
+ 14 A$core_irq_ctrl$1290                                           04FD GR
+ 14 A$core_irq_ctrl$1291                                           04FE GR
+ 14 A$core_irq_ctrl$1292                                           04FF GR
+ 14 A$core_irq_ctrl$1293                                           0500 GR
+ 14 A$core_irq_ctrl$1294                                           0501 GR
+ 14 A$core_irq_ctrl$1296                                           0502 GR
+ 14 A$core_irq_ctrl$1297                                           0504 GR
+ 14 A$core_irq_ctrl$1298                                           0506 GR
+ 14 A$core_irq_ctrl$1302                                           0509 GR
+ 14 A$core_irq_ctrl$1321                                           050A GR
+ 14 A$core_irq_ctrl$1322                                           050D GR
+ 14 A$core_irq_ctrl$1323                                           050E GR
+ 14 A$core_irq_ctrl$1324                                           050F GR
+ 14 A$core_irq_ctrl$1325                                           0510 GR
+ 14 A$core_irq_ctrl$1326                                           0511 GR
+ 14 A$core_irq_ctrl$1329                                           0512 GR
+ 14 A$core_irq_ctrl$1330                                           0514 GR
+ 14 A$core_irq_ctrl$1331                                           0516 GR
+ 14 A$core_irq_ctrl$1332                                           0517 GR
+ 14 A$core_irq_ctrl$1333                                           0519 GR
+ 14 A$core_irq_ctrl$1334                                           051B GR
+ 14 A$core_irq_ctrl$1336                                           051C GR
+ 14 A$core_irq_ctrl$1337                                           051E GR
+ 14 A$core_irq_ctrl$1338                                           0520 GR
+ 14 A$core_irq_ctrl$1339                                           0523 GR
+ 14 A$core_irq_ctrl$1340                                           0525 GR
+ 14 A$core_irq_ctrl$1341                                           0527 GR
+ 14 A$core_irq_ctrl$1342                                           0529 GR
+ 14 A$core_irq_ctrl$1346                                           052A GR
+ 14 A$core_irq_ctrl$1347                                           052D GR
+ 14 A$core_irq_ctrl$1348                                           052F GR
+ 14 A$core_irq_ctrl$1351                                           0530 GR
+ 14 A$core_irq_ctrl$1352                                           0533 GR
+ 14 A$core_irq_ctrl$1353                                           0534 GR
+ 14 A$core_irq_ctrl$1356                                           0535 GR
+ 14 A$core_irq_ctrl$1359                                           0538 GR
+ 14 A$core_irq_ctrl$1360                                           053A GR
+ 14 A$core_irq_ctrl$1365                                           053D GR
+ 14 A$core_irq_ctrl$1366                                           053F GR
+ 14 A$core_irq_ctrl$1367                                           0541 GR
+ 14 A$core_irq_ctrl$1368                                           0543 GR
+ 14 A$core_irq_ctrl$1369                                           0545 GR
+ 14 A$core_irq_ctrl$1371                                           0547 GR
+ 14 A$core_irq_ctrl$1372                                           0548 GR
+ 14 A$core_irq_ctrl$1373                                           054A GR
+ 14 A$core_irq_ctrl$1374                                           054B GR
+ 14 A$core_irq_ctrl$1375                                           054C GR
+ 14 A$core_irq_ctrl$1376                                           054D GR
+ 14 A$core_irq_ctrl$1378                                           054E GR
+ 14 A$core_irq_ctrl$1380                                           0551 GR
+ 14 A$core_irq_ctrl$1382                                           0553 GR
+ 14 A$core_irq_ctrl$1383                                           0554 GR
+ 14 A$core_irq_ctrl$1384                                           0555 GR
+ 14 A$core_irq_ctrl$1385                                           0557 GR
+ 14 A$core_irq_ctrl$1386                                           0558 GR
+ 14 A$core_irq_ctrl$1388                                           0559 GR
+ 14 A$core_irq_ctrl$1389                                           055A GR
+ 14 A$core_irq_ctrl$1390                                           055C GR
+ 14 A$core_irq_ctrl$1391                                           055D GR
+ 14 A$core_irq_ctrl$1392                                           055F GR
+ 14 A$core_irq_ctrl$1393                                           0560 GR
+ 14 A$core_irq_ctrl$1394                                           0562 GR
+ 14 A$core_irq_ctrl$1395                                           0563 GR
+ 14 A$core_irq_ctrl$1399                                           0565 GR
+ 14 A$core_irq_ctrl$1400                                           0566 GR
+ 14 A$core_irq_ctrl$1401                                           0567 GR
+ 14 A$core_irq_ctrl$1402                                           0568 GR
+ 14 A$core_irq_ctrl$1404                                           0569 GR
+ 14 A$core_irq_ctrl$1406                                           056B GR
+ 14 A$core_irq_ctrl$1407                                           056D GR
+ 14 A$core_irq_ctrl$1414                                           0570 GR
+ 14 A$core_irq_ctrl$1415                                           0571 GR
+ 14 A$core_irq_ctrl$1416                                           0573 GR
+ 14 A$core_irq_ctrl$1418                                           0574 GR
+ 14 A$core_irq_ctrl$1419                                           0576 GR
+ 14 A$core_irq_ctrl$1420                                           0578 GR
+ 14 A$core_irq_ctrl$1421                                           057A GR
+ 14 A$core_irq_ctrl$1422                                           057C GR
+ 14 A$core_irq_ctrl$1423                                           057E GR
+ 14 A$core_irq_ctrl$1426                                           0580 GR
+ 14 A$core_irq_ctrl$1427                                           0581 GR
+ 14 A$core_irq_ctrl$1428                                           0582 GR
+ 14 A$core_irq_ctrl$1429                                           0583 GR
+ 14 A$core_irq_ctrl$1430                                           0584 GR
+ 14 A$core_irq_ctrl$1432                                           0585 GR
+ 14 A$core_irq_ctrl$1433                                           0586 GR
+ 14 A$core_irq_ctrl$1435                                           0587 GR
+ 14 A$core_irq_ctrl$1436                                           0589 GR
+ 14 A$core_irq_ctrl$1442                                           058C GR
+ 14 A$core_irq_ctrl$1443                                           058F GR
+ 14 A$core_irq_ctrl$1444                                           0591 GR
+ 14 A$core_irq_ctrl$1447                                           0592 GR
+ 14 A$core_irq_ctrl$1448                                           0595 GR
+ 14 A$core_irq_ctrl$1449                                           0597 GR
+ 14 A$core_irq_ctrl$1452                                           0598 GR
+ 14 A$core_irq_ctrl$1453                                           059B GR
+ 14 A$core_irq_ctrl$1454                                           059D GR
+ 14 A$core_irq_ctrl$1457                                           059E GR
+ 14 A$core_irq_ctrl$1458                                           05A1 GR
+ 14 A$core_irq_ctrl$1459                                           05A3 GR
+ 14 A$core_irq_ctrl$1462                                           05A4 GR
+ 14 A$core_irq_ctrl$1463                                           05A7 GR
+ 14 A$core_irq_ctrl$1464                                           05A9 GR
+ 14 A$core_irq_ctrl$1467                                           05AA GR
+ 14 A$core_irq_ctrl$1468                                           05AD GR
+ 14 A$core_irq_ctrl$1469                                           05AF GR
+ 14 A$core_irq_ctrl$1472                                           05B0 GR
+ 14 A$core_irq_ctrl$1473                                           05B3 GR
+ 14 A$core_irq_ctrl$1474                                           05B5 GR
+ 14 A$core_irq_ctrl$1477                                           05B6 GR
+ 14 A$core_irq_ctrl$1478                                           05B9 GR
+ 14 A$core_irq_ctrl$1479                                           05BB GR
+ 14 A$core_irq_ctrl$1482                                           05BC GR
+ 14 A$core_irq_ctrl$1483                                           05BF GR
+ 14 A$core_irq_ctrl$1484                                           05C1 GR
+ 14 A$core_irq_ctrl$1487                                           05C2 GR
+ 14 A$core_irq_ctrl$1488                                           05C5 GR
+ 14 A$core_irq_ctrl$1489                                           05C7 GR
+ 14 A$core_irq_ctrl$1492                                           05C8 GR
+ 14 A$core_irq_ctrl$1493                                           05CB GR
+ 14 A$core_irq_ctrl$1494                                           05CD GR
+ 14 A$core_irq_ctrl$1497                                           05CE GR
+ 14 A$core_irq_ctrl$1498                                           05D1 GR
+ 14 A$core_irq_ctrl$1499                                           05D3 GR
+ 14 A$core_irq_ctrl$1502                                           05D4 GR
+ 14 A$core_irq_ctrl$1503                                           05D7 GR
+ 14 A$core_irq_ctrl$1504                                           05D9 GR
+ 14 A$core_irq_ctrl$1507                                           05DA GR
+ 14 A$core_irq_ctrl$1508                                           05DD GR
+ 14 A$core_irq_ctrl$1509                                           05DF GR
+ 14 A$core_irq_ctrl$1512                                           05E0 GR
+ 14 A$core_irq_ctrl$1513                                           05E3 GR
+ 14 A$core_irq_ctrl$1514                                           05E5 GR
+ 14 A$core_irq_ctrl$1517                                           05E6 GR
+ 14 A$core_irq_ctrl$1518                                           05E9 GR
+ 14 A$core_irq_ctrl$1519                                           05EB GR
+ 14 A$core_irq_ctrl$152                                            0000 GR
+ 14 A$core_irq_ctrl$1522                                           05EC GR
+ 14 A$core_irq_ctrl$1523                                           05EF GR
+ 14 A$core_irq_ctrl$1524                                           05F1 GR
+ 14 A$core_irq_ctrl$1527                                           05F2 GR
+ 14 A$core_irq_ctrl$1528                                           05F5 GR
+ 14 A$core_irq_ctrl$1529                                           05F7 GR
+ 14 A$core_irq_ctrl$153                                            0002 GR
+ 14 A$core_irq_ctrl$1532                                           05F8 GR
+ 14 A$core_irq_ctrl$1533                                           05FB GR
+ 14 A$core_irq_ctrl$1534                                           05FD GR
+ 14 A$core_irq_ctrl$1537                                           05FE GR
+ 14 A$core_irq_ctrl$1538                                           0601 GR
+ 14 A$core_irq_ctrl$1539                                           0603 GR
+ 14 A$core_irq_ctrl$154                                            0004 GR
+ 14 A$core_irq_ctrl$1542                                           0604 GR
+ 14 A$core_irq_ctrl$1543                                           0607 GR
+ 14 A$core_irq_ctrl$1544                                           0609 GR
+ 14 A$core_irq_ctrl$1547                                           060A GR
+ 14 A$core_irq_ctrl$1548                                           060D GR
+ 14 A$core_irq_ctrl$1549                                           060F GR
+ 14 A$core_irq_ctrl$155                                            0007 GR
+ 14 A$core_irq_ctrl$1552                                           0610 GR
+ 14 A$core_irq_ctrl$1553                                           0613 GR
+ 14 A$core_irq_ctrl$1554                                           0615 GR
+ 14 A$core_irq_ctrl$1557                                           0616 GR
+ 14 A$core_irq_ctrl$1558                                           0619 GR
+ 14 A$core_irq_ctrl$1559                                           061B GR
+ 14 A$core_irq_ctrl$156                                            0008 GR
+ 14 A$core_irq_ctrl$1562                                           061C GR
+ 14 A$core_irq_ctrl$1563                                           061F GR
+ 14 A$core_irq_ctrl$1564                                           0621 GR
+ 14 A$core_irq_ctrl$1567                                           0622 GR
+ 14 A$core_irq_ctrl$1568                                           0625 GR
+ 14 A$core_irq_ctrl$1569                                           0627 GR
+ 14 A$core_irq_ctrl$157                                            0009 GR
+ 14 A$core_irq_ctrl$1572                                           0628 GR
+ 14 A$core_irq_ctrl$1573                                           062B GR
+ 14 A$core_irq_ctrl$1574                                           062D GR
+ 14 A$core_irq_ctrl$1577                                           062E GR
+ 14 A$core_irq_ctrl$1578                                           0631 GR
+ 14 A$core_irq_ctrl$1579                                           0633 GR
+ 14 A$core_irq_ctrl$158                                            000A GR
+ 14 A$core_irq_ctrl$1582                                           0634 GR
+ 14 A$core_irq_ctrl$1583                                           0637 GR
+ 14 A$core_irq_ctrl$1584                                           0639 GR
+ 14 A$core_irq_ctrl$1587                                           063A GR
+ 14 A$core_irq_ctrl$1588                                           063D GR
+ 14 A$core_irq_ctrl$1589                                           063F GR
+ 14 A$core_irq_ctrl$1592                                           0640 GR
+ 14 A$core_irq_ctrl$1593                                           0643 GR
+ 14 A$core_irq_ctrl$1594                                           0645 GR
+ 14 A$core_irq_ctrl$1597                                           0646 GR
+ 14 A$core_irq_ctrl$1598                                           0649 GR
+ 14 A$core_irq_ctrl$1599                                           064B GR
+ 14 A$core_irq_ctrl$1602                                           064C GR
+ 14 A$core_irq_ctrl$1603                                           064F GR
+ 14 A$core_irq_ctrl$1604                                           0651 GR
+ 14 A$core_irq_ctrl$1607                                           0652 GR
+ 14 A$core_irq_ctrl$1608                                           0655 GR
+ 14 A$core_irq_ctrl$1609                                           0657 GR
+ 14 A$core_irq_ctrl$1612                                           0658 GR
+ 14 A$core_irq_ctrl$1613                                           065B GR
+ 14 A$core_irq_ctrl$1614                                           065D GR
+ 14 A$core_irq_ctrl$1617                                           065E GR
+ 14 A$core_irq_ctrl$1618                                           0661 GR
+ 14 A$core_irq_ctrl$1619                                           0663 GR
+ 14 A$core_irq_ctrl$162                                            000B GR
+ 14 A$core_irq_ctrl$1622                                           0664 GR
+ 14 A$core_irq_ctrl$1623                                           0667 GR
+ 14 A$core_irq_ctrl$1624                                           0669 GR
+ 14 A$core_irq_ctrl$1627                                           066A GR
+ 14 A$core_irq_ctrl$1628                                           066D GR
+ 14 A$core_irq_ctrl$1629                                           066F GR
+ 14 A$core_irq_ctrl$163                                            000E GR
+ 14 A$core_irq_ctrl$1632                                           0670 GR
+ 14 A$core_irq_ctrl$1633                                           0673 GR
+ 14 A$core_irq_ctrl$1634                                           0675 GR
+ 14 A$core_irq_ctrl$1637                                           0676 GR
+ 14 A$core_irq_ctrl$1638                                           0679 GR
+ 14 A$core_irq_ctrl$1639                                           067B GR
+ 14 A$core_irq_ctrl$164                                            000F GR
+ 14 A$core_irq_ctrl$1642                                           067C GR
+ 14 A$core_irq_ctrl$1643                                           067F GR
+ 14 A$core_irq_ctrl$1644                                           0681 GR
+ 14 A$core_irq_ctrl$1646                                           0682 GR
+ 14 A$core_irq_ctrl$1647                                           0685 GR
+ 14 A$core_irq_ctrl$1648                                           0687 GR
+ 14 A$core_irq_ctrl$1649                                           0688 GR
+ 14 A$core_irq_ctrl$165                                            0010 GR
+ 14 A$core_irq_ctrl$1650                                           0689 GR
+ 14 A$core_irq_ctrl$1651                                           068A GR
+ 14 A$core_irq_ctrl$1652                                           068B GR
+ 14 A$core_irq_ctrl$1653                                           068C GR
+ 14 A$core_irq_ctrl$1654                                           068D GR
+ 14 A$core_irq_ctrl$1655                                           068E GR
+ 14 A$core_irq_ctrl$1657                                           068F GR
+ 14 A$core_irq_ctrl$1658                                           0692 GR
+ 14 A$core_irq_ctrl$1659                                           0695 GR
+ 14 A$core_irq_ctrl$166                                            0011 GR
+ 14 A$core_irq_ctrl$1660                                           0698 GR
+ 14 A$core_irq_ctrl$1661                                           069A GR
+ 14 A$core_irq_ctrl$1662                                           069C GR
+ 14 A$core_irq_ctrl$1663                                           069E GR
+ 14 A$core_irq_ctrl$1664                                           06A0 GR
+ 14 A$core_irq_ctrl$1665                                           06A2 GR
+ 14 A$core_irq_ctrl$1666                                           06A5 GR
+ 14 A$core_irq_ctrl$1667                                           06A7 GR
+ 14 A$core_irq_ctrl$1668                                           06A9 GR
+ 14 A$core_irq_ctrl$1669                                           06AB GR
+ 14 A$core_irq_ctrl$167                                            0012 GR
+ 14 A$core_irq_ctrl$1670                                           06AD GR
+ 14 A$core_irq_ctrl$1674                                           06AF GR
+ 14 A$core_irq_ctrl$1675                                           06B1 GR
+ 14 A$core_irq_ctrl$1676                                           06B3 GR
+ 14 A$core_irq_ctrl$1677                                           06B5 GR
+ 14 A$core_irq_ctrl$1678                                           06B7 GR
+ 14 A$core_irq_ctrl$1679                                           06B9 GR
+ 14 A$core_irq_ctrl$1680                                           06BC GR
+ 14 A$core_irq_ctrl$1681                                           06BE GR
+ 14 A$core_irq_ctrl$1682                                           06C0 GR
+ 14 A$core_irq_ctrl$1683                                           06C2 GR
+ 14 A$core_irq_ctrl$1684                                           06C4 GR
+ 14 A$core_irq_ctrl$1689                                           06C7 GR
+ 14 A$core_irq_ctrl$169                                            0013 GR
+ 14 A$core_irq_ctrl$1690                                           06C9 GR
+ 14 A$core_irq_ctrl$1691                                           06CB GR
+ 14 A$core_irq_ctrl$1692                                           06CD GR
+ 14 A$core_irq_ctrl$1693                                           06CF GR
+ 14 A$core_irq_ctrl$1694                                           06D1 GR
+ 14 A$core_irq_ctrl$1695                                           06D3 GR
+ 14 A$core_irq_ctrl$1696                                           06D5 GR
+ 14 A$core_irq_ctrl$1697                                           06D7 GR
+ 14 A$core_irq_ctrl$1698                                           06D9 GR
+ 14 A$core_irq_ctrl$1699                                           06DB GR
+ 14 A$core_irq_ctrl$170                                            0016 GR
+ 14 A$core_irq_ctrl$1700                                           06DD GR
+ 14 A$core_irq_ctrl$1701                                           06DF GR
+ 14 A$core_irq_ctrl$1703                                           06E0 GR
+ 14 A$core_irq_ctrl$1704                                           06E2 GR
+ 14 A$core_irq_ctrl$1705                                           06E4 GR
+ 14 A$core_irq_ctrl$1706                                           06E6 GR
+ 14 A$core_irq_ctrl$1707                                           06E8 GR
+ 14 A$core_irq_ctrl$1708                                           06EA GR
+ 14 A$core_irq_ctrl$171                                            0017 GR
+ 14 A$core_irq_ctrl$1713                                           06EC GR
+ 14 A$core_irq_ctrl$1714                                           06EF GR
+ 14 A$core_irq_ctrl$1715                                           06F0 GR
+ 14 A$core_irq_ctrl$1717                                           06F1 GR
+ 14 A$core_irq_ctrl$1719                                           06F4 GR
+ 14 A$core_irq_ctrl$172                                            0018 GR
+ 14 A$core_irq_ctrl$1720                                           06F5 GR
+ 14 A$core_irq_ctrl$1721                                           06F6 GR
+ 14 A$core_irq_ctrl$1722                                           06F7 GR
+ 14 A$core_irq_ctrl$1726                                           06FA GR
+ 14 A$core_irq_ctrl$173                                            0019 GR
+ 14 A$core_irq_ctrl$174                                            001A GR
+ 14 A$core_irq_ctrl$179                                            001B GR
+ 14 A$core_irq_ctrl$180                                            001D GR
+ 14 A$core_irq_ctrl$181                                            001F GR
+ 14 A$core_irq_ctrl$182                                            0020 GR
+ 14 A$core_irq_ctrl$183                                            0022 GR
+ 14 A$core_irq_ctrl$184                                            0024 GR
+ 14 A$core_irq_ctrl$186                                            0025 GR
+ 14 A$core_irq_ctrl$187                                            0028 GR
+ 14 A$core_irq_ctrl$188                                            002A GR
+ 14 A$core_irq_ctrl$189                                            002B GR
+ 14 A$core_irq_ctrl$190                                            002C GR
+ 14 A$core_irq_ctrl$191                                            002E GR
+ 14 A$core_irq_ctrl$192                                            002F GR
+ 14 A$core_irq_ctrl$193                                            0030 GR
+ 14 A$core_irq_ctrl$194                                            0032 GR
+ 14 A$core_irq_ctrl$195                                            0033 GR
+ 14 A$core_irq_ctrl$196                                            0034 GR
+ 14 A$core_irq_ctrl$197                                            0036 GR
+ 14 A$core_irq_ctrl$199                                            0037 GR
+ 14 A$core_irq_ctrl$200                                            0039 GR
+ 14 A$core_irq_ctrl$201                                            003B GR
+ 14 A$core_irq_ctrl$205                                            003E GR
+ 14 A$core_irq_ctrl$206                                            0041 GR
+ 14 A$core_irq_ctrl$207                                            0042 GR
+ 14 A$core_irq_ctrl$208                                            0043 GR
+ 14 A$core_irq_ctrl$209                                            0044 GR
+ 14 A$core_irq_ctrl$210                                            0045 GR
+ 14 A$core_irq_ctrl$213                                            0046 GR
+ 14 A$core_irq_ctrl$214                                            0048 GR
+ 14 A$core_irq_ctrl$215                                            004A GR
+ 14 A$core_irq_ctrl$216                                            004B GR
+ 14 A$core_irq_ctrl$217                                            004D GR
+ 14 A$core_irq_ctrl$218                                            004F GR
+ 14 A$core_irq_ctrl$220                                            0050 GR
+ 14 A$core_irq_ctrl$221                                            0053 GR
+ 14 A$core_irq_ctrl$222                                            0055 GR
+ 14 A$core_irq_ctrl$223                                            0056 GR
+ 14 A$core_irq_ctrl$224                                            0057 GR
+ 14 A$core_irq_ctrl$225                                            0059 GR
+ 14 A$core_irq_ctrl$226                                            005A GR
+ 14 A$core_irq_ctrl$227                                            005B GR
+ 14 A$core_irq_ctrl$228                                            005D GR
+ 14 A$core_irq_ctrl$229                                            005E GR
+ 14 A$core_irq_ctrl$230                                            005F GR
+ 14 A$core_irq_ctrl$231                                            0061 GR
+ 14 A$core_irq_ctrl$233                                            0062 GR
+ 14 A$core_irq_ctrl$234                                            0064 GR
+ 14 A$core_irq_ctrl$235                                            0066 GR
+ 14 A$core_irq_ctrl$239                                            0069 GR
+ 14 A$core_irq_ctrl$240                                            006C GR
+ 14 A$core_irq_ctrl$241                                            006E GR
+ 14 A$core_irq_ctrl$244                                            006F GR
+ 14 A$core_irq_ctrl$245                                            0072 GR
+ 14 A$core_irq_ctrl$246                                            0073 GR
+ 14 A$core_irq_ctrl$249                                            0074 GR
+ 14 A$core_irq_ctrl$252                                            0077 GR
+ 14 A$core_irq_ctrl$253                                            0079 GR
+ 14 A$core_irq_ctrl$260                                            007C GR
+ 14 A$core_irq_ctrl$261                                            007D GR
+ 14 A$core_irq_ctrl$262                                            007F GR
+ 14 A$core_irq_ctrl$264                                            0080 GR
+ 14 A$core_irq_ctrl$265                                            0082 GR
+ 14 A$core_irq_ctrl$266                                            0084 GR
+ 14 A$core_irq_ctrl$267                                            0086 GR
+ 14 A$core_irq_ctrl$268                                            0088 GR
+ 14 A$core_irq_ctrl$269                                            008A GR
+ 14 A$core_irq_ctrl$272                                            008C GR
+ 14 A$core_irq_ctrl$273                                            008E GR
+ 14 A$core_irq_ctrl$274                                            008F GR
+ 14 A$core_irq_ctrl$275                                            0090 GR
+ 14 A$core_irq_ctrl$276                                            0092 GR
+ 14 A$core_irq_ctrl$280                                            0093 GR
+ 14 A$core_irq_ctrl$282                                            0096 GR
+ 14 A$core_irq_ctrl$283                                            0097 GR
+ 14 A$core_irq_ctrl$284                                            0098 GR
+ 14 A$core_irq_ctrl$285                                            0099 GR
+ 14 A$core_irq_ctrl$289                                            009C GR
+ 14 A$core_irq_ctrl$305                                            009D GR
+ 14 A$core_irq_ctrl$306                                            009F GR
+ 14 A$core_irq_ctrl$307                                            00A2 GR
+ 14 A$core_irq_ctrl$311                                            00A3 GR
+ 14 A$core_irq_ctrl$312                                            00A6 GR
+ 14 A$core_irq_ctrl$313                                            00A7 GR
+ 14 A$core_irq_ctrl$316                                            00A8 GR
+ 14 A$core_irq_ctrl$319                                            00AB GR
+ 14 A$core_irq_ctrl$320                                            00AD GR
+ 14 A$core_irq_ctrl$324                                            00B0 GR
+ 14 A$core_irq_ctrl$325                                            00B3 GR
+ 14 A$core_irq_ctrl$326                                            00B5 GR
+ 14 A$core_irq_ctrl$329                                            00B6 GR
+ 14 A$core_irq_ctrl$330                                            00B9 GR
+ 14 A$core_irq_ctrl$331                                            00BB GR
+ 14 A$core_irq_ctrl$334                                            00BC GR
+ 14 A$core_irq_ctrl$335                                            00BF GR
+ 14 A$core_irq_ctrl$336                                            00C1 GR
+ 14 A$core_irq_ctrl$339                                            00C2 GR
+ 14 A$core_irq_ctrl$340                                            00C5 GR
+ 14 A$core_irq_ctrl$341                                            00C7 GR
+ 14 A$core_irq_ctrl$344                                            00C8 GR
+ 14 A$core_irq_ctrl$345                                            00CB GR
+ 14 A$core_irq_ctrl$346                                            00CD GR
+ 14 A$core_irq_ctrl$349                                            00CE GR
+ 14 A$core_irq_ctrl$350                                            00D1 GR
+ 14 A$core_irq_ctrl$351                                            00D3 GR
+ 14 A$core_irq_ctrl$354                                            00D4 GR
+ 14 A$core_irq_ctrl$355                                            00D7 GR
+ 14 A$core_irq_ctrl$356                                            00D9 GR
+ 14 A$core_irq_ctrl$359                                            00DA GR
+ 14 A$core_irq_ctrl$360                                            00DD GR
+ 14 A$core_irq_ctrl$361                                            00DF GR
+ 14 A$core_irq_ctrl$364                                            00E0 GR
+ 14 A$core_irq_ctrl$365                                            00E3 GR
+ 14 A$core_irq_ctrl$366                                            00E5 GR
+ 14 A$core_irq_ctrl$369                                            00E6 GR
+ 14 A$core_irq_ctrl$370                                            00E9 GR
+ 14 A$core_irq_ctrl$371                                            00EB GR
+ 14 A$core_irq_ctrl$374                                            00EC GR
+ 14 A$core_irq_ctrl$375                                            00EF GR
+ 14 A$core_irq_ctrl$376                                            00F1 GR
+ 14 A$core_irq_ctrl$379                                            00F2 GR
+ 14 A$core_irq_ctrl$380                                            00F5 GR
+ 14 A$core_irq_ctrl$381                                            00F7 GR
+ 14 A$core_irq_ctrl$384                                            00F8 GR
+ 14 A$core_irq_ctrl$385                                            00FB GR
+ 14 A$core_irq_ctrl$386                                            00FD GR
+ 14 A$core_irq_ctrl$389                                            00FE GR
+ 14 A$core_irq_ctrl$390                                            0101 GR
+ 14 A$core_irq_ctrl$391                                            0103 GR
+ 14 A$core_irq_ctrl$394                                            0104 GR
+ 14 A$core_irq_ctrl$395                                            0107 GR
+ 14 A$core_irq_ctrl$396                                            0109 GR
+ 14 A$core_irq_ctrl$399                                            010A GR
+ 14 A$core_irq_ctrl$400                                            010D GR
+ 14 A$core_irq_ctrl$401                                            010F GR
+ 14 A$core_irq_ctrl$404                                            0110 GR
+ 14 A$core_irq_ctrl$405                                            0113 GR
+ 14 A$core_irq_ctrl$406                                            0115 GR
+ 14 A$core_irq_ctrl$409                                            0116 GR
+ 14 A$core_irq_ctrl$410                                            0119 GR
+ 14 A$core_irq_ctrl$411                                            011B GR
+ 14 A$core_irq_ctrl$414                                            011C GR
+ 14 A$core_irq_ctrl$415                                            011F GR
+ 14 A$core_irq_ctrl$416                                            0121 GR
+ 14 A$core_irq_ctrl$419                                            0122 GR
+ 14 A$core_irq_ctrl$420                                            0125 GR
+ 14 A$core_irq_ctrl$421                                            0127 GR
+ 14 A$core_irq_ctrl$424                                            0128 GR
+ 14 A$core_irq_ctrl$425                                            012B GR
+ 14 A$core_irq_ctrl$426                                            012D GR
+ 14 A$core_irq_ctrl$429                                            012E GR
+ 14 A$core_irq_ctrl$430                                            0131 GR
+ 14 A$core_irq_ctrl$431                                            0133 GR
+ 14 A$core_irq_ctrl$434                                            0134 GR
+ 14 A$core_irq_ctrl$435                                            0137 GR
+ 14 A$core_irq_ctrl$436                                            0139 GR
+ 14 A$core_irq_ctrl$439                                            013A GR
+ 14 A$core_irq_ctrl$440                                            013D GR
+ 14 A$core_irq_ctrl$441                                            013F GR
+ 14 A$core_irq_ctrl$444                                            0140 GR
+ 14 A$core_irq_ctrl$445                                            0143 GR
+ 14 A$core_irq_ctrl$446                                            0145 GR
+ 14 A$core_irq_ctrl$449                                            0146 GR
+ 14 A$core_irq_ctrl$450                                            0149 GR
+ 14 A$core_irq_ctrl$451                                            014B GR
+ 14 A$core_irq_ctrl$454                                            014C GR
+ 14 A$core_irq_ctrl$455                                            014F GR
+ 14 A$core_irq_ctrl$456                                            0151 GR
+ 14 A$core_irq_ctrl$459                                            0152 GR
+ 14 A$core_irq_ctrl$460                                            0155 GR
+ 14 A$core_irq_ctrl$461                                            0157 GR
+ 14 A$core_irq_ctrl$464                                            0158 GR
+ 14 A$core_irq_ctrl$465                                            015B GR
+ 14 A$core_irq_ctrl$466                                            015D GR
+ 14 A$core_irq_ctrl$469                                            015E GR
+ 14 A$core_irq_ctrl$470                                            0161 GR
+ 14 A$core_irq_ctrl$471                                            0163 GR
+ 14 A$core_irq_ctrl$474                                            0164 GR
+ 14 A$core_irq_ctrl$475                                            0167 GR
+ 14 A$core_irq_ctrl$476                                            0169 GR
+ 14 A$core_irq_ctrl$479                                            016A GR
+ 14 A$core_irq_ctrl$480                                            016D GR
+ 14 A$core_irq_ctrl$481                                            016F GR
+ 14 A$core_irq_ctrl$484                                            0170 GR
+ 14 A$core_irq_ctrl$485                                            0173 GR
+ 14 A$core_irq_ctrl$486                                            0175 GR
+ 14 A$core_irq_ctrl$489                                            0176 GR
+ 14 A$core_irq_ctrl$490                                            0179 GR
+ 14 A$core_irq_ctrl$491                                            017B GR
+ 14 A$core_irq_ctrl$494                                            017C GR
+ 14 A$core_irq_ctrl$495                                            017F GR
+ 14 A$core_irq_ctrl$496                                            0181 GR
+ 14 A$core_irq_ctrl$499                                            0182 GR
+ 14 A$core_irq_ctrl$500                                            0185 GR
+ 14 A$core_irq_ctrl$501                                            0187 GR
+ 14 A$core_irq_ctrl$504                                            0188 GR
+ 14 A$core_irq_ctrl$505                                            018B GR
+ 14 A$core_irq_ctrl$506                                            018D GR
+ 14 A$core_irq_ctrl$509                                            018E GR
+ 14 A$core_irq_ctrl$510                                            0191 GR
+ 14 A$core_irq_ctrl$511                                            0193 GR
+ 14 A$core_irq_ctrl$514                                            0194 GR
+ 14 A$core_irq_ctrl$515                                            0197 GR
+ 14 A$core_irq_ctrl$516                                            0199 GR
+ 14 A$core_irq_ctrl$519                                            019A GR
+ 14 A$core_irq_ctrl$520                                            019D GR
+ 14 A$core_irq_ctrl$521                                            019F GR
+ 14 A$core_irq_ctrl$524                                            01A0 GR
+ 14 A$core_irq_ctrl$525                                            01A3 GR
+ 14 A$core_irq_ctrl$526                                            01A5 GR
+ 14 A$core_irq_ctrl$528                                            01A6 GR
+ 14 A$core_irq_ctrl$529                                            01A9 GR
+ 14 A$core_irq_ctrl$530                                            01AB GR
+ 14 A$core_irq_ctrl$531                                            01AC GR
+ 14 A$core_irq_ctrl$532                                            01AD GR
+ 14 A$core_irq_ctrl$533                                            01AE GR
+ 14 A$core_irq_ctrl$534                                            01AF GR
+ 14 A$core_irq_ctrl$535                                            01B0 GR
+ 14 A$core_irq_ctrl$536                                            01B1 GR
+ 14 A$core_irq_ctrl$537                                            01B2 GR
+ 14 A$core_irq_ctrl$539                                            01B3 GR
+ 14 A$core_irq_ctrl$540                                            01B6 GR
+ 14 A$core_irq_ctrl$541                                            01B9 GR
+ 14 A$core_irq_ctrl$542                                            01BC GR
+ 14 A$core_irq_ctrl$547                                            01BF GR
+ 14 A$core_irq_ctrl$548                                            01C2 GR
+ 14 A$core_irq_ctrl$549                                            01C3 GR
+ 14 A$core_irq_ctrl$553                                            01C4 GR
+ 14 A$core_irq_ctrl$554                                            01C5 GR
+ 14 A$core_irq_ctrl$555                                            01C7 GR
+ 14 A$core_irq_ctrl$557                                            01C8 GR
+ 14 A$core_irq_ctrl$558                                            01CA GR
+ 14 A$core_irq_ctrl$559                                            01CC GR
+ 14 A$core_irq_ctrl$560                                            01CD GR
+ 14 A$core_irq_ctrl$561                                            01CF GR
+ 14 A$core_irq_ctrl$562                                            01D1 GR
+ 14 A$core_irq_ctrl$564                                            01D2 GR
+ 14 A$core_irq_ctrl$565                                            01D5 GR
+ 14 A$core_irq_ctrl$566                                            01D6 GR
+ 14 A$core_irq_ctrl$567                                            01D7 GR
+ 14 A$core_irq_ctrl$568                                            01D8 GR
+ 14 A$core_irq_ctrl$569                                            01D9 GR
+ 14 A$core_irq_ctrl$572                                            01DA GR
+ 14 A$core_irq_ctrl$573                                            01DC GR
+ 14 A$core_irq_ctrl$574                                            01DE GR
+ 14 A$core_irq_ctrl$575                                            01DF GR
+ 14 A$core_irq_ctrl$576                                            01E0 GR
+ 14 A$core_irq_ctrl$577                                            01E1 GR
+ 14 A$core_irq_ctrl$578                                            01E2 GR
+ 14 A$core_irq_ctrl$582                                            01E3 GR
+ 14 A$core_irq_ctrl$598                                            01E4 GR
+ 14 A$core_irq_ctrl$599                                            01E7 GR
+ 14 A$core_irq_ctrl$600                                            01E8 GR
+ 14 A$core_irq_ctrl$601                                            01E9 GR
+ 14 A$core_irq_ctrl$602                                            01EA GR
+ 14 A$core_irq_ctrl$603                                            01EB GR
+ 14 A$core_irq_ctrl$606                                            01EC GR
+ 14 A$core_irq_ctrl$607                                            01EE GR
+ 14 A$core_irq_ctrl$608                                            01F0 GR
+ 14 A$core_irq_ctrl$609                                            01F1 GR
+ 14 A$core_irq_ctrl$610                                            01F3 GR
+ 14 A$core_irq_ctrl$611                                            01F5 GR
+ 14 A$core_irq_ctrl$613                                            01F6 GR
+ 14 A$core_irq_ctrl$614                                            01F8 GR
+ 14 A$core_irq_ctrl$615                                            01FA GR
+ 14 A$core_irq_ctrl$616                                            01FD GR
+ 14 A$core_irq_ctrl$617                                            01FF GR
+ 14 A$core_irq_ctrl$618                                            0201 GR
+ 14 A$core_irq_ctrl$619                                            0203 GR
+ 14 A$core_irq_ctrl$623                                            0204 GR
+ 14 A$core_irq_ctrl$624                                            0206 GR
+ 14 A$core_irq_ctrl$625                                            0208 GR
+ 14 A$core_irq_ctrl$626                                            020A GR
+ 14 A$core_irq_ctrl$630                                            020B GR
+ 14 A$core_irq_ctrl$646                                            020C GR
+ 14 A$core_irq_ctrl$647                                            020E GR
+ 14 A$core_irq_ctrl$648                                            0211 GR
+ 14 A$core_irq_ctrl$652                                            0212 GR
+ 14 A$core_irq_ctrl$653                                            0215 GR
+ 14 A$core_irq_ctrl$654                                            0216 GR
+ 14 A$core_irq_ctrl$657                                            0217 GR
+ 14 A$core_irq_ctrl$660                                            021A GR
+ 14 A$core_irq_ctrl$661                                            021C GR
+ 14 A$core_irq_ctrl$665                                            021F GR
+ 14 A$core_irq_ctrl$666                                            0222 GR
+ 14 A$core_irq_ctrl$667                                            0224 GR
+ 14 A$core_irq_ctrl$670                                            0225 GR
+ 14 A$core_irq_ctrl$671                                            0228 GR
+ 14 A$core_irq_ctrl$672                                            022A GR
+ 14 A$core_irq_ctrl$675                                            022B GR
+ 14 A$core_irq_ctrl$676                                            022E GR
+ 14 A$core_irq_ctrl$677                                            0230 GR
+ 14 A$core_irq_ctrl$680                                            0231 GR
+ 14 A$core_irq_ctrl$681                                            0234 GR
+ 14 A$core_irq_ctrl$682                                            0236 GR
+ 14 A$core_irq_ctrl$685                                            0237 GR
+ 14 A$core_irq_ctrl$686                                            023A GR
+ 14 A$core_irq_ctrl$687                                            023C GR
+ 14 A$core_irq_ctrl$690                                            023D GR
+ 14 A$core_irq_ctrl$691                                            0240 GR
+ 14 A$core_irq_ctrl$692                                            0242 GR
+ 14 A$core_irq_ctrl$695                                            0243 GR
+ 14 A$core_irq_ctrl$696                                            0246 GR
+ 14 A$core_irq_ctrl$697                                            0248 GR
+ 14 A$core_irq_ctrl$700                                            0249 GR
+ 14 A$core_irq_ctrl$701                                            024C GR
+ 14 A$core_irq_ctrl$702                                            024E GR
+ 14 A$core_irq_ctrl$705                                            024F GR
+ 14 A$core_irq_ctrl$706                                            0252 GR
+ 14 A$core_irq_ctrl$707                                            0254 GR
+ 14 A$core_irq_ctrl$710                                            0255 GR
+ 14 A$core_irq_ctrl$711                                            0258 GR
+ 14 A$core_irq_ctrl$712                                            025A GR
+ 14 A$core_irq_ctrl$715                                            025B GR
+ 14 A$core_irq_ctrl$716                                            025E GR
+ 14 A$core_irq_ctrl$717                                            0260 GR
+ 14 A$core_irq_ctrl$720                                            0261 GR
+ 14 A$core_irq_ctrl$721                                            0264 GR
+ 14 A$core_irq_ctrl$722                                            0266 GR
+ 14 A$core_irq_ctrl$725                                            0267 GR
+ 14 A$core_irq_ctrl$726                                            026A GR
+ 14 A$core_irq_ctrl$727                                            026C GR
+ 14 A$core_irq_ctrl$730                                            026D GR
+ 14 A$core_irq_ctrl$731                                            0270 GR
+ 14 A$core_irq_ctrl$732                                            0272 GR
+ 14 A$core_irq_ctrl$735                                            0273 GR
+ 14 A$core_irq_ctrl$736                                            0276 GR
+ 14 A$core_irq_ctrl$737                                            0278 GR
+ 14 A$core_irq_ctrl$740                                            0279 GR
+ 14 A$core_irq_ctrl$741                                            027C GR
+ 14 A$core_irq_ctrl$742                                            027E GR
+ 14 A$core_irq_ctrl$745                                            027F GR
+ 14 A$core_irq_ctrl$746                                            0282 GR
+ 14 A$core_irq_ctrl$747                                            0284 GR
+ 14 A$core_irq_ctrl$750                                            0285 GR
+ 14 A$core_irq_ctrl$751                                            0288 GR
+ 14 A$core_irq_ctrl$752                                            028A GR
+ 14 A$core_irq_ctrl$755                                            028B GR
+ 14 A$core_irq_ctrl$756                                            028E GR
+ 14 A$core_irq_ctrl$757                                            0290 GR
+ 14 A$core_irq_ctrl$760                                            0291 GR
+ 14 A$core_irq_ctrl$761                                            0294 GR
+ 14 A$core_irq_ctrl$762                                            0296 GR
+ 14 A$core_irq_ctrl$765                                            0297 GR
+ 14 A$core_irq_ctrl$766                                            029A GR
+ 14 A$core_irq_ctrl$767                                            029C GR
+ 14 A$core_irq_ctrl$770                                            029D GR
+ 14 A$core_irq_ctrl$771                                            02A0 GR
+ 14 A$core_irq_ctrl$772                                            02A2 GR
+ 14 A$core_irq_ctrl$775                                            02A3 GR
+ 14 A$core_irq_ctrl$776                                            02A6 GR
+ 14 A$core_irq_ctrl$777                                            02A8 GR
+ 14 A$core_irq_ctrl$780                                            02A9 GR
+ 14 A$core_irq_ctrl$781                                            02AC GR
+ 14 A$core_irq_ctrl$782                                            02AE GR
+ 14 A$core_irq_ctrl$785                                            02AF GR
+ 14 A$core_irq_ctrl$786                                            02B2 GR
+ 14 A$core_irq_ctrl$787                                            02B4 GR
+ 14 A$core_irq_ctrl$790                                            02B5 GR
+ 14 A$core_irq_ctrl$791                                            02B8 GR
+ 14 A$core_irq_ctrl$792                                            02BA GR
+ 14 A$core_irq_ctrl$795                                            02BB GR
+ 14 A$core_irq_ctrl$796                                            02BE GR
+ 14 A$core_irq_ctrl$797                                            02C0 GR
+ 14 A$core_irq_ctrl$800                                            02C1 GR
+ 14 A$core_irq_ctrl$801                                            02C4 GR
+ 14 A$core_irq_ctrl$802                                            02C6 GR
+ 14 A$core_irq_ctrl$805                                            02C7 GR
+ 14 A$core_irq_ctrl$806                                            02CA GR
+ 14 A$core_irq_ctrl$807                                            02CC GR
+ 14 A$core_irq_ctrl$810                                            02CD GR
+ 14 A$core_irq_ctrl$811                                            02D0 GR
+ 14 A$core_irq_ctrl$812                                            02D2 GR
+ 14 A$core_irq_ctrl$815                                            02D3 GR
+ 14 A$core_irq_ctrl$816                                            02D6 GR
+ 14 A$core_irq_ctrl$817                                            02D8 GR
+ 14 A$core_irq_ctrl$820                                            02D9 GR
+ 14 A$core_irq_ctrl$821                                            02DC GR
+ 14 A$core_irq_ctrl$822                                            02DE GR
+ 14 A$core_irq_ctrl$825                                            02DF GR
+ 14 A$core_irq_ctrl$826                                            02E2 GR
+ 14 A$core_irq_ctrl$827                                            02E4 GR
+ 14 A$core_irq_ctrl$830                                            02E5 GR
+ 14 A$core_irq_ctrl$831                                            02E8 GR
+ 14 A$core_irq_ctrl$832                                            02EA GR
+ 14 A$core_irq_ctrl$835                                            02EB GR
+ 14 A$core_irq_ctrl$836                                            02EE GR
+ 14 A$core_irq_ctrl$837                                            02F0 GR
+ 14 A$core_irq_ctrl$840                                            02F1 GR
+ 14 A$core_irq_ctrl$841                                            02F4 GR
+ 14 A$core_irq_ctrl$842                                            02F6 GR
+ 14 A$core_irq_ctrl$845                                            02F7 GR
+ 14 A$core_irq_ctrl$846                                            02FA GR
+ 14 A$core_irq_ctrl$847                                            02FC GR
+ 14 A$core_irq_ctrl$850                                            02FD GR
+ 14 A$core_irq_ctrl$851                                            0300 GR
+ 14 A$core_irq_ctrl$852                                            0302 GR
+ 14 A$core_irq_ctrl$855                                            0303 GR
+ 14 A$core_irq_ctrl$856                                            0306 GR
+ 14 A$core_irq_ctrl$857                                            0308 GR
+ 14 A$core_irq_ctrl$860                                            0309 GR
+ 14 A$core_irq_ctrl$861                                            030C GR
+ 14 A$core_irq_ctrl$862                                            030E GR
+ 14 A$core_irq_ctrl$865                                            030F GR
+ 14 A$core_irq_ctrl$866                                            0312 GR
+ 14 A$core_irq_ctrl$867                                            0314 GR
+ 14 A$core_irq_ctrl$869                                            0315 GR
+ 14 A$core_irq_ctrl$870                                            0318 GR
+ 14 A$core_irq_ctrl$871                                            031A GR
+ 14 A$core_irq_ctrl$872                                            031B GR
+ 14 A$core_irq_ctrl$873                                            031C GR
+ 14 A$core_irq_ctrl$874                                            031D GR
+ 14 A$core_irq_ctrl$875                                            031E GR
+ 14 A$core_irq_ctrl$876                                            031F GR
+ 14 A$core_irq_ctrl$877                                            0320 GR
+ 14 A$core_irq_ctrl$878                                            0321 GR
+ 14 A$core_irq_ctrl$880                                            0322 GR
+ 14 A$core_irq_ctrl$881                                            0325 GR
+ 14 A$core_irq_ctrl$882                                            0328 GR
+ 14 A$core_irq_ctrl$883                                            032B GR
+ 14 A$core_irq_ctrl$888                                            032E GR
+ 14 A$core_irq_ctrl$889                                            0331 GR
+ 14 A$core_irq_ctrl$890                                            0332 GR
+ 14 A$core_irq_ctrl$891                                            0333 GR
+ 14 A$core_irq_ctrl$892                                            0334 GR
+ 14 A$core_irq_ctrl$893                                            0335 GR
+ 14 A$core_irq_ctrl$896                                            0336 GR
+ 14 A$core_irq_ctrl$897                                            0338 GR
+ 14 A$core_irq_ctrl$898                                            033A GR
+ 14 A$core_irq_ctrl$899                                            033B GR
+ 14 A$core_irq_ctrl$900                                            033D GR
+ 14 A$core_irq_ctrl$901                                            033F GR
+ 14 A$core_irq_ctrl$903                                            0340 GR
+ 14 A$core_irq_ctrl$904                                            0342 GR
+ 14 A$core_irq_ctrl$905                                            0344 GR
+ 14 A$core_irq_ctrl$906                                            0347 GR
+ 14 A$core_irq_ctrl$907                                            0349 GR
+ 14 A$core_irq_ctrl$908                                            034B GR
+ 14 A$core_irq_ctrl$909                                            034D GR
+ 14 A$core_irq_ctrl$913                                            034E GR
+ 14 A$core_irq_ctrl$914                                            0351 GR
+ 14 A$core_irq_ctrl$915                                            0352 GR
+ 14 A$core_irq_ctrl$917                                            0353 GR
+ 14 A$core_irq_ctrl$918                                            0355 GR
+ 14 A$core_irq_ctrl$919                                            0357 GR
+ 14 A$core_irq_ctrl$920                                            0359 GR
+ 14 A$core_irq_ctrl$921                                            035B GR
+ 14 A$core_irq_ctrl$923                                            035D GR
+ 14 A$core_irq_ctrl$924                                            035E GR
+ 14 A$core_irq_ctrl$925                                            0360 GR
+ 14 A$core_irq_ctrl$926                                            0361 GR
+ 14 A$core_irq_ctrl$927                                            0362 GR
+ 14 A$core_irq_ctrl$928                                            0363 GR
+ 14 A$core_irq_ctrl$930                                            0364 GR
+ 14 A$core_irq_ctrl$932                                            0367 GR
+ 14 A$core_irq_ctrl$933                                            0368 GR
+ 14 A$core_irq_ctrl$934                                            0369 GR
+ 14 A$core_irq_ctrl$935                                            036B GR
+ 14 A$core_irq_ctrl$936                                            036C GR
+ 14 A$core_irq_ctrl$938                                            036D GR
+ 14 A$core_irq_ctrl$939                                            036E GR
+ 14 A$core_irq_ctrl$940                                            0370 GR
+ 14 A$core_irq_ctrl$941                                            0371 GR
+ 14 A$core_irq_ctrl$942                                            0373 GR
+ 14 A$core_irq_ctrl$943                                            0374 GR
+ 14 A$core_irq_ctrl$944                                            0376 GR
+ 14 A$core_irq_ctrl$945                                            0377 GR
+ 14 A$core_irq_ctrl$949                                            0379 GR
+ 14 A$core_irq_ctrl$950                                            037C GR
+ 14 A$core_irq_ctrl$951                                            037D GR
+ 14 A$core_irq_ctrl$952                                            037E GR
+ 14 A$core_irq_ctrl$953                                            037F GR
+ 14 A$core_irq_ctrl$954                                            0380 GR
+ 14 A$core_irq_ctrl$957                                            0381 GR
+ 14 A$core_irq_ctrl$958                                            0383 GR
+ 14 A$core_irq_ctrl$959                                            0385 GR
+ 14 A$core_irq_ctrl$960                                            0386 GR
+ 14 A$core_irq_ctrl$961                                            0388 GR
+ 14 A$core_irq_ctrl$962                                            038A GR
+ 14 A$core_irq_ctrl$964                                            038B GR
+ 14 A$core_irq_ctrl$965                                            038E GR
+ 14 A$core_irq_ctrl$966                                            038F GR
+ 14 A$core_irq_ctrl$967                                            0390 GR
+ 14 A$core_irq_ctrl$968                                            0391 GR
+ 14 A$core_irq_ctrl$969                                            0392 GR
+ 14 A$core_irq_ctrl$970                                            0393 GR
+ 14 A$core_irq_ctrl$971                                            0394 GR
+ 14 A$core_irq_ctrl$972                                            0395 GR
+ 14 A$core_irq_ctrl$973                                            0396 GR
+ 14 A$core_irq_ctrl$974                                            0397 GR
+ 14 A$core_irq_ctrl$975                                            0398 GR
+ 14 A$core_irq_ctrl$977                                            0399 GR
+ 14 A$core_irq_ctrl$978                                            039B GR
+ 14 A$core_irq_ctrl$979                                            039D GR
+ 14 A$core_irq_ctrl$983                                            03A0 GR
+ 14 A$core_irq_ctrl$999                                            03A1 GR
+    AC                                                             00D6 
+    ACC                                                            00E0 
+    ACC.0                                                          00E0 
+    ACC.1                                                          00E1 
+    ACC.2                                                          00E2 
+    ACC.3                                                          00E3 
+    ACC.4                                                          00E4 
+    ACC.5                                                          00E5 
+    ACC.6                                                          00E6 
+    ACC.7                                                          00E7 
+    B                                                              00F0 
+    B.0                                                            00F0 
+    B.1                                                            00F1 
+    B.2                                                            00F2 
+    B.3                                                            00F3 
+    B.4                                                            00F4 
+    B.5                                                            00F5 
+    B.6                                                            00F6 
+    B.7                                                            00F7 
+ 14 C$core_irq_ctrl.c$100$1$1                                   =  020C GR
+ 14 C$core_irq_ctrl.c$107$2$2                                   =  0212 GR
+ 14 C$core_irq_ctrl.c$109$1$1                                   =  032E GR
+ 14 C$core_irq_ctrl.c$110$1$1                                   =  034E GR
+ 14 C$core_irq_ctrl.c$111$1$1                                   =  0379 GR
+ 14 C$core_irq_ctrl.c$112$1$1                                   =  03A0 GR
+ 14 C$core_irq_ctrl.c$119$1$1                                   =  03A1 GR
+ 14 C$core_irq_ctrl.c$126$2$2                                   =  03A7 GR
+ 14 C$core_irq_ctrl.c$128$1$1                                   =  04C3 GR
+ 14 C$core_irq_ctrl.c$129$1$1                                   =  04E2 GR
+ 14 C$core_irq_ctrl.c$130$1$1                                   =  0509 GR
+ 14 C$core_irq_ctrl.c$137$1$1                                   =  050A GR
+ 14 C$core_irq_ctrl.c$145$1$1                                   =  050A GR
+ 14 C$core_irq_ctrl.c$147$1$1                                   =  06EC GR
+ 14 C$core_irq_ctrl.c$149$2$2                                   =  053D GR
+ 14 C$core_irq_ctrl.c$150$1$1                                   =  0565 GR
+ 14 C$core_irq_ctrl.c$152$3$3                                   =  0570 GR
+ 14 C$core_irq_ctrl.c$154$6$5                                   =  058C GR
+ 14 C$core_irq_ctrl.c$155$4$4                                   =  06AF GR
+ 14 C$core_irq_ctrl.c$160$4$7                                   =  06C7 GR
+ 14 C$core_irq_ctrl.c$164$1$1                                   =  06FA GR
+ 14 C$core_irq_ctrl.c$41$0$0                                    =  0000 GR
+ 14 C$core_irq_ctrl.c$47$1$1                                    =  000B GR
+ 14 C$core_irq_ctrl.c$50$1$1                                    =  001B GR
+ 14 C$core_irq_ctrl.c$53$1$1                                    =  003E GR
+ 14 C$core_irq_ctrl.c$56$1$1                                    =  0093 GR
+ 14 C$core_irq_ctrl.c$58$2$2                                    =  007C GR
+ 14 C$core_irq_ctrl.c$60$1$1                                    =  009C GR
+ 14 C$core_irq_ctrl.c$67$1$1                                    =  009D GR
+ 14 C$core_irq_ctrl.c$73$2$2                                    =  00A3 GR
+ 14 C$core_irq_ctrl.c$75$1$1                                    =  01BF GR
+ 14 C$core_irq_ctrl.c$76$1$1                                    =  01E3 GR
+ 14 C$core_irq_ctrl.c$83$1$1                                    =  01E4 GR
+ 14 C$core_irq_ctrl.c$90$1$1                                    =  01E4 GR
+ 14 C$core_irq_ctrl.c$92$1$1                                    =  0204 GR
+ 14 C$core_irq_ctrl.c$93$1$1                                    =  020B GR
+    CPRL2                                                          00C8 
+    CT2                                                            00C9 
+    CY                                                             00D7 
+    DPH                                                            0083 
+    DPL                                                            0082 
+    EA                                                             00AF 
+    ES                                                             00AC 
+    ET0                                                            00A9 
+    ET1                                                            00AB 
+    ET2                                                            00AD 
+    EX0                                                            00A8 
+    EX1                                                            00AA 
+    EXEN2                                                          00CB 
+    EXF2                                                           00CE 
+    F0                                                             00D5 
+ 16 F___drivers_CoreInterrupt_core_irq_ctrl$__xinit_g_cic_base_addr$0$0=  0000 GR
+  A F___drivers_CoreInterrupt_core_irq_ctrl$g_cic_base_addr$0$0 =  0000 GR
+  9 F___drivers_CoreInterrupt_core_irq_ctrl$g_irq_handler_table$0$0=  0000 GR
+ 14 G$CIC_disable_irq$0$0                                       =  03A1 GR
+ 14 G$CIC_enable_irq$0$0                                        =  020C GR
+ 14 G$CIC_get_irq_status$0$0                                    =  01E4 GR
+ 14 G$CIC_init$0$0                                              =  0000 GR
+ 14 G$CIC_irq_handler$0$0                                       =  050A GR
+ 14 G$CIC_set_irq_handler$0$0                                   =  009D GR
+    IE                                                             00A8 
+    IE.0                                                           00A8 
+    IE.1                                                           00A9 
+    IE.2                                                           00AA 
+    IE.3                                                           00AB 
+    IE.4                                                           00AC 
+    IE.5                                                           00AD 
+    IE.7                                                           00AF 
+    IE0                                                            0089 
+    IE1                                                            008B 
+    INT0                                                           00B2 
+    INT1                                                           00B3 
+    IP                                                             00B8 
+    IP.0                                                           00B8 
+    IP.1                                                           00B9 
+    IP.2                                                           00BA 
+    IP.3                                                           00BB 
+    IP.4                                                           00BC 
+    IP.5                                                           00BD 
+    IT0                                                            0088 
+    IT1                                                            008A 
+  9 LCIC_disable_irq$file_name$3$3                              =  009A GR
+  9 LCIC_disable_irq$irq_number$1$1                             =  0099 GR
+  9 LCIC_enable_irq$file_name$3$3                               =  0070 GR
+  9 LCIC_enable_irq$irq_number$1$1                              =  006F GR
+  9 LCIC_init$address$1$1                                       =  0040 GR
+  9 LCIC_init$irq_idx$1$1                                       =  0042 GR
+  9 LCIC_irq_handler$file_name$6$6                              =  00C4 GR
+  9 LCIC_irq_handler$irq_idx$1$1                                =  00C3 GR
+  9 LCIC_set_irq_handler$file_name$3$3                          =  0046 GR
+  9 LCIC_set_irq_handler$handler$1$1                            =  0043 GR
+  9 LCIC_set_irq_handler$irq_number$1$1                         =  0045 GR
+    OV                                                             00D2 
+    P                                                              00D0 
+    P0                                                             0080 
+    P0.0                                                           0080 
+    P0.1                                                           0081 
+    P0.2                                                           0082 
+    P0.3                                                           0083 
+    P0.4                                                           0084 
+    P0.5                                                           0085 
+    P0.6                                                           0086 
+    P0.7                                                           0087 
+    P1                                                             0090 
+    P1.0                                                           0090 
+    P1.1                                                           0091 
+    P1.2                                                           0092 
+    P1.3                                                           0093 
+    P1.4                                                           0094 
+    P1.5                                                           0095 
+    P1.6                                                           0096 
+    P1.7                                                           0097 
+    P2                                                             00A0 
+    P2.0                                                           00A0 
+    P2.1                                                           00A1 
+    P2.2                                                           00A2 
+    P2.3                                                           00A3 
+    P2.4                                                           00A4 
+    P2.5                                                           00A5 
+    P2.6                                                           00A6 
+    P2.7                                                           00A7 
+    P3                                                             00B0 
+    P3.0                                                           00B0 
+    P3.1                                                           00B1 
+    P3.2                                                           00B2 
+    P3.3                                                           00B3 
+    P3.4                                                           00B4 
+    P3.5                                                           00B5 
+    P3.6                                                           00B6 
+    P3.7                                                           00B7 
+    PCON                                                           0087 
+    PS                                                             00BC 
+    PSW                                                            00D0 
+    PSW.0                                                          00D0 
+    PSW.1                                                          00D1 
+    PSW.2                                                          00D2 
+    PSW.3                                                          00D3 
+    PSW.4                                                          00D4 
+    PSW.5                                                          00D5 
+    PSW.6                                                          00D6 
+    PSW.7                                                          00D7 
+    PT0                                                            00B9 
+    PT1                                                            00BB 
+    PT2                                                            00BD 
+    PX0                                                            00B8 
+    PX1                                                            00BA 
+    RB8                                                            009A 
+    RCAP2H                                                         00CB 
+    RCAP2L                                                         00CA 
+    RCLK                                                           00CD 
+    REN                                                            009C 
+    RI                                                             0098 
+    RS0                                                            00D3 
+    RS1                                                            00D4 
+    RXD                                                            00B0 
+    SBUF                                                           0099 
+    SCON                                                           0098 
+    SCON.0                                                         0098 
+    SCON.1                                                         0099 
+    SCON.2                                                         009A 
+    SCON.3                                                         009B 
+    SCON.4                                                         009C 
+    SCON.5                                                         009D 
+    SCON.6                                                         009E 
+    SCON.7                                                         009F 
+    SM0                                                            009F 
+    SM1                                                            009E 
+    SM2                                                            009D 
+    SP                                                             0081 
+    T2CON                                                          00C8 
+    T2CON.0                                                        00C8 
+    T2CON.1                                                        00C9 
+    T2CON.2                                                        00CA 
+    T2CON.3                                                        00CB 
+    T2CON.4                                                        00CC 
+    T2CON.5                                                        00CD 
+    T2CON.6                                                        00CE 
+    T2CON.7                                                        00CF 
+    TB8                                                            009B 
+    TCLK                                                           00CC 
+    TCON                                                           0088 
+    TCON.0                                                         0088 
+    TCON.1                                                         0089 
+    TCON.2                                                         008A 
+    TCON.3                                                         008B 
+    TCON.4                                                         008C 
+    TCON.5                                                         008D 
+    TCON.6                                                         008E 
+    TCON.7                                                         008F 
+    TF0                                                            008D 
+    TF1                                                            008F 
+    TF2                                                            00CF 
+    TH0                                                            008C 
+    TH1                                                            008D 
+    TH2                                                            00CD 
+    TI                                                             0099 
+    TL0                                                            008A 
+    TL1                                                            008B 
+    TL2                                                            00CC 
+    TMOD                                                           0089 
+    TR0                                                            008C 
+    TR1                                                            008E 
+    TR2                                                            00CA 
+    TXD                                                            00B1 
+ 14 XG$CIC_disable_irq$0$0                                      =  0509 GR
+ 14 XG$CIC_enable_irq$0$0                                       =  03A0 GR
+ 14 XG$CIC_get_irq_status$0$0                                   =  020B GR
+ 14 XG$CIC_init$0$0                                             =  009C GR
+ 14 XG$CIC_irq_handler$0$0                                      =  06FA GR
+ 14 XG$CIC_set_irq_handler$0$0                                  =  01E3 GR
+ 14 _CIC_disable_irq                                               03A1 GR
+  9 _CIC_disable_irq_file_name_3_3                                 009A R
+  9 _CIC_disable_irq_irq_number_1_1                                0099 R
+ 14 _CIC_enable_irq                                                020C GR
+  9 _CIC_enable_irq_file_name_3_3                                  0070 R
+  9 _CIC_enable_irq_irq_number_1_1                                 006F R
+ 14 _CIC_get_irq_status                                            01E4 GR
+ 14 _CIC_init                                                      0000 GR
+  9 _CIC_init_address_1_1                                          0040 R
+  9 _CIC_init_irq_idx_1_1                                          0042 R
+ 14 _CIC_irq_handler                                               050A GR
+  9 _CIC_irq_handler_file_name_6_6                                 00C4 R
+  9 _CIC_irq_handler_irq_idx_1_1                                   00C3 R
+ 14 _CIC_set_irq_handler                                           009D GR
+  9 _CIC_set_irq_handler_PARM_2                                    0043 GR
+  9 _CIC_set_irq_handler_file_name_3_3                             0046 R
+  9 _CIC_set_irq_handler_irq_number_1_1                            0045 R
+    _HAL_assert_fail                                               **** GX
+    _HAL_assert_fail_PARM_2                                        **** GX
+    _HW_get_32bit_reg                                              **** GX
+    _HW_set_32bit_reg                                              **** GX
+    _HW_set_32bit_reg_PARM_2                                       **** GX
+ 16 __xinit__g_cic_base_addr                                       0000 R
+  A _g_cic_base_addr                                               0000 R
+  9 _g_irq_handler_table                                           0000 R
+    a                                                              00D6 
+    ac                                                             00D6 
+    acc                                                            00E0 
+    acc.0                                                          00E0 
+    acc.1                                                          00E1 
+    acc.2                                                          00E2 
+    acc.3                                                          00E3 
+    acc.4                                                          00E4 
+    acc.5                                                          00E5 
+    acc.6                                                          00E6 
+    acc.7                                                          00E7 
+    ar0                                                         =  0000 
+    ar1                                                         =  0001 
+    ar2                                                         =  0002 
+    ar3                                                         =  0003 
+    ar4                                                         =  0004 
+    ar5                                                         =  0005 
+    ar6                                                         =  0006 
+    ar7                                                         =  0007 
+    b                                                              00F0 
+    b.0                                                            00F0 
+    b.1                                                            00F1 
+    b.2                                                            00F2 
+    b.3                                                            00F3 
+    b.4                                                            00F4 
+    b.5                                                            00F5 
+    b.6                                                            00F6 
+    b.7                                                            00F7 
+    cprl2                                                          00C8 
+    ct2                                                            00C9 
+    cy                                                             00D7 
+    dph                                                            0083 
+    dpl                                                            0082 
+    ea                                                             00AF 
+    es                                                             00AC 
+    et0                                                            00A9 
+    et1                                                            00AB 
+    et2                                                            00AD 
+    ex0                                                            00A8 
+    ex1                                                            00AA 
+    exen2                                                          00CB 
+    exf2                                                           00CE 
+    f0                                                             00D5 
+    ie                                                             00A8 
+    ie.0                                                           00A8 
+    ie.1                                                           00A9 
+    ie.2                                                           00AA 
+    ie.3                                                           00AB 
+    ie.4                                                           00AC 
+    ie.5                                                           00AD 
+    ie.7                                                           00AF 
+    ie0                                                            0089 
+    ie1                                                            008B 
+    int0                                                           00B2 
+    int1                                                           00B3 
+    ip                                                             00B8 
+    ip.0                                                           00B8 
+    ip.1                                                           00B9 
+    ip.2                                                           00BA 
+    ip.3                                                           00BB 
+    ip.4                                                           00BC 
+    ip.5                                                           00BD 
+    it0                                                            0088 
+    it1                                                            008A 
+    ov                                                             00D2 
+    p                                                              00D0 
+    p0                                                             0080 
+    p0.0                                                           0080 
+    p0.1                                                           0081 
+    p0.2                                                           0082 
+    p0.3                                                           0083 
+    p0.4                                                           0084 
+    p0.5                                                           0085 
+    p0.6                                                           0086 
+    p0.7                                                           0087 
+    p1                                                             0090 
+    p1.0                                                           0090 
+    p1.1                                                           0091 
+    p1.2                                                           0092 
+    p1.3                                                           0093 
+    p1.4                                                           0094 
+    p1.5                                                           0095 
+    p1.6                                                           0096 
+    p1.7                                                           0097 
+    p2                                                             00A0 
+    p2.0                                                           00A0 
+    p2.1                                                           00A1 
+    p2.2                                                           00A2 
+    p2.3                                                           00A3 
+    p2.4                                                           00A4 
+    p2.5                                                           00A5 
+    p2.6                                                           00A6 
+    p2.7                                                           00A7 
+    p3                                                             00B0 
+    p3.0                                                           00B0 
+    p3.1                                                           00B1 
+    p3.2                                                           00B2 
+    p3.3                                                           00B3 
+    p3.4                                                           00B4 
+    p3.5                                                           00B5 
+    p3.6                                                           00B6 
+    p3.7                                                           00B7 
+    pcon                                                           0087 
+    ps                                                             00BC 
+    psw                                                            00D0 
+    psw.0                                                          00D0 
+    psw.1                                                          00D1 
+    psw.2                                                          00D2 
+    psw.3                                                          00D3 
+    psw.4                                                          00D4 
+    psw.5                                                          00D5 
+    psw.6                                                          00D6 
+    psw.7                                                          00D7 
+    pt0                                                            00B9 
+    pt1                                                            00BB 
+    pt2                                                            00BD 
+    px0                                                            00B8 
+    px1                                                            00BA 
+    rb8                                                            009A 
+    rcap2h                                                         00CB 
+    rcap2l                                                         00CA 
+    rclk                                                           00CD 
+    ren                                                            009C 
+    ri                                                             0098 
+    rs0                                                            00D3 
+    rs1                                                            00D4 
+    rxd                                                            00B0 
+    sbuf                                                           0099 
+    scon                                                           0098 
+    scon.0                                                         0098 
+    scon.1                                                         0099 
+    scon.2                                                         009A 
+    scon.3                                                         009B 
+    scon.4                                                         009C 
+    scon.5                                                         009D 
+    scon.6                                                         009E 
+    scon.7                                                         009F 
+    sm0                                                            009F 
+    sm1                                                            009E 
+    sm2                                                            009D 
+    sp                                                             0081 
+    t2con                                                          00C8 
+    t2con.0                                                        00C8 
+    t2con.1                                                        00C9 
+    t2con.2                                                        00CA 
+    t2con.3                                                        00CB 
+    t2con.4                                                        00CC 
+    t2con.5                                                        00CD 
+    t2con.6                                                        00CE 
+    t2con.7                                                        00CF 
+    tb8                                                            009B 
+    tclk                                                           00CC 
+    tcon                                                           0088 
+    tcon.0                                                         0088 
+    tcon.1                                                         0089 
+    tcon.2                                                         008A 
+    tcon.3                                                         008B 
+    tcon.4                                                         008C 
+    tcon.5                                                         008D 
+    tcon.6                                                         008E 
+    tcon.7                                                         008F 
+    tf0                                                            008D 
+    tf1                                                            008F 
+    tf2                                                            00CF 
+    th0                                                            008C 
+    th1                                                            008D 
+    th2                                                            00CD 
+    ti                                                             0099 
+    tl0                                                            008A 
+    tl1                                                            008B 
+    tl2                                                            00CC 
+    tmod                                                           0089 
+    tr0                                                            008C 
+    tr1                                                            008E 
+    tr2                                                            00CA 
+    txd                                                            00B1 
+
+ASxxxx Assembler V01.70 + NoICE + SDCC mods + Flat24 Feb-1999  (Intel 8051), page 2.
+
+Area Table
+
+   0 _CODE                                                                              size    0   flags 0
+   1 RSEG                                                                               size    0   flags 0
+   2 REG_BANK_0                                                                         size    8   flags 4
+   3 DSEG                                                                               size    0   flags 0
+   4 OSEG                                                                               size    0   flags 4
+   5 ISEG                                                                               size    0   flags 0
+   6 IABS                                                                               size    0   flags 8
+   7 BSEG                                                                               size    0   flags 80
+   8 PSEG                                                                               size    0   flags 50
+   9 XSEG                                                                               size   ED   flags 40
+   A XISEG                                                                              size    2   flags 40
+   B HOME                                                                               size    0   flags 20
+   C GSINIT0                                                                            size    0   flags 20
+   D GSINIT1                                                                            size    0   flags 20
+   E GSINIT2                                                                            size    0   flags 20
+   F GSINIT3                                                                            size    0   flags 20
+  10 GSINIT4                                                                            size    0   flags 20
+  11 GSINIT5                                                                            size    0   flags 20
+  12 GSINIT                                                                             size    0   flags 20
+  13 GSFINAL                                                                            size    0   flags 20
+  14 CSEG                                                                               size  6FB   flags 20
+  15 CONST                                                                              size    0   flags 20
+  16 XINIT                                                                              size    2   flags 20
+  17 CABS                                                                               size    0   flags 28

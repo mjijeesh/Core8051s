@@ -1,0 +1,13 @@
+@N: CD630 :"D:\jijeesh\Reference\Core8051\Core8051_Core1553RT\External_Flash-Example\Core8051_Ext_SRAM_Int_XData\hdl\memory_mux.vhd":6:7:6:16|Synthesizing work.memory_mux.one 
+@W: CD638 :"D:\jijeesh\Reference\Core8051\Core8051_Core1553RT\External_Flash-Example\Core8051_Ext_SRAM_Int_XData\hdl\memory_mux.vhd":57:7:57:20|Signal flash_memdatai is undriven 
+@N: CD630 :"D:\jijeesh\Reference\Core8051\Core8051_Core1553RT\External_Flash-Example\Core8051_Ext_SRAM_Int_XData\smartgen\RAM4Kx8\RAM4Kx8.vhd":8:7:8:13|Synthesizing work.ram4kx8.def_arch 
+@N: CD630 :"e:\Actel\Libero_v9.1\Synopsys\synplify_E201009A-1\lib\proasic\fusion.vhd":3182:10:3182:15|Synthesizing fusion.ram4k9.syn_black_box 
+Post processing for fusion.ram4k9.syn_black_box
+@N: CD630 :"e:\Actel\Libero_v9.1\Synopsys\synplify_E201009A-1\lib\proasic\fusion.vhd":2117:10:2117:12|Synthesizing fusion.inv.syn_black_box 
+Post processing for fusion.inv.syn_black_box
+@N: CD630 :"e:\Actel\Libero_v9.1\Synopsys\synplify_E201009A-1\lib\proasic\fusion.vhd":1899:10:1899:12|Synthesizing fusion.gnd.syn_black_box 
+Post processing for fusion.gnd.syn_black_box
+@N: CD630 :"e:\Actel\Libero_v9.1\Synopsys\synplify_E201009A-1\lib\proasic\fusion.vhd":3019:10:3019:12|Synthesizing fusion.vcc.syn_black_box 
+Post processing for fusion.vcc.syn_black_box
+Post processing for work.ram4kx8.def_arch
+Post processing for work.memory_mux.one

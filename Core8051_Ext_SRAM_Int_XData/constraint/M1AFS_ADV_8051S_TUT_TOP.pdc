@@ -1,0 +1,470 @@
+# Actel Physical design constraints file
+# Generated file
+
+# Version: 9.1 SP5 9.1.5.1
+# Family: Fusion , Die: M1AFS1500 , Package: 484 FBGA
+# Date generated: Thu May 02 12:54:50 2013 
+
+
+# 
+# IO banks setting
+# 
+
+
+# 
+# I/O constraints
+# 
+
+#set_io Clock          \
+    -pinname J16      \
+    -fixed yes        \
+    -DIRECTION Input
+
+
+set_io {MEM_ADDR[0]}  \
+    -pinname E19        \
+    -fixed yes          \
+    -DIRECTION Output
+
+
+set_io {MEM_ADDR[1]}  \
+    -pinname E22        \
+    -fixed yes          \
+    -DIRECTION Output
+
+
+set_io {MEM_ADDR[2]}  \
+    -pinname F20        \
+    -fixed yes          \
+    -DIRECTION Output
+
+
+set_io {MEM_ADDR[3]}  \
+    -pinname F21        \
+    -fixed yes          \
+    -DIRECTION Output
+
+
+set_io {MEM_ADDR[4]}  \
+    -pinname F22        \
+    -fixed yes          \
+    -DIRECTION Output
+
+
+set_io {MEM_ADDR[5]}  \
+    -pinname B18        \
+    -fixed yes          \
+    -DIRECTION Output
+
+
+set_io {MEM_ADDR[6]}  \
+    -pinname B17        \
+    -fixed yes          \
+    -DIRECTION Output
+
+
+set_io {MEM_ADDR[7]}  \
+    -pinname C16        \
+    -fixed yes          \
+    -DIRECTION Output
+
+
+set_io {MEM_ADDR[8]}  \
+    -pinname B15        \
+    -fixed yes          \
+    -DIRECTION Output
+
+
+set_io {MEM_ADDR[9]}  \
+    -pinname B14        \
+    -fixed yes          \
+    -DIRECTION Output
+
+
+set_io {MEM_ADDR[10]}  \
+    -pinname C22         \
+    -fixed yes           \
+    -DIRECTION Output
+
+
+set_io {MEM_ADDR[11]}  \
+    -pinname C21         \
+    -fixed yes           \
+    -DIRECTION Output
+
+
+set_io {MEM_ADDR[12]}  \
+    -pinname A18         \
+    -fixed yes           \
+    -DIRECTION Output
+
+
+set_io {MEM_ADDR[13]}  \
+    -pinname A17         \
+    -fixed yes           \
+    -DIRECTION Output
+
+
+set_io {MEM_ADDR[14]}  \
+    -pinname A16         \
+    -fixed yes           \
+    -DIRECTION Output
+
+
+set_io {MEM_ADDR[15]}  \
+    -pinname B12         \
+    -fixed yes           \
+    -DIRECTION Output
+
+
+set_io {MEM_ADDR[16]}  \
+    -pinname A12         \
+    -fixed yes           \
+    -DIRECTION Output
+
+
+set_io {MEM_ADDR[17]}  \
+    -pinname A13         \
+    -fixed yes           \
+    -DIRECTION Output
+
+
+set_io {MEM_ADDR[18]}  \
+    -pinname A14         \
+    -fixed yes           \
+    -DIRECTION Output
+
+
+set_io {MEM_ADDR[19]}  \
+    -pinname A15         \
+    -fixed yes           \
+    -DIRECTION Output
+
+
+set_io {MEM_ADDR[20]}  \
+    -pinname C14         \
+    -fixed yes           \
+    -DIRECTION Output
+
+
+set_io {MEM_ADDR[21]}  \
+    -pinname C13         \
+    -fixed yes           \
+    -DIRECTION Output
+
+
+set_io {MEM_ADDR[22]}  \
+    -pinname D12         \
+    -fixed yes           \
+    -DIRECTION Output
+
+
+set_io {MEM_ADDR[23]}  \
+    -pinname J7          \
+    -fixed yes           \
+    -DIRECTION Output
+
+
+set_io FLASH_BYTEn     \
+    -pinname F19       \
+    -fixed yes         \
+    -DIRECTION Output
+
+
+set_io FLASH_CEn       \
+    -pinname K17       \
+    -fixed yes         \
+    -DIRECTION Output
+
+
+set_io {MEM_DATA[0]}  \
+    -pinname D19        \
+    -fixed yes          \
+    -DIRECTION Inout
+
+
+set_io {MEM_DATA[1]}  \
+    -pinname D17        \
+    -fixed yes          \
+    -DIRECTION Inout
+
+
+set_io {MEM_DATA[2]}  \
+    -pinname D16        \
+    -fixed yes          \
+    -DIRECTION Inout
+
+
+set_io {MEM_DATA[3]}  \
+    -pinname G17        \
+    -fixed yes          \
+    -DIRECTION Inout
+
+
+set_io {MEM_DATA[4]}  \
+    -pinname G16        \
+    -fixed yes          \
+    -DIRECTION Inout
+
+
+set_io {MEM_DATA[5]}  \
+    -pinname E15        \
+    -fixed yes          \
+    -DIRECTION Inout
+
+
+set_io {MEM_DATA[6]}  \
+    -pinname D14        \
+    -fixed yes          \
+    -DIRECTION Inout
+
+
+set_io {MEM_DATA[7]}  \
+    -pinname F14        \
+    -fixed yes          \
+    -DIRECTION Inout
+
+
+set_io FLASH_OEn       \
+    -pinname G13       \
+    -fixed yes         \
+    -DIRECTION Output
+
+
+set_io FLASH_RPn       \
+    -pinname H17       \
+    -fixed yes         \
+    -DIRECTION Output
+
+
+set_io FLASH_VPEN      \
+    -pinname J17       \
+    -fixed yes         \
+    -DIRECTION Output
+
+
+set_io FLASH_WEn       \
+    -pinname E12       \
+    -fixed yes         \
+    -DIRECTION Output
+
+
+set_io SRAM_OEn       \
+    -pinname K16       \
+    -fixed yes         \
+    -DIRECTION Output
+
+set_io SRAM_WEn       \
+    -pinname E21       \
+    -fixed yes         \
+    -DIRECTION Output
+
+
+set_io SRAM_CEn1       \
+    -pinname J19       \
+    -fixed yes         \
+    -DIRECTION Output
+
+
+set_io SRAM_CE2       \
+    -pinname H18       \
+    -fixed yes         \
+    -DIRECTION Output
+
+set_io SRAM_BHEn0       \
+    -pinname G20       \
+    -fixed yes         \
+    -DIRECTION Output
+
+set_io SRAM_BLEn0       \
+    -pinname J18       \
+    -fixed yes         \
+    -DIRECTION Output
+
+
+set_io SRAM_BHEn1       \
+    -pinname N22       \
+    -fixed yes         \
+    -DIRECTION Output
+
+set_io SRAM_BLEn1      \
+    -pinname N20       \
+    -fixed yes         \
+    -DIRECTION Output
+
+
+
+set_io {LED[0]}        \
+    -pinname J2        \
+    -fixed yes         \
+    -DIRECTION Output
+
+
+set_io {LED[1]}        \
+    -pinname J3        \
+    -fixed yes         \
+    -DIRECTION Output
+
+
+set_io {LED[2]}        \
+    -pinname J4        \
+    -fixed yes         \
+    -DIRECTION Output
+
+
+set_io {LED[3]}        \
+    -pinname M7        \
+    -fixed yes         \
+    -DIRECTION Output
+
+
+set_io {LED[4]}        \
+    -pinname K4        \
+    -fixed yes         \
+    -DIRECTION Output
+
+
+set_io {LED[5]}        \
+    -pinname L5        \
+    -fixed yes         \
+    -DIRECTION Output
+
+
+set_io {LED[6]}        \
+    -pinname L7        \
+    -fixed yes         \
+    -DIRECTION Output
+
+
+set_io {LED[7]}        \
+    -pinname M5        \
+    -fixed yes         \
+    -DIRECTION Output
+
+
+set_io NSYSRESET      \
+    -pinname H19      \
+    -fixed yes        \
+    -DIRECTION Input
+
+
+set_io {SWITCH[0]}    \
+    -pinname R2       \
+    -fixed yes        \
+    -DIRECTION Input
+
+
+set_io {SWITCH[1]}    \
+    -pinname P1       \
+    -fixed yes        \
+    -DIRECTION Input
+
+
+set_io {SWITCH[2]}    \
+    -pinname P2       \
+    -fixed yes        \
+    -DIRECTION Input
+
+
+set_io {SWITCH[3]}    \
+    -pinname L1       \
+    -fixed yes        \
+    -DIRECTION Input
+
+
+set_io {SWITCH[4]}    \
+    -pinname K1       \
+    -fixed yes        \
+    -DIRECTION Input
+
+
+set_io {SWITCH[5]}    \
+    -pinname R1       \
+    -fixed yes        \
+    -DIRECTION Input
+
+
+set_io {SWITCH[6]}    \
+    -pinname N3       \
+    -fixed yes        \
+    -DIRECTION Input
+
+
+set_io {SWITCH[7]}    \
+    -pinname K3       \
+    -fixed yes        \
+    -DIRECTION Input
+
+
+set_io UART_RX        \
+    -pinname M1       \
+    -fixed yes        \
+    -DIRECTION Input
+
+
+set_io UART_TX         \
+    -pinname N1        \
+    -fixed yes         \
+    -DIRECTION Output
+
+
+
+#
+# Non IO constraints
+#
+
+
+#
+# Old IO constraints, commented out for reference
+#
+
+# set_io Clock -pinname J16 -fixed yes -DIRECTION Input 
+# set_io {MEM_ADDR[0]} -pinname E19 -fixed yes -DIRECTION Output 
+# set_io {MEM_ADDR[1]} -pinname E22 -fixed yes -DIRECTION Output 
+# set_io {MEM_ADDR[2]} -pinname F20 -fixed yes -DIRECTION Output 
+# set_io {MEM_ADDR[3]} -pinname F21 -fixed yes -DIRECTION Output 
+# set_io {MEM_ADDR[4]} -pinname F22 -fixed yes -DIRECTION Output 
+# set_io {MEM_ADDR[5]} -pinname B18 -fixed yes -DIRECTION Output 
+# set_io {MEM_ADDR[6]} -pinname B17 -fixed yes -DIRECTION Output 
+# set_io {MEM_ADDR[7]} -pinname C16 -fixed yes -DIRECTION Output 
+# set_io {MEM_ADDR[8]} -pinname B15 -fixed yes -DIRECTION Output 
+# set_io {MEM_ADDR[9]} -pinname B14 -fixed yes -DIRECTION Output 
+# set_io {MEM_ADDR[10]} -pinname C22 -fixed yes -DIRECTION Output 
+# set_io {MEM_ADDR[11]} -pinname C21 -fixed yes -DIRECTION Output 
+# set_io {MEM_ADDR[12]} -pinname A18 -fixed yes -DIRECTION Output 
+# set_io {MEM_ADDR[13]} -pinname A17 -fixed yes -DIRECTION Output 
+# set_io {MEM_ADDR[14]} -pinname A16 -fixed yes -DIRECTION Output 
+# set_io {MEM_ADDR[15]} -pinname B12 -fixed yes -DIRECTION Output 
+# set_io FLASH_BYTEn -pinname F19 -fixed yes -DIRECTION Output 
+# set_io FLASH_CEn -pinname K17 -fixed yes -DIRECTION Output 
+# set_io {MEM_DATA[0]} -pinname D19 -fixed yes -DIRECTION Inout 
+# set_io {MEM_DATA[1]} -pinname D17 -fixed yes -DIRECTION Inout 
+# set_io {MEM_DATA[2]} -pinname D16 -fixed yes -DIRECTION Inout 
+# set_io {MEM_DATA[3]} -pinname G17 -fixed yes -DIRECTION Inout 
+# set_io {MEM_DATA[4]} -pinname G16 -fixed yes -DIRECTION Inout 
+# set_io {MEM_DATA[5]} -pinname E15 -fixed yes -DIRECTION Inout 
+# set_io {MEM_DATA[6]} -pinname D14 -fixed yes -DIRECTION Inout 
+# set_io {MEM_DATA[7]} -pinname F14 -fixed yes -DIRECTION Inout 
+# set_io FLASH_OEn -pinname G13 -fixed yes -DIRECTION Output 
+# set_io FLASH_RPn -pinname H17 -fixed yes -DIRECTION Output 
+# set_io FLASH_VPEN -pinname J17 -fixed yes -DIRECTION Output 
+# set_io FLASH_WEn -pinname E12 -fixed yes -DIRECTION Output 
+# set_io {LED[0]} -pinname J2 -fixed yes -DIRECTION Output 
+# set_io {LED[1]} -pinname J3 -fixed yes -DIRECTION Output 
+# set_io {LED[2]} -pinname J4 -fixed yes -DIRECTION Output 
+# set_io {LED[3]} -pinname M7 -fixed yes -DIRECTION Output 
+# set_io {LED[4]} -pinname K4 -fixed yes -DIRECTION Output 
+# set_io {LED[5]} -pinname L5 -fixed yes -DIRECTION Output 
+# set_io {LED[6]} -pinname L7 -fixed yes -DIRECTION Output 
+# set_io {LED[7]} -pinname M5 -fixed yes -DIRECTION Output 
+# set_io NSYSRESET -pinname H19 -fixed yes -DIRECTION Input 
+# set_io {SWITCH[0]} -pinname R2 -fixed yes -DIRECTION Input 
+# set_io {SWITCH[1]} -pinname P1 -fixed yes -DIRECTION Input 
+# set_io {SWITCH[2]} -pinname P2 -fixed yes -DIRECTION Input 
+# set_io {SWITCH[3]} -pinname L1 -fixed yes -DIRECTION Input 
+# set_io {SWITCH[4]} -pinname K1 -fixed yes -DIRECTION Input 
+# set_io {SWITCH[5]} -pinname R1 -fixed yes -DIRECTION Input 
+# set_io {SWITCH[6]} -pinname N3 -fixed yes -DIRECTION Input 
+# set_io {SWITCH[7]} -pinname K3 -fixed yes -DIRECTION Input 
+# set_io UART_RX -pinname M1 -fixed yes -DIRECTION Input 
+# set_io UART_TX -pinname N1 -fixed yes -DIRECTION Output 

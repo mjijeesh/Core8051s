@@ -1,0 +1,8 @@
+<!-- File generated from ../intel-28f640-1x8-code-memory.txt -->
+<board>
+ <memory-map>
+    <memory-device address="0x800000" size="64k" type="flash" device="intel-28f640-1x8">
+      <description>Flash</description>
+    </memory-device>
+  </memory-map>
+</board>

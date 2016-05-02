@@ -1,0 +1,13 @@
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\hdl\flash_control.vhd":8:7:8:14|Synthesizing work.flashapb.one 
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\smartgen\nvm64k\nvm64k.vhd":8:7:8:12|Synthesizing work.nvm64k.def_arch 
+@N: CD630 :"D:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\lib\proasic\fusion.vhd":4477:10:4477:12|Synthesizing fusion.nvm.syn_black_box 
+Post processing for fusion.nvm.syn_black_box
+@N: CD630 :"D:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\lib\proasic\fusion.vhd":3019:10:3019:12|Synthesizing fusion.vcc.syn_black_box 
+Post processing for fusion.vcc.syn_black_box
+@N: CD630 :"D:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\lib\proasic\fusion.vhd":1899:10:1899:12|Synthesizing fusion.gnd.syn_black_box 
+Post processing for fusion.gnd.syn_black_box
+Post processing for work.nvm64k.def_arch
+@W: CL168 :"C:\Actelprj\AFS_ADV_KIT_8051\smartgen\nvm64k\nvm64k.vhd":146:4:146:18|Pruning instance VCC_power_inst1 - not in use ... 
+Post processing for work.flashapb.one
+@W: CL159 :"C:\Actelprj\AFS_ADV_KIT_8051\hdl\flash_control.vhd":20:8:20:15|Input memdatai is unused
+@W: CL159 :"C:\Actelprj\AFS_ADV_KIT_8051\hdl\flash_control.vhd":22:8:22:12|Input memwr is unused

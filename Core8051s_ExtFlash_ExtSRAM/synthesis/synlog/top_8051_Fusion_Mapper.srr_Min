@@ -1,0 +1,64 @@
+
+
+##### START OF TIMING REPORT #####[
+# Timing Report written on Wed Sep 23 11:32:52 2015
+#
+
+
+Top view:               top_8051
+Operating conditions:   fusion.COMWC-2
+Requested Frequency:    1.0 MHz
+Wire load mode:         top
+Wire load model:        fusion
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |This timing report estimates place and route data. Please look at the place and route timing report for final timing..
+
+@N: MT322 |Clock constraints cover only FF-to-FF paths associated with the clock..
+
+
+
+Performance Summary 
+*******************
+
+
+Worst slack in design: NA
+
+                                      Requested     Estimated     Requested     Estimated                 Clock        Clock              
+Starting Clock                        Frequency     Frequency     Period        Period        Slack       Type         Group              
+------------------------------------------------------------------------------------------------------------------------------------------
+PLL_50Mh_6Mh|net_0_inferred_clock     1.0 MHz       17.3 MHz      1000.000      57.858        479.817     inferred     Inferred_clkgroup_2
+jtagu|udrck                           1.0 MHz       87.8 MHz      1000.000      11.392        988.608     inferred     Inferred_clkgroup_1
+top_8051|DebugIf_TCK                  1.0 MHz       NA            1000.000      NA            NA          inferred     Inferred_clkgroup_0
+==========================================================================================================================================
+
+
+
+Clock Relationships
+*******************
+
+Clocks                                                                |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                           Ending                             |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+top_8051|DebugIf_TCK               jtagu|udrck                        |  No paths    -      |  No paths    -      |  No paths    -      |  Diff grp    -    
+top_8051|DebugIf_TCK               PLL_50Mh_6Mh|net_0_inferred_clock  |  No paths    -      |  No paths    -      |  No paths    -      |  Diff grp    -    
+jtagu|udrck                        top_8051|DebugIf_TCK               |  No paths    -      |  No paths    -      |  Diff grp    -      |  No paths    -    
+jtagu|udrck                        jtagu|udrck                        |  0.000       False  |  No paths    -      |  No paths    -      |  No paths    -    
+jtagu|udrck                        PLL_50Mh_6Mh|net_0_inferred_clock  |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
+PLL_50Mh_6Mh|net_0_inferred_clock  jtagu|udrck                        |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
+PLL_50Mh_6Mh|net_0_inferred_clock  PLL_50Mh_6Mh|net_0_inferred_clock  |  0.000       False  |  No paths    -      |  500.000     False  |  500.000     False
+============================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+		No IO constraint found 
+
+
+##### END OF TIMING REPORT #####]
+

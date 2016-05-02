@@ -1,0 +1,554 @@
+
+apb_flash_program_8051.elf:     file format elf32-c8051
+
+Disassembly of section .text:
+
+00800000 <main-0x7a>:
+  800000:	02 00 08    	ljmp 800008 <size+0x3fffe5>
+  800003:	12 00 7a    	lcall 80007a <main>
+  800006:	80 fe       	sjmp 800006
+  800008:	75 81 26    	mov sp, #38
+  80000b:	12 03 cd    	lcall 8003cd <FlashBusyCheck+0x30>
+  80000e:	e5 82       	mov a, dpl
+  800010:	60 03       	jz 800015
+  800012:	02 00 03    	ljmp 800003 <size+0x3fffe0>
+  800015:	79 00       	mov r1, #0
+  800017:	e9          	mov a, r1
+  800018:	44 00       	orl a, #0
+  80001a:	60 1b       	jz 800037
+  80001c:	7a 00       	mov r2, #0
+  80001e:	90 04 3e    	mov dptr, #1086
+  800021:	78 00       	mov r0, #0
+  800023:	75 a0 00    	mov 0xa0, #0
+  800026:	e4          	clr a
+  800027:	93          	movc a, @a + dptr
+  800028:	f2          	movx @r0, a
+  800029:	a3          	inc dptr
+  80002a:	08          	inc r0
+  80002b:	b8 00 02    	cjne r0, #0, 800030
+  80002e:	05 a0       	inc 0xa0
+  800030:	d9 f4       	djnz r1, 800026
+  800032:	da f2       	djnz r2, 800026
+  800034:	75 a0 ff    	mov 0xa0, #255
+  800037:	e4          	clr a
+  800038:	78 ff       	mov r0, #255
+  80003a:	f6          	mov @r0, a
+  80003b:	d8 fd       	djnz r0, 80003a
+  80003d:	78 00       	mov r0, #0
+  80003f:	e8          	mov a, r0
+  800040:	60 0a       	jz 80004c
+  800042:	79 00       	mov r1, #0
+  800044:	75 a0 00    	mov 0xa0, #0
+  800047:	e4          	clr a
+  800048:	f3          	movx @r1, a
+  800049:	09          	inc r1
+  80004a:	d8 fc       	djnz r0, 800048
+  80004c:	78 00       	mov r0, #0
+  80004e:	e8          	mov a, r0
+  80004f:	44 00       	orl a, #0
+  800051:	60 0c       	jz 80005f
+  800053:	79 00       	mov r1, #0
+  800055:	90 00 00    	mov dptr, #0
+  800058:	e4          	clr a
+  800059:	f0          	movx @dptr, a
+  80005a:	a3          	inc dptr
+  80005b:	d8 fc       	djnz r0, 800059
+  80005d:	d9 fa       	djnz r1, 800059
+  80005f:	75 18 00    	mov 0x18, #0
+  800062:	75 19 f1    	mov 0x19, #241
+  800065:	75 1a 00    	mov 0x1a, #0
+  800068:	75 1b f4    	mov 0x1b, #244
+  80006b:	75 1c 00    	mov 0x1c, #0
+  80006e:	75 1d f0    	mov 0x1d, #240
+  800071:	75 1e 00    	mov 0x1e, #0
+  800074:	75 1f f3    	mov 0x1f, #243
+  800077:	02 00 03    	ljmp 800003 <size+0x3fffe0>
+
+0080007a <main>:
+  80007a:	7a 00       	mov r2, #0
+  80007c:	7b 00       	mov r3, #0
+  80007e:	75 82 26    	mov dpl, #38
+  800081:	c0 02       	push 0x02
+  800083:	c0 03       	push 0x03
+  800085:	12 01 cc    	lcall 8001cc <uart_config>
+  800088:	d0 03       	pop 0x03
+  80008a:	d0 02       	pop 0x02
+  80008c:	75 82 e2    	mov dpl, #226
+  80008f:	75 83 03    	mov dph, #3
+  800092:	75 f0 80    	mov b, #128
+  800095:	c0 02       	push 0x02
+  800097:	c0 03       	push 0x03
+  800099:	12 02 3e    	lcall 80023e <printf>
+  80009c:	d0 03       	pop 0x03
+  80009e:	d0 02       	pop 0x02
+  8000a0:	7c 20       	mov r4, #32
+  8000a2:	8a 82       	mov dpl, r2
+  8000a4:	8b 83       	mov dph, r3
+  8000a6:	c0 02       	push 0x02
+  8000a8:	c0 03       	push 0x03
+  8000aa:	c0 04       	push 0x04
+  8000ac:	12 02 7d    	lcall 80027d <FlashErasePage>
+  8000af:	d0 04       	pop 0x04
+  8000b1:	d0 03       	pop 0x03
+  8000b3:	d0 02       	pop 0x02
+  8000b5:	74 80       	mov a, #128
+  8000b7:	25 02       	add a, 0x02
+  8000b9:	fa          	mov r2, a
+  8000ba:	74 00       	mov a, #0
+  8000bc:	35 03       	addc a, 0x03
+  8000be:	fb          	mov r3, a
+  8000bf:	1c          	dec r4
+  8000c0:	ec          	mov a, r4
+  8000c1:	60 03       	jz 8000c6
+  8000c3:	02 00 a2    	ljmp 8000a2 <main+0x28>
+  8000c6:	7a 00       	mov r2, #0
+  8000c8:	7b 00       	mov r3, #0
+  8000ca:	7d 00       	mov r5, #0
+  8000cc:	7e 00       	mov r6, #0
+  8000ce:	be 0a 00    	cjne r6, #10, 8000d1
+  8000d1:	40 03       	jc 8000d6
+  8000d3:	02 01 28    	ljmp 800128 <main+0xae>
+  8000d6:	c0 02       	push 0x02
+  8000d8:	c0 03       	push 0x03
+  8000da:	c0 05       	push 0x05
+  8000dc:	c0 06       	push 0x06
+  8000de:	12 02 1a    	lcall 80021a <uart_getchar>
+  8000e1:	ac 82       	mov r4, dpl
+  8000e3:	d0 06       	pop 0x06
+  8000e5:	d0 05       	pop 0x05
+  8000e7:	d0 03       	pop 0x03
+  8000e9:	d0 02       	pop 0x02
+  8000eb:	8e 82       	mov dpl, r6
+  8000ed:	75 83 f3    	mov dph, #243
+  8000f0:	ec          	mov a, r4
+  8000f1:	f0          	movx @dptr, a
+  8000f2:	8c 82       	mov dpl, r4
+  8000f4:	c0 02       	push 0x02
+  8000f6:	c0 03       	push 0x03
+  8000f8:	c0 05       	push 0x05
+  8000fa:	c0 06       	push 0x06
+  8000fc:	12 02 2c    	lcall 80022c <uart_putchar>
+  8000ff:	d0 06       	pop 0x06
+  800101:	d0 05       	pop 0x05
+  800103:	d0 03       	pop 0x03
+  800105:	d0 02       	pop 0x02
+  800107:	75 82 ff    	mov dpl, #255
+  80010a:	75 83 03    	mov dph, #3
+  80010d:	75 f0 80    	mov b, #128
+  800110:	c0 02       	push 0x02
+  800112:	c0 03       	push 0x03
+  800114:	c0 05       	push 0x05
+  800116:	c0 06       	push 0x06
+  800118:	12 02 3e    	lcall 80023e <printf>
+  80011b:	d0 06       	pop 0x06
+  80011d:	d0 05       	pop 0x05
+  80011f:	d0 03       	pop 0x03
+  800121:	d0 02       	pop 0x02
+  800123:	0d          	inc r5
+  800124:	0e          	inc r6
+  800125:	02 00 ce    	ljmp 8000ce <main+0x54>
+  800128:	75 82 02    	mov dpl, #2
+  80012b:	75 83 04    	mov dph, #4
+  80012e:	75 f0 80    	mov b, #128
+  800131:	c0 02       	push 0x02
+  800133:	c0 03       	push 0x03
+  800135:	c0 05       	push 0x05
+  800137:	12 02 3e    	lcall 80023e <printf>
+  80013a:	d0 05       	pop 0x05
+  80013c:	d0 03       	pop 0x03
+  80013e:	d0 02       	pop 0x02
+  800140:	c0 02       	push 0x02
+  800142:	c0 03       	push 0x03
+  800144:	c0 05       	push 0x05
+  800146:	12 02 1a    	lcall 80021a <uart_getchar>
+  800149:	d0 05       	pop 0x05
+  80014b:	d0 03       	pop 0x03
+  80014d:	d0 02       	pop 0x02
+  80014f:	7c 0a       	mov r4, #10
+  800151:	8a 21       	mov 0x21, r2
+  800153:	8b 22       	mov 0x22, r3
+  800155:	8d 23       	mov 0x23, r5
+  800157:	75 82 00    	mov dpl, #0
+  80015a:	75 83 f3    	mov dph, #243
+  80015d:	75 f0 00    	mov b, #0
+  800160:	c0 02       	push 0x02
+  800162:	c0 03       	push 0x03
+  800164:	c0 04       	push 0x04
+  800166:	c0 05       	push 0x05
+  800168:	12 02 d3    	lcall 8002d3 <FlashProgramPage>
+  80016b:	d0 05       	pop 0x05
+  80016d:	d0 04       	pop 0x04
+  80016f:	d0 03       	pop 0x03
+  800171:	d0 02       	pop 0x02
+  800173:	75 82 1c    	mov dpl, #28
+  800176:	75 83 04    	mov dph, #4
+  800179:	75 f0 80    	mov b, #128
+  80017c:	c0 02       	push 0x02
+  80017e:	c0 03       	push 0x03
+  800180:	c0 04       	push 0x04
+  800182:	c0 05       	push 0x05
+  800184:	12 02 3e    	lcall 80023e <printf>
+  800187:	d0 05       	pop 0x05
+  800189:	d0 04       	pop 0x04
+  80018b:	d0 03       	pop 0x03
+  80018d:	d0 02       	pop 0x02
+  80018f:	75 82 2e    	mov dpl, #46
+  800192:	75 83 04    	mov dph, #4
+  800195:	75 f0 80    	mov b, #128
+  800198:	c0 02       	push 0x02
+  80019a:	c0 03       	push 0x03
+  80019c:	c0 04       	push 0x04
+  80019e:	c0 05       	push 0x05
+  8001a0:	12 02 3e    	lcall 80023e <printf>
+  8001a3:	d0 05       	pop 0x05
+  8001a5:	d0 04       	pop 0x04
+  8001a7:	d0 03       	pop 0x03
+  8001a9:	d0 02       	pop 0x02
+  8001ab:	74 80       	mov a, #128
+  8001ad:	25 02       	add a, 0x02
+  8001af:	fa          	mov r2, a
+  8001b0:	74 00       	mov a, #0
+  8001b2:	35 03       	addc a, 0x03
+  8001b4:	fb          	mov r3, a
+  8001b5:	dc 02       	djnz r4, 8001b9
+  8001b7:	80 03       	sjmp 8001bc
+  8001b9:	02 01 51    	ljmp 800151 <main+0xd7>
+  8001bc:	75 82 32    	mov dpl, #50
+  8001bf:	75 83 04    	mov dph, #4
+  8001c2:	75 f0 80    	mov b, #128
+  8001c5:	12 02 3e    	lcall 80023e <printf>
+  8001c8:	02 01 c8    	ljmp 8001c8 <main+0x14e>
+  8001cb:	22          	ret
+
+008001cc <uart_config>:
+  8001cc:	aa 82       	mov r2, dpl
+  8001ce:	85 1c 82    	mov dpl, 0x1c
+  8001d1:	85 1d 83    	mov dph, 0x1d
+  8001d4:	a3          	inc dptr
+  8001d5:	a3          	inc dptr
+  8001d6:	a3          	inc dptr
+  8001d7:	a3          	inc dptr
+  8001d8:	a3          	inc dptr
+  8001d9:	a3          	inc dptr
+  8001da:	a3          	inc dptr
+  8001db:	a3          	inc dptr
+  8001dc:	ea          	mov a, r2
+  8001dd:	f0          	movx @dptr, a
+  8001de:	74 0c       	mov a, #12
+  8001e0:	25 1c       	add a, 0x1c
+  8001e2:	f5 82       	mov dpl, a
+  8001e4:	74 00       	mov a, #0
+  8001e6:	35 1d       	addc a, 0x1d
+  8001e8:	f5 83       	mov dph, a
+  8001ea:	74 01       	mov a, #1
+  8001ec:	f0          	movx @dptr, a
+  8001ed:	22          	ret
+
+008001ee <uartWaitXmt>:
+  8001ee:	74 10       	mov a, #16
+  8001f0:	25 1c       	add a, 0x1c
+  8001f2:	f5 82       	mov dpl, a
+  8001f4:	74 00       	mov a, #0
+  8001f6:	35 1d       	addc a, 0x1d
+  8001f8:	f5 83       	mov dph, a
+  8001fa:	e0          	movx a, @dptr
+  8001fb:	fa          	mov r2, a
+  8001fc:	ea          	mov a, r2
+  8001fd:	20 e0 03    	jb 224, 800203
+  800200:	02 01 ee    	ljmp 8001ee <uartWaitXmt>
+  800203:	22          	ret
+
+00800204 <uartWaitRxd>:
+  800204:	74 10       	mov a, #16
+  800206:	25 1c       	add a, 0x1c
+  800208:	f5 82       	mov dpl, a
+  80020a:	74 00       	mov a, #0
+  80020c:	35 1d       	addc a, 0x1d
+  80020e:	f5 83       	mov dph, a
+  800210:	e0          	movx a, @dptr
+  800211:	fa          	mov r2, a
+  800212:	ea          	mov a, r2
+  800213:	20 e1 03    	jb 225, 800219
+  800216:	02 02 04    	ljmp 800204 <uartWaitRxd>
+  800219:	22          	ret
+
+0080021a <uart_getchar>:
+  80021a:	12 02 04    	lcall 800204 <uartWaitRxd>
+  80021d:	85 1c 82    	mov dpl, 0x1c
+  800220:	85 1d 83    	mov dph, 0x1d
+  800223:	a3          	inc dptr
+  800224:	a3          	inc dptr
+  800225:	a3          	inc dptr
+  800226:	a3          	inc dptr
+  800227:	e0          	movx a, @dptr
+  800228:	fa          	mov r2, a
+  800229:	8a 82       	mov dpl, r2
+  80022b:	22          	ret
+
+0080022c <uart_putchar>:
+  80022c:	aa 82       	mov r2, dpl
+  80022e:	c0 02       	push 0x02
+  800230:	12 01 ee    	lcall 8001ee <uartWaitXmt>
+  800233:	d0 02       	pop 0x02
+  800235:	85 1c 82    	mov dpl, 0x1c
+  800238:	85 1d 83    	mov dph, 0x1d
+  80023b:	ea          	mov a, r2
+  80023c:	f0          	movx @dptr, a
+  80023d:	22          	ret
+
+0080023e <printf>:
+  80023e:	aa 82       	mov r2, dpl
+  800240:	ab 83       	mov r3, dph
+  800242:	ac f0       	mov r4, b
+  800244:	8a 82       	mov dpl, r2
+  800246:	8b 83       	mov dph, r3
+  800248:	8c f0       	mov b, r4
+  80024a:	12 03 b1    	lcall 8003b1 <FlashBusyCheck+0x14>
+  80024d:	fd          	mov r5, a
+  80024e:	a3          	inc dptr
+  80024f:	aa 82       	mov r2, dpl
+  800251:	ab 83       	mov r3, dph
+  800253:	bd 00 03    	cjne r5, #0, 800259
+  800256:	02 02 7c    	ljmp 80027c <printf+0x3e>
+  800259:	8d 82       	mov dpl, r5
+  80025b:	c0 02       	push 0x02
+  80025d:	c0 03       	push 0x03
+  80025f:	c0 04       	push 0x04
+  800261:	12 02 2c    	lcall 80022c <uart_putchar>
+  800264:	d0 04       	pop 0x04
+  800266:	d0 03       	pop 0x03
+  800268:	d0 02       	pop 0x02
+  80026a:	8a 82       	mov dpl, r2
+  80026c:	8b 83       	mov dph, r3
+  80026e:	8c f0       	mov b, r4
+  800270:	12 03 b1    	lcall 8003b1 <FlashBusyCheck+0x14>
+  800273:	fd          	mov r5, a
+  800274:	a3          	inc dptr
+  800275:	aa 82       	mov r2, dpl
+  800277:	ab 83       	mov r3, dph
+  800279:	02 02 53    	ljmp 800253 <printf+0x15>
+  80027c:	22          	ret
+
+0080027d <FlashErasePage>:
+  80027d:	aa 82       	mov r2, dpl
+  80027f:	ab 83       	mov r3, dph
+  800281:	85 1a 82    	mov dpl, 0x1a
+  800284:	85 1b 83    	mov dph, 0x1b
+  800287:	a3          	inc dptr
+  800288:	a3          	inc dptr
+  800289:	a3          	inc dptr
+  80028a:	a3          	inc dptr
+  80028b:	e0          	movx a, @dptr
+  80028c:	fc          	mov r4, a
+  80028d:	ec          	mov a, r4
+  80028e:	20 e7 03    	jb 231, 800294
+  800291:	02 02 81    	ljmp 800281 <FlashErasePage+0x4>
+  800294:	85 1a 82    	mov dpl, 0x1a
+  800297:	85 1b 83    	mov dph, 0x1b
+  80029a:	a3          	inc dptr
+  80029b:	a3          	inc dptr
+  80029c:	a3          	inc dptr
+  80029d:	a3          	inc dptr
+  80029e:	a3          	inc dptr
+  80029f:	a3          	inc dptr
+  8002a0:	a3          	inc dptr
+  8002a1:	a3          	inc dptr
+  8002a2:	8a 05       	mov 0x05, r2
+  8002a4:	ed          	mov a, r5
+  8002a5:	f0          	movx @dptr, a
+  8002a6:	74 0c       	mov a, #12
+  8002a8:	25 1a       	add a, 0x1a
+  8002aa:	f5 82       	mov dpl, a
+  8002ac:	74 00       	mov a, #0
+  8002ae:	35 1b       	addc a, 0x1b
+  8002b0:	f5 83       	mov dph, a
+  8002b2:	8b 02       	mov 0x02, r3
+  8002b4:	ea          	mov a, r2
+  8002b5:	f0          	movx @dptr, a
+  8002b6:	85 1a 82    	mov dpl, 0x1a
+  8002b9:	85 1b 83    	mov dph, 0x1b
+  8002bc:	74 40       	mov a, #64
+  8002be:	f0          	movx @dptr, a
+  8002bf:	85 1a 82    	mov dpl, 0x1a
+  8002c2:	85 1b 83    	mov dph, 0x1b
+  8002c5:	a3          	inc dptr
+  8002c6:	a3          	inc dptr
+  8002c7:	a3          	inc dptr
+  8002c8:	a3          	inc dptr
+  8002c9:	e0          	movx a, @dptr
+  8002ca:	fc          	mov r4, a
+  8002cb:	ec          	mov a, r4
+  8002cc:	20 e7 03    	jb 231, 8002d2
+  8002cf:	02 02 bf    	ljmp 8002bf <FlashErasePage+0x42>
+  8002d2:	22          	ret
+
+008002d3 <FlashProgramPage>:
+  8002d3:	85 82 24    	mov 0x24, dpl
+  8002d6:	85 83 25    	mov 0x25, dph
+  8002d9:	85 f0 26    	mov 0x26, b
+  8002dc:	ad 21       	mov r5, 0x21
+  8002de:	ae 22       	mov r6, 0x22
+  8002e0:	c0 05       	push 0x05
+  8002e2:	c0 06       	push 0x06
+  8002e4:	12 03 9d    	lcall 80039d <FlashBusyCheck>
+  8002e7:	d0 06       	pop 0x06
+  8002e9:	d0 05       	pop 0x05
+  8002eb:	85 1a 82    	mov dpl, 0x1a
+  8002ee:	85 1b 83    	mov dph, 0x1b
+  8002f1:	a3          	inc dptr
+  8002f2:	a3          	inc dptr
+  8002f3:	a3          	inc dptr
+  8002f4:	a3          	inc dptr
+  8002f5:	a3          	inc dptr
+  8002f6:	a3          	inc dptr
+  8002f7:	a3          	inc dptr
+  8002f8:	a3          	inc dptr
+  8002f9:	8d 07       	mov 0x07, r5
+  8002fb:	ef          	mov a, r7
+  8002fc:	f0          	movx @dptr, a
+  8002fd:	74 0c       	mov a, #12
+  8002ff:	25 1a       	add a, 0x1a
+  800301:	f5 82       	mov dpl, a
+  800303:	74 00       	mov a, #0
+  800305:	35 1b       	addc a, 0x1b
+  800307:	f5 83       	mov dph, a
+  800309:	8e 07       	mov 0x07, r6
+  80030b:	ef          	mov a, r7
+  80030c:	f0          	movx @dptr, a
+  80030d:	74 10       	mov a, #16
+  80030f:	25 1a       	add a, 0x1a
+  800311:	f5 82       	mov dpl, a
+  800313:	74 00       	mov a, #0
+  800315:	35 1b       	addc a, 0x1b
+  800317:	f5 83       	mov dph, a
+  800319:	e0          	movx a, @dptr
+  80031a:	c0 05       	push 0x05
+  80031c:	c0 06       	push 0x06
+  80031e:	12 03 9d    	lcall 80039d <FlashBusyCheck>
+  800321:	d0 06       	pop 0x06
+  800323:	d0 05       	pop 0x05
+  800325:	7f 00       	mov r7, #0
+  800327:	c3          	clr c
+  800328:	ef          	mov a, r7
+  800329:	95 23       	subb a, 0x23
+  80032b:	40 03       	jc 800330
+  80032d:	02 03 90    	ljmp 800390 <FlashProgramPage+0xbd>
+  800330:	85 1a 82    	mov dpl, 0x1a
+  800333:	85 1b 83    	mov dph, 0x1b
+  800336:	a3          	inc dptr
+  800337:	a3          	inc dptr
+  800338:	a3          	inc dptr
+  800339:	a3          	inc dptr
+  80033a:	a3          	inc dptr
+  80033b:	a3          	inc dptr
+  80033c:	a3          	inc dptr
+  80033d:	a3          	inc dptr
+  80033e:	8d 00       	mov 00, r5
+  800340:	e8          	mov a, r0
+  800341:	f0          	movx @dptr, a
+  800342:	74 0c       	mov a, #12
+  800344:	25 1a       	add a, 0x1a
+  800346:	f5 82       	mov dpl, a
+  800348:	74 00       	mov a, #0
+  80034a:	35 1b       	addc a, 0x1b
+  80034c:	f5 83       	mov dph, a
+  80034e:	8e 00       	mov 00, r6
+  800350:	e8          	mov a, r0
+  800351:	f0          	movx @dptr, a
+  800352:	74 10       	mov a, #16
+  800354:	25 1a       	add a, 0x1a
+  800356:	f8          	mov r0, a
+  800357:	74 00       	mov a, #0
+  800359:	35 1b       	addc a, 0x1b
+  80035b:	f9          	mov r1, a
+  80035c:	e5 07       	mov a, 0x07
+  80035e:	25 24       	add a, 0x24
+  800360:	fa          	mov r2, a
+  800361:	74 00       	mov a, #0
+  800363:	35 25       	addc a, 0x25
+  800365:	fb          	mov r3, a
+  800366:	ac 26       	mov r4, 0x26
+  800368:	8a 82       	mov dpl, r2
+  80036a:	8b 83       	mov dph, r3
+  80036c:	8c f0       	mov b, r4
+  80036e:	12 03 b1    	lcall 8003b1 <FlashBusyCheck+0x14>
+  800371:	fa          	mov r2, a
+  800372:	88 82       	mov dpl, r0
+  800374:	89 83       	mov dph, r1
+  800376:	ea          	mov a, r2
+  800377:	f0          	movx @dptr, a
+  800378:	c0 05       	push 0x05
+  80037a:	c0 06       	push 0x06
+  80037c:	c0 07       	push 0x07
+  80037e:	12 03 9d    	lcall 80039d <FlashBusyCheck>
+  800381:	d0 07       	pop 0x07
+  800383:	d0 06       	pop 0x06
+  800385:	d0 05       	pop 0x05
+  800387:	0d          	inc r5
+  800388:	bd 00 01    	cjne r5, #0, 80038c
+  80038b:	0e          	inc r6
+  80038c:	0f          	inc r7
+  80038d:	02 03 27    	ljmp 800327 <FlashProgramPage+0x54>
+  800390:	85 1a 82    	mov dpl, 0x1a
+  800393:	85 1b 83    	mov dph, 0x1b
+  800396:	74 80       	mov a, #128
+  800398:	f0          	movx @dptr, a
+  800399:	12 03 9d    	lcall 80039d <FlashBusyCheck>
+  80039c:	22          	ret
+
+0080039d <FlashBusyCheck>:
+  80039d:	85 1a 82    	mov dpl, 0x1a
+  8003a0:	85 1b 83    	mov dph, 0x1b
+  8003a3:	a3          	inc dptr
+  8003a4:	a3          	inc dptr
+  8003a5:	a3          	inc dptr
+  8003a6:	a3          	inc dptr
+  8003a7:	e0          	movx a, @dptr
+  8003a8:	fa          	mov r2, a
+  8003a9:	ea          	mov a, r2
+  8003aa:	20 e7 03    	jb 231, 8003b0
+  8003ad:	02 03 9d    	ljmp 80039d <FlashBusyCheck>
+  8003b0:	22          	ret
+  8003b1:	20 f7 14    	jb 247, 8003c8
+  8003b4:	30 f6 14    	jnb 246, 8003cb
+  8003b7:	88 83       	mov dph, r0
+  8003b9:	a8 82       	mov r0, dpl
+  8003bb:	20 f5 07    	jb 245, 8003c5
+  8003be:	e6          	mov a, @r0
+  8003bf:	a8 83       	mov r0, dph
+  8003c1:	75 83 00    	mov dph, #0
+  8003c4:	22          	ret
+  8003c5:	e2          	movx a, @r0
+  8003c6:	80 f7       	sjmp 8003bf
+  8003c8:	e4          	clr a
+  8003c9:	93          	movc a, @a + dptr
+  8003ca:	22          	ret
+  8003cb:	e0          	movx a, @dptr
+  8003cc:	22          	ret
+  8003cd:	75 82 00    	mov dpl, #0
+  8003d0:	22          	ret
+
+008003d1 <ascii>:
+  8003d1:	30 31 32 33 34 35 36 37 38 39 41 42 43 44 45 46     0123456789ABCDEF
+	...
+
+008003e2 <_str_0>:
+  8003e2:	0d 20 38 30 35 31 73 20 55 41 52 54 20 54 65 73     . 8051s UART Tes
+  8003f2:	74 20 50 72 6f 67 72 61 6d 20 0a 0d 00              t Program ...
+
+008003ff <_str_1>:
+  8003ff:	0a 0d 00                                            ...
+
+00800402 <_str_2>:
+  800402:	43 61 70 74 75 72 65 64 20 31 32 38 20 64 61 74     Captured 128 dat
+  800412:	61 20 69 6e 20 52 41 4d 20 00                       a in RAM .
+
+0080041c <_str_3>:
+  80041c:	20 50 61 67 65 20 50 72 6f 67 72 61 6d 6d 65 64      Page Programmed
+  80042c:	20 00                                                .
+
+0080042e <_str_4>:
+  80042e:	0d 20 0a 00                                         . ..
+
+00800432 <_str_5>:
+  800432:	20 43 6f 6d 70 6c 65 74 65 64 20 00                  Completed .

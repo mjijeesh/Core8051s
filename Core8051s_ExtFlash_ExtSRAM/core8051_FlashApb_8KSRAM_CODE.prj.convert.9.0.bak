@@ -1,0 +1,1243 @@
+KEY LIBERO "9.0"
+KEY CAPTURE "9.0.0.15"
+KEY DEFAULT_IMPORT_LOC "C:\Actelprj\adv_self_write_nvm\hdl"
+KEY DEFAULT_OPEN_LOC "C:\Actelprj\temp_flash\hdl"
+KEY ProjectID "090e6ebe-b96d-4a73-9f7d-6d9fba467058"
+KEY HDLTechnology "VHDL"
+KEY VendorTechnology_Family "Fusion"
+KEY VendorTechnology_Die "M1IR10X10M3"
+KEY VendorTechnology_Package "fg484"
+KEY ProjectLocation "C:\Actelprj\core8051_FlashApb_8KSRAM_CODE"
+KEY SimulationType "VHDL"
+KEY Vendor "Actel"
+KEY ActiveRoot "top_8051::work"
+LIST REVISIONS
+VALUE="Impl1",NUM=1
+CURREV=1
+ENDLIST
+LIST LIBRARIES
+COREAPBSRAM_LIB
+COREUARTAPB_LIB
+ENDLIST
+LIST LIBRARY_COREAPBSRAM_LIB
+ALIAS=COREAPBSRAM_LIB
+COMPILE_OPTION=COMPILE
+ENDLIST
+LIST LIBRARY_COREUARTAPB_LIB
+ALIAS=..\component\Actel\DirectCore\CoreUARTapb\3.1.105\mti\lib_vhdl_rtl\COREUARTAPB_LIB
+COMPILE_OPTION=REFRESH_AND_COMPILE
+ENDLIST
+LIST FileManager
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\bfm\compiler\simSelect.do,do"
+STATE="utd"
+TIME="1277449137"
+SIZE="4678"
+PARENT="<project>\component\Actel\DirectCore\CORE8051S\2.2.100\CORE8051S.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\CORE8051S.cxf,actgen_cxf"
+STATE="utd"
+TIME="1277449142"
+SIZE="105194"
+PARENT="<project>\component\work\sys\sys.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\alu.vhd,hdl"
+STATE="utd"
+TIME="1277449142"
+SIZE="50497"
+PARENT="<project>\component\Actel\DirectCore\CORE8051S\2.2.100\CORE8051S.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\clkctrl.vhd,hdl"
+STATE="utd"
+TIME="1277449142"
+SIZE="7781"
+PARENT="<project>\component\Actel\DirectCore\CORE8051S\2.2.100\CORE8051S.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\core8051s_fusion.vhd,hdl"
+STATE="utd"
+TIME="1277449142"
+SIZE="28592"
+PARENT="<project>\component\Actel\DirectCore\CORE8051S\2.2.100\CORE8051S.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\core8051s_globs_fusion.vhd,hdl"
+STATE="utd"
+TIME="1277449142"
+SIZE="3493"
+PARENT="<project>\component\Actel\DirectCore\CORE8051S\2.2.100\CORE8051S.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\core8051s_utility.vhd,hdl"
+STATE="utd"
+TIME="1277449142"
+SIZE="31593"
+PARENT="<project>\component\Actel\DirectCore\CORE8051S\2.2.100\CORE8051S.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\cpu.vhd,hdl"
+STATE="utd"
+TIME="1277449142"
+SIZE="40297"
+PARENT="<project>\component\Actel\DirectCore\CORE8051S\2.2.100\CORE8051S.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\debug.vhd,hdl"
+STATE="utd"
+TIME="1277449142"
+SIZE="5901"
+PARENT="<project>\component\Actel\DirectCore\CORE8051S\2.2.100\CORE8051S.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\instrdec.vhd,hdl"
+STATE="utd"
+TIME="1277449142"
+SIZE="35437"
+PARENT="<project>\component\Actel\DirectCore\CORE8051S\2.2.100\CORE8051S.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd,hdl"
+STATE="utd"
+TIME="1277449142"
+SIZE="32219"
+PARENT="<project>\component\Actel\DirectCore\CORE8051S\2.2.100\CORE8051S.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\jtag.vhd,hdl"
+STATE="utd"
+TIME="1277449142"
+SIZE="15993"
+PARENT="<project>\component\Actel\DirectCore\CORE8051S\2.2.100\CORE8051S.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\jtagdef.vhd,hdl"
+STATE="utd"
+TIME="1277449142"
+SIZE="3784"
+PARENT="<project>\component\Actel\DirectCore\CORE8051S\2.2.100\CORE8051S.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\jtagfusion.vhd,hdl"
+STATE="utd"
+TIME="1277449142"
+SIZE="14778"
+PARENT="<project>\component\Actel\DirectCore\CORE8051S\2.2.100\CORE8051S.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\main8051.vhd,hdl"
+STATE="utd"
+TIME="1277449142"
+SIZE="45985"
+PARENT="<project>\component\Actel\DirectCore\CORE8051S\2.2.100\CORE8051S.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\memctrl.vhd,hdl"
+STATE="utd"
+TIME="1277449142"
+SIZE="44410"
+PARENT="<project>\component\Actel\DirectCore\CORE8051S\2.2.100\CORE8051S.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\oci.vhd,hdl"
+STATE="utd"
+TIME="1277449142"
+SIZE="4634"
+PARENT="<project>\component\Actel\DirectCore\CORE8051S\2.2.100\CORE8051S.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\ocia51.vhd,hdl"
+STATE="utd"
+TIME="1277449142"
+SIZE="19356"
+PARENT="<project>\component\Actel\DirectCore\CORE8051S\2.2.100\CORE8051S.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\pmu.vhd,hdl"
+STATE="utd"
+TIME="1277449142"
+SIZE="6259"
+PARENT="<project>\component\Actel\DirectCore\CORE8051S\2.2.100\CORE8051S.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\RAM256X20_fusion.vhd,hdl"
+STATE="utd"
+TIME="1277449142"
+SIZE="4439"
+PARENT="<project>\component\Actel\DirectCore\CORE8051S\2.2.100\CORE8051S.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\RAM256X8_fusion.vhd,hdl"
+STATE="utd"
+TIME="1277449142"
+SIZE="3702"
+PARENT="<project>\component\Actel\DirectCore\CORE8051S\2.2.100\CORE8051S.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\ramsfrctrl.vhd,hdl"
+STATE="utd"
+TIME="1277449142"
+SIZE="35590"
+PARENT="<project>\component\Actel\DirectCore\CORE8051S\2.2.100\CORE8051S.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\rstctrl.vhd,hdl"
+STATE="utd"
+TIME="1277449142"
+SIZE="7392"
+PARENT="<project>\component\Actel\DirectCore\CORE8051S\2.2.100\CORE8051S.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\trace.vhd,hdl"
+STATE="utd"
+TIME="1277449142"
+SIZE="14096"
+PARENT="<project>\component\Actel\DirectCore\CORE8051S\2.2.100\CORE8051S.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\trigger.vhd,hdl"
+STATE="utd"
+TIME="1277449142"
+SIZE="23774"
+PARENT="<project>\component\Actel\DirectCore\CORE8051S\2.2.100\CORE8051S.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\sim\run_8051s_verif.do,do"
+STATE="utd"
+TIME="1277449137"
+SIZE="12129"
+PARENT="<project>\component\Actel\DirectCore\CORE8051S\2.2.100\CORE8051S.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\core8051_pkg.vhd,tb_hdl"
+STATE="utd"
+TIME="1277449142"
+SIZE="32356"
+PARENT="<project>\component\Actel\DirectCore\CORE8051S\2.2.100\CORE8051S.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\extacs.vhd,tb_hdl"
+STATE="utd"
+TIME="1277449142"
+SIZE="13520"
+PARENT="<project>\component\Actel\DirectCore\CORE8051S\2.2.100\CORE8051S.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\extclock.vhd,tb_hdl"
+STATE="utd"
+TIME="1277449142"
+SIZE="1635"
+PARENT="<project>\component\Actel\DirectCore\CORE8051S\2.2.100\CORE8051S.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\jtagdef.vhd,tb_hdl"
+STATE="utd"
+TIME="1277449142"
+SIZE="3658"
+PARENT="<project>\component\Actel\DirectCore\CORE8051S\2.2.100\CORE8051S.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\oci_sys.vhd,tb_hdl"
+STATE="utd"
+TIME="1277449142"
+SIZE="14453"
+PARENT="<project>\component\Actel\DirectCore\CORE8051S\2.2.100\CORE8051S.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\tb_oci_sys.vhd,tb_hdl"
+STATE="utd"
+TIME="1277449142"
+SIZE="144943"
+PARENT="<project>\component\Actel\DirectCore\CORE8051S\2.2.100\CORE8051S.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\tb_verif.vhd,tb_hdl"
+STATE="utd"
+TIME="1277449142"
+SIZE="18984"
+PARENT="<project>\component\Actel\DirectCore\CORE8051S\2.2.100\CORE8051S.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\user_ram.vhd,tb_hdl"
+STATE="utd"
+TIME="1277449142"
+SIZE="2493"
+PARENT="<project>\component\Actel\DirectCore\CORE8051S\2.2.100\CORE8051S.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\user_rom.vhd,tb_hdl"
+STATE="utd"
+TIME="1277449142"
+SIZE="7447"
+PARENT="<project>\component\Actel\DirectCore\CORE8051S\2.2.100\CORE8051S.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\2.1.101\CoreAPB3.cxf,actgen_cxf"
+STATE="utd"
+TIME="1277449142"
+SIZE="572"
+PARENT="<project>\component\work\sys\sys.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\2.1.101\rtl\vhdl\u\CoreAPB3.vhd,hdl"
+STATE="utd"
+TIME="1277449142"
+SIZE="23340"
+PARENT="<project>\component\Actel\DirectCore\CoreAPB3\2.1.101\CoreAPB3.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\2.1.101\rtl\vhdl\u\MuxPtoB3.vhd,hdl"
+STATE="utd"
+TIME="1277449142"
+SIZE="11235"
+PARENT="<project>\component\Actel\DirectCore\CoreAPB3\2.1.101\CoreAPB3.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\COREAPBSRAM\2.0.102\COREAPBSRAM.cxf,actgen_cxf"
+STATE="utd"
+TIME="1277449143"
+SIZE="2000"
+PARENT="<project>\component\work\sys\sys.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\COREAPBSRAM\2.0.102\coreparameters.vhd,tb_hdl"
+STATE="utd"
+TIME="1277449143"
+SIZE="733"
+LIBRARY="COREAPBSRAM_LIB"
+PARENT="<project>\component\Actel\DirectCore\COREAPBSRAM\2.0.102\COREAPBSRAM.cxf"
+IS_READONLY="TRUE"
+IS_INCLUDED="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\COREAPBSRAM\2.0.102\mti\scripts\wave.do,do"
+STATE="utd"
+TIME="1277449143"
+SIZE="1215"
+PARENT="<project>\component\Actel\DirectCore\COREAPBSRAM\2.0.102\COREAPBSRAM.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\components.vhd,hdl"
+STATE="utd"
+TIME="1277449143"
+SIZE="1637"
+LIBRARY="COREAPBSRAM_LIB"
+PARENT="<project>\component\Actel\DirectCore\COREAPBSRAM\2.0.102\COREAPBSRAM.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\coreapbsram.vhd,hdl"
+STATE="utd"
+TIME="1277449143"
+SIZE="16285"
+LIBRARY="COREAPBSRAM_LIB"
+PARENT="<project>\component\Actel\DirectCore\COREAPBSRAM\2.0.102\COREAPBSRAM.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\corecomps.vhd,hdl"
+STATE="utd"
+TIME="1277449143"
+SIZE="1050"
+LIBRARY="COREAPBSRAM_LIB"
+PARENT="<project>\component\Actel\DirectCore\COREAPBSRAM\2.0.102\COREAPBSRAM.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\sram_512to8192x8_fusion.vhd,hdl"
+STATE="utd"
+TIME="1277449143"
+SIZE="348546"
+LIBRARY="COREAPBSRAM_LIB"
+PARENT="<project>\component\Actel\DirectCore\COREAPBSRAM\2.0.102\COREAPBSRAM.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\test\user\coreapbsram_pkg.vhd,tb_hdl"
+STATE="utd"
+TIME="1277449143"
+SIZE="44711"
+LIBRARY="COREAPBSRAM_LIB"
+PARENT="<project>\component\Actel\DirectCore\COREAPBSRAM\2.0.102\COREAPBSRAM.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\test\user\coreapbsram_user_tb.vhd,tb_hdl"
+STATE="utd"
+TIME="1277449143"
+SIZE="10621"
+LIBRARY="COREAPBSRAM_LIB"
+PARENT="<project>\component\Actel\DirectCore\COREAPBSRAM\2.0.102\COREAPBSRAM.cxf"
+MODULE_UNDER_TEST="coreapbsram_user_tb"
+SIMULATION_TIME="-all"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\1.2.103\CoreGPIO.cxf,actgen_cxf"
+STATE="utd"
+TIME="1277449143"
+SIZE="709"
+PARENT="<project>\component\work\sys\sys.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreGPIO\1.2.103\rtl\vhdl\u\CoreGPIO.vhd,hdl"
+STATE="utd"
+TIME="1277449143"
+SIZE="4453"
+PARENT="<project>\component\Actel\DirectCore\CoreGPIO\1.2.103\CoreGPIO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreTimer\1.1.101\CoreTimer.cxf,actgen_cxf"
+STATE="utd"
+TIME="1277449143"
+SIZE="712"
+PARENT="<project>\component\work\sys\sys.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreTimer\1.1.101\rtl\vhdl\u\CoreTimer.vhd,hdl"
+STATE="utd"
+TIME="1277449143"
+SIZE="16508"
+PARENT="<project>\component\Actel\DirectCore\CoreTimer\1.1.101\CoreTimer.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\coreparameters.vhd,hdl"
+STATE="utd"
+TIME="1277449145"
+SIZE="668"
+LIBRARY="COREUARTAPB_LIB"
+PARENT="<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\CoreUARTapb.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\CoreUARTapb.cxf,actgen_cxf"
+STATE="utd"
+TIME="1277449145"
+SIZE="2911"
+PARENT="<project>\component\work\sys\sys.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\mti\scripts\wave_vhdl.do,do"
+STATE="utd"
+TIME="1277449144"
+SIZE="955"
+PARENT="<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\CoreUARTapb.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\Clock_gen.vhd,hdl"
+STATE="utd"
+TIME="1277449145"
+SIZE="3489"
+LIBRARY="COREUARTAPB_LIB"
+PARENT="<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\CoreUARTapb.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\components.vhd,hdl"
+STATE="utd"
+TIME="1277449145"
+SIZE="4279"
+LIBRARY="COREUARTAPB_LIB"
+PARENT="<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\CoreUARTapb.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd,hdl"
+STATE="utd"
+TIME="1277449145"
+SIZE="16360"
+LIBRARY="COREUARTAPB_LIB"
+PARENT="<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\CoreUARTapb.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUARTapb.vhd,hdl"
+STATE="utd"
+TIME="1277449145"
+SIZE="12918"
+LIBRARY="COREUARTAPB_LIB"
+PARENT="<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\CoreUARTapb.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\fifo_256x8_fusion.vhd,hdl"
+STATE="utd"
+TIME="1277449145"
+SIZE="7095"
+LIBRARY="COREUARTAPB_LIB"
+PARENT="<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\CoreUARTapb.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\Rx_async.vhd,hdl"
+STATE="utd"
+TIME="1277449145"
+SIZE="15564"
+LIBRARY="COREUARTAPB_LIB"
+PARENT="<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\CoreUARTapb.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\Tx_async.vhd,hdl"
+STATE="utd"
+TIME="1277449145"
+SIZE="9765"
+LIBRARY="COREUARTAPB_LIB"
+PARENT="<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\CoreUARTapb.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\test\amba\testbnch.vhd,tb_hdl"
+STATE="utd"
+TIME="1277449144"
+SIZE="52495"
+LIBRARY="COREUARTAPB_LIB"
+PARENT="<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\CoreUARTapb.cxf"
+MODULE_UNDER_TEST="testbnch"
+SIMULATION_TIME="-all"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\test\common\misc.vhd,tb_hdl"
+STATE="utd"
+TIME="1277449144"
+SIZE="6214"
+LIBRARY="COREUARTAPB_LIB"
+PARENT="<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\CoreUARTapb.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\test\common\tbpack.vhd,tb_hdl"
+STATE="utd"
+TIME="1277449144"
+SIZE="17425"
+LIBRARY="COREUARTAPB_LIB"
+PARENT="<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\CoreUARTapb.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\test\common\textio.vhd,tb_hdl"
+STATE="utd"
+TIME="1277449144"
+SIZE="21045"
+LIBRARY="COREUARTAPB_LIB"
+PARENT="<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\CoreUARTapb.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\sys\sys.cxf,actgen_cxf"
+STATE="utd"
+TIME="1277449145"
+SIZE="12416"
+ENDFILE
+VALUE "<project>\component\work\sys\sys.pdc,pdc"
+STATE="utd"
+TIME="1277449131"
+SIZE="5238"
+PARENT="<project>\component\work\sys\sys.cxf"
+BEGIN_USE_CONSTRAINT
+TOOL_CONSTRAINT_TYPE="ideDESIGNER"
+END_USE_CONSTRAINT
+USE_FOR_ANY_TOOL="FALSE"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\sys\sys.vhd,hdl"
+STATE="utd"
+TIME="1277449145"
+SIZE="72602"
+PARENT="<project>\component\work\sys\sys.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\sys\testbench.vhd,tb_hdl"
+STATE="utd"
+TIME="1277449148"
+SIZE="4192"
+PARENT="<project>\component\work\sys\sys.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\top_8051\testbench.vhd,tb_hdl"
+STATE="utd"
+TIME="1277449158"
+SIZE="2357"
+PARENT="<project>\component\work\top_8051\top_8051.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\top_8051\top_8051.cxf,actgen_cxf"
+STATE="utd"
+TIME="1277449157"
+SIZE="3581"
+ENDFILE
+VALUE "<project>\component\work\top_8051\top_8051.pdc,pdc"
+STATE="utd"
+TIME="1277449157"
+SIZE="400"
+PARENT="<project>\component\work\top_8051\top_8051.cxf"
+BEGIN_USE_CONSTRAINT
+TOOL_CONSTRAINT_TYPE="ideDESIGNER"
+END_USE_CONSTRAINT
+USE_FOR_ANY_TOOL="FALSE"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\top_8051\top_8051.vhd,hdl"
+STATE="utd"
+TIME="1277449157"
+SIZE="16720"
+PARENT="<project>\component\work\top_8051\top_8051.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\constraint\M1AFS_ADV_8051S_TUT_TOP.pdc,pdc"
+STATE="utd"
+TIME="1277105051"
+SIZE="2317"
+ENDFILE
+VALUE "<project>\designer\impl1\top_8051.adb,adb"
+STATE="utd"
+TIME="1277451351"
+SIZE="6267392"
+ENDFILE
+VALUE "<project>\designer\impl1\top_8051.pdb,pdb"
+STATE="utd"
+TIME="1277451255"
+SIZE="2480128"
+ENDFILE
+VALUE "<project>\designer\impl1\top_8051_fp\top_8051.pro,pro"
+STATE="utd"
+TIME="1272368720"
+SIZE="1945"
+ENDFILE
+VALUE "<project>\hdl\flash_control.vhd,hdl"
+STATE="utd"
+TIME="1277448310"
+SIZE="8081"
+ENDFILE
+VALUE "<project>\hdl\memory_mux.vhd,hdl"
+STATE="utd"
+TIME="1277114593"
+SIZE="478"
+ENDFILE
+VALUE "<project>\simulation\bfmCompile.log,log"
+STATE="utd"
+TIME="1277268888"
+SIZE="61"
+ENDFILE
+VALUE "<project>\simulation\bfmCompile.tcl,sim"
+STATE="utd"
+TIME="1277449147"
+SIZE="25427"
+PARENT="<project>\component\Actel\DirectCore\CORE8051S\2.2.100\CORE8051S.cxf"
+ENDFILE
+VALUE "<project>\simulation\CoreGPIO_scriptlet.bfm,sim"
+STATE="utd"
+TIME="1277449147"
+SIZE="567"
+PARENT="<project>\component\Actel\DirectCore\CoreGPIO\1.2.103\CoreGPIO.cxf"
+ENDFILE
+VALUE "<project>\simulation\CoreTimer_scriptlet.bfm,sim"
+STATE="utd"
+TIME="1277449147"
+SIZE="435"
+PARENT="<project>\component\Actel\DirectCore\CoreTimer\1.1.101\CoreTimer.cxf"
+ENDFILE
+VALUE "<project>\simulation\run.do,do"
+STATE="utd"
+TIME="1277268882"
+SIZE="6137"
+ENDFILE
+VALUE "<project>\simulation\subsystem.bfm,sim"
+STATE="utd"
+TIME="1277449147"
+SIZE="984"
+PARENT="<project>\component\work\sys\sys.cxf"
+ENDFILE
+VALUE "<project>\simulation\subsystem_i.bfm,sim"
+STATE="utd"
+TIME="1277268888"
+SIZE="1925"
+ENDFILE
+VALUE "<project>\smartgen\nvm64k\nvm64k.cxf,actgen_cxf"
+STATE="utd"
+TIME="1277112631"
+SIZE="7306"
+ENDFILE
+VALUE "<project>\smartgen\nvm64k\nvm64k.efc,efc"
+STATE="utd"
+TIME="1277112631"
+SIZE="20969"
+PARENT="<project>\smartgen\nvm64k\nvm64k.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\smartgen\nvm64k\nvm64k.gen,gen"
+STATE="utd"
+TIME="1277112631"
+SIZE="173"
+PARENT="<project>\smartgen\nvm64k\nvm64k.cxf"
+ENDFILE
+VALUE "<project>\smartgen\nvm64k\nvm64k.log,log"
+STATE="utd"
+TIME="1277112631"
+SIZE="2226"
+PARENT="<project>\smartgen\nvm64k\nvm64k.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\smartgen\nvm64k\nvm64k.mem,sim"
+STATE="utd"
+TIME="1277112631"
+SIZE="0"
+PARENT="<project>\smartgen\nvm64k\nvm64k.cxf"
+ENDFILE
+VALUE "<project>\smartgen\nvm64k\nvm64k.vhd,hdl"
+STATE="utd"
+TIME="1277112631"
+SIZE="7633"
+PARENT="<project>\smartgen\nvm64k\nvm64k.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\smartgen\PLL_50Mh_6Mh\PLL_50Mh_6Mh.cxf,actgen_cxf"
+STATE="utd"
+TIME="1277104074"
+SIZE="1650"
+ENDFILE
+VALUE "<project>\smartgen\PLL_50Mh_6Mh\PLL_50Mh_6Mh.gen,gen"
+STATE="utd"
+TIME="1277104072"
+SIZE="528"
+PARENT="<project>\smartgen\PLL_50Mh_6Mh\PLL_50Mh_6Mh.cxf"
+ENDFILE
+VALUE "<project>\smartgen\PLL_50Mh_6Mh\PLL_50Mh_6Mh.log,log"
+STATE="utd"
+TIME="1277104074"
+SIZE="3250"
+PARENT="<project>\smartgen\PLL_50Mh_6Mh\PLL_50Mh_6Mh.cxf"
+ENDFILE
+VALUE "<project>\smartgen\PLL_50Mh_6Mh\PLL_50Mh_6Mh.vhd,hdl"
+STATE="utd"
+TIME="1277104074"
+SIZE="3953"
+PARENT="<project>\smartgen\PLL_50Mh_6Mh\PLL_50Mh_6Mh.cxf"
+ENDFILE
+VALUE "<project>\smartgen\RAM4Kx8\RAM4Kx8.cxf,actgen_cxf"
+STATE="utd"
+TIME="1277268713"
+SIZE="3067"
+ENDFILE
+VALUE "<project>\smartgen\RAM4Kx8\RAM4Kx8.gen,gen"
+STATE="utd"
+TIME="1277268709"
+SIZE="673"
+PARENT="<project>\smartgen\RAM4Kx8\RAM4Kx8.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\smartgen\RAM4Kx8\RAM4Kx8.log,log"
+STATE="utd"
+TIME="1277268712"
+SIZE="3534"
+PARENT="<project>\smartgen\RAM4Kx8\RAM4Kx8.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\smartgen\RAM4Kx8\RAM4Kx8.vhd,hdl"
+STATE="utd"
+TIME="1277268712"
+SIZE="16322"
+PARENT="<project>\smartgen\RAM4Kx8\RAM4Kx8.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\smartgen\RAM4Kx8\RAM4Kx8_R0C0.mem,sim"
+STATE="utd"
+TIME="1277268712"
+SIZE="5632"
+PARENT="<project>\smartgen\RAM4Kx8\RAM4Kx8.cxf"
+ENDFILE
+VALUE "<project>\smartgen\RAM4Kx8\RAM4Kx8_R0C1.mem,sim"
+STATE="utd"
+TIME="1277268712"
+SIZE="5632"
+PARENT="<project>\smartgen\RAM4Kx8\RAM4Kx8.cxf"
+ENDFILE
+VALUE "<project>\smartgen\RAM4Kx8\RAM4Kx8_R0C2.mem,sim"
+STATE="utd"
+TIME="1277268712"
+SIZE="5632"
+PARENT="<project>\smartgen\RAM4Kx8\RAM4Kx8.cxf"
+ENDFILE
+VALUE "<project>\smartgen\RAM4Kx8\RAM4Kx8_R0C3.mem,sim"
+STATE="utd"
+TIME="1277268712"
+SIZE="5632"
+PARENT="<project>\smartgen\RAM4Kx8\RAM4Kx8.cxf"
+ENDFILE
+VALUE "<project>\smartgen\RAM4Kx8\RAM4Kx8_R0C4.mem,sim"
+STATE="utd"
+TIME="1277268712"
+SIZE="5632"
+PARENT="<project>\smartgen\RAM4Kx8\RAM4Kx8.cxf"
+ENDFILE
+VALUE "<project>\smartgen\RAM4Kx8\RAM4Kx8_R0C5.mem,sim"
+STATE="utd"
+TIME="1277268712"
+SIZE="5632"
+PARENT="<project>\smartgen\RAM4Kx8\RAM4Kx8.cxf"
+ENDFILE
+VALUE "<project>\smartgen\RAM4Kx8\RAM4Kx8_R0C6.mem,sim"
+STATE="utd"
+TIME="1277268712"
+SIZE="5632"
+PARENT="<project>\smartgen\RAM4Kx8\RAM4Kx8.cxf"
+ENDFILE
+VALUE "<project>\smartgen\RAM4Kx8\RAM4Kx8_R0C7.mem,sim"
+STATE="utd"
+TIME="1277268712"
+SIZE="5632"
+PARENT="<project>\smartgen\RAM4Kx8\RAM4Kx8.cxf"
+ENDFILE
+VALUE "<project>\synthesis\FlashApb.edn,syn_edn"
+STATE="ood"
+TIME="1277114346"
+SIZE="91776"
+ENDFILE
+VALUE "<project>\synthesis\FlashApb_drc.rpt,log"
+STATE="utd"
+TIME="1277114377"
+SIZE="9753"
+ENDFILE
+VALUE "<project>\synthesis\FlashApb_sdc.sdc,syn_sdc"
+STATE="ood"
+TIME="1277114346"
+SIZE="379"
+ENDFILE
+VALUE "<project>\synthesis\memory_mux.edn,syn_edn"
+STATE="utd"
+TIME="1277114611"
+SIZE="17334"
+ENDFILE
+VALUE "<project>\synthesis\memory_mux_sdc.sdc,syn_sdc"
+STATE="utd"
+TIME="1277114611"
+SIZE="310"
+ENDFILE
+VALUE "<project>\synthesis\syndrom.edn,syn_edn"
+STATE="utd"
+TIME="1272428552"
+SIZE="356347"
+ENDFILE
+VALUE "<project>\synthesis\syndrom_sdc.sdc,syn_sdc"
+STATE="utd"
+TIME="1272428551"
+SIZE="376"
+ENDFILE
+VALUE "<project>\synthesis\top_8051.edn,syn_edn"
+STATE="utd"
+TIME="1277450304"
+SIZE="2036066"
+ENDFILE
+VALUE "<project>\synthesis\top_8051_drc.rpt,log"
+STATE="utd"
+TIME="1277450346"
+SIZE="23454"
+ENDFILE
+VALUE "<project>\synthesis\top_8051_sdc.sdc,syn_sdc"
+STATE="utd"
+TIME="1277450303"
+SIZE="386"
+ENDFILE
+ENDLIST
+LIST UsedFile
+ENDLIST
+LIST NewModulesInfo
+LIST "CORE8051S::work"
+FILE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\core8051s_fusion.vhd,hdl"
+LIST Other_Association
+VALUE "<project>\simulation\bfmCompile.tcl,sim"
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\core8051_pkg.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\jtagdef.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\extacs.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\extclock.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\user_ram.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\user_rom.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\oci_sys.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\tb_oci_sys.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\tb_verif.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\bfm\compiler\simSelect.do,do"
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\sim\run_8051s_verif.do,do"
+ENDLIST
+LIST AssociatedStimulus
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\core8051_pkg.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\jtagdef.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\extacs.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\extclock.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\user_ram.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\user_rom.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\oci_sys.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\tb_oci_sys.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\tb_verif.vhd,tb_hdl"
+ENDLIST
+LIST ProjectState5.1
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+ENDLIST
+LIST "CoreGPIO::work"
+FILE "<project>\component\Actel\DirectCore\CoreGPIO\1.2.103\rtl\vhdl\u\CoreGPIO.vhd,hdl"
+LIST Other_Association
+VALUE "<project>\simulation\CoreGPIO_scriptlet.bfm,sim"
+ENDLIST
+ENDLIST
+LIST "CoreTimer::work"
+FILE "<project>\component\Actel\DirectCore\CoreTimer\1.1.101\rtl\vhdl\u\CoreTimer.vhd,hdl"
+LIST Other_Association
+VALUE "<project>\simulation\CoreTimer_scriptlet.bfm,sim"
+ENDLIST
+ENDLIST
+LIST "memory_mux::work"
+FILE "<project>\hdl\memory_mux.vhd,hdl"
+LIST ProjectState5.1
+LIST Impl1
+LiberoState=Post_Synthesis
+ideSYNTHESIS(<project>\synthesis\memory_mux.edn,syn_edn)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+ENDLIST
+LIST "nvm64k::work"
+FILE "<project>\smartgen\nvm64k\nvm64k.vhd,hdl"
+LIST Other_Association
+VALUE "<project>\smartgen\nvm64k\nvm64k.mem,sim"
+VALUE "<project>\smartgen\nvm64k\nvm64k.efc,efc"
+ENDLIST
+ENDLIST
+LIST "RAM4Kx8::work"
+FILE "<project>\smartgen\RAM4Kx8\RAM4Kx8.vhd,hdl"
+LIST Other_Association
+VALUE "<project>\smartgen\RAM4Kx8\RAM4Kx8_R0C0.mem,sim"
+VALUE "<project>\smartgen\RAM4Kx8\RAM4Kx8_R0C1.mem,sim"
+VALUE "<project>\smartgen\RAM4Kx8\RAM4Kx8_R0C2.mem,sim"
+VALUE "<project>\smartgen\RAM4Kx8\RAM4Kx8_R0C3.mem,sim"
+VALUE "<project>\smartgen\RAM4Kx8\RAM4Kx8_R0C4.mem,sim"
+VALUE "<project>\smartgen\RAM4Kx8\RAM4Kx8_R0C5.mem,sim"
+VALUE "<project>\smartgen\RAM4Kx8\RAM4Kx8_R0C6.mem,sim"
+VALUE "<project>\smartgen\RAM4Kx8\RAM4Kx8_R0C7.mem,sim"
+ENDLIST
+ENDLIST
+LIST "sys::work"
+FILE "<project>\component\work\sys\sys.vhd,hdl"
+LIST Other_Association
+VALUE "<project>\simulation\subsystem.bfm,sim"
+VALUE "<project>\component\work\sys\testbench.vhd,tb_hdl"
+VALUE "<project>\component\work\sys\sys.pdc,pdc"
+ENDLIST
+LIST AssociatedStimulus
+VALUE "<project>\component\work\sys\testbench.vhd,tb_hdl"
+ENDLIST
+LIST ProjectState5.1
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+ENDLIST
+LIST "top_8051::work"
+FILE "<project>\component\work\top_8051\top_8051.vhd,hdl"
+LIST Other_Association
+VALUE "<project>\component\work\top_8051\testbench.vhd,tb_hdl"
+VALUE "<project>\component\work\top_8051\top_8051.pdc,pdc"
+ENDLIST
+LIST AssociatedStimulus
+VALUE "<project>\component\work\top_8051\testbench.vhd,tb_hdl"
+ENDLIST
+LIST ProjectState5.1
+LIST Impl1
+LiberoState=Post_Layout
+ideSTIMULUS=StateSuccess
+ideSYNTHESIS(<project>\synthesis\top_8051.edn,syn_edn)=StateSuccess
+ideDESIGNER(<project>\designer\impl1\top_8051.adb,adb)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+ENDLIST
+LIST "COREAPBSRAM::COREAPBSRAM_LIB::components"
+FILE "<project>\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\coreapbsram.vhd,hdl"
+LIST Other_Association
+VALUE "<project>\component\Actel\DirectCore\COREAPBSRAM\2.0.102\coreparameters.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\test\user\coreapbsram_pkg.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\test\user\coreapbsram_user_tb.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREAPBSRAM\2.0.102\mti\scripts\wave.do,do"
+ENDLIST
+LIST AssociatedStimulus
+VALUE "<project>\component\Actel\DirectCore\COREAPBSRAM\2.0.102\coreparameters.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\test\user\coreapbsram_pkg.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\test\user\coreapbsram_user_tb.vhd,tb_hdl"
+ENDLIST
+LIST ProjectState5.1
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+ENDLIST
+LIST "COREUARTAPB::COREUARTAPB_LIB::components"
+FILE "<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUARTapb.vhd,hdl"
+LIST Other_Association
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\test\common\misc.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\test\common\textio.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\test\common\tbpack.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\test\amba\testbnch.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\mti\scripts\wave_vhdl.do,do"
+ENDLIST
+LIST AssociatedStimulus
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\test\common\misc.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\test\common\textio.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\test\common\tbpack.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\test\amba\testbnch.vhd,tb_hdl"
+ENDLIST
+LIST ProjectState5.1
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+ENDLIST
+ENDLIST
+LIST AssociatedStimulus
+LIST top_8051
+VALUE "<project>\component\work\top_8051\testbench.vhd,tb_hdl"
+ENDLIST
+LIST sys
+VALUE "<project>\component\work\sys\testbench.vhd,tb_hdl"
+ENDLIST
+LIST CORE8051S
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\core8051_pkg.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\jtagdef.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\extacs.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\extclock.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\user_ram.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\user_rom.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\oci_sys.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\tb_oci_sys.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\tb_verif.vhd,tb_hdl"
+ENDLIST
+LIST COREAPBSRAM
+VALUE "<project>\component\Actel\DirectCore\COREAPBSRAM\2.0.102\coreparameters.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\test\user\coreapbsram_pkg.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\test\user\coreapbsram_user_tb.vhd,tb_hdl"
+ENDLIST
+LIST COREUARTAPB
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\test\common\misc.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\test\common\textio.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\test\common\tbpack.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\test\amba\testbnch.vhd,tb_hdl"
+ENDLIST
+ENDLIST
+LIST Other_Association
+LIST top_8051
+VALUE "<project>\component\work\top_8051\testbench.vhd,tb_hdl"
+VALUE "<project>\component\work\top_8051\top_8051.pdc,pdc"
+ENDLIST
+LIST sys
+VALUE "<project>\simulation\subsystem.bfm,sim"
+VALUE "<project>\component\work\sys\testbench.vhd,tb_hdl"
+VALUE "<project>\component\work\sys\sys.pdc,pdc"
+ENDLIST
+LIST CORE8051S
+VALUE "<project>\simulation\bfmCompile.tcl,sim"
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\core8051_pkg.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\jtagdef.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\extacs.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\extclock.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\user_ram.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\user_rom.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\oci_sys.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\tb_oci_sys.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\vhdl\tb_verif.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\bfm\compiler\simSelect.do,do"
+VALUE "<project>\component\Actel\DirectCore\CORE8051S\2.2.100\verification\sim\run_8051s_verif.do,do"
+ENDLIST
+LIST CoreGPIO
+VALUE "<project>\simulation\CoreGPIO_scriptlet.bfm,sim"
+ENDLIST
+LIST nvm64k
+VALUE "<project>\smartgen\nvm64k\nvm64k.mem,sim"
+VALUE "<project>\smartgen\nvm64k\nvm64k.efc,efc"
+ENDLIST
+LIST CoreTimer
+VALUE "<project>\simulation\CoreTimer_scriptlet.bfm,sim"
+ENDLIST
+LIST COREAPBSRAM
+VALUE "<project>\component\Actel\DirectCore\COREAPBSRAM\2.0.102\coreparameters.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\test\user\coreapbsram_pkg.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\test\user\coreapbsram_user_tb.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREAPBSRAM\2.0.102\mti\scripts\wave.do,do"
+ENDLIST
+LIST COREUARTAPB
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\test\common\misc.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\test\common\textio.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\test\common\tbpack.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\test\amba\testbnch.vhd,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\3.1.105\mti\scripts\wave_vhdl.do,do"
+ENDLIST
+LIST RAM4Kx8
+VALUE "<project>\smartgen\RAM4Kx8\RAM4Kx8_R0C0.mem,sim"
+VALUE "<project>\smartgen\RAM4Kx8\RAM4Kx8_R0C1.mem,sim"
+VALUE "<project>\smartgen\RAM4Kx8\RAM4Kx8_R0C2.mem,sim"
+VALUE "<project>\smartgen\RAM4Kx8\RAM4Kx8_R0C3.mem,sim"
+VALUE "<project>\smartgen\RAM4Kx8\RAM4Kx8_R0C4.mem,sim"
+VALUE "<project>\smartgen\RAM4Kx8\RAM4Kx8_R0C5.mem,sim"
+VALUE "<project>\smartgen\RAM4Kx8\RAM4Kx8_R0C6.mem,sim"
+VALUE "<project>\smartgen\RAM4Kx8\RAM4Kx8_R0C7.mem,sim"
+ENDLIST
+ENDLIST
+LIST SimulationOptions
+UseAutomaticDoFile=true
+IncludeWaveDo=false
+Type=max
+RunTime=1000ns
+Resolution=1ps
+VsimOpt=
+EntityName=testbench
+TopInstanceName=<top>_0
+DoFileName=
+DoFileName2=wave.do
+DoFileParams=
+DisplayDUTWave=false
+LogAllSignals=false
+DumpVCD=false
+VCDFileName=power.vcd
+ENDLIST
+LIST ModelSimLibPath
+UseCustomPath=FALSE
+LibraryPath=
+ENDLIST
+LIST GlobalFlowOptions
+GenerateHDLAfterSynthesis=FALSE
+GenerateHDLAfterPhySynthesis=FALSE
+RunDRCAfterSynthesis=TRUE
+AutoCheckConstraints=TRUE
+UpdateViewDrawIni=TRUE
+UpdateModelSimIni=TRUE
+NoIOMode=FALSE
+GenerateHDLFromSchematic=TRUE
+FlashProInputFile=pdb
+SmartGenCompileReport=T
+ENDLIST
+LIST PhySynthesisOptions
+ENDLIST
+LIST Profiles
+NAME="Synplify AE"
+FUNCTION="Synthesis"
+TOOL="Synplify"
+LOCATION="D:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\bin\synplify_pro.exe"
+PARAM=""
+BATCH=0
+EndProfile
+NAME="ModelSim AE"
+FUNCTION="Simulation"
+TOOL="ModelSim"
+LOCATION="D:\Actel\Libero_v9.0\Model\win32acoem\modelsim.exe"
+PARAM=""
+BATCH=0
+EndProfile
+NAME="WFL"
+FUNCTION="Stimulus"
+TOOL="WFL"
+LOCATION="syncad.exe"
+PARAM="-pwflite"
+BATCH=0
+EndProfile
+NAME="FlashPro"
+FUNCTION="Program"
+TOOL="FlashPro"
+LOCATION="D:\Actel\Libero_v9.0\Designer\bin\FlashPro.exe"
+PARAM=""
+BATCH=0
+EndProfile
+ENDLIST
+LIST ProjectState5.1
+LIST "CORE8051S::work"
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+LIST "memory_mux::work"
+LIST Impl1
+LiberoState=Post_Synthesis
+ideSYNTHESIS(<project>\synthesis\memory_mux.edn,syn_edn)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+LIST "sys::work"
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+LIST "top_8051::work"
+LIST Impl1
+LiberoState=Post_Layout
+ideSTIMULUS=StateSuccess
+ideSYNTHESIS(<project>\synthesis\top_8051.edn,syn_edn)=StateSuccess
+ideDESIGNER(<project>\designer\impl1\top_8051.adb,adb)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+LIST "COREAPBSRAM::COREAPBSRAM_LIB::components"
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+LIST "COREUARTAPB::COREUARTAPB_LIB::components"
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+ENDLIST
+LIST ExcludePackageForSimulation
+ENDLIST
+LIST ExcludePackageForSynthesis
+ENDLIST
+LIST IncludeModuleForSimulation
+ENDLIST
+LIST CDBOrder
+ENDLIST
+LIST UserCustomizedFileList
+ENDLIST
+LIST OpenedFileList
+ENDLIST

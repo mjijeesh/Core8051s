@@ -1,0 +1,416 @@
+// ********************************************************************
+// Actel Corporation Proprietary and Confidential
+//  Copyright 2009 Actel Corporation.  All rights reserved.
+//
+// ANY USE OR REDISTRIBUTION IN PART OR IN WHOLE MUST BE HANDLED IN
+// ACCORDANCE WITH THE ACTEL LICENSE AGREEMENT AND MUST BE APPROVED
+// IN ADVANCE IN WRITING.
+//
+// Description:	User Testbench BFM script for CoreAhbNvm
+//
+// Revision Information:
+// Date			Description
+// ----			-----------------------------------------
+// 04Dec09		Production Release Version 1.4
+//
+// SVN Revision Information:
+// SVN $Revision: 10151 $
+// SVN $Date: 2009-10-01 10:06:15 -0700 (Thu, 01 Oct 2009) $
+//
+// Resolved SARs
+// SAR      Date     Who   Description
+//
+// Notes:
+// 1. best viewed with tabstops set to "4"
+// 2. Most of the behavior is driven from the BFM scripts for the AHB-Lite
+//    master and the APB master.  Consult the Actel AMBA BFM documentation
+//    for more information.
+//
+// History:		10/28/08  - TFB created
+//
+// *********************************************************************
+
+// include constants, and miscellaneous procedures used in this main file
+include "coreahbnvm_usertb_include.bfm"
+
+
+procedure main
+	int atmp
+	int dtmp
+	int d1
+	int d2
+	int d3
+	int d4
+	int i
+	int j
+	int sp_enabled
+
+	set sp_enabled 1
+
+	header " User Testbench for CoreAhbNvm: AMBA BFM AHB Master Test Harness"
+	print " (c) Copyright 2009 Actel Corporation. All rights reserved."
+
+	debug 1			// only text strings printed
+	timeout 2000	// timeout in cycles, in case BFM stalls
+	wait 1
+
+	// set HREADYIN to be 1 (normally, this would be controlled by AHB bridge)
+	iosetbit HREADYIN_BIT
+
+	wait 1
+
+	// initialize local variables passed from testbench HDL to the
+	// ARGVALUE* BFM parameters
+	call init_parameter_vars
+
+	wait 2
+
+	print " Waiting for eNVM(s) to be ready ..."
+
+	// read status to make sure CoreAhbNvm is ready
+	call waitfornvmready 
+
+	print " eNVM(s) ready."
+
+	// ensure that CoreAhbNvm is in Read Array mode by writing the CFI command
+	// 0xff to CoreAhbNvm
+	print " Writing CFI READ ARRAY command to CoreAhbNvm."
+	write w BASE 0 CFI_READ_ARRAY
+
+	// read 4 addresses from (0 to 3)*4 (32-bit aligned addresses)
+	// (reads from nvm0.mem file)
+	print " Reading from instance nvm0 ..."
+	loop i 0 3 1
+		// 32-bit aligned addresses (multiply by 4 + base addr)
+		set atmp i * 4
+		set d4 i * 4 + 4 << 24
+		set d3 i * 4 + 3 << 16
+		set d2 i * 4 + 2 << 8
+		set d1 i * 4 + 1 << 0
+		set dtmp d1 + d2
+		set dtmp dtmp + d3 + d4
+		readcheck w BASE atmp dtmp
+	endloop
+	print " Done reading from instance nvm0."
+
+	if NVM_INSTANCES > 1
+	// read 4 addresses from (0 to 3)*4 + 0x40000 (32-bit aligned addresses)
+	// (reads from nvm1.mem file)
+	print " Reading from instance nvm1 ..."
+	loop i 0 3 1
+		// 32-bit aligned addresses (multiply by 4 + base addr)
+		set atmp i * 4 + 0x40000
+		// all 0xCC values in address 0 of nvm1
+		readcheck w BASE atmp 0xcccccccc
+	endloop
+	print " Done reading from instance nvm1."
+	endif
+
+	if NVM_INSTANCES > 2
+	// read 4 addresses from (0 to 3)*4 + 0x80000 (32-bit aligned addresses)
+	// (reads from nvm2.mem file)
+	print " Reading from instance nvm2 ..."
+	loop i 0 3 1
+		// 32-bit aligned addresses (multiply by 4 + base addr)
+		set atmp i * 4 + 0x80000
+		// all 0xDD values in address 0 of nvm1
+		readcheck w BASE atmp 0xdddddddd
+	endloop
+	print " Done reading from instance nvm2."
+	endif
+
+	if NVM_INSTANCES > 3
+	// read 4 addresses from (0 to 3)*4 + 0xC0000 (32-bit aligned addresses)
+	// (reads from nvm3.mem file)
+	print " Reading from instance nvm3 ..."
+	loop i 0 3 1
+		// 32-bit aligned addresses (multiply by 4 + base addr)
+		set atmp i * 4 + 0xc0000
+		// all 0xDD values in address 0 of nvm1
+		readcheck w BASE atmp 0xeeeeeeee
+	endloop
+	print " Done reading from instance nvm3."
+	endif
+
+
+	// read addresses from spare page 0 - should return 0's since no one
+	// (outside of Actel) is allowed to read spare page 0
+	print " Reading all zeroes from spare page 0 ..."
+	set atmp 0 << 12 + SPARE_ACCESS_ADDR
+	if sp_enabled
+		readcheck w BASE atmp 0
+	else
+		read w BASE atmp
+	endif
+	print " Done reading all zeroes from spare page 0."
+
+	// read 4 addresses from (0 to 3)*4 (32-bit aligned addresses)
+	print " Reading from non spare pages in instance nvm0 ..."
+	loop i 0 3 1
+		// 32-bit aligned addresses (multiply by 4 + base addr)
+		set atmp i * 4
+		set d4 i * 4 + 4 << 24
+		set d3 i * 4 + 3 << 16
+		set d2 i * 4 + 2 << 8
+		set d1 i * 4 + 1 << 0
+		set dtmp d1 + d2
+		set dtmp dtmp + d3 + d4
+		readcheck w BASE atmp dtmp
+	endloop
+	print " Done reading from non spare pages in instance nvm0."
+
+	// read addresses from spare page 63: using "CFI Data" client in
+	// Fusion Peripherals Flash Memory System builder
+	print " Reading data from spare page 63 ..."
+	set atmp 63 << 12 + SPARE_ACCESS_ADDR
+	if sp_enabled
+		readcheck w BASE atmp 0xfcfdfeff
+	else
+		read w BASE atmp
+	endif
+	print " Done reading data from spare page 63."
+
+	// read 4 addresses from (0 to 3)*4 (32-bit aligned addresses)
+	print " Reading from non spare pages in instance nvm0 ..."
+	loop i 0 3 1
+		// 32-bit aligned addresses (multiply by 4 + base addr)
+		set atmp i * 4
+		set d4 i * 4 + 4 << 24
+		set d3 i * 4 + 3 << 16
+		set d2 i * 4 + 2 << 8
+		set d1 i * 4 + 1 << 0
+		set dtmp d1 + d2
+		set dtmp dtmp + d3 + d4
+		readcheck w BASE atmp dtmp
+	endloop
+	print " Done reading from non spare pages in instance nvm0."
+
+	// read addresses from spare page 62 (reverse engineered '.mem' file)
+	// it looks like to store info for spare pages in the .mem file, you
+	// need to specify the "@0000..." address line as being equal to
+	// (spare_page_num << 10) | 0x200
+	print " Reading data from spare page 62 ..."
+	set atmp 62 << 12 + SPARE_ACCESS_ADDR
+	if sp_enabled
+		readcheck w BASE atmp 0x87654321
+	else
+		read w BASE atmp
+	endif
+	print " Done reading data from spare page 62."
+
+	// read 4 addresses from (0 to 3)*4 (32-bit aligned addresses)
+	print " Reading from non spare pages in instance nvm0 ..."
+	loop i 0 3 1
+		// 32-bit aligned addresses (multiply by 4 + base addr)
+		set atmp i * 4
+		set d4 i * 4 + 4 << 24
+		set d3 i * 4 + 3 << 16
+		set d2 i * 4 + 2 << 8
+		set d1 i * 4 + 1 << 0
+		set dtmp d1 + d2
+		set dtmp dtmp + d3 + d4
+		readcheck w BASE atmp dtmp
+	endloop
+	print " Done reading from non spare pages in instance nvm0."
+
+	# Write CFI Single-Write Command
+	print " Writing CFI SINGLE WRITE command to CoreAhbNvm."
+	write w BASE 0x800 CFI_SINGLE_WRITE
+
+	// write data to address 0x800
+	print " Writing data to address 0x800 ..."
+	write w BASE 0x800 0xdeadbeef
+
+	// read status to make sure CoreAhbNvm is ready
+	call waitfornvmready 
+	print " Done writing data to address 0x800."
+
+	// read it back from address 0x800 - to do this,
+	// first go to Read Array mode:
+	// Write CFI Read Array Command (address is a don't care)
+	print " Writing CFI READ ARRAY command to CoreAhbNvm."
+	write w BASE 0 CFI_READ_ARRAY
+
+	// read it back from address 0x800
+	print " Reading data back from address 0x800 ..."
+	readcheck w BASE 0x800 0xdeadbeef
+	print " Done reading data back from address 0x800."
+
+	print " Performing various read and write tests ..."
+
+	//======================= Multi-Write ==========================
+	// Write Multi-Write Command
+	write w BASE 0x0 CFI_MULTI_WRITE
+	
+	// Write number of writes (N=4 => 5 writes)
+	write w BASE 0x0 0x4
+	
+	// Write data
+	write w BASE 0x0 0xabababab
+	write w BASE 0x4 0x12345678
+	write w BASE 0x8 0xa9876543
+	write w BASE 0xc 0x91919191
+	write w BASE 0x10 0x0
+	
+	// Write Confirm Command (address = x)
+	write w BASE 0x3444 CFI_CONFIRM
+	
+	// Poll status register until ready
+	poll b BASE 0x0 0x80
+	
+	// Read back data
+	//  - to do this, go to Read Array mode:
+	// Write Read Array Command (address = x)
+	write w BASE 0xcccc CFI_READ_ARRAY
+	
+	readcheck w BASE 0x0 0xabababab
+	readcheck w BASE 0x4 0x12345678
+	readcheck w BASE 0x8 0xa9876543
+	readcheck w BASE 0xc 0x91919191
+	readcheck w BASE 0x10 0x0
+	
+	//======================= Single-Write =========================
+	// Write Single-Write Command
+	write w BASE 0x0 CFI_SINGLE_WRITE
+	
+	// Write data
+	write w BASE 0x0 0x56565656
+	
+	// Poll status register until ready
+	poll b BASE 0x0 0x80
+	
+	// Read back data
+	//  - to do this, go to Read Array mode:
+	// Write Read Array Command (address = x)
+	write w BASE  0x4444 CFI_READ_ARRAY
+	
+	readcheck w BASE 0x0 0x56565656
+	readcheck w BASE 0x4 0x12345678
+	readcheck w BASE 0x8 0xa9876543
+	readcheck w BASE 0xc 0x91919191
+	readcheck w BASE 0x10 0x0
+	
+	// Test byte reads
+	read b BASE 0x0
+	read b BASE 0x1
+	read b BASE 0x2
+	read b BASE 0x3
+	
+	// Test halfword reads
+	read h BASE 0x0
+	read h BASE 0x2
+	
+	//======================= Read Status ==========================
+	// Write Read Status Command (address = x)
+	write w BASE 0x8888 CFI_READ_STATUS
+	
+	// Read CFI Status Register (address = x)
+	read w BASE 0x4444
+	
+	//======================= Clear Status =========================
+	// Write Clear Status Command (address = x)
+	write w BASE 0x4444 CFI_CLEAR_STATUS
+	
+	// Read CFI Status Register (address = x)
+	read w BASE 0x8888
+	
+	//======================= Erase Page ===========================
+	// Write Erase Page Command (for page 0)
+	write w BASE 0x0 CFI_ERASE_PAGE
+	
+	// Write Confirm Command
+	write w BASE 0x0 CFI_CONFIRM
+	
+	// Poll status register until ready
+	poll b BASE 0x0 0x80
+	
+	// Verify that locations have been erased
+	// First go back to Read Array mode
+	// Write Read Array Command (address = x)
+	write w BASE 0xcccc CFI_READ_ARRAY
+	
+	readcheck w BASE 0x0 0x0
+	readcheck w BASE 0x4 0x0
+	readcheck w BASE 0x8 0x0
+	readcheck w BASE 0xc 0x0
+	
+	// ==============================================================
+	// Pages 30 and 31 testing
+	
+	// Write to last 3 locations of page 30
+	
+	// Write Multi-Write Command
+	write w BASE 0xf00 CFI_MULTI_WRITE
+	
+	// Write number of writes (N=2 => 3 writes)
+	write w BASE 0xf00 0x2
+	
+	// Write data
+	write w BASE 0xf74 0xe5e5e5e5
+	write w BASE 0xf78 0xf6f6f6f6
+	write w BASE 0xf7c 0xa3a3a3a3
+	
+	// Write Confirm Command (address = x)
+	write w BASE 0x8888 CFI_CONFIRM
+	
+	// Poll status register until ready (address = x)
+	poll b BASE 0xcccc 0x80
+	
+	// Write to first 2 locations of page 31
+	// Write Multi-Write Command
+	write w BASE 0xf80 CFI_MULTI_WRITE
+	
+	// Write number of writes (N=1 => 2 writes)
+	write w BASE 0xf80 0x1
+	
+	// Write data
+	write w BASE 0xf80 0xb2b2b2b2
+	write w BASE 0xf84 0xc0c0c0c0
+	
+	// Write Confirm Command (address = x)
+	write w BASE 0x8888 CFI_CONFIRM
+	
+	// Poll status register until ready (address = x)
+	poll b BASE 0xcccc 0x80
+	
+	// Read back data
+	//  - to do this, go to Read Array mode:
+	// Write Read Array Command (address = x)
+	write w BASE 0x4444 CFI_READ_ARRAY
+	
+	readcheck w BASE 0xf74 0xe5e5e5e5
+	readcheck w BASE 0xf78 0xf6f6f6f6
+	readcheck w BASE 0xf7c 0xa3a3a3a3
+	readcheck w BASE 0xf80 0xb2b2b2b2
+	readcheck w BASE 0xf84 0xc0c0c0c0
+	
+	// Erase page 30
+	// Write Erase Page Command (for page 30)
+	write w BASE 0xf00 CFI_ERASE_PAGE
+	
+	// Write Confirm Command
+	write w BASE 0xf00 CFI_CONFIRM
+	
+	// Poll status register until ready
+	poll b BASE 0x0 0x80
+	
+	// Verify only page 30 erased
+	//  - to do this, go to Read Array mode:
+	// Write Read Array Command (address = x)
+	write w BASE 0x4444 CFI_READ_ARRAY
+	
+	readcheck w BASE 0xf74 0x0
+	readcheck w BASE 0xf78 0x0
+	readcheck w BASE 0xf7c 0x0
+	readcheck w BASE 0xf80 0xb2b2b2b2
+	readcheck w BASE 0xf84 0xc0c0c0c0
+	
+	print " Done performing various read and write tests."
+
+
+	flush 4		// wait 4 cycles after any pending reads or writes
+	print "End of AHB tests"
+
+return
+
+

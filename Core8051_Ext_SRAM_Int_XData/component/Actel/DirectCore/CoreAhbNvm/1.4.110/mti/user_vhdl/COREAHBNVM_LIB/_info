@@ -1,0 +1,241 @@
+m255
+K3
+13
+cModel Technology
+Z0 dd:\Actelprj\SVN_checkout_work\CoreAhbNvm\trunk\mti\user_vhdl
+Ebfm_ahbl
+Z1 w1251659567
+Z2 DPx4 work 8 bfm_misc 0 22 W7a_6;3OBCAXBe38zJ?M01
+Z3 DPx4 work 10 bfm_textio 0 22 68adH9b?JLA7=FZCMVP9X2
+Z4 DPx4 work 11 bfm_package 0 22 zaHTFkYo^Q5L9ZJkZBgX>3
+Z5 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z7 DPx3 std 6 textio 0 22 m2KQDRRhmF833<<DjYdL70
+Z8 8../../rtl/vhdl/amba_bfm/bfm_ahbl.vhd
+Z9 F../../rtl/vhdl/amba_bfm/bfm_ahbl.vhd
+l0
+L15
+Vg;cZH<fcIB9[H:@L83QWm0
+!s100 WRZNF`AQ6OV_9mi23_Id92
+Z10 OW;C;6.5a;42
+32
+Z11 o-work COREAHBNVM_LIB -O0
+Z12 tExplicit 1
+Abfma1i10i
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 8 bfm_ahbl 0 22 g;cZH<fcIB9[H:@L83QWm0
+l159
+L149
+VRYGDH1^aa3AYJH<F>FC=;2
+!s100 [e;8U@>=kK4B7CL5PdG210
+R10
+32
+Z13 Mx6 3 std 6 textio
+Z14 Mx5 4 ieee 14 std_logic_1164
+Z15 Mx4 4 ieee 11 numeric_std
+Mx3 4 work 11 bfm_package
+Z16 Mx2 4 work 10 bfm_textio
+Z17 Mx1 4 work 8 bfm_misc
+R11
+R12
+Ebfm_main
+R1
+R4
+R2
+R3
+R5
+R6
+R7
+Z18 8../../rtl/vhdl/amba_bfm/bfm_main.vhd
+Z19 F../../rtl/vhdl/amba_bfm/bfm_main.vhd
+l0
+L18
+VYB>?]NGe`BJLWe=zkc:N00
+R10
+32
+R11
+R12
+!s100 LMclhMg8ZDg15GXnIbh2R1
+Abfma1i10i
+R4
+R2
+R3
+R5
+R6
+R7
+DEx4 work 8 bfm_main 0 22 YB>?]NGe`BJLWe=zkc:N00
+l294
+L162
+VT2eg3kMUclPm89e67B5aB1
+R10
+32
+R13
+R14
+R15
+Z20 Mx3 4 work 10 bfm_textio
+Z21 Mx2 4 work 8 bfm_misc
+Mx1 4 work 11 bfm_package
+R11
+R12
+!s100 l;^z8kd=zWfleS0gkeSbK0
+Pbfm_misc
+R5
+R6
+R1
+Z22 8../../rtl/vhdl/amba_bfm/misc.vhd
+Z23 F../../rtl/vhdl/amba_bfm/misc.vhd
+l0
+L40
+VW7a_6;3OBCAXBe38zJ?M01
+R10
+32
+b1
+Z24 Mx2 4 ieee 14 std_logic_1164
+Z25 Mx1 4 ieee 11 numeric_std
+R11
+R12
+!s100 iajkUXceZ=Gefa45k6J;Y2
+Bbody
+DBx4 work 8 bfm_misc 0 22 W7a_6;3OBCAXBe38zJ?M01
+R5
+R6
+l0
+L110
+VnFZkg`m:VTBJ1cU_k9B;f0
+R10
+32
+R24
+R25
+R11
+R12
+nbody
+!s100 LlgA8ZQMZaI@k2XTm>WHb3
+Pbfm_package
+R2
+R3
+R5
+R6
+R7
+R1
+Z26 8../../rtl/vhdl/amba_bfm/bfm_package.vhd
+Z27 F../../rtl/vhdl/amba_bfm/bfm_package.vhd
+l0
+L16
+VzaHTFkYo^Q5L9ZJkZBgX>3
+R10
+32
+b1
+Z28 Mx5 3 std 6 textio
+Z29 Mx4 4 ieee 14 std_logic_1164
+Z30 Mx3 4 ieee 11 numeric_std
+R16
+R17
+R11
+R12
+!s100 N4LMBU7bWa7EI[me=7A7Z1
+Bbody
+DBx4 work 11 bfm_package 0 22 zaHTFkYo^Q5L9ZJkZBgX>3
+R2
+R3
+R5
+R6
+R7
+l0
+L1106
+VA:<Ugi`@?g@N`ZV9`iA]e1
+R10
+32
+R28
+R29
+R30
+R16
+R17
+R11
+R12
+nbody
+!s100 zNGi3Q^N_8S8d[R^7XZZl3
+Pbfm_textio
+R5
+R6
+R2
+R7
+R1
+Z31 8../../rtl/vhdl/amba_bfm/textio.vhd
+Z32 F../../rtl/vhdl/amba_bfm/textio.vhd
+l0
+L109
+V68adH9b?JLA7=FZCMVP9X2
+R10
+32
+b1
+Z33 Mx4 3 std 6 textio
+Z34 Mx3 4 work 8 bfm_misc
+R24
+R25
+R11
+R12
+!s100 VPZUE@YmGebg0L5@>57AV3
+Bbody
+DBx4 work 10 bfm_textio 0 22 68adH9b?JLA7=FZCMVP9X2
+R5
+R6
+R2
+R7
+l0
+L165
+V0K>IWKbUKRRzCj<KI;FI=3
+R10
+32
+R33
+R34
+R24
+R25
+R11
+R12
+nbody
+!s100 C3:4>`6]ES^Ll=n94<Tob1
+Ebfm_textio_test
+R1
+R5
+R2
+R3
+R7
+Z35 DPx4 ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
+R6
+R31
+R32
+l0
+L702
+V[@OJ8P2Z6N:2FeoQUWH2c2
+R10
+32
+R11
+R12
+!s100 g]QLlFI=Y`5N5?O55BkjY1
+Atb
+R5
+R2
+R3
+R7
+R35
+R6
+DEx4 work 15 bfm_textio_test 0 22 [@OJ8P2Z6N:2FeoQUWH2c2
+l707
+L706
+VkzcH_GdB9l_1icfLjTQ3o2
+R10
+32
+Mx6 4 ieee 14 std_logic_1164
+Mx5 4 ieee 15 std_logic_arith
+R33
+R20
+R21
+R25
+R11
+R12
+!s100 ?WI4jhS?L4L8YmZLMekmh0

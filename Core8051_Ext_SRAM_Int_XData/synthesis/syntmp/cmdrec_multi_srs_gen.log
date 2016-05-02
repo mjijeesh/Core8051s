@@ -1,0 +1,7 @@
+C:\Microsemi\Libero_SoC_v11.7\Synplify\bin64\syn_nfilter.exe  -link  -top  work.top_8051  -multisrs  C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\synthesis\synwork\top_8051_comp.srs  -osyn  C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\synthesis\synwork\top_8051_mult.srs  -log  C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\synthesis\synlog\top_8051_multi_srs_gen.srr 
+rc:0 success:1
+C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\synthesis\synwork\top_8051_comp.srs|i|1462166723|263782
+C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\synthesis\synwork\top_8051_mult.srs|o|1462166725|9848
+C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\synthesis\synlog\top_8051_multi_srs_gen.srr|o|1462166725|504
+C:\Microsemi\Libero_SoC_v11.7\Synplify\bin\syn_nfilter.exe|i|1449201924|3007488
+C:\Microsemi\Libero_SoC_v11.7\Synplify\bin64\syn_nfilter.exe|i|1449201926|3974144

@@ -1,0 +1,120 @@
+// ********************************************************************
+// Actel Corporation Proprietary and Confidential
+//  Copyright 2009 Actel Corporation.  All rights reserved.
+//
+// ANY USE OR REDISTRIBUTION IN PART OR IN WHOLE MUST BE HANDLED IN
+// ACCORDANCE WITH THE ACTEL LICENSE AGREEMENT AND MUST BE APPROVED
+// IN ADVANCE IN WRITING.
+//
+// Description:	User testbench include file for CoreAhbNvm - contains
+//				various constants, procedures, etc. used by main BFM script
+//
+// Revision Information:
+// Date			Description
+// ----			-----------------------------------------
+// 04Dec09		Production Release Version 1.4
+//
+// SVN Revision Information:
+// SVN $Revision: 11330 $
+// SVN $Date: 2009-12-04 12:01:31 -0800 (Fri, 04 Dec 2009) $
+//
+// Resolved SARs
+// SAR      Date     Who   Description
+//
+// Notes:
+// 1. best viewed with tabstops set to "4"
+//
+// History:		11/05/08  - TFB created
+//
+// *********************************************************************
+
+
+// HSEL[0], for DUT Base address
+memmap BASE						0x00000000
+
+
+// access to eNVM spare pages (set HADDR[20] to 1)
+constant SPARE_ACCESS_ADDR		0x100000
+
+// create constants for various CFI commands
+
+// CFI Command constant definitions
+constant CFI_READ_QUERY		0x98
+constant CFI_READ_ID		0x90
+constant CFI_READ_ARRAY		0xff
+constant CFI_READ_STATUS	0x70
+constant CFI_CLEAR_STATUS	0x50
+constant CFI_ERASE_PAGE		0x20
+constant CFI_CONFIRM		0xd0
+constant CFI_SINGLE_WRITE	0x40
+constant CFI_MULTI_WRITE	0xe8
+
+
+// GP_OUT bits that can be set/cleared from the BFM
+constant HREADYIN_BIT			0
+
+
+// global variables to store local copy of testbench parameters and constants
+// derived from testbench parameters
+int NVM_INSTANCES MAP_NVM0_TO_BLOCK0 THROUGHPUT_MODE
+
+//---------------------------------------------------------------------------
+// print line of underscores
+//---------------------------------------------------------------------------
+procedure pr_underscores
+	print "____________________________________________________________________"
+	print " "
+return
+
+//---------------------------------------------------------------------------
+// initialize local variables from the ARGVALUE* BFM parameters passed
+// down from the testbench HDL
+//---------------------------------------------------------------------------
+procedure init_parameter_vars
+	set NVM_INSTANCES				$ARGVALUE0
+	set MAP_NVM0_TO_BLOCK0			$ARGVALUE1
+	set THROUGHPUT_MODE				$ARGVALUE2
+
+	# print some variable values
+	call pr_underscores
+
+	print "NVM_INSTANCES:%0d" NVM_INSTANCES
+	print "MAP_NVM0_TO_BLOCK0:%0d" MAP_NVM0_TO_BLOCK0
+	print "THROUGHPUT_MODE:%0d" THROUGHPUT_MODE
+
+	call pr_underscores
+return
+
+// -------------------------------------------------------------------
+// read status to make sure CoreAhbNvm is ready
+// -------------------------------------------------------------------
+procedure waitfornvmready 
+	int d01
+	int tcnt
+	int tcntzero
+	// timeout downcounter
+	set tcntzero 0
+
+	// read status to make sure CoreAhbNvm is ready
+	// (1st need to write 0x70 CFI data command to then read status)
+	write w BASE 0 CFI_READ_STATUS
+
+	set tcnt 1000
+	// wait until status bit 7 is high (ready) or timeout occurs
+	while tcnt
+		set tcnt tcnt - 1
+		set tcntzero tcnt == 0
+		// test if status bit 7 is high (ready)
+		readstore w BASE 0 d01
+		set d01 d01 >> 7
+		set d01 d01 & 0x1
+		set d01 d01 == 1
+		if d01
+			set tcnt 0
+		endif
+	endwhile
+	if tcntzero
+		print "## TIMED OUT: proc waitfornvmready at: %0d ns" $TIME
+	endif
+return
+

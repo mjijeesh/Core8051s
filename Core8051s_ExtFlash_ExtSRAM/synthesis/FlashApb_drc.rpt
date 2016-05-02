@@ -1,0 +1,214 @@
+=====================================================================
+Parameters used to run compile:
+===============================
+
+Family      : Fusion
+Device      : M1AFS1500
+Package     : 484 FBGA
+Source      : C:\Actelprj\AFS_ADV_KIT_8051\synthesis\FlashApb.edn
+Format      : EDIF
+Topcell     : FlashApb
+Speed grade : -2
+Temp        : 0:25:70
+Voltage     : 1.58:1.50:1.42
+
+Keep Existing Physical Constraints : No
+Keep Existing Timing Constraints   : Yes
+
+pdc_abort_on_error                 : Yes
+pdc_eco_display_unmatched_objects  : No
+pdc_eco_max_warnings               : 10000
+
+demote_globals                     : No
+promote_globals                    : No
+localclock_max_shared_instances    : 12
+localclock_buffer_tree_max_fanout  : 12
+
+combine_register                   : No
+delete_buffer_tree                 : No
+
+report_high_fanout_nets_limit      : 10
+
+=====================================================================
+Compile starts ...
+
+Info: BLK007: No CoreConsole Database file imported for an M1 device.
+Warning: CMP201: Net FLASH_CODE/flash_rdata[8] drives no load.
+Warning: CMP201: Net FLASH_CODE/flash_rdata[9] drives no load.
+Warning: CMP201: Net FLASH_CODE/flash_rdata[10] drives no load.
+Warning: CMP201: Net FLASH_CODE/flash_rdata[11] drives no load.
+Warning: CMP201: Net FLASH_CODE/flash_rdata[12] drives no load.
+Warning: CMP201: Net FLASH_CODE/flash_rdata[13] drives no load.
+Warning: CMP201: Net FLASH_CODE/flash_rdata[14] drives no load.
+Warning: CMP201: Net FLASH_CODE/flash_rdata[15] drives no load.
+Warning: CMP201: Net FLASH_CODE/flash_rdata[16] drives no load.
+Warning: CMP201: Net FLASH_CODE/flash_rdata[17] drives no load.
+Warning: CMP201: Net FLASH_CODE/flash_rdata[18] drives no load.
+Warning: CMP201: Net FLASH_CODE/flash_rdata[19] drives no load.
+Warning: CMP201: Net FLASH_CODE/flash_rdata[20] drives no load.
+Warning: CMP201: Net FLASH_CODE/flash_rdata[21] drives no load.
+Warning: CMP201: Net FLASH_CODE/flash_rdata[22] drives no load.
+Warning: CMP201: Net FLASH_CODE/flash_rdata[23] drives no load.
+Warning: CMP201: Net FLASH_CODE/flash_rdata[24] drives no load.
+Warning: CMP201: Net FLASH_CODE/flash_rdata[25] drives no load.
+Warning: CMP201: Net FLASH_CODE/flash_rdata[26] drives no load.
+Warning: CMP201: Net FLASH_CODE/flash_rdata[27] drives no load.
+Warning: CMP201: Net FLASH_CODE/flash_rdata[28] drives no load.
+Warning: CMP201: Net FLASH_CODE/flash_rdata[29] drives no load.
+Warning: CMP201: Net FLASH_CODE/flash_rdata[30] drives no load.
+Warning: CMP201: Net FLASH_CODE/flash_rdata[31] drives no load.
+Warning: Top level port memdatai<7> is not connected to any IO pad
+Warning: Top level port memdatai<6> is not connected to any IO pad
+Warning: Top level port memdatai<5> is not connected to any IO pad
+Warning: Top level port memdatai<4> is not connected to any IO pad
+Warning: Top level port memdatai<3> is not connected to any IO pad
+Warning: Top level port memdatai<2> is not connected to any IO pad
+Warning: Top level port memdatai<1> is not connected to any IO pad
+Warning: Top level port memdatai<0> is not connected to any IO pad
+Warning: Top level port memwr is not connected to any IO pad
+
+Netlist Optimization Report
+===========================
+
+Optimized macros:
+  - Dangling net drivers:   0
+  - Buffers:                0
+  - Inverters:              1
+  - Tieoff:                 0
+  - Logic combining:        0
+
+    Total macros optimized  1
+
+Warning: CMP503: Remapped 32 enable flip-flop(s) to a 2-tile implementation because the CLR/PRE
+         pin on the enable flip-flop is not being driven by a global net.
+
+There were 0 error(s) and 34 warning(s) in this design.
+=====================================================================
+Compile report:
+===============
+
+    CORE                       Used:    117  Total:  38400   (0.30%)
+    IO (W/ clocks)             Used:     51  Total:    223   (22.87%)
+    Differential IO            Used:      0  Total:    109   (0.00%)
+    GLOBAL (Chip+Quadrant)     Used:      1  Total:     18   (5.56%)
+    PLL                        Used:      0  Total:      2   (0.00%)
+    RAM/FIFO                   Used:      0  Total:     60   (0.00%)
+    Low Static ICC             Used:      0  Total:      1   (0.00%)
+    FlashROM                   Used:      0  Total:      1   (0.00%)
+    User JTAG                  Used:      0  Total:      1   (0.00%)
+    RC oscillator              Used:      0  Total:      1   (0.00%)
+    XTL oscillator             Used:      0  Total:      1   (0.00%)
+    NVM                        Used:      1  Total:      4   (25.00%)
+    AB                         Used:      0  Total:      1   (0.00%)
+    AnalogIO                   Used:      0  Total:     46   (0.00%)
+    VRPSM                      Used:      0  Total:      1   (0.00%)
+    No-Glitch MUX              Used:      0  Total:      2   (0.00%)
+
+Global Information:
+
+    Type            | Used   | Total
+    ----------------|--------|-------------
+    Chip global     | 1      | 6  (16.67%)
+    Quadrant global | 0      | 12 (0.00%)
+
+Core Information:
+
+    Type    | Instances    | Core tiles
+    --------|--------------|-----------
+    COMB    | 85           | 85
+    SEQ     | 32           | 32
+
+I/O Function:
+
+    Type                          | w/o register  | w/ register  | w/ DDR register
+    ------------------------------|---------------|--------------|----------------
+    Input I/O                     | 34            | 0            | 0
+    Output I/O                    | 17            | 0            | 0
+    Bidirectional I/O             | 0             | 0            | 0
+    Differential Input I/O Pairs  | 0             | 0            | 0
+    Differential Output I/O Pairs | 0             | 0            | 0
+
+I/O Technology:
+
+                                    |   Voltages    |             I/Os
+    --------------------------------|-------|-------|-------|--------|--------------
+    I/O Standard(s)                 | Vcci  | Vref  | Input | Output | Bidirectional
+    --------------------------------|-------|-------|-------|--------|--------------
+    LVTTL                           | 3.30v | N/A   | 34    | 17     | 0
+
+I/O Placement:
+
+    Locked  :   0
+    Placed  :   0
+    UnPlaced:  51 ( 100.00% )
+
+Net information report:
+=======================
+
+The following nets drive enable flip-flops that have been remapped to a 2-tile implementation:
+    EffCnt  Type          Name
+    --------------------------
+    16      SET/RESET_NET Net   : PRESETn_c
+                          Driver: PRESETn_pad
+    16      SET/RESET_NET Net   : PRESETn_c_0
+                          Driver: PRESETn_pad_RNIN647
+
+The following nets have been assigned to a chip global resource:
+    Fanout  Type          Name
+    --------------------------
+    33      CLK_NET       Net   : PCLK_c
+                          Driver: PCLK_pad
+                          Source: NETLIST
+
+High fanout nets in the post compile netlist:
+    Fanout  Type          Name
+    --------------------------
+    17      SET/RESET_NET Net   : PRESETn_c
+                          Driver: PRESETn_pad
+    17      INT_NET       Net   : memrd_c
+                          Driver: memrd_pad
+    17      SET/RESET_NET Net   : PRESETn_c_0
+                          Driver: PRESETn_pad_RNIN647
+    13      INT_NET       Net   : PADDR_c[2]
+                          Driver: PADDR_pad[2]
+    10      INT_NET       Net   : APB_CTRL_WRITE.un18_write_en
+                          Driver: APB_DATA_WRITE.un27_write_en_0_a2_1_RNIRBK51_0
+    10      INT_NET       Net   : PADDR_pad_RNI383N[4]
+                          Driver: PADDR_pad_RNI383N[4]
+    9       INT_NET       Net   : APB_DATA_WRITE.un27_write_en
+                          Driver: APB_DATA_WRITE.un27_write_en_0_a2
+    9       INT_NET       Net   : PADDR_pad_RNI8B4U_0[4]
+                          Driver: PADDR_pad_RNI8B4U_0[4]
+    8       INT_NET       Net   : APB_ADDRL_WRITE.un21_write_en
+                          Driver: PADDR_pad_RNIRBK51[3]
+    8       INT_NET       Net   : APB_ADDRH_WRITE.un24_write_en
+                          Driver: APB_DATA_WRITE.un27_write_en_0_a2_1_RNIRBK51
+
+Nets that are candidates for clock assignment and the resulting fanout:
+    Fanout  Type          Name
+    --------------------------
+    33      SET/RESET_NET Net   : PRESETn_c
+                          Driver: PRESETn_pad
+    17      INT_NET       Net   : memrd_c
+                          Driver: memrd_pad
+    13      INT_NET       Net   : PADDR_c[2]
+                          Driver: PADDR_pad[2]
+    10      INT_NET       Net   : APB_CTRL_WRITE.un18_write_en
+                          Driver: APB_DATA_WRITE.un27_write_en_0_a2_1_RNIRBK51_0
+    10      INT_NET       Net   : PADDR_pad_RNI383N[4]
+                          Driver: PADDR_pad_RNI383N[4]
+    9       INT_NET       Net   : APB_DATA_WRITE.un27_write_en
+                          Driver: APB_DATA_WRITE.un27_write_en_0_a2
+    9       INT_NET       Net   : PADDR_pad_RNI8B4U_0[4]
+                          Driver: PADDR_pad_RNI8B4U_0[4]
+    8       INT_NET       Net   : APB_ADDRL_WRITE.un21_write_en
+                          Driver: PADDR_pad_RNIRBK51[3]
+    8       INT_NET       Net   : APB_ADDRH_WRITE.un24_write_en
+                          Driver: APB_DATA_WRITE.un27_write_en_0_a2_1_RNIRBK51
+    6       INT_NET       Net   : PWDATA_c[6]
+                          Driver: PWDATA_pad[6]
+
+The Compile command succeeded ( 00:00:04 )
+Warning: Overwriting the existing file:
+         C:\Actelprj\AFS_ADV_KIT_8051\synthesis\FlashApb_drc_temp.rpt.
+

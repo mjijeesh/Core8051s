@@ -1,0 +1,407 @@
+
+Core8051_External-Flash-External_SRAM.elf:     file format elf32-c8051
+
+Disassembly of section .text:
+
+00800000 <main-0x62>:
+  800000:	02 00 08    	ljmp 800008 <UART0_BASE_ADDR+0x7fff7e>
+  800003:	12 00 62    	lcall 800062 <main>
+  800006:	80 fe       	sjmp 800006
+  800008:	75 81 07    	mov sp, #7
+  80000b:	12 02 8c    	lcall 80028c <printf+0x96>
+  80000e:	e5 82       	mov a, dpl
+  800010:	60 03       	jz 800015
+  800012:	02 00 03    	ljmp 800003 <UART0_BASE_ADDR+0x7fff79>
+  800015:	79 04       	mov r1, #4
+  800017:	e9          	mov a, r1
+  800018:	44 00       	orl a, #0
+  80001a:	60 1b       	jz 800037
+  80001c:	7a 01       	mov r2, #1
+  80001e:	90 02 fd    	mov dptr, #765
+  800021:	78 88       	mov r0, #136
+  800023:	75 a0 00    	mov 0xa0, #0
+  800026:	e4          	clr a
+  800027:	93          	movc a, @a + dptr
+  800028:	f2          	movx @r0, a
+  800029:	a3          	inc dptr
+  80002a:	08          	inc r0
+  80002b:	b8 00 02    	cjne r0, #0, 800030
+  80002e:	05 a0       	inc 0xa0
+  800030:	d9 f4       	djnz r1, 800026
+  800032:	da f2       	djnz r2, 800026
+  800034:	75 a0 ff    	mov 0xa0, #255
+  800037:	e4          	clr a
+  800038:	78 ff       	mov r0, #255
+  80003a:	f6          	mov @r0, a
+  80003b:	d8 fd       	djnz r0, 80003a
+  80003d:	78 00       	mov r0, #0
+  80003f:	e8          	mov a, r0
+  800040:	60 0a       	jz 80004c
+  800042:	79 00       	mov r1, #0
+  800044:	75 a0 00    	mov 0xa0, #0
+  800047:	e4          	clr a
+  800048:	f3          	movx @r1, a
+  800049:	09          	inc r1
+  80004a:	d8 fc       	djnz r0, 800048
+  80004c:	78 88       	mov r0, #136
+  80004e:	e8          	mov a, r0
+  80004f:	44 00       	orl a, #0
+  800051:	60 0c       	jz 80005f
+  800053:	79 01       	mov r1, #1
+  800055:	90 00 00    	mov dptr, #0
+  800058:	e4          	clr a
+  800059:	f0          	movx @dptr, a
+  80005a:	a3          	inc dptr
+  80005b:	d8 fc       	djnz r0, 800059
+  80005d:	d9 fa       	djnz r1, 800059
+  80005f:	02 00 03    	ljmp 800003 <UART0_BASE_ADDR+0x7fff79>
+
+00800062 <main>:
+  800062:	75 82 26    	mov dpl, #38
+  800065:	12 01 4a    	lcall 80014a <uart_config>
+  800068:	75 82 a1    	mov dpl, #161
+  80006b:	75 83 02    	mov dph, #2
+  80006e:	75 f0 80    	mov b, #128
+  800071:	12 01 f6    	lcall 8001f6 <printf>
+  800074:	90 00 80    	mov dptr, #128
+  800077:	74 00       	mov a, #0
+  800079:	f0          	movx @dptr, a
+  80007a:	90 00 80    	mov dptr, #128
+  80007d:	e0          	movx a, @dptr
+  80007e:	fa          	mov r2, a
+  80007f:	ba 14 00    	cjne r2, #20, 800082
+  800082:	40 03       	jc 800087
+  800084:	02 00 c0    	ljmp 8000c0 <main+0x5e>
+  800087:	c0 02       	push 0x02
+  800089:	12 01 c1    	lcall 8001c1 <uart_getchar>
+  80008c:	ab 82       	mov r3, dpl
+  80008e:	d0 02       	pop 0x02
+  800090:	e5 02       	mov a, 0x02
+  800092:	24 00       	add a, #0
+  800094:	f5 82       	mov dpl, a
+  800096:	74 00       	mov a, #0
+  800098:	34 00       	addc a, #0
+  80009a:	f5 83       	mov dph, a
+  80009c:	eb          	mov a, r3
+  80009d:	f0          	movx @dptr, a
+  80009e:	8b 82       	mov dpl, r3
+  8000a0:	c0 02       	push 0x02
+  8000a2:	12 01 d9    	lcall 8001d9 <uart_putchar>
+  8000a5:	d0 02       	pop 0x02
+  8000a7:	75 82 be    	mov dpl, #190
+  8000aa:	75 83 02    	mov dph, #2
+  8000ad:	75 f0 80    	mov b, #128
+  8000b0:	c0 02       	push 0x02
+  8000b2:	12 01 f6    	lcall 8001f6 <printf>
+  8000b5:	d0 02       	pop 0x02
+  8000b7:	90 00 80    	mov dptr, #128
+  8000ba:	ea          	mov a, r2
+  8000bb:	04          	inc a
+  8000bc:	f0          	movx @dptr, a
+  8000bd:	02 00 7a    	ljmp 80007a <main+0x18>
+  8000c0:	75 82 c1    	mov dpl, #193
+  8000c3:	75 83 02    	mov dph, #2
+  8000c6:	75 f0 80    	mov b, #128
+  8000c9:	c0 02       	push 0x02
+  8000cb:	12 01 f6    	lcall 8001f6 <printf>
+  8000ce:	d0 02       	pop 0x02
+  8000d0:	75 82 da    	mov dpl, #218
+  8000d3:	75 83 02    	mov dph, #2
+  8000d6:	75 f0 80    	mov b, #128
+  8000d9:	c0 02       	push 0x02
+  8000db:	12 01 f6    	lcall 8001f6 <printf>
+  8000de:	d0 02       	pop 0x02
+  8000e0:	c0 02       	push 0x02
+  8000e2:	12 01 c1    	lcall 8001c1 <uart_getchar>
+  8000e5:	d0 02       	pop 0x02
+  8000e7:	75 82 dd    	mov dpl, #221
+  8000ea:	75 83 02    	mov dph, #2
+  8000ed:	75 f0 80    	mov b, #128
+  8000f0:	c0 02       	push 0x02
+  8000f2:	12 01 f6    	lcall 8001f6 <printf>
+  8000f5:	d0 02       	pop 0x02
+  8000f7:	90 00 81    	mov dptr, #129
+  8000fa:	74 00       	mov a, #0
+  8000fc:	f0          	movx @dptr, a
+  8000fd:	90 00 81    	mov dptr, #129
+  800100:	e0          	movx a, @dptr
+  800101:	fb          	mov r3, a
+  800102:	c3          	clr c
+  800103:	eb          	mov a, r3
+  800104:	9a          	subb a, r2
+  800105:	40 03       	jc 80010a
+  800107:	02 01 2e    	ljmp 80012e <main+0xcc>
+  80010a:	e5 03       	mov a, 0x03
+  80010c:	24 00       	add a, #0
+  80010e:	f5 82       	mov dpl, a
+  800110:	74 00       	mov a, #0
+  800112:	34 00       	addc a, #0
+  800114:	f5 83       	mov dph, a
+  800116:	e0          	movx a, @dptr
+  800117:	fc          	mov r4, a
+  800118:	8c 82       	mov dpl, r4
+  80011a:	c0 02       	push 0x02
+  80011c:	c0 03       	push 0x03
+  80011e:	12 01 d9    	lcall 8001d9 <uart_putchar>
+  800121:	d0 03       	pop 0x03
+  800123:	d0 02       	pop 0x02
+  800125:	90 00 81    	mov dptr, #129
+  800128:	eb          	mov a, r3
+  800129:	04          	inc a
+  80012a:	f0          	movx @dptr, a
+  80012b:	02 00 fd    	ljmp 8000fd <main+0x9b>
+  80012e:	75 82 be    	mov dpl, #190
+  800131:	75 83 02    	mov dph, #2
+  800134:	75 f0 80    	mov b, #128
+  800137:	12 01 f6    	lcall 8001f6 <printf>
+  80013a:	75 82 f1    	mov dpl, #241
+  80013d:	75 83 02    	mov dph, #2
+  800140:	75 f0 80    	mov b, #128
+  800143:	12 01 f6    	lcall 8001f6 <printf>
+  800146:	02 01 46    	ljmp 800146 <main+0xe4>
+  800149:	22          	ret
+
+0080014a <uart_config>:
+  80014a:	e5 82       	mov a, dpl
+  80014c:	90 00 82    	mov dptr, #130
+  80014f:	f0          	movx @dptr, a
+  800150:	90 00 8a    	mov dptr, #138
+  800153:	e0          	movx a, @dptr
+  800154:	fa          	mov r2, a
+  800155:	a3          	inc dptr
+  800156:	e0          	movx a, @dptr
+  800157:	fb          	mov r3, a
+  800158:	74 08       	mov a, #8
+  80015a:	25 02       	add a, 0x02
+  80015c:	fa          	mov r2, a
+  80015d:	74 00       	mov a, #0
+  80015f:	35 03       	addc a, 0x03
+  800161:	fb          	mov r3, a
+  800162:	90 00 82    	mov dptr, #130
+  800165:	e0          	movx a, @dptr
+  800166:	fc          	mov r4, a
+  800167:	8a 82       	mov dpl, r2
+  800169:	8b 83       	mov dph, r3
+  80016b:	ec          	mov a, r4
+  80016c:	f0          	movx @dptr, a
+  80016d:	90 00 8a    	mov dptr, #138
+  800170:	e0          	movx a, @dptr
+  800171:	fa          	mov r2, a
+  800172:	a3          	inc dptr
+  800173:	e0          	movx a, @dptr
+  800174:	fb          	mov r3, a
+  800175:	74 0c       	mov a, #12
+  800177:	25 02       	add a, 0x02
+  800179:	f5 82       	mov dpl, a
+  80017b:	74 00       	mov a, #0
+  80017d:	35 03       	addc a, 0x03
+  80017f:	f5 83       	mov dph, a
+  800181:	74 01       	mov a, #1
+  800183:	f0          	movx @dptr, a
+  800184:	22          	ret
+
+00800185 <uartWaitXmt>:
+  800185:	90 00 8a    	mov dptr, #138
+  800188:	e0          	movx a, @dptr
+  800189:	fa          	mov r2, a
+  80018a:	a3          	inc dptr
+  80018b:	e0          	movx a, @dptr
+  80018c:	fb          	mov r3, a
+  80018d:	74 10       	mov a, #16
+  80018f:	25 02       	add a, 0x02
+  800191:	f5 82       	mov dpl, a
+  800193:	74 00       	mov a, #0
+  800195:	35 03       	addc a, 0x03
+  800197:	f5 83       	mov dph, a
+  800199:	e0          	movx a, @dptr
+  80019a:	fa          	mov r2, a
+  80019b:	ea          	mov a, r2
+  80019c:	20 e0 03    	jb 224, 8001a2
+  80019f:	02 01 85    	ljmp 800185 <uartWaitXmt>
+  8001a2:	22          	ret
+
+008001a3 <uartWaitRxd>:
+  8001a3:	90 00 8a    	mov dptr, #138
+  8001a6:	e0          	movx a, @dptr
+  8001a7:	fa          	mov r2, a
+  8001a8:	a3          	inc dptr
+  8001a9:	e0          	movx a, @dptr
+  8001aa:	fb          	mov r3, a
+  8001ab:	74 10       	mov a, #16
+  8001ad:	25 02       	add a, 0x02
+  8001af:	f5 82       	mov dpl, a
+  8001b1:	74 00       	mov a, #0
+  8001b3:	35 03       	addc a, 0x03
+  8001b5:	f5 83       	mov dph, a
+  8001b7:	e0          	movx a, @dptr
+  8001b8:	fa          	mov r2, a
+  8001b9:	ea          	mov a, r2
+  8001ba:	20 e1 03    	jb 225, 8001c0
+  8001bd:	02 01 a3    	ljmp 8001a3 <uartWaitRxd>
+  8001c0:	22          	ret
+
+008001c1 <uart_getchar>:
+  8001c1:	12 01 a3    	lcall 8001a3 <uartWaitRxd>
+  8001c4:	90 00 8a    	mov dptr, #138
+  8001c7:	e0          	movx a, @dptr
+  8001c8:	fa          	mov r2, a
+  8001c9:	a3          	inc dptr
+  8001ca:	e0          	movx a, @dptr
+  8001cb:	fb          	mov r3, a
+  8001cc:	8a 82       	mov dpl, r2
+  8001ce:	8b 83       	mov dph, r3
+  8001d0:	a3          	inc dptr
+  8001d1:	a3          	inc dptr
+  8001d2:	a3          	inc dptr
+  8001d3:	a3          	inc dptr
+  8001d4:	e0          	movx a, @dptr
+  8001d5:	fa          	mov r2, a
+  8001d6:	8a 82       	mov dpl, r2
+  8001d8:	22          	ret
+
+008001d9 <uart_putchar>:
+  8001d9:	e5 82       	mov a, dpl
+  8001db:	90 00 83    	mov dptr, #131
+  8001de:	f0          	movx @dptr, a
+  8001df:	12 01 85    	lcall 800185 <uartWaitXmt>
+  8001e2:	90 00 8a    	mov dptr, #138
+  8001e5:	e0          	movx a, @dptr
+  8001e6:	fa          	mov r2, a
+  8001e7:	a3          	inc dptr
+  8001e8:	e0          	movx a, @dptr
+  8001e9:	fb          	mov r3, a
+  8001ea:	90 00 83    	mov dptr, #131
+  8001ed:	e0          	movx a, @dptr
+  8001ee:	fc          	mov r4, a
+  8001ef:	8a 82       	mov dpl, r2
+  8001f1:	8b 83       	mov dph, r3
+  8001f3:	ec          	mov a, r4
+  8001f4:	f0          	movx @dptr, a
+  8001f5:	22          	ret
+
+008001f6 <printf>:
+  8001f6:	aa f0       	mov r2, b
+  8001f8:	ab 83       	mov r3, dph
+  8001fa:	e5 82       	mov a, dpl
+  8001fc:	90 00 84    	mov dptr, #132
+  8001ff:	f0          	movx @dptr, a
+  800200:	a3          	inc dptr
+  800201:	eb          	mov a, r3
+  800202:	f0          	movx @dptr, a
+  800203:	a3          	inc dptr
+  800204:	ea          	mov a, r2
+  800205:	f0          	movx @dptr, a
+  800206:	90 00 84    	mov dptr, #132
+  800209:	e0          	movx a, @dptr
+  80020a:	fa          	mov r2, a
+  80020b:	a3          	inc dptr
+  80020c:	e0          	movx a, @dptr
+  80020d:	fb          	mov r3, a
+  80020e:	a3          	inc dptr
+  80020f:	e0          	movx a, @dptr
+  800210:	fc          	mov r4, a
+  800211:	8a 82       	mov dpl, r2
+  800213:	8b 83       	mov dph, r3
+  800215:	8c f0       	mov b, r4
+  800217:	12 02 70    	lcall 800270 <printf+0x7a>
+  80021a:	fd          	mov r5, a
+  80021b:	90 00 84    	mov dptr, #132
+  80021e:	74 01       	mov a, #1
+  800220:	25 02       	add a, 0x02
+  800222:	f0          	movx @dptr, a
+  800223:	74 00       	mov a, #0
+  800225:	35 03       	addc a, 0x03
+  800227:	a3          	inc dptr
+  800228:	f0          	movx @dptr, a
+  800229:	a3          	inc dptr
+  80022a:	ec          	mov a, r4
+  80022b:	f0          	movx @dptr, a
+  80022c:	90 00 87    	mov dptr, #135
+  80022f:	ed          	mov a, r5
+  800230:	f0          	movx @dptr, a
+  800231:	90 00 87    	mov dptr, #135
+  800234:	e0          	movx a, @dptr
+  800235:	fa          	mov r2, a
+  800236:	ba 00 03    	cjne r2, #0, 80023c
+  800239:	02 02 6f    	ljmp 80026f <printf+0x79>
+  80023c:	8a 82       	mov dpl, r2
+  80023e:	12 01 d9    	lcall 8001d9 <uart_putchar>
+  800241:	90 00 84    	mov dptr, #132
+  800244:	e0          	movx a, @dptr
+  800245:	fa          	mov r2, a
+  800246:	a3          	inc dptr
+  800247:	e0          	movx a, @dptr
+  800248:	fb          	mov r3, a
+  800249:	a3          	inc dptr
+  80024a:	e0          	movx a, @dptr
+  80024b:	fc          	mov r4, a
+  80024c:	8a 82       	mov dpl, r2
+  80024e:	8b 83       	mov dph, r3
+  800250:	8c f0       	mov b, r4
+  800252:	12 02 70    	lcall 800270 <printf+0x7a>
+  800255:	fd          	mov r5, a
+  800256:	90 00 84    	mov dptr, #132
+  800259:	74 01       	mov a, #1
+  80025b:	25 02       	add a, 0x02
+  80025d:	f0          	movx @dptr, a
+  80025e:	74 00       	mov a, #0
+  800260:	35 03       	addc a, 0x03
+  800262:	a3          	inc dptr
+  800263:	f0          	movx @dptr, a
+  800264:	a3          	inc dptr
+  800265:	ec          	mov a, r4
+  800266:	f0          	movx @dptr, a
+  800267:	90 00 87    	mov dptr, #135
+  80026a:	ed          	mov a, r5
+  80026b:	f0          	movx @dptr, a
+  80026c:	02 02 31    	ljmp 800231 <printf+0x3b>
+  80026f:	22          	ret
+  800270:	20 f7 14    	jb 247, 800287
+  800273:	30 f6 14    	jnb 246, 80028a
+  800276:	88 83       	mov dph, r0
+  800278:	a8 82       	mov r0, dpl
+  80027a:	20 f5 07    	jb 245, 800284
+  80027d:	e6          	mov a, @r0
+  80027e:	a8 83       	mov r0, dph
+  800280:	75 83 00    	mov dph, #0
+  800283:	22          	ret
+  800284:	e2          	movx a, @r0
+  800285:	80 f7       	sjmp 80027e
+  800287:	e4          	clr a
+  800288:	93          	movc a, @a + dptr
+  800289:	22          	ret
+  80028a:	e0          	movx a, @dptr
+  80028b:	22          	ret
+  80028c:	75 82 00    	mov dpl, #0
+  80028f:	22          	ret
+
+00800290 <ascii>:
+  800290:	30 31 32 33 34 35 36 37 38 39 41 42 43 44 45 46     0123456789ABCDEF
+	...
+
+008002a1 <_str_0>:
+  8002a1:	0d 20 38 30 35 31 73 20 55 41 52 54 20 54 65 73     . 8051s UART Tes
+  8002b1:	74 20 50 72 6f 67 72 61 6d 20 0a 0d 00              t Program ...
+
+008002be <_str_1>:
+  8002be:	0a 0d 00                                            ...
+
+008002c1 <_str_2>:
+  8002c1:	43 61 70 74 75 72 65 64 20 32 30 20 64 61 74 61     Captured 20 data
+  8002d1:	20 69 6e 20 52 41 4d 20 00                           in RAM .
+
+008002da <_str_3>:
+  8002da:	0d 0a 00                                            ...
+
+008002dd <_str_4>:
+  8002dd:	20 42 75 66 66 65 72 20 43 4f 6e 74 65 6e 74 73      Buffer COntents
+  8002ed:	20 3a 20 00                                          : .
+
+008002f1 <_str_5>:
+  8002f1:	20 43 6f 6d 70 6c 65 74 65 64 20 00                  Completed .
+
+008002fd <__xinit_GPIO_BASE_ADDR>:
+  8002fd:	00 f1                                               ..
+
+008002ff <__xinit_UART0_BASE_ADDR>:
+  8002ff:	00 f0                                               ..

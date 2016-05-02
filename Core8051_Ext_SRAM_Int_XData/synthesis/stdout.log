@@ -1,0 +1,43 @@
+
+Starting:    e:\Actel\Libero_v9.1\Synopsys\synplify_E201009A-1\bin\mbin\synplify.exe
+Install:     e:\Actel\Libero_v9.1\Synopsys\synplify_E201009A-1
+Date:        Wed Sep 23 11:32:36 2015
+Version:     E-2010.09A-1
+
+Arguments:   -product synplify_pro top_8051_syn.prj
+ProductType: synplify_pro
+
+License checkout: synplifypro_actel
+License: synplifypro_actel node-locked 
+Licensed Vendor: actel
+License Feature: actel_oem
+
+
+
+
+Running synthesis on top_8051_syn:synthesis
+
+log file: "D:\jijeesh\Reference\Core8051\Core8051_Core1553RT\External_Flash-Example\Core8051_Ext_SRAM_Int_XData\synthesis\top_8051.srr"
+
+
+
+Running HDL Compiler...
+
+
+Compiler Completed
+Return Code: 0
+Run Time:00:00:04
+
+
+Running Fusion Mapper...
+
+
+Fusion Mapper Completed with warnings
+Return Code: 1
+Run Time:00:00:12
+
+exit status=0
+
+
+License checkin: synplifypro_actel
+

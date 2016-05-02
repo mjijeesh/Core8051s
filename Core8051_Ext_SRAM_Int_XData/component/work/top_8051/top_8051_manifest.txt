@@ -1,0 +1,14 @@
+Microsemi Corporation - Microsemi Libero Software Release v11.7 (Version 11.7.0.119)
+
+Date      :  Mon May 02 10:54:52 2016
+Project   :  C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData
+Component :  top_8051
+Family    :  Fusion
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051_Ext_SRAM_Int_XData/component/work/top_8051/top_8051.vhd
+
+Stimulus files for all Simulation tools:
+    C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051_Ext_SRAM_Int_XData/component/work/top_8051/subsystem.bfm
+

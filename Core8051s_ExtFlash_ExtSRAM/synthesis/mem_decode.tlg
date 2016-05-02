@@ -1,0 +1,24 @@
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\hdl\memory_interface.vhd":7:7:7:16|Synthesizing work.mem_decode.def_arch 
+@W: CD638 :"C:\Actelprj\AFS_ADV_KIT_8051\hdl\memory_interface.vhd":44:7:44:16|Signal int_ram_rd is undriven 
+@W: CD638 :"C:\Actelprj\AFS_ADV_KIT_8051\hdl\memory_interface.vhd":45:7:45:16|Signal int_ram_wr is undriven 
+@W: CD638 :"C:\Actelprj\AFS_ADV_KIT_8051\hdl\memory_interface.vhd":46:7:46:16|Signal int_nvm_cs is undriven 
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\smartgen\INT_RAM8kX8\INT_RAM8kX8.vhd":8:7:8:17|Synthesizing work.int_ram8kx8.def_arch 
+@N: CD630 :"C:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\lib\proasic\fusion.vhd":3182:10:3182:15|Synthesizing fusion.ram4k9.syn_black_box 
+Post processing for fusion.ram4k9.syn_black_box
+@N: CD630 :"C:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\lib\proasic\fusion.vhd":2117:10:2117:12|Synthesizing fusion.inv.syn_black_box 
+Post processing for fusion.inv.syn_black_box
+@N: CD630 :"C:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\lib\proasic\fusion.vhd":2179:10:2179:12|Synthesizing fusion.mx2.syn_black_box 
+Post processing for fusion.mx2.syn_black_box
+@N: CD630 :"C:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\lib\proasic\fusion.vhd":2381:10:2381:12|Synthesizing fusion.or2.syn_black_box 
+Post processing for fusion.or2.syn_black_box
+@N: CD630 :"C:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\lib\proasic\fusion.vhd":3149:10:3149:13|Synthesizing fusion.buff.syn_black_box 
+Post processing for fusion.buff.syn_black_box
+@N: CD630 :"C:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\lib\proasic\fusion.vhd":1491:10:1491:13|Synthesizing fusion.dfn1.syn_black_box 
+Post processing for fusion.dfn1.syn_black_box
+@N: CD630 :"C:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\lib\proasic\fusion.vhd":1899:10:1899:12|Synthesizing fusion.gnd.syn_black_box 
+Post processing for fusion.gnd.syn_black_box
+@N: CD630 :"C:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\lib\proasic\fusion.vhd":3019:10:3019:12|Synthesizing fusion.vcc.syn_black_box 
+Post processing for fusion.vcc.syn_black_box
+Post processing for work.int_ram8kx8.def_arch
+@W: CL168 :"C:\Actelprj\AFS_ADV_KIT_8051\smartgen\INT_RAM8kX8\INT_RAM8kX8.vhd":346:4:346:14|Pruning instance AFF1_0_inst - not in use ... 
+Post processing for work.mem_decode.def_arch

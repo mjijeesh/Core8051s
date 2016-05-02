@@ -1,0 +1,1070 @@
+Timing Report Max Delay Analysis
+
+SmartTime Version v11.7
+Microsemi Corporation - Microsemi Libero Software Release v11.7 (Version 11.7.0.119)
+Date: Mon May 02 15:11:15 2016
+
+
+Design: top_8051
+Family: Fusion
+Die: M1AFS1500
+Package: 484 FBGA
+Temperature Range: 0 - 70 C
+Voltage Range: 1.425 - 1.575 V
+Speed Grade: -2
+Design State: Post-Layout
+Data source: Silicon verified
+Min Operating Conditions: BEST - 1.575 V - 0 C
+Max Operating Conditions: WORST - 1.425 V - 70 C
+Using Enhanced Min Delay Analysis
+Scenario for Timing Analysis: Primary
+
+
+-----------------------------------------------------
+SUMMARY
+
+Clock Domain:               top_8051|DebugIf_TCK
+Period (ns):                50.000
+Frequency (MHz):            20.000
+Required Period (ns):       10.000
+Required Frequency (MHz):   100.000
+External Setup (ns):        12.981
+External Hold (ns):         0.000
+Min Clock-To-Out (ns):      6.283
+Max Clock-To-Out (ns):      12.981
+
+Clock Domain:               PLL_50Mh_6Mh_0/Core:GLA
+Period (ns):                35.977
+Frequency (MHz):            27.796
+Required Period (ns):       166.667
+Required Frequency (MHz):   6.000
+External Setup (ns):        26.638
+External Hold (ns):         0.437
+Min Clock-To-Out (ns):      4.314
+Max Clock-To-Out (ns):      19.561
+
+Clock Domain:               rc_osc_0/RCOSC1:CLKOUT
+Period (ns):                N/A
+Frequency (MHz):            N/A
+Required Period (ns):       10.000
+Required Frequency (MHz):   100.000
+External Setup (ns):        N/A
+External Hold (ns):         N/A
+Min Clock-To-Out (ns):      N/A
+Max Clock-To-Out (ns):      N/A
+
+Clock Domain:               sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:UDRCK
+Period (ns):                14.565
+Frequency (MHz):            68.658
+Required Period (ns):       N/A
+Required Frequency (MHz):   N/A
+External Setup (ns):        N/A
+External Hold (ns):         N/A
+Min Clock-To-Out (ns):      N/A
+Max Clock-To-Out (ns):      N/A
+
+                            Input to Output
+Min Delay (ns):             N/A
+Max Delay (ns):             N/A
+
+END SUMMARY
+-----------------------------------------------------
+
+Clock Domain top_8051|DebugIf_TCK
+
+Info: The maximum frequency of this clock domain is limited by the minimum pulse widths of pin sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:TCK
+
+SET Register to Register
+
+No Path
+
+END SET Register to Register
+
+----------------------------------------------------
+
+SET External Setup
+
+Path 1
+  From:                        DebugIf_TMS
+  To:                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:TMS
+  Delay (ns):                  0.000
+  Slack (ns):
+  Arrival (ns):                0.000
+  Required (ns):
+  Setup (ns):                  12.981
+  External Setup (ns):         12.981
+
+Path 2
+  From:                        DebugIf_TDI
+  To:                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:TDI
+  Delay (ns):                  0.000
+  Slack (ns):
+  Arrival (ns):                0.000
+  Required (ns):
+  Setup (ns):                  12.981
+  External Setup (ns):         12.981
+
+
+Expanded Path 1
+  From: DebugIf_TMS
+  To: sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:TMS
+  data required time                             N/C
+  data arrival time                          -   0.000
+  slack                                          N/C
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        DebugIf_TMS (r)
+               +     0.000          net: DebugIf_TMS
+  0.000                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:TMS (r)
+                                    
+  0.000                        data arrival time
+  ________________________________________________________
+  Data required time calculation
+  N/C                          top_8051|DebugIf_TCK
+               +     0.000          Clock source
+  N/C                          DebugIf_TCK (r)
+               +     0.000          net: DebugIf_TCK
+  N/C                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:TCK (r)
+               -    12.981          Library setup time: ADLIB:UJTAG
+  N/C                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:TMS
+
+
+END SET External Setup
+
+----------------------------------------------------
+
+SET Clock to Output
+
+Path 1
+  From:                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:TCK
+  To:                          DebugIf_TDO
+  Delay (ns):                  12.981
+  Slack (ns):
+  Arrival (ns):                12.981
+  Required (ns):
+  Clock to Out (ns):           12.981
+
+
+Expanded Path 1
+  From: sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:TCK
+  To: DebugIf_TDO
+  data required time                             N/C
+  data arrival time                          -   12.981
+  slack                                          N/C
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        top_8051|DebugIf_TCK
+               +     0.000          Clock source
+  0.000                        DebugIf_TCK (f)
+               +     0.000          net: DebugIf_TCK
+  0.000                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:TCK (f)
+               +    12.981          cell: ADLIB:UJTAG
+  12.981                       sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:TDO (r)
+               +     0.000          net: DebugIf_TDO
+  12.981                       DebugIf_TDO (r)
+                                    
+  12.981                       data arrival time
+  ________________________________________________________
+  Data required time calculation
+  N/C                          top_8051|DebugIf_TCK
+               +     0.000          Clock source
+  N/C                          DebugIf_TCK (r)
+                                    
+  N/C                          DebugIf_TDO (r)
+
+
+END SET Clock to Output
+
+----------------------------------------------------
+
+SET Register to Asynchronous
+
+No Path
+
+END SET Register to Asynchronous
+
+----------------------------------------------------
+
+SET External Recovery
+
+Path 1
+  From:                        DebugIf_TRSTN
+  To:                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:TRSTB
+  Delay (ns):                  0.000
+  Slack (ns):
+  Arrival (ns):                0.000
+  Required (ns):
+  Recovery (ns):               12.981
+  External Recovery (ns):      12.981
+
+
+Expanded Path 1
+  From: DebugIf_TRSTN
+  To: sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:TRSTB
+  data required time                             N/C
+  data arrival time                          -   0.000
+  slack                                          N/C
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        DebugIf_TRSTN (r)
+               +     0.000          net: DebugIf_TRSTN
+  0.000                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:TRSTB (r)
+                                    
+  0.000                        data arrival time
+  ________________________________________________________
+  Data required time calculation
+  N/C                          top_8051|DebugIf_TCK
+               +     0.000          Clock source
+  N/C                          DebugIf_TCK (r)
+               +     0.000          net: DebugIf_TCK
+  N/C                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:TCK (r)
+               -    12.981          Library recovery time: ADLIB:UJTAG
+  N/C                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:TRSTB
+
+
+END SET External Recovery
+
+----------------------------------------------------
+
+SET Asynchronous to Register
+
+No Path
+
+END SET Asynchronous to Register
+
+----------------------------------------------------
+
+Clock Domain PLL_50Mh_6Mh_0/Core:GLA
+
+SET Register to Register
+
+Path 1
+  From:                        sys_0/CORE8051S_0/MAIN8051_inst/U_CPU/instrreg[1]:CLK
+  To:                          sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/clkper_gate_pre:D
+  Delay (ns):                  6.607
+  Slack (ns):                  76.201
+  Arrival (ns):                9.481
+  Required (ns):               85.682
+  Setup (ns):                  0.532
+  Minimum Period (ns):         14.266
+
+Path 2
+  From:                        sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/ram_sfr_address[3]:CLK
+  To:                          sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/clkper_gate_pre:D
+  Delay (ns):                  6.559
+  Slack (ns):                  76.264
+  Arrival (ns):                9.418
+  Required (ns):               85.682
+  Setup (ns):                  0.532
+  Minimum Period (ns):         14.140
+
+Path 3
+  From:                        sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/sfr_we:CLK
+  To:                          sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/clkper_gate_pre:D
+  Delay (ns):                  6.465
+  Slack (ns):                  76.363
+  Arrival (ns):                9.319
+  Required (ns):               85.682
+  Setup (ns):                  0.532
+  Minimum Period (ns):         13.942
+
+Path 4
+  From:                        sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/ram_sfr_address[5]:CLK
+  To:                          sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/clkper_gate_pre:D
+  Delay (ns):                  6.393
+  Slack (ns):                  76.430
+  Arrival (ns):                9.252
+  Required (ns):               85.682
+  Setup (ns):                  0.532
+  Minimum Period (ns):         13.808
+
+Path 5
+  From:                        sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/ram_sfr_address[6]:CLK
+  To:                          sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/clkper_gate_pre:D
+  Delay (ns):                  6.377
+  Slack (ns):                  76.446
+  Arrival (ns):                9.236
+  Required (ns):               85.682
+  Setup (ns):                  0.532
+  Minimum Period (ns):         13.776
+
+
+Expanded Path 1
+  From: sys_0/CORE8051S_0/MAIN8051_inst/U_CPU/instrreg[1]:CLK
+  To: sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/clkper_gate_pre:D
+  data required time                             85.682
+  data arrival time                          -   9.481
+  slack                                          76.201
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        PLL_50Mh_6Mh_0/Core:GLA
+               +     0.000          Clock source
+  0.000                        PLL_50Mh_6Mh_0/Core:GLA (r)
+               +     2.004          Clock generation
+  2.004
+               +     0.870          net: GLA
+  2.874                        sys_0/CORE8051S_0/MAIN8051_inst/U_CPU/instrreg[1]:CLK (r)
+               +     0.550          cell: ADLIB:DFN1E1C0
+  3.424                        sys_0/CORE8051S_0/MAIN8051_inst/U_CPU/instrreg[1]:Q (f)
+               +     0.287          net: sys_0/CORE8051S_0/MAIN8051_inst/instr[1]
+  3.711                        sys_0/CORE8051S_0/MAIN8051_inst/u_instrdec/un1332_m2_e_0:A (f)
+               +     0.469          cell: ADLIB:NOR2A
+  4.180                        sys_0/CORE8051S_0/MAIN8051_inst/u_instrdec/un1332_m2_e_0:Y (f)
+               +     0.252          net: sys_0/CORE8051S_0/MAIN8051_inst/u_instrdec/un1332_m2_e_0
+  4.432                        sys_0/CORE8051S_0/MAIN8051_inst/u_instrdec/un1332_decvec_0_a0_3:A (f)
+               +     0.509          cell: ADLIB:NOR3B
+  4.941                        sys_0/CORE8051S_0/MAIN8051_inst/u_instrdec/un1332_decvec_0_a0_3:Y (f)
+               +     0.275          net: sys_0/CORE8051S_0/MAIN8051_inst/u_instrdec/un1332_decvec_0_a1_3
+  5.216                        sys_0/CORE8051S_0/MAIN8051_inst/u_instrdec/un1332_decvec_0_a0:A (f)
+               +     0.384          cell: ADLIB:NOR2B
+  5.600                        sys_0/CORE8051S_0/MAIN8051_inst/u_instrdec/un1332_decvec_0_a0:Y (f)
+               +     0.252          net: sys_0/CORE8051S_0/MAIN8051_inst/u_instrdec/un1332_decvec_0_a0
+  5.852                        sys_0/CORE8051S_0/MAIN8051_inst/u_instrdec/un1332_decvec:C (f)
+               +     0.527          cell: ADLIB:AO1
+  6.379                        sys_0/CORE8051S_0/MAIN8051_inst/u_instrdec/un1332_decvec:Y (f)
+               +     0.287          net: sys_0/CORE8051S_0/instr_dec[61]
+  6.666                        sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/un7_m1:B (f)
+               +     0.700          cell: ADLIB:XNOR2
+  7.366                        sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/un7_m1:Y (r)
+               +     0.239          net: sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/un7_m1
+  7.605                        sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/clkper_gate_RNIKC3U4:C (r)
+               +     0.347          cell: ADLIB:NOR3B
+  7.952                        sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/clkper_gate_RNIKC3U4:Y (f)
+               +     0.275          net: sys_0/CORE8051S_0/un7_N_9_mux
+  8.227                        sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/clkper_gate_RNIDQRS9:S (f)
+               +     0.358          cell: ADLIB:MX2
+  8.585                        sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/clkper_gate_RNIDQRS9:Y (r)
+               +     0.243          net: sys_0/CORE8051S_0/MAIN8051_inst/stoppmu
+  8.828                        sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/clkper_gate_pre_RNO:A (r)
+               +     0.401          cell: ADLIB:OR2A
+  9.229                        sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/clkper_gate_pre_RNO:Y (f)
+               +     0.252          net: sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/clkper_gate_pre_1
+  9.481                        sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/clkper_gate_pre:D (f)
+                                    
+  9.481                        data arrival time
+  ________________________________________________________
+  Data required time calculation
+  83.334                       PLL_50Mh_6Mh_0/Core:GLA
+               +     0.000          Clock source
+  83.334                       PLL_50Mh_6Mh_0/Core:GLA (f)
+               +     2.004          Clock generation
+  85.338
+               +     0.876          net: GLA
+  86.214                       sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/clkper_gate_pre:CLK (f)
+               -     0.532          Library setup time: ADLIB:DFN0P0
+  85.682                       sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/clkper_gate_pre:D
+                                    
+  85.682                       data required time
+
+
+END SET Register to Register
+
+----------------------------------------------------
+
+SET External Setup
+
+Path 1
+  From:                        MEM_DATA[6]
+  To:                          sys_0/CORE8051S_0/intram_instt_ram.internal_ram/RAM256X8_R0C0:BLKB
+  Delay (ns):                  29.463
+  Slack (ns):
+  Arrival (ns):                29.463
+  Required (ns):
+  Setup (ns):                  0.232
+  External Setup (ns):         26.638
+
+Path 2
+  From:                        MEM_DATA[6]
+  To:                          sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/use_bypass:D
+  Delay (ns):                  27.241
+  Slack (ns):
+  Arrival (ns):                27.241
+  Required (ns):
+  Setup (ns):                  0.402
+  External Setup (ns):         24.812
+
+Path 3
+  From:                        MEM_DATA[7]
+  To:                          sys_0/CORE8051S_0/intram_instt_ram.internal_ram/RAM256X8_R0C0:BLKB
+  Delay (ns):                  27.249
+  Slack (ns):
+  Arrival (ns):                27.249
+  Required (ns):
+  Setup (ns):                  0.232
+  External Setup (ns):         24.424
+
+Path 4
+  From:                        MEM_DATA[6]
+  To:                          sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/sp[6]:D
+  Delay (ns):                  25.761
+  Slack (ns):
+  Arrival (ns):                25.761
+  Required (ns):
+  Setup (ns):                  0.402
+  External Setup (ns):         23.308
+
+Path 5
+  From:                        MEM_DATA[6]
+  To:                          sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/sp[2]:D
+  Delay (ns):                  25.584
+  Slack (ns):
+  Arrival (ns):                25.584
+  Required (ns):
+  Setup (ns):                  0.402
+  External Setup (ns):         23.133
+
+
+Expanded Path 1
+  From: MEM_DATA[6]
+  To: sys_0/CORE8051S_0/intram_instt_ram.internal_ram/RAM256X8_R0C0:BLKB
+  data required time                             N/C
+  data arrival time                          -   29.463
+  slack                                          N/C
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        MEM_DATA[6] (r)
+               +     0.000          net: MEM_DATA[6]
+  0.000                        MEM_DATA_pad[6]/U0/U0:PAD (r)
+               +     0.898          cell: ADLIB:IOPAD_BI
+  0.898                        MEM_DATA_pad[6]/U0/U0:Y (r)
+               +     0.000          net: MEM_DATA_pad[6]/U0/NET3
+  0.898                        MEM_DATA_pad[6]/U0/U1:YIN (r)
+               +     0.032          cell: ADLIB:IOBI_IB_OB_EB
+  0.930                        MEM_DATA_pad[6]/U0/U1:Y (r)
+               +     1.603          net: MEM_DATA_in[6]
+  2.533                        sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/psel_i_RNIDP3P:A (r)
+               +     0.441          cell: ADLIB:NOR2A
+  2.974                        sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/psel_i_RNIDP3P:Y (r)
+               +     1.299          net: sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/psel_i_RNIDP3P
+  4.273                        sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/psel_i_RNIUEO82:C (r)
+               +     0.572          cell: ADLIB:AO1
+  4.845                        sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/psel_i_RNIUEO82:Y (r)
+               +     0.965          net: sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/memdatai_8051_0_2_0[6]
+  5.810                        sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/memaddr_i_RNIU7SU4[8]:C (r)
+               +     0.489          cell: ADLIB:AO1A
+  6.299                        sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/memaddr_i_RNIU7SU4[8]:Y (r)
+               +     1.219          net: sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/memdatai_8051_0_2_1[6]
+  7.518                        sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/memaddr_i_RNID6FVA[8]:C (r)
+               +     0.489          cell: ADLIB:AO1
+  8.007                        sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/memaddr_i_RNID6FVA[8]:Y (r)
+               +     0.902          net: sys_0/CORE8051S_0/MAIN8051_inst/memdatai_8051_0_2[6]
+  8.909                        sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/memaddr_i_RNINDH9R1[7]:C (r)
+               +     0.363          cell: ADLIB:AOI1
+  9.272                        sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/memaddr_i_RNINDH9R1[7]:Y (f)
+               +     1.365          net: sys_0/CORE8051S_0/memdatai_N_5_mux_0
+  10.637                       sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/xhdl_debug/OCIopcode_RNIL5ERI7[22]:B (f)
+               +     0.456          cell: ADLIB:MX2B
+  11.093                       sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/xhdl_debug/OCIopcode_RNIL5ERI7[22]:Y (r)
+               +     1.705          net: sys_0/CORE8051S_0/memdatai_8051[6]
+  12.798                       sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/m19_0:B (r)
+               +     0.288          cell: ADLIB:NOR2A
+  13.086                       sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/m19_0:Y (f)
+               +     2.229          net: sys_0/CORE8051S_0/MAIN8051_inst/N_160
+  15.315                       sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/m20:B (f)
+               +     0.479          cell: ADLIB:NOR3B
+  15.794                       sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/m20:Y (f)
+               +     0.886          net: sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/N_871
+  16.680                       sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/m21:B (f)
+               +     0.456          cell: ADLIB:MX2A
+  17.136                       sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/m21:Y (f)
+               +     0.292          net: sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/N_22
+  17.428                       sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/m22:B (f)
+               +     0.365          cell: ADLIB:NOR2A
+  17.793                       sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/m22:Y (r)
+               +     1.433          net: sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/N_872
+  19.226                       sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/m23:A (r)
+               +     0.441          cell: ADLIB:NOR2A
+  19.667                       sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/m23:Y (r)
+               +     0.244          net: sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/un6_codefetche
+  19.911                       sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/ram_sfr_address_RNILN36NU1[0]:C (r)
+               +     0.453          cell: ADLIB:NOR3A
+  20.364                       sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/ram_sfr_address_RNILN36NU1[0]:Y (f)
+               +     0.232          net: sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/ram_sfr_address_m_0_a0_2[0]
+  20.596                       sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/ram_sfr_address_RNI1QCGPM1[0]:A (f)
+               +     0.384          cell: ADLIB:NOR2B
+  20.980                       sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/ram_sfr_address_RNI1QCGPM1[0]:Y (f)
+               +     0.252          net: sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/ram_sfr_address_RNI1QCGPM1[0]
+  21.232                       sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/sp_RNIGG0RHJ2[0]:C (f)
+               +     0.496          cell: ADLIB:OR3A
+  21.728                       sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/sp_RNIGG0RHJ2[0]:Y (f)
+               +     0.849          net: sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/ramsfraddr_e_1_iv_9[0]
+  22.577                       sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/sp_RNI6TRKU7[0]:A (f)
+               +     0.401          cell: ADLIB:OR2
+  22.978                       sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/sp_RNI6TRKU7[0]:Y (f)
+               +     1.295          net: sys_0/CORE8051S_0/ramaddr_e[0]
+  24.273                       sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/ram_sfr_address_RNI0KDNU7[0]:A (f)
+               +     0.391          cell: ADLIB:XOR2
+  24.664                       sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/ram_sfr_address_RNI0KDNU7[0]:Y (f)
+               +     0.232          net: sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/un1_use_bypass_async_0
+  24.896                       sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/ram_sfr_address_RNI48BN5J2[0]:B (f)
+               +     0.365          cell: ADLIB:NOR3A
+  25.261                       sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/ram_sfr_address_RNI48BN5J2[0]:Y (r)
+               +     1.209          net: sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/un2_use_bypass_async_2
+  26.470                       sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/ram_sfr_address_0_RNIFGCHN62[1]:B (r)
+               +     0.466          cell: ADLIB:NOR3C
+  26.936                       sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/ram_sfr_address_0_RNIFGCHN62[1]:Y (r)
+               +     0.305          net: sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/ram_sfr_address_0_RNIFGCHN62[1]
+  27.241                       sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/ram_oe_RNIS1GEOQ3:B (r)
+               +     0.384          cell: ADLIB:OR2A
+  27.625                       sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/ram_oe_RNIS1GEOQ3:Y (r)
+               +     1.838          net: sys_0/CORE8051S_0/WEBP
+  29.463                       sys_0/CORE8051S_0/intram_instt_ram.internal_ram/RAM256X8_R0C0:BLKB (r)
+                                    
+  29.463                       data arrival time
+  ________________________________________________________
+  Data required time calculation
+  N/C                          PLL_50Mh_6Mh_0/Core:GLA
+               +     0.000          Clock source
+  N/C                          PLL_50Mh_6Mh_0/Core:GLA (r)
+               +     2.004          Clock generation
+  N/C
+               +     1.053          net: GLA
+  N/C                          sys_0/CORE8051S_0/intram_instt_ram.internal_ram/RAM256X8_R0C0:CLKB (r)
+               -     0.232          Library setup time: ADLIB:RAM4K9
+  N/C                          sys_0/CORE8051S_0/intram_instt_ram.internal_ram/RAM256X8_R0C0:BLKB
+
+
+END SET External Setup
+
+----------------------------------------------------
+
+SET Clock to Output
+
+Path 1
+  From:                        sys_0/CORE8051S_0/MAIN8051_inst/U_CPU/instrreg[1]:CLK
+  To:                          FLASH_OEn
+  Delay (ns):                  16.687
+  Slack (ns):
+  Arrival (ns):                19.561
+  Required (ns):
+  Clock to Out (ns):           19.561
+
+Path 2
+  From:                        sys_0/CORE8051S_0/MAIN8051_inst/U_CPU/curcycle[2]:CLK
+  To:                          FLASH_OEn
+  Delay (ns):                  16.531
+  Slack (ns):
+  Arrival (ns):                19.368
+  Required (ns):
+  Clock to Out (ns):           19.368
+
+Path 3
+  From:                        sys_0/CORE8051S_0/MAIN8051_inst/U_CPU/curcycle[3]:CLK
+  To:                          FLASH_OEn
+  Delay (ns):                  16.275
+  Slack (ns):
+  Arrival (ns):                19.116
+  Required (ns):
+  Clock to Out (ns):           19.116
+
+Path 4
+  From:                        sys_0/CORE8051S_0/MAIN8051_inst/U_CPU/curcycle[0]:CLK
+  To:                          FLASH_OEn
+  Delay (ns):                  16.222
+  Slack (ns):
+  Arrival (ns):                19.063
+  Required (ns):
+  Clock to Out (ns):           19.063
+
+Path 5
+  From:                        sys_0/CORE8051S_0/MAIN8051_inst/U_CPU/instrreg_0[3]:CLK
+  To:                          FLASH_OEn
+  Delay (ns):                  16.212
+  Slack (ns):
+  Arrival (ns):                19.062
+  Required (ns):
+  Clock to Out (ns):           19.062
+
+
+Expanded Path 1
+  From: sys_0/CORE8051S_0/MAIN8051_inst/U_CPU/instrreg[1]:CLK
+  To: FLASH_OEn
+  data required time                             N/C
+  data arrival time                          -   19.561
+  slack                                          N/C
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        PLL_50Mh_6Mh_0/Core:GLA
+               +     0.000          Clock source
+  0.000                        PLL_50Mh_6Mh_0/Core:GLA (r)
+               +     2.004          Clock generation
+  2.004
+               +     0.870          net: GLA
+  2.874                        sys_0/CORE8051S_0/MAIN8051_inst/U_CPU/instrreg[1]:CLK (r)
+               +     0.550          cell: ADLIB:DFN1E1C0
+  3.424                        sys_0/CORE8051S_0/MAIN8051_inst/U_CPU/instrreg[1]:Q (f)
+               +     1.554          net: sys_0/CORE8051S_0/MAIN8051_inst/instr[1]
+  4.978                        sys_0/CORE8051S_0/MAIN8051_inst/u_instrdec/un1984_decvec_0_0_a3_0_a2_0:A (f)
+               +     0.469          cell: ADLIB:NOR2A
+  5.447                        sys_0/CORE8051S_0/MAIN8051_inst/u_instrdec/un1984_decvec_0_0_a3_0_a2_0:Y (f)
+               +     1.259          net: sys_0/CORE8051S_0/MAIN8051_inst/u_instrdec/N_455
+  6.706                        sys_0/CORE8051S_0/MAIN8051_inst/u_instrdec/un1332_decvec_0_a2_1_0:B (f)
+               +     0.471          cell: ADLIB:NOR2B
+  7.177                        sys_0/CORE8051S_0/MAIN8051_inst/u_instrdec/un1332_decvec_0_a2_1_0:Y (f)
+               +     0.301          net: sys_0/CORE8051S_0/MAIN8051_inst/u_instrdec/N_249
+  7.478                        sys_0/CORE8051S_0/MAIN8051_inst/u_instrdec/un1332_decvec_0_a2_1:A (f)
+               +     0.288          cell: ADLIB:NOR2B
+  7.766                        sys_0/CORE8051S_0/MAIN8051_inst/u_instrdec/un1332_decvec_0_a2_1:Y (f)
+               +     1.390          net: sys_0/CORE8051S_0/MAIN8051_inst/N_413
+  9.156                        sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/mempsrd_m1_0_a2_0_0:B (f)
+               +     0.485          cell: ADLIB:NOR2
+  9.641                        sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/mempsrd_m1_0_a2_0_0:Y (r)
+               +     0.305          net: sys_0/CORE8051S_0/mempsrd_m1_0_a2_0_0
+  9.946                        sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/mempsrd_m1_0_a2_0:B (r)
+               +     0.386          cell: ADLIB:NOR2B
+  10.332                       sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/mempsrd_m1_0_a2_0:Y (r)
+               +     0.889          net: sys_0/CORE8051S_0/mempsrd_N_6_mux
+  11.221                       sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/mempsrd_m4_0_RNI2RTB4:A (r)
+               +     0.392          cell: ADLIB:XA1A
+  11.613                       sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/mempsrd_m4_0_RNI2RTB4:Y (r)
+               +     0.232          net: sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/mempsrd_N_7_mux
+  11.845                       sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/mempsrd_m4_0_RNIEJ9DJ:S (r)
+               +     0.349          cell: ADLIB:MX2A
+  12.194                       sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/mempsrd_m4_0_RNIEJ9DJ:Y (f)
+               +     4.193          net: sys_0_ExternalMemIf_MEMPSRD
+  16.387                       FLASH_OEn_pad/U0/U1:D (f)
+               +     0.435          cell: ADLIB:IOTRI_OB_EB
+  16.822                       FLASH_OEn_pad/U0/U1:DOUT (f)
+               +     0.000          net: FLASH_OEn_pad/U0/NET1
+  16.822                       FLASH_OEn_pad/U0/U0:D (f)
+               +     2.739          cell: ADLIB:IOPAD_TRI
+  19.561                       FLASH_OEn_pad/U0/U0:PAD (f)
+               +     0.000          net: FLASH_OEn
+  19.561                       FLASH_OEn (f)
+                                    
+  19.561                       data arrival time
+  ________________________________________________________
+  Data required time calculation
+  N/C                          PLL_50Mh_6Mh_0/Core:GLA
+               +     0.000          Clock source
+  N/C                          PLL_50Mh_6Mh_0/Core:GLA (r)
+               +     2.004          Clock generation
+  N/C
+                                    
+  N/C                          FLASH_OEn (f)
+
+
+END SET Clock to Output
+
+----------------------------------------------------
+
+SET Register to Asynchronous
+
+Path 1
+  From:                        sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/nrsto:CLK
+  To:                          sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/ram_sfr_address_0[3]:CLR
+  Delay (ns):                  3.346
+  Slack (ns):                  79.720
+  Arrival (ns):                6.222
+  Required (ns):               85.942
+  Recovery (ns):               0.222
+  Minimum Period (ns):         7.226
+  Skew (ns):                   0.045
+
+Path 2
+  From:                        sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/nrsto:CLK
+  To:                          sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/addrbuff[12]:CLR
+  Delay (ns):                  3.333
+  Slack (ns):                  79.734
+  Arrival (ns):                6.209
+  Required (ns):               85.943
+  Recovery (ns):               0.222
+  Minimum Period (ns):         7.198
+  Skew (ns):                   0.044
+
+Path 3
+  From:                        sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/nrsto:CLK
+  To:                          sys_0/CoreTimer_0/iPRDATA[18]:CLR
+  Delay (ns):                  3.352
+  Slack (ns):                  79.737
+  Arrival (ns):                6.228
+  Required (ns):               85.965
+  Recovery (ns):               0.222
+  Minimum Period (ns):         7.192
+  Skew (ns):                   0.022
+
+Path 4
+  From:                        sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/nrsto:CLK
+  To:                          sys_0/CORE8051S_0/MAIN8051_inst/U_ALU/b2[4]:CLR
+  Delay (ns):                  3.338
+  Slack (ns):                  79.738
+  Arrival (ns):                6.214
+  Required (ns):               85.952
+  Recovery (ns):               0.222
+  Minimum Period (ns):         7.190
+  Skew (ns):                   0.035
+
+Path 5
+  From:                        sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/nrsto:CLK
+  To:                          sys_0/CORE8051S_0/MAIN8051_inst/U_ALU/b3[7]:CLR
+  Delay (ns):                  3.338
+  Slack (ns):                  79.738
+  Arrival (ns):                6.214
+  Required (ns):               85.952
+  Recovery (ns):               0.222
+  Minimum Period (ns):         7.190
+  Skew (ns):                   0.035
+
+
+Expanded Path 1
+  From: sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/nrsto:CLK
+  To: sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/ram_sfr_address_0[3]:CLR
+  data required time                             85.942
+  data arrival time                          -   6.222
+  slack                                          79.720
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        PLL_50Mh_6Mh_0/Core:GLA
+               +     0.000          Clock source
+  0.000                        PLL_50Mh_6Mh_0/Core:GLA (f)
+               +     2.004          Clock generation
+  2.004
+               +     0.872          net: GLA
+  2.876                        sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/nrsto:CLK (f)
+               +     0.393          cell: ADLIB:DFN0
+  3.269                        sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/nrsto:Q (r)
+               +     1.058          net: sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/nrsto
+  4.327                        sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/nrsto_RNIBVGD/U_CLKSRC:A (r)
+               +     1.045          cell: ADLIB:CLKSRC
+  5.372                        sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/nrsto_RNIBVGD/U_CLKSRC:Y (r)
+               +     0.850          net: sys_0/Core8051s_00_PRESETN
+  6.222                        sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/ram_sfr_address_0[3]:CLR (r)
+                                    
+  6.222                        data arrival time
+  ________________________________________________________
+  Data required time calculation
+  83.333                       PLL_50Mh_6Mh_0/Core:GLA
+               +     0.000          Clock source
+  83.333                       PLL_50Mh_6Mh_0/Core:GLA (r)
+               +     2.004          Clock generation
+  85.337
+               +     0.827          net: GLA
+  86.164                       sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/ram_sfr_address_0[3]:CLK (r)
+               -     0.222          Library recovery time: ADLIB:DFN1C0
+  85.942                       sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/ram_sfr_address_0[3]:CLR
+                                    
+  85.942                       data required time
+
+
+END SET Register to Asynchronous
+
+----------------------------------------------------
+
+SET External Recovery
+
+Path 1
+  From:                        NSYSRESET
+  To:                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/XDR2:PRE
+  Delay (ns):                  2.290
+  Slack (ns):
+  Arrival (ns):                2.290
+  Required (ns):
+  Recovery (ns):               0.222
+  External Recovery (ns):      -0.352
+
+Path 2
+  From:                        NSYSRESET
+  To:                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/JXDR_xhdl:CLR
+  Delay (ns):                  2.268
+  Slack (ns):
+  Arrival (ns):                2.268
+  Required (ns):
+  Recovery (ns):               0.222
+  External Recovery (ns):      -0.353
+
+Path 3
+  From:                        NSYSRESET
+  To:                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/XDR1:CLR
+  Delay (ns):                  2.268
+  Slack (ns):
+  Arrival (ns):                2.268
+  Required (ns):
+  Recovery (ns):               0.222
+  External Recovery (ns):      -0.353
+
+Path 4
+  From:                        NSYSRESET
+  To:                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/xhdl_trigger/TrigBreak1:CLR
+  Delay (ns):                  2.275
+  Slack (ns):
+  Arrival (ns):                2.275
+  Required (ns):
+  Recovery (ns):               0.222
+  External Recovery (ns):      -0.358
+
+Path 5
+  From:                        NSYSRESET
+  To:                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/xhdl_trigger/TrigBreak2:CLR
+  Delay (ns):                  2.265
+  Slack (ns):
+  Arrival (ns):                2.265
+  Required (ns):
+  Recovery (ns):               0.222
+  External Recovery (ns):      -0.362
+
+
+Expanded Path 1
+  From: NSYSRESET
+  To: sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/XDR2:PRE
+  data required time                             N/C
+  data arrival time                          -   2.290
+  slack                                          N/C
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        NSYSRESET (r)
+               +     0.000          net: NSYSRESET
+  0.000                        NSYSRESET_pad/U0/U0:PAD (r)
+               +     0.758          cell: ADLIB:IOPAD_IN
+  0.758                        NSYSRESET_pad/U0/U0:Y (r)
+               +     0.000          net: NSYSRESET_pad/U0/NET1
+  0.758                        NSYSRESET_pad/U0/U1:A (r)
+               +     0.681          cell: ADLIB:CLKSRC
+  1.439                        NSYSRESET_pad/U0/U1:Y (r)
+               +     0.851          net: NSYSRESET_c
+  2.290                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/XDR2:PRE (r)
+                                    
+  2.290                        data arrival time
+  ________________________________________________________
+  Data required time calculation
+  N/C                          PLL_50Mh_6Mh_0/Core:GLA
+               +     0.000          Clock source
+  N/C                          PLL_50Mh_6Mh_0/Core:GLA (r)
+               +     2.004          Clock generation
+  N/C
+               +     0.860          net: GLA
+  N/C                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/XDR2:CLK (r)
+               -     0.222          Library recovery time: ADLIB:DFN1P0
+  N/C                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/XDR2:PRE
+
+
+END SET External Recovery
+
+----------------------------------------------------
+
+SET Asynchronous to Register
+
+No Path
+
+END SET Asynchronous to Register
+
+----------------------------------------------------
+
+Clock Domain rc_osc_0/RCOSC1:CLKOUT
+
+SET Register to Register
+
+No Path
+
+END SET Register to Register
+
+----------------------------------------------------
+
+SET External Setup
+
+No Path
+
+END SET External Setup
+
+----------------------------------------------------
+
+SET Clock to Output
+
+No Path
+
+END SET Clock to Output
+
+----------------------------------------------------
+
+SET Register to Asynchronous
+
+No Path
+
+END SET Register to Asynchronous
+
+----------------------------------------------------
+
+SET External Recovery
+
+No Path
+
+END SET External Recovery
+
+----------------------------------------------------
+
+SET Asynchronous to Register
+
+No Path
+
+END SET Asynchronous to Register
+
+----------------------------------------------------
+
+Clock Domain sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:UDRCK
+
+SET Register to Register
+
+Path 1
+  From:                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/IR_xhdl[5]/U1:CLK
+  To:                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/SR[12]:D
+  Delay (ns):                  13.837
+  Slack (ns):
+  Arrival (ns):                14.980
+  Required (ns):
+  Setup (ns):                  0.532
+  Minimum Period (ns):         14.565
+
+Path 2
+  From:                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/IR_xhdl[6]/U1:CLK
+  To:                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/SR[4]:D
+  Delay (ns):                  13.280
+  Slack (ns):
+  Arrival (ns):                14.613
+  Required (ns):
+  Setup (ns):                  0.532
+  Minimum Period (ns):         14.006
+
+Path 3
+  From:                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/IR_xhdl[6]/U1:CLK
+  To:                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/SR[2]:D
+  Delay (ns):                  13.391
+  Slack (ns):
+  Arrival (ns):                14.724
+  Required (ns):
+  Setup (ns):                  0.532
+  Minimum Period (ns):         13.885
+
+Path 4
+  From:                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/IR_xhdl[6]/U1:CLK
+  To:                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/SR[30]:D
+  Delay (ns):                  13.668
+  Slack (ns):
+  Arrival (ns):                15.001
+  Required (ns):
+  Setup (ns):                  0.532
+  Minimum Period (ns):         13.883
+
+Path 5
+  From:                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/IR_xhdl[5]/U1:CLK
+  To:                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/SR[11]:D
+  Delay (ns):                  13.346
+  Slack (ns):
+  Arrival (ns):                14.489
+  Required (ns):
+  Setup (ns):                  0.532
+  Minimum Period (ns):         13.688
+
+
+Expanded Path 1
+  From: sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/IR_xhdl[5]/U1:CLK
+  To: sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/SR[12]:D
+  data required time                             N/C
+  data arrival time                          -   14.980
+  slack                                          N/C
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:UDRCK
+               +     0.000          Clock source
+  0.000                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:UDRCK (r)
+               +     1.143          net: sys_0/CORE8051S_0/oci1_trace0_ocia51_inst/ujtag1_jtagu_inst/udrck
+  1.143                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/IR_xhdl[5]/U1:CLK (r)
+               +     0.488          cell: ADLIB:DFN1C0
+  1.631                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/IR_xhdl[5]/U1:Q (f)
+               +     1.534          net: sys_0/CORE8051S_0/oci1_trace0_ocia51_inst/IR[5]
+  3.165                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/xhdl_debug/un6_jxir_1:A (f)
+               +     0.384          cell: ADLIB:NOR2B
+  3.549                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/xhdl_debug/un6_jxir_1:Y (f)
+               +     2.432          net: sys_0/CORE8051S_0/oci1_trace0_ocia51_inst/un6_jxir_1
+  5.981                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/IR_xhdl_RNI06U3[7]:A (f)
+               +     0.288          cell: ADLIB:OR2B
+  6.269                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/IR_xhdl_RNI06U3[7]:Y (r)
+               +     0.363          net: sys_0/CORE8051S_0/oci1_trace0_ocia51_inst/ujtag1_jtagu_inst/N_66
+  6.632                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst_RNI0ELN4:A (r)
+               +     0.271          cell: ADLIB:AO1D
+  6.903                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst_RNI0ELN4:Y (f)
+               +     1.743          net: sys_0/CORE8051S_0/oci1_trace0_ocia51_inst/ujtag1_jtagu_inst/N_240_3
+  8.646                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst_RNI0C195:B (f)
+               +     0.483          cell: ADLIB:OR2
+  9.129                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst_RNI0C195:Y (f)
+               +     2.971          net: sys_0/CORE8051S_0/oci1_trace0_ocia51_inst/ujtag1_jtagu_inst/N_209
+  12.100                       sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/SR_RNO_6[12]:B (f)
+               +     0.471          cell: ADLIB:NOR2B
+  12.571                       sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/SR_RNO_6[12]:Y (f)
+               +     0.252          net: sys_0/CORE8051S_0/oci1_trace0_ocia51_inst/ujtag1_jtagu_inst/SR_m_0[12]
+  12.823                       sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/SR_RNO_2[12]:C (f)
+               +     0.496          cell: ADLIB:OR3
+  13.319                       sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/SR_RNO_2[12]:Y (f)
+               +     0.913          net: sys_0/CORE8051S_0/oci1_trace0_ocia51_inst/ujtag1_jtagu_inst/SR_29_1_iv_4[12]
+  14.232                       sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/SR_RNO[12]:C (f)
+               +     0.496          cell: ADLIB:OR3
+  14.728                       sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/SR_RNO[12]:Y (f)
+               +     0.252          net: sys_0/CORE8051S_0/oci1_trace0_ocia51_inst/ujtag1_jtagu_inst/SR_29[12]
+  14.980                       sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/SR[12]:D (f)
+                                    
+  14.980                       data arrival time
+  ________________________________________________________
+  Data required time calculation
+  N/C                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:UDRCK
+               +     0.000          Clock source
+  N/C                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:UDRCK (r)
+               +     0.947          net: sys_0/CORE8051S_0/oci1_trace0_ocia51_inst/ujtag1_jtagu_inst/udrck
+  N/C                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/SR[12]:CLK (r)
+               -     0.532          Library setup time: ADLIB:DFN1C0
+  N/C                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/SR[12]:D
+
+
+END SET Register to Register
+
+----------------------------------------------------
+
+SET External Setup
+
+No Path
+
+END SET External Setup
+
+----------------------------------------------------
+
+SET Clock to Output
+
+No Path
+
+END SET Clock to Output
+
+----------------------------------------------------
+
+SET Register to Asynchronous
+
+No Path
+
+END SET Register to Asynchronous
+
+----------------------------------------------------
+
+SET External Recovery
+
+No Path
+
+END SET External Recovery
+
+----------------------------------------------------
+
+SET Asynchronous to Register
+
+No Path
+
+END SET Asynchronous to Register
+
+----------------------------------------------------
+
+Path set Pin to Pin
+
+SET Input to Output
+
+No Path
+
+END SET Input to Output
+
+----------------------------------------------------
+
+Path set User Sets
+

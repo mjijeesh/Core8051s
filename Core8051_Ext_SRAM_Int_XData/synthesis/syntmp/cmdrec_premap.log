@@ -1,0 +1,14 @@
+C:\Microsemi\Libero_SoC_v11.7\Synplify\bin64\m_proasic.exe  -mp  1  -prjfile  C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\synthesis\scratchproject.prs  -implementation  synthesis  -prodtype  synplify_pro   -encrypt  -pro  -rundir  C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\synthesis   -part M1AFS1500  -package FBGA484  -grade -2    -globalthreshold 50 -maxfan 24 -opcond COMWC -report_path 4000 -RWCheckOnRam 0 -summaryfile C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\synthesis\synlog\report\top_8051_premap.xml  -top_level_module  work.top_8051  -oedif  C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\synthesis\top_8051.edn  -conchk_prepass  C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\synthesis\top_8051_cck_prepass.rpt   -freq 100.000   C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\synthesis\synwork\top_8051_mult.srs  -flow prepass  -gcc_prepass  -osrd  C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\synthesis\synwork\top_8051_prem.srd  -qsap  C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\synthesis\top_8051.sap  -devicelib  C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\proasic\fusion.v  -ologparam  C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\synthesis\syntmp\top_8051.plg  -osyn  C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\synthesis\synwork\top_8051_prem.srd  -prjdir  C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\synthesis\  -prjname  top_8051_syn  -log  C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\synthesis\synlog\top_8051_premap.srr 
+rc:1 success:1
+C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\synthesis\scratchproject.prs|o|1462166714|9508
+C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\synthesis\top_8051.edn|o|1462164730|3718709
+C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\synthesis\top_8051_cck_prepass.rpt|o|0|0
+C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\synthesis\synwork\top_8051_mult.srs|i|1462166725|9848
+C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\synthesis\synwork\top_8051_prem.srd|o|1462166726|351440
+C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\synthesis\top_8051.sap|o|1462166727|149519
+C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\proasic\fusion.v|i|1449201928|67138
+C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\synthesis\syntmp\top_8051.plg|o|1462166725|0
+C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\synthesis\synwork\top_8051_prem.srd|o|1462166726|351440
+C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\synthesis\synlog\top_8051_premap.srr|o|1462166727|9282
+C:\Microsemi\Libero_SoC_v11.7\Synplify\bin\m_proasic.exe|i|1449719176|9590784
+C:\Microsemi\Libero_SoC_v11.7\Synplify\bin64\m_proasic.exe|i|1449720772|12124160

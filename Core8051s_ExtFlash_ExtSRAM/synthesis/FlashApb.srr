@@ -1,0 +1,287 @@
+#Build: Synplify Pro D-2009.12A, Build 040R, Jan 20 2010
+#install: D:\Actel\Libero_v9.0\Synopsys\synplify_D200912A
+#OS: Windows XP 5.1
+#Hostname: JM-LAPTOP
+
+#Implementation: synthesis
+
+#Mon Jun 21 15:29:02 2010
+
+$ Start of Compile
+#Mon Jun 21 15:29:02 2010
+
+Synopsys VHDL Compiler, version comp475rc, Build 060R, built Jan 15 2010
+Copyright (C) 1994-2010, Synopsys Inc.  All Rights Reserved
+
+@N: CD720 :"D:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\lib\vhd\std.vhd":123:18:123:21|Setting time resolution to ns
+Top entity isn't set yet!
+VHDL syntax check successful!
+
+Compiler output is up to date.  No re-compile necessary
+
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\hdl\flash_control.vhd":8:7:8:14|Synthesizing work.flashapb.one 
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\smartgen\nvm64k\nvm64k.vhd":8:7:8:12|Synthesizing work.nvm64k.def_arch 
+@N: CD630 :"D:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\lib\proasic\fusion.vhd":4477:10:4477:12|Synthesizing fusion.nvm.syn_black_box 
+Post processing for fusion.nvm.syn_black_box
+@N: CD630 :"D:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\lib\proasic\fusion.vhd":3019:10:3019:12|Synthesizing fusion.vcc.syn_black_box 
+Post processing for fusion.vcc.syn_black_box
+@N: CD630 :"D:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\lib\proasic\fusion.vhd":1899:10:1899:12|Synthesizing fusion.gnd.syn_black_box 
+Post processing for fusion.gnd.syn_black_box
+Post processing for work.nvm64k.def_arch
+@W: CL168 :"C:\Actelprj\AFS_ADV_KIT_8051\smartgen\nvm64k\nvm64k.vhd":146:4:146:18|Pruning instance VCC_power_inst1 - not in use ... 
+Post processing for work.flashapb.one
+@W: CL159 :"C:\Actelprj\AFS_ADV_KIT_8051\hdl\flash_control.vhd":20:8:20:15|Input memdatai is unused
+@W: CL159 :"C:\Actelprj\AFS_ADV_KIT_8051\hdl\flash_control.vhd":22:8:22:12|Input memwr is unused
+@END
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Mon Jun 21 15:29:03 2010
+
+###########################################################]
+Synopsys Actel Technology Mapper, Version map500act, Build 058R, Built Jan 18 2010 09:16:23
+Copyright (C) 1994-2010, Synopsys Inc.  All Rights Reserved
+Product Version D-2009.12A
+@N: MF249 |Running in 32-bit mode.
+@N: MF258 |Gated clock conversion disabled 
+
+Automatic dissolve during optimization of view:work.FlashApb(one) of FLASH_CODE(nvm64k)
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+Finished RTL optimizations (Time elapsed 0h:00m:01s; Memory used current: 55MB peak: 57MB)
+
+Finished factoring (Time elapsed 0h:00m:01s; Memory used current: 56MB peak: 57MB)
+
+Finished gated-clock and generated-clock conversion (Time elapsed 0h:00m:01s; Memory used current: 56MB peak: 57MB)
+
+Finished generic timing optimizations - Pass 1 (Time elapsed 0h:00m:01s; Memory used current: 56MB peak: 57MB)
+
+Starting Early Timing Optimization (Time elapsed 0h:00m:01s; Memory used current: 56MB peak: 57MB)
+
+Finished Early Timing Optimization (Time elapsed 0h:00m:01s; Memory used current: 56MB peak: 57MB)
+
+Finished generic timing optimizations - Pass 2 (Time elapsed 0h:00m:01s; Memory used current: 56MB peak: 57MB)
+
+Finished preparing to map (Time elapsed 0h:00m:01s; Memory used current: 56MB peak: 57MB)
+
+
+High Fanout Net Report
+**********************
+
+Driver Instance / Pin Name     Fanout, notes                 
+-------------------------------------------------------------
+PRESETn_pad / Y                33 : 32 asynchronous set/reset
+=============================================================
+
+@N: FP130 |Promoting Net PCLK_c on CLKBUF  PCLK_pad 
+Buffering PRESETn_c, fanout 33 segments 2
+Finished technology mapping (Time elapsed 0h:00m:01s; Memory used current: 56MB peak: 57MB)
+
+Finished technology timing optimizations and critical path resynthesis (Time elapsed 0h:00m:01s; Memory used current: 56MB peak: 57MB)
+
+
+Added 1 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+Finished restoring hierarchy (Time elapsed 0h:00m:01s; Memory used current: 56MB peak: 57MB)
+
+Writing Analyst data base C:\Actelprj\AFS_ADV_KIT_8051\synthesis\FlashApb.srm
+Finished Writing Netlist Databases (Time elapsed 0h:00m:01s; Memory used current: 56MB peak: 57MB)
+
+Writing EDIF Netlist and constraint files
+D-2009.12A
+Finished Writing EDIF Netlist and constraint files (Time elapsed 0h:00m:01s; Memory used current: 56MB peak: 57MB)
+
+@W: MT420 |Found inferred clock FlashApb|PCLK with period 100.00ns. A user-defined clock should be declared on object "p:PCLK"
+
+
+
+##### START OF TIMING REPORT #####[
+# Timing Report written on Mon Jun 21 15:29:06 2010
+#
+
+
+Top view:               FlashApb
+Library name:           fusion
+Operating conditions:   COMWC-1 ( T = 70.0, V = 1.42, P = 1.48, tree_type = balanced_tree )
+Requested Frequency:    10.0 MHz
+Wire load mode:         top
+Wire load model:        fusion
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |This timing report estimates place and route data. Please look at the place and route timing report for final timing..
+
+@N: MT322 |Clock constraints cover only FF-to-FF paths associated with the clock..
+
+
+
+Performance Summary 
+*******************
+
+
+Worst slack in design: 45.265
+
+                   Requested     Estimated     Requested     Estimated                Clock        Clock              
+Starting Clock     Frequency     Frequency     Period        Period        Slack      Type         Group              
+----------------------------------------------------------------------------------------------------------------------
+FlashApb|PCLK      10.0 MHz      105.6 MHz     100.000       9.470         45.265     inferred     Inferred_clkgroup_0
+======================================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                        |    rise  to  rise   |    fall  to  fall   |    rise  to  fall    |    fall  to  rise 
+---------------------------------------------------------------------------------------------------------------------
+Starting       Ending         |  constraint  slack  |  constraint  slack  |  constraint  slack   |  constraint  slack
+---------------------------------------------------------------------------------------------------------------------
+FlashApb|PCLK  FlashApb|PCLK  |  No paths    -      |  No paths    -      |  50.000      45.265  |  No paths    -    
+=====================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+		No IO constraint found 
+
+
+
+====================================
+Detailed Report for Clock: FlashApb|PCLK
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                       Starting                                                      Arrival           
+Instance               Reference         Type         Pin     Net                    Time        Slack 
+                       Clock                                                                           
+-------------------------------------------------------------------------------------------------------
+FLASH_ADDRH_REG[0]     FlashApb|PCLK     DFN1E1C0     Q       FLASH_ADDRH_REG[0]     0.627       45.265
+FLASH_ADDRH_REG[2]     FlashApb|PCLK     DFN1E1C0     Q       FLASH_ADDRH_REG[2]     0.627       45.282
+FLASH_ADDRH_REG[1]     FlashApb|PCLK     DFN1E1C0     Q       FLASH_ADDRH_REG[1]     0.627       45.282
+FLASH_ADDRL_REG[6]     FlashApb|PCLK     DFN1E1C0     Q       FLASH_ADDRL_REG[6]     0.627       45.285
+FLASH_ADDRH_REG[3]     FlashApb|PCLK     DFN1E1C0     Q       FLASH_ADDRH_REG[3]     0.627       45.285
+FLASH_ADDRH_REG[6]     FlashApb|PCLK     DFN1E1C0     Q       FLASH_ADDRH_REG[6]     0.627       45.288
+FLASH_ADDRL_REG[1]     FlashApb|PCLK     DFN1E1C0     Q       FLASH_ADDRL_REG[1]     0.627       45.295
+FLASH_ADDRH_REG[5]     FlashApb|PCLK     DFN1E1C0     Q       FLASH_ADDRH_REG[5]     0.627       45.295
+FLASH_ADDRH_REG[7]     FlashApb|PCLK     DFN1E1C0     Q       FLASH_ADDRH_REG[7]     0.627       45.301
+FLASH_ADDRH_REG[4]     FlashApb|PCLK     DFN1E1C0     Q       FLASH_ADDRH_REG[4]     0.627       45.303
+=======================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                        Starting                                                     Required           
+Instance                Reference         Type     Pin          Net                  Time         Slack 
+                        Clock                                                                           
+--------------------------------------------------------------------------------------------------------
+FLASH_CODE.NVM_INST     FlashApb|PCLK     NVM      ADDR[0]      flash_addr_3[0]      46.932       45.265
+FLASH_CODE.NVM_INST     FlashApb|PCLK     NVM      ADDR[2]      flash_addr_3[2]      46.948       45.282
+FLASH_CODE.NVM_INST     FlashApb|PCLK     NVM      ADDR[1]      flash_addr_3[1]      46.949       45.282
+FLASH_CODE.NVM_INST     FlashApb|PCLK     NVM      ADDR[14]     flash_addr_3[14]     46.951       45.285
+FLASH_CODE.NVM_INST     FlashApb|PCLK     NVM      ADDR[3]      flash_addr_3[3]      46.952       45.285
+FLASH_CODE.NVM_INST     FlashApb|PCLK     NVM      ADDR[6]      flash_addr_3[6]      46.954       45.288
+FLASH_CODE.NVM_INST     FlashApb|PCLK     NVM      ADDR[9]      flash_addr_3[9]      46.961       45.295
+FLASH_CODE.NVM_INST     FlashApb|PCLK     NVM      ADDR[5]      flash_addr_3[5]      46.962       45.295
+FLASH_CODE.NVM_INST     FlashApb|PCLK     NVM      ADDR[7]      flash_addr_3[7]      46.968       45.301
+FLASH_CODE.NVM_INST     FlashApb|PCLK     NVM      ADDR[4]      flash_addr_3[4]      46.969       45.303
+========================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      50.000
+    - Setup time:                            3.068
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         46.932
+
+    - Propagation time:                      1.667
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     45.265
+
+    Number of logic level(s):                1
+    Starting point:                          FLASH_ADDRH_REG[0] / Q
+    Ending point:                            FLASH_CODE.NVM_INST / ADDR[0]
+    The start point is clocked by            FlashApb|PCLK [rising] on pin CLK
+    The end   point is clocked by            FlashApb|PCLK [falling] on pin CLK
+
+Instance / Net                           Pin         Pin               Arrival     No. of    
+Name                        Type         Name        Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------
+FLASH_ADDRH_REG[0]          DFN1E1C0     Q           Out     0.627     0.627       -         
+FLASH_ADDRH_REG[0]          Net          -           -       0.274     -           1         
+FLASH_CODE.NVM_INST_RNO     MX2          A           In      -         0.901       -         
+FLASH_CODE.NVM_INST_RNO     MX2          Y           Out     0.492     1.393       -         
+flash_addr_3[0]             Net          -           -       0.274     -           1         
+FLASH_CODE.NVM_INST         NVM          ADDR[0]     In      -         1.667       -         
+=============================================================================================
+Total path delay (propagation time + setup) of 4.735 is 4.188(88.4%) logic and 0.547(11.6%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+##### END OF TIMING REPORT #####]
+
+--------------------------------------------------------------------------------
+Target Part: M1AFS1500_FBGA256_-1
+Report for cell FlashApb.one
+  Core Cell usage:
+              cell count     area count*area
+              AO1B     5      1.0        5.0
+              BUFF     1      1.0        1.0
+               GND     2      0.0        0.0
+               INV     2      1.0        2.0
+               MX2    16      1.0       16.0
+              NOR2     1      1.0        1.0
+             NOR2A     1      1.0        1.0
+             NOR2B     3      1.0        3.0
+             NOR3A     3      1.0        3.0
+             NOR3B     3      1.0        3.0
+              OR2A     1      1.0        1.0
+              OR2B     7      1.0        7.0
+              OR3B     8      1.0        8.0
+              OR3C     3      1.0        3.0
+               VCC     2      0.0        0.0
+
+
+          DFN1E1C0    32      1.0       32.0
+               NVM     1      0.0        0.0
+                   -----          ----------
+             TOTAL    91                86.0
+
+
+  IO Cell usage:
+              cell count
+            CLKBUF     1
+             INBUF    33
+            OUTBUF    17
+                   -----
+             TOTAL    51
+
+
+Core Cells         : 86 of 38400 (0%)
+IO Cells           : 51 of 252 (20%)
+
+  RAM/ROM Usage Summary
+Block Rams : 0 of 60 (0%)
+
+Mapper successful!
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Mon Jun 21 15:29:06 2010
+
+###########################################################]

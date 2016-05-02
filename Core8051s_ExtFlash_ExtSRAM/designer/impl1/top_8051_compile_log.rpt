@@ -1,0 +1,307 @@
+Microsemi Libero Software
+Version: 11.7.0.119
+Release: v11.7
+
+Info: The design top_8051.adb was last modified by software version 11.7.0.119.
+Opened an existing Libero design top_8051.adb.
+'BA_NAME' set to 'top_8051_ba'
+'IDE_DESIGNERVIEW_NAME' set to 'Impl1'
+'IDE_DESIGNERVIEW_COUNT' set to '1'
+'IDE_DESIGNERVIEW_REV0' set to 'Impl1'
+'IDE_DESIGNERVIEW_REVNUM0' set to '1'
+'IDE_DESIGNERVIEW_ROOTDIR' set to
+'C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\designer'
+'IDE_DESIGNERVIEW_LASTREV' set to '1'
+
+ Netlist Reading Time = 0.0 seconds
+Imported the files:
+   C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\synthesis\top_8051.edn
+   C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\synthesis\top_8051_sdc.sdc
+
+C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\constraint\M1AFS_ADV_8051S_TUT_TO\
+P.pdc
+
+The Import command succeeded ( 00:00:06 )
+=====================================================================
+Parameters used to run compile:
+===============================
+
+Family      : Fusion
+Device      : M1AFS1500
+Package     : 484 FBGA
+Source      :
+C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\synthesis\top_8051.edn
+
+C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\synthesis\top_8051_sdc.sdc
+
+C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\constraint\M1AFS_ADV_8051S_TUT_TO\
+P.pdc
+Format      : EDIF
+Topcell     : top_8051
+Speed grade : -2
+Temp        : 0:25:70
+Voltage     : 1.58:1.50:1.42
+
+Keep Existing Physical Constraints : No
+Keep Existing Timing Constraints   : Yes
+
+pdc_abort_on_error                 : Yes
+pdc_eco_display_unmatched_objects  : No
+pdc_eco_max_warnings               : 10000
+
+demote_globals                     : No
+promote_globals                    : No
+localclock_max_shared_instances    : 12
+localclock_buffer_tree_max_fanout  : 12
+
+combine_register                   : No
+delete_buffer_tree                 : No
+
+report_high_fanout_nets_limit      : 10
+
+=====================================================================
+Compile starts ...
+
+Info: BLK007: No CoreConsole Database file imported for an M1 device.
+Warning: CMP201: Net sys_0/CORE8051S_0/intram_instt_ram_internal_ram/RAM256X8_R0C0_DOUTA0 drives
+         no load.
+Warning: CMP201: Net sys_0/CORE8051S_0/intram_instt_ram_internal_ram/RAM256X8_R0C0_DOUTA1 drives
+         no load.
+Warning: CMP201: Net sys_0/CORE8051S_0/intram_instt_ram_internal_ram/RAM256X8_R0C0_DOUTA2 drives
+         no load.
+Warning: CMP201: Net sys_0/CORE8051S_0/intram_instt_ram_internal_ram/RAM256X8_R0C0_DOUTA3 drives
+         no load.
+Warning: CMP201: Net sys_0/CORE8051S_0/intram_instt_ram_internal_ram/RAM256X8_R0C0_DOUTA4 drives
+         no load.
+Warning: CMP201: Net sys_0/CORE8051S_0/intram_instt_ram_internal_ram/RAM256X8_R0C0_DOUTA5 drives
+         no load.
+Warning: CMP201: Net sys_0/CORE8051S_0/intram_instt_ram_internal_ram/RAM256X8_R0C0_DOUTA6 drives
+         no load.
+Warning: CMP201: Net sys_0/CORE8051S_0/intram_instt_ram_internal_ram/RAM256X8_R0C0_DOUTA7 drives
+         no load.
+Warning: CMP201: Net sys_0/CORE8051S_0/intram_instt_ram_internal_ram/RAM256X8_R0C0_DOUTA8 drives
+         no load.
+Warning: CMP201: Net sys_0/CORE8051S_0/intram_instt_ram_internal_ram/RAM256X8_R0C0_DOUTB8 drives
+         no load.
+Warning: CMP201: Net PLL_50Mh_6Mh_0/Core_GLB drives no load.
+Warning: CMP201: Net PLL_50Mh_6Mh_0/Core_GLC drives no load.
+Warning: CMP201: Net PLL_50Mh_6Mh_0/LOCK drives no load.
+Warning: CMP201: Net PLL_50Mh_6Mh_0/Core_YB drives no load.
+Warning: CMP201: Net PLL_50Mh_6Mh_0/Core_YC drives no load.
+
+Netlist Optimization Report
+===========================
+
+Optimized macros:
+  - Dangling net drivers:   0
+  - Buffers:                0
+  - Inverters:              0
+  - Tieoff:                 0
+  - Logic combining:        219
+
+    Total macros optimized  219
+
+Warning: CMP503: Remapped 9 enable flip-flop(s) to a 2-tile implementation because the CLR/PRE
+         pin on the enable flip-flop is not being driven by a global net.
+
+There were 0 error(s) and 16 warning(s) in this design.
+=====================================================================
+
+Reading user pdc (Physical Design Constraints) file(s) postcompile
+
+
+There were 0 error(s) and 0 warning(s) in reading the user pdc.
+
+=====================================================================
+
+Reading previous post-compile physical placement constraints.
+
+
+There were 0 error(s) and 0 warning(s).
+
+=====================================================================
+Compile report:
+===============
+
+    CORE                       Used:   8299  Total:  38400   (21.61%)
+    IO (W/ clocks)             Used:     65  Total:    223   (29.15%)
+    Differential IO            Used:      0  Total:    109   (0.00%)
+    GLOBAL (Chip+Quadrant)     Used:      6  Total:     18   (33.33%)
+    PLL                        Used:      1  Total:      2   (50.00%)
+    RAM/FIFO                   Used:      1  Total:     60   (1.67%)
+    Low Static ICC             Used:      0  Total:      1   (0.00%)
+    FlashROM                   Used:      0  Total:      1   (0.00%)
+    User JTAG                  Used:      1  Total:      1   (100.00%)
+    RC oscillator              Used:      1  Total:      1   (100.00%)
+    XTL oscillator             Used:      0  Total:      1   (0.00%)
+    NVM                        Used:      0  Total:      4   (0.00%)
+    AB                         Used:      0  Total:      1   (0.00%)
+    AnalogIO                   Used:      0  Total:     46   (0.00%)
+    VRPSM                      Used:      0  Total:      1   (0.00%)
+    No-Glitch MUX              Used:      0  Total:      2   (0.00%)
+
+Global Information:
+
+    Type            | Used   | Total
+    ----------------|--------|--------------
+    Chip global     | 6      | 6  (100.00%)*
+    Quadrant global | 0      | 12 (0.00%)
+
+    (*) Chip globals may be assigned to Quadrant globals using the Multi-View Navigator (MVN)
+        or Physical Design Constraints (PDC).
+        They may also be assigned to Quadrant globals automatically during Layout.
+
+Core Information:
+
+    Type    | Instances    | Core tiles
+    --------|--------------|-----------
+    COMB    | 6746         | 6746
+    SEQ     | 1553         | 1553
+
+I/O Function:
+
+    Type                                  | w/o register  | w/ register  | w/ DDR register
+    --------------------------------------|---------------|--------------|----------------
+    Input I/O                             | 10            | 0            | 0
+    Output I/O                            | 47            | 0            | 0
+    Bidirectional I/O                     | 8             | 0            | 0
+    Differential Input I/O Pairs          | 0             | 0            | 0
+    Differential Output I/O Pairs         | 0             | 0            | 0
+
+I/O Technology:
+
+                                    |   Voltages    |             I/Os
+    --------------------------------|-------|-------|-------|--------|--------------
+    I/O Standard(s)                 | Vcci  | Vref  | Input | Output | Bidirectional
+    --------------------------------|-------|-------|-------|--------|--------------
+    LVTTL                           | 3.30v | N/A   | 10    | 47     | 8
+
+I/O Placement:
+
+    Locked  :  65 ( 100.00% )
+    Placed  :   0
+    UnPlaced:   0
+
+Net information report:
+=======================
+
+The following nets drive enable flip-flops that have been remapped to a 2-tile implementation:
+    EffCnt  Type          Name
+    --------------------------
+    8       SET/RESET_NET Net   :
+sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/urstb_0
+                          Driver:
+sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst_RNI0ODD_0
+    1       SET/RESET_NET Net   : sys_0/CORE8051S_0_WDOGRESN
+                          Driver: sys_0/CORE8051S_0/MAIN8051_inst/U_RSTCTRL/WDOGRESN
+
+The following nets have been assigned to a chip global resource:
+    Fanout  Type          Name
+    --------------------------
+    1505    CLK_NET       Net   : GLA
+                          Driver: PLL_50Mh_6Mh_0/Core
+                          Source: ESSENTIAL
+    1026    SET/RESET_NET Net   : sys_0/Core8051s_00_PRESETN
+                          Driver: sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/nrsto_RNIBVGD/U_CLKSRC
+                          Source: NETLIST
+    221     INT_NET       Net   : MEM_ADDR_c[2]
+                          Driver:
+sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/memaddr_i_RNI3GU5[2]/U_CLKSRC
+                          Source: NETLIST
+    212     SET/RESET_NET Net   : NSYSRESET_c
+                          Driver: NSYSRESET_pad
+                          Source: NETLIST
+    128     INT_NET       Net   : MEM_ADDR_c[3]
+                          Driver:
+sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/memaddr_i_RNI4HU5[3]/U_CLKSRC
+                          Source: NETLIST
+    102     INT_NET       Net   : sys_0_ExternalMemIf_MEMDATAO[3]
+                          Driver: sys_0/CORE8051S_0/MAIN8051_inst/U_ALU/acc_RNINU51[3]/U_CLKSRC
+                          Source: NETLIST
+
+High fanout nets in the post compile netlist:
+    Fanout  Type          Name
+    --------------------------
+    50      CLK_NET       Net   :
+sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/udrck
+                          Driver:
+sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst
+    24      INT_NET       Net   : MEM_ADDR_c[7]
+                          Driver: sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/memaddr_i[7]
+    24      INT_NET       Net   : sys_0/N_35_mux_1
+                          Driver: sys_0/CoreAPB3_0/u_mux_p_to_b3/m1_e_1
+    24      INT_NET       Net   : sys_0/CoreAPB3_0/u_mux_p_to_b3/N_35_mux_0
+                          Driver: sys_0/CoreAPB3_0/u_mux_p_to_b3/m1_e_0
+    24      INT_NET       Net   : sys_0/CORE8051S_0/memdatai_8051_0[7]
+                          Driver: sys_0/CORE8051S_0/memdatai_8051_1_RNIGUTNN5[7]
+    24      INT_NET       Net   : sys_0/CORE8051S_0/sfrdatao_8051[7]
+                          Driver:
+sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/db_accreg_RNIIKHP5
+    24      INT_NET       Net   : sys_0/CORE8051S_0/sfraddr_8051[5]
+                          Driver:
+sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/ram_sfr_address[5]
+    24      INT_NET       Net   : sys_0/CORE8051S_0/MAIN8051_inst/instr_dec[27]
+                          Driver:
+sys_0/CORE8051S_0/MAIN8051_inst/u_instrdec/un492_decvec_0_a2_0_a2
+    24      INT_NET       Net   : sys_0/CORE8051S_0/MAIN8051_inst/instr_dec[57]
+                          Driver:
+sys_0/CORE8051S_0/MAIN8051_inst/u_instrdec/un1290_decvec_0_a2_0
+    24      INT_NET       Net   : sys_0/CORE8051S_0/MAIN8051_inst/N_165
+                          Driver: sys_0/CORE8051S_0/MAIN8051_inst/u_instrdec/N_60_i_i_o3_0_o2
+
+Nets that are candidates for clock assignment and the resulting fanout:
+    Fanout  Type          Name
+    --------------------------
+    51      SET/RESET_NET Net   :
+sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/urstb
+                          Driver:
+sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst
+    50      CLK_NET       Net   :
+sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/udrck
+                          Driver:
+sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst
+    24      INT_NET       Net   : MEM_ADDR_c[7]
+                          Driver: sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/memaddr_i[7]
+    24      INT_NET       Net   : sys_0/N_35_mux_1
+                          Driver: sys_0/CoreAPB3_0/u_mux_p_to_b3/m1_e_1
+    24      INT_NET       Net   : sys_0/CoreAPB3_0/u_mux_p_to_b3/N_35_mux_0
+                          Driver: sys_0/CoreAPB3_0/u_mux_p_to_b3/m1_e_0
+    24      INT_NET       Net   : sys_0/CORE8051S_0/memdatai_8051_0[7]
+                          Driver: sys_0/CORE8051S_0/memdatai_8051_1_RNIGUTNN5[7]
+    24      INT_NET       Net   : sys_0/CORE8051S_0/sfrdatao_8051[7]
+                          Driver:
+sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/db_accreg_RNIIKHP5
+    24      INT_NET       Net   : sys_0/CORE8051S_0/sfraddr_8051[5]
+                          Driver:
+sys_0/CORE8051S_0/MAIN8051_inst/U_RAMSFRCTRL/ram_sfr_address[5]
+    24      INT_NET       Net   : sys_0/CORE8051S_0/MAIN8051_inst/instr_dec[27]
+                          Driver:
+sys_0/CORE8051S_0/MAIN8051_inst/u_instrdec/un492_decvec_0_a2_0_a2
+    24      INT_NET       Net   : sys_0/CORE8051S_0/MAIN8051_inst/instr_dec[57]
+                          Driver:
+sys_0/CORE8051S_0/MAIN8051_inst/u_instrdec/un1290_decvec_0_a2_0
+
+
+SDC Import: Begin processing constraints...
+
+
+
+SDC Import: End processing constraints
+
+
+The Compile command succeeded ( 00:00:10 )
+Wrote status report to file: top_8051_compile_report.txt
+
+The Report command succeeded ( 00:00:00 )
+Wrote pin report to file: top_8051_report_pin_byname.txt
+
+The Report command succeeded ( 00:00:02 )
+Wrote pin report to file: top_8051_report_pin_bynumber.txt
+
+The Report command succeeded ( 00:00:01 )
+Design saved to file
+C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\designer\impl1\top_8051.adb.
+
+The Execute Script command succeeded ( 00:00:22 )
+Design closed.
+

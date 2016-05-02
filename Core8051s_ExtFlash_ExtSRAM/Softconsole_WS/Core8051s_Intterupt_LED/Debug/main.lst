@@ -1,0 +1,1362 @@
+                              1 ;--------------------------------------------------------
+                              2 ; File Created by SDCC : FreeWare ANSI-C Compiler
+                              3 ; Version 2.6.3 #4543 (Dec 31 2006)
+                              4 ; This file generated Mon May 02 12:51:56 2016
+                              5 ;--------------------------------------------------------
+                              6 	.module ___main
+                              7 	.optsdcc -mmcs51 --model-large
+                              8 	
+                              9 ;--------------------------------------------------------
+                             10 ; Public variables in this module
+                             11 ;--------------------------------------------------------
+                             12 	.globl _main
+                             13 	.globl _C8051_interrupt_type
+                             14 	.globl _enable_8051_interrupts
+                             15 	.globl _INT0_IRQHandler
+                             16 	.globl _g_timer0
+                             17 	.globl _g_wd
+                             18 	.globl _g_uart0
+                             19 	.globl _g_gpio
+                             20 	.globl _timer0_isr
+                             21 ;--------------------------------------------------------
+                             22 ; special function registers
+                             23 ;--------------------------------------------------------
+                             24 	.area RSEG    (DATA)
+                             25 ;--------------------------------------------------------
+                             26 ; special function bits
+                             27 ;--------------------------------------------------------
+                             28 	.area RSEG    (DATA)
+                             29 ;--------------------------------------------------------
+                             30 ; overlayable register banks
+                             31 ;--------------------------------------------------------
+                             32 	.area REG_BANK_0	(REL,OVR,DATA)
+   0000                      33 	.ds 8
+                             34 ;--------------------------------------------------------
+                             35 ; internal ram data
+                             36 ;--------------------------------------------------------
+                             37 	.area DSEG    (DATA)
+                             38 ;--------------------------------------------------------
+                             39 ; overlayable items in internal ram 
+                             40 ;--------------------------------------------------------
+                             41 	.area OSEG    (OVR,DATA)
+                             42 ;--------------------------------------------------------
+                             43 ; Stack segment in internal ram 
+                             44 ;--------------------------------------------------------
+                             45 	.area	SSEG	(DATA)
+   0000                      46 __start__stack:
+   0000                      47 	.ds	1
+                             48 
+                             49 ;--------------------------------------------------------
+                             50 ; indirectly addressable internal ram data
+                             51 ;--------------------------------------------------------
+                             52 	.area ISEG    (DATA)
+                             53 ;--------------------------------------------------------
+                             54 ; absolute internal ram data
+                             55 ;--------------------------------------------------------
+                             56 	.area IABS    (ABS,DATA)
+                             57 	.area IABS    (ABS,DATA)
+                             58 ;--------------------------------------------------------
+                             59 ; bit data
+                             60 ;--------------------------------------------------------
+                             61 	.area BSEG    (BIT)
+                             62 ;--------------------------------------------------------
+                             63 ; paged external ram data
+                             64 ;--------------------------------------------------------
+                             65 	.area PSEG    (PAG,XDATA)
+                             66 ;--------------------------------------------------------
+                             67 ; external ram data
+                             68 ;--------------------------------------------------------
+                             69 	.area XSEG    (XDATA)
+                    0000     70 G$g_gpio$0$0==.
+   0000                      71 _g_gpio::
+   0000                      72 	.ds 3
+                    0003     73 G$g_uart0$0$0==.
+   0003                      74 _g_uart0::
+   0003                      75 	.ds 3
+                    0006     76 G$g_wd$0$0==.
+   0006                      77 _g_wd::
+   0006                      78 	.ds 2
+                    0008     79 G$g_timer0$0$0==.
+   0008                      80 _g_timer0::
+   0008                      81 	.ds 2
+                    000A     82 Ltimer0_isr$output_state$1$1==.
+   000A                      83 _timer0_isr_output_state_1_1:
+   000A                      84 	.ds 4
+                    000E     85 Ltimer0_isr$interrupt_msg$1$1==.
+   000E                      86 _timer0_isr_interrupt_msg_1_1:
+   000E                      87 	.ds 50
+                    0040     88 Ltimer0_isr$linefeed$1$1==.
+   0040                      89 _timer0_isr_linefeed_1_1:
+   0040                      90 	.ds 3
+                    0043     91 Lmain$greeting_msg$1$1==.
+   0043                      92 _main_greeting_msg_1_1:
+   0043                      93 	.ds 40
+                    006B     94 Lmain$linefeed$1$1==.
+   006B                      95 _main_linefeed_1_1:
+   006B                      96 	.ds 3
+                    006E     97 Lmain$scanning_msg$1$1==.
+   006E                      98 _main_scanning_msg_1_1:
+   006E                      99 	.ds 30
+                            100 ;--------------------------------------------------------
+                            101 ; external initialized ram data
+                            102 ;--------------------------------------------------------
+                            103 	.area XISEG   (XDATA)
+                            104 	.area HOME    (CODE)
+                            105 	.area GSINIT0 (CODE)
+                            106 	.area GSINIT1 (CODE)
+                            107 	.area GSINIT2 (CODE)
+                            108 	.area GSINIT3 (CODE)
+                            109 	.area GSINIT4 (CODE)
+                            110 	.area GSINIT5 (CODE)
+                            111 	.area GSINIT  (CODE)
+                            112 	.area GSFINAL (CODE)
+                            113 	.area CSEG    (CODE)
+                            114 ;--------------------------------------------------------
+                            115 ; interrupt vector 
+                            116 ;--------------------------------------------------------
+                            117 	.area HOME    (CODE)
+   0000                     118 __interrupt_vect:
+   0000 02s00r00            119 	ljmp	__sdcc_gsinit_startup
+   0003 02s00r00            120 	ljmp	_INT0_IRQHandler
+                            121 ;--------------------------------------------------------
+                            122 ; global & static initialisations
+                            123 ;--------------------------------------------------------
+                            124 	.area HOME    (CODE)
+                            125 	.area GSINIT  (CODE)
+                            126 	.area GSFINAL (CODE)
+                            127 	.area GSINIT  (CODE)
+                            128 	.globl __sdcc_gsinit_startup
+                            129 	.globl __sdcc_program_startup
+                            130 	.globl __start__stack
+                            131 	.globl __mcs51_genXINIT
+                            132 	.globl __mcs51_genXRAMCLEAR
+                            133 	.globl __mcs51_genRAMCLEAR
+                            134 ;------------------------------------------------------------
+                            135 ;Allocation info for local variables in function 'timer0_isr'
+                            136 ;------------------------------------------------------------
+                            137 ;output_state              Allocated with name '_timer0_isr_output_state_1_1'
+                            138 ;interrupt_msg             Allocated with name '_timer0_isr_interrupt_msg_1_1'
+                            139 ;linefeed                  Allocated with name '_timer0_isr_linefeed_1_1'
+                            140 ;------------------------------------------------------------
+                    0000    141 	G$timer0_isr$0$0 ==.
+                    0000    142 	C$main.c$75$1$1 ==.
+                            143 ;	../main.c:75: static int32_t output_state = 0;
+                            144 ;	genAssign
+   0000 90s00r0A            145 	mov	dptr,#_timer0_isr_output_state_1_1
+   0003 E4                  146 	clr	a
+   0004 F0                  147 	movx	@dptr,a
+   0005 A3                  148 	inc	dptr
+   0006 F0                  149 	movx	@dptr,a
+   0007 A3                  150 	inc	dptr
+   0008 F0                  151 	movx	@dptr,a
+   0009 A3                  152 	inc	dptr
+   000A F0                  153 	movx	@dptr,a
+                            154 	.area GSFINAL (CODE)
+   0000 02s00r06            155 	ljmp	__sdcc_program_startup
+                            156 ;--------------------------------------------------------
+                            157 ; Home
+                            158 ;--------------------------------------------------------
+                            159 	.area HOME    (CODE)
+                            160 	.area HOME    (CODE)
+   0006                     161 __sdcc_program_startup:
+   0006 12s02r58            162 	lcall	_main
+                            163 ;	return from main will lock up
+   0009 80 FE               164 	sjmp .
+                            165 ;--------------------------------------------------------
+                            166 ; code
+                            167 ;--------------------------------------------------------
+                            168 	.area CSEG    (CODE)
+                            169 ;------------------------------------------------------------
+                            170 ;Allocation info for local variables in function 'INT0_IRQHandler'
+                            171 ;------------------------------------------------------------
+                            172 ;------------------------------------------------------------
+                    0000    173 	G$INT0_IRQHandler$0$0 ==.
+                    0000    174 	C$main.c$67$0$0 ==.
+                            175 ;	../main.c:67: void INT0_IRQHandler( void ) __interrupt (0)
+                            176 ;	-----------------------------------------
+                            177 ;	 function INT0_IRQHandler
+                            178 ;	-----------------------------------------
+   0000                     179 _INT0_IRQHandler:
+                    0002    180 	ar2 = 0x02
+                    0003    181 	ar3 = 0x03
+                    0004    182 	ar4 = 0x04
+                    0005    183 	ar5 = 0x05
+                    0006    184 	ar6 = 0x06
+                    0007    185 	ar7 = 0x07
+                    0000    186 	ar0 = 0x00
+                    0001    187 	ar1 = 0x01
+   0000 C0 E0               188 	push	acc
+   0002 C0 F0               189 	push	b
+   0004 C0 82               190 	push	dpl
+   0006 C0 83               191 	push	dph
+   0008 C0 02               192 	push	(0+2)
+   000A C0 03               193 	push	(0+3)
+   000C C0 04               194 	push	(0+4)
+   000E C0 05               195 	push	(0+5)
+   0010 C0 06               196 	push	(0+6)
+   0012 C0 07               197 	push	(0+7)
+   0014 C0 00               198 	push	(0+0)
+   0016 C0 01               199 	push	(0+1)
+   0018 C0 D0               200 	push	psw
+   001A 75 D0 00            201 	mov	psw,#0x00
+                    001D    202 	C$main.c$70$1$1 ==.
+                            203 ;	../main.c:70: timer0_isr();
+                            204 ;	genCall
+   001D 12s00r3B            205 	lcall	_timer0_isr
+   0020                     206 00101$:
+   0020 D0 D0               207 	pop	psw
+   0022 D0 01               208 	pop	(0+1)
+   0024 D0 00               209 	pop	(0+0)
+   0026 D0 07               210 	pop	(0+7)
+   0028 D0 06               211 	pop	(0+6)
+   002A D0 05               212 	pop	(0+5)
+   002C D0 04               213 	pop	(0+4)
+   002E D0 03               214 	pop	(0+3)
+   0030 D0 02               215 	pop	(0+2)
+   0032 D0 83               216 	pop	dph
+   0034 D0 82               217 	pop	dpl
+   0036 D0 F0               218 	pop	b
+   0038 D0 E0               219 	pop	acc
+                    003A    220 	C$main.c$71$1$1 ==.
+                    003A    221 	XG$INT0_IRQHandler$0$0 ==.
+   003A 32                  222 	reti
+                            223 ;------------------------------------------------------------
+                            224 ;Allocation info for local variables in function 'timer0_isr'
+                            225 ;------------------------------------------------------------
+                            226 ;output_state              Allocated with name '_timer0_isr_output_state_1_1'
+                            227 ;interrupt_msg             Allocated with name '_timer0_isr_interrupt_msg_1_1'
+                            228 ;linefeed                  Allocated with name '_timer0_isr_linefeed_1_1'
+                            229 ;------------------------------------------------------------
+                    003B    230 	G$timer0_isr$0$0 ==.
+                    003B    231 	C$main.c$73$1$1 ==.
+                            232 ;	../main.c:73: void timer0_isr( void )
+                            233 ;	-----------------------------------------
+                            234 ;	 function timer0_isr
+                            235 ;	-----------------------------------------
+   003B                     236 _timer0_isr:
+                    003B    237 	C$main.c$76$1$1 ==.
+                            238 ;	../main.c:76: const uint8_t interrupt_msg[] = "\n\r** Timer interrupt received to 8051s INT 0 **\n\r";
+                            239 ;	genPointerSet
+                            240 ;     genFarPointerSet
+   003B 90s00r0E            241 	mov	dptr,#_timer0_isr_interrupt_msg_1_1
+   003E 74 0A               242 	mov	a,#0x0A
+   0040 F0                  243 	movx	@dptr,a
+                            244 ;	genPointerSet
+                            245 ;     genFarPointerSet
+   0041 90s00r0F            246 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x0001)
+   0044 74 0D               247 	mov	a,#0x0D
+   0046 F0                  248 	movx	@dptr,a
+                            249 ;	genPointerSet
+                            250 ;     genFarPointerSet
+   0047 90s00r10            251 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x0002)
+   004A 74 2A               252 	mov	a,#0x2A
+   004C F0                  253 	movx	@dptr,a
+                            254 ;	genPointerSet
+                            255 ;     genFarPointerSet
+   004D 90s00r11            256 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x0003)
+   0050 74 2A               257 	mov	a,#0x2A
+   0052 F0                  258 	movx	@dptr,a
+                            259 ;	genPointerSet
+                            260 ;     genFarPointerSet
+   0053 90s00r12            261 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x0004)
+   0056 74 20               262 	mov	a,#0x20
+   0058 F0                  263 	movx	@dptr,a
+                            264 ;	genPointerSet
+                            265 ;     genFarPointerSet
+   0059 90s00r13            266 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x0005)
+   005C 74 54               267 	mov	a,#0x54
+   005E F0                  268 	movx	@dptr,a
+                            269 ;	genPointerSet
+                            270 ;     genFarPointerSet
+   005F 90s00r14            271 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x0006)
+   0062 74 69               272 	mov	a,#0x69
+   0064 F0                  273 	movx	@dptr,a
+                            274 ;	genPointerSet
+                            275 ;     genFarPointerSet
+   0065 90s00r15            276 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x0007)
+   0068 74 6D               277 	mov	a,#0x6D
+   006A F0                  278 	movx	@dptr,a
+                            279 ;	genPointerSet
+                            280 ;     genFarPointerSet
+   006B 90s00r16            281 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x0008)
+   006E 74 65               282 	mov	a,#0x65
+   0070 F0                  283 	movx	@dptr,a
+                            284 ;	genPointerSet
+                            285 ;     genFarPointerSet
+   0071 90s00r17            286 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x0009)
+   0074 74 72               287 	mov	a,#0x72
+   0076 F0                  288 	movx	@dptr,a
+                            289 ;	genPointerSet
+                            290 ;     genFarPointerSet
+   0077 90s00r18            291 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x000a)
+   007A 74 20               292 	mov	a,#0x20
+   007C F0                  293 	movx	@dptr,a
+                            294 ;	genPointerSet
+                            295 ;     genFarPointerSet
+   007D 90s00r19            296 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x000b)
+   0080 74 69               297 	mov	a,#0x69
+   0082 F0                  298 	movx	@dptr,a
+                            299 ;	genPointerSet
+                            300 ;     genFarPointerSet
+   0083 90s00r1A            301 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x000c)
+   0086 74 6E               302 	mov	a,#0x6E
+   0088 F0                  303 	movx	@dptr,a
+                            304 ;	genPointerSet
+                            305 ;     genFarPointerSet
+   0089 90s00r1B            306 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x000d)
+   008C 74 74               307 	mov	a,#0x74
+   008E F0                  308 	movx	@dptr,a
+                            309 ;	genPointerSet
+                            310 ;     genFarPointerSet
+   008F 90s00r1C            311 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x000e)
+   0092 74 65               312 	mov	a,#0x65
+   0094 F0                  313 	movx	@dptr,a
+                            314 ;	genPointerSet
+                            315 ;     genFarPointerSet
+   0095 90s00r1D            316 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x000f)
+   0098 74 72               317 	mov	a,#0x72
+   009A F0                  318 	movx	@dptr,a
+                            319 ;	genPointerSet
+                            320 ;     genFarPointerSet
+   009B 90s00r1E            321 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x0010)
+   009E 74 72               322 	mov	a,#0x72
+   00A0 F0                  323 	movx	@dptr,a
+                            324 ;	genPointerSet
+                            325 ;     genFarPointerSet
+   00A1 90s00r1F            326 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x0011)
+   00A4 74 75               327 	mov	a,#0x75
+   00A6 F0                  328 	movx	@dptr,a
+                            329 ;	genPointerSet
+                            330 ;     genFarPointerSet
+   00A7 90s00r20            331 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x0012)
+   00AA 74 70               332 	mov	a,#0x70
+   00AC F0                  333 	movx	@dptr,a
+                            334 ;	genPointerSet
+                            335 ;     genFarPointerSet
+   00AD 90s00r21            336 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x0013)
+   00B0 74 74               337 	mov	a,#0x74
+   00B2 F0                  338 	movx	@dptr,a
+                            339 ;	genPointerSet
+                            340 ;     genFarPointerSet
+   00B3 90s00r22            341 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x0014)
+   00B6 74 20               342 	mov	a,#0x20
+   00B8 F0                  343 	movx	@dptr,a
+                            344 ;	genPointerSet
+                            345 ;     genFarPointerSet
+   00B9 90s00r23            346 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x0015)
+   00BC 74 72               347 	mov	a,#0x72
+   00BE F0                  348 	movx	@dptr,a
+                            349 ;	genPointerSet
+                            350 ;     genFarPointerSet
+   00BF 90s00r24            351 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x0016)
+   00C2 74 65               352 	mov	a,#0x65
+   00C4 F0                  353 	movx	@dptr,a
+                            354 ;	genPointerSet
+                            355 ;     genFarPointerSet
+   00C5 90s00r25            356 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x0017)
+   00C8 74 63               357 	mov	a,#0x63
+   00CA F0                  358 	movx	@dptr,a
+                            359 ;	genPointerSet
+                            360 ;     genFarPointerSet
+   00CB 90s00r26            361 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x0018)
+   00CE 74 65               362 	mov	a,#0x65
+   00D0 F0                  363 	movx	@dptr,a
+                            364 ;	genPointerSet
+                            365 ;     genFarPointerSet
+   00D1 90s00r27            366 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x0019)
+   00D4 74 69               367 	mov	a,#0x69
+   00D6 F0                  368 	movx	@dptr,a
+                            369 ;	genPointerSet
+                            370 ;     genFarPointerSet
+   00D7 90s00r28            371 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x001a)
+   00DA 74 76               372 	mov	a,#0x76
+   00DC F0                  373 	movx	@dptr,a
+                            374 ;	genPointerSet
+                            375 ;     genFarPointerSet
+   00DD 90s00r29            376 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x001b)
+   00E0 74 65               377 	mov	a,#0x65
+   00E2 F0                  378 	movx	@dptr,a
+                            379 ;	genPointerSet
+                            380 ;     genFarPointerSet
+   00E3 90s00r2A            381 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x001c)
+   00E6 74 64               382 	mov	a,#0x64
+   00E8 F0                  383 	movx	@dptr,a
+                            384 ;	genPointerSet
+                            385 ;     genFarPointerSet
+   00E9 90s00r2B            386 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x001d)
+   00EC 74 20               387 	mov	a,#0x20
+   00EE F0                  388 	movx	@dptr,a
+                            389 ;	genPointerSet
+                            390 ;     genFarPointerSet
+   00EF 90s00r2C            391 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x001e)
+   00F2 74 74               392 	mov	a,#0x74
+   00F4 F0                  393 	movx	@dptr,a
+                            394 ;	genPointerSet
+                            395 ;     genFarPointerSet
+   00F5 90s00r2D            396 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x001f)
+   00F8 74 6F               397 	mov	a,#0x6F
+   00FA F0                  398 	movx	@dptr,a
+                            399 ;	genPointerSet
+                            400 ;     genFarPointerSet
+   00FB 90s00r2E            401 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x0020)
+   00FE 74 20               402 	mov	a,#0x20
+   0100 F0                  403 	movx	@dptr,a
+                            404 ;	genPointerSet
+                            405 ;     genFarPointerSet
+   0101 90s00r2F            406 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x0021)
+   0104 74 38               407 	mov	a,#0x38
+   0106 F0                  408 	movx	@dptr,a
+                            409 ;	genPointerSet
+                            410 ;     genFarPointerSet
+   0107 90s00r30            411 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x0022)
+   010A 74 30               412 	mov	a,#0x30
+   010C F0                  413 	movx	@dptr,a
+                            414 ;	genPointerSet
+                            415 ;     genFarPointerSet
+   010D 90s00r31            416 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x0023)
+   0110 74 35               417 	mov	a,#0x35
+   0112 F0                  418 	movx	@dptr,a
+                            419 ;	genPointerSet
+                            420 ;     genFarPointerSet
+   0113 90s00r32            421 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x0024)
+   0116 74 31               422 	mov	a,#0x31
+   0118 F0                  423 	movx	@dptr,a
+                            424 ;	genPointerSet
+                            425 ;     genFarPointerSet
+   0119 90s00r33            426 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x0025)
+   011C 74 73               427 	mov	a,#0x73
+   011E F0                  428 	movx	@dptr,a
+                            429 ;	genPointerSet
+                            430 ;     genFarPointerSet
+   011F 90s00r34            431 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x0026)
+   0122 74 20               432 	mov	a,#0x20
+   0124 F0                  433 	movx	@dptr,a
+                            434 ;	genPointerSet
+                            435 ;     genFarPointerSet
+   0125 90s00r35            436 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x0027)
+   0128 74 49               437 	mov	a,#0x49
+   012A F0                  438 	movx	@dptr,a
+                            439 ;	genPointerSet
+                            440 ;     genFarPointerSet
+   012B 90s00r36            441 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x0028)
+   012E 74 4E               442 	mov	a,#0x4E
+   0130 F0                  443 	movx	@dptr,a
+                            444 ;	genPointerSet
+                            445 ;     genFarPointerSet
+   0131 90s00r37            446 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x0029)
+   0134 74 54               447 	mov	a,#0x54
+   0136 F0                  448 	movx	@dptr,a
+                            449 ;	genPointerSet
+                            450 ;     genFarPointerSet
+   0137 90s00r38            451 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x002a)
+   013A 74 20               452 	mov	a,#0x20
+   013C F0                  453 	movx	@dptr,a
+                            454 ;	genPointerSet
+                            455 ;     genFarPointerSet
+   013D 90s00r39            456 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x002b)
+   0140 74 30               457 	mov	a,#0x30
+   0142 F0                  458 	movx	@dptr,a
+                            459 ;	genPointerSet
+                            460 ;     genFarPointerSet
+   0143 90s00r3A            461 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x002c)
+   0146 74 20               462 	mov	a,#0x20
+   0148 F0                  463 	movx	@dptr,a
+                            464 ;	genPointerSet
+                            465 ;     genFarPointerSet
+   0149 90s00r3B            466 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x002d)
+   014C 74 2A               467 	mov	a,#0x2A
+   014E F0                  468 	movx	@dptr,a
+                            469 ;	genPointerSet
+                            470 ;     genFarPointerSet
+   014F 90s00r3C            471 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x002e)
+   0152 74 2A               472 	mov	a,#0x2A
+   0154 F0                  473 	movx	@dptr,a
+                            474 ;	genPointerSet
+                            475 ;     genFarPointerSet
+   0155 90s00r3D            476 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x002f)
+   0158 74 0A               477 	mov	a,#0x0A
+   015A F0                  478 	movx	@dptr,a
+                            479 ;	genPointerSet
+                            480 ;     genFarPointerSet
+   015B 90s00r3E            481 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x0030)
+   015E 74 0D               482 	mov	a,#0x0D
+   0160 F0                  483 	movx	@dptr,a
+                            484 ;	genPointerSet
+                            485 ;     genFarPointerSet
+   0161 90s00r3F            486 	mov	dptr,#(_timer0_isr_interrupt_msg_1_1 + 0x0031)
+   0164 74 00               487 	mov	a,#0x00
+   0166 F0                  488 	movx	@dptr,a
+                    0167    489 	C$main.c$77$1$1 ==.
+                            490 ;	../main.c:77: const uint8_t linefeed[] = "\n\r";
+                            491 ;	genPointerSet
+                            492 ;     genFarPointerSet
+   0167 90s00r40            493 	mov	dptr,#_timer0_isr_linefeed_1_1
+   016A 74 0A               494 	mov	a,#0x0A
+   016C F0                  495 	movx	@dptr,a
+                            496 ;	genPointerSet
+                            497 ;     genFarPointerSet
+   016D 90s00r41            498 	mov	dptr,#(_timer0_isr_linefeed_1_1 + 0x0001)
+   0170 74 0D               499 	mov	a,#0x0D
+   0172 F0                  500 	movx	@dptr,a
+                            501 ;	genPointerSet
+                            502 ;     genFarPointerSet
+   0173 90s00r42            503 	mov	dptr,#(_timer0_isr_linefeed_1_1 + 0x0002)
+   0176 74 00               504 	mov	a,#0x00
+   0178 F0                  505 	movx	@dptr,a
+                    0179    506 	C$main.c$79$1$1 ==.
+                            507 ;	../main.c:79: UART_send( &g_uart0, interrupt_msg, sizeof(interrupt_msg) );
+                            508 ;	genCast
+   0179 90s00r00            509 	mov	dptr,#_UART_send_PARM_2
+   017C 74r0E               510 	mov	a,#_timer0_isr_interrupt_msg_1_1
+   017E F0                  511 	movx	@dptr,a
+   017F A3                  512 	inc	dptr
+   0180 74s00               513 	mov	a,#(_timer0_isr_interrupt_msg_1_1 >> 8)
+   0182 F0                  514 	movx	@dptr,a
+   0183 A3                  515 	inc	dptr
+   0184 74 00               516 	mov	a,#0x0
+   0186 F0                  517 	movx	@dptr,a
+                            518 ;	genAssign
+   0187 90s00r00            519 	mov	dptr,#_UART_send_PARM_3
+   018A 74 32               520 	mov	a,#0x32
+   018C F0                  521 	movx	@dptr,a
+   018D E4                  522 	clr	a
+   018E A3                  523 	inc	dptr
+   018F F0                  524 	movx	@dptr,a
+                            525 ;	genCall
+   0190 75 82r03            526 	mov	dpl,#_g_uart0
+   0193 75 83s00            527 	mov	dph,#(_g_uart0 >> 8)
+   0196 75 F0 00            528 	mov	b,#0x00
+   0199 12s00r00            529 	lcall	_UART_send
+                    019C    530 	C$main.c$80$1$1 ==.
+                            531 ;	../main.c:80: UART_send( &g_uart0, linefeed, sizeof(linefeed) );
+                            532 ;	genCast
+   019C 90s00r00            533 	mov	dptr,#_UART_send_PARM_2
+   019F 74r40               534 	mov	a,#_timer0_isr_linefeed_1_1
+   01A1 F0                  535 	movx	@dptr,a
+   01A2 A3                  536 	inc	dptr
+   01A3 74s00               537 	mov	a,#(_timer0_isr_linefeed_1_1 >> 8)
+   01A5 F0                  538 	movx	@dptr,a
+   01A6 A3                  539 	inc	dptr
+   01A7 74 00               540 	mov	a,#0x0
+   01A9 F0                  541 	movx	@dptr,a
+                            542 ;	genAssign
+   01AA 90s00r00            543 	mov	dptr,#_UART_send_PARM_3
+   01AD 74 03               544 	mov	a,#0x03
+   01AF F0                  545 	movx	@dptr,a
+   01B0 E4                  546 	clr	a
+   01B1 A3                  547 	inc	dptr
+   01B2 F0                  548 	movx	@dptr,a
+                            549 ;	genCall
+   01B3 75 82r03            550 	mov	dpl,#_g_uart0
+   01B6 75 83s00            551 	mov	dph,#(_g_uart0 >> 8)
+   01B9 75 F0 00            552 	mov	b,#0x00
+   01BC 12s00r00            553 	lcall	_UART_send
+                    01BF    554 	C$main.c$82$1$1 ==.
+                            555 ;	../main.c:82: GPIO_set_output( &g_gpio, LED_D1, 1);
+                            556 ;	genAssign
+   01BF 90s00r00            557 	mov	dptr,#_GPIO_set_output_PARM_2
+   01C2 74 01               558 	mov	a,#0x01
+   01C4 F0                  559 	movx	@dptr,a
+                            560 ;	genAssign
+   01C5 90s00r00            561 	mov	dptr,#_GPIO_set_output_PARM_3
+   01C8 74 01               562 	mov	a,#0x01
+   01CA F0                  563 	movx	@dptr,a
+                            564 ;	genCall
+   01CB 75 82r00            565 	mov	dpl,#_g_gpio
+   01CE 75 83s00            566 	mov	dph,#(_g_gpio >> 8)
+   01D1 75 F0 00            567 	mov	b,#0x00
+   01D4 12s00r00            568 	lcall	_GPIO_set_output
+                    01D7    569 	C$main.c$84$1$1 ==.
+                            570 ;	../main.c:84: if ( output_state > 0 )
+                            571 ;	genAssign
+   01D7 90s00r0A            572 	mov	dptr,#_timer0_isr_output_state_1_1
+   01DA E0                  573 	movx	a,@dptr
+   01DB FA                  574 	mov	r2,a
+   01DC A3                  575 	inc	dptr
+   01DD E0                  576 	movx	a,@dptr
+   01DE FB                  577 	mov	r3,a
+   01DF A3                  578 	inc	dptr
+   01E0 E0                  579 	movx	a,@dptr
+   01E1 FC                  580 	mov	r4,a
+   01E2 A3                  581 	inc	dptr
+   01E3 E0                  582 	movx	a,@dptr
+   01E4 FD                  583 	mov	r5,a
+                            584 ;	genCmpGt
+                            585 ;	genCmp
+   01E5 C3                  586 	clr	c
+   01E6 74 00               587 	mov	a,#0x00
+   01E8 9A                  588 	subb	a,r2
+   01E9 74 00               589 	mov	a,#0x00
+   01EB 9B                  590 	subb	a,r3
+   01EC 74 00               591 	mov	a,#0x00
+   01EE 9C                  592 	subb	a,r4
+   01EF 74 00               593 	mov	a,#0x00
+   01F1 64 80               594 	xrl	a,#0x80
+   01F3 8D F0               595 	mov	b,r5
+   01F5 63 F0 80            596 	xrl	b,#0x80
+   01F8 95 F0               597 	subb	a,b
+                            598 ;	genIfxJump
+   01FA 40 03               599 	jc	00107$
+   01FC 02s02r0D            600 	ljmp	00102$
+   01FF                     601 00107$:
+                    01FF    602 	C$main.c$86$2$2 ==.
+                            603 ;	../main.c:86: output_state = 0;
+                            604 ;	genAssign
+   01FF 90s00r0A            605 	mov	dptr,#_timer0_isr_output_state_1_1
+   0202 E4                  606 	clr	a
+   0203 F0                  607 	movx	@dptr,a
+   0204 A3                  608 	inc	dptr
+   0205 F0                  609 	movx	@dptr,a
+   0206 A3                  610 	inc	dptr
+   0207 F0                  611 	movx	@dptr,a
+   0208 A3                  612 	inc	dptr
+   0209 F0                  613 	movx	@dptr,a
+   020A 02s02r1A            614 	ljmp	00103$
+   020D                     615 00102$:
+                    020D    616 	C$main.c$90$2$3 ==.
+                            617 ;	../main.c:90: output_state = 1;
+                            618 ;	genAssign
+   020D 90s00r0A            619 	mov	dptr,#_timer0_isr_output_state_1_1
+   0210 74 01               620 	mov	a,#0x01
+   0212 F0                  621 	movx	@dptr,a
+   0213 E4                  622 	clr	a
+   0214 A3                  623 	inc	dptr
+   0215 F0                  624 	movx	@dptr,a
+   0216 A3                  625 	inc	dptr
+   0217 F0                  626 	movx	@dptr,a
+   0218 A3                  627 	inc	dptr
+   0219 F0                  628 	movx	@dptr,a
+   021A                     629 00103$:
+                    021A    630 	C$main.c$92$1$1 ==.
+                            631 ;	../main.c:92: GPIO_set_output( &g_gpio, LED_D0, output_state);
+                            632 ;	genAssign
+   021A 90s00r0A            633 	mov	dptr,#_timer0_isr_output_state_1_1
+   021D E0                  634 	movx	a,@dptr
+   021E FA                  635 	mov	r2,a
+   021F A3                  636 	inc	dptr
+   0220 E0                  637 	movx	a,@dptr
+   0221 FB                  638 	mov	r3,a
+   0222 A3                  639 	inc	dptr
+   0223 E0                  640 	movx	a,@dptr
+   0224 FC                  641 	mov	r4,a
+   0225 A3                  642 	inc	dptr
+   0226 E0                  643 	movx	a,@dptr
+   0227 FD                  644 	mov	r5,a
+                            645 ;	genCast
+                            646 ;	genAssign
+   0228 90s00r00            647 	mov	dptr,#_GPIO_set_output_PARM_2
+   022B 74 00               648 	mov	a,#0x00
+   022D F0                  649 	movx	@dptr,a
+                            650 ;	genAssign
+   022E 90s00r00            651 	mov	dptr,#_GPIO_set_output_PARM_3
+   0231 EA                  652 	mov	a,r2
+   0232 F0                  653 	movx	@dptr,a
+                            654 ;	genCall
+   0233 75 82r00            655 	mov	dpl,#_g_gpio
+   0236 75 83s00            656 	mov	dph,#(_g_gpio >> 8)
+   0239 75 F0 00            657 	mov	b,#0x00
+   023C 12s00r00            658 	lcall	_GPIO_set_output
+                    023F    659 	C$main.c$95$1$1 ==.
+                            660 ;	../main.c:95: TMR_clear_int( &g_timer0 );
+                            661 ;	genCall
+   023F 75 82r08            662 	mov	dpl,#_g_timer0
+   0242 75 83s00            663 	mov	dph,#(_g_timer0 >> 8)
+   0245 75 F0 00            664 	mov	b,#0x00
+   0248 12s00r00            665 	lcall	_TMR_clear_int
+   024B                     666 00104$:
+                    024B    667 	C$main.c$96$1$1 ==.
+                    024B    668 	XG$timer0_isr$0$0 ==.
+   024B 22                  669 	ret
+                            670 ;------------------------------------------------------------
+                            671 ;Allocation info for local variables in function 'enable_8051_interrupts'
+                            672 ;------------------------------------------------------------
+                            673 ;------------------------------------------------------------
+                    024C    674 	G$enable_8051_interrupts$0$0 ==.
+                    024C    675 	C$main.c$98$1$1 ==.
+                            676 ;	../main.c:98: void enable_8051_interrupts( void )
+                            677 ;	-----------------------------------------
+                            678 ;	 function enable_8051_interrupts
+                            679 ;	-----------------------------------------
+   024C                     680 _enable_8051_interrupts:
+                    024C    681 	C$main.c$104$1$1 ==.
+                            682 ;	../main.c:104: __endasm;
+                            683 	;	genInline
+   024C D2 A8               684 	  setb ex0 ; if using INT0
+   024E D2 AA               685 	  setb ex1 ; if using INT1
+   0250 D2 AF               686 	  setb ea
+   0252                     687 00101$:
+                    0252    688 	C$main.c$105$1$1 ==.
+                    0252    689 	XG$enable_8051_interrupts$0$0 ==.
+   0252 22                  690 	ret
+                            691 ;------------------------------------------------------------
+                            692 ;Allocation info for local variables in function 'C8051_interrupt_type'
+                            693 ;------------------------------------------------------------
+                            694 ;------------------------------------------------------------
+                    0253    695 	G$C8051_interrupt_type$0$0 ==.
+                    0253    696 	C$main.c$107$1$1 ==.
+                            697 ;	../main.c:107: void C8051_interrupt_type( void )
+                            698 ;	-----------------------------------------
+                            699 ;	 function C8051_interrupt_type
+                            700 ;	-----------------------------------------
+   0253                     701 _C8051_interrupt_type:
+                    0253    702 	C$main.c$112$1$1 ==.
+                            703 ;	../main.c:112: __endasm;
+                            704 	;	genInline
+   0253 D2 88               705 	 setb it0 ; if set INT0 for edge operation
+   0255 D2 8A               706 	 setb it1 ; if set INT1 for edge operation
+   0257                     707 00101$:
+                    0257    708 	C$main.c$113$1$1 ==.
+                    0257    709 	XG$C8051_interrupt_type$0$0 ==.
+   0257 22                  710 	ret
+                            711 ;------------------------------------------------------------
+                            712 ;Allocation info for local variables in function 'main'
+                            713 ;------------------------------------------------------------
+                            714 ;greeting_msg              Allocated with name '_main_greeting_msg_1_1'
+                            715 ;linefeed                  Allocated with name '_main_linefeed_1_1'
+                            716 ;scanning_msg              Allocated with name '_main_scanning_msg_1_1'
+                            717 ;------------------------------------------------------------
+                    0258    718 	G$main$0$0 ==.
+                    0258    719 	C$main.c$116$1$1 ==.
+                            720 ;	../main.c:116: int main( void )
+                            721 ;	-----------------------------------------
+                            722 ;	 function main
+                            723 ;	-----------------------------------------
+   0258                     724 _main:
+                    0258    725 	C$main.c$118$1$1 ==.
+                            726 ;	../main.c:118: const uint8_t greeting_msg[] = "\n\r* Start the 8051s Interrupts test *\n\r";
+                            727 ;	genPointerSet
+                            728 ;     genFarPointerSet
+   0258 90s00r43            729 	mov	dptr,#_main_greeting_msg_1_1
+   025B 74 0A               730 	mov	a,#0x0A
+   025D F0                  731 	movx	@dptr,a
+                            732 ;	genPointerSet
+                            733 ;     genFarPointerSet
+   025E 90s00r44            734 	mov	dptr,#(_main_greeting_msg_1_1 + 0x0001)
+   0261 74 0D               735 	mov	a,#0x0D
+   0263 F0                  736 	movx	@dptr,a
+                            737 ;	genPointerSet
+                            738 ;     genFarPointerSet
+   0264 90s00r45            739 	mov	dptr,#(_main_greeting_msg_1_1 + 0x0002)
+   0267 74 2A               740 	mov	a,#0x2A
+   0269 F0                  741 	movx	@dptr,a
+                            742 ;	genPointerSet
+                            743 ;     genFarPointerSet
+   026A 90s00r46            744 	mov	dptr,#(_main_greeting_msg_1_1 + 0x0003)
+   026D 74 20               745 	mov	a,#0x20
+   026F F0                  746 	movx	@dptr,a
+                            747 ;	genPointerSet
+                            748 ;     genFarPointerSet
+   0270 90s00r47            749 	mov	dptr,#(_main_greeting_msg_1_1 + 0x0004)
+   0273 74 53               750 	mov	a,#0x53
+   0275 F0                  751 	movx	@dptr,a
+                            752 ;	genPointerSet
+                            753 ;     genFarPointerSet
+   0276 90s00r48            754 	mov	dptr,#(_main_greeting_msg_1_1 + 0x0005)
+   0279 74 74               755 	mov	a,#0x74
+   027B F0                  756 	movx	@dptr,a
+                            757 ;	genPointerSet
+                            758 ;     genFarPointerSet
+   027C 90s00r49            759 	mov	dptr,#(_main_greeting_msg_1_1 + 0x0006)
+   027F 74 61               760 	mov	a,#0x61
+   0281 F0                  761 	movx	@dptr,a
+                            762 ;	genPointerSet
+                            763 ;     genFarPointerSet
+   0282 90s00r4A            764 	mov	dptr,#(_main_greeting_msg_1_1 + 0x0007)
+   0285 74 72               765 	mov	a,#0x72
+   0287 F0                  766 	movx	@dptr,a
+                            767 ;	genPointerSet
+                            768 ;     genFarPointerSet
+   0288 90s00r4B            769 	mov	dptr,#(_main_greeting_msg_1_1 + 0x0008)
+   028B 74 74               770 	mov	a,#0x74
+   028D F0                  771 	movx	@dptr,a
+                            772 ;	genPointerSet
+                            773 ;     genFarPointerSet
+   028E 90s00r4C            774 	mov	dptr,#(_main_greeting_msg_1_1 + 0x0009)
+   0291 74 20               775 	mov	a,#0x20
+   0293 F0                  776 	movx	@dptr,a
+                            777 ;	genPointerSet
+                            778 ;     genFarPointerSet
+   0294 90s00r4D            779 	mov	dptr,#(_main_greeting_msg_1_1 + 0x000a)
+   0297 74 74               780 	mov	a,#0x74
+   0299 F0                  781 	movx	@dptr,a
+                            782 ;	genPointerSet
+                            783 ;     genFarPointerSet
+   029A 90s00r4E            784 	mov	dptr,#(_main_greeting_msg_1_1 + 0x000b)
+   029D 74 68               785 	mov	a,#0x68
+   029F F0                  786 	movx	@dptr,a
+                            787 ;	genPointerSet
+                            788 ;     genFarPointerSet
+   02A0 90s00r4F            789 	mov	dptr,#(_main_greeting_msg_1_1 + 0x000c)
+   02A3 74 65               790 	mov	a,#0x65
+   02A5 F0                  791 	movx	@dptr,a
+                            792 ;	genPointerSet
+                            793 ;     genFarPointerSet
+   02A6 90s00r50            794 	mov	dptr,#(_main_greeting_msg_1_1 + 0x000d)
+   02A9 74 20               795 	mov	a,#0x20
+   02AB F0                  796 	movx	@dptr,a
+                            797 ;	genPointerSet
+                            798 ;     genFarPointerSet
+   02AC 90s00r51            799 	mov	dptr,#(_main_greeting_msg_1_1 + 0x000e)
+   02AF 74 38               800 	mov	a,#0x38
+   02B1 F0                  801 	movx	@dptr,a
+                            802 ;	genPointerSet
+                            803 ;     genFarPointerSet
+   02B2 90s00r52            804 	mov	dptr,#(_main_greeting_msg_1_1 + 0x000f)
+   02B5 74 30               805 	mov	a,#0x30
+   02B7 F0                  806 	movx	@dptr,a
+                            807 ;	genPointerSet
+                            808 ;     genFarPointerSet
+   02B8 90s00r53            809 	mov	dptr,#(_main_greeting_msg_1_1 + 0x0010)
+   02BB 74 35               810 	mov	a,#0x35
+   02BD F0                  811 	movx	@dptr,a
+                            812 ;	genPointerSet
+                            813 ;     genFarPointerSet
+   02BE 90s00r54            814 	mov	dptr,#(_main_greeting_msg_1_1 + 0x0011)
+   02C1 74 31               815 	mov	a,#0x31
+   02C3 F0                  816 	movx	@dptr,a
+                            817 ;	genPointerSet
+                            818 ;     genFarPointerSet
+   02C4 90s00r55            819 	mov	dptr,#(_main_greeting_msg_1_1 + 0x0012)
+   02C7 74 73               820 	mov	a,#0x73
+   02C9 F0                  821 	movx	@dptr,a
+                            822 ;	genPointerSet
+                            823 ;     genFarPointerSet
+   02CA 90s00r56            824 	mov	dptr,#(_main_greeting_msg_1_1 + 0x0013)
+   02CD 74 20               825 	mov	a,#0x20
+   02CF F0                  826 	movx	@dptr,a
+                            827 ;	genPointerSet
+                            828 ;     genFarPointerSet
+   02D0 90s00r57            829 	mov	dptr,#(_main_greeting_msg_1_1 + 0x0014)
+   02D3 74 49               830 	mov	a,#0x49
+   02D5 F0                  831 	movx	@dptr,a
+                            832 ;	genPointerSet
+                            833 ;     genFarPointerSet
+   02D6 90s00r58            834 	mov	dptr,#(_main_greeting_msg_1_1 + 0x0015)
+   02D9 74 6E               835 	mov	a,#0x6E
+   02DB F0                  836 	movx	@dptr,a
+                            837 ;	genPointerSet
+                            838 ;     genFarPointerSet
+   02DC 90s00r59            839 	mov	dptr,#(_main_greeting_msg_1_1 + 0x0016)
+   02DF 74 74               840 	mov	a,#0x74
+   02E1 F0                  841 	movx	@dptr,a
+                            842 ;	genPointerSet
+                            843 ;     genFarPointerSet
+   02E2 90s00r5A            844 	mov	dptr,#(_main_greeting_msg_1_1 + 0x0017)
+   02E5 74 65               845 	mov	a,#0x65
+   02E7 F0                  846 	movx	@dptr,a
+                            847 ;	genPointerSet
+                            848 ;     genFarPointerSet
+   02E8 90s00r5B            849 	mov	dptr,#(_main_greeting_msg_1_1 + 0x0018)
+   02EB 74 72               850 	mov	a,#0x72
+   02ED F0                  851 	movx	@dptr,a
+                            852 ;	genPointerSet
+                            853 ;     genFarPointerSet
+   02EE 90s00r5C            854 	mov	dptr,#(_main_greeting_msg_1_1 + 0x0019)
+   02F1 74 72               855 	mov	a,#0x72
+   02F3 F0                  856 	movx	@dptr,a
+                            857 ;	genPointerSet
+                            858 ;     genFarPointerSet
+   02F4 90s00r5D            859 	mov	dptr,#(_main_greeting_msg_1_1 + 0x001a)
+   02F7 74 75               860 	mov	a,#0x75
+   02F9 F0                  861 	movx	@dptr,a
+                            862 ;	genPointerSet
+                            863 ;     genFarPointerSet
+   02FA 90s00r5E            864 	mov	dptr,#(_main_greeting_msg_1_1 + 0x001b)
+   02FD 74 70               865 	mov	a,#0x70
+   02FF F0                  866 	movx	@dptr,a
+                            867 ;	genPointerSet
+                            868 ;     genFarPointerSet
+   0300 90s00r5F            869 	mov	dptr,#(_main_greeting_msg_1_1 + 0x001c)
+   0303 74 74               870 	mov	a,#0x74
+   0305 F0                  871 	movx	@dptr,a
+                            872 ;	genPointerSet
+                            873 ;     genFarPointerSet
+   0306 90s00r60            874 	mov	dptr,#(_main_greeting_msg_1_1 + 0x001d)
+   0309 74 73               875 	mov	a,#0x73
+   030B F0                  876 	movx	@dptr,a
+                            877 ;	genPointerSet
+                            878 ;     genFarPointerSet
+   030C 90s00r61            879 	mov	dptr,#(_main_greeting_msg_1_1 + 0x001e)
+   030F 74 20               880 	mov	a,#0x20
+   0311 F0                  881 	movx	@dptr,a
+                            882 ;	genPointerSet
+                            883 ;     genFarPointerSet
+   0312 90s00r62            884 	mov	dptr,#(_main_greeting_msg_1_1 + 0x001f)
+   0315 74 74               885 	mov	a,#0x74
+   0317 F0                  886 	movx	@dptr,a
+                            887 ;	genPointerSet
+                            888 ;     genFarPointerSet
+   0318 90s00r63            889 	mov	dptr,#(_main_greeting_msg_1_1 + 0x0020)
+   031B 74 65               890 	mov	a,#0x65
+   031D F0                  891 	movx	@dptr,a
+                            892 ;	genPointerSet
+                            893 ;     genFarPointerSet
+   031E 90s00r64            894 	mov	dptr,#(_main_greeting_msg_1_1 + 0x0021)
+   0321 74 73               895 	mov	a,#0x73
+   0323 F0                  896 	movx	@dptr,a
+                            897 ;	genPointerSet
+                            898 ;     genFarPointerSet
+   0324 90s00r65            899 	mov	dptr,#(_main_greeting_msg_1_1 + 0x0022)
+   0327 74 74               900 	mov	a,#0x74
+   0329 F0                  901 	movx	@dptr,a
+                            902 ;	genPointerSet
+                            903 ;     genFarPointerSet
+   032A 90s00r66            904 	mov	dptr,#(_main_greeting_msg_1_1 + 0x0023)
+   032D 74 20               905 	mov	a,#0x20
+   032F F0                  906 	movx	@dptr,a
+                            907 ;	genPointerSet
+                            908 ;     genFarPointerSet
+   0330 90s00r67            909 	mov	dptr,#(_main_greeting_msg_1_1 + 0x0024)
+   0333 74 2A               910 	mov	a,#0x2A
+   0335 F0                  911 	movx	@dptr,a
+                            912 ;	genPointerSet
+                            913 ;     genFarPointerSet
+   0336 90s00r68            914 	mov	dptr,#(_main_greeting_msg_1_1 + 0x0025)
+   0339 74 0A               915 	mov	a,#0x0A
+   033B F0                  916 	movx	@dptr,a
+                            917 ;	genPointerSet
+                            918 ;     genFarPointerSet
+   033C 90s00r69            919 	mov	dptr,#(_main_greeting_msg_1_1 + 0x0026)
+   033F 74 0D               920 	mov	a,#0x0D
+   0341 F0                  921 	movx	@dptr,a
+                            922 ;	genPointerSet
+                            923 ;     genFarPointerSet
+   0342 90s00r6A            924 	mov	dptr,#(_main_greeting_msg_1_1 + 0x0027)
+   0345 74 00               925 	mov	a,#0x00
+   0347 F0                  926 	movx	@dptr,a
+                    0348    927 	C$main.c$119$1$1 ==.
+                            928 ;	../main.c:119: const uint8_t linefeed[] = "\n\r";
+                            929 ;	genPointerSet
+                            930 ;     genFarPointerSet
+   0348 90s00r6B            931 	mov	dptr,#_main_linefeed_1_1
+   034B 74 0A               932 	mov	a,#0x0A
+   034D F0                  933 	movx	@dptr,a
+                            934 ;	genPointerSet
+                            935 ;     genFarPointerSet
+   034E 90s00r6C            936 	mov	dptr,#(_main_linefeed_1_1 + 0x0001)
+   0351 74 0D               937 	mov	a,#0x0D
+   0353 F0                  938 	movx	@dptr,a
+                            939 ;	genPointerSet
+                            940 ;     genFarPointerSet
+   0354 90s00r6D            941 	mov	dptr,#(_main_linefeed_1_1 + 0x0002)
+   0357 74 00               942 	mov	a,#0x00
+   0359 F0                  943 	movx	@dptr,a
+                    035A    944 	C$main.c$120$1$1 ==.
+                            945 ;	../main.c:120: const uint8_t scanning_msg[] = "\n\r    Scanning......       \n\r";
+                            946 ;	genPointerSet
+                            947 ;     genFarPointerSet
+   035A 90s00r6E            948 	mov	dptr,#_main_scanning_msg_1_1
+   035D 74 0A               949 	mov	a,#0x0A
+   035F F0                  950 	movx	@dptr,a
+                            951 ;	genPointerSet
+                            952 ;     genFarPointerSet
+   0360 90s00r6F            953 	mov	dptr,#(_main_scanning_msg_1_1 + 0x0001)
+   0363 74 0D               954 	mov	a,#0x0D
+   0365 F0                  955 	movx	@dptr,a
+                            956 ;	genPointerSet
+                            957 ;     genFarPointerSet
+   0366 90s00r70            958 	mov	dptr,#(_main_scanning_msg_1_1 + 0x0002)
+   0369 74 20               959 	mov	a,#0x20
+   036B F0                  960 	movx	@dptr,a
+                            961 ;	genPointerSet
+                            962 ;     genFarPointerSet
+   036C 90s00r71            963 	mov	dptr,#(_main_scanning_msg_1_1 + 0x0003)
+   036F 74 20               964 	mov	a,#0x20
+   0371 F0                  965 	movx	@dptr,a
+                            966 ;	genPointerSet
+                            967 ;     genFarPointerSet
+   0372 90s00r72            968 	mov	dptr,#(_main_scanning_msg_1_1 + 0x0004)
+   0375 74 20               969 	mov	a,#0x20
+   0377 F0                  970 	movx	@dptr,a
+                            971 ;	genPointerSet
+                            972 ;     genFarPointerSet
+   0378 90s00r73            973 	mov	dptr,#(_main_scanning_msg_1_1 + 0x0005)
+   037B 74 20               974 	mov	a,#0x20
+   037D F0                  975 	movx	@dptr,a
+                            976 ;	genPointerSet
+                            977 ;     genFarPointerSet
+   037E 90s00r74            978 	mov	dptr,#(_main_scanning_msg_1_1 + 0x0006)
+   0381 74 53               979 	mov	a,#0x53
+   0383 F0                  980 	movx	@dptr,a
+                            981 ;	genPointerSet
+                            982 ;     genFarPointerSet
+   0384 90s00r75            983 	mov	dptr,#(_main_scanning_msg_1_1 + 0x0007)
+   0387 74 63               984 	mov	a,#0x63
+   0389 F0                  985 	movx	@dptr,a
+                            986 ;	genPointerSet
+                            987 ;     genFarPointerSet
+   038A 90s00r76            988 	mov	dptr,#(_main_scanning_msg_1_1 + 0x0008)
+   038D 74 61               989 	mov	a,#0x61
+   038F F0                  990 	movx	@dptr,a
+                            991 ;	genPointerSet
+                            992 ;     genFarPointerSet
+   0390 90s00r77            993 	mov	dptr,#(_main_scanning_msg_1_1 + 0x0009)
+   0393 74 6E               994 	mov	a,#0x6E
+   0395 F0                  995 	movx	@dptr,a
+                            996 ;	genPointerSet
+                            997 ;     genFarPointerSet
+   0396 90s00r78            998 	mov	dptr,#(_main_scanning_msg_1_1 + 0x000a)
+   0399 74 6E               999 	mov	a,#0x6E
+   039B F0                 1000 	movx	@dptr,a
+                           1001 ;	genPointerSet
+                           1002 ;     genFarPointerSet
+   039C 90s00r79           1003 	mov	dptr,#(_main_scanning_msg_1_1 + 0x000b)
+   039F 74 69              1004 	mov	a,#0x69
+   03A1 F0                 1005 	movx	@dptr,a
+                           1006 ;	genPointerSet
+                           1007 ;     genFarPointerSet
+   03A2 90s00r7A           1008 	mov	dptr,#(_main_scanning_msg_1_1 + 0x000c)
+   03A5 74 6E              1009 	mov	a,#0x6E
+   03A7 F0                 1010 	movx	@dptr,a
+                           1011 ;	genPointerSet
+                           1012 ;     genFarPointerSet
+   03A8 90s00r7B           1013 	mov	dptr,#(_main_scanning_msg_1_1 + 0x000d)
+   03AB 74 67              1014 	mov	a,#0x67
+   03AD F0                 1015 	movx	@dptr,a
+                           1016 ;	genPointerSet
+                           1017 ;     genFarPointerSet
+   03AE 90s00r7C           1018 	mov	dptr,#(_main_scanning_msg_1_1 + 0x000e)
+   03B1 74 2E              1019 	mov	a,#0x2E
+   03B3 F0                 1020 	movx	@dptr,a
+                           1021 ;	genPointerSet
+                           1022 ;     genFarPointerSet
+   03B4 90s00r7D           1023 	mov	dptr,#(_main_scanning_msg_1_1 + 0x000f)
+   03B7 74 2E              1024 	mov	a,#0x2E
+   03B9 F0                 1025 	movx	@dptr,a
+                           1026 ;	genPointerSet
+                           1027 ;     genFarPointerSet
+   03BA 90s00r7E           1028 	mov	dptr,#(_main_scanning_msg_1_1 + 0x0010)
+   03BD 74 2E              1029 	mov	a,#0x2E
+   03BF F0                 1030 	movx	@dptr,a
+                           1031 ;	genPointerSet
+                           1032 ;     genFarPointerSet
+   03C0 90s00r7F           1033 	mov	dptr,#(_main_scanning_msg_1_1 + 0x0011)
+   03C3 74 2E              1034 	mov	a,#0x2E
+   03C5 F0                 1035 	movx	@dptr,a
+                           1036 ;	genPointerSet
+                           1037 ;     genFarPointerSet
+   03C6 90s00r80           1038 	mov	dptr,#(_main_scanning_msg_1_1 + 0x0012)
+   03C9 74 2E              1039 	mov	a,#0x2E
+   03CB F0                 1040 	movx	@dptr,a
+                           1041 ;	genPointerSet
+                           1042 ;     genFarPointerSet
+   03CC 90s00r81           1043 	mov	dptr,#(_main_scanning_msg_1_1 + 0x0013)
+   03CF 74 2E              1044 	mov	a,#0x2E
+   03D1 F0                 1045 	movx	@dptr,a
+                           1046 ;	genPointerSet
+                           1047 ;     genFarPointerSet
+   03D2 90s00r82           1048 	mov	dptr,#(_main_scanning_msg_1_1 + 0x0014)
+   03D5 74 20              1049 	mov	a,#0x20
+   03D7 F0                 1050 	movx	@dptr,a
+                           1051 ;	genPointerSet
+                           1052 ;     genFarPointerSet
+   03D8 90s00r83           1053 	mov	dptr,#(_main_scanning_msg_1_1 + 0x0015)
+   03DB 74 20              1054 	mov	a,#0x20
+   03DD F0                 1055 	movx	@dptr,a
+                           1056 ;	genPointerSet
+                           1057 ;     genFarPointerSet
+   03DE 90s00r84           1058 	mov	dptr,#(_main_scanning_msg_1_1 + 0x0016)
+   03E1 74 20              1059 	mov	a,#0x20
+   03E3 F0                 1060 	movx	@dptr,a
+                           1061 ;	genPointerSet
+                           1062 ;     genFarPointerSet
+   03E4 90s00r85           1063 	mov	dptr,#(_main_scanning_msg_1_1 + 0x0017)
+   03E7 74 20              1064 	mov	a,#0x20
+   03E9 F0                 1065 	movx	@dptr,a
+                           1066 ;	genPointerSet
+                           1067 ;     genFarPointerSet
+   03EA 90s00r86           1068 	mov	dptr,#(_main_scanning_msg_1_1 + 0x0018)
+   03ED 74 20              1069 	mov	a,#0x20
+   03EF F0                 1070 	movx	@dptr,a
+                           1071 ;	genPointerSet
+                           1072 ;     genFarPointerSet
+   03F0 90s00r87           1073 	mov	dptr,#(_main_scanning_msg_1_1 + 0x0019)
+   03F3 74 20              1074 	mov	a,#0x20
+   03F5 F0                 1075 	movx	@dptr,a
+                           1076 ;	genPointerSet
+                           1077 ;     genFarPointerSet
+   03F6 90s00r88           1078 	mov	dptr,#(_main_scanning_msg_1_1 + 0x001a)
+   03F9 74 20              1079 	mov	a,#0x20
+   03FB F0                 1080 	movx	@dptr,a
+                           1081 ;	genPointerSet
+                           1082 ;     genFarPointerSet
+   03FC 90s00r89           1083 	mov	dptr,#(_main_scanning_msg_1_1 + 0x001b)
+   03FF 74 0A              1084 	mov	a,#0x0A
+   0401 F0                 1085 	movx	@dptr,a
+                           1086 ;	genPointerSet
+                           1087 ;     genFarPointerSet
+   0402 90s00r8A           1088 	mov	dptr,#(_main_scanning_msg_1_1 + 0x001c)
+   0405 74 0D              1089 	mov	a,#0x0D
+   0407 F0                 1090 	movx	@dptr,a
+                           1091 ;	genPointerSet
+                           1092 ;     genFarPointerSet
+   0408 90s00r8B           1093 	mov	dptr,#(_main_scanning_msg_1_1 + 0x001d)
+   040B 74 00              1094 	mov	a,#0x00
+   040D F0                 1095 	movx	@dptr,a
+                    040E   1096 	C$main.c$121$1$1 ==.
+                           1097 ;	../main.c:121: enable_8051_interrupts( );
+                           1098 ;	genCall
+   040E 12s02r4C           1099 	lcall	_enable_8051_interrupts
+                    0411   1100 	C$main.c$126$1$1 ==.
+                           1101 ;	../main.c:126: UART_init( &g_uart0, APB3_BASE_ADDRESS + COREUARTAPB_0,      UART_9600_BAUD, DATA_8_BITS | NO_PARITY );
+                           1102 ;	genAssign
+   0411 90s00r00           1103 	mov	dptr,#_UART_init_PARM_2
+   0414 74 00              1104 	mov	a,#0x00
+   0416 F0                 1105 	movx	@dptr,a
+   0417 A3                 1106 	inc	dptr
+   0418 74 F0              1107 	mov	a,#0xF0
+   041A F0                 1108 	movx	@dptr,a
+                           1109 ;	genAssign
+   041B 90s00r00           1110 	mov	dptr,#_UART_init_PARM_3
+   041E 74 26              1111 	mov	a,#0x26
+   0420 F0                 1112 	movx	@dptr,a
+   0421 E4                 1113 	clr	a
+   0422 A3                 1114 	inc	dptr
+   0423 F0                 1115 	movx	@dptr,a
+                           1116 ;	genAssign
+   0424 90s00r00           1117 	mov	dptr,#_UART_init_PARM_4
+   0427 74 01              1118 	mov	a,#0x01
+   0429 F0                 1119 	movx	@dptr,a
+                           1120 ;	genCall
+   042A 75 82r03           1121 	mov	dpl,#_g_uart0
+   042D 75 83s00           1122 	mov	dph,#(_g_uart0 >> 8)
+   0430 75 F0 00           1123 	mov	b,#0x00
+   0433 12s00r00           1124 	lcall	_UART_init
+                    0436   1125 	C$main.c$127$1$1 ==.
+                           1126 ;	../main.c:127: WD_init( &g_wd, APB3_BASE_ADDRESS + COREWATCHDOG_0,     WatchDog_COUNT, WD_PRESCALER_DIV_16 );
+                           1127 ;	genAssign
+   0436 90s00r00           1128 	mov	dptr,#_WD_init_PARM_2
+   0439 74 00              1129 	mov	a,#0x00
+   043B F0                 1130 	movx	@dptr,a
+   043C A3                 1131 	inc	dptr
+   043D 74 F3              1132 	mov	a,#0xF3
+   043F F0                 1133 	movx	@dptr,a
+                           1134 ;	genAssign
+   0440 90s00r00           1135 	mov	dptr,#_WD_init_PARM_3
+   0443 74 E8              1136 	mov	a,#0xE8
+   0445 F0                 1137 	movx	@dptr,a
+   0446 A3                 1138 	inc	dptr
+   0447 74 03              1139 	mov	a,#0x03
+   0449 F0                 1140 	movx	@dptr,a
+   044A A3                 1141 	inc	dptr
+   044B 74 00              1142 	mov	a,#0x00
+   044D F0                 1143 	movx	@dptr,a
+   044E A3                 1144 	inc	dptr
+   044F 74 00              1145 	mov	a,#0x00
+   0451 F0                 1146 	movx	@dptr,a
+                           1147 ;	genAssign
+   0452 90s00r00           1148 	mov	dptr,#_WD_init_PARM_4
+   0455 74 03              1149 	mov	a,#0x03
+   0457 F0                 1150 	movx	@dptr,a
+   0458 E4                 1151 	clr	a
+   0459 A3                 1152 	inc	dptr
+   045A F0                 1153 	movx	@dptr,a
+   045B A3                 1154 	inc	dptr
+   045C F0                 1155 	movx	@dptr,a
+   045D A3                 1156 	inc	dptr
+   045E F0                 1157 	movx	@dptr,a
+                           1158 ;	genCall
+   045F 75 82r06           1159 	mov	dpl,#_g_wd
+   0462 75 83s00           1160 	mov	dph,#(_g_wd >> 8)
+   0465 75 F0 00           1161 	mov	b,#0x00
+   0468 12s00r00           1162 	lcall	_WD_init
+                    046B   1163 	C$main.c$128$1$1 ==.
+                           1164 ;	../main.c:128: WD_disable( &g_wd );
+                           1165 ;	genCall
+   046B 75 82r06           1166 	mov	dpl,#_g_wd
+   046E 75 83s00           1167 	mov	dph,#(_g_wd >> 8)
+   0471 75 F0 00           1168 	mov	b,#0x00
+   0474 12s00r00           1169 	lcall	_WD_disable
+                    0477   1170 	C$main.c$129$1$1 ==.
+                           1171 ;	../main.c:129: GPIO_init( &g_gpio,APB3_BASE_ADDRESS + COREGPIO_0, GPIO_APB_32_BITS_BUS );
+                           1172 ;	genAssign
+   0477 90s00r00           1173 	mov	dptr,#_GPIO_init_PARM_2
+   047A 74 00              1174 	mov	a,#0x00
+   047C F0                 1175 	movx	@dptr,a
+   047D A3                 1176 	inc	dptr
+   047E 74 F1              1177 	mov	a,#0xF1
+   0480 F0                 1178 	movx	@dptr,a
+                           1179 ;	genAssign
+   0481 90s00r00           1180 	mov	dptr,#_GPIO_init_PARM_3
+   0484 74 02              1181 	mov	a,#0x02
+   0486 F0                 1182 	movx	@dptr,a
+                           1183 ;	genCall
+   0487 75 82r00           1184 	mov	dpl,#_g_gpio
+   048A 75 83s00           1185 	mov	dph,#(_g_gpio >> 8)
+   048D 75 F0 00           1186 	mov	b,#0x00
+   0490 12s00r00           1187 	lcall	_GPIO_init
+                    0493   1188 	C$main.c$135$1$1 ==.
+                           1189 ;	../main.c:135: GPIO_config( &g_gpio, LED_D0, GPIO_OUTPUT_MODE );
+                           1190 ;	genAssign
+   0493 90s00r00           1191 	mov	dptr,#_GPIO_config_PARM_2
+   0496 74 00              1192 	mov	a,#0x00
+   0498 F0                 1193 	movx	@dptr,a
+                           1194 ;	genAssign
+   0499 90s00r00           1195 	mov	dptr,#_GPIO_config_PARM_3
+   049C 74 05              1196 	mov	a,#0x05
+   049E F0                 1197 	movx	@dptr,a
+   049F E4                 1198 	clr	a
+   04A0 A3                 1199 	inc	dptr
+   04A1 F0                 1200 	movx	@dptr,a
+   04A2 A3                 1201 	inc	dptr
+   04A3 F0                 1202 	movx	@dptr,a
+   04A4 A3                 1203 	inc	dptr
+   04A5 F0                 1204 	movx	@dptr,a
+                           1205 ;	genCall
+   04A6 75 82r00           1206 	mov	dpl,#_g_gpio
+   04A9 75 83s00           1207 	mov	dph,#(_g_gpio >> 8)
+   04AC 75 F0 00           1208 	mov	b,#0x00
+   04AF 12s00r00           1209 	lcall	_GPIO_config
+                    04B2   1210 	C$main.c$136$1$1 ==.
+                           1211 ;	../main.c:136: GPIO_config( &g_gpio, LED_D5, GPIO_OUTPUT_MODE );
+                           1212 ;	genAssign
+   04B2 90s00r00           1213 	mov	dptr,#_GPIO_config_PARM_2
+   04B5 74 05              1214 	mov	a,#0x05
+   04B7 F0                 1215 	movx	@dptr,a
+                           1216 ;	genAssign
+   04B8 90s00r00           1217 	mov	dptr,#_GPIO_config_PARM_3
+   04BB 74 05              1218 	mov	a,#0x05
+   04BD F0                 1219 	movx	@dptr,a
+   04BE E4                 1220 	clr	a
+   04BF A3                 1221 	inc	dptr
+   04C0 F0                 1222 	movx	@dptr,a
+   04C1 A3                 1223 	inc	dptr
+   04C2 F0                 1224 	movx	@dptr,a
+   04C3 A3                 1225 	inc	dptr
+   04C4 F0                 1226 	movx	@dptr,a
+                           1227 ;	genCall
+   04C5 75 82r00           1228 	mov	dpl,#_g_gpio
+   04C8 75 83s00           1229 	mov	dph,#(_g_gpio >> 8)
+   04CB 75 F0 00           1230 	mov	b,#0x00
+   04CE 12s00r00           1231 	lcall	_GPIO_config
+                    04D1   1232 	C$main.c$139$1$1 ==.
+                           1233 ;	../main.c:139: TMR_init( &g_timer0, APB3_BASE_ADDRESS + CORETIMER_0,                 TMR_CONTINUOUS_MODE,PRESCALER_DIV_1024, TIMER_LOAD_VALUE );
+                           1234 ;	genAssign
+   04D1 90s00r00           1235 	mov	dptr,#_TMR_init_PARM_2
+   04D4 74 00              1236 	mov	a,#0x00
+   04D6 F0                 1237 	movx	@dptr,a
+   04D7 A3                 1238 	inc	dptr
+   04D8 74 F2              1239 	mov	a,#0xF2
+   04DA F0                 1240 	movx	@dptr,a
+                           1241 ;	genAssign
+   04DB 90s00r00           1242 	mov	dptr,#_TMR_init_PARM_3
+   04DE 74 00              1243 	mov	a,#0x00
+   04E0 F0                 1244 	movx	@dptr,a
+                           1245 ;	genAssign
+   04E1 90s00r00           1246 	mov	dptr,#_TMR_init_PARM_4
+   04E4 74 09              1247 	mov	a,#0x09
+   04E6 F0                 1248 	movx	@dptr,a
+   04E7 E4                 1249 	clr	a
+   04E8 A3                 1250 	inc	dptr
+   04E9 F0                 1251 	movx	@dptr,a
+   04EA A3                 1252 	inc	dptr
+   04EB F0                 1253 	movx	@dptr,a
+   04EC A3                 1254 	inc	dptr
+   04ED F0                 1255 	movx	@dptr,a
+                           1256 ;	genAssign
+   04EE 90s00r00           1257 	mov	dptr,#_TMR_init_PARM_5
+   04F1 74 8C              1258 	mov	a,#0x8C
+   04F3 F0                 1259 	movx	@dptr,a
+   04F4 A3                 1260 	inc	dptr
+   04F5 74 5B              1261 	mov	a,#0x5B
+   04F7 F0                 1262 	movx	@dptr,a
+   04F8 A3                 1263 	inc	dptr
+   04F9 74 00              1264 	mov	a,#0x00
+   04FB F0                 1265 	movx	@dptr,a
+   04FC A3                 1266 	inc	dptr
+   04FD 74 00              1267 	mov	a,#0x00
+   04FF F0                 1268 	movx	@dptr,a
+                           1269 ;	genCall
+   0500 75 82r08           1270 	mov	dpl,#_g_timer0
+   0503 75 83s00           1271 	mov	dph,#(_g_timer0 >> 8)
+   0506 75 F0 00           1272 	mov	b,#0x00
+   0509 12s00r00           1273 	lcall	_TMR_init
+                    050C   1274 	C$main.c$148$1$1 ==.
+                           1275 ;	../main.c:148: UART_send( &g_uart0, greeting_msg, sizeof(greeting_msg) );
+                           1276 ;	genCast
+   050C 90s00r00           1277 	mov	dptr,#_UART_send_PARM_2
+   050F 74r43              1278 	mov	a,#_main_greeting_msg_1_1
+   0511 F0                 1279 	movx	@dptr,a
+   0512 A3                 1280 	inc	dptr
+   0513 74s00              1281 	mov	a,#(_main_greeting_msg_1_1 >> 8)
+   0515 F0                 1282 	movx	@dptr,a
+   0516 A3                 1283 	inc	dptr
+   0517 74 00              1284 	mov	a,#0x0
+   0519 F0                 1285 	movx	@dptr,a
+                           1286 ;	genAssign
+   051A 90s00r00           1287 	mov	dptr,#_UART_send_PARM_3
+   051D 74 28              1288 	mov	a,#0x28
+   051F F0                 1289 	movx	@dptr,a
+   0520 E4                 1290 	clr	a
+   0521 A3                 1291 	inc	dptr
+   0522 F0                 1292 	movx	@dptr,a
+                           1293 ;	genCall
+   0523 75 82r03           1294 	mov	dpl,#_g_uart0
+   0526 75 83s00           1295 	mov	dph,#(_g_uart0 >> 8)
+   0529 75 F0 00           1296 	mov	b,#0x00
+   052C 12s00r00           1297 	lcall	_UART_send
+                    052F   1298 	C$main.c$149$1$1 ==.
+                           1299 ;	../main.c:149: UART_send( &g_uart0, linefeed, sizeof(linefeed) );
+                           1300 ;	genCast
+   052F 90s00r00           1301 	mov	dptr,#_UART_send_PARM_2
+   0532 74r6B              1302 	mov	a,#_main_linefeed_1_1
+   0534 F0                 1303 	movx	@dptr,a
+   0535 A3                 1304 	inc	dptr
+   0536 74s00              1305 	mov	a,#(_main_linefeed_1_1 >> 8)
+   0538 F0                 1306 	movx	@dptr,a
+   0539 A3                 1307 	inc	dptr
+   053A 74 00              1308 	mov	a,#0x0
+   053C F0                 1309 	movx	@dptr,a
+                           1310 ;	genAssign
+   053D 90s00r00           1311 	mov	dptr,#_UART_send_PARM_3
+   0540 74 03              1312 	mov	a,#0x03
+   0542 F0                 1313 	movx	@dptr,a
+   0543 E4                 1314 	clr	a
+   0544 A3                 1315 	inc	dptr
+   0545 F0                 1316 	movx	@dptr,a
+                           1317 ;	genCall
+   0546 75 82r03           1318 	mov	dpl,#_g_uart0
+   0549 75 83s00           1319 	mov	dph,#(_g_uart0 >> 8)
+   054C 75 F0 00           1320 	mov	b,#0x00
+   054F 12s00r00           1321 	lcall	_UART_send
+                    0552   1322 	C$main.c$152$1$1 ==.
+                           1323 ;	../main.c:152: TMR_enable_int( &g_timer0 );
+                           1324 ;	genCall
+   0552 75 82r08           1325 	mov	dpl,#_g_timer0
+   0555 75 83s00           1326 	mov	dph,#(_g_timer0 >> 8)
+   0558 75 F0 00           1327 	mov	b,#0x00
+   055B 12s00r00           1328 	lcall	_TMR_enable_int
+                    055E   1329 	C$main.c$154$1$1 ==.
+                           1330 ;	../main.c:154: TMR_start( &g_timer0 );
+                           1331 ;	genCall
+   055E 75 82r08           1332 	mov	dpl,#_g_timer0
+   0561 75 83s00           1333 	mov	dph,#(_g_timer0 >> 8)
+   0564 75 F0 00           1334 	mov	b,#0x00
+   0567 12s00r00           1335 	lcall	_TMR_start
+                    056A   1336 	C$main.c$157$1$1 ==.
+                           1337 ;	../main.c:157: GPIO_set_output( &g_gpio, LED_D0, 0);
+                           1338 ;	genAssign
+   056A 90s00r00           1339 	mov	dptr,#_GPIO_set_output_PARM_2
+   056D 74 00              1340 	mov	a,#0x00
+   056F F0                 1341 	movx	@dptr,a
+                           1342 ;	genAssign
+   0570 90s00r00           1343 	mov	dptr,#_GPIO_set_output_PARM_3
+   0573 74 00              1344 	mov	a,#0x00
+   0575 F0                 1345 	movx	@dptr,a
+                           1346 ;	genCall
+   0576 75 82r00           1347 	mov	dpl,#_g_gpio
+   0579 75 83s00           1348 	mov	dph,#(_g_gpio >> 8)
+   057C 75 F0 00           1349 	mov	b,#0x00
+   057F 12s00r00           1350 	lcall	_GPIO_set_output
+                    0582   1351 	C$main.c$161$1$1 ==.
+                           1352 ;	../main.c:161: while( 1 )
+   0582                    1353 00102$:
+   0582 02s05r82           1354 	ljmp	00102$
+   0585                    1355 00104$:
+                    0585   1356 	C$main.c$166$1$1 ==.
+                    0585   1357 	XG$main$0$0 ==.
+   0585 22                 1358 	ret
+                           1359 	.area CSEG    (CODE)
+                           1360 	.area CONST   (CODE)
+                           1361 	.area XINIT   (CODE)
+                           1362 	.area CABS    (ABS,CODE)

@@ -1,0 +1,1438 @@
+                              1 ;--------------------------------------------------------
+                              2 ; File Created by SDCC : FreeWare ANSI-C Compiler
+                              3 ; Version 2.6.3 #4543 (Dec 31 2006)
+                              4 ; This file generated Thu May 02 13:30:19 2013
+                              5 ;--------------------------------------------------------
+                              6 	.module ___apb_flash_loader
+                              7 	.optsdcc -mmcs51 --model-small
+                              8 	
+                              9 ;--------------------------------------------------------
+                             10 ; Public variables in this module
+                             11 ;--------------------------------------------------------
+                             12 	.globl _FLASH
+                             13 	.globl _ascii
+                             14 	.globl _main
+                             15 	.globl _CY
+                             16 	.globl _AC
+                             17 	.globl _F0
+                             18 	.globl _RS1
+                             19 	.globl _RS0
+                             20 	.globl _OV
+                             21 	.globl _F1
+                             22 	.globl _P
+                             23 	.globl _PS
+                             24 	.globl _PT1
+                             25 	.globl _PX1
+                             26 	.globl _PT0
+                             27 	.globl _PX0
+                             28 	.globl _RD
+                             29 	.globl _WR
+                             30 	.globl _T1
+                             31 	.globl _T0
+                             32 	.globl _INT1
+                             33 	.globl _INT0
+                             34 	.globl _TXD
+                             35 	.globl _RXD
+                             36 	.globl _P3_7
+                             37 	.globl _P3_6
+                             38 	.globl _P3_5
+                             39 	.globl _P3_4
+                             40 	.globl _P3_3
+                             41 	.globl _P3_2
+                             42 	.globl _P3_1
+                             43 	.globl _P3_0
+                             44 	.globl _EA
+                             45 	.globl _ES
+                             46 	.globl _ET1
+                             47 	.globl _EX1
+                             48 	.globl _ET0
+                             49 	.globl _EX0
+                             50 	.globl _P2_7
+                             51 	.globl _P2_6
+                             52 	.globl _P2_5
+                             53 	.globl _P2_4
+                             54 	.globl _P2_3
+                             55 	.globl _P2_2
+                             56 	.globl _P2_1
+                             57 	.globl _P2_0
+                             58 	.globl _SM0
+                             59 	.globl _SM1
+                             60 	.globl _SM2
+                             61 	.globl _REN
+                             62 	.globl _TB8
+                             63 	.globl _RB8
+                             64 	.globl _TI
+                             65 	.globl _RI
+                             66 	.globl _P1_7
+                             67 	.globl _P1_6
+                             68 	.globl _P1_5
+                             69 	.globl _P1_4
+                             70 	.globl _P1_3
+                             71 	.globl _P1_2
+                             72 	.globl _P1_1
+                             73 	.globl _P1_0
+                             74 	.globl _TF1
+                             75 	.globl _TR1
+                             76 	.globl _TF0
+                             77 	.globl _TR0
+                             78 	.globl _IE1
+                             79 	.globl _IT1
+                             80 	.globl _IE0
+                             81 	.globl _IT0
+                             82 	.globl _P0_7
+                             83 	.globl _P0_6
+                             84 	.globl _P0_5
+                             85 	.globl _P0_4
+                             86 	.globl _P0_3
+                             87 	.globl _P0_2
+                             88 	.globl _P0_1
+                             89 	.globl _P0_0
+                             90 	.globl _B
+                             91 	.globl _ACC
+                             92 	.globl _PSW
+                             93 	.globl _IP
+                             94 	.globl _P3
+                             95 	.globl _IE
+                             96 	.globl _P2
+                             97 	.globl _SBUF
+                             98 	.globl _SCON
+                             99 	.globl _P1
+                            100 	.globl _TH1
+                            101 	.globl _TH0
+                            102 	.globl _TL1
+                            103 	.globl _TL0
+                            104 	.globl _TMOD
+                            105 	.globl _TCON
+                            106 	.globl _PCON
+                            107 	.globl _DPH
+                            108 	.globl _DPL
+                            109 	.globl _SP
+                            110 	.globl _P0
+                            111 	.globl _xdata_buffer
+                            112 	.globl _FlashProgramPage_PARM_3
+                            113 	.globl _FlashProgramPage_PARM_2
+                            114 	.globl _SRAM_BASE_ADDR
+                            115 	.globl _UART0_BASE_ADDR
+                            116 	.globl _FLASH_BASE_ADDR
+                            117 	.globl _GPIO_BASE_ADDR
+                            118 	.globl _uart_config
+                            119 	.globl _uartWaitXmt
+                            120 	.globl _uartWaitRxd
+                            121 	.globl _uart_getchar
+                            122 	.globl _uart_putchar
+                            123 	.globl _printf
+                            124 	.globl _FlashErasePage
+                            125 	.globl _FlashProgramPage
+                            126 	.globl _FlashBusyCheck
+                            127 ;--------------------------------------------------------
+                            128 ; special function registers
+                            129 ;--------------------------------------------------------
+                            130 	.area RSEG    (DATA)
+                    0080    131 G$P0$0$0 == 0x0080
+                    0080    132 _P0	=	0x0080
+                    0081    133 G$SP$0$0 == 0x0081
+                    0081    134 _SP	=	0x0081
+                    0082    135 G$DPL$0$0 == 0x0082
+                    0082    136 _DPL	=	0x0082
+                    0083    137 G$DPH$0$0 == 0x0083
+                    0083    138 _DPH	=	0x0083
+                    0087    139 G$PCON$0$0 == 0x0087
+                    0087    140 _PCON	=	0x0087
+                    0088    141 G$TCON$0$0 == 0x0088
+                    0088    142 _TCON	=	0x0088
+                    0089    143 G$TMOD$0$0 == 0x0089
+                    0089    144 _TMOD	=	0x0089
+                    008A    145 G$TL0$0$0 == 0x008a
+                    008A    146 _TL0	=	0x008a
+                    008B    147 G$TL1$0$0 == 0x008b
+                    008B    148 _TL1	=	0x008b
+                    008C    149 G$TH0$0$0 == 0x008c
+                    008C    150 _TH0	=	0x008c
+                    008D    151 G$TH1$0$0 == 0x008d
+                    008D    152 _TH1	=	0x008d
+                    0090    153 G$P1$0$0 == 0x0090
+                    0090    154 _P1	=	0x0090
+                    0098    155 G$SCON$0$0 == 0x0098
+                    0098    156 _SCON	=	0x0098
+                    0099    157 G$SBUF$0$0 == 0x0099
+                    0099    158 _SBUF	=	0x0099
+                    00A0    159 G$P2$0$0 == 0x00a0
+                    00A0    160 _P2	=	0x00a0
+                    00A8    161 G$IE$0$0 == 0x00a8
+                    00A8    162 _IE	=	0x00a8
+                    00B0    163 G$P3$0$0 == 0x00b0
+                    00B0    164 _P3	=	0x00b0
+                    00B8    165 G$IP$0$0 == 0x00b8
+                    00B8    166 _IP	=	0x00b8
+                    00D0    167 G$PSW$0$0 == 0x00d0
+                    00D0    168 _PSW	=	0x00d0
+                    00E0    169 G$ACC$0$0 == 0x00e0
+                    00E0    170 _ACC	=	0x00e0
+                    00F0    171 G$B$0$0 == 0x00f0
+                    00F0    172 _B	=	0x00f0
+                            173 ;--------------------------------------------------------
+                            174 ; special function bits
+                            175 ;--------------------------------------------------------
+                            176 	.area RSEG    (DATA)
+                    0080    177 G$P0_0$0$0 == 0x0080
+                    0080    178 _P0_0	=	0x0080
+                    0081    179 G$P0_1$0$0 == 0x0081
+                    0081    180 _P0_1	=	0x0081
+                    0082    181 G$P0_2$0$0 == 0x0082
+                    0082    182 _P0_2	=	0x0082
+                    0083    183 G$P0_3$0$0 == 0x0083
+                    0083    184 _P0_3	=	0x0083
+                    0084    185 G$P0_4$0$0 == 0x0084
+                    0084    186 _P0_4	=	0x0084
+                    0085    187 G$P0_5$0$0 == 0x0085
+                    0085    188 _P0_5	=	0x0085
+                    0086    189 G$P0_6$0$0 == 0x0086
+                    0086    190 _P0_6	=	0x0086
+                    0087    191 G$P0_7$0$0 == 0x0087
+                    0087    192 _P0_7	=	0x0087
+                    0088    193 G$IT0$0$0 == 0x0088
+                    0088    194 _IT0	=	0x0088
+                    0089    195 G$IE0$0$0 == 0x0089
+                    0089    196 _IE0	=	0x0089
+                    008A    197 G$IT1$0$0 == 0x008a
+                    008A    198 _IT1	=	0x008a
+                    008B    199 G$IE1$0$0 == 0x008b
+                    008B    200 _IE1	=	0x008b
+                    008C    201 G$TR0$0$0 == 0x008c
+                    008C    202 _TR0	=	0x008c
+                    008D    203 G$TF0$0$0 == 0x008d
+                    008D    204 _TF0	=	0x008d
+                    008E    205 G$TR1$0$0 == 0x008e
+                    008E    206 _TR1	=	0x008e
+                    008F    207 G$TF1$0$0 == 0x008f
+                    008F    208 _TF1	=	0x008f
+                    0090    209 G$P1_0$0$0 == 0x0090
+                    0090    210 _P1_0	=	0x0090
+                    0091    211 G$P1_1$0$0 == 0x0091
+                    0091    212 _P1_1	=	0x0091
+                    0092    213 G$P1_2$0$0 == 0x0092
+                    0092    214 _P1_2	=	0x0092
+                    0093    215 G$P1_3$0$0 == 0x0093
+                    0093    216 _P1_3	=	0x0093
+                    0094    217 G$P1_4$0$0 == 0x0094
+                    0094    218 _P1_4	=	0x0094
+                    0095    219 G$P1_5$0$0 == 0x0095
+                    0095    220 _P1_5	=	0x0095
+                    0096    221 G$P1_6$0$0 == 0x0096
+                    0096    222 _P1_6	=	0x0096
+                    0097    223 G$P1_7$0$0 == 0x0097
+                    0097    224 _P1_7	=	0x0097
+                    0098    225 G$RI$0$0 == 0x0098
+                    0098    226 _RI	=	0x0098
+                    0099    227 G$TI$0$0 == 0x0099
+                    0099    228 _TI	=	0x0099
+                    009A    229 G$RB8$0$0 == 0x009a
+                    009A    230 _RB8	=	0x009a
+                    009B    231 G$TB8$0$0 == 0x009b
+                    009B    232 _TB8	=	0x009b
+                    009C    233 G$REN$0$0 == 0x009c
+                    009C    234 _REN	=	0x009c
+                    009D    235 G$SM2$0$0 == 0x009d
+                    009D    236 _SM2	=	0x009d
+                    009E    237 G$SM1$0$0 == 0x009e
+                    009E    238 _SM1	=	0x009e
+                    009F    239 G$SM0$0$0 == 0x009f
+                    009F    240 _SM0	=	0x009f
+                    00A0    241 G$P2_0$0$0 == 0x00a0
+                    00A0    242 _P2_0	=	0x00a0
+                    00A1    243 G$P2_1$0$0 == 0x00a1
+                    00A1    244 _P2_1	=	0x00a1
+                    00A2    245 G$P2_2$0$0 == 0x00a2
+                    00A2    246 _P2_2	=	0x00a2
+                    00A3    247 G$P2_3$0$0 == 0x00a3
+                    00A3    248 _P2_3	=	0x00a3
+                    00A4    249 G$P2_4$0$0 == 0x00a4
+                    00A4    250 _P2_4	=	0x00a4
+                    00A5    251 G$P2_5$0$0 == 0x00a5
+                    00A5    252 _P2_5	=	0x00a5
+                    00A6    253 G$P2_6$0$0 == 0x00a6
+                    00A6    254 _P2_6	=	0x00a6
+                    00A7    255 G$P2_7$0$0 == 0x00a7
+                    00A7    256 _P2_7	=	0x00a7
+                    00A8    257 G$EX0$0$0 == 0x00a8
+                    00A8    258 _EX0	=	0x00a8
+                    00A9    259 G$ET0$0$0 == 0x00a9
+                    00A9    260 _ET0	=	0x00a9
+                    00AA    261 G$EX1$0$0 == 0x00aa
+                    00AA    262 _EX1	=	0x00aa
+                    00AB    263 G$ET1$0$0 == 0x00ab
+                    00AB    264 _ET1	=	0x00ab
+                    00AC    265 G$ES$0$0 == 0x00ac
+                    00AC    266 _ES	=	0x00ac
+                    00AF    267 G$EA$0$0 == 0x00af
+                    00AF    268 _EA	=	0x00af
+                    00B0    269 G$P3_0$0$0 == 0x00b0
+                    00B0    270 _P3_0	=	0x00b0
+                    00B1    271 G$P3_1$0$0 == 0x00b1
+                    00B1    272 _P3_1	=	0x00b1
+                    00B2    273 G$P3_2$0$0 == 0x00b2
+                    00B2    274 _P3_2	=	0x00b2
+                    00B3    275 G$P3_3$0$0 == 0x00b3
+                    00B3    276 _P3_3	=	0x00b3
+                    00B4    277 G$P3_4$0$0 == 0x00b4
+                    00B4    278 _P3_4	=	0x00b4
+                    00B5    279 G$P3_5$0$0 == 0x00b5
+                    00B5    280 _P3_5	=	0x00b5
+                    00B6    281 G$P3_6$0$0 == 0x00b6
+                    00B6    282 _P3_6	=	0x00b6
+                    00B7    283 G$P3_7$0$0 == 0x00b7
+                    00B7    284 _P3_7	=	0x00b7
+                    00B0    285 G$RXD$0$0 == 0x00b0
+                    00B0    286 _RXD	=	0x00b0
+                    00B1    287 G$TXD$0$0 == 0x00b1
+                    00B1    288 _TXD	=	0x00b1
+                    00B2    289 G$INT0$0$0 == 0x00b2
+                    00B2    290 _INT0	=	0x00b2
+                    00B3    291 G$INT1$0$0 == 0x00b3
+                    00B3    292 _INT1	=	0x00b3
+                    00B4    293 G$T0$0$0 == 0x00b4
+                    00B4    294 _T0	=	0x00b4
+                    00B5    295 G$T1$0$0 == 0x00b5
+                    00B5    296 _T1	=	0x00b5
+                    00B6    297 G$WR$0$0 == 0x00b6
+                    00B6    298 _WR	=	0x00b6
+                    00B7    299 G$RD$0$0 == 0x00b7
+                    00B7    300 _RD	=	0x00b7
+                    00B8    301 G$PX0$0$0 == 0x00b8
+                    00B8    302 _PX0	=	0x00b8
+                    00B9    303 G$PT0$0$0 == 0x00b9
+                    00B9    304 _PT0	=	0x00b9
+                    00BA    305 G$PX1$0$0 == 0x00ba
+                    00BA    306 _PX1	=	0x00ba
+                    00BB    307 G$PT1$0$0 == 0x00bb
+                    00BB    308 _PT1	=	0x00bb
+                    00BC    309 G$PS$0$0 == 0x00bc
+                    00BC    310 _PS	=	0x00bc
+                    00D0    311 G$P$0$0 == 0x00d0
+                    00D0    312 _P	=	0x00d0
+                    00D1    313 G$F1$0$0 == 0x00d1
+                    00D1    314 _F1	=	0x00d1
+                    00D2    315 G$OV$0$0 == 0x00d2
+                    00D2    316 _OV	=	0x00d2
+                    00D3    317 G$RS0$0$0 == 0x00d3
+                    00D3    318 _RS0	=	0x00d3
+                    00D4    319 G$RS1$0$0 == 0x00d4
+                    00D4    320 _RS1	=	0x00d4
+                    00D5    321 G$F0$0$0 == 0x00d5
+                    00D5    322 _F0	=	0x00d5
+                    00D6    323 G$AC$0$0 == 0x00d6
+                    00D6    324 _AC	=	0x00d6
+                    00D7    325 G$CY$0$0 == 0x00d7
+                    00D7    326 _CY	=	0x00d7
+                            327 ;--------------------------------------------------------
+                            328 ; overlayable register banks
+                            329 ;--------------------------------------------------------
+                            330 	.area REG_BANK_0	(REL,OVR,DATA)
+   0000                     331 	.ds 8
+                            332 ;--------------------------------------------------------
+                            333 ; internal ram data
+                            334 ;--------------------------------------------------------
+                            335 	.area DSEG    (DATA)
+                    0000    336 G$GPIO_BASE_ADDR$0$0==.
+   0000                     337 _GPIO_BASE_ADDR::
+   0000                     338 	.ds 2
+                    0002    339 G$FLASH_BASE_ADDR$0$0==.
+   0002                     340 _FLASH_BASE_ADDR::
+   0002                     341 	.ds 2
+                    0004    342 G$UART0_BASE_ADDR$0$0==.
+   0004                     343 _UART0_BASE_ADDR::
+   0004                     344 	.ds 2
+                    0006    345 G$SRAM_BASE_ADDR$0$0==.
+   0006                     346 _SRAM_BASE_ADDR::
+   0006                     347 	.ds 2
+                    0008    348 F___apb_flash_loader$checkSum$0$0==.
+   0008                     349 _checkSum:
+   0008                     350 	.ds 1
+                    0009    351 LFlashProgramPage$addr$1$1==.
+   0009                     352 _FlashProgramPage_PARM_2:
+   0009                     353 	.ds 2
+                    000B    354 LFlashProgramPage$size$1$1==.
+   000B                     355 _FlashProgramPage_PARM_3:
+   000B                     356 	.ds 1
+                    000C    357 LFlashProgramPage$buffer$1$1==.
+   000C                     358 _FlashProgramPage_buffer_1_1:
+   000C                     359 	.ds 3
+                            360 ;--------------------------------------------------------
+                            361 ; overlayable items in internal ram 
+                            362 ;--------------------------------------------------------
+                            363 	.area OSEG    (OVR,DATA)
+                            364 ;--------------------------------------------------------
+                            365 ; Stack segment in internal ram 
+                            366 ;--------------------------------------------------------
+                            367 	.area	SSEG	(DATA)
+   0000                     368 __start__stack:
+   0000                     369 	.ds	1
+                            370 
+                            371 ;--------------------------------------------------------
+                            372 ; indirectly addressable internal ram data
+                            373 ;--------------------------------------------------------
+                            374 	.area ISEG    (DATA)
+                            375 ;--------------------------------------------------------
+                            376 ; absolute internal ram data
+                            377 ;--------------------------------------------------------
+                            378 	.area IABS    (ABS,DATA)
+                            379 	.area IABS    (ABS,DATA)
+                            380 ;--------------------------------------------------------
+                            381 ; bit data
+                            382 ;--------------------------------------------------------
+                            383 	.area BSEG    (BIT)
+                            384 ;--------------------------------------------------------
+                            385 ; paged external ram data
+                            386 ;--------------------------------------------------------
+                            387 	.area PSEG    (PAG,XDATA)
+                            388 ;--------------------------------------------------------
+                            389 ; external ram data
+                            390 ;--------------------------------------------------------
+                            391 	.area XSEG    (XDATA)
+                    F300    392 G$xdata_buffer$0$0 == 0xf300
+                    F300    393 _xdata_buffer	=	0xf300
+                            394 ;--------------------------------------------------------
+                            395 ; external initialized ram data
+                            396 ;--------------------------------------------------------
+                            397 	.area XISEG   (XDATA)
+                            398 	.area HOME    (CODE)
+                            399 	.area GSINIT0 (CODE)
+                            400 	.area GSINIT1 (CODE)
+                            401 	.area GSINIT2 (CODE)
+                            402 	.area GSINIT3 (CODE)
+                            403 	.area GSINIT4 (CODE)
+                            404 	.area GSINIT5 (CODE)
+                            405 	.area GSINIT  (CODE)
+                            406 	.area GSFINAL (CODE)
+                            407 	.area CSEG    (CODE)
+                            408 ;--------------------------------------------------------
+                            409 ; interrupt vector 
+                            410 ;--------------------------------------------------------
+                            411 	.area HOME    (CODE)
+   0000                     412 __interrupt_vect:
+   0000 02s00r00            413 	ljmp	__sdcc_gsinit_startup
+                            414 ;--------------------------------------------------------
+                            415 ; global & static initialisations
+                            416 ;--------------------------------------------------------
+                            417 	.area HOME    (CODE)
+                            418 	.area GSINIT  (CODE)
+                            419 	.area GSFINAL (CODE)
+                            420 	.area GSINIT  (CODE)
+                            421 	.globl __sdcc_gsinit_startup
+                            422 	.globl __sdcc_program_startup
+                            423 	.globl __start__stack
+                            424 	.globl __mcs51_genXINIT
+                            425 	.globl __mcs51_genXRAMCLEAR
+                            426 	.globl __mcs51_genRAMCLEAR
+                    0000    427 	G$FlashBusyCheck$0$0 ==.
+                    0000    428 	C$apb_flash_loader.c$28$1$1 ==.
+                            429 ;	../apb_flash_loader.c:28: volatile uint8_t xdata * GPIO_BASE_ADDR   = (uint8_t xdata *)GPIO_BASE;
+                            430 ;	genAssign
+   0000 75*00 00            431 	mov	_GPIO_BASE_ADDR,#0x00
+   0003 75*01 F1            432 	mov	(_GPIO_BASE_ADDR + 1),#0xF1
+                    0006    433 	G$FlashBusyCheck$0$0 ==.
+                    0006    434 	C$apb_flash_loader.c$29$1$1 ==.
+                            435 ;	../apb_flash_loader.c:29: volatile uint8_t xdata * FLASH_BASE_ADDR  = (uint8_t xdata *)FLASH_BASE;
+                            436 ;	genAssign
+   0006 75*02 00            437 	mov	_FLASH_BASE_ADDR,#0x00
+   0009 75*03 F4            438 	mov	(_FLASH_BASE_ADDR + 1),#0xF4
+                    000C    439 	G$FlashBusyCheck$0$0 ==.
+                    000C    440 	C$apb_flash_loader.c$30$1$1 ==.
+                            441 ;	../apb_flash_loader.c:30: volatile uint8_t xdata * UART0_BASE_ADDR  = (uint8_t xdata *)UART_BASE;
+                            442 ;	genAssign
+   000C 75*04 00            443 	mov	_UART0_BASE_ADDR,#0x00
+   000F 75*05 F0            444 	mov	(_UART0_BASE_ADDR + 1),#0xF0
+                    0012    445 	G$FlashBusyCheck$0$0 ==.
+                    0012    446 	C$apb_flash_loader.c$31$1$1 ==.
+                            447 ;	../apb_flash_loader.c:31: volatile uint8_t xdata * SRAM_BASE_ADDR   = (uint8_t xdata *)SRAM_BASE;
+                            448 ;	genAssign
+   0012 75*06 00            449 	mov	_SRAM_BASE_ADDR,#0x00
+   0015 75*07 F3            450 	mov	(_SRAM_BASE_ADDR + 1),#0xF3
+                            451 	.area GSFINAL (CODE)
+   0000 02s00r03            452 	ljmp	__sdcc_program_startup
+                            453 ;--------------------------------------------------------
+                            454 ; Home
+                            455 ;--------------------------------------------------------
+                            456 	.area HOME    (CODE)
+                            457 	.area HOME    (CODE)
+   0003                     458 __sdcc_program_startup:
+   0003 12s00r00            459 	lcall	_main
+                            460 ;	return from main will lock up
+   0006 80 FE               461 	sjmp .
+                            462 ;--------------------------------------------------------
+                            463 ; code
+                            464 ;--------------------------------------------------------
+                            465 	.area CSEG    (CODE)
+                            466 ;------------------------------------------------------------
+                            467 ;Allocation info for local variables in function 'main'
+                            468 ;------------------------------------------------------------
+                            469 ;size                      Allocated to registers r5 
+                            470 ;i                         Allocated to registers r6 
+                            471 ;k                         Allocated to registers r4 
+                            472 ;addr                      Allocated to registers r2 r3 
+                            473 ;------------------------------------------------------------
+                    0000    474 	G$main$0$0 ==.
+                    0000    475 	C$apb_flash_loader.c$124$0$0 ==.
+                            476 ;	../apb_flash_loader.c:124: void main ( void )  {
+                            477 ;	-----------------------------------------
+                            478 ;	 function main
+                            479 ;	-----------------------------------------
+   0000                     480 _main:
+                    0002    481 	ar2 = 0x02
+                    0003    482 	ar3 = 0x03
+                    0004    483 	ar4 = 0x04
+                    0005    484 	ar5 = 0x05
+                    0006    485 	ar6 = 0x06
+                    0007    486 	ar7 = 0x07
+                    0000    487 	ar0 = 0x00
+                    0001    488 	ar1 = 0x01
+                    0000    489 	C$apb_flash_loader.c$133$1$1 ==.
+                            490 ;	../apb_flash_loader.c:133: addr = 0x0000;
+                            491 ;	genAssign
+   0000 7A 00               492 	mov	r2,#0x00
+   0002 7B 00               493 	mov	r3,#0x00
+                    0004    494 	C$apb_flash_loader.c$137$1$1 ==.
+                            495 ;	../apb_flash_loader.c:137: uart_config(BR_9600_6MHZ);
+                            496 ;	genCall
+   0004 75 82 26            497 	mov	dpl,#0x26
+   0007 C0 02               498 	push	ar2
+   0009 C0 03               499 	push	ar3
+   000B 12s01r52            500 	lcall	_uart_config
+   000E D0 03               501 	pop	ar3
+   0010 D0 02               502 	pop	ar2
+                    0012    503 	C$apb_flash_loader.c$139$1$1 ==.
+                            504 ;	../apb_flash_loader.c:139: printf("\r 8051s UART Test Program \n\r")	;
+                            505 ;	genCall
+   0012 75 82r11            506 	mov	dpl,#__str_0
+   0015 75 83s00            507 	mov	dph,#(__str_0 >> 8)
+   0018 75 F0 80            508 	mov	b,#0x80
+   001B C0 02               509 	push	ar2
+   001D C0 03               510 	push	ar3
+   001F 12s01rC4            511 	lcall	_printf
+   0022 D0 03               512 	pop	ar3
+   0024 D0 02               513 	pop	ar2
+                    0026    514 	C$apb_flash_loader.c$143$1$1 ==.
+                            515 ;	../apb_flash_loader.c:143: for ( k=0 ; k < 32; k++) {
+                            516 ;	genAssign
+   0026 7C 20               517 	mov	r4,#0x20
+   0028                     518 00109$:
+                    0028    519 	C$apb_flash_loader.c$144$2$2 ==.
+                            520 ;	../apb_flash_loader.c:144: FlashErasePage(addr);
+                            521 ;	genCall
+   0028 8A 82               522 	mov	dpl,r2
+   002A 8B 83               523 	mov	dph,r3
+   002C C0 02               524 	push	ar2
+   002E C0 03               525 	push	ar3
+   0030 C0 04               526 	push	ar4
+   0032 12s02r03            527 	lcall	_FlashErasePage
+   0035 D0 04               528 	pop	ar4
+   0037 D0 03               529 	pop	ar3
+   0039 D0 02               530 	pop	ar2
+                    003B    531 	C$apb_flash_loader.c$145$2$2 ==.
+                            532 ;	../apb_flash_loader.c:145: addr = addr + 128;
+                            533 ;	genPlus
+                            534 ;	genPlusIncr
+   003B 74 80               535 	mov	a,#0x80
+   003D 25 02               536 	add	a,ar2
+   003F FA                  537 	mov	r2,a
+   0040 74 00               538 	mov	a,#0x00
+   0042 35 03               539 	addc	a,ar3
+   0044 FB                  540 	mov	r3,a
+                            541 ;	genMinus
+                            542 ;	genMinusDec
+   0045 1C                  543 	dec	r4
+                    0046    544 	C$apb_flash_loader.c$143$2$2 ==.
+                            545 ;	../apb_flash_loader.c:143: for ( k=0 ; k < 32; k++) {
+                            546 ;	genIfx
+   0046 EC                  547 	mov	a,r4
+                            548 ;	genIfxJump
+   0047 60 03               549 	jz	00126$
+   0049 02s00r28            550 	ljmp	00109$
+   004C                     551 00126$:
+                    004C    552 	C$apb_flash_loader.c$148$1$1 ==.
+                            553 ;	../apb_flash_loader.c:148: addr = 0x0000;
+                            554 ;	genAssign
+   004C 7A 00               555 	mov	r2,#0x00
+   004E 7B 00               556 	mov	r3,#0x00
+                    0050    557 	C$apb_flash_loader.c$149$1$1 ==.
+                            558 ;	../apb_flash_loader.c:149: size = 0;
+                            559 ;	genAssign
+   0050 7D 00               560 	mov	r5,#0x00
+                    0052    561 	C$apb_flash_loader.c$155$2$3 ==.
+                            562 ;	../apb_flash_loader.c:155: for ( i =0; i< 10; i++) {
+                            563 ;	genAssign
+   0052 7E 00               564 	mov	r6,#0x00
+   0054                     565 00110$:
+                            566 ;	genCmpLt
+                            567 ;	genCmp
+   0054 BE 0A 00            568 	cjne	r6,#0x0A,00127$
+   0057                     569 00127$:
+                            570 ;	genIfxJump
+   0057 40 03               571 	jc	00128$
+   0059 02s00rAE            572 	ljmp	00113$
+   005C                     573 00128$:
+                    005C    574 	C$apb_flash_loader.c$156$3$4 ==.
+                            575 ;	../apb_flash_loader.c:156: k = uart_getchar();
+                            576 ;	genCall
+   005C C0 02               577 	push	ar2
+   005E C0 03               578 	push	ar3
+   0060 C0 05               579 	push	ar5
+   0062 C0 06               580 	push	ar6
+   0064 12s01rA0            581 	lcall	_uart_getchar
+   0067 AC 82               582 	mov	r4,dpl
+   0069 D0 06               583 	pop	ar6
+   006B D0 05               584 	pop	ar5
+   006D D0 03               585 	pop	ar3
+   006F D0 02               586 	pop	ar2
+                    0071    587 	C$apb_flash_loader.c$157$3$4 ==.
+                            588 ;	../apb_flash_loader.c:157: xdata_buffer[i] = k;
+                            589 ;	genPlus
+                            590 ;     genPlus aligned array
+   0071 8E 82               591 	mov	dpl,r6
+   0073 75 83 F3            592 	mov	dph,#(_xdata_buffer >> 8)
+                            593 ;	genPointerSet
+                            594 ;     genFarPointerSet
+   0076 EC                  595 	mov	a,r4
+   0077 F0                  596 	movx	@dptr,a
+                    0078    597 	C$apb_flash_loader.c$158$3$4 ==.
+                            598 ;	../apb_flash_loader.c:158: uart_putchar(k);
+                            599 ;	genCall
+   0078 8C 82               600 	mov	dpl,r4
+   007A C0 02               601 	push	ar2
+   007C C0 03               602 	push	ar3
+   007E C0 05               603 	push	ar5
+   0080 C0 06               604 	push	ar6
+   0082 12s01rB2            605 	lcall	_uart_putchar
+   0085 D0 06               606 	pop	ar6
+   0087 D0 05               607 	pop	ar5
+   0089 D0 03               608 	pop	ar3
+   008B D0 02               609 	pop	ar2
+                    008D    610 	C$apb_flash_loader.c$159$3$4 ==.
+                            611 ;	../apb_flash_loader.c:159: printf("\n\r");
+                            612 ;	genCall
+   008D 75 82r2E            613 	mov	dpl,#__str_1
+   0090 75 83s00            614 	mov	dph,#(__str_1 >> 8)
+   0093 75 F0 80            615 	mov	b,#0x80
+   0096 C0 02               616 	push	ar2
+   0098 C0 03               617 	push	ar3
+   009A C0 05               618 	push	ar5
+   009C C0 06               619 	push	ar6
+   009E 12s01rC4            620 	lcall	_printf
+   00A1 D0 06               621 	pop	ar6
+   00A3 D0 05               622 	pop	ar5
+   00A5 D0 03               623 	pop	ar3
+   00A7 D0 02               624 	pop	ar2
+                    00A9    625 	C$apb_flash_loader.c$160$3$4 ==.
+                            626 ;	../apb_flash_loader.c:160: size++;
+                            627 ;	genPlus
+                            628 ;	genPlusIncr
+   00A9 0D                  629 	inc	r5
+                    00AA    630 	C$apb_flash_loader.c$155$2$3 ==.
+                            631 ;	../apb_flash_loader.c:155: for ( i =0; i< 10; i++) {
+                            632 ;	genPlus
+                            633 ;	genPlusIncr
+   00AA 0E                  634 	inc	r6
+   00AB 02s00r54            635 	ljmp	00110$
+   00AE                     636 00113$:
+                    00AE    637 	C$apb_flash_loader.c$164$2$3 ==.
+                            638 ;	../apb_flash_loader.c:164: printf("Captured 128 data in RAM ");
+                            639 ;	genCall
+   00AE 75 82r31            640 	mov	dpl,#__str_2
+   00B1 75 83s00            641 	mov	dph,#(__str_2 >> 8)
+   00B4 75 F0 80            642 	mov	b,#0x80
+   00B7 C0 02               643 	push	ar2
+   00B9 C0 03               644 	push	ar3
+   00BB C0 05               645 	push	ar5
+   00BD 12s01rC4            646 	lcall	_printf
+   00C0 D0 05               647 	pop	ar5
+   00C2 D0 03               648 	pop	ar3
+   00C4 D0 02               649 	pop	ar2
+                    00C6    650 	C$apb_flash_loader.c$165$2$3 ==.
+                            651 ;	../apb_flash_loader.c:165: k = uart_getchar();
+                            652 ;	genCall
+   00C6 C0 02               653 	push	ar2
+   00C8 C0 03               654 	push	ar3
+   00CA C0 05               655 	push	ar5
+   00CC 12s01rA0            656 	lcall	_uart_getchar
+   00CF D0 05               657 	pop	ar5
+   00D1 D0 03               658 	pop	ar3
+   00D3 D0 02               659 	pop	ar2
+                    00D5    660 	C$apb_flash_loader.c$169$2$3 ==.
+                            661 ;	../apb_flash_loader.c:169: for ( k=0 ; k < 10 ; k++) {
+                            662 ;	genAssign
+   00D5 7C 0A               663 	mov	r4,#0x0A
+   00D7                     664 00116$:
+                    00D7    665 	C$apb_flash_loader.c$170$3$5 ==.
+                            666 ;	../apb_flash_loader.c:170: FlashProgramPage (xdata_buffer,addr,size);
+                            667 ;	genAssign
+   00D7 8A*09               668 	mov	_FlashProgramPage_PARM_2,r2
+   00D9 8B*0A               669 	mov	(_FlashProgramPage_PARM_2 + 1),r3
+                            670 ;	genAssign
+   00DB 8D*0B               671 	mov	_FlashProgramPage_PARM_3,r5
+                            672 ;	genCall
+   00DD 75 82 00            673 	mov	dpl,#_xdata_buffer
+   00E0 75 83 F3            674 	mov	dph,#(_xdata_buffer >> 8)
+   00E3 75 F0 00            675 	mov	b,#0x00
+   00E6 C0 02               676 	push	ar2
+   00E8 C0 03               677 	push	ar3
+   00EA C0 04               678 	push	ar4
+   00EC C0 05               679 	push	ar5
+   00EE 12s02r59            680 	lcall	_FlashProgramPage
+   00F1 D0 05               681 	pop	ar5
+   00F3 D0 04               682 	pop	ar4
+   00F5 D0 03               683 	pop	ar3
+   00F7 D0 02               684 	pop	ar2
+                    00F9    685 	C$apb_flash_loader.c$171$3$5 ==.
+                            686 ;	../apb_flash_loader.c:171: printf(" Page Programmed ");
+                            687 ;	genCall
+   00F9 75 82r4B            688 	mov	dpl,#__str_3
+   00FC 75 83s00            689 	mov	dph,#(__str_3 >> 8)
+   00FF 75 F0 80            690 	mov	b,#0x80
+   0102 C0 02               691 	push	ar2
+   0104 C0 03               692 	push	ar3
+   0106 C0 04               693 	push	ar4
+   0108 C0 05               694 	push	ar5
+   010A 12s01rC4            695 	lcall	_printf
+   010D D0 05               696 	pop	ar5
+   010F D0 04               697 	pop	ar4
+   0111 D0 03               698 	pop	ar3
+   0113 D0 02               699 	pop	ar2
+                    0115    700 	C$apb_flash_loader.c$172$3$5 ==.
+                            701 ;	../apb_flash_loader.c:172: printf("\r \n");
+                            702 ;	genCall
+   0115 75 82r5D            703 	mov	dpl,#__str_4
+   0118 75 83s00            704 	mov	dph,#(__str_4 >> 8)
+   011B 75 F0 80            705 	mov	b,#0x80
+   011E C0 02               706 	push	ar2
+   0120 C0 03               707 	push	ar3
+   0122 C0 04               708 	push	ar4
+   0124 C0 05               709 	push	ar5
+   0126 12s01rC4            710 	lcall	_printf
+   0129 D0 05               711 	pop	ar5
+   012B D0 04               712 	pop	ar4
+   012D D0 03               713 	pop	ar3
+   012F D0 02               714 	pop	ar2
+                    0131    715 	C$apb_flash_loader.c$173$3$5 ==.
+                            716 ;	../apb_flash_loader.c:173: addr = addr + 128;
+                            717 ;	genPlus
+                            718 ;	genPlusIncr
+   0131 74 80               719 	mov	a,#0x80
+   0133 25 02               720 	add	a,ar2
+   0135 FA                  721 	mov	r2,a
+   0136 74 00               722 	mov	a,#0x00
+   0138 35 03               723 	addc	a,ar3
+   013A FB                  724 	mov	r3,a
+                            725 ;	genDjnz
+   013B DC 02               726 	djnz	r4,00129$
+   013D 80 03               727 	sjmp	00130$
+   013F                     728 00129$:
+   013F 02s00rD7            729 	ljmp	00116$
+   0142                     730 00130$:
+                    0142    731 	C$apb_flash_loader.c$169$3$5 ==.
+                            732 ;	../apb_flash_loader.c:169: for ( k=0 ; k < 10 ; k++) {
+                    0142    733 	C$apb_flash_loader.c$176$2$3 ==.
+                            734 ;	../apb_flash_loader.c:176: printf(" Completed ");
+                            735 ;	genCall
+   0142 75 82r61            736 	mov	dpl,#__str_5
+   0145 75 83s00            737 	mov	dph,#(__str_5 >> 8)
+   0148 75 F0 80            738 	mov	b,#0x80
+   014B 12s01rC4            739 	lcall	_printf
+                    014E    740 	C$apb_flash_loader.c$180$2$3 ==.
+                            741 ;	../apb_flash_loader.c:180: while(1)
+   014E                     742 00102$:
+   014E 02s01r4E            743 	ljmp	00102$
+   0151                     744 00117$:
+                    0151    745 	C$apb_flash_loader.c$186$1$1 ==.
+                    0151    746 	XG$main$0$0 ==.
+   0151 22                  747 	ret
+                            748 ;------------------------------------------------------------
+                            749 ;Allocation info for local variables in function 'uart_config'
+                            750 ;------------------------------------------------------------
+                            751 ;baudRate                  Allocated to registers r2 
+                            752 ;------------------------------------------------------------
+                    0152    753 	G$uart_config$0$0 ==.
+                    0152    754 	C$apb_flash_loader.c$188$1$1 ==.
+                            755 ;	../apb_flash_loader.c:188: void uart_config( unsigned char baudRate)
+                            756 ;	-----------------------------------------
+                            757 ;	 function uart_config
+                            758 ;	-----------------------------------------
+   0152                     759 _uart_config:
+                            760 ;	genReceive
+   0152 AA 82               761 	mov	r2,dpl
+                    0154    762 	C$apb_flash_loader.c$190$1$1 ==.
+                            763 ;	../apb_flash_loader.c:190: *(UART0_BASE_ADDR+UART_CONTROL1_OFFSET) =  baudRate;
+                            764 ;	genPlus
+                            765 ;	genPlusIncr
+   0154 85*04 82            766 	mov	dpl,_UART0_BASE_ADDR
+   0157 85*05 83            767 	mov	dph,(_UART0_BASE_ADDR + 1)
+   015A A3                  768 	inc	dptr
+   015B A3                  769 	inc	dptr
+   015C A3                  770 	inc	dptr
+   015D A3                  771 	inc	dptr
+   015E A3                  772 	inc	dptr
+   015F A3                  773 	inc	dptr
+   0160 A3                  774 	inc	dptr
+   0161 A3                  775 	inc	dptr
+                            776 ;	genPointerSet
+                            777 ;     genFarPointerSet
+   0162 EA                  778 	mov	a,r2
+   0163 F0                  779 	movx	@dptr,a
+                    0164    780 	C$apb_flash_loader.c$191$1$1 ==.
+                            781 ;	../apb_flash_loader.c:191: *(UART0_BASE_ADDR+UART_CONTROL2_OFFSET) = ( UART_CONTROL2_8BITS | UART_CONTROL2_NOPARITY);
+                            782 ;	genPlus
+                            783 ;	genPlusIncr
+   0164 74 0C               784 	mov	a,#0x0C
+   0166 25*04               785 	add	a,_UART0_BASE_ADDR
+   0168 F5 82               786 	mov	dpl,a
+   016A 74 00               787 	mov	a,#0x00
+   016C 35*05               788 	addc	a,(_UART0_BASE_ADDR + 1)
+   016E F5 83               789 	mov	dph,a
+                            790 ;	genPointerSet
+                            791 ;     genFarPointerSet
+   0170 74 01               792 	mov	a,#0x01
+   0172 F0                  793 	movx	@dptr,a
+   0173                     794 00101$:
+                    0173    795 	C$apb_flash_loader.c$192$1$1 ==.
+                    0173    796 	XG$uart_config$0$0 ==.
+   0173 22                  797 	ret
+                            798 ;------------------------------------------------------------
+                            799 ;Allocation info for local variables in function 'uartWaitXmt'
+                            800 ;------------------------------------------------------------
+                            801 ;status                    Allocated to registers r2 
+                            802 ;------------------------------------------------------------
+                    0174    803 	G$uartWaitXmt$0$0 ==.
+                    0174    804 	C$apb_flash_loader.c$196$1$1 ==.
+                            805 ;	../apb_flash_loader.c:196: void uartWaitXmt (void ){
+                            806 ;	-----------------------------------------
+                            807 ;	 function uartWaitXmt
+                            808 ;	-----------------------------------------
+   0174                     809 _uartWaitXmt:
+                    0174    810 	C$apb_flash_loader.c$199$1$1 ==.
+                            811 ;	../apb_flash_loader.c:199: do
+   0174                     812 00101$:
+                    0174    813 	C$apb_flash_loader.c$200$2$2 ==.
+                            814 ;	../apb_flash_loader.c:200: {   status = *(UART0_BASE_ADDR+UART_STATUS_OFFSET);
+                            815 ;	genPlus
+                            816 ;	genPlusIncr
+   0174 74 10               817 	mov	a,#0x10
+   0176 25*04               818 	add	a,_UART0_BASE_ADDR
+   0178 F5 82               819 	mov	dpl,a
+   017A 74 00               820 	mov	a,#0x00
+   017C 35*05               821 	addc	a,(_UART0_BASE_ADDR + 1)
+   017E F5 83               822 	mov	dph,a
+                            823 ;	genPointerGet
+                            824 ;	genFarPointerGet
+   0180 E0                  825 	movx	a,@dptr
+   0181 FA                  826 	mov	r2,a
+                    0182    827 	C$apb_flash_loader.c$201$1$1 ==.
+                            828 ;	../apb_flash_loader.c:201: } while (!(status & UART_STATUS_TXREADY_MASK));
+                            829 ;	genAnd
+   0182 EA                  830 	mov	a,r2
+                            831 ;	genIfxJump
+   0183 20 E0 03            832 	jb	acc.0,00107$
+   0186 02s01r74            833 	ljmp	00101$
+   0189                     834 00107$:
+   0189                     835 00104$:
+                    0189    836 	C$apb_flash_loader.c$202$1$1 ==.
+                    0189    837 	XG$uartWaitXmt$0$0 ==.
+   0189 22                  838 	ret
+                            839 ;------------------------------------------------------------
+                            840 ;Allocation info for local variables in function 'uartWaitRxd'
+                            841 ;------------------------------------------------------------
+                            842 ;status                    Allocated to registers r2 
+                            843 ;------------------------------------------------------------
+                    018A    844 	G$uartWaitRxd$0$0 ==.
+                    018A    845 	C$apb_flash_loader.c$205$1$1 ==.
+                            846 ;	../apb_flash_loader.c:205: void uartWaitRxd (void ){
+                            847 ;	-----------------------------------------
+                            848 ;	 function uartWaitRxd
+                            849 ;	-----------------------------------------
+   018A                     850 _uartWaitRxd:
+                    018A    851 	C$apb_flash_loader.c$208$1$1 ==.
+                            852 ;	../apb_flash_loader.c:208: do
+   018A                     853 00101$:
+                    018A    854 	C$apb_flash_loader.c$209$2$2 ==.
+                            855 ;	../apb_flash_loader.c:209: {   status = *(UART0_BASE_ADDR+UART_STATUS_OFFSET);
+                            856 ;	genPlus
+                            857 ;	genPlusIncr
+   018A 74 10               858 	mov	a,#0x10
+   018C 25*04               859 	add	a,_UART0_BASE_ADDR
+   018E F5 82               860 	mov	dpl,a
+   0190 74 00               861 	mov	a,#0x00
+   0192 35*05               862 	addc	a,(_UART0_BASE_ADDR + 1)
+   0194 F5 83               863 	mov	dph,a
+                            864 ;	genPointerGet
+                            865 ;	genFarPointerGet
+   0196 E0                  866 	movx	a,@dptr
+   0197 FA                  867 	mov	r2,a
+                    0198    868 	C$apb_flash_loader.c$210$1$1 ==.
+                            869 ;	../apb_flash_loader.c:210: } while (!(status & UART_STATUS_RXREADY_MASK));
+                            870 ;	genAnd
+   0198 EA                  871 	mov	a,r2
+                            872 ;	genIfxJump
+   0199 20 E1 03            873 	jb	acc.1,00107$
+   019C 02s01r8A            874 	ljmp	00101$
+   019F                     875 00107$:
+   019F                     876 00104$:
+                    019F    877 	C$apb_flash_loader.c$211$1$1 ==.
+                    019F    878 	XG$uartWaitRxd$0$0 ==.
+   019F 22                  879 	ret
+                            880 ;------------------------------------------------------------
+                            881 ;Allocation info for local variables in function 'uart_getchar'
+                            882 ;------------------------------------------------------------
+                            883 ;uartRxData                Allocated to registers r2 
+                            884 ;------------------------------------------------------------
+                    01A0    885 	G$uart_getchar$0$0 ==.
+                    01A0    886 	C$apb_flash_loader.c$218$1$1 ==.
+                            887 ;	../apb_flash_loader.c:218: unsigned char uart_getchar(void)
+                            888 ;	-----------------------------------------
+                            889 ;	 function uart_getchar
+                            890 ;	-----------------------------------------
+   01A0                     891 _uart_getchar:
+                    01A0    892 	C$apb_flash_loader.c$222$1$1 ==.
+                            893 ;	../apb_flash_loader.c:222: uartWaitRxd ();
+                            894 ;	genCall
+   01A0 12s01r8A            895 	lcall	_uartWaitRxd
+                    01A3    896 	C$apb_flash_loader.c$223$1$1 ==.
+                            897 ;	../apb_flash_loader.c:223: uartRxData = *(UART0_BASE_ADDR+UART_RXDATA_OFFSET);
+                            898 ;	genPlus
+                            899 ;	genPlusIncr
+   01A3 85*04 82            900 	mov	dpl,_UART0_BASE_ADDR
+   01A6 85*05 83            901 	mov	dph,(_UART0_BASE_ADDR + 1)
+   01A9 A3                  902 	inc	dptr
+   01AA A3                  903 	inc	dptr
+   01AB A3                  904 	inc	dptr
+   01AC A3                  905 	inc	dptr
+                            906 ;	genPointerGet
+                            907 ;	genFarPointerGet
+   01AD E0                  908 	movx	a,@dptr
+   01AE FA                  909 	mov	r2,a
+                    01AF    910 	C$apb_flash_loader.c$224$1$1 ==.
+                            911 ;	../apb_flash_loader.c:224: return (uartRxData & 0xFF);
+                            912 ;	genRet
+   01AF 8A 82               913 	mov	dpl,r2
+   01B1                     914 00101$:
+                    01B1    915 	C$apb_flash_loader.c$225$1$1 ==.
+                    01B1    916 	XG$uart_getchar$0$0 ==.
+   01B1 22                  917 	ret
+                            918 ;------------------------------------------------------------
+                            919 ;Allocation info for local variables in function 'uart_putchar'
+                            920 ;------------------------------------------------------------
+                            921 ;c                         Allocated to registers r2 
+                            922 ;------------------------------------------------------------
+                    01B2    923 	G$uart_putchar$0$0 ==.
+                    01B2    924 	C$apb_flash_loader.c$229$1$1 ==.
+                            925 ;	../apb_flash_loader.c:229: void uart_putchar(unsigned char c)
+                            926 ;	-----------------------------------------
+                            927 ;	 function uart_putchar
+                            928 ;	-----------------------------------------
+   01B2                     929 _uart_putchar:
+                            930 ;	genReceive
+   01B2 AA 82               931 	mov	r2,dpl
+                    01B4    932 	C$apb_flash_loader.c$231$1$1 ==.
+                            933 ;	../apb_flash_loader.c:231: uartWaitXmt();
+                            934 ;	genCall
+   01B4 C0 02               935 	push	ar2
+   01B6 12s01r74            936 	lcall	_uartWaitXmt
+   01B9 D0 02               937 	pop	ar2
+                    01BB    938 	C$apb_flash_loader.c$232$1$1 ==.
+                            939 ;	../apb_flash_loader.c:232: *(UART0_BASE_ADDR+UART_TXDATA_OFFSET) = c;
+                            940 ;	genAssign
+   01BB 85*04 82            941 	mov	dpl,_UART0_BASE_ADDR
+   01BE 85*05 83            942 	mov	dph,(_UART0_BASE_ADDR + 1)
+                            943 ;	genPointerSet
+                            944 ;     genFarPointerSet
+   01C1 EA                  945 	mov	a,r2
+   01C2 F0                  946 	movx	@dptr,a
+   01C3                     947 00101$:
+                    01C3    948 	C$apb_flash_loader.c$235$1$1 ==.
+                    01C3    949 	XG$uart_putchar$0$0 ==.
+   01C3 22                  950 	ret
+                            951 ;------------------------------------------------------------
+                            952 ;Allocation info for local variables in function 'printf'
+                            953 ;------------------------------------------------------------
+                            954 ;str                       Allocated to registers r2 r3 r4 
+                            955 ;c                         Allocated to registers r5 
+                            956 ;------------------------------------------------------------
+                    01C4    957 	G$printf$0$0 ==.
+                    01C4    958 	C$apb_flash_loader.c$237$1$1 ==.
+                            959 ;	../apb_flash_loader.c:237: void printf ( unsigned char * str ) {
+                            960 ;	-----------------------------------------
+                            961 ;	 function printf
+                            962 ;	-----------------------------------------
+   01C4                     963 _printf:
+                            964 ;	genReceive
+   01C4 AA 82               965 	mov	r2,dpl
+   01C6 AB 83               966 	mov	r3,dph
+   01C8 AC F0               967 	mov	r4,b
+                    01CA    968 	C$apb_flash_loader.c$240$1$1 ==.
+                            969 ;	../apb_flash_loader.c:240: c = *str++;
+                            970 ;	genPointerGet
+                            971 ;	genGenPointerGet
+   01CA 8A 82               972 	mov	dpl,r2
+   01CC 8B 83               973 	mov	dph,r3
+   01CE 8C F0               974 	mov	b,r4
+   01D0 12s00r00            975 	lcall	__gptrget
+   01D3 FD                  976 	mov	r5,a
+   01D4 A3                  977 	inc	dptr
+   01D5 AA 82               978 	mov	r2,dpl
+   01D7 AB 83               979 	mov	r3,dph
+                    01D9    980 	C$apb_flash_loader.c$242$1$1 ==.
+                            981 ;	../apb_flash_loader.c:242: while (c != '\0') {
+   01D9                     982 00101$:
+                            983 ;	genCmpEq
+                            984 ;	gencjneshort
+   01D9 BD 00 03            985 	cjne	r5,#0x00,00108$
+   01DC 02s02r02            986 	ljmp	00104$
+   01DF                     987 00108$:
+                    01DF    988 	C$apb_flash_loader.c$243$2$2 ==.
+                            989 ;	../apb_flash_loader.c:243: uart_putchar( c);
+                            990 ;	genCall
+   01DF 8D 82               991 	mov	dpl,r5
+   01E1 C0 02               992 	push	ar2
+   01E3 C0 03               993 	push	ar3
+   01E5 C0 04               994 	push	ar4
+   01E7 12s01rB2            995 	lcall	_uart_putchar
+   01EA D0 04               996 	pop	ar4
+   01EC D0 03               997 	pop	ar3
+   01EE D0 02               998 	pop	ar2
+                    01F0    999 	C$apb_flash_loader.c$244$2$2 ==.
+                           1000 ;	../apb_flash_loader.c:244: c = *str++;
+                           1001 ;	genPointerGet
+                           1002 ;	genGenPointerGet
+   01F0 8A 82              1003 	mov	dpl,r2
+   01F2 8B 83              1004 	mov	dph,r3
+   01F4 8C F0              1005 	mov	b,r4
+   01F6 12s00r00           1006 	lcall	__gptrget
+   01F9 FD                 1007 	mov	r5,a
+   01FA A3                 1008 	inc	dptr
+   01FB AA 82              1009 	mov	r2,dpl
+   01FD AB 83              1010 	mov	r3,dph
+   01FF 02s01rD9           1011 	ljmp	00101$
+   0202                    1012 00104$:
+                    0202   1013 	C$apb_flash_loader.c$246$1$1 ==.
+                    0202   1014 	XG$printf$0$0 ==.
+   0202 22                 1015 	ret
+                           1016 ;------------------------------------------------------------
+                           1017 ;Allocation info for local variables in function 'FlashErasePage'
+                           1018 ;------------------------------------------------------------
+                           1019 ;pageAddr                  Allocated to registers r2 r3 
+                           1020 ;status                    Allocated to registers r4 
+                           1021 ;------------------------------------------------------------
+                    0203   1022 	G$FlashErasePage$0$0 ==.
+                    0203   1023 	C$apb_flash_loader.c$251$1$1 ==.
+                           1024 ;	../apb_flash_loader.c:251: void FlashErasePage(uint16_t  pageAddr )
+                           1025 ;	-----------------------------------------
+                           1026 ;	 function FlashErasePage
+                           1027 ;	-----------------------------------------
+   0203                    1028 _FlashErasePage:
+                           1029 ;	genReceive
+   0203 AA 82              1030 	mov	r2,dpl
+   0205 AB 83              1031 	mov	r3,dph
+                    0207   1032 	C$apb_flash_loader.c$256$1$1 ==.
+                           1033 ;	../apb_flash_loader.c:256: do {
+   0207                    1034 00101$:
+                    0207   1035 	C$apb_flash_loader.c$257$2$2 ==.
+                           1036 ;	../apb_flash_loader.c:257: status = *(FLASH_BASE_ADDR+FLASH_STS_OFFSET);
+                           1037 ;	genPlus
+                           1038 ;	genPlusIncr
+   0207 85*02 82           1039 	mov	dpl,_FLASH_BASE_ADDR
+   020A 85*03 83           1040 	mov	dph,(_FLASH_BASE_ADDR + 1)
+   020D A3                 1041 	inc	dptr
+   020E A3                 1042 	inc	dptr
+   020F A3                 1043 	inc	dptr
+   0210 A3                 1044 	inc	dptr
+                           1045 ;	genPointerGet
+                           1046 ;	genFarPointerGet
+   0211 E0                 1047 	movx	a,@dptr
+   0212 FC                 1048 	mov	r4,a
+                    0213   1049 	C$apb_flash_loader.c$259$1$1 ==.
+                           1050 ;	../apb_flash_loader.c:259: } while (!(status & FLASH_STS_BUSY_MASK));
+                           1051 ;	genAnd
+   0213 EC                 1052 	mov	a,r4
+                           1053 ;	genIfxJump
+   0214 20 E7 03           1054 	jb	acc.7,00112$
+   0217 02s02r07           1055 	ljmp	00101$
+   021A                    1056 00112$:
+                    021A   1057 	C$apb_flash_loader.c$261$1$1 ==.
+                           1058 ;	../apb_flash_loader.c:261: *(FLASH_BASE_ADDR+FLASH_ADDR1_OFFSET) = pageAddr;
+                           1059 ;	genPlus
+                           1060 ;	genPlusIncr
+   021A 85*02 82           1061 	mov	dpl,_FLASH_BASE_ADDR
+   021D 85*03 83           1062 	mov	dph,(_FLASH_BASE_ADDR + 1)
+   0220 A3                 1063 	inc	dptr
+   0221 A3                 1064 	inc	dptr
+   0222 A3                 1065 	inc	dptr
+   0223 A3                 1066 	inc	dptr
+   0224 A3                 1067 	inc	dptr
+   0225 A3                 1068 	inc	dptr
+   0226 A3                 1069 	inc	dptr
+   0227 A3                 1070 	inc	dptr
+                           1071 ;	genCast
+   0228 8A 05              1072 	mov	ar5,r2
+                           1073 ;	genPointerSet
+                           1074 ;     genFarPointerSet
+   022A ED                 1075 	mov	a,r5
+   022B F0                 1076 	movx	@dptr,a
+                    022C   1077 	C$apb_flash_loader.c$262$1$1 ==.
+                           1078 ;	../apb_flash_loader.c:262: *(FLASH_BASE_ADDR+FLASH_ADDR2_OFFSET) = pageAddr >> 8;  // uper addr
+                           1079 ;	genPlus
+                           1080 ;	genPlusIncr
+   022C 74 0C              1081 	mov	a,#0x0C
+   022E 25*02              1082 	add	a,_FLASH_BASE_ADDR
+   0230 F5 82              1083 	mov	dpl,a
+   0232 74 00              1084 	mov	a,#0x00
+   0234 35*03              1085 	addc	a,(_FLASH_BASE_ADDR + 1)
+   0236 F5 83              1086 	mov	dph,a
+                           1087 ;	genGetByte
+   0238 8B 02              1088 	mov	ar2,r3
+                           1089 ;	genPointerSet
+                           1090 ;     genFarPointerSet
+   023A EA                 1091 	mov	a,r2
+   023B F0                 1092 	movx	@dptr,a
+                    023C   1093 	C$apb_flash_loader.c$266$1$1 ==.
+                           1094 ;	../apb_flash_loader.c:266: *(FLASH_BASE_ADDR+FLASH_CTRL_OFFSET)=  FLASH_CTRL_ERASE; // erase command
+                           1095 ;	genAssign
+   023C 85*02 82           1096 	mov	dpl,_FLASH_BASE_ADDR
+   023F 85*03 83           1097 	mov	dph,(_FLASH_BASE_ADDR + 1)
+                           1098 ;	genPointerSet
+                           1099 ;     genFarPointerSet
+   0242 74 40              1100 	mov	a,#0x40
+   0244 F0                 1101 	movx	@dptr,a
+                    0245   1102 	C$apb_flash_loader.c$268$1$1 ==.
+                           1103 ;	../apb_flash_loader.c:268: do {
+   0245                    1104 00104$:
+                    0245   1105 	C$apb_flash_loader.c$269$2$3 ==.
+                           1106 ;	../apb_flash_loader.c:269: status = *(FLASH_BASE_ADDR+FLASH_STS_OFFSET);
+                           1107 ;	genPlus
+                           1108 ;	genPlusIncr
+   0245 85*02 82           1109 	mov	dpl,_FLASH_BASE_ADDR
+   0248 85*03 83           1110 	mov	dph,(_FLASH_BASE_ADDR + 1)
+   024B A3                 1111 	inc	dptr
+   024C A3                 1112 	inc	dptr
+   024D A3                 1113 	inc	dptr
+   024E A3                 1114 	inc	dptr
+                           1115 ;	genPointerGet
+                           1116 ;	genFarPointerGet
+   024F E0                 1117 	movx	a,@dptr
+   0250 FC                 1118 	mov	r4,a
+                    0251   1119 	C$apb_flash_loader.c$271$1$1 ==.
+                           1120 ;	../apb_flash_loader.c:271: } while (!(status & FLASH_STS_BUSY_MASK));
+                           1121 ;	genAnd
+   0251 EC                 1122 	mov	a,r4
+                           1123 ;	genIfxJump
+   0252 20 E7 03           1124 	jb	acc.7,00113$
+   0255 02s02r45           1125 	ljmp	00104$
+   0258                    1126 00113$:
+   0258                    1127 00107$:
+                    0258   1128 	C$apb_flash_loader.c$274$1$1 ==.
+                    0258   1129 	XG$FlashErasePage$0$0 ==.
+   0258 22                 1130 	ret
+                           1131 ;------------------------------------------------------------
+                           1132 ;Allocation info for local variables in function 'FlashProgramPage'
+                           1133 ;------------------------------------------------------------
+                           1134 ;addr                      Allocated with name '_FlashProgramPage_PARM_2'
+                           1135 ;size                      Allocated with name '_FlashProgramPage_PARM_3'
+                           1136 ;buffer                    Allocated with name '_FlashProgramPage_buffer_1_1'
+                           1137 ;page_addr                 Allocated to registers r5 r6 
+                           1138 ;i                         Allocated to registers r7 
+                           1139 ;status                    Allocated to registers 
+                           1140 ;------------------------------------------------------------
+                    0259   1141 	G$FlashProgramPage$0$0 ==.
+                    0259   1142 	C$apb_flash_loader.c$279$1$1 ==.
+                           1143 ;	../apb_flash_loader.c:279: void FlashProgramPage ( unsigned char * buffer  , unsigned int addr , unsigned char size) {
+                           1144 ;	-----------------------------------------
+                           1145 ;	 function FlashProgramPage
+                           1146 ;	-----------------------------------------
+   0259                    1147 _FlashProgramPage:
+                           1148 ;	genReceive
+   0259 85 82*0C           1149 	mov	_FlashProgramPage_buffer_1_1,dpl
+   025C 85 83*0D           1150 	mov	(_FlashProgramPage_buffer_1_1 + 1),dph
+   025F 85 F0*0E           1151 	mov	(_FlashProgramPage_buffer_1_1 + 2),b
+                    0262   1152 	C$apb_flash_loader.c$283$1$1 ==.
+                           1153 ;	../apb_flash_loader.c:283: page_addr = addr;
+                           1154 ;	genAssign
+   0262 AD*09              1155 	mov	r5,_FlashProgramPage_PARM_2
+   0264 AE*0A              1156 	mov	r6,(_FlashProgramPage_PARM_2 + 1)
+                    0266   1157 	C$apb_flash_loader.c$285$1$1 ==.
+                           1158 ;	../apb_flash_loader.c:285: FlashBusyCheck();  // check the last programming operation is complete or not;
+                           1159 ;	genCall
+   0266 C0 05              1160 	push	ar5
+   0268 C0 06              1161 	push	ar6
+   026A 12s03r23           1162 	lcall	_FlashBusyCheck
+   026D D0 06              1163 	pop	ar6
+   026F D0 05              1164 	pop	ar5
+                    0271   1165 	C$apb_flash_loader.c$287$1$1 ==.
+                           1166 ;	../apb_flash_loader.c:287: *(FLASH_BASE_ADDR + FLASH_ADDR1_OFFSET) = page_addr;
+                           1167 ;	genPlus
+                           1168 ;	genPlusIncr
+   0271 85*02 82           1169 	mov	dpl,_FLASH_BASE_ADDR
+   0274 85*03 83           1170 	mov	dph,(_FLASH_BASE_ADDR + 1)
+   0277 A3                 1171 	inc	dptr
+   0278 A3                 1172 	inc	dptr
+   0279 A3                 1173 	inc	dptr
+   027A A3                 1174 	inc	dptr
+   027B A3                 1175 	inc	dptr
+   027C A3                 1176 	inc	dptr
+   027D A3                 1177 	inc	dptr
+   027E A3                 1178 	inc	dptr
+                           1179 ;	genCast
+   027F 8D 07              1180 	mov	ar7,r5
+                           1181 ;	genPointerSet
+                           1182 ;     genFarPointerSet
+   0281 EF                 1183 	mov	a,r7
+   0282 F0                 1184 	movx	@dptr,a
+                    0283   1185 	C$apb_flash_loader.c$288$1$1 ==.
+                           1186 ;	../apb_flash_loader.c:288: *(FLASH_BASE_ADDR+FLASH_ADDR2_OFFSET)   = page_addr >> 8;  // uper addr
+                           1187 ;	genPlus
+                           1188 ;	genPlusIncr
+   0283 74 0C              1189 	mov	a,#0x0C
+   0285 25*02              1190 	add	a,_FLASH_BASE_ADDR
+   0287 F5 82              1191 	mov	dpl,a
+   0289 74 00              1192 	mov	a,#0x00
+   028B 35*03              1193 	addc	a,(_FLASH_BASE_ADDR + 1)
+   028D F5 83              1194 	mov	dph,a
+                           1195 ;	genGetByte
+   028F 8E 07              1196 	mov	ar7,r6
+                           1197 ;	genPointerSet
+                           1198 ;     genFarPointerSet
+   0291 EF                 1199 	mov	a,r7
+   0292 F0                 1200 	movx	@dptr,a
+                    0293   1201 	C$apb_flash_loader.c$290$1$1 ==.
+                           1202 ;	../apb_flash_loader.c:290: status = *(FLASH_BASE_ADDR+FLASH_DATA_OFFSET) ; // read a byte from the page buffer to load it properly
+                           1203 ;	genPlus
+                           1204 ;	genPlusIncr
+   0293 74 10              1205 	mov	a,#0x10
+   0295 25*02              1206 	add	a,_FLASH_BASE_ADDR
+   0297 F5 82              1207 	mov	dpl,a
+   0299 74 00              1208 	mov	a,#0x00
+   029B 35*03              1209 	addc	a,(_FLASH_BASE_ADDR + 1)
+   029D F5 83              1210 	mov	dph,a
+                           1211 ;	genPointerGet
+                           1212 ;	genFarPointerGet
+   029F E0                 1213 	movx	a,@dptr
+                    02A0   1214 	C$apb_flash_loader.c$291$1$1 ==.
+                           1215 ;	../apb_flash_loader.c:291: FlashBusyCheck();
+                           1216 ;	genCall
+   02A0 C0 05              1217 	push	ar5
+   02A2 C0 06              1218 	push	ar6
+   02A4 12s03r23           1219 	lcall	_FlashBusyCheck
+   02A7 D0 06              1220 	pop	ar6
+   02A9 D0 05              1221 	pop	ar5
+                    02AB   1222 	C$apb_flash_loader.c$293$1$1 ==.
+                           1223 ;	../apb_flash_loader.c:293: for ( i = 0; i < size ; i++) {
+                           1224 ;	genAssign
+   02AB 7F 00              1225 	mov	r7,#0x00
+   02AD                    1226 00101$:
+                           1227 ;	genCmpLt
+                           1228 ;	genCmp
+   02AD C3                 1229 	clr	c
+   02AE EF                 1230 	mov	a,r7
+   02AF 95*0B              1231 	subb	a,_FlashProgramPage_PARM_3
+                           1232 ;	genIfxJump
+   02B1 40 03              1233 	jc	00109$
+   02B3 02s03r16           1234 	ljmp	00104$
+   02B6                    1235 00109$:
+                    02B6   1236 	C$apb_flash_loader.c$294$2$2 ==.
+                           1237 ;	../apb_flash_loader.c:294: *(FLASH_BASE_ADDR+FLASH_ADDR1_OFFSET)= page_addr;
+                           1238 ;	genPlus
+                           1239 ;	genPlusIncr
+   02B6 85*02 82           1240 	mov	dpl,_FLASH_BASE_ADDR
+   02B9 85*03 83           1241 	mov	dph,(_FLASH_BASE_ADDR + 1)
+   02BC A3                 1242 	inc	dptr
+   02BD A3                 1243 	inc	dptr
+   02BE A3                 1244 	inc	dptr
+   02BF A3                 1245 	inc	dptr
+   02C0 A3                 1246 	inc	dptr
+   02C1 A3                 1247 	inc	dptr
+   02C2 A3                 1248 	inc	dptr
+   02C3 A3                 1249 	inc	dptr
+                           1250 ;	genCast
+   02C4 8D 00              1251 	mov	ar0,r5
+                           1252 ;	genPointerSet
+                           1253 ;     genFarPointerSet
+   02C6 E8                 1254 	mov	a,r0
+   02C7 F0                 1255 	movx	@dptr,a
+                    02C8   1256 	C$apb_flash_loader.c$295$2$2 ==.
+                           1257 ;	../apb_flash_loader.c:295: *(FLASH_BASE_ADDR+FLASH_ADDR2_OFFSET)= page_addr >> 8;
+                           1258 ;	genPlus
+                           1259 ;	genPlusIncr
+   02C8 74 0C              1260 	mov	a,#0x0C
+   02CA 25*02              1261 	add	a,_FLASH_BASE_ADDR
+   02CC F5 82              1262 	mov	dpl,a
+   02CE 74 00              1263 	mov	a,#0x00
+   02D0 35*03              1264 	addc	a,(_FLASH_BASE_ADDR + 1)
+   02D2 F5 83              1265 	mov	dph,a
+                           1266 ;	genGetByte
+   02D4 8E 00              1267 	mov	ar0,r6
+                           1268 ;	genPointerSet
+                           1269 ;     genFarPointerSet
+   02D6 E8                 1270 	mov	a,r0
+   02D7 F0                 1271 	movx	@dptr,a
+                    02D8   1272 	C$apb_flash_loader.c$296$2$2 ==.
+                           1273 ;	../apb_flash_loader.c:296: *(FLASH_BASE_ADDR+FLASH_DATA_OFFSET)=  buffer[i];
+                           1274 ;	genPlus
+                           1275 ;	genPlusIncr
+   02D8 74 10              1276 	mov	a,#0x10
+   02DA 25*02              1277 	add	a,_FLASH_BASE_ADDR
+   02DC F8                 1278 	mov	r0,a
+   02DD 74 00              1279 	mov	a,#0x00
+   02DF 35*03              1280 	addc	a,(_FLASH_BASE_ADDR + 1)
+   02E1 F9                 1281 	mov	r1,a
+                           1282 ;	genPlus
+   02E2 E5 07              1283 	mov	a,ar7
+   02E4 25*0C              1284 	add	a,_FlashProgramPage_buffer_1_1
+   02E6 FA                 1285 	mov	r2,a
+   02E7 74 00              1286 	mov	a,#0x00
+   02E9 35*0D              1287 	addc	a,(_FlashProgramPage_buffer_1_1 + 1)
+   02EB FB                 1288 	mov	r3,a
+   02EC AC*0E              1289 	mov	r4,(_FlashProgramPage_buffer_1_1 + 2)
+                           1290 ;	genPointerGet
+                           1291 ;	genGenPointerGet
+   02EE 8A 82              1292 	mov	dpl,r2
+   02F0 8B 83              1293 	mov	dph,r3
+   02F2 8C F0              1294 	mov	b,r4
+   02F4 12s00r00           1295 	lcall	__gptrget
+   02F7 FA                 1296 	mov	r2,a
+                           1297 ;	genPointerSet
+                           1298 ;     genFarPointerSet
+   02F8 88 82              1299 	mov	dpl,r0
+   02FA 89 83              1300 	mov	dph,r1
+   02FC EA                 1301 	mov	a,r2
+   02FD F0                 1302 	movx	@dptr,a
+                    02FE   1303 	C$apb_flash_loader.c$297$2$2 ==.
+                           1304 ;	../apb_flash_loader.c:297: FlashBusyCheck();
+                           1305 ;	genCall
+   02FE C0 05              1306 	push	ar5
+   0300 C0 06              1307 	push	ar6
+   0302 C0 07              1308 	push	ar7
+   0304 12s03r23           1309 	lcall	_FlashBusyCheck
+   0307 D0 07              1310 	pop	ar7
+   0309 D0 06              1311 	pop	ar6
+   030B D0 05              1312 	pop	ar5
+                    030D   1313 	C$apb_flash_loader.c$298$2$2 ==.
+                           1314 ;	../apb_flash_loader.c:298: page_addr++;
+                           1315 ;	genPlus
+                           1316 ;	genPlusIncr
+   030D 0D                 1317 	inc	r5
+   030E BD 00 01           1318 	cjne	r5,#0x00,00110$
+   0311 0E                 1319 	inc	r6
+   0312                    1320 00110$:
+                    0312   1321 	C$apb_flash_loader.c$293$1$1 ==.
+                           1322 ;	../apb_flash_loader.c:293: for ( i = 0; i < size ; i++) {
+                           1323 ;	genPlus
+                           1324 ;	genPlusIncr
+   0312 0F                 1325 	inc	r7
+   0313 02s02rAD           1326 	ljmp	00101$
+   0316                    1327 00104$:
+                    0316   1328 	C$apb_flash_loader.c$301$1$1 ==.
+                           1329 ;	../apb_flash_loader.c:301: *(FLASH_BASE_ADDR+FLASH_CTRL_OFFSET)=  FLASH_CTRL_PROGRAM;
+                           1330 ;	genAssign
+   0316 85*02 82           1331 	mov	dpl,_FLASH_BASE_ADDR
+   0319 85*03 83           1332 	mov	dph,(_FLASH_BASE_ADDR + 1)
+                           1333 ;	genPointerSet
+                           1334 ;     genFarPointerSet
+   031C 74 80              1335 	mov	a,#0x80
+   031E F0                 1336 	movx	@dptr,a
+                    031F   1337 	C$apb_flash_loader.c$304$1$1 ==.
+                           1338 ;	../apb_flash_loader.c:304: FlashBusyCheck();
+                           1339 ;	genCall
+   031F 12s03r23           1340 	lcall	_FlashBusyCheck
+   0322                    1341 00105$:
+                    0322   1342 	C$apb_flash_loader.c$306$1$1 ==.
+                    0322   1343 	XG$FlashProgramPage$0$0 ==.
+   0322 22                 1344 	ret
+                           1345 ;------------------------------------------------------------
+                           1346 ;Allocation info for local variables in function 'FlashBusyCheck'
+                           1347 ;------------------------------------------------------------
+                           1348 ;status                    Allocated to registers r2 
+                           1349 ;------------------------------------------------------------
+                    0323   1350 	G$FlashBusyCheck$0$0 ==.
+                    0323   1351 	C$apb_flash_loader.c$309$1$1 ==.
+                           1352 ;	../apb_flash_loader.c:309: void FlashBusyCheck(void) {
+                           1353 ;	-----------------------------------------
+                           1354 ;	 function FlashBusyCheck
+                           1355 ;	-----------------------------------------
+   0323                    1356 _FlashBusyCheck:
+                    0323   1357 	C$apb_flash_loader.c$312$1$1 ==.
+                           1358 ;	../apb_flash_loader.c:312: do {
+   0323                    1359 00101$:
+                    0323   1360 	C$apb_flash_loader.c$313$2$2 ==.
+                           1361 ;	../apb_flash_loader.c:313: status = *(FLASH_BASE_ADDR+FLASH_STS_OFFSET);
+                           1362 ;	genPlus
+                           1363 ;	genPlusIncr
+   0323 85*02 82           1364 	mov	dpl,_FLASH_BASE_ADDR
+   0326 85*03 83           1365 	mov	dph,(_FLASH_BASE_ADDR + 1)
+   0329 A3                 1366 	inc	dptr
+   032A A3                 1367 	inc	dptr
+   032B A3                 1368 	inc	dptr
+   032C A3                 1369 	inc	dptr
+                           1370 ;	genPointerGet
+                           1371 ;	genFarPointerGet
+   032D E0                 1372 	movx	a,@dptr
+   032E FA                 1373 	mov	r2,a
+                    032F   1374 	C$apb_flash_loader.c$315$1$1 ==.
+                           1375 ;	../apb_flash_loader.c:315: } while (!(status & FLASH_STS_BUSY_MASK));
+                           1376 ;	genAnd
+   032F EA                 1377 	mov	a,r2
+                           1378 ;	genIfxJump
+   0330 20 E7 03           1379 	jb	acc.7,00107$
+   0333 02s03r23           1380 	ljmp	00101$
+   0336                    1381 00107$:
+   0336                    1382 00104$:
+                    0336   1383 	C$apb_flash_loader.c$317$1$1 ==.
+                    0336   1384 	XG$FlashBusyCheck$0$0 ==.
+   0336 22                 1385 	ret
+                           1386 	.area CSEG    (CODE)
+                           1387 	.area CONST   (CODE)
+                    0000   1388 G$ascii$0$0 == .
+   0000                    1389 _ascii:
+   0000 30 31 32 33 34 35  1390 	.ascii "0123456789ABCDEF"
+        36 37 38 39 41 42
+        43 44 45 46
+   0010 00                 1391 	.db 0x00
+                    1000   1392 G$FLASH$0$0 == 0x1000
+                    1000   1393 _FLASH	=	0x1000
+                    0011   1394 F___apb_flash_loader$_str_0$0$0 == .
+   0011                    1395 __str_0:
+   0011 0D                 1396 	.db 0x0D
+   0012 20 38 30 35 31 73  1397 	.ascii " 8051s UART Test Program "
+        20 55 41 52 54 20
+        54 65 73 74 20 50
+        72 6F 67 72 61 6D
+        20
+   002B 0A                 1398 	.db 0x0A
+   002C 0D                 1399 	.db 0x0D
+   002D 00                 1400 	.db 0x00
+                    002E   1401 F___apb_flash_loader$_str_1$0$0 == .
+   002E                    1402 __str_1:
+   002E 0A                 1403 	.db 0x0A
+   002F 0D                 1404 	.db 0x0D
+   0030 00                 1405 	.db 0x00
+                    0031   1406 F___apb_flash_loader$_str_2$0$0 == .
+   0031                    1407 __str_2:
+   0031 43 61 70 74 75 72  1408 	.ascii "Captured 128 data in RAM "
+        65 64 20 31 32 38
+        20 64 61 74 61 20
+        69 6E 20 52 41 4D
+        20
+   004A 00                 1409 	.db 0x00
+                    004B   1410 F___apb_flash_loader$_str_3$0$0 == .
+   004B                    1411 __str_3:
+   004B 20 50 61 67 65 20  1412 	.ascii " Page Programmed "
+        50 72 6F 67 72 61
+        6D 6D 65 64 20
+   005C 00                 1413 	.db 0x00
+                    005D   1414 F___apb_flash_loader$_str_4$0$0 == .
+   005D                    1415 __str_4:
+   005D 0D                 1416 	.db 0x0D
+   005E 20                 1417 	.ascii " "
+   005F 0A                 1418 	.db 0x0A
+   0060 00                 1419 	.db 0x00
+                    0061   1420 F___apb_flash_loader$_str_5$0$0 == .
+   0061                    1421 __str_5:
+   0061 20 43 6F 6D 70 6C  1422 	.ascii " Completed "
+        65 74 65 64 20
+   006C 00                 1423 	.db 0x00
+                           1424 	.area XINIT   (CODE)
+                           1425 	.area CABS    (ABS,CODE)

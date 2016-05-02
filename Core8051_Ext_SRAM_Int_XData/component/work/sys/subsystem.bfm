@@ -1,0 +1,28 @@
+#===========================================================
+# Created by Actel SmartDesign Wed Sep 23 11:26:40 2015
+#
+# Syntax: 
+# ------- 
+#
+# memmap    resource_name base_address;
+#
+# write     width resource_name byte_offset data;
+# read      width resource_name byte_offset;
+# readcheck width resource_name byte_offset data;
+#
+#===========================================================
+
+#-----------------------------------------------------------
+# Memory Map
+# Define name and base address of each resource.
+#-----------------------------------------------------------
+
+memmap CoreUARTapb_00 0x00000000;
+memmap CoreGPIO_00 0x00000100;
+memmap CoreTimer_00 0x00000200;
+#-----------------------------------------------------------
+# Include resource scriptlets
+#-----------------------------------------------------------
+
+include CoreGPIO CoreGPIO_00;
+include CoreTimer CoreTimer_00;

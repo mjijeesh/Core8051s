@@ -1,0 +1,899 @@
+Synopsys Actel Technology Mapper, Version mapact, Build 023R, Built Sep 29 2010 09:29:00
+Copyright (C) 1994-2010, Synopsys Inc.  All Rights Reserved
+Product Version E-2010.09A-1
+@N: MF249 |Running in 32-bit mode.
+@N: MF258 |Gated clock conversion disabled 
+
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_159 on net Trigger_159 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_158 on net Trigger_158 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_157 on net Trigger_157 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_156 on net Trigger_156 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_155 on net Trigger_155 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_154 on net Trigger_154 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_153 on net Trigger_153 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_152 on net Trigger_152 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_151 on net Trigger_151 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_150 on net Trigger_150 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_149 on net Trigger_149 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_148 on net Trigger_148 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_147 on net Trigger_147 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_146 on net Trigger_146 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_145 on net Trigger_145 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_144 on net Trigger_144 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_143 on net Trigger_143 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_142 on net Trigger_142 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_141 on net Trigger_141 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_140 on net Trigger_140 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_139 on net Trigger_139 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_138 on net Trigger_138 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_137 on net Trigger_137 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_136 on net Trigger_136 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_135 on net Trigger_135 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_134 on net Trigger_134 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_133 on net Trigger_133 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_132 on net Trigger_132 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_131 on net Trigger_131 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_130 on net Trigger_130 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_129 on net Trigger_129 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_128 on net Trigger_128 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_127 on net Trigger_127 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_126 on net Trigger_126 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_125 on net Trigger_125 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_124 on net Trigger_124 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_123 on net Trigger_123 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_122 on net Trigger_122 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_121 on net Trigger_121 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_120 on net Trigger_120 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_119 on net Trigger_119 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_118 on net Trigger_118 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_117 on net Trigger_117 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_116 on net Trigger_116 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_115 on net Trigger_115 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_114 on net Trigger_114 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_113 on net Trigger_113 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_112 on net Trigger_112 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_111 on net Trigger_111 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_110 on net Trigger_110 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_109 on net Trigger_109 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_108 on net Trigger_108 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_107 on net Trigger_107 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_106 on net Trigger_106 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_105 on net Trigger_105 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_104 on net Trigger_104 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_103 on net Trigger_103 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_102 on net Trigger_102 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_101 on net Trigger_101 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_100 on net Trigger_100 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_99 on net Trigger_99 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_98 on net Trigger_98 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_97 on net Trigger_97 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_96 on net Trigger_96 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_95 on net Trigger_95 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_94 on net Trigger_94 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_93 on net Trigger_93 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_92 on net Trigger_92 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_91 on net Trigger_91 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_90 on net Trigger_90 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_89 on net Trigger_89 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_88 on net Trigger_88 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_87 on net Trigger_87 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_86 on net Trigger_86 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_85 on net Trigger_85 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_84 on net Trigger_84 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_83 on net Trigger_83 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_82 on net Trigger_82 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_81 on net Trigger_81 has its enable tied to GND (module trigger) 
+@W: MO111 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|tristate driver Trigger_80 on net Trigger_80 has its enable tied to GND (module trigger) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[159] on net Trigger_xhdl[159] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[158] on net Trigger_xhdl[158] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[157] on net Trigger_xhdl[157] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[156] on net Trigger_xhdl[156] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[155] on net Trigger_xhdl[155] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[154] on net Trigger_xhdl[154] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[153] on net Trigger_xhdl[153] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[152] on net Trigger_xhdl[152] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[151] on net Trigger_xhdl[151] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[150] on net Trigger_xhdl[150] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[149] on net Trigger_xhdl[149] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[148] on net Trigger_xhdl[148] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[147] on net Trigger_xhdl[147] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[146] on net Trigger_xhdl[146] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[145] on net Trigger_xhdl[145] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[144] on net Trigger_xhdl[144] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[143] on net Trigger_xhdl[143] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[142] on net Trigger_xhdl[142] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[141] on net Trigger_xhdl[141] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[140] on net Trigger_xhdl[140] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[139] on net Trigger_xhdl[139] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[138] on net Trigger_xhdl[138] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[137] on net Trigger_xhdl[137] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[136] on net Trigger_xhdl[136] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[135] on net Trigger_xhdl[135] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[134] on net Trigger_xhdl[134] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[133] on net Trigger_xhdl[133] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[132] on net Trigger_xhdl[132] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[131] on net Trigger_xhdl[131] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[130] on net Trigger_xhdl[130] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[129] on net Trigger_xhdl[129] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[128] on net Trigger_xhdl[128] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[127] on net Trigger_xhdl[127] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[126] on net Trigger_xhdl[126] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[125] on net Trigger_xhdl[125] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[124] on net Trigger_xhdl[124] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[123] on net Trigger_xhdl[123] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[122] on net Trigger_xhdl[122] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[121] on net Trigger_xhdl[121] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[120] on net Trigger_xhdl[120] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[119] on net Trigger_xhdl[119] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[118] on net Trigger_xhdl[118] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[117] on net Trigger_xhdl[117] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[116] on net Trigger_xhdl[116] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[115] on net Trigger_xhdl[115] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[114] on net Trigger_xhdl[114] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[113] on net Trigger_xhdl[113] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[112] on net Trigger_xhdl[112] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[111] on net Trigger_xhdl[111] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[110] on net Trigger_xhdl[110] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[109] on net Trigger_xhdl[109] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[108] on net Trigger_xhdl[108] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[107] on net Trigger_xhdl[107] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[106] on net Trigger_xhdl[106] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[105] on net Trigger_xhdl[105] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[104] on net Trigger_xhdl[104] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[103] on net Trigger_xhdl[103] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[102] on net Trigger_xhdl[102] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[101] on net Trigger_xhdl[101] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[100] on net Trigger_xhdl[100] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[99] on net Trigger_xhdl[99] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[98] on net Trigger_xhdl[98] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[97] on net Trigger_xhdl[97] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[96] on net Trigger_xhdl[96] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[95] on net Trigger_xhdl[95] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[94] on net Trigger_xhdl[94] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[93] on net Trigger_xhdl[93] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[92] on net Trigger_xhdl[92] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[91] on net Trigger_xhdl[91] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[90] on net Trigger_xhdl[90] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[89] on net Trigger_xhdl[89] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[88] on net Trigger_xhdl[88] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[87] on net Trigger_xhdl[87] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[86] on net Trigger_xhdl[86] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[85] on net Trigger_xhdl[85] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[84] on net Trigger_xhdl[84] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[83] on net Trigger_xhdl[83] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[82] on net Trigger_xhdl[82] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[81] on net Trigger_xhdl[81] has its enable tied to GND (module ocia51) 
+@W: MO111 :|tristate driver Trigger_xhdl_t[80] on net Trigger_xhdl[80] has its enable tied to GND (module ocia51) 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\pmu.vhd":123:2:123:3|Removing sequential instance U_PMU.clkcpu_gate_pre of view:PrimLib.dffs(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\pmu.vhd":133:2:133:3|Removing sequential instance U_PMU.clkcpu_gate of view:PrimLib.dffs(prim) because there are no references to its outputs 
+@W: BN132 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\rstctrl.vhd":175:2:175:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_RSTCTRL.WDOGRES_1,  because it is equivalent to instance sys_0.Core8051s_00.MAIN8051_inst.U_RSTCTRL.reset_ff
+@W: BN132 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\rstctrl.vhd":155:2:155:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_RSTCTRL.rst_o,  because it is equivalent to instance sys_0.Core8051s_00.MAIN8051_inst.U_RSTCTRL.WDOGRES_2
+@W: BN132 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":437:2:437:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.t1_ff0,  because it is equivalent to instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.t0_ff0
+@W: BN132 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":437:2:437:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.t1_ff,  because it is equivalent to instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.t0_ff
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+@W:"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\smartgen\pll_50mh_6mh\pll_50mh_6mh.vhd":52:4:52:7|Net sys_0/SYSCLK appears to be a clock source which was not identfied. Assuming default frequency. 
+Finished RTL optimizations (Time elapsed 0h:00m:00s; Memory used current: 60MB peak: 61MB)
+
+@N: MO106 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coreapb3\3.0.103\rtl\vhdl\core\coreapb3.vhd":333:12:333:15|Found ROM, 'CoreAPB3_00.iPSELS_17[15:0]', 16 words by 16 bits 
+@W: MO129 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[8] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[9] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[10] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[11] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[12] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[13] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[14] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[15] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[16] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[17] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[18] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[19] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[20] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[21] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[22] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[23] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[24] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[25] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[26] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[27] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[28] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[29] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[30] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[31] has been reduced to a combinational gate by constant propagation
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Register bit CoreGPIO_00.dataOut[31] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Register bit CoreGPIO_00.dataOut[30] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Register bit CoreGPIO_00.dataOut[29] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Register bit CoreGPIO_00.dataOut[28] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Register bit CoreGPIO_00.dataOut[27] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Register bit CoreGPIO_00.dataOut[26] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Register bit CoreGPIO_00.dataOut[25] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Register bit CoreGPIO_00.dataOut[24] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Register bit CoreGPIO_00.dataOut[23] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Register bit CoreGPIO_00.dataOut[22] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Register bit CoreGPIO_00.dataOut[21] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Register bit CoreGPIO_00.dataOut[20] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Register bit CoreGPIO_00.dataOut[19] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Register bit CoreGPIO_00.dataOut[18] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Register bit CoreGPIO_00.dataOut[17] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Register bit CoreGPIO_00.dataOut[16] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Register bit CoreGPIO_00.dataOut[15] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Register bit CoreGPIO_00.dataOut[14] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Register bit CoreGPIO_00.dataOut[13] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Register bit CoreGPIO_00.dataOut[12] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Register bit CoreGPIO_00.dataOut[11] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Register bit CoreGPIO_00.dataOut[10] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Register bit CoreGPIO_00.dataOut[9] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Register bit CoreGPIO_00.dataOut[8] is always 0, optimizing ...
+@N: MF176 |Default generator successful 
+@N: MF176 |Default generator successful 
+@N: MF176 |Default generator successful 
+@N: MF176 |Default generator successful 
+@N: MF176 |Default generator successful 
+@N: MF176 |Default generator successful 
+@N: MF176 |Default generator successful 
+@N: MF176 |Default generator successful 
+@N: MO106 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\cpu.vhd":350:9:350:12|Found ROM, 'nr_cycles_a[2:0]', 256 words by 3 bits 
+@N: MO106 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\cpu.vhd":350:9:350:12|Found ROM, 'nr_bytes_a[1:0]', 256 words by 2 bits 
+@N: MF176 |Default generator successful 
+@N: MF179 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\cpu.vhd":150:27:150:44|Found 4 bit by 4 bit '<' comparator, 'un2_cyc_lt_nr_cyc'
+@N: MF179 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\cpu.vhd":246:18:246:34|Found 4 bit by 4 bit '<' comparator, 'un2_data_fetch_e'
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\cpu.vhd":1179:2:1179:3|Register bit nr_cycles[3] is always 0, optimizing ...
+@N:"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":369:2:369:3|Found counter in view:work.INTCTRL(rtl) inst th1[7:0]
+@N:"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":329:2:329:3|Found counter in view:work.INTCTRL(rtl) inst th0[7:0]
+@N: MF176 |Default generator successful 
+@N: MF176 |Default generator successful 
+@N: MF238 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":347:27:347:48|Found 5 bit incrementor, 'un13_tl0[4:0]'
+@N: MF238 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":387:27:387:48|Found 5 bit incrementor, 'un13_tl1[4:0]'
+Encoding state machine work.MEMORY_CONTROL(rtl)-apbCtrlSMCurrentState[0:2]
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+@N: MF176 |Default generator successful 
+@N: MF176 |Default generator successful 
+@N: MF176 |Default generator successful 
+@N: MF238 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\memctrl.vhd":601:12:601:34|Found 16 bit incrementor, 'un1_pc_inc[15:0]'
+@N: MF238 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\memctrl.vhd":660:19:660:43|Found 16 bit incrementor, 'dp_inc[15:0]'
+@N: MF176 |Default generator successful 
+@N: MF179 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":276:14:276:55|Found 16 bit by 16 bit '<' comparator, 'matche\.trigmatchpair\.un1204_matche'
+@N: MF179 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":277:7:277:48|Found 16 bit by 16 bit '<' comparator, 'matche\.trigmatchpair\.un1208_matche'
+@N:"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coreuartapb\3.1.105\rtl\vhdl\amba\clock_gen.vhd":49:20:49:21|Found counter in view:coreuartapb_lib.Clock_gen(rtl) inst baud_cntr[7:0]
+@N:"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coreuartapb\3.1.105\rtl\vhdl\amba\clock_gen.vhd":72:21:72:22|Found counter in view:coreuartapb_lib.Clock_gen(rtl) inst xmit_cntr[3:0]
+@N:"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coreuartapb\3.1.105\rtl\vhdl\amba\tx_async.vhd":198:6:198:7|Found counter in view:coreuartapb_lib.Tx_async(translated) inst xmit_bit_sel[3:0]
+Encoding state machine coreuartapb_lib.Tx_async(translated)-xmit_state[0:5]
+original code -> new code
+   00000000000000000000000000000000 -> 000001
+   00000000000000000000000000000001 -> 000010
+   00000000000000000000000000000010 -> 000100
+   00000000000000000000000000000011 -> 001000
+   00000000000000000000000000000100 -> 010000
+   00000000000000000000000000000101 -> 100000
+@N:"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coreuartapb\3.1.105\rtl\vhdl\amba\rx_async.vhd":227:6:227:7|Found counter in view:coreuartapb_lib.Rx_async(translated) inst rx_bit_cnt[3:0]
+@N:"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coreuartapb\3.1.105\rtl\vhdl\amba\rx_async.vhd":139:6:139:7|Found counter in view:coreuartapb_lib.Rx_async(translated) inst receive_count[3:0]
+Encoding state machine coreuartapb_lib.Rx_async(translated)-rx_state[0:2]
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+@N:"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":258:8:258:9|Found counter in view:work.CoreTimer(synth) inst Count[31:0]
+@N:"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":192:8:192:9|Found counter in view:work.CoreTimer(synth) inst PreScale[9:0]
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":178:8:178:9|Register bit Load[31] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":178:8:178:9|Register bit Load[30] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":178:8:178:9|Register bit Load[29] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":178:8:178:9|Register bit Load[28] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":178:8:178:9|Register bit Load[27] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":178:8:178:9|Register bit Load[26] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":178:8:178:9|Register bit Load[25] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":178:8:178:9|Register bit Load[24] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":178:8:178:9|Register bit Load[23] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":178:8:178:9|Register bit Load[22] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":178:8:178:9|Register bit Load[21] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":178:8:178:9|Register bit Load[20] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":178:8:178:9|Register bit Load[19] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":178:8:178:9|Register bit Load[18] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":178:8:178:9|Register bit Load[17] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":178:8:178:9|Register bit Load[16] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":178:8:178:9|Register bit Load[15] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":178:8:178:9|Register bit Load[14] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":178:8:178:9|Register bit Load[13] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":178:8:178:9|Register bit Load[12] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":178:8:178:9|Register bit Load[11] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":178:8:178:9|Register bit Load[10] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":178:8:178:9|Register bit Load[9] is always 0, optimizing ...
+@W: MO161 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":178:8:178:9|Register bit Load[8] is always 0, optimizing ...
+@W: BN132 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\memctrl.vhd":321:8:321:9|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.penable_i,  because it is equivalent to instance sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.apbCtrlSMCurrentState[1]
+Auto Dissolve of MAIN8051_inst (inst of view:work.MAIN8051(str))
+Auto Dissolve of sys_0 (inst of view:work.sys(def_arch))
+Auto Dissolve of sys_0.CoreAPB3_00.u_mux_p_to_b3 (inst of view:coreapb3_lib.COREAPB3_MUXPTOB3(coreapb3_muxptob3_arch))
+Finished factoring (Time elapsed 0h:00m:04s; Memory used current: 82MB peak: 83MB)
+
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":391:8:391:9|Removing sequential instance sys_0.CoreTimer_00.iPRDATA[31] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":391:8:391:9|Removing sequential instance sys_0.CoreTimer_00.iPRDATA[30] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":391:8:391:9|Removing sequential instance sys_0.CoreTimer_00.iPRDATA[29] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":391:8:391:9|Removing sequential instance sys_0.CoreTimer_00.iPRDATA[28] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":391:8:391:9|Removing sequential instance sys_0.CoreTimer_00.iPRDATA[27] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":391:8:391:9|Removing sequential instance sys_0.CoreTimer_00.iPRDATA[26] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":391:8:391:9|Removing sequential instance sys_0.CoreTimer_00.iPRDATA[25] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":391:8:391:9|Removing sequential instance sys_0.CoreTimer_00.iPRDATA[24] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":391:8:391:9|Removing sequential instance sys_0.CoreTimer_00.iPRDATA[23] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":391:8:391:9|Removing sequential instance sys_0.CoreTimer_00.iPRDATA[22] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":391:8:391:9|Removing sequential instance sys_0.CoreTimer_00.iPRDATA[21] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":391:8:391:9|Removing sequential instance sys_0.CoreTimer_00.iPRDATA[20] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":391:8:391:9|Removing sequential instance sys_0.CoreTimer_00.iPRDATA[19] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":391:8:391:9|Removing sequential instance sys_0.CoreTimer_00.iPRDATA[18] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":391:8:391:9|Removing sequential instance sys_0.CoreTimer_00.iPRDATA[17] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":391:8:391:9|Removing sequential instance sys_0.CoreTimer_00.iPRDATA[16] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":391:8:391:9|Removing sequential instance sys_0.CoreTimer_00.iPRDATA[15] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":391:8:391:9|Removing sequential instance sys_0.CoreTimer_00.iPRDATA[14] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":391:8:391:9|Removing sequential instance sys_0.CoreTimer_00.iPRDATA[13] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":391:8:391:9|Removing sequential instance sys_0.CoreTimer_00.iPRDATA[12] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":391:8:391:9|Removing sequential instance sys_0.CoreTimer_00.iPRDATA[11] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":391:8:391:9|Removing sequential instance sys_0.CoreTimer_00.iPRDATA[10] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":391:8:391:9|Removing sequential instance sys_0.CoreTimer_00.iPRDATA[9] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":391:8:391:9|Removing sequential instance sys_0.CoreTimer_00.iPRDATA[8] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coreuartapb\3.1.105\rtl\vhdl\amba\rx_async.vhd":324:6:324:7|Removing sequential instance sys_0.CoreUARTapb_00.uUART.make_RX.fifo_write_xhdl6 of view:PrimLib.dffs(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\coreuartapb\3.1.105\rtl\vhdl\amba\rx_async.vhd":324:6:324:7|Removing sequential instance sys_0.CoreUARTapb_00.uUART.make_RX.clear_parity_en_xhdl3 of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|Removing sequential instance sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.xhdl_trigger.TrigTon0 of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|Removing sequential instance sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.xhdl_trigger.TrigToff0 of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|Removing sequential instance sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.xhdl_trigger.TrigOut0 of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|Removing sequential instance sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.xhdl_trigger.TrigTon1 of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|Removing sequential instance sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.xhdl_trigger.TrigToff1 of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|Removing sequential instance sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.xhdl_trigger.TrigOut1 of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\debug.vhd":84:5:84:6|Removing sequential instance sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.xhdl_debug.BreakOut_xhdl of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@A: BN291 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\debug.vhd":84:5:84:6|Boundary register sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.xhdl_debug.BreakOut_xhdl has been packed into a complex cell. To disable this register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\jtagu_fusion.vhd":354:6:354:7|Removing sequential instance sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.AuxOut_xhdl of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@A: BN291 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\jtagu_fusion.vhd":354:6:354:7|Boundary register sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.AuxOut_xhdl has been packed into a complex cell. To disable this register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\rstctrl.vhd":190:2:190:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_RSTCTRL.WDOGRESN of view:PrimLib.dff(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":205:2:205:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.tcon[7] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":205:2:205:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.tcon[6] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":205:2:205:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.tcon[5] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":205:2:205:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.tcon[4] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":369:2:369:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.tl1[7] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":369:2:369:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.tl1[6] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":369:2:369:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.tl1[5] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":369:2:369:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.tl1[4] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":369:2:369:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.tl1[3] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":369:2:369:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.tl1[2] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":369:2:369:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.tl1[1] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":369:2:369:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.tl1[0] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":329:2:329:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.tl0[7] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":329:2:329:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.tl0[6] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":329:2:329:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.tl0[5] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":329:2:329:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.tl0[4] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":329:2:329:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.tl0[3] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":329:2:329:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.tl0[2] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":329:2:329:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.tl0[1] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":329:2:329:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.tl0[0] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":314:3:314:4|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.tmod[7] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":314:3:314:4|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.tmod[6] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":314:3:314:4|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.tmod[5] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":314:3:314:4|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.tmod[4] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":314:3:314:4|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.tmod[3] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":314:3:314:4|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.tmod[2] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":314:3:314:4|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.tmod[1] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":314:3:314:4|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.tmod[0] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":546:2:546:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.tl0_ov_ff of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":573:2:573:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.tl1_ov_ff of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":597:2:597:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.th0_ov_ff of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":621:2:621:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.th1_ov_ff of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":369:2:369:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.th1[7] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":369:2:369:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.th1[6] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":369:2:369:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.th1[5] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":369:2:369:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.th1[4] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":369:2:369:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.th1[3] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":369:2:369:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.th1[2] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":369:2:369:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.th1[1] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":369:2:369:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.th1[0] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":329:2:329:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.th0[7] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":329:2:329:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.th0[6] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":329:2:329:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.th0[5] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":329:2:329:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.th0[4] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":329:2:329:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.th0[3] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":329:2:329:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.th0[2] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":329:2:329:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.th0[1] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":329:2:329:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.th0[0] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":421:2:421:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.t0_ff0 of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\intctrl.vhd":421:2:421:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_INTCTRL.t0_ff of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\cpu.vhd":330:2:330:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_CPU.rmwinstr of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"d:\jijeesh\reference\core8051\core8051_core1553rt\external_flash-example\core8051_ext_sram_int_xdata\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\clkctrl.vhd":175:7:175:8|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_CLKCTRL.pcon[7] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+Finished gated-clock and generated-clock conversion (Time elapsed 0h:00m:04s; Memory used current: 82MB peak: 84MB)
+
+Finished generic timing optimizations - Pass 1 (Time elapsed 0h:00m:05s; Memory used current: 74MB peak: 91MB)
+
+Starting Early Timing Optimization (Time elapsed 0h:00m:05s; Memory used current: 74MB peak: 91MB)
+
+Finished Early Timing Optimization (Time elapsed 0h:00m:06s; Memory used current: 74MB peak: 91MB)
+
+Finished generic timing optimizations - Pass 2 (Time elapsed 0h:00m:06s; Memory used current: 74MB peak: 91MB)
+
+Finished preparing to map (Time elapsed 0h:00m:07s; Memory used current: 88MB peak: 91MB)
+
+
+High Fanout Net Report
+**********************
+
+Driver Instance / Pin Name                                                          Fanout, notes                   
+--------------------------------------------------------------------------------------------------------------------
+sys_0.Core8051s_00.MAIN8051_inst.U_PMU.nrsto / Q                                    454 : 454 asynchronous set/reset
+sys_0.CoreUARTapb_00.uUART.make_CLOCK_GEN.baud_clock_int / Q                        26                              
+sys_0.Core8051s_00.MAIN8051_inst.U_CPU.instrreg[4] / Q                              25                              
+sys_0.Core8051s_00.MAIN8051_inst.U_CPU.instrreg[6] / Q                              27                              
+sys_0.Core8051s_00.oci1_trace0.ocia51_inst.ujtag1.jtagu_inst.UJTAG_inst / URSTB     51 : 50 asynchronous set/reset  
+sys_0.Core8051s_00.oci1_trace0.ocia51_inst.xhdl_trigger.Trigger_xhdl[38] / Q        39                              
+sys_0.Core8051s_00.oci1_trace0.ocia51_inst.xhdl_trigger.Trigger_xhdl[78] / Q        39                              
+NSYSRESET_pad / Y                                                                   122 : 121 asynchronous set/reset
+sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.memaddr_i[2] / Q                         40                              
+sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.memaddr_i[3] / Q                         40                              
+sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.memaddr_i[4] / Q                         40                              
+sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.memaddr_i[8] / Q                         26                              
+sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.memaddr_i[9] / Q                         26                              
+sys_0.CoreTimer_00.Countlde_0_0 / Y                                                 32                              
+sys_0.CoreTimer_00.un1_loadenreg_0_s_0 / Y                                          33                              
+sys_0.Core8051s_00.oci1_trace0.ocia51_inst.ujtag1.jtagu_inst.SR_4_sqmuxa / Y        40                              
+sys_0.Core8051s_00.oci1_trace0.ocia51_inst.ujtag1.jtagu_inst.SR_5_sqmuxa / Y        40                              
+sys_0.Core8051s_00.oci1_trace0.ocia51_inst.ujtag1.jtagu_inst.SR_27[10] / Y          36                              
+sys_0.Core8051s_00.memdatai_8051[7] / Y                                             38                              
+sys_0.Core8051s_00.memdatai_8051[3] / Y                                             41                              
+sys_0.Core8051s_00.memdatai_8051[5] / Y                                             42                              
+sys_0.Core8051s_00.MAIN8051_inst.U_CPU.un2_c2_0_a2 / Y                              37                              
+sys_0.Core8051s_00.memdatai_8051[6] / Y                                             42                              
+sys_0.Core8051s_00.memdatai_8051[4] / Y                                             34                              
+sys_0.Core8051s_00.memdatai_8051[1] / Y                                             33                              
+sys_0.Core8051s_00.MAIN8051_inst.U_CPU.un2_c1_0_a2 / Y                              51                              
+sys_0.Core8051s_00.memdatai_8051[0] / Y                                             35                              
+sys_0.Core8051s_00.MAIN8051_inst.U_CLKCTRL.waitcount_2_sqmuxa / Y                   39                              
+sys_0.Core8051s_00.memdatai_8051[2] / Y                                             26                              
+sys_0.Core8051s_00.oci1_trace0.ocia51_inst.xhdl_trigger.Trigger_xhdl_19_e / Y       40                              
+sys_0.Core8051s_00.oci1_trace0.ocia51_inst.xhdl_trigger.Trigger_xhdl_59_e / Y       40                              
+====================================================================================================================
+
+@N: FP130 |Promoting Net NSYSRESET_c on CLKBUF  NSYSRESET_pad 
+@N: FP130 |Promoting Net sys_0.Core8051s_00_PRESETN on CLKINT  I_247 
+@N: FP130 |Promoting Net sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.udrck on CLKINT  sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.udrck 
+@N: FP130 |Promoting Net sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.urstb on CLKINT  I_248 
+@N: FP130 |Promoting Net sys_0.Core8051s_00.MAIN8051_inst.cyc1 on CLKINT  I_249 
+Replicating Combinational Instance sys_0.Core8051s_00.oci1_trace0.ocia51_inst.xhdl_trigger.Trigger_xhdl_59_e, fanout 40 segments 2
+Replicating Combinational Instance sys_0.Core8051s_00.oci1_trace0.ocia51_inst.xhdl_trigger.Trigger_xhdl_19_e, fanout 40 segments 2
+Replicating Combinational Instance sys_0.Core8051s_00.memdatai_8051[2], fanout 26 segments 2
+Replicating Combinational Instance sys_0.Core8051s_00.MAIN8051_inst.U_CLKCTRL.waitcount_2_sqmuxa, fanout 39 segments 2
+Replicating Combinational Instance sys_0.Core8051s_00.memdatai_8051[0], fanout 35 segments 2
+Replicating Combinational Instance sys_0.Core8051s_00.memdatai_8051[1], fanout 33 segments 2
+Replicating Combinational Instance sys_0.Core8051s_00.memdatai_8051[4], fanout 34 segments 2
+Replicating Combinational Instance sys_0.Core8051s_00.memdatai_8051[6], fanout 42 segments 2
+Replicating Combinational Instance sys_0.Core8051s_00.MAIN8051_inst.U_CPU.un2_c2_0_a2, fanout 37 segments 2
+Replicating Combinational Instance sys_0.Core8051s_00.memdatai_8051[5], fanout 42 segments 2
+Replicating Combinational Instance sys_0.Core8051s_00.memdatai_8051[3], fanout 41 segments 2
+Replicating Combinational Instance sys_0.Core8051s_00.memdatai_8051[7], fanout 38 segments 2
+Replicating Combinational Instance sys_0.Core8051s_00.oci1_trace0.ocia51_inst.ujtag1.jtagu_inst.SR_27[10], fanout 36 segments 2
+Replicating Combinational Instance sys_0.Core8051s_00.oci1_trace0.ocia51_inst.ujtag1.jtagu_inst.SR_5_sqmuxa, fanout 40 segments 2
+Replicating Combinational Instance sys_0.Core8051s_00.oci1_trace0.ocia51_inst.ujtag1.jtagu_inst.SR_4_sqmuxa, fanout 40 segments 2
+Replicating Combinational Instance sys_0.CoreTimer_00.un1_loadenreg_0_s_0, fanout 33 segments 2
+Replicating Combinational Instance sys_0.CoreTimer_00.Countlde_0_0, fanout 32 segments 2
+Replicating Sequential Instance sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.memaddr_i[9], fanout 26 segments 2
+Replicating Sequential Instance sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.memaddr_i[8], fanout 26 segments 2
+Replicating Sequential Instance sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.memaddr_i[4], fanout 40 segments 2
+Replicating Sequential Instance sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.memaddr_i[3], fanout 40 segments 2
+Replicating Sequential Instance sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.memaddr_i[2], fanout 40 segments 2
+Replicating Sequential Instance sys_0.Core8051s_00.oci1_trace0.ocia51_inst.xhdl_trigger.Trigger_xhdl[78], fanout 39 segments 2
+Replicating Sequential Instance sys_0.Core8051s_00.oci1_trace0.ocia51_inst.xhdl_trigger.Trigger_xhdl[38], fanout 39 segments 2
+Replicating Sequential Instance sys_0.Core8051s_00.MAIN8051_inst.U_CPU.instrreg[6], fanout 27 segments 2
+Replicating Sequential Instance sys_0.Core8051s_00.MAIN8051_inst.U_CPU.instrreg[4], fanout 25 segments 2
+Replicating Sequential Instance sys_0.CoreUARTapb_00.uUART.make_CLOCK_GEN.baud_clock_int, fanout 26 segments 2
+Finished technology mapping (Time elapsed 0h:00m:07s; Memory used current: 89MB peak: 92MB)
+
+Finished technology timing optimizations and critical path resynthesis (Time elapsed 0h:00m:08s; Memory used current: 89MB peak: 92MB)
+
+
+Added 0 Buffers
+Added 27 Cells via replication
+	Added 10 Sequential Cells via replication
+	Added 17 Combinational Cells via replication
+Finished restoring hierarchy (Time elapsed 0h:00m:08s; Memory used current: 90MB peak: 92MB)
+
+Writing Analyst data base D:\jijeesh\Reference\Core8051\Core8051_Core1553RT\External_Flash-Example\Core8051_Ext_SRAM_Int_XData\synthesis\top_8051.srm
+Finished Writing Netlist Databases (Time elapsed 0h:00m:08s; Memory used current: 87MB peak: 92MB)
+
+Writing EDIF Netlist and constraint files
+E-2010.09A-1
+Finished Writing EDIF Netlist and constraint files (Time elapsed 0h:00m:09s; Memory used current: 91MB peak: 93MB)
+
+@W: MT420 |Found inferred clock top_8051|DebugIf_TCK with period 1000.00ns. A user-defined clock should be declared on object "p:DebugIf_TCK"
+
+@W: MT420 |Found inferred clock PLL_50Mh_6Mh|net_0_inferred_clock with period 1000.00ns. A user-defined clock should be declared on object "n:net_0"
+
+@W: MT420 |Found inferred clock jtagu|udrck with period 1000.00ns. A user-defined clock should be declared on object "n:sys_0.Core8051s_00.oci1_trace0.ocia51_inst.ujtag1.jtagu_inst.udrck"
+
+
+
+##### START OF TIMING REPORT #####[
+# Timing Report written on Wed Sep 23 11:32:52 2015
+#
+
+
+Top view:               top_8051
+Library name:           fusion
+Operating conditions:   COMWC-1 ( T = 70.0, V = 1.42, P = 1.48, tree_type = balanced_tree )
+Requested Frequency:    1.0 MHz
+Wire load mode:         top
+Wire load model:        fusion
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |This timing report estimates place and route data. Please look at the place and route timing report for final timing..
+
+@N: MT322 |Clock constraints cover only FF-to-FF paths associated with the clock..
+
+
+
+Performance Summary 
+*******************
+
+
+Worst slack in design: 479.817
+
+                                      Requested     Estimated     Requested     Estimated                 Clock        Clock              
+Starting Clock                        Frequency     Frequency     Period        Period        Slack       Type         Group              
+------------------------------------------------------------------------------------------------------------------------------------------
+PLL_50Mh_6Mh|net_0_inferred_clock     1.0 MHz       17.3 MHz      1000.000      57.858        479.817     inferred     Inferred_clkgroup_2
+jtagu|udrck                           1.0 MHz       87.8 MHz      1000.000      11.392        988.608     inferred     Inferred_clkgroup_1
+top_8051|DebugIf_TCK                  1.0 MHz       NA            1000.000      NA            NA          inferred     Inferred_clkgroup_0
+==========================================================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                                                                |    rise  to  rise     |    fall  to  fall   |    rise  to  fall     |    fall  to  rise   
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                           Ending                             |  constraint  slack    |  constraint  slack  |  constraint  slack    |  constraint  slack  
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+top_8051|DebugIf_TCK               jtagu|udrck                        |  No paths    -        |  No paths    -      |  No paths    -        |  Diff grp    -      
+top_8051|DebugIf_TCK               PLL_50Mh_6Mh|net_0_inferred_clock  |  No paths    -        |  No paths    -      |  No paths    -        |  Diff grp    -      
+jtagu|udrck                        top_8051|DebugIf_TCK               |  No paths    -        |  No paths    -      |  Diff grp    -        |  No paths    -      
+jtagu|udrck                        jtagu|udrck                        |  1000.000    988.608  |  No paths    -      |  No paths    -        |  No paths    -      
+jtagu|udrck                        PLL_50Mh_6Mh|net_0_inferred_clock  |  Diff grp    -        |  No paths    -      |  No paths    -        |  No paths    -      
+PLL_50Mh_6Mh|net_0_inferred_clock  jtagu|udrck                        |  Diff grp    -        |  No paths    -      |  No paths    -        |  No paths    -      
+PLL_50Mh_6Mh|net_0_inferred_clock  PLL_50Mh_6Mh|net_0_inferred_clock  |  1000.000    942.142  |  No paths    -      |  500.000     479.817  |  500.000     498.682
+==================================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+		No IO constraint found 
+
+
+
+====================================
+Detailed Report for Clock: PLL_50Mh_6Mh|net_0_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                         Starting                                                                  Arrival            
+Instance                                                 Reference                             Type         Pin     Net            Time        Slack  
+                                                         Clock                                                                                        
+------------------------------------------------------------------------------------------------------------------------------------------------------
+sys_0.Core8051s_00.MAIN8051_inst.U_CPU.instrreg[3]       PLL_50Mh_6Mh|net_0_inferred_clock     DFN1E1C0     Q       instr[3]       0.627       479.817
+sys_0.Core8051s_00.MAIN8051_inst.U_CPU.instrreg[2]       PLL_50Mh_6Mh|net_0_inferred_clock     DFN1E1C0     Q       instr[2]       0.627       480.305
+sys_0.Core8051s_00.MAIN8051_inst.U_CPU.instrreg[1]       PLL_50Mh_6Mh|net_0_inferred_clock     DFN1E1C0     Q       instr[1]       0.494       482.930
+sys_0.Core8051s_00.MAIN8051_inst.U_CPU.instrreg[5]       PLL_50Mh_6Mh|net_0_inferred_clock     DFN1E1C0     Q       instr[5]       0.627       483.371
+sys_0.Core8051s_00.MAIN8051_inst.U_CPU.instrreg[7]       PLL_50Mh_6Mh|net_0_inferred_clock     DFN1E1C0     Q       instr[7]       0.627       483.551
+sys_0.Core8051s_00.MAIN8051_inst.U_CPU.instrreg[0]       PLL_50Mh_6Mh|net_0_inferred_clock     DFN1E1C0     Q       instr[0]       0.627       483.656
+sys_0.Core8051s_00.MAIN8051_inst.U_CPU.instrreg[4]       PLL_50Mh_6Mh|net_0_inferred_clock     DFN1E1C0     Q       instr[4]       0.627       483.946
+sys_0.Core8051s_00.MAIN8051_inst.U_CPU.instrreg[6]       PLL_50Mh_6Mh|net_0_inferred_clock     DFN1E1C0     Q       instr[6]       0.494       484.235
+sys_0.Core8051s_00.MAIN8051_inst.U_CPU.instrreg_0[4]     PLL_50Mh_6Mh|net_0_inferred_clock     DFN1E1C0     Q       instr_0[4]     0.627       486.225
+sys_0.Core8051s_00.MAIN8051_inst.U_ALU.b3[1]             PLL_50Mh_6Mh|net_0_inferred_clock     DFN1C0       Q       b3[1]          0.627       491.619
+======================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                                                        Starting                                                                                   Required            
+Instance                                                                Reference                             Type         Pin     Net                             Time         Slack  
+                                                                        Clock                                                                                                          
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+sys_0.Core8051s_00.MAIN8051_inst.U_PMU.clkper_gate_pre                  PLL_50Mh_6Mh|net_0_inferred_clock     DFN0P0       D       clkper_gate_pre_1               499.394      479.817
+sys_0.Core8051s_00.MAIN8051_inst.U_PMU.nrsto                            PLL_50Mh_6Mh|net_0_inferred_clock     DFN0         D       mempsrdrst_i                    499.394      497.733
+sys_0.Core8051s_00.MAIN8051_inst.U_PMU.clkper_gate                      PLL_50Mh_6Mh|net_0_inferred_clock     DFN1P0       D       clkper_gate_pre                 499.512      498.682
+sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.ram2memaddr                  PLL_50Mh_6Mh|net_0_inferred_clock     DFN1C0       D       un80_instr_dec_i                999.542      942.142
+sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.stretchcount[0]              PLL_50Mh_6Mh|net_0_inferred_clock     DFN1C0       D       stretchcount_14_iv[0]           999.512      942.287
+sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.stretchcount[1]              PLL_50Mh_6Mh|net_0_inferred_clock     DFN1C0       D       stretchcount_14[1]              999.542      942.317
+sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.psel_i                       PLL_50Mh_6Mh|net_0_inferred_clock     DFN1C0       D       d_psel_1                        999.512      943.642
+sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.apbCtrlSMCurrentState[0]     PLL_50Mh_6Mh|net_0_inferred_clock     DFN1C0       D       apbCtrlSMCurrentState_ns[0]     999.512      944.347
+sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.memrd                        PLL_50Mh_6Mh|net_0_inferred_clock     DFN1E0C0     D       memrd_0_sqmuxa                  999.542      945.335
+sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.memrd                        PLL_50Mh_6Mh|net_0_inferred_clock     DFN1E0C0     E       memrd_2_sqmuxa                  999.630      945.364
+=======================================================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      500.000
+    - Setup time:                            0.606
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         499.394
+
+    - Propagation time:                      19.577
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     479.817
+
+    Number of logic level(s):                10
+    Starting point:                          sys_0.Core8051s_00.MAIN8051_inst.U_CPU.instrreg[3] / Q
+    Ending point:                            sys_0.Core8051s_00.MAIN8051_inst.U_PMU.clkper_gate_pre / D
+    The start point is clocked by            PLL_50Mh_6Mh|net_0_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            PLL_50Mh_6Mh|net_0_inferred_clock [falling] on pin CLK
+
+Instance / Net                                                                     Pin      Pin               Arrival     No. of    
+Name                                                                  Type         Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------------------------------------------
+sys_0.Core8051s_00.MAIN8051_inst.U_CPU.instrreg[3]                    DFN1E1C0     Q        Out     0.627     0.627       -         
+instr[3]                                                              Net          -        -       2.026     -           21        
+sys_0.Core8051s_00.MAIN8051_inst.U_RAMSFRCTRL.un2_spdece_4            OR2          A        In      -         2.653       -         
+sys_0.Core8051s_00.MAIN8051_inst.U_RAMSFRCTRL.un2_spdece_4            OR2          Y        Out     0.432     3.085       -         
+un2_spince_3                                                          Net          -        -       1.849     -           16        
+sys_0.Core8051s_00.MAIN8051_inst.u_instrdec.un2310_decvec_i_o5        OR2A         B        In      -         4.934       -         
+sys_0.Core8051s_00.MAIN8051_inst.u_instrdec.un2310_decvec_i_o5        OR2A         Y        Out     0.550     5.484       -         
+N_275                                                                 Net          -        -       1.089     -           5         
+sys_0.Core8051s_00.MAIN8051_inst.u_instrdec.un822_decvec_i_o5         OR2          A        In      -         6.572       -         
+sys_0.Core8051s_00.MAIN8051_inst.u_instrdec.un822_decvec_i_o5         OR2          Y        Out     0.432     7.004       -         
+N_282                                                                 Net          -        -       2.050     -           22        
+sys_0.Core8051s_00.MAIN8051_inst.u_instrdec.un4187_decvec_6_0_a5      OR3B         C        In      -         9.054       -         
+sys_0.Core8051s_00.MAIN8051_inst.u_instrdec.un4187_decvec_6_0_a5      OR3B         Y        Out     0.639     9.693       -         
+instr_dec_i[55]                                                       Net          -        -       1.733     -           13        
+sys_0.Core8051s_00.MAIN8051_inst.U_ALU.aluresult_sn_m1_0_0            AX1C         A        In      -         11.426      -         
+sys_0.Core8051s_00.MAIN8051_inst.U_ALU.aluresult_sn_m1_0_0            AX1C         Y        Out     0.803     12.229      -         
+aluresult_sn_N_2                                                      Net          -        -       1.395     -           8         
+sys_0.Core8051s_00.MAIN8051_inst.U_ALU.b1_RNI9N7F4[1]                 MX2          S        In      -         13.624      -         
+sys_0.Core8051s_00.MAIN8051_inst.U_ALU.b1_RNI9N7F4[1]                 MX2          Y        Out     0.337     13.961      -         
+aluresult[1]                                                          Net          -        -       0.274     -           1         
+sys_0.Core8051s_00.MAIN8051_inst.U_RAMSFRCTRL.datareg_RNIQDNK4[1]     MX2C         B        In      -         14.235      -         
+sys_0.Core8051s_00.MAIN8051_inst.U_RAMSFRCTRL.datareg_RNIQDNK4[1]     MX2C         Y        Out     0.486     14.721      -         
+N_491                                                                 Net          -        -       0.274     -           1         
+sys_0.Core8051s_00.MAIN8051_inst.U_RAMSFRCTRL.db_accreg_RNIAC7T4      MX2A         A        In      -         14.995      -         
+sys_0.Core8051s_00.MAIN8051_inst.U_RAMSFRCTRL.db_accreg_RNIAC7T4      MX2A         Y        Out     0.484     15.479      -         
+sfrdatao_8051[1]                                                      Net          -        -       1.733     -           13        
+sys_0.Core8051s_00.MAIN8051_inst.U_PMU.clkper_gate_RNIEDHT5           AOI1B        B        In      -         17.212      -         
+sys_0.Core8051s_00.MAIN8051_inst.U_PMU.clkper_gate_RNIEDHT5           AOI1B        Y        Out     0.775     17.987      -         
+stoppmu                                                               Net          -        -       1.007     -           4         
+sys_0.Core8051s_00.MAIN8051_inst.U_PMU.clkper_gate_pre_RNO            OR2          A        In      -         18.994      -         
+sys_0.Core8051s_00.MAIN8051_inst.U_PMU.clkper_gate_pre_RNO            OR2          Y        Out     0.309     19.303      -         
+clkper_gate_pre_1                                                     Net          -        -       0.274     -           1         
+sys_0.Core8051s_00.MAIN8051_inst.U_PMU.clkper_gate_pre                DFN0P0       D        In      -         19.577      -         
+====================================================================================================================================
+Total path delay (propagation time + setup) of 20.183 is 6.480(32.1%) logic and 13.703(67.9%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+
+====================================
+Detailed Report for Clock: jtagu|udrck
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                                              Starting                                        Arrival            
+Instance                                                                      Reference       Type         Pin     Net        Time        Slack  
+                                                                              Clock                                                              
+-------------------------------------------------------------------------------------------------------------------------------------------------
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.IR_xhdl[5]     jtagu|udrck     DFN1E1C0     Q       IR[5]      0.627       988.608
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.IR_xhdl[6]     jtagu|udrck     DFN1E1C0     Q       IR[6]      0.494       988.701
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.IR_xhdl[7]     jtagu|udrck     DFN1E1C0     Q       IR[7]      0.627       989.652
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.IR_xhdl[0]     jtagu|udrck     DFN1E1C0     Q       IR[0]      0.627       991.340
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.IR_xhdl[1]     jtagu|udrck     DFN1E1P0     Q       IR[1]      0.627       991.869
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.IR_xhdl[3]     jtagu|udrck     DFN1E1C0     Q       IR[3]      0.494       993.289
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.SR[0]          jtagu|udrck     DFN1C0       Q       JDO[0]     0.627       993.645
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.SR[1]          jtagu|udrck     DFN1C0       Q       JDO[1]     0.627       994.104
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.SR[8]          jtagu|udrck     DFN1C0       Q       JDO[8]     0.627       994.444
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.SR[4]          jtagu|udrck     DFN1C0       Q       JDO[4]     0.627       994.703
+=================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                                                          Starting                                         Required            
+Instance                                                                  Reference       Type       Pin     Net           Time         Slack  
+                                                                          Clock                                                                
+-----------------------------------------------------------------------------------------------------------------------------------------------
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.SR[37]     jtagu|udrck     DFN1C0     D       SR_27[37]     999.512      988.608
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.SR[21]     jtagu|udrck     DFN1C0     D       SR_27[21]     999.512      988.627
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.SR[22]     jtagu|udrck     DFN1C0     D       SR_27[22]     999.512      988.627
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.SR[8]      jtagu|udrck     DFN1C0     D       SR_27[8]      999.512      988.700
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.SR[9]      jtagu|udrck     DFN1C0     D       SR_27[9]      999.512      988.700
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.SR[10]     jtagu|udrck     DFN1C0     D       SR_27[10]     999.512      988.700
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.SR[11]     jtagu|udrck     DFN1C0     D       SR_27[11]     999.512      988.700
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.SR[12]     jtagu|udrck     DFN1C0     D       SR_27[12]     999.512      988.700
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.SR[13]     jtagu|udrck     DFN1C0     D       SR_27[13]     999.512      988.700
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.SR[14]     jtagu|udrck     DFN1C0     D       SR_27[14]     999.512      988.700
+===============================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      1000.000
+    - Setup time:                            0.488
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         999.512
+
+    - Propagation time:                      10.904
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 988.608
+
+    Number of logic level(s):                7
+    Starting point:                          sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.IR_xhdl[5] / Q
+    Ending point:                            sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.SR[37] / D
+    The start point is clocked by            jtagu|udrck [rising] on pin CLK
+    The end   point is clocked by            jtagu|udrck [rising] on pin CLK
+
+Instance / Net                                                                                      Pin      Pin               Arrival     No. of    
+Name                                                                                   Type         Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.IR_xhdl[5]              DFN1E1C0     Q        Out     0.627     0.627       -         
+IR[5]                                                                                  Net          -        -       1.395     -           8         
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.IR_xhdl_RNIRV38[5]      OR2B         B        In      -         2.022       -         
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.IR_xhdl_RNIRV38[5]      OR2B         Y        Out     0.534     2.556       -         
+un1_IR_xhdl_2                                                                          Net          -        -       0.686     -           3         
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.IR_xhdl_RNIQV5C[7]      OR2A         B        In      -         3.242       -         
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.IR_xhdl_RNIQV5C[7]      OR2A         Y        Out     0.438     3.680       -         
+drsize17                                                                               Net          -        -       0.328     -           2         
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.IR_xhdl_RNIMNMR2[7]     OR2          A        In      -         4.008       -         
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.IR_xhdl_RNIMNMR2[7]     OR2          Y        Out     0.309     4.317       -         
+SR_8_sqmuxa                                                                            Net          -        -       0.686     -           3         
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.IR_xhdl_RNIOHDI9[7]     OR2B         B        In      -         5.003       -         
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.IR_xhdl_RNIOHDI9[7]     OR2B         Y        Out     0.439     5.442       -         
+N_249_3                                                                                Net          -        -       1.420     -           9         
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.IR_xhdl_RNI3AQSM[5]     OR3A         B        In      -         6.862       -         
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.IR_xhdl_RNI3AQSM[5]     OR3A         Y        Out     0.608     7.470       -         
+N_221                                                                                  Net          -        -       1.810     -           15        
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.SR_RNO_2[37]            NOR2B        A        In      -         9.280       -         
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.SR_RNO_2[37]            NOR2B        Y        Out     0.438     9.718       -         
+SR_m_0[37]                                                                             Net          -        -       0.274     -           1         
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.SR_RNO[37]              OR3          C        In      -         9.992       -         
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.SR_RNO[37]              OR3          Y        Out     0.639     10.631      -         
+SR_27[37]                                                                              Net          -        -       0.274     -           1         
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.SR[37]                  DFN1C0       D        In      -         10.904      -         
+=====================================================================================================================================================
+Total path delay (propagation time + setup) of 11.392 is 4.519(39.7%) logic and 6.873(60.3%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+##### END OF TIMING REPORT #####]
+
+--------------------------------------------------------------------------------
+Target Part: M1AFS1500_FBGA256_-1
+Report for cell top_8051.def_arch
+  Core Cell usage:
+              cell count     area count*area
+              AND2    43      1.0       43.0
+             AND2A    10      1.0       10.0
+              AND3    37      1.0       37.0
+               AO1    57      1.0       57.0
+              AO13     9      1.0        9.0
+              AO16     1      1.0        1.0
+              AO17     8      1.0        8.0
+              AO18    15      1.0       15.0
+              AO1A    25      1.0       25.0
+              AO1B    48      1.0       48.0
+              AO1C    36      1.0       36.0
+              AO1D    13      1.0       13.0
+              AOI1    21      1.0       21.0
+             AOI1A    19      1.0       19.0
+             AOI1B   150      1.0      150.0
+              AOI5     1      1.0        1.0
+               AX1     1      1.0        1.0
+              AX1A     8      1.0        8.0
+              AX1B    10      1.0       10.0
+              AX1C     6      1.0        6.0
+              AX1D     6      1.0        6.0
+              AX1E     5      1.0        5.0
+              AXO6     1      1.0        1.0
+             AXOI5     2      1.0        2.0
+             AXOI7     1      1.0        1.0
+            CLKINT     4      0.0        0.0
+               GND    32      0.0        0.0
+               INV    11      1.0       11.0
+              MAJ3    22      1.0       22.0
+            MAJ3XI     1      1.0        1.0
+              MIN3     6      1.0        6.0
+               MX2   211      1.0      211.0
+              MX2A    38      1.0       38.0
+              MX2B    58      1.0       58.0
+              MX2C   211      1.0      211.0
+             NAND2     8      1.0        8.0
+              NOR2   149      1.0      149.0
+             NOR2A   176      1.0      176.0
+             NOR2B   223      1.0      223.0
+              NOR3    48      1.0       48.0
+             NOR3A    54      1.0       54.0
+             NOR3B    63      1.0       63.0
+             NOR3C   144      1.0      144.0
+               OA1    27      1.0       27.0
+              OA1A    48      1.0       48.0
+              OA1B    18      1.0       18.0
+              OA1C    20      1.0       20.0
+              OAI1    11      1.0       11.0
+               OR2   152      1.0      152.0
+              OR2A   248      1.0      248.0
+              OR2B   342      1.0      342.0
+               OR3    57      1.0       57.0
+              OR3A    60      1.0       60.0
+              OR3B    55      1.0       55.0
+              OR3C   108      1.0      108.0
+               PLL     1      0.0        0.0
+            PLLINT     1      0.0        0.0
+               VCC    32      0.0        0.0
+               XA1     8      1.0        8.0
+              XA1A    22      1.0       22.0
+              XA1B    12      1.0       12.0
+              XA1C     3      1.0        3.0
+              XAI1     2      1.0        2.0
+             XAI1A     2      1.0        2.0
+             XNOR2    99      1.0       99.0
+             XNOR3    13      1.0       13.0
+               XO1    13      1.0       13.0
+              XO1A    11      1.0       11.0
+              XOR2   108      1.0      108.0
+              XOR3    27      1.0       27.0
+
+
+              DFN0     1      1.0        1.0
+            DFN0P0     1      1.0        1.0
+              DFN1     2      1.0        2.0
+            DFN1C0   271      1.0      271.0
+            DFN1E0     1      1.0        1.0
+          DFN1E0C0   182      1.0      182.0
+          DFN1E0P0     1      1.0        1.0
+          DFN1E1C0   129      1.0      129.0
+          DFN1E1P0    36      1.0       36.0
+            DFN1P0    15      1.0       15.0
+            RAM4K9     9      0.0        0.0
+                   -----          ----------
+             TOTAL  4140              4061.0
+
+
+  IO Cell usage:
+              cell count
+             BIBUF     8
+            CLKBUF     1
+             INBUF    10
+            OUTBUF    47
+             UJTAG     1
+                   -----
+             TOTAL    67
+
+
+Core Cells         : 4061 of 38400 (11%)
+IO Cells           : 67
+
+  RAM/ROM Usage Summary
+Block Rams : 9 of 60 (15%)
+
+Mapper successful!
+Process took 0h:00m:10s realtime, 0h:00m:09s cputime
+# Wed Sep 23 11:32:52 2015
+
+###########################################################]

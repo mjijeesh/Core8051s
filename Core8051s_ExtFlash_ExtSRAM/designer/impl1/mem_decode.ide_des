@@ -1,0 +1,9 @@
+KEY IDE_DES_TOOL "Ide"
+KEY IDE_DES_ADB_PATH "C:\Actelprj\AFS_ADV_KIT_8051\designer\impl1\mem_decode.adb"
+LIST SOURCE_FILES
+VALUE "C:\Actelprj\AFS_ADV_KIT_8051\synthesis\mem_decode_sdc.sdc;sdc"
+ENDLIST
+LIST OPTIONAL_FILES
+ENDLIST
+LIST VCD_FILES
+ENDLIST

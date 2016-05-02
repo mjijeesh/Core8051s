@@ -1,0 +1,32 @@
+----------------------------------------------------------------------
+Report for cell mem_decode.def_arch
+                                          Cell usage:
+                               cell       count     area    count*area
+                              BIBUF         8       0.0        0.0
+                               BUFF        12       1.0       12.0
+                             CLKBUF         1       0.0        0.0
+                                GND         1       0.0        0.0
+                              INBUF        28       0.0        0.0
+                        INT_RAM8kX8         1      19.0       19.0
+                                INV         2       1.0        2.0
+                                MX2         8       1.0        8.0
+                               NOR2         1       1.0        1.0
+                             OUTBUF        34       0.0        0.0
+                                VCC         1       0.0        0.0
+                            
+                         TOTAL             97                 42.0
+----------------------------------------------------------------------
+Report for cell INT_RAM8kX8.netlist
+     Instance path:  EXT_DATA_MEMORY
+                                          Cell usage:
+                               cell       count     area    count*area
+                               BUFF         2       1.0        2.0
+                               DFN1         1       1.0        1.0
+                                GND         1       0.0        0.0
+                                INV         4       1.0        4.0
+                                MX2         8       1.0        8.0
+                                OR2         4       1.0        4.0
+                             RAM4K9        16       0.0        0.0
+                                VCC         1       0.0        0.0
+                            
+                         TOTAL             37                 19.0

@@ -1,0 +1,16 @@
+add wave -noupdate -format Logic /testbnch/PCLK
+add wave -noupdate -format Logic /testbnch/PRESETN
+add wave -noupdate -format Literal /testbnch/UARTstatus1_data_out
+add wave -noupdate -format Logic /testbnch/UARTstatus1_parity_err
+add wave -noupdate -format Logic /testbnch/UARTstatus1_overflow
+add wave -noupdate -format Logic /testbnch/UARTstatus1_txrdy
+add wave -noupdate -format Logic /testbnch/UARTstatus1_rxrdy
+add wave -noupdate -format Literal /testbnch/UARTstatus2_data_out
+add wave -noupdate -format Logic /testbnch/UARTstatus2_parity_err
+add wave -noupdate -format Logic /testbnch/UARTstatus2_overflow
+add wave -noupdate -format Logic /testbnch/UARTstatus2_txrdy
+add wave -noupdate -format Logic /testbnch/UARTstatus2_rxrdy
+add wave -noupdate -format Logic /testbnch/txdata1
+add wave -noupdate -format Logic /testbnch/rxdata1
+add wave -noupdate -format Logic /testbnch/txdata2
+add wave -noupdate -format Logic /testbnch/rxdata2

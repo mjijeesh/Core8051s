@@ -1,0 +1,37 @@
+----------------------------------------------------------------------
+Report for cell FlashApb.one
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AO1B         5       1.0        5.0
+                               BUFF         1       1.0        1.0
+                             CLKBUF         1       0.0        0.0
+                           DFN1E1C0        32       1.0       32.0
+                                GND         1       0.0        0.0
+                              INBUF        33       0.0        0.0
+                               NOR2         1       1.0        1.0
+                              NOR2A         1       1.0        1.0
+                              NOR2B         1       1.0        1.0
+                              NOR3A         3       1.0        3.0
+                              NOR3B         3       1.0        3.0
+                               OR2A         1       1.0        1.0
+                               OR2B         7       1.0        7.0
+                               OR3B         8       1.0        8.0
+                               OR3C         3       1.0        3.0
+                             OUTBUF        17       0.0        0.0
+                                VCC         1       0.0        0.0
+                             nvm64k         1      20.0       20.0
+                            
+                         TOTAL            120                 86.0
+----------------------------------------------------------------------
+Report for cell nvm64k.netlist
+     Instance path:  FLASH_CODE
+                                          Cell usage:
+                               cell       count     area    count*area
+                                GND         1       0.0        0.0
+                                INV         2       1.0        2.0
+                                MX2        16       1.0       16.0
+                              NOR2B         2       1.0        2.0
+                                NVM         1       0.0        0.0
+                                VCC         1       0.0        0.0
+                            
+                         TOTAL             23                 20.0

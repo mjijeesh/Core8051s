@@ -1,0 +1,106 @@
+Target Part: M1AFS1500_FBGA484_-2
+Report for cell top_8051.rtl
+  Core Cell usage:
+              cell count     area count*area
+              AND2   102      1.0      102.0
+             AND2A    18      1.0       18.0
+              AND3    51      1.0       51.0
+               AO1   464      1.0      464.0
+              AO13    21      1.0       21.0
+              AO17     1      1.0        1.0
+              AO18    18      1.0       18.0
+              AO1A   102      1.0      102.0
+              AO1B    10      1.0       10.0
+              AO1C    19      1.0       19.0
+              AO1D    23      1.0       23.0
+              AOI1    28      1.0       28.0
+             AOI1A    35      1.0       35.0
+             AOI1B    18      1.0       18.0
+               AX1    15      1.0       15.0
+              AX1A     5      1.0        5.0
+              AX1B    12      1.0       12.0
+              AX1C     6      1.0        6.0
+              AX1D    46      1.0       46.0
+              AX1E     1      1.0        1.0
+             AXOI4     1      1.0        1.0
+             AXOI7     1      1.0        1.0
+              BUFF     2      1.0        2.0
+            CLKINT     4      0.0        0.0
+               GND    33      0.0        0.0
+               INV    10      1.0       10.0
+              MAJ3    10      1.0       10.0
+              MIN3     6      1.0        6.0
+               MX2  1008      1.0     1008.0
+              MX2A   130      1.0      130.0
+              MX2B    29      1.0       29.0
+              MX2C   100      1.0      100.0
+              NOR2   164      1.0      164.0
+             NOR2A   624      1.0      624.0
+             NOR2B  1126      1.0     1126.0
+              NOR3   117      1.0      117.0
+             NOR3A   220      1.0      220.0
+             NOR3B   367      1.0      367.0
+             NOR3C   219      1.0      219.0
+               OA1   144      1.0      144.0
+              OA1A    45      1.0       45.0
+              OA1B    19      1.0       19.0
+              OA1C    17      1.0       17.0
+              OAI1     7      1.0        7.0
+               OR2   284      1.0      284.0
+              OR2A   150      1.0      150.0
+              OR2B    36      1.0       36.0
+               OR3   441      1.0      441.0
+              OR3A    27      1.0       27.0
+              OR3B    32      1.0       32.0
+              OR3C     2      1.0        2.0
+               PLL     1      0.0        0.0
+             RCOSC     1      0.0        0.0
+               VCC    33      0.0        0.0
+               XA1    41      1.0       41.0
+              XA1A    13      1.0       13.0
+              XA1B     6      1.0        6.0
+              XA1C    29      1.0       29.0
+             XAI1A     2      1.0        2.0
+             XNOR2   103      1.0      103.0
+             XNOR3    12      1.0       12.0
+               XO1    40      1.0       40.0
+              XO1A     7      1.0        7.0
+              XOR2   341      1.0      341.0
+              XOR3    29      1.0       29.0
+
+
+              DFI1     1      1.0        1.0
+              DFN0     2      1.0        2.0
+            DFN0P0     1      1.0        1.0
+              DFN1     3      1.0        3.0
+            DFN1C0   406      1.0      406.0
+            DFN1E0     1      1.0        1.0
+          DFN1E0C0    66      1.0       66.0
+          DFN1E0P0    34      1.0       34.0
+            DFN1E1   256      1.0      256.0
+          DFN1E1C0   719      1.0      719.0
+          DFN1E1P0    37      1.0       37.0
+            DFN1P0    27      1.0       27.0
+            RAM4K9     1      0.0        0.0
+                   -----          ----------
+             TOTAL  8582              8509.0
+
+
+  IO Cell usage:
+              cell count
+             BIBUF     8
+            CLKBUF     1
+             INBUF     9
+            OUTBUF    39
+           TRIBUFF     8
+             UJTAG     1
+                   -----
+             TOTAL    66
+
+
+Core Cells         : 8509 of 38400 (22%)
+IO Cells           : 66
+
+  RAM/ROM Usage Summary
+Block Rams : 1 of 60 (1%)
+

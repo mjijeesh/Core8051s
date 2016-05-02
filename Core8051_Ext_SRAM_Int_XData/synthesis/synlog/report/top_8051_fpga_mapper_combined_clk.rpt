@@ -1,0 +1,24 @@
+
+
+#### START OF CLOCK OPTIMIZATION REPORT #####[
+
+Clock optimization not enabled
+2 non-gated/non-generated clock tree(s) driving 51 clock pin(s) of sequential element(s)
+1 gated/generated clock tree(s) driving 1534 clock pin(s) of sequential element(s)
+0 instances converted, 1534 sequential instances remain driven by gated/generated clocks
+
+================================================================================== Non-Gated/Non-Generated Clocks ===================================================================================
+Clock Tree ID     Driving Element                                                            Drive Element Type     Fanout     Sample Instance                                                       
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@K:CKID0002       sys_0.CORE8051S_0.oci1_trace0.ocia51_inst.ujtag1.jtagu_inst.UJTAG_inst     UJTAG                  50         sys_0.CORE8051S_0.oci1_trace0.ocia51_inst.ujtag1.jtagu_inst.IR_xhdl[0]
+@K:CKID0003       DebugIf_TCK                                                                port                   1          sys_0.CORE8051S_0.oci1_trace0.ocia51_inst.ujtag1.jtagu_inst.UJTAG_inst
+=====================================================================================================================================================================================================
+=========================================================================================================== Gated/Generated Clocks ============================================================================================================
+Clock Tree ID     Driving Element         Drive Element Type     Fanout     Sample Instance                      Explanation                                                                                                                   
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@K:CKID0001       PLL_50Mh_6Mh_0.Core     PLL                    1534       sys_0.CoreWatchdog_0.iPRDATA[31]     Gating structure creates improper gating logic. See the Gated Clocks description in the user guide for conversion requirements
+===============================================================================================================================================================================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######]
+

@@ -1,0 +1,15 @@
+!SESSION 2016-05-02 12:32:10.366 -----------------------------------------------
+eclipse.buildId=M20130329-1600
+java.version=1.6.0_22
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86 -data C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\Softconsole_WS
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-05-02 12:32:49.256
+!MESSAGE Indexed 'Core8051s_Simple_LED' (7 sources, 21 headers) in 0.41 sec: 420 declarations; 1,554 references; 12 unresolved inclusions; 0 syntax errors; 244 unresolved names (11.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-05-02 12:34:19.056
+!MESSAGE Indexed 'Core8051s_Intterupt_LED' (7 sources, 21 headers) in 0.13 sec: 420 declarations; 1,554 references; 12 unresolved inclusions; 0 syntax errors; 244 unresolved names (11.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-05-02 12:44:11.886
+!MESSAGE Indexed 'Core8051s_Intterupt_LED_Flash' (8 sources, 23 headers) in 0.13 sec: 471 declarations; 1,448 references; 12 unresolved inclusions; 8 syntax errors; 267 unresolved names (12.21%)

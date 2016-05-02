@@ -1,0 +1,25 @@
+#Build: Synplify Pro D-2009.12A, Build 040R, Jan 20 2010
+#install: C:\Actel\Libero_v9.0\Synopsys\synplify_D200912A
+#OS: Windows XP 5.1
+#Hostname: JM-LAPTOP
+
+#Implementation: synthesis
+
+#Tue Apr 27 13:14:21 2010
+
+$ Start of Compile
+#Tue Apr 27 13:14:21 2010
+
+Synopsys VHDL Compiler, version comp475rc, Build 060R, built Jan 15 2010
+Copyright (C) 1994-2010, Synopsys Inc.  All Rights Reserved
+
+@N: CD720 :"C:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\lib\vhd\std.vhd":123:18:123:21|Setting time resolution to ns
+Top entity isn't set yet!
+@E: CD213 :"C:\Actelprj\AFS_ADV_KIT_8051\hdl\memory_interface.vhd":45:0:45:14|Undefined identifier
+1 error parsing file C:\Actelprj\AFS_ADV_KIT_8051\hdl\memory_interface.vhd
+@END
+@E|Parse errors encountered - exiting
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Tue Apr 27 13:14:22 2010
+
+###########################################################]

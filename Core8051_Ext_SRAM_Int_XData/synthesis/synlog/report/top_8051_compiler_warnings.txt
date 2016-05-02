@@ -1,0 +1,219 @@
+@W: CD645 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\sys\sys.vhd":14:8:14:20|Ignoring undefined library core8051s_lib
+@W: CD642 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\sys\sys.vhd":15:21:15:21|Ignoring use clause - library core8051s_lib not found ...
+@W: CD638 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\CoreUARTapb.vhd":153:10:153:20|Signal controlreg3 is undriven 
+@W: CD434 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\CoreUART.vhd":265:21:265:31|Signal rx_dout_reg in the sensitivity list is not used in the process
+@W: CD434 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\CoreUART.vhd":265:34:265:49|Signal parity_err_xhdl1 in the sensitivity list is not used in the process
+@W: CD604 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\CoreUART.vhd":392:9:392:22|OTHERS clause is not synthesized 
+@W: CD604 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\Rx_async.vhd":253:21:253:34|OTHERS clause is not synthesized 
+@W: CD604 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\Rx_async.vhd":318:19:318:33|OTHERS clause is not synthesized 
+@W: CD604 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\Rx_async.vhd":423:18:423:32|OTHERS clause is not synthesized 
+@W: CL190 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\Tx_async.vhd":134:4:134:5|Optimizing register bit fifo_read_en0 to a constant 1
+@W: CL169 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\Tx_async.vhd":134:4:134:5|Pruning register fifo_read_en0  
+@W: CD638 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\Clock_gen.vhd":54:7:54:19|Signal baud_cntr_one is undriven 
+@W: CL169 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\CoreUART.vhd":439:7:439:8|Pruning register overflow_reg_3  
+@W: CL169 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\CoreUART.vhd":414:7:414:8|Pruning register rx_dout_reg_empty_5  
+@W: CL169 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\CoreUART.vhd":399:6:399:7|Pruning register rx_dout_reg_5(7 downto 0)  
+@W: CL169 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\CoreUART.vhd":367:6:367:7|Pruning register rx_state_4(1 downto 0)  
+@W: CL169 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\CoreUART.vhd":350:6:350:7|Pruning register clear_framing_error_reg0_3  
+@W: CL169 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\CoreUART.vhd":350:6:350:7|Pruning register clear_framing_error_reg_3  
+@W: CL169 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\CoreUART.vhd":333:6:333:7|Pruning register clear_parity_reg0_3  
+@W: CL169 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\CoreUART.vhd":333:6:333:7|Pruning register clear_parity_reg_3  
+@W: CL169 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\CoreUART.vhd":245:6:245:7|Pruning register fifo_write_tx_4  
+@W: CL252 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\CoreUARTapb.vhd":153:10:153:20|Bit 0 of signal controlReg3 is floating -- simulation mismatch possible.
+@W: CL252 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\CoreUARTapb.vhd":153:10:153:20|Bit 1 of signal controlReg3 is floating -- simulation mismatch possible.
+@W: CL252 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\CoreUARTapb.vhd":153:10:153:20|Bit 2 of signal controlReg3 is floating -- simulation mismatch possible.
+@W: CD434 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":968:23:968:27|Signal paddr in the sensitivity list is not used in the process
+@W: CD604 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":665:16:665:29|OTHERS clause is not synthesized 
+@W: CD434 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":1438:41:1438:46|Signal infill in the sensitivity list is not used in the process
+@W: CD638 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":616:7:616:15|Signal ia_prdata is undriven 
+@W: CD638 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\core8051s.vhd":512:7:512:13|Signal tracedo is undriven 
+@W: CD638 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\trigger.vhd":103:10:103:24|Signal trigxbrksetting is undriven 
+@W: CD434 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\trace.vhd":279:51:279:54|Signal jxir in the sensitivity list is not used in the process
+@W: CD434 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\trace.vhd":279:57:279:58|Signal ir in the sensitivity list is not used in the process
+@W: CD434 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\trace.vhd":279:61:279:64|Signal jxdr in the sensitivity list is not used in the process
+@W: CD434 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\trace.vhd":279:67:279:69|Signal jdo in the sensitivity list is not used in the process
+@W: CL169 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\trace.vhd":110:3:110:4|Pruning register TrigToff2_2  
+@W: CL169 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\trace.vhd":110:3:110:4|Pruning register TrigTon2_2  
+@W: CL169 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\trace.vhd":110:3:110:4|Pruning register PCA_5(15 downto 0)  
+@W: CL169 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\trace.vhd":110:3:110:4|Pruning register PC_5(15 downto 0)  
+@W: CL169 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\trace.vhd":110:3:110:4|Pruning register resetDelay_3  
+@W: CL169 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\trace.vhd":110:3:110:4|Pruning register TraceType_3(3 downto 0)  
+@W: CL189 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\trace.vhd":110:3:110:4|Register bit Jump0 is always 0, optimizing ...
+@W: CL169 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\trace.vhd":110:3:110:4|Pruning register Jump0  
+@W: CD604 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\memctrl.vhd":305:12:305:26|OTHERS clause is not synthesized 
+@W: CD434 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\memctrl.vhd":831:8:831:12|Signal p2reg in the sensitivity list is not used in the process
+@W: CD434 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\memctrl.vhd":831:38:831:46|Signal debugpswr in the sensitivity list is not used in the process
+@W: CD434 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\memctrl.vhd":831:49:831:57|Signal mempsacki in the sensitivity list is not used in the process
+@W: CD638 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\memctrl.vhd":225:10:225:18|Signal dps_wrclk is undriven 
+@W: CL190 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\memctrl.vhd":1066:8:1066:9|Optimizing register bit clear_mempswr to a constant 0
+@W: CL169 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\memctrl.vhd":1066:8:1066:9|Pruning register clear_mempswr  
+@W: CD638 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\intctrl.vhd":138:13:138:22|Signal tmod_wrclk is undriven 
+@W: CD638 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":197:7:197:16|Signal ien0_wrclk is undriven 
+@W: CD638 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":198:7:198:16|Signal ien1_wrclk is undriven 
+@W: CD638 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":199:7:199:15|Signal ip0_wrclk is undriven 
+@W: CD638 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":200:7:200:15|Signal ip1_wrclk is undriven 
+@W: CL169 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":414:2:414:3|Pruning register int7_ff_2  
+@W: CL169 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":414:2:414:3|Pruning register int6_ff_2  
+@W: CL169 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":414:2:414:3|Pruning register int5_ff_2  
+@W: CL169 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":414:2:414:3|Pruning register int4_ff_2  
+@W: CL169 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":414:2:414:3|Pruning register int3_ff_2  
+@W: CL169 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":414:2:414:3|Pruning register int2_ff_2  
+@W: CL169 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":414:2:414:3|Pruning register int1_ff_2  
+@W: CL169 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":414:2:414:3|Pruning register int0_ff_3  
+@W: CL169 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":399:3:399:4|Pruning register ip1_2(7 downto 0)  
+@W: CL169 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":356:3:356:4|Pruning register ip0_2(7 downto 0)  
+@W: CL169 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":313:3:313:4|Pruning register ien1_2(7 downto 0)  
+@W: CL190 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":805:2:805:3|Optimizing register bit int_vect(4) to a constant 0
+@W: CL190 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":848:2:848:3|Optimizing register bit l2_reg to a constant 0
+@W: CL190 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":848:2:848:3|Optimizing register bit l3_reg to a constant 0
+@W: CL260 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":805:2:805:3|Pruning register bit 4 of int_vect(4 downto 0)  
+@W: CL279 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":270:3:270:4|Pruning register bits 6 to 3 of ien0(7 downto 0)  
+@W: CL260 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":270:3:270:4|Pruning register bit 1 of ien0(7 downto 0)  
+@W: CL169 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":848:2:848:3|Pruning register l2_reg  
+@W: CL169 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":848:2:848:3|Pruning register l3_reg  
+@W: CG296 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\clkctrl.vhd":236:4:236:10|Incomplete sensitivity list - assuming completeness
+@W: CG290 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\clkctrl.vhd":239:25:239:37|Referenced variable wait_val_vect is not in sensitivity list
+@W: CD796 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\clkctrl.vhd":75:11:75:15|Bit 3 of signal ckcon is undriven. Possible simulation mismatch as initial value or default value is ignored. To avoid simulation mismatches, explicitly drive this bit. 
+@W: CD796 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\clkctrl.vhd":75:11:75:15|Bit 7 of signal ckcon is undriven. Possible simulation mismatch as initial value or default value is ignored. To avoid simulation mismatches, explicitly drive this bit. 
+@W: CD638 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\clkctrl.vhd":80:11:80:20|Signal pcon_wrclk is undriven 
+@W: CD638 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\clkctrl.vhd":81:11:81:21|Signal ckcon_wrclk is undriven 
+@W: CL271 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\clkctrl.vhd":175:7:175:8|Pruning bits 6 to 2 of pcon_4(7 downto 2) -- not in use ... 
+@W: CL245 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\core8051s.vhd":733:4:733:14|Bit 0 of input tracedo of instance ocia51_inst is floating
+@W: CL245 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\core8051s.vhd":733:4:733:14|Bit 1 of input tracedo of instance ocia51_inst is floating
+@W: CL245 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\core8051s.vhd":733:4:733:14|Bit 2 of input tracedo of instance ocia51_inst is floating
+@W: CL245 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\core8051s.vhd":733:4:733:14|Bit 3 of input tracedo of instance ocia51_inst is floating
+@W: CL245 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\core8051s.vhd":733:4:733:14|Bit 4 of input tracedo of instance ocia51_inst is floating
+@W: CL245 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\core8051s.vhd":733:4:733:14|Bit 5 of input tracedo of instance ocia51_inst is floating
+@W: CL245 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\core8051s.vhd":733:4:733:14|Bit 6 of input tracedo of instance ocia51_inst is floating
+@W: CL245 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\core8051s.vhd":733:4:733:14|Bit 7 of input tracedo of instance ocia51_inst is floating
+@W: CL245 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\core8051s.vhd":733:4:733:14|Bit 8 of input tracedo of instance ocia51_inst is floating
+@W: CL245 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\core8051s.vhd":733:4:733:14|Bit 9 of input tracedo of instance ocia51_inst is floating
+@W: CL245 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\core8051s.vhd":733:4:733:14|Bit 10 of input tracedo of instance ocia51_inst is floating
+@W: CL245 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\core8051s.vhd":733:4:733:14|Bit 11 of input tracedo of instance ocia51_inst is floating
+@W: CL245 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\core8051s.vhd":733:4:733:14|Bit 12 of input tracedo of instance ocia51_inst is floating
+@W: CL245 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\core8051s.vhd":733:4:733:14|Bit 13 of input tracedo of instance ocia51_inst is floating
+@W: CL245 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\core8051s.vhd":733:4:733:14|Bit 14 of input tracedo of instance ocia51_inst is floating
+@W: CL245 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\core8051s.vhd":733:4:733:14|Bit 15 of input tracedo of instance ocia51_inst is floating
+@W: CL245 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\core8051s.vhd":733:4:733:14|Bit 16 of input tracedo of instance ocia51_inst is floating
+@W: CL245 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\core8051s.vhd":733:4:733:14|Bit 17 of input tracedo of instance ocia51_inst is floating
+@W: CL245 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\core8051s.vhd":733:4:733:14|Bit 18 of input tracedo of instance ocia51_inst is floating
+@W: CL245 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\core8051s.vhd":733:4:733:14|Bit 19 of input tracedo of instance ocia51_inst is floating
+@W: CD638 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\hdl\memory_mux.vhd":57:7:57:20|Signal flash_memdatai is undriven 
+@W: CL168 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\smartgen\RAM4Kx8\RAM4Kx8.vhd":910:4:910:12|Pruning instance 	AFF1[0] -- not in use ... 
+@W: CL168 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\smartgen\RAM4Kx8\RAM4Kx8.vhd":836:4:836:24|Pruning instance 	ORB_READ_EN_GATE[5] -- not in use ... 
+@W: CL168 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\smartgen\RAM4Kx8\RAM4Kx8.vhd":772:4:772:24|Pruning instance 	ORB_READ_EN_GATE[4] -- not in use ... 
+@W: CL168 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\smartgen\RAM4Kx8\RAM4Kx8.vhd":720:4:720:12|Pruning instance 	AFF1[2] -- not in use ... 
+@W: CL168 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\smartgen\RAM4Kx8\RAM4Kx8.vhd":673:4:673:24|Pruning instance 	ORB_READ_EN_GATE[6] -- not in use ... 
+@W: CL168 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\smartgen\RAM4Kx8\RAM4Kx8.vhd":657:4:657:24|Pruning instance 	ORA_READ_EN_GATE[5] -- not in use ... 
+@W: CL168 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\smartgen\RAM4Kx8\RAM4Kx8.vhd":593:4:593:24|Pruning instance 	ORA_READ_EN_GATE[4] -- not in use ... 
+@W: CL168 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\smartgen\RAM4Kx8\RAM4Kx8.vhd":589:4:589:24|Pruning instance 	ORB_READ_EN_GATE[7] -- not in use ... 
+@W: CL168 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\smartgen\RAM4Kx8\RAM4Kx8.vhd":490:4:490:24|Pruning instance 	ORB_READ_EN_GATE[3] -- not in use ... 
+@W: CL168 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\smartgen\RAM4Kx8\RAM4Kx8.vhd":439:4:439:24|Pruning instance 	ORA_READ_EN_GATE[1] -- not in use ... 
+@W: CL168 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\smartgen\RAM4Kx8\RAM4Kx8.vhd":431:4:431:24|Pruning instance 	ORA_READ_EN_GATE[6] -- not in use ... 
+@W: CL168 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\smartgen\RAM4Kx8\RAM4Kx8.vhd":331:4:331:24|Pruning instance 	ORA_READ_EN_GATE[7] -- not in use ... 
+@W: CL168 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\smartgen\RAM4Kx8\RAM4Kx8.vhd":303:4:303:24|Pruning instance 	ORA_READ_EN_GATE[2] -- not in use ... 
+@W: CL168 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\smartgen\RAM4Kx8\RAM4Kx8.vhd":299:4:299:12|Pruning instance 	AFF1[1] -- not in use ... 
+@W: CL168 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\smartgen\RAM4Kx8\RAM4Kx8.vhd":280:4:280:24|Pruning instance 	ORA_READ_EN_GATE[0] -- not in use ... 
+@W: CL168 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\smartgen\RAM4Kx8\RAM4Kx8.vhd":276:4:276:24|Pruning instance 	ORA_READ_EN_GATE[3] -- not in use ... 
+@W: CL246 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\alu.vhd":66:4:66:12|Input port bits 62 to 118 of instr_dec(0 to 118) are unused 
+@W: CL246 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\clkctrl.vhd":60:4:60:11|Input port bits 6 to 0 of sfrdatai(7 downto 0) are unused 
+@W: CL246 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\cpu.vhd":81:4:81:12|Input port bits 0 to 61 of instr_dec(0 to 118) are unused 
+@W: CL247 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\cpu.vhd":81:4:81:12|Input port bit 63 of instr_dec(0 to 118) is unused 
+@W: CL246 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\cpu.vhd":81:4:81:12|Input port bits 65 to 118 of instr_dec(0 to 118) are unused 
+@W: CL279 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":805:2:805:3|Pruning register bits 3 to 2 of int_vect(3 downto 0)  
+@W: CL189 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":918:2:918:3|Register bit t0ack is always 0, optimizing ...
+@W: CL189 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":934:2:934:3|Register bit t1ack is always 0, optimizing ...
+@W: CL169 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":918:2:918:3|Pruning register t0ack  
+@W: CL169 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":934:2:934:3|Pruning register t1ack  
+@W: CL246 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":100:4:100:11|Input port bits 6 to 3 of sfrdatai(7 downto 0) are unused 
+@W: CL247 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":100:4:100:11|Input port bit 1 of sfrdatai(7 downto 0) is unused 
+@W: CL246 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":108:4:108:12|Input port bits 0 to 61 of instr_dec(0 to 118) are unused 
+@W: CL246 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":108:4:108:12|Input port bits 64 to 118 of instr_dec(0 to 118) are unused 
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":46:4:46:6|Input tf0 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":50:4:50:6|Input tf1 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":54:4:54:7|Input int0 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":55:4:55:7|Input int1 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":56:4:56:7|Input int2 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":57:4:57:7|Input int3 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":58:4:58:7|Input int4 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":59:4:59:7|Input int5 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":60:4:60:7|Input int6 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":61:4:61:7|Input int7 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":64:4:64:6|Input ri0 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":65:4:65:6|Input ti0 is unused
+@W: CL246 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\memctrl.vhd":55:4:55:8|Input port bits 4 to 0 of instr(7 downto 0) are unused 
+@W: CL246 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\memctrl.vhd":119:4:119:12|Input port bits 0 to 64 of instr_dec(0 to 118) are unused 
+@W: CL246 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\memctrl.vhd":119:4:119:12|Input port bits 94 to 118 of instr_dec(0 to 118) are unused 
+@W: CL246 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\memctrl.vhd":131:4:131:9|Input port bits 7 to 0 of prdata(31 downto 0) are unused 
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\memctrl.vhd":75:4:75:8|Input p2reg is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\memctrl.vhd":137:4:137:12|Input mempsacki is unused
+@W: CL246 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\pmu.vhd":54:4:54:11|Input port bits 7 to 2 of sfrdatai(7 downto 0) are unused 
+@W: CL246 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\ramsfrctrl.vhd":90:4:90:12|Input port bits 0 to 7 of instr_dec(0 to 118) are unused 
+@W: CL246 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\ramsfrctrl.vhd":90:4:90:12|Input port bits 9 to 78 of instr_dec(0 to 118) are unused 
+@W: CL246 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\ramsfrctrl.vhd":90:4:90:12|Input port bits 80 to 87 of instr_dec(0 to 118) are unused 
+@W: CL246 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\ramsfrctrl.vhd":90:4:90:12|Input port bits 89 to 93 of instr_dec(0 to 118) are unused 
+@W: CL247 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\debug.vhd":29:3:29:4|Input port bit 4 of ir(7 downto 0) is unused 
+@W: CL246 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\debug.vhd":30:3:30:5|Input port bits 39 to 24 of jdo(39 downto 0) are unused 
+@W: CL138 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\trace.vhd":110:3:110:4|Removing register 'TraceRun_xhdl' because it is only assigned 0 or its original value.
+@W: CL138 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\trace.vhd":110:3:110:4|Removing register 'TraceWr_xhdl' because it is only assigned 0 or its original value.
+@W: CL138 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\trace.vhd":110:3:110:4|Removing register 'TraceWrapped_xhdl' because it is only assigned 0 or its original value.
+@W: CL138 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\trace.vhd":348:4:348:5|Removing register 'TraceA_xhdl' because it is only assigned 0 or its original value.
+@W: CL169 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\trace.vhd":102:6:102:7|Pruning register syncReset  
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\trace.vhd":37:3:37:5|Input CLK is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\trace.vhd":38:3:38:7|Input urstb is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\trace.vhd":39:3:39:8|Input RESETB is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\trace.vhd":40:3:40:4|Input IR is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\trace.vhd":41:3:41:5|Input JDO is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\trace.vhd":42:3:42:6|Input JXIR is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\trace.vhd":43:3:43:6|Input JXDR is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\trace.vhd":46:3:46:7|Input fetch is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\trace.vhd":47:3:47:7|Input flush is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\trace.vhd":54:3:54:9|Input TrigTon is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\trace.vhd":55:3:55:10|Input TrigToff is unused
+@W: CL246 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\trigger.vhd":38:3:38:4|Input port bits 4 to 2 of ir(7 downto 0) are unused 
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\core8051s.vhd":108:4:108:10|Input PSLVERR is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":75:0:75:4|Input IADDR is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":76:0:76:6|Input PRESETN is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":77:0:77:3|Input PCLK is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":111:0:111:7|Input PRDATAS4 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":112:0:112:7|Input PRDATAS5 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":113:0:113:7|Input PRDATAS6 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":114:0:114:7|Input PRDATAS7 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":115:0:115:7|Input PRDATAS8 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":116:0:116:7|Input PRDATAS9 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":117:0:117:8|Input PRDATAS10 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":118:0:118:8|Input PRDATAS11 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":119:0:119:8|Input PRDATAS12 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":120:0:120:8|Input PRDATAS13 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":121:0:121:8|Input PRDATAS14 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":122:0:122:8|Input PRDATAS15 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":128:0:128:7|Input PREADYS4 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":129:0:129:7|Input PREADYS5 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":130:0:130:7|Input PREADYS6 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":131:0:131:7|Input PREADYS7 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":132:0:132:7|Input PREADYS8 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":133:0:133:7|Input PREADYS9 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":134:0:134:8|Input PREADYS10 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":135:0:135:8|Input PREADYS11 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":136:0:136:8|Input PREADYS12 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":137:0:137:8|Input PREADYS13 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":138:0:138:8|Input PREADYS14 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":139:0:139:8|Input PREADYS15 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":145:0:145:8|Input PSLVERRS4 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":146:0:146:8|Input PSLVERRS5 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":147:0:147:8|Input PSLVERRS6 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":148:0:148:8|Input PSLVERRS7 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":149:0:149:8|Input PSLVERRS8 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":150:0:150:8|Input PSLVERRS9 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":151:0:151:9|Input PSLVERRS10 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":152:0:152:9|Input PSLVERRS11 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":153:0:153:9|Input PSLVERRS12 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":154:0:154:9|Input PSLVERRS13 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":155:0:155:9|Input PSLVERRS14 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":156:0:156:9|Input PSLVERRS15 is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\Clock_gen.vhd":41:20:41:36|Input BAUD_VAL_FRACTION is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\Tx_async.vhd":45:9:45:19|Input tx_dout_reg is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\Tx_async.vhd":46:9:46:18|Input fifo_empty is unused
+@W: CL159 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\Tx_async.vhd":47:9:47:17|Input fifo_full is unused
+@W: CL246 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\CoreUARTapb.vhd":83:6:83:10|Input port bits 1 to 0 of paddr(4 downto 0) are unused 
+

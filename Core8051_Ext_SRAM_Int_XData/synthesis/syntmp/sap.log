@@ -1,0 +1,13 @@
+Synopsys Actel Technology Mapper, Version map500act, Build 058R, Built Jan 18 2010 09:16:23
+Copyright (C) 1994-2010, Synopsys Inc.  All Rights Reserved
+Product Version D-2009.12A
+@N: MF249 |Running in 32-bit mode.
+@N: MF258 |Gated clock conversion disabled 
+@W|Ignoring synthesis effort setting for the design. This is not supported by the current technology.
+
+@N: BN115 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\ocia51.vhd":526:0:526:11|Removing instance xhdl_trigger of view:work.trigger(rtl) because there are no references to its outputs 
+@N: BN225 |Writing default property annotation file C:\Actelprj\AFS_ADV_KIT_8051\synthesis\top_8051.sap.
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Fri Jun 25 12:47:59 2010
+
+###########################################################]

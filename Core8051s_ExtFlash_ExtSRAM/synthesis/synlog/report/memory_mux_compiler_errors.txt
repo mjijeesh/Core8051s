@@ -1,0 +1,4 @@
+@E: CD242 :"E:\Reference_Design_2013\Intel_Flash_ExternalSRAM_8051s\hdl\memory_mux.vhd":104:0:104:9|Expecting ;
+@E: CD242 :"E:\Reference_Design_2013\Intel_Flash_ExternalSRAM_8051s\hdl\memory_mux.vhd":106:0:106:7|Expecting ;
+@E|Parse errors encountered - exiting
+

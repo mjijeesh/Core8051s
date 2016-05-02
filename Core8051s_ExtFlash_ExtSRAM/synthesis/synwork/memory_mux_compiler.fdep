@@ -1,0 +1,22 @@
+%%% protect protected_file
+#OPTIONS:"|-prodtype|synplify_pro|-top|work.memory_mux|-nram|-fixsmult|-divnmod|-encrypt|-pro|-lite|-ll|2000|-ui|-fid2|-ram|-sharing|on|-autosm|-ignore_undefined_lib|-lib|work"
+#CUR:"E:\\Microsemi\\Libero_v10.1\\Synopsys\\synplify_F201203MSP1\\bin64\\c_vhdl.exe":1339996106
+#CUR:"E:\\Microsemi\\Libero_v10.1\\Synopsys\\synplify_F201203MSP1\\lib\\vhd\\location.map":1340009240
+#CUR:"E:\\Microsemi\\Libero_v10.1\\Synopsys\\synplify_F201203MSP1\\lib\\vhd\\std.vhd":1339996394
+#CUR:"E:\\Microsemi\\Libero_v10.1\\Synopsys\\synplify_F201203MSP1\\lib\\vhd\\snps_haps_pkg.vhd":1339996394
+#CUR:"E:\\Microsemi\\Libero_v10.1\\Synopsys\\synplify_F201203MSP1\\lib\\vhd\\std1164.vhd":1339996394
+#CUR:"E:\\Microsemi\\Libero_v10.1\\Synopsys\\synplify_F201203MSP1\\lib\\vhd\\numeric.vhd":1339996394
+#CUR:"E:\\Microsemi\\Libero_v10.1\\Synopsys\\synplify_F201203MSP1\\lib\\vhd\\umr_capim.vhd":1339996394
+#CUR:"E:\\Microsemi\\Libero_v10.1\\Synopsys\\synplify_F201203MSP1\\lib\\vhd\\arith.vhd":1339996394
+#CUR:"E:\\Microsemi\\Libero_v10.1\\Synopsys\\synplify_F201203MSP1\\lib\\vhd\\unsigned.vhd":1339996394
+1 "E:\Reference_Design_2013\intel_Flash_8051\hdl\memory_mux.vhd"
+
+# Dependency Lists (Uses list)
+1 -1
+
+# Dependency Lists (Users Of)
+1 -1
+
+# Design Unit to File Association
+arch work memory_mux one 1
+module work memory_mux 1

@@ -1,0 +1,53 @@
+#===========================================================
+# created by actel smartdesign mon jun 21 15:24:37 2010
+#
+# syntax: 
+# ------- 
+#
+# memmap    resource_name base_address;
+#
+# write     width resource_name byte_offset data;
+# read      width resource_name byte_offset;
+# readcheck width resource_name byte_offset data;
+#
+#===========================================================
+
+#-----------------------------------------------------------
+# memory map
+# define name and base address of each resource.
+#-----------------------------------------------------------
+
+memmap coreuartapb_00 0x00000000;
+memmap coregpio_00 0x00000100;
+memmap coretimer_00 0x00000200;
+memmap coreapbsram_0 0x00000300;
+memmap flashapb_0 0x00000400;
+#-----------------------------------------------------------
+# Include resource scriptlets
+#-----------------------------------------------------------
+
+ 
+#-----------------------------------------------------------
+# resource: coregpio
+# instance: CoreGPIO_00
+#-----------------------------------------------------------
+# write 0x99 to coregpio register (aliased throughout the full apb slot) - e.g. use offset 0x74
+write   b   CoreGPIO_00    0x74 0x99;
+
+# read the coregpio register (from any location in slot) - e.g use offset 0x82
+# don't know what this read value will be - depends on what is connected
+# to coregpio inputs. if nothing connected, then it will read zz.
+read    b   CoreGPIO_00    0x80;
+ 
+#-----------------------------------------------------------
+# resource: coretimer
+# instance: CoreTimer_00
+#-----------------------------------------------------------
+# write 0x9876 to timer load value register
+write   h   CoreTimer_00    0x00 0x9876;
+
+# read timer current value register
+read    h   CoreTimer_00    0x04;
+
+# check timer load value register
+readcheck h CoreTimer_00    0x00 0x9876; # expect value 0x9876

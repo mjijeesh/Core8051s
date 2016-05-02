@@ -1,0 +1,23 @@
+-myuxi
+-Y
+-z
+-b HOME = 0x0000
+-b ISEG = 0x0000
+-b BSEG = 0x0000
+-k C:\Program Files (x86)\Microsemi\SoftConsole v3.4\Sourcery-G++\bin\..\lib\large
+-l mcs51
+-l libsdcc
+-l libint
+-l liblong
+-l libfloat
+./main.rel
+./hal/Core8051s/SDCC/hal_assert.rel
+./hal/Core8051s/SDCC/hal_large.rel
+./hal/Core8051s/SDCC/hw_reg_access.rel
+./drivers/CoreWatchdog/core_watchdog.rel
+./drivers/CoreUARTapb/core_uart_apb.rel
+./drivers/CoreTimer/core_timer.rel
+./drivers/CoreInterrupt/core_irq_ctrl.rel
+./drivers/CoreGPIO/core_gpio.rel
+
+-e

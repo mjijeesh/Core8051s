@@ -1,0 +1,451 @@
+# Reading D:/Actel/Libero_v9.0/Model/tcl/vsim/pref.tcl 
+# do run.do 
+# CoreMP7 BFM Compiler v2.1
+# BFM script compiled successfully
+# INFO: Simulation library presynth already exists 
+# Modifying modelsim.ini
+# Modifying modelsim.ini
+# INFO: Simulation library COREAPBSRAM_LIB already exists 
+# Modifying modelsim.ini
+# Modifying modelsim.ini
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity clock_gen
+# -- Compiling architecture rtl of clock_gen
+# -- Compiling package components
+# -- Compiling package coreparameters
+# -- Compiling entity coreuart
+# -- Compiling architecture translated of coreuart
+# -- Compiling entity coreuartapb
+# -- Compiling architecture translated of coreuartapb
+# -- Compiling entity fifo_256x8
+# -- Compiling architecture translated of fifo_256x8
+# -- Compiling entity fifo_256x8_pa3
+# -- Compiling architecture translated of fifo_256x8_pa3
+# -- Compiling entity fifo_ctrl_256
+# -- Compiling architecture translated of fifo_ctrl_256
+# -- Compiling package misc
+# -- Compiling package body misc
+# -- Loading package misc
+# -- Compiling entity ram16x8
+# -- Compiling architecture translated of ram16x8
+# -- Compiling entity rx_async
+# -- Compiling architecture translated of rx_async
+# -- Loading package textio
+# -- Loading package misc
+# -- Loading package textio
+# -- Compiling package tbpack
+# -- Compiling package body tbpack
+# -- Loading package tbpack
+# -- Loading package std_logic_textio
+# -- Loading package tbpack
+# -- Compiling entity testbnch
+# -- Compiling architecture translated of testbnch
+# -- Compiling package textio
+# -- Compiling package body textio
+# -- Loading package textio
+# -- Loading package textio
+# -- Loading package textio
+# -- Loading package textio
+# -- Compiling entity textio_test
+# -- Compiling architecture tb of textio_test
+# -- Compiling entity tx_async
+# -- Compiling architecture translated of tx_async
+# Model Technology ModelSim ACTEL vlog 6.5d Compiler 2009.11 Nov 19 2009
+# -- Skipping entity clock_gen
+# -- Skipping package components
+# -- Skipping package coreparameters
+# -- Skipping entity coreuart
+# -- Skipping entity coreuartapb
+# -- Skipping entity fifo_256x8
+# -- Skipping entity fifo_256x8_pa3
+# -- Skipping entity fifo_ctrl_256
+# -- Skipping package misc
+# -- Skipping entity ram16x8
+# -- Skipping entity rx_async
+# -- Skipping package tbpack
+# -- Skipping entity testbnch
+# -- Skipping package textio
+# -- Skipping entity textio_test
+# -- Skipping entity tx_async
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity muxptob3
+# -- Compiling architecture synth of muxptob3
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity coreapb3
+# -- Compiling architecture structural of coreapb3
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling package core8051_utility
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package core8051_utility
+# -- Compiling entity alu
+# -- Compiling architecture rtl of alu
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package core8051_utility
+# -- Compiling entity clock_control
+# -- Compiling architecture rtl of clock_control
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package core8051_utility
+# -- Compiling entity control_unit
+# -- Compiling architecture rtl of control_unit
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package core8051_utility
+# -- Compiling entity isr
+# -- Compiling architecture rtl of isr
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package core8051_utility
+# -- Compiling entity memory_control
+# -- Compiling architecture rtl of memory_control
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package core8051_utility
+# -- Compiling entity pmu
+# -- Compiling architecture rtl of pmu
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package core8051_utility
+# -- Compiling entity rstctrl
+# -- Compiling architecture rtl of rstctrl
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package core8051_utility
+# -- Compiling entity ram_sfr_control
+# -- Compiling architecture rtl of ram_sfr_control
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package core8051_utility
+# -- Compiling entity oci
+# -- Compiling architecture rtl of oci
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package core8051_utility
+# -- Compiling entity instrdec
+# -- Compiling architecture str of instrdec
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package core8051_utility
+# -- Compiling entity main8051
+# -- Compiling architecture str of main8051
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity core8051_globs
+# -- Compiling architecture str of core8051_globs
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity ram256x8
+# -- Compiling architecture def_arch of ram256x8
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling package jtagdef
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package jtagdef
+# -- Compiling entity jtagapa
+# -- Compiling architecture rtl of jtagapa
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package jtagdef
+# -- Compiling entity jtag
+# -- Compiling architecture rtl of jtag
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package jtagdef
+# -- Compiling entity debug
+# -- Compiling architecture rtl of debug
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package jtagdef
+# -- Compiling entity trace
+# -- Compiling architecture rtl of trace
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package jtagdef
+# -- Compiling entity trigger
+# -- Compiling architecture rtl of trigger
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package jtagdef
+# -- Compiling entity ocia51
+# -- Compiling architecture rtl of ocia51
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity ram256x20
+# -- Compiling architecture def_arch of ram256x20
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity core8051s
+# -- Compiling architecture str of core8051s
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity coregpio
+# -- Compiling architecture synth of coregpio
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity nvm64k
+# -- Compiling architecture def_arch of nvm64k
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity flashapb
+# -- Compiling architecture one of flashapb
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity coretimer
+# -- Compiling architecture synth of coretimer
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity coreapbsram_l
+# -- Compiling architecture coreapbsram_o of coreapbsram_l
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity coreapbsram
+# -- Compiling architecture coreapbsram_o of coreapbsram
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity clock_gen
+# -- Compiling architecture rtl of clock_gen
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity tx_async
+# -- Compiling architecture translated of tx_async
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity rx_async
+# -- Compiling architecture translated of rx_async
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity fifo_256x8
+# -- Compiling architecture translated of fifo_256x8
+# -- Compiling entity fifo_256x8_pa3
+# -- Compiling architecture translated of fifo_256x8_pa3
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity coreuart
+# -- Compiling architecture translated of coreuart
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity coreuartapb
+# -- Compiling architecture translated of coreuartapb
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity sys
+# -- Compiling architecture def_arch of sys
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading entity flashapb
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling package components
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling package corecomps
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Compiling package coreparameters
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling package components
+# Model Technology ModelSim ACTEL vcom 6.5d Compiler 2009.11 Nov 19 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity testbench
+# -- Compiling architecture behavioral of testbench
+# vsim -L fusion -L presynth -L COREAPBSRAM_LIB -L COREUARTAPB_LIB -t 1ps presynth.testbench 
+# //  ModelSim ACTEL 6.5d Nov 19 2009 
+# //
+# //  Copyright 1991-2009 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading presynth.testbench(behavioral)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading presynth.sys(def_arch)
+# Loading presynth.coreapb3(structural)
+# Loading presynth.muxptob3(synth)
+# Loading presynth.core8051s(str)
+# Loading presynth.core8051_utility
+# Loading presynth.main8051(str)
+# Loading presynth.alu(rtl)
+# Loading presynth.clock_control(rtl)
+# Loading presynth.control_unit(rtl)
+# Loading presynth.isr(rtl)
+# Loading presynth.memory_control(rtl)
+# Loading presynth.pmu(rtl)
+# Loading presynth.rstctrl(rtl)
+# Loading presynth.ram_sfr_control(rtl)
+# Loading presynth.oci(rtl)
+# Loading presynth.instrdec(str)
+# Loading presynth.core8051_globs(str)
+# Loading presynth.ram256x8(def_arch)
+# Loading std.textio(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading fusion.vtables
+# Loading fusion.vcc(vital_act)
+# Loading fusion.gnd(vital_act)
+# Loading fusion.inv(vital_act)
+# Loading ieee.std_logic_textio(body)
+# Loading fusion.components
+# Loading fusion.ram4k9(vital_act)
+# Loading ieee.numeric_std(body)
+# Loading fusion.coreram4k9(vital_act)
+# Loading presynth.coregpio(synth)
+# Loading presynth.flashapb(one)
+# Loading presynth.nvm64k(def_arch)
+# Loading fusion.nvm(vital_act)
+# Loading coreuartapb_lib.coreuartapb(translated)
+# Loading coreuartapb_lib.coreuart(translated)
+# Loading coreuartapb_lib.clock_gen(rtl)
+# Loading coreuartapb_lib.tx_async(translated)
+# Loading coreuartapb_lib.rx_async(translated)
+# Loading presynth.coretimer(synth)
+# Loading coreapbsram_lib.coreapbsram(coreapbsram_o)
+# Loading coreapbsram_lib.coreapbsram_l(coreapbsram_o)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/sys_0/coreuartapb_00
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/sys_0/coreuartapb_00
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/sys_0/coreuartapb_00
+# ** Warning: BUSY SIGNAL DE-ASSERTION IN SIMULATION MAY NOT MATCH WITH SILICON BEHAVIOR.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/sys_0/flashapb_0/flash_code/nvm_inst
+# ** Warning: USER LOGIC SHOULD POLL FOR BUSY TO ENSURE BEHAVIOR CONSISTENT WITH SILICON.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/sys_0/flashapb_0/flash_code/nvm_inst
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/sys_0/core8051s_00/main8051_inst/u_ramsfrctrl
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/sys_0/core8051s_00/main8051_inst/u_ramsfrctrl
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/sys_0/core8051s_00/main8051_inst/u_memctrl
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/sys_0/core8051s_00/main8051_inst/u_memctrl
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/sys_0/core8051s_00/main8051_inst/u_memctrl
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/sys_0/core8051s_00/main8051_inst/u_memctrl
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/sys_0/core8051s_00/main8051_inst/u_memctrl
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/sys_0/core8051s_00/main8051_inst/u_memctrl
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/sys_0/core8051s_00/main8051_inst/u_memctrl
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/sys_0/core8051s_00/main8051_inst/u_memctrl
+# ** Warning: ****NVM: RESET went unknown ****
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/sys_0/flashapb_0/flash_code/nvm_inst
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ns  Iteration: 0  Instance: /testbench/sys_0/coreuartapb_00/uuart/make_clock_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ns  Iteration: 0  Instance: /testbench/sys_0/coreuartapb_00/uuart/make_clock_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ns  Iteration: 0  Instance: /testbench/sys_0/coreuartapb_00/uuart/make_clock_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ns  Iteration: 0  Instance: /testbench/sys_0/coretimer_00
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ns  Iteration: 2  Instance: /testbench/sys_0/core8051s_00/main8051_inst/u_ramsfrctrl
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ns  Iteration: 2  Instance: /testbench/sys_0/core8051s_00/main8051_inst/u_ramsfrctrl
+# ** Warning: BLKA unknown.
+#    Time: 50 ns  Iteration: 3  Instance: /testbench/sys_0/core8051s_00/internal_ram/ram256x8_r0c0/statconfig
+# ** Warning: ****NVM: RESET went unknown ****
+#    Time: 100 ns  Iteration: 2  Instance: /testbench/sys_0/flashapb_0/flash_code/nvm_inst
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ns  Iteration: 5  Instance: /testbench/sys_0/core8051s_00/main8051_inst/u_memctrl
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ns  Iteration: 5  Instance: /testbench/sys_0/core8051s_00/main8051_inst/u_memctrl
+# WARNING: No extended dataflow License exists
+edit run.do

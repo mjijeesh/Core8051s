@@ -1,0 +1,352 @@
+(DELAYFILE
+(SDFVERSION "OVI 2.1")
+(DESIGN "syndrom")
+(DATE "123")
+(VENDOR "ProASIC3")
+(PROGRAM "Synplify")
+(VERSION "map500act, Build 058R")
+(DIVIDER /)
+(VOLTAGE 2.500000:2.500000:2.500000)
+(PROCESS "TYPICAL")
+(TEMPERATURE 70.000000:70.000000:70.000000)
+(TIMESCALE 1ns)
+(CELL
+  (CELLTYPE "syndrom")
+  (INSTANCE)
+  (TIMINGCHECK
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIPD89\[4\]/A  i_RNIPD89\[4\]/Y  i_RNO_1\[7\]/B  i_RNO_1\[7\]/Y  i_RNO_0\[7\]/A  i_RNO_0\[7\]/Y  i_RNO\[7\]/B  i_RNO\[7\]/Y  i\[7\]/D  	(9.5:9.5:9.5) )
+
+    (PATHCONSTRAINT i\[1\]/CLK  i\[1\]/Q  i_RNICFH5\[2\]/B  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIPD89\[4\]/A  i_RNIPD89\[4\]/Y  i_RNO_1\[7\]/B  i_RNO_1\[7\]/Y  i_RNO_0\[7\]/A  i_RNO_0\[7\]/Y  i_RNO\[7\]/B  i_RNO\[7\]/Y  i\[7\]/D  	(9.5:9.5:9.5) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  i_RNO\[0\]/A  i_RNO\[0\]/Y  i\[0\]/D  	(9.5:9.5:9.5) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  i_RNO\[6\]/S  i_RNO\[6\]/Y  i\[6\]/D  	(9.5:9.5:9.5) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  i_RNO\[7\]/S  i_RNO\[7\]/Y  i\[7\]/D  	(9.5:9.5:9.5) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  i_RNO\[4\]/S  i_RNO\[4\]/Y  i\[4\]/D  	(9.5:9.5:9.5) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIPD89\[4\]/A  i_RNIPD89\[4\]/Y  i_RNO_0\[6\]/B  i_RNO_0\[6\]/Y  i_RNO\[6\]/B  i_RNO\[6\]/Y  i\[6\]/D  	(9.5:9.5:9.5) )
+
+    (PATHCONSTRAINT i\[2\]/CLK  i\[2\]/Q  i_RNICFH5\[2\]/C  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIPD89\[4\]/A  i_RNIPD89\[4\]/Y  i_RNO_1\[7\]/B  i_RNO_1\[7\]/Y  i_RNO_0\[7\]/A  i_RNO_0\[7\]/Y  i_RNO\[7\]/B  i_RNO\[7\]/Y  i\[7\]/D  	(9.5:9.5:9.5) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d2\[6\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d2\[5\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d2\[4\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d2\[3\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d2\[2\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d2\[1\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d2\[0\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d3\[7\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d3\[6\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d3\[5\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d3\[4\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d3\[3\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d3\[2\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d3\[1\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d3\[0\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d4\[7\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d4\[6\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d4\[5\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d4\[4\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d4\[3\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d4\[2\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d4\[1\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d4\[0\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d5\[7\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d5\[6\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d5\[5\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d5\[4\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d5\[3\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d5\[2\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d5\[1\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d5\[0\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d6\[7\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d6\[6\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d6\[5\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d6\[4\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d6\[3\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d6\[2\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d6\[1\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d6\[0\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d7\[7\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d7\[6\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d7\[5\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d7\[4\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d7\[3\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d7\[2\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d7\[1\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d7\[0\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d8\[7\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d8\[6\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d8\[5\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d8\[4\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d8\[3\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d8\[2\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d8\[1\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d8\[0\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d9\[7\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d9\[6\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d9\[5\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d9\[4\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d9\[3\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d9\[2\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d9\[1\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d9\[0\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d10\[7\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d10\[6\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d10\[5\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d10\[4\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d10\[3\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d10\[2\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d10\[1\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d10\[0\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d11\[7\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d11\[6\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d11\[5\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d11\[4\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d11\[3\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d11\[2\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d11\[1\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d11\[0\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d12\[7\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d12\[6\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d12\[5\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d12\[4\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d12\[3\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d12\[2\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d12\[1\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d12\[0\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d13\[7\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d13\[6\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d13\[5\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d13\[4\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d13\[3\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d13\[2\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d13\[1\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d13\[0\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d14\[7\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d14\[6\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d14\[5\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d14\[4\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d14\[3\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d14\[2\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d14\[1\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d14\[0\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d15\[7\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d15\[6\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d15\[5\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d15\[4\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d15\[3\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d15\[2\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d15\[1\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d15\[0\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d16\[7\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d16\[6\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d16\[5\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d16\[4\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d16\[3\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d16\[2\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d16\[1\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d16\[0\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d1\[7\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d1\[6\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d1\[5\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d1\[4\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d1\[3\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d1\[2\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d1\[1\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d1\[0\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  i\[5\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  i\[3\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  i\[2\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  i\[1\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIKPRE\[6\]/B  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  d2\[7\]/E  	(9.7:9.7:9.7) )
+
+    (PATHCONSTRAINT i\[4\]/CLK  i\[4\]/Q  i_RNIHEN3\[7\]/B  i_RNIHEN3\[7\]/Y  i_RNI2TE7\[6\]/A  i_RNI2TE7\[6\]/Y  i_RNIKPRE\[6\]/A  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  i_RNO\[0\]/A  i_RNO\[0\]/Y  i\[0\]/D  	(9.5:9.5:9.5) )
+
+    (PATHCONSTRAINT i\[5\]/CLK  i\[5\]/Q  i_RNI2TE7\[6\]/C  i_RNI2TE7\[6\]/Y  i_RNIKPRE\[6\]/A  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  i_RNO\[0\]/A  i_RNO\[0\]/Y  i\[0\]/D  	(9.5:9.5:9.5) )
+
+    (PATHCONSTRAINT i\[3\]/CLK  i\[3\]/Q  i_RNIISC7\[3\]/B  i_RNIISC7\[3\]/Y  i_RNIPD89\[4\]/A  i_RNIPD89\[4\]/Y  i_RNO_1\[7\]/B  i_RNO_1\[7\]/Y  i_RNO_0\[7\]/A  i_RNO_0\[7\]/Y  i_RNO\[7\]/B  i_RNO\[7\]/Y  i\[7\]/D  	(9.5:9.5:9.5) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNIPD89\[4\]/A  i_RNIPD89\[4\]/Y  i_RNO\[5\]/A  i_RNO\[5\]/Y  i\[5\]/D  	(9.5:9.5:9.5) )
+
+    (PATHCONSTRAINT i\[7\]/CLK  i\[7\]/Q  i_RNIHEN3\[7\]/A  i_RNIHEN3\[7\]/Y  i_RNI2TE7\[6\]/A  i_RNI2TE7\[6\]/Y  i_RNIKPRE\[6\]/A  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  i_RNO\[0\]/A  i_RNO\[0\]/Y  i\[0\]/D  	(9.5:9.5:9.5) )
+
+    (PATHCONSTRAINT i\[6\]/CLK  i\[6\]/Q  i_RNI2TE7\[6\]/B  i_RNI2TE7\[6\]/Y  i_RNIKPRE\[6\]/A  i_RNIKPRE\[6\]/Y  i_RNIKPRE_0\[6\]/A  i_RNIKPRE_0\[6\]/Y  i_RNO\[0\]/A  i_RNO\[0\]/Y  i\[0\]/D  	(9.5:9.5:9.5) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNIISC7\[3\]/A  i_RNIISC7\[3\]/Y  i_RNO_0\[4\]/A  i_RNO_0\[4\]/Y  i_RNO\[4\]/B  i_RNO\[4\]/Y  i\[4\]/D  	(9.5:9.5:9.5) )
+
+    (PATHCONSTRAINT i\[4\]/CLK  i\[4\]/Q  i_RNIPD89\[4\]/B  i_RNIPD89\[4\]/Y  i_RNO_1\[7\]/B  i_RNO_1\[7\]/Y  i_RNO_0\[7\]/A  i_RNO_0\[7\]/Y  i_RNO\[7\]/B  i_RNO\[7\]/Y  i\[7\]/D  	(9.5:9.5:9.5) )
+
+    (PATHCONSTRAINT i\[5\]/CLK  i\[5\]/Q  i_RNO_1\[7\]/A  i_RNO_1\[7\]/Y  i_RNO_0\[7\]/A  i_RNO_0\[7\]/Y  i_RNO\[7\]/B  i_RNO\[7\]/Y  i\[7\]/D  	(9.5:9.5:9.5) )
+
+    (PATHCONSTRAINT i\[5\]/CLK  i\[5\]/Q  i_RNO_0\[6\]/A  i_RNO_0\[6\]/Y  i_RNO\[6\]/B  i_RNO\[6\]/Y  i\[6\]/D  	(9.5:9.5:9.5) )
+
+    (PATHCONSTRAINT i\[6\]/CLK  i\[6\]/Q  i_RNO_1\[7\]/C  i_RNO_1\[7\]/Y  i_RNO_0\[7\]/A  i_RNO_0\[7\]/Y  i_RNO\[7\]/B  i_RNO\[7\]/Y  i\[7\]/D  	(9.5:9.5:9.5) )
+
+    (PATHCONSTRAINT i\[4\]/CLK  i\[4\]/Q  i_RNO_0\[4\]/B  i_RNO_0\[4\]/Y  i_RNO\[4\]/B  i_RNO\[4\]/Y  i\[4\]/D  	(9.5:9.5:9.5) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNICFH5\[2\]/A  i_RNICFH5\[2\]/Y  i_RNO\[3\]/A  i_RNO\[3\]/Y  i\[3\]/D  	(9.5:9.5:9.5) )
+
+    (PATHCONSTRAINT i\[5\]/CLK  i\[5\]/Q  i_RNO\[5\]/B  i_RNO\[5\]/Y  i\[5\]/D  	(9.5:9.5:9.5) )
+
+    (PATHCONSTRAINT i\[7\]/CLK  i\[7\]/Q  i_RNO_0\[7\]/B  i_RNO_0\[7\]/Y  i_RNO\[7\]/B  i_RNO\[7\]/Y  i\[7\]/D  	(9.5:9.5:9.5) )
+
+    (PATHCONSTRAINT i\[6\]/CLK  i\[6\]/Q  i_RNO_0\[6\]/C  i_RNO_0\[6\]/Y  i_RNO\[6\]/B  i_RNO\[6\]/Y  i\[6\]/D  	(9.5:9.5:9.5) )
+
+    (PATHCONSTRAINT i\[5\]/CLK  i\[5\]/Q  i_RNO\[4\]/A  i_RNO\[4\]/Y  i\[4\]/D  	(9.5:9.5:9.5) )
+
+    (PATHCONSTRAINT i\[5\]/CLK  i\[5\]/Q  i_RNO\[6\]/A  i_RNO\[6\]/Y  i\[6\]/D  	(9.5:9.5:9.5) )
+
+    (PATHCONSTRAINT i\[5\]/CLK  i\[5\]/Q  i_RNO\[7\]/A  i_RNO\[7\]/Y  i\[7\]/D  	(9.5:9.5:9.5) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNO\[2\]/A  i_RNO\[2\]/Y  i\[2\]/D  	(9.5:9.5:9.5) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNO\[1\]/B  i_RNO\[1\]/Y  i\[1\]/D  	(9.5:9.5:9.5) )
+
+    (PATHCONSTRAINT i\[0\]/CLK  i\[0\]/Q  i_RNO\[0\]/B  i_RNO\[0\]/Y  i\[0\]/D  	(9.5:9.5:9.5) )
+
+    (PATHCONSTRAINT i\[1\]/CLK  i\[1\]/Q  i_RNO\[2\]/B  i_RNO\[2\]/Y  i\[2\]/D  	(9.5:9.5:9.5) )
+
+    (PATHCONSTRAINT i\[3\]/CLK  i\[3\]/Q  i_RNO\[3\]/B  i_RNO\[3\]/Y  i\[3\]/D  	(9.5:9.5:9.5) )
+
+    (PATHCONSTRAINT i\[1\]/CLK  i\[1\]/Q  i_RNO\[1\]/A  i_RNO\[1\]/Y  i\[1\]/D  	(9.5:9.5:9.5) )
+
+    (PATHCONSTRAINT i\[2\]/CLK  i\[2\]/Q  i_RNO\[2\]/C  i_RNO\[2\]/Y  i\[2\]/D  	(9.5:9.5:9.5) )
+
+  )
+)
+)

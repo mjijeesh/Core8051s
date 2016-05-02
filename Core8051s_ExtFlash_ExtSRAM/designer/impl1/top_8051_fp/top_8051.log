@@ -1,0 +1,14 @@
+FlashPro
+Version: 11.7.0.119
+Release: v11.7
+
+Software Version: 11.7.0.119
+PDB file
+'C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\designer\impl1\top_8051.pdb' has
+been loaded successfully.
+DESIGN : top_8051;  CHECKSUM : F9FD;  PDB_VERSION : 1.9
+Warning: The programmer with id '77331' in the project file cannot be detected and connected.
+Opened
+'C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\designer\impl1\top_8051_fp\top_8\
+051.pro'
+Project closed.

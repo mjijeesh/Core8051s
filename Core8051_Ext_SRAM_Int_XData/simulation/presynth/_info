@@ -1,0 +1,909 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Actelprj\AFS_ADV_KIT_8051\simulation
+Ealu
+Z1 w1277268372
+Z2 DPx4 work 16 core8051_utility 0 22 GjnbKVcmR9o6f@W^o=<HK3
+Z3 DPx4 ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
+Z4 DPx4 ieee 18 std_logic_unsigned 0 22 hEMVMlaNCR^<OOoVNV;m90
+Z5 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z6 8C:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/alu.vhd
+Z7 FC:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/alu.vhd
+l0
+L26
+V6oSh1KnUW6TIf:BSoOkl]0
+Z8 OW;C;6.5d;42
+31
+Z9 o-93 -explicit -work presynth -O0
+!s100 9;3<n1ZGZShgB05J9VFIm3
+Artl
+R2
+R3
+R4
+R5
+DEx4 work 3 alu 0 22 6oSh1KnUW6TIf:BSoOkl]0
+l161
+L75
+V:l0K8kL39lhMS6B2iP:=60
+R8
+31
+Z10 Mx4 4 ieee 14 std_logic_1164
+Z11 Mx3 4 ieee 18 std_logic_unsigned
+Z12 Mx2 4 ieee 15 std_logic_arith
+Z13 Mx1 4 work 16 core8051_utility
+R9
+!s100 So61YDOmA9CXDGGj3j20j1
+Eclock_control
+R1
+R2
+R3
+R4
+R5
+Z14 8C:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/clkctrl.vhd
+Z15 FC:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/clkctrl.vhd
+l0
+L23
+V:d7?9g@D2eNoTP1jhDNT10
+R8
+31
+R9
+!s100 0>KlVGlD04Bhiz1Klg`cO2
+Artl
+R2
+R3
+R4
+R5
+DEx4 work 13 clock_control 0 22 :d7?9g@D2eNoTP1jhDNT10
+l81
+L65
+V:L:=m=>=b0hJJLFJ]GnH:1
+R8
+31
+R10
+R11
+R12
+R13
+R9
+!s100 =IKJ_fMS[fAdoko<nEKDk0
+Econtrol_unit
+R1
+R2
+R5
+Z16 8C:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/cpu.vhd
+Z17 FC:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/cpu.vhd
+l0
+L21
+VkY5lTg^4Go@^`Zj0BhB4b0
+R8
+31
+R9
+!s100 ghD2`B;j`m5@XBI;E1W8P3
+Artl
+R2
+R5
+DEx4 work 12 control_unit 0 22 kY5lTg^4Go@^`Zj0BhB4b0
+l125
+L92
+VViOfL8iLbKK?=:1c89X542
+R8
+31
+Z18 Mx2 4 ieee 14 std_logic_1164
+R13
+R9
+!s100 D4bGz<DEbi^Led8QOl=G11
+Ecore8051_globs
+Z19 w1277268373
+R5
+Z20 8C:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/core8051s_globs_fusion.vhd
+Z21 FC:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/core8051s_globs_fusion.vhd
+l0
+L25
+V>JEHDgQMo^oEejZKzT8QX0
+R8
+31
+R9
+!s100 zf:b<Az_]1DJQ8?Q@?OdQ0
+Astr
+R5
+DEx4 work 14 core8051_globs 0 22 >JEHDgQMo^oEejZKzT8QX0
+l69
+L50
+VIGKRQJn<=MUK=C5iRc?:W3
+R8
+31
+Z22 Mx1 4 ieee 14 std_logic_1164
+R9
+!s100 TQjEdmMAzF]JgkHGIlMF`1
+Pcore8051_utility
+R5
+R1
+8C:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/core8051s_utility.vhd
+FC:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/core8051s_utility.vhd
+l0
+L20
+VGjnbKVcmR9o6f@W^o=<HK3
+R8
+31
+R22
+R9
+!s100 fzh;N<O@G9kC7Oh<4]B@]1
+Ecore8051s
+R19
+R5
+Z23 8C:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/core8051s_fusion.vhd
+Z24 FC:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/core8051s_fusion.vhd
+l0
+L23
+Vk_2ehUoLoT[[E]z<DiNGd1
+R8
+31
+R9
+!s100 akFG9IBPH>``k616ON:Zg3
+Astr
+R5
+DEx4 work 9 core8051s 0 22 k_2ehUoLoT[[E]z<DiNGd1
+l433
+L116
+VKZh2ad_b8`@4PNDaJkgf`0
+R8
+31
+R22
+R9
+!s100 Z9`9Y=W<^hiNcSjK0Tfh;1
+Ecoreapb3
+R19
+R5
+Z25 8C:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CoreAPB3/2.1.101/rtl/vhdl/u/CoreAPB3.vhd
+Z26 FC:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CoreAPB3/2.1.101/rtl/vhdl/u/CoreAPB3.vhd
+l0
+L13
+Vef7_Lg4VOoELcP4VUz;7N0
+R8
+31
+R9
+!s100 DG86jig=S?g:gm3IG1kIG1
+Astructural
+R5
+DEx4 work 8 coreapb3 0 22 ef7_Lg4VOoELcP4VUz;7N0
+l287
+L130
+V;H`DfkJeOK7?bZKl53=Rc2
+R8
+31
+R22
+R9
+!s100 ZY@F]Lf>O2zQ<Ne:[FB=h1
+Ecoregpio
+Z27 w1277268375
+R5
+Z28 8C:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CoreGPIO/1.2.103/rtl/vhdl/u/CoreGPIO.vhd
+Z29 FC:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CoreGPIO/1.2.103/rtl/vhdl/u/CoreGPIO.vhd
+l0
+L22
+VKYjA9Na=QYGMUAH07@jg02
+R8
+31
+R9
+!s100 0nR6TBgQf;[Z@EIZ2[PnA3
+Asynth
+R5
+DEx4 work 8 coregpio 0 22 KYjA9Na=QYGMUAH07@jg02
+l59
+L43
+VPUekRhLkAd4RPd:=cK:KU0
+R8
+31
+R22
+R9
+!s100 oBHSLnM=oJAjf:lZ`V3A31
+Ecoretimer
+R27
+R3
+R4
+R5
+Z30 8C:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CoreTimer/1.1.101/rtl/vhdl/u/CoreTimer.vhd
+Z31 FC:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CoreTimer/1.1.101/rtl/vhdl/u/CoreTimer.vhd
+l0
+L12
+V6N:?eFO0K`9;KGPHkVIAm2
+R8
+31
+R9
+!s100 o7CYjcAi3emRIIDULzM]i2
+Asynth
+R3
+R4
+R5
+DEx4 work 9 coretimer 0 22 6N:?eFO0K`9;KGPHkVIAm2
+l93
+L30
+VSFSgFaUVSCVA?0i_BEEVl2
+R8
+31
+Z32 Mx3 4 ieee 14 std_logic_1164
+Mx2 4 ieee 18 std_logic_unsigned
+Z33 Mx1 4 ieee 15 std_logic_arith
+R9
+!s100 fV:MzO;O^c[PoVI:NET]70
+Edebug
+R1
+Z34 DPx4 work 7 jtagdef 0 22 oU>j@G?UMV;kWhjhncCUi2
+R3
+R5
+Z35 8C:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/debug.vhd
+Z36 FC:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/debug.vhd
+l0
+L23
+VN1C1XNjVQ5B^iADA;O?=30
+R8
+31
+R9
+!s100 ZmGa7R]3Y8O3B5k`JXoBW1
+Artl
+R34
+R3
+R5
+DEx4 work 5 debug 0 22 N1C1XNjVQ5B^iADA;O?=30
+l65
+L47
+VRZ<6YLGQTg:K[5SOZ_6mc3
+R8
+31
+R32
+R12
+Z37 Mx1 4 work 7 jtagdef
+R9
+!s100 moMEJ=VWR;jR`:McZTjSJ0
+Eflashapb
+Z38 w1277268269
+R4
+R3
+R5
+Z39 8C:/Actelprj/AFS_ADV_KIT_8051/hdl/flash_control.vhd
+Z40 FC:/Actelprj/AFS_ADV_KIT_8051/hdl/flash_control.vhd
+l0
+L8
+V8S3;O3hM`kXd2j9h]m2L]3
+R8
+31
+R9
+!s100 G5VbAXNNAlD@i=8X0ZBlO1
+Aone
+R4
+R3
+R5
+Z41 DEx4 work 8 flashapb 0 22 8S3;O3hM`kXd2j9h]m2L]3
+l99
+L29
+V>nL3HE61dGh^ZObNMo>Kz1
+R8
+31
+R32
+R12
+Z42 Mx1 4 ieee 18 std_logic_unsigned
+R9
+!s100 QXkkb_E_GKA;nLfohfP<?3
+Einstrdec
+R1
+R2
+R5
+Z43 8C:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/instrdec.vhd
+Z44 FC:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/instrdec.vhd
+l0
+L16
+V2?:hTeoBa7]:NWM>NWabX1
+R8
+31
+R9
+!s100 m8L9YNllY:9z08TVN_lHV2
+Astr
+R2
+R5
+DEx4 work 8 instrdec 0 22 2?:hTeoBa7]:NWM>NWabX1
+l41
+L31
+V=8mo?bGGCWL?P?FGlC]i61
+R8
+31
+R18
+R13
+R9
+!s100 _?I33HRYFW2?_1VNeV1[U1
+Eisr
+R1
+R2
+R5
+Z45 8C:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/isr.vhd
+Z46 FC:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/isr.vhd
+l0
+L22
+V_3lUQ]:OH@gk88KGmhUnb3
+R8
+31
+R9
+!s100 oOhd>ji7OY2fDbdB7T6940
+Artl
+R2
+R5
+DEx4 work 3 isr 0 22 _3lUQ]:OH@gk88KGmhUnb3
+l200
+L115
+V2O7ZNHDGWmZMYD9im8=:_1
+R8
+31
+R18
+R13
+R9
+!s100 LG<[I99?^7zD;8]WW^1:Q0
+Ejtag
+R1
+R34
+R3
+R5
+Z47 8C:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/jtag.vhd
+Z48 FC:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/jtag.vhd
+l0
+L27
+VBzbd0B7njzAf^C[k_G3M80
+R8
+31
+R9
+!s100 kJ5?6zM[Mz59=e;Fo3QWQ2
+Artl
+R34
+R3
+R5
+DEx4 work 4 jtag 0 22 Bzbd0B7njzAf^C[k_G3M80
+l121
+L66
+VbIYHNL`kc0=f9`5eI;jIY3
+R8
+31
+R32
+R12
+R37
+R9
+!s100 aRzG41DgXH:cijz>WRZZX3
+Ejtagapa
+R19
+R34
+R3
+R5
+Z49 8C:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/jtagfusion.vhd
+Z50 FC:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/jtagfusion.vhd
+l0
+L36
+VSAzWCAnQLgM`E13@mb]fa1
+R8
+31
+R9
+!s100 SCe2??ga_UjAjo7f@ZU5B1
+Artl
+R34
+R3
+R5
+DEx4 work 7 jtagapa 0 22 SAzWCAnQLgM`E13@mb]fa1
+l161
+L75
+V?g4=GC`;o`D9U?M6KUC;:2
+R8
+31
+R32
+R12
+R37
+R9
+!s100 IOW2NjPgHeN3YUM;Q89f50
+Pjtagdef
+R3
+R5
+R1
+8C:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/jtagdef.vhd
+FC:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/jtagdef.vhd
+l0
+L22
+VoU>j@G?UMV;kWhjhncCUi2
+R8
+31
+R18
+R33
+R9
+!s100 ^A`52l28l4DCQ:8hko<=Y3
+Emain8051
+R1
+R2
+R3
+R4
+R5
+Z51 8C:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/main8051.vhd
+Z52 FC:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/main8051.vhd
+l0
+L31
+VCk5JWTBzQ81TZEAMoUjHm3
+R8
+31
+R9
+!s100 >P]izF7k=<<H03RMGn8[B2
+Astr
+R2
+R3
+R4
+R5
+DEx4 work 8 main8051 0 22 Ck5JWTBzQ81TZEAMoUjHm3
+l786
+L121
+Vl2D6]SN9VE]=LQ]3NZW]O0
+R8
+31
+R10
+R11
+R12
+R13
+R9
+!s100 R@De<YMN;=@4`Wi^X1^g81
+Ememory_control
+R1
+R2
+R3
+R4
+R5
+Z53 8C:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/memctrl.vhd
+Z54 FC:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/memctrl.vhd
+l0
+L26
+V>zBEU1kjBmDRj@mA[hS3?2
+R8
+31
+R9
+!s100 aJ=g@9fjJGZCRV^:h=<Vi1
+Artl
+R2
+R3
+R4
+R5
+DEx4 work 14 memory_control 0 22 >zBEU1kjBmDRj@mA[hS3?2
+l252
+L133
+Vz:@XnfC]PWz[CRS:1L0=L3
+R8
+31
+R10
+R11
+R12
+R13
+R9
+!s100 d<0=10Ug`dUgn8U7i^chh0
+Ememory_mux
+Z55 w1277114593
+R5
+Z56 8C:/Actelprj/AFS_ADV_KIT_8051/hdl/memory_mux.vhd
+Z57 FC:/Actelprj/AFS_ADV_KIT_8051/hdl/memory_mux.vhd
+l0
+L6
+V0U:E;Q3X4E_2LnIAc^@a?1
+R8
+31
+R9
+!s100 ^R>04W?k7?[2@512n<onQ0
+Aone
+R5
+Z58 DEx4 work 10 memory_mux 0 22 0U:E;Q3X4E_2LnIAc^@a?1
+l21
+L17
+VAUk^k;gPP:_D9B8@[bUN^3
+R8
+31
+R22
+R9
+!s100 z]^SLoLW[YgE]Oh[8W?bU1
+Emuxptob3
+R19
+R5
+Z59 8C:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CoreAPB3/2.1.101/rtl/vhdl/u/MuxPtoB3.vhd
+Z60 FC:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CoreAPB3/2.1.101/rtl/vhdl/u/MuxPtoB3.vhd
+l0
+L24
+V`MR@CT_C_RfWWkGA4CVLo2
+R8
+31
+R9
+!s100 NKd?Li=D;hba36G=a4Kko3
+Asynth
+R5
+DEx4 work 8 muxptob3 0 22 `MR@CT_C_RfWWkGA4CVLo2
+l150
+L103
+V08oOSTc=mA1JHnR?JX>ST3
+R8
+31
+R22
+R9
+!s100 _lSeKZ?V:7@k=;=EjnB]M3
+Envm64k
+Z61 w1277112631
+R5
+Z62 8C:/Actelprj/AFS_ADV_KIT_8051/smartgen/nvm64k/nvm64k.vhd
+Z63 FC:/Actelprj/AFS_ADV_KIT_8051/smartgen/nvm64k/nvm64k.vhd
+l0
+L8
+VQJ7XfnFc1f^gb_^i:BTOj0
+R8
+31
+R9
+!s100 5n_;^l6^T`^SX]UR1^Rf40
+Adef_arch
+R5
+DEx4 work 6 nvm64k 0 22 QJ7XfnFc1f^gb_^i:BTOj0
+l80
+L36
+V=5ElUS89n>CNEZ`95n=B:3
+R8
+31
+R22
+R9
+!s100 >F9N;5jaBSkA9VP9?>BKI0
+Eoci
+R1
+R2
+R5
+Z64 8C:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/oci.vhd
+Z65 FC:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/oci.vhd
+l0
+L22
+VYoX028T4^?;zBI>AWnhPZ0
+R8
+31
+R9
+!s100 2WZ?d9fQO_FbhQ<U65X0R1
+Artl
+R2
+R5
+DEx4 work 3 oci 0 22 YoX028T4^?;zBI>AWnhPZ0
+l65
+L58
+VVHLY8BYC3AUohLob;SAB>1
+R8
+31
+R18
+R13
+R9
+!s100 l6a<J>;QiE<]ZPDJhOSHE2
+Eocia51
+R1
+R34
+R3
+R5
+Z66 8C:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/ocia51.vhd
+Z67 FC:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/ocia51.vhd
+l0
+L25
+V:m8F^T_[3nUfWGDTlzzcg0
+R8
+31
+R9
+!s100 8YT7=WiSN;V118UIUoXYa0
+Artl
+R34
+R3
+R5
+DEx4 work 6 ocia51 0 22 :m8F^T_[3nUfWGDTlzzcg0
+l330
+L97
+VfzL=5gTMGX:mG>K1>BJV_2
+R8
+31
+R32
+R12
+R37
+R9
+!s100 faFPoSOkb@Ym3[28W<N@U1
+Epll_50mh_6mh
+Z68 w1277104074
+R5
+Z69 8C:/Actelprj/AFS_ADV_KIT_8051/smartgen/PLL_50Mh_6Mh/PLL_50Mh_6Mh.vhd
+Z70 FC:/Actelprj/AFS_ADV_KIT_8051/smartgen/PLL_50Mh_6Mh/PLL_50Mh_6Mh.vhd
+l0
+L8
+VhP4;=[dTzMZN]a6JhYAUi2
+R8
+31
+R9
+!s100 cEzZ9ZIK0obG[PTeoL<`J0
+Adef_arch
+R5
+DEx4 work 12 pll_50mh_6mh 0 22 hP4;=[dTzMZN]a6JhYAUi2
+l48
+L14
+V]fcRZ<7L9YRWjmA=8Z]6d2
+R8
+31
+R22
+R9
+!s100 KXD4:FnHc[=52lC^382L90
+Epmu
+R1
+R2
+R5
+Z71 8C:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/pmu.vhd
+Z72 FC:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/pmu.vhd
+l0
+L27
+VC0OLY_gk`NVTcKVOQn;4P3
+R8
+31
+R9
+!s100 zV@Z8H0J2?B=XMc0g1RY33
+Artl
+R2
+R5
+DEx4 work 3 pmu 0 22 C0OLY_gk`NVTcKVOQn;4P3
+l74
+L63
+VRbP9PL574dCCPBaE8<:c^0
+R8
+31
+R18
+R13
+R9
+!s100 ]U`z];]^4EgDOhICEGn?_0
+Eram256x20
+R19
+R5
+Z73 8C:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/RAM256X20_fusion.vhd
+Z74 FC:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/RAM256X20_fusion.vhd
+l0
+L12
+Vf::iYKf1S^8=[>DIg@jP_1
+R8
+31
+R9
+!s100 5>4_X0j=QL5zc=N^kV52W1
+Adef_arch
+R5
+DEx4 work 9 ram256x20 0 22 f::iYKf1S^8=[>DIg@jP_1
+l48
+L20
+VKgR_^jjV66V5`CbYDhVIc1
+R8
+31
+R22
+R9
+!s100 9e8Dg:OT8:Vza>d1JigCX3
+Eram256x8
+R19
+R5
+Z75 8C:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/RAM256X8_fusion.vhd
+Z76 FC:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/RAM256X8_fusion.vhd
+l0
+L13
+VgS9f:666f_I0EB8ZZDETP2
+R8
+31
+R9
+!s100 Yd5MRJ<Qjk[523aSD=5H11
+Adef_arch
+R5
+DEx4 work 8 ram256x8 0 22 gS9f:666f_I0EB8ZZDETP2
+l52
+L21
+VOLbig6Cl;iamUo=^70Xa81
+R8
+31
+R22
+R9
+!s100 Z2o`GU;i]ZlR1F<T0[:H^0
+Eram4kx8
+Z77 w1277268712
+R5
+Z78 8C:/Actelprj/AFS_ADV_KIT_8051/smartgen/RAM4Kx8/RAM4Kx8.vhd
+Z79 FC:/Actelprj/AFS_ADV_KIT_8051/smartgen/RAM4Kx8/RAM4Kx8.vhd
+l0
+L8
+VVL6VzVFlKHRoBcU55BMzT0
+R8
+31
+R9
+!s100 ]26ijPm`NcUh4fhK?Wfa:3
+Adef_arch
+R5
+DEx4 work 7 ram4kx8 0 22 VL6VzVFlKHRoBcU55BMzT0
+l48
+L17
+VzKE08zZaSFHcnknF26a^10
+R8
+31
+R22
+R9
+!s100 LlN``bG1R8_faW@5`_;0>2
+Eram_sfr_control
+R1
+R2
+R3
+R4
+R5
+Z80 8C:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/ramsfrctrl.vhd
+Z81 FC:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/ramsfrctrl.vhd
+l0
+L24
+VTkOY=78b1@bA27YR[1[jK2
+R8
+31
+R9
+!s100 IaI@1e3@g>bUX`NoI6Uc33
+Artl
+R2
+R3
+R4
+R5
+DEx4 work 15 ram_sfr_control 0 22 TkOY=78b1@bA27YR[1[jK2
+l160
+L99
+VdGN:=DE:EReN?^5PzL7L51
+R8
+31
+R10
+R11
+R12
+R13
+R9
+!s100 4Ld<WAnIe5=ibbD1GSk4n3
+Erstctrl
+R19
+R2
+R5
+Z82 8C:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/rstctrl.vhd
+Z83 FC:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/rstctrl.vhd
+l0
+L21
+V8WGNgSzzRIAPJ@z^zJcz13
+R8
+31
+R9
+!s100 <>mZ?c;kE@m7OF3HIl]XV1
+Artl
+R2
+R5
+DEx4 work 7 rstctrl 0 22 8WGNgSzzRIAPJ@z^zJcz13
+l67
+L58
+Ve5_[?m9NckTzBAacHlfFg3
+R8
+31
+R18
+R13
+R9
+!s100 K@G]MD^nU94kjR[X49_bF1
+Esys
+Z84 w1277268378
+R5
+Z85 8C:/Actelprj/AFS_ADV_KIT_8051/component/work/sys/sys.vhd
+Z86 FC:/Actelprj/AFS_ADV_KIT_8051/component/work/sys/sys.vhd
+l0
+L12
+VR1]@o16?1I>P5A6QRYgA`0
+R8
+31
+R9
+!s100 _EIjF;4=h1JQe;HOl3ZcX0
+Adef_arch
+R4
+R3
+R41
+R5
+DEx4 work 3 sys 0 22 R1]@o16?1I>P5A6QRYgA`0
+l467
+L49
+VXD>fAY:m_eSbj^h9m5cEN1
+!s100 zV]FnmL7fAb4UkZjD4JV42
+R8
+31
+R32
+R12
+R42
+R9
+Etestbench
+R84
+R5
+Z87 8C:/Actelprj/AFS_ADV_KIT_8051/component/work/sys/testbench.vhd
+Z88 FC:/Actelprj/AFS_ADV_KIT_8051/component/work/sys/testbench.vhd
+l0
+L13
+VVA0T[oe<cdTd2f]hNHU`g1
+!s100 Xz<X21_IcVC6gc==K=k=a0
+R8
+31
+R9
+Abehavioral
+R5
+Z89 DEx4 work 9 testbench 0 22 VA0T[oe<cdTd2f]hNHU`g1
+l66
+L16
+VcFR5b82TCkN?SIY1TC>zZ2
+!s100 i0]Y9:^A;ET_31L3NXRlI0
+R8
+31
+R22
+R9
+Etop_8051
+Z90 w1277114732
+R5
+Z91 8C:/Actelprj/AFS_ADV_KIT_8051/component/work/top_8051/top_8051.vhd
+Z92 FC:/Actelprj/AFS_ADV_KIT_8051/component/work/top_8051/top_8051.vhd
+l0
+L8
+V9B`8S^F9efdLhgT2ORVa`2
+R8
+31
+R9
+!s100 a;3QBg5Z?9Bn;;FP;TYmg2
+Adef_arch
+R58
+R5
+DEx4 work 8 top_8051 0 22 9B`8S^F9efdLhgT2ORVa`2
+l136
+L25
+V659j2kU07Z_ab4<34nE7N1
+R8
+31
+R22
+R9
+!s100 BiSE<i6@olBjA<2zh7F@c1
+Etrace
+R19
+R34
+R3
+R5
+Z93 8C:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/trace.vhd
+Z94 FC:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/trace.vhd
+l0
+L25
+V_iP^<iAW338HY_i>E]O362
+R8
+31
+R9
+!s100 WYGVdZ[:in?ZaC[eV0>:D0
+Artl
+R34
+R3
+R5
+DEx4 work 5 trace 0 22 _iP^<iAW338HY_i>E]O362
+l84
+L55
+V[7O;UidS^=98FTQeQ?5IF0
+R8
+31
+R32
+R12
+R37
+R9
+!s100 DId7f]d0XC`eP`1IIznEk3
+Etrigger
+R19
+R34
+R3
+R5
+Z95 8C:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/trigger.vhd
+Z96 FC:/Actelprj/AFS_ADV_KIT_8051/component/Actel/DirectCore/CORE8051S/2.2.100/rtl/vhdl/u/trigger.vhd
+l0
+L22
+V=9W8>F^[oFh=Y=IPEHhgh2
+R8
+31
+R9
+!s100 o<WTl=6KR;R0MRD?<iLIM3
+Artl
+R34
+R3
+R5
+DEx4 work 7 trigger 0 22 =9W8>F^[oFh=Y=IPEHhgh2
+l386
+L66
+Vlh9l^B^04oTj?IU]k4M]02
+R8
+31
+R32
+R12
+R37
+R9
+!s100 9f<YJ4d_OdeELOi<9D<]F1

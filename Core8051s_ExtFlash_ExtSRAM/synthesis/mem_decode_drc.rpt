@@ -1,0 +1,440 @@
+=====================================================================
+Parameters used to run compile:
+===============================
+
+Family      : Fusion
+Device      : M1AFS1500
+Package     : 484 FBGA
+Source      : C:\Actelprj\AFS_ADV_KIT_8051\synthesis\mem_decode.edn
+Format      : EDIF
+Topcell     : mem_decode
+Speed grade : -2
+Temp        : 0:25:70
+Voltage     : 1.58:1.50:1.42
+
+Keep Existing Physical Constraints : No
+Keep Existing Timing Constraints   : Yes
+
+pdc_abort_on_error                 : Yes
+pdc_eco_display_unmatched_objects  : No
+pdc_eco_max_warnings               : 10000
+
+demote_globals                     : No
+promote_globals                    : No
+localclock_max_shared_instances    : 12
+localclock_buffer_tree_max_fanout  : 12
+
+combine_register                   : No
+delete_buffer_tree                 : No
+
+report_high_fanout_nets_limit      : 10
+
+=====================================================================
+Compile starts ...
+
+Info: BLK007: No CoreConsole Database file imported for an M1 device.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C1_DOUTA0 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C1_DOUTA1 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C1_DOUTA2 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C1_DOUTA3 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C1_DOUTA4 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C1_DOUTA5 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C1_DOUTA6 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C1_DOUTA7 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C1_DOUTA8 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C1_DOUTB1 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C1_DOUTB2 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C1_DOUTB3 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C1_DOUTB4 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C1_DOUTB5 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C1_DOUTB6 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C1_DOUTB7 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C1_DOUTB8 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C6_DOUTA0 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C6_DOUTA1 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C6_DOUTA2 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C6_DOUTA3 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C6_DOUTA4 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C6_DOUTA5 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C6_DOUTA6 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C6_DOUTA7 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C6_DOUTA8 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C6_DOUTB1 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C6_DOUTB2 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C6_DOUTB3 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C6_DOUTB4 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C6_DOUTB5 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C6_DOUTB6 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C6_DOUTB7 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C6_DOUTB8 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C3_DOUTA0 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C3_DOUTA1 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C3_DOUTA2 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C3_DOUTA3 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C3_DOUTA4 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C3_DOUTA5 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C3_DOUTA6 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C3_DOUTA7 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C3_DOUTA8 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C3_DOUTB1 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C3_DOUTB2 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C3_DOUTB3 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C3_DOUTB4 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C3_DOUTB5 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C3_DOUTB6 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C3_DOUTB7 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C3_DOUTB8 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C3_DOUTA0 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C3_DOUTA1 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C3_DOUTA2 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C3_DOUTA3 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C3_DOUTA4 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C3_DOUTA5 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C3_DOUTA6 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C3_DOUTA7 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C3_DOUTA8 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C3_DOUTB1 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C3_DOUTB2 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C3_DOUTB3 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C3_DOUTB4 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C3_DOUTB5 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C3_DOUTB6 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C3_DOUTB7 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C3_DOUTB8 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C4_DOUTA0 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C4_DOUTA1 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C4_DOUTA2 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C4_DOUTA3 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C4_DOUTA4 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C4_DOUTA5 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C4_DOUTA6 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C4_DOUTA7 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C4_DOUTA8 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C4_DOUTB1 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C4_DOUTB2 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C4_DOUTB3 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C4_DOUTB4 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C4_DOUTB5 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C4_DOUTB6 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C4_DOUTB7 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C4_DOUTB8 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C4_DOUTA0 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C4_DOUTA1 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C4_DOUTA2 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C4_DOUTA3 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C4_DOUTA4 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C4_DOUTA5 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C4_DOUTA6 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C4_DOUTA7 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C4_DOUTA8 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C4_DOUTB1 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C4_DOUTB2 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C4_DOUTB3 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C4_DOUTB4 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C4_DOUTB5 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C4_DOUTB6 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C4_DOUTB7 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C4_DOUTB8 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C0_DOUTA0 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C0_DOUTA1 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C0_DOUTA2 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C0_DOUTA3 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C0_DOUTA4 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C0_DOUTA5 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C0_DOUTA6 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C0_DOUTA7 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C0_DOUTA8 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C0_DOUTB1 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C0_DOUTB2 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C0_DOUTB3 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C0_DOUTB4 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C0_DOUTB5 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C0_DOUTB6 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C0_DOUTB7 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C0_DOUTB8 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C0_DOUTA0 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C0_DOUTA1 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C0_DOUTA2 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C0_DOUTA3 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C0_DOUTA4 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C0_DOUTA5 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C0_DOUTA6 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C0_DOUTA7 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C0_DOUTA8 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C0_DOUTB1 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C0_DOUTB2 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C0_DOUTB3 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C0_DOUTB4 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C0_DOUTB5 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C0_DOUTB6 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C0_DOUTB7 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C0_DOUTB8 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C7_DOUTA0 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C7_DOUTA1 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C7_DOUTA2 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C7_DOUTA3 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C7_DOUTA4 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C7_DOUTA5 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C7_DOUTA6 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C7_DOUTA7 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C7_DOUTA8 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C7_DOUTB1 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C7_DOUTB2 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C7_DOUTB3 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C7_DOUTB4 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C7_DOUTB5 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C7_DOUTB6 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C7_DOUTB7 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C7_DOUTB8 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C2_DOUTA0 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C2_DOUTA1 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C2_DOUTA2 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C2_DOUTA3 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C2_DOUTA4 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C2_DOUTA5 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C2_DOUTA6 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C2_DOUTA7 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C2_DOUTA8 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C2_DOUTB1 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C2_DOUTB2 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C2_DOUTB3 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C2_DOUTB4 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C2_DOUTB5 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C2_DOUTB6 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C2_DOUTB7 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C2_DOUTB8 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C7_DOUTA0 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C7_DOUTA1 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C7_DOUTA2 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C7_DOUTA3 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C7_DOUTA4 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C7_DOUTA5 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C7_DOUTA6 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C7_DOUTA7 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C7_DOUTA8 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C7_DOUTB1 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C7_DOUTB2 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C7_DOUTB3 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C7_DOUTB4 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C7_DOUTB5 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C7_DOUTB6 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C7_DOUTB7 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C7_DOUTB8 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C5_DOUTA0 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C5_DOUTA1 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C5_DOUTA2 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C5_DOUTA3 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C5_DOUTA4 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C5_DOUTA5 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C5_DOUTA6 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C5_DOUTA7 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C5_DOUTA8 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C5_DOUTB1 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C5_DOUTB2 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C5_DOUTB3 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C5_DOUTB4 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C5_DOUTB5 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C5_DOUTB6 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C5_DOUTB7 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C5_DOUTB8 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C5_DOUTA0 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C5_DOUTA1 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C5_DOUTA2 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C5_DOUTA3 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C5_DOUTA4 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C5_DOUTA5 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C5_DOUTA6 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C5_DOUTA7 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C5_DOUTA8 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C5_DOUTB1 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C5_DOUTB2 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C5_DOUTB3 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C5_DOUTB4 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C5_DOUTB5 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C5_DOUTB6 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C5_DOUTB7 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C5_DOUTB8 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C1_DOUTA0 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C1_DOUTA1 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C1_DOUTA2 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C1_DOUTA3 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C1_DOUTA4 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C1_DOUTA5 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C1_DOUTA6 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C1_DOUTA7 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C1_DOUTA8 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C1_DOUTB1 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C1_DOUTB2 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C1_DOUTB3 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C1_DOUTB4 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C1_DOUTB5 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C1_DOUTB6 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C1_DOUTB7 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R0C1_DOUTB8 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C6_DOUTA0 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C6_DOUTA1 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C6_DOUTA2 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C6_DOUTA3 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C6_DOUTA4 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C6_DOUTA5 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C6_DOUTA6 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C6_DOUTA7 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C6_DOUTA8 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C6_DOUTB1 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C6_DOUTB2 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C6_DOUTB3 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C6_DOUTB4 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C6_DOUTB5 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C6_DOUTB6 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C6_DOUTB7 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C6_DOUTB8 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C2_DOUTA0 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C2_DOUTA1 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C2_DOUTA2 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C2_DOUTA3 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C2_DOUTA4 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C2_DOUTA5 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C2_DOUTA6 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C2_DOUTA7 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C2_DOUTA8 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C2_DOUTB1 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C2_DOUTB2 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C2_DOUTB3 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C2_DOUTB4 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C2_DOUTB5 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C2_DOUTB6 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C2_DOUTB7 drives no load.
+Warning: CMP201: Net EXT_DATA_MEMORY/INT_RAM8kX8_R1C2_DOUTB8 drives no load.
+
+Netlist Optimization Report
+===========================
+
+Optimized macros:
+  - Dangling net drivers:   0
+  - Buffers:                0
+  - Inverters:              0
+  - Tieoff:                 0
+  - Logic combining:        4
+
+    Total macros optimized  4
+
+There were 0 error(s) and 272 warning(s) in this design.
+=====================================================================
+Compile report:
+===============
+
+    CORE                       Used:     38  Total:  38400   (0.10%)
+    IO (W/ clocks)             Used:     71  Total:    223   (31.84%)
+    Differential IO            Used:      0  Total:    109   (0.00%)
+    GLOBAL (Chip+Quadrant)     Used:      1  Total:     18   (5.56%)
+    PLL                        Used:      0  Total:      2   (0.00%)
+    RAM/FIFO                   Used:     16  Total:     60   (26.67%)
+    Low Static ICC             Used:      0  Total:      1   (0.00%)
+    FlashROM                   Used:      0  Total:      1   (0.00%)
+    User JTAG                  Used:      0  Total:      1   (0.00%)
+    RC oscillator              Used:      0  Total:      1   (0.00%)
+    XTL oscillator             Used:      0  Total:      1   (0.00%)
+    NVM                        Used:      0  Total:      4   (0.00%)
+    AB                         Used:      0  Total:      1   (0.00%)
+    AnalogIO                   Used:      0  Total:     46   (0.00%)
+    VRPSM                      Used:      0  Total:      1   (0.00%)
+    No-Glitch MUX              Used:      0  Total:      2   (0.00%)
+
+Global Information:
+
+    Type            | Used   | Total
+    ----------------|--------|-------------
+    Chip global     | 1      | 6  (16.67%)
+    Quadrant global | 0      | 12 (0.00%)
+
+Core Information:
+
+    Type    | Instances    | Core tiles
+    --------|--------------|-----------
+    COMB    | 37           | 37
+    SEQ     | 1            | 1
+
+I/O Function:
+
+    Type                          | w/o register  | w/ register  | w/ DDR register
+    ------------------------------|---------------|--------------|----------------
+    Input I/O                     | 29            | 0            | 0
+    Output I/O                    | 34            | 0            | 0
+    Bidirectional I/O             | 8             | 0            | 0
+    Differential Input I/O Pairs  | 0             | 0            | 0
+    Differential Output I/O Pairs | 0             | 0            | 0
+
+I/O Technology:
+
+                                    |   Voltages    |             I/Os
+    --------------------------------|-------|-------|-------|--------|--------------
+    I/O Standard(s)                 | Vcci  | Vref  | Input | Output | Bidirectional
+    --------------------------------|-------|-------|-------|--------|--------------
+    LVTTL                           | 3.30v | N/A   | 29    | 34     | 8
+
+I/O Placement:
+
+    Locked  :   0
+    Placed  :   0
+    UnPlaced:  71 ( 100.00% )
+
+Net information report:
+=======================
+
+The following nets have been assigned to a chip global resource:
+    Fanout  Type          Name
+    --------------------------
+    33      INT_NET       Net   : SYSCLK_c
+                          Driver: SYSCLK_pad
+                          Source: NETLIST
+
+High fanout nets in the post compile netlist:
+    Fanout  Type          Name
+    --------------------------
+    17      INT_NET       Net   : ADDR_c_c[0]
+                          Driver: ADDR_pad[0]
+    17      INT_NET       Net   : ADDR_c_c[1]
+                          Driver: ADDR_pad[1]
+    17      INT_NET       Net   : ADDR_c_c[2]
+                          Driver: ADDR_pad[2]
+    17      INT_NET       Net   : ADDR_c_c[3]
+                          Driver: ADDR_pad[3]
+    17      INT_NET       Net   : ADDR_c_c[4]
+                          Driver: ADDR_pad[4]
+    17      INT_NET       Net   : ADDR_c_c[5]
+                          Driver: ADDR_pad[5]
+    17      INT_NET       Net   : ADDR_c_c[6]
+                          Driver: ADDR_pad[6]
+    17      INT_NET       Net   : ADDR_c_c[7]
+                          Driver: ADDR_pad[7]
+    17      INT_NET       Net   : ADDR_c_c[8]
+                          Driver: ADDR_pad[8]
+    17      INT_NET       Net   : ADDR_c_c[9]
+                          Driver: ADDR_pad[9]
+
+Nets that are candidates for clock assignment and the resulting fanout:
+    Fanout  Type          Name
+    --------------------------
+    33      INT_NET       Net   : ADDR_c_c[0]
+                          Driver: ADDR_pad[0]
+    33      INT_NET       Net   : ADDR_c_c[1]
+                          Driver: ADDR_pad[1]
+    33      INT_NET       Net   : ADDR_c_c[2]
+                          Driver: ADDR_pad[2]
+    33      INT_NET       Net   : ADDR_c_c[3]
+                          Driver: ADDR_pad[3]
+    33      INT_NET       Net   : ADDR_c_c[4]
+                          Driver: ADDR_pad[4]
+    33      INT_NET       Net   : ADDR_c_c[5]
+                          Driver: ADDR_pad[5]
+    33      INT_NET       Net   : ADDR_c_c[6]
+                          Driver: ADDR_pad[6]
+    33      INT_NET       Net   : ADDR_c_c[7]
+                          Driver: ADDR_pad[7]
+    33      INT_NET       Net   : ADDR_c_c[8]
+                          Driver: ADDR_pad[8]
+    33      INT_NET       Net   : ADDR_c_c[9]
+                          Driver: ADDR_pad[9]
+
+The Compile command succeeded ( 00:00:05 )
+

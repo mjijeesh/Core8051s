@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Resource: CoreWatchdog
+# Instance: VAR_resource
+#-----------------------------------------------------------
+# Write 0xabcd to watchdog load register
+write   h   VAR_resource    0x00 0xabcd;
+
+# read the current watchdog value register
+read    h   VAR_resource    0x04;
+
+# check the watchdog load register
+readcheck h VAR_resource    0x00 0xabcd; # Expect value 0xabcd

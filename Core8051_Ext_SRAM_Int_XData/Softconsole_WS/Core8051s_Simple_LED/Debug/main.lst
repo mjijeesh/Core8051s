@@ -1,0 +1,1514 @@
+                              1 ;--------------------------------------------------------
+                              2 ; File Created by SDCC : FreeWare ANSI-C Compiler
+                              3 ; Version 2.6.3 #4543 (Dec 31 2006)
+                              4 ; This file generated Mon May 02 12:51:53 2016
+                              5 ;--------------------------------------------------------
+                              6 	.module ___main
+                              7 	.optsdcc -mmcs51 --model-large
+                              8 	
+                              9 ;--------------------------------------------------------
+                             10 ; Public variables in this module
+                             11 ;--------------------------------------------------------
+                             12 	.globl _main
+                             13 	.globl _g_wd
+                             14 	.globl _g_uart0
+                             15 	.globl _g_gpio
+                             16 	.globl _wait
+                             17 ;--------------------------------------------------------
+                             18 ; special function registers
+                             19 ;--------------------------------------------------------
+                             20 	.area RSEG    (DATA)
+                             21 ;--------------------------------------------------------
+                             22 ; special function bits
+                             23 ;--------------------------------------------------------
+                             24 	.area RSEG    (DATA)
+                             25 ;--------------------------------------------------------
+                             26 ; overlayable register banks
+                             27 ;--------------------------------------------------------
+                             28 	.area REG_BANK_0	(REL,OVR,DATA)
+   0000                      29 	.ds 8
+                             30 ;--------------------------------------------------------
+                             31 ; internal ram data
+                             32 ;--------------------------------------------------------
+                             33 	.area DSEG    (DATA)
+                             34 ;--------------------------------------------------------
+                             35 ; overlayable items in internal ram 
+                             36 ;--------------------------------------------------------
+                             37 	.area OSEG    (OVR,DATA)
+                             38 ;--------------------------------------------------------
+                             39 ; Stack segment in internal ram 
+                             40 ;--------------------------------------------------------
+                             41 	.area	SSEG	(DATA)
+   0000                      42 __start__stack:
+   0000                      43 	.ds	1
+                             44 
+                             45 ;--------------------------------------------------------
+                             46 ; indirectly addressable internal ram data
+                             47 ;--------------------------------------------------------
+                             48 	.area ISEG    (DATA)
+                             49 ;--------------------------------------------------------
+                             50 ; absolute internal ram data
+                             51 ;--------------------------------------------------------
+                             52 	.area IABS    (ABS,DATA)
+                             53 	.area IABS    (ABS,DATA)
+                             54 ;--------------------------------------------------------
+                             55 ; bit data
+                             56 ;--------------------------------------------------------
+                             57 	.area BSEG    (BIT)
+                             58 ;--------------------------------------------------------
+                             59 ; paged external ram data
+                             60 ;--------------------------------------------------------
+                             61 	.area PSEG    (PAG,XDATA)
+                             62 ;--------------------------------------------------------
+                             63 ; external ram data
+                             64 ;--------------------------------------------------------
+                             65 	.area XSEG    (XDATA)
+                    0000     66 G$g_gpio$0$0==.
+   0000                      67 _g_gpio::
+   0000                      68 	.ds 3
+                    0003     69 G$g_uart0$0$0==.
+   0003                      70 _g_uart0::
+   0003                      71 	.ds 3
+                    0006     72 G$g_wd$0$0==.
+   0006                      73 _g_wd::
+   0006                      74 	.ds 2
+                    0008     75 Lmain$uart_msg$1$1==.
+   0008                      76 _main_uart_msg_1_1:
+   0008                      77 	.ds 31
+                    0027     78 Lmain$linefeed$1$1==.
+   0027                      79 _main_linefeed_1_1:
+   0027                      80 	.ds 3
+                    002A     81 Lwait$time_in_ms$1$1==.
+   002A                      82 _wait_time_in_ms_1_1:
+   002A                      83 	.ds 2
+                    002C     84 Lwait$i$1$1==.
+   002C                      85 _wait_i_1_1:
+   002C                      86 	.ds 2
+                             87 ;--------------------------------------------------------
+                             88 ; external initialized ram data
+                             89 ;--------------------------------------------------------
+                             90 	.area XISEG   (XDATA)
+                             91 	.area HOME    (CODE)
+                             92 	.area GSINIT0 (CODE)
+                             93 	.area GSINIT1 (CODE)
+                             94 	.area GSINIT2 (CODE)
+                             95 	.area GSINIT3 (CODE)
+                             96 	.area GSINIT4 (CODE)
+                             97 	.area GSINIT5 (CODE)
+                             98 	.area GSINIT  (CODE)
+                             99 	.area GSFINAL (CODE)
+                            100 	.area CSEG    (CODE)
+                            101 ;--------------------------------------------------------
+                            102 ; interrupt vector 
+                            103 ;--------------------------------------------------------
+                            104 	.area HOME    (CODE)
+   0000                     105 __interrupt_vect:
+   0000 02s00r00            106 	ljmp	__sdcc_gsinit_startup
+                            107 ;--------------------------------------------------------
+                            108 ; global & static initialisations
+                            109 ;--------------------------------------------------------
+                            110 	.area HOME    (CODE)
+                            111 	.area GSINIT  (CODE)
+                            112 	.area GSFINAL (CODE)
+                            113 	.area GSINIT  (CODE)
+                            114 	.globl __sdcc_gsinit_startup
+                            115 	.globl __sdcc_program_startup
+                            116 	.globl __start__stack
+                            117 	.globl __mcs51_genXINIT
+                            118 	.globl __mcs51_genXRAMCLEAR
+                            119 	.globl __mcs51_genRAMCLEAR
+                            120 	.area GSFINAL (CODE)
+   0000 02s00r03            121 	ljmp	__sdcc_program_startup
+                            122 ;--------------------------------------------------------
+                            123 ; Home
+                            124 ;--------------------------------------------------------
+                            125 	.area HOME    (CODE)
+                            126 	.area HOME    (CODE)
+   0003                     127 __sdcc_program_startup:
+   0003 12s00r00            128 	lcall	_main
+                            129 ;	return from main will lock up
+   0006 80 FE               130 	sjmp .
+                            131 ;--------------------------------------------------------
+                            132 ; code
+                            133 ;--------------------------------------------------------
+                            134 	.area CSEG    (CODE)
+                            135 ;------------------------------------------------------------
+                            136 ;Allocation info for local variables in function 'main'
+                            137 ;------------------------------------------------------------
+                            138 ;uart_msg                  Allocated with name '_main_uart_msg_1_1'
+                            139 ;linefeed                  Allocated with name '_main_linefeed_1_1'
+                            140 ;------------------------------------------------------------
+                    0000    141 	G$main$0$0 ==.
+                    0000    142 	C$main.c$54$0$0 ==.
+                            143 ;	../main.c:54: int main( void )
+                            144 ;	-----------------------------------------
+                            145 ;	 function main
+                            146 ;	-----------------------------------------
+   0000                     147 _main:
+                    0002    148 	ar2 = 0x02
+                    0003    149 	ar3 = 0x03
+                    0004    150 	ar4 = 0x04
+                    0005    151 	ar5 = 0x05
+                    0006    152 	ar6 = 0x06
+                    0007    153 	ar7 = 0x07
+                    0000    154 	ar0 = 0x00
+                    0001    155 	ar1 = 0x01
+                    0000    156 	C$main.c$56$1$0 ==.
+                            157 ;	../main.c:56: const uint8_t uart_msg[] = "\n\r** Simple LED Sequence  **\n\r";
+                            158 ;	genPointerSet
+                            159 ;     genFarPointerSet
+   0000 90s00r08            160 	mov	dptr,#_main_uart_msg_1_1
+   0003 74 0A               161 	mov	a,#0x0A
+   0005 F0                  162 	movx	@dptr,a
+                            163 ;	genPointerSet
+                            164 ;     genFarPointerSet
+   0006 90s00r09            165 	mov	dptr,#(_main_uart_msg_1_1 + 0x0001)
+   0009 74 0D               166 	mov	a,#0x0D
+   000B F0                  167 	movx	@dptr,a
+                            168 ;	genPointerSet
+                            169 ;     genFarPointerSet
+   000C 90s00r0A            170 	mov	dptr,#(_main_uart_msg_1_1 + 0x0002)
+   000F 74 2A               171 	mov	a,#0x2A
+   0011 F0                  172 	movx	@dptr,a
+                            173 ;	genPointerSet
+                            174 ;     genFarPointerSet
+   0012 90s00r0B            175 	mov	dptr,#(_main_uart_msg_1_1 + 0x0003)
+   0015 74 2A               176 	mov	a,#0x2A
+   0017 F0                  177 	movx	@dptr,a
+                            178 ;	genPointerSet
+                            179 ;     genFarPointerSet
+   0018 90s00r0C            180 	mov	dptr,#(_main_uart_msg_1_1 + 0x0004)
+   001B 74 20               181 	mov	a,#0x20
+   001D F0                  182 	movx	@dptr,a
+                            183 ;	genPointerSet
+                            184 ;     genFarPointerSet
+   001E 90s00r0D            185 	mov	dptr,#(_main_uart_msg_1_1 + 0x0005)
+   0021 74 53               186 	mov	a,#0x53
+   0023 F0                  187 	movx	@dptr,a
+                            188 ;	genPointerSet
+                            189 ;     genFarPointerSet
+   0024 90s00r0E            190 	mov	dptr,#(_main_uart_msg_1_1 + 0x0006)
+   0027 74 69               191 	mov	a,#0x69
+   0029 F0                  192 	movx	@dptr,a
+                            193 ;	genPointerSet
+                            194 ;     genFarPointerSet
+   002A 90s00r0F            195 	mov	dptr,#(_main_uart_msg_1_1 + 0x0007)
+   002D 74 6D               196 	mov	a,#0x6D
+   002F F0                  197 	movx	@dptr,a
+                            198 ;	genPointerSet
+                            199 ;     genFarPointerSet
+   0030 90s00r10            200 	mov	dptr,#(_main_uart_msg_1_1 + 0x0008)
+   0033 74 70               201 	mov	a,#0x70
+   0035 F0                  202 	movx	@dptr,a
+                            203 ;	genPointerSet
+                            204 ;     genFarPointerSet
+   0036 90s00r11            205 	mov	dptr,#(_main_uart_msg_1_1 + 0x0009)
+   0039 74 6C               206 	mov	a,#0x6C
+   003B F0                  207 	movx	@dptr,a
+                            208 ;	genPointerSet
+                            209 ;     genFarPointerSet
+   003C 90s00r12            210 	mov	dptr,#(_main_uart_msg_1_1 + 0x000a)
+   003F 74 65               211 	mov	a,#0x65
+   0041 F0                  212 	movx	@dptr,a
+                            213 ;	genPointerSet
+                            214 ;     genFarPointerSet
+   0042 90s00r13            215 	mov	dptr,#(_main_uart_msg_1_1 + 0x000b)
+   0045 74 20               216 	mov	a,#0x20
+   0047 F0                  217 	movx	@dptr,a
+                            218 ;	genPointerSet
+                            219 ;     genFarPointerSet
+   0048 90s00r14            220 	mov	dptr,#(_main_uart_msg_1_1 + 0x000c)
+   004B 74 4C               221 	mov	a,#0x4C
+   004D F0                  222 	movx	@dptr,a
+                            223 ;	genPointerSet
+                            224 ;     genFarPointerSet
+   004E 90s00r15            225 	mov	dptr,#(_main_uart_msg_1_1 + 0x000d)
+   0051 74 45               226 	mov	a,#0x45
+   0053 F0                  227 	movx	@dptr,a
+                            228 ;	genPointerSet
+                            229 ;     genFarPointerSet
+   0054 90s00r16            230 	mov	dptr,#(_main_uart_msg_1_1 + 0x000e)
+   0057 74 44               231 	mov	a,#0x44
+   0059 F0                  232 	movx	@dptr,a
+                            233 ;	genPointerSet
+                            234 ;     genFarPointerSet
+   005A 90s00r17            235 	mov	dptr,#(_main_uart_msg_1_1 + 0x000f)
+   005D 74 20               236 	mov	a,#0x20
+   005F F0                  237 	movx	@dptr,a
+                            238 ;	genPointerSet
+                            239 ;     genFarPointerSet
+   0060 90s00r18            240 	mov	dptr,#(_main_uart_msg_1_1 + 0x0010)
+   0063 74 53               241 	mov	a,#0x53
+   0065 F0                  242 	movx	@dptr,a
+                            243 ;	genPointerSet
+                            244 ;     genFarPointerSet
+   0066 90s00r19            245 	mov	dptr,#(_main_uart_msg_1_1 + 0x0011)
+   0069 74 65               246 	mov	a,#0x65
+   006B F0                  247 	movx	@dptr,a
+                            248 ;	genPointerSet
+                            249 ;     genFarPointerSet
+   006C 90s00r1A            250 	mov	dptr,#(_main_uart_msg_1_1 + 0x0012)
+   006F 74 71               251 	mov	a,#0x71
+   0071 F0                  252 	movx	@dptr,a
+                            253 ;	genPointerSet
+                            254 ;     genFarPointerSet
+   0072 90s00r1B            255 	mov	dptr,#(_main_uart_msg_1_1 + 0x0013)
+   0075 74 75               256 	mov	a,#0x75
+   0077 F0                  257 	movx	@dptr,a
+                            258 ;	genPointerSet
+                            259 ;     genFarPointerSet
+   0078 90s00r1C            260 	mov	dptr,#(_main_uart_msg_1_1 + 0x0014)
+   007B 74 65               261 	mov	a,#0x65
+   007D F0                  262 	movx	@dptr,a
+                            263 ;	genPointerSet
+                            264 ;     genFarPointerSet
+   007E 90s00r1D            265 	mov	dptr,#(_main_uart_msg_1_1 + 0x0015)
+   0081 74 6E               266 	mov	a,#0x6E
+   0083 F0                  267 	movx	@dptr,a
+                            268 ;	genPointerSet
+                            269 ;     genFarPointerSet
+   0084 90s00r1E            270 	mov	dptr,#(_main_uart_msg_1_1 + 0x0016)
+   0087 74 63               271 	mov	a,#0x63
+   0089 F0                  272 	movx	@dptr,a
+                            273 ;	genPointerSet
+                            274 ;     genFarPointerSet
+   008A 90s00r1F            275 	mov	dptr,#(_main_uart_msg_1_1 + 0x0017)
+   008D 74 65               276 	mov	a,#0x65
+   008F F0                  277 	movx	@dptr,a
+                            278 ;	genPointerSet
+                            279 ;     genFarPointerSet
+   0090 90s00r20            280 	mov	dptr,#(_main_uart_msg_1_1 + 0x0018)
+   0093 74 20               281 	mov	a,#0x20
+   0095 F0                  282 	movx	@dptr,a
+                            283 ;	genPointerSet
+                            284 ;     genFarPointerSet
+   0096 90s00r21            285 	mov	dptr,#(_main_uart_msg_1_1 + 0x0019)
+   0099 74 20               286 	mov	a,#0x20
+   009B F0                  287 	movx	@dptr,a
+                            288 ;	genPointerSet
+                            289 ;     genFarPointerSet
+   009C 90s00r22            290 	mov	dptr,#(_main_uart_msg_1_1 + 0x001a)
+   009F 74 2A               291 	mov	a,#0x2A
+   00A1 F0                  292 	movx	@dptr,a
+                            293 ;	genPointerSet
+                            294 ;     genFarPointerSet
+   00A2 90s00r23            295 	mov	dptr,#(_main_uart_msg_1_1 + 0x001b)
+   00A5 74 2A               296 	mov	a,#0x2A
+   00A7 F0                  297 	movx	@dptr,a
+                            298 ;	genPointerSet
+                            299 ;     genFarPointerSet
+   00A8 90s00r24            300 	mov	dptr,#(_main_uart_msg_1_1 + 0x001c)
+   00AB 74 0A               301 	mov	a,#0x0A
+   00AD F0                  302 	movx	@dptr,a
+                            303 ;	genPointerSet
+                            304 ;     genFarPointerSet
+   00AE 90s00r25            305 	mov	dptr,#(_main_uart_msg_1_1 + 0x001d)
+   00B1 74 0D               306 	mov	a,#0x0D
+   00B3 F0                  307 	movx	@dptr,a
+                            308 ;	genPointerSet
+                            309 ;     genFarPointerSet
+   00B4 90s00r26            310 	mov	dptr,#(_main_uart_msg_1_1 + 0x001e)
+   00B7 74 00               311 	mov	a,#0x00
+   00B9 F0                  312 	movx	@dptr,a
+                    00BA    313 	C$main.c$57$1$0 ==.
+                            314 ;	../main.c:57: const uint8_t linefeed[] = "\n\r";
+                            315 ;	genPointerSet
+                            316 ;     genFarPointerSet
+   00BA 90s00r27            317 	mov	dptr,#_main_linefeed_1_1
+   00BD 74 0A               318 	mov	a,#0x0A
+   00BF F0                  319 	movx	@dptr,a
+                            320 ;	genPointerSet
+                            321 ;     genFarPointerSet
+   00C0 90s00r28            322 	mov	dptr,#(_main_linefeed_1_1 + 0x0001)
+   00C3 74 0D               323 	mov	a,#0x0D
+   00C5 F0                  324 	movx	@dptr,a
+                            325 ;	genPointerSet
+                            326 ;     genFarPointerSet
+   00C6 90s00r29            327 	mov	dptr,#(_main_linefeed_1_1 + 0x0002)
+   00C9 74 00               328 	mov	a,#0x00
+   00CB F0                  329 	movx	@dptr,a
+                    00CC    330 	C$main.c$62$1$1 ==.
+                            331 ;	../main.c:62: UART_init( &g_uart0, APB3_BASE_ADDRESS + COREUARTAPB_0, UART_9600_BAUD, DATA_8_BITS | NO_PARITY );
+                            332 ;	genAssign
+   00CC 90s00r00            333 	mov	dptr,#_UART_init_PARM_2
+   00CF 74 00               334 	mov	a,#0x00
+   00D1 F0                  335 	movx	@dptr,a
+   00D2 A3                  336 	inc	dptr
+   00D3 74 F0               337 	mov	a,#0xF0
+   00D5 F0                  338 	movx	@dptr,a
+                            339 ;	genAssign
+   00D6 90s00r00            340 	mov	dptr,#_UART_init_PARM_3
+   00D9 74 26               341 	mov	a,#0x26
+   00DB F0                  342 	movx	@dptr,a
+   00DC E4                  343 	clr	a
+   00DD A3                  344 	inc	dptr
+   00DE F0                  345 	movx	@dptr,a
+                            346 ;	genAssign
+   00DF 90s00r00            347 	mov	dptr,#_UART_init_PARM_4
+   00E2 74 01               348 	mov	a,#0x01
+   00E4 F0                  349 	movx	@dptr,a
+                            350 ;	genCall
+   00E5 75 82r03            351 	mov	dpl,#_g_uart0
+   00E8 75 83s00            352 	mov	dph,#(_g_uart0 >> 8)
+   00EB 75 F0 00            353 	mov	b,#0x00
+   00EE 12s00r00            354 	lcall	_UART_init
+                    00F1    355 	C$main.c$64$1$1 ==.
+                            356 ;	../main.c:64: WD_init( &g_wd, APB3_BASE_ADDRESS + COREWATCHDOG_0, WatchDog_COUNT, WD_PRESCALER_DIV_16 );
+                            357 ;	genAssign
+   00F1 90s00r00            358 	mov	dptr,#_WD_init_PARM_2
+   00F4 74 00               359 	mov	a,#0x00
+   00F6 F0                  360 	movx	@dptr,a
+   00F7 A3                  361 	inc	dptr
+   00F8 74 F3               362 	mov	a,#0xF3
+   00FA F0                  363 	movx	@dptr,a
+                            364 ;	genAssign
+   00FB 90s00r00            365 	mov	dptr,#_WD_init_PARM_3
+   00FE 74 E8               366 	mov	a,#0xE8
+   0100 F0                  367 	movx	@dptr,a
+   0101 A3                  368 	inc	dptr
+   0102 74 03               369 	mov	a,#0x03
+   0104 F0                  370 	movx	@dptr,a
+   0105 A3                  371 	inc	dptr
+   0106 74 00               372 	mov	a,#0x00
+   0108 F0                  373 	movx	@dptr,a
+   0109 A3                  374 	inc	dptr
+   010A 74 00               375 	mov	a,#0x00
+   010C F0                  376 	movx	@dptr,a
+                            377 ;	genAssign
+   010D 90s00r00            378 	mov	dptr,#_WD_init_PARM_4
+   0110 74 03               379 	mov	a,#0x03
+   0112 F0                  380 	movx	@dptr,a
+   0113 E4                  381 	clr	a
+   0114 A3                  382 	inc	dptr
+   0115 F0                  383 	movx	@dptr,a
+   0116 A3                  384 	inc	dptr
+   0117 F0                  385 	movx	@dptr,a
+   0118 A3                  386 	inc	dptr
+   0119 F0                  387 	movx	@dptr,a
+                            388 ;	genCall
+   011A 75 82r06            389 	mov	dpl,#_g_wd
+   011D 75 83s00            390 	mov	dph,#(_g_wd >> 8)
+   0120 75 F0 00            391 	mov	b,#0x00
+   0123 12s00r00            392 	lcall	_WD_init
+                    0126    393 	C$main.c$65$1$1 ==.
+                            394 ;	../main.c:65: WD_disable( &g_wd );
+                            395 ;	genCall
+   0126 75 82r06            396 	mov	dpl,#_g_wd
+   0129 75 83s00            397 	mov	dph,#(_g_wd >> 8)
+   012C 75 F0 00            398 	mov	b,#0x00
+   012F 12s00r00            399 	lcall	_WD_disable
+                    0132    400 	C$main.c$67$1$1 ==.
+                            401 ;	../main.c:67: GPIO_init( &g_gpio,	APB3_BASE_ADDRESS + COREGPIO_0, GPIO_APB_32_BITS_BUS );
+                            402 ;	genAssign
+   0132 90s00r00            403 	mov	dptr,#_GPIO_init_PARM_2
+   0135 74 00               404 	mov	a,#0x00
+   0137 F0                  405 	movx	@dptr,a
+   0138 A3                  406 	inc	dptr
+   0139 74 F1               407 	mov	a,#0xF1
+   013B F0                  408 	movx	@dptr,a
+                            409 ;	genAssign
+   013C 90s00r00            410 	mov	dptr,#_GPIO_init_PARM_3
+   013F 74 02               411 	mov	a,#0x02
+   0141 F0                  412 	movx	@dptr,a
+                            413 ;	genCall
+   0142 75 82r00            414 	mov	dpl,#_g_gpio
+   0145 75 83s00            415 	mov	dph,#(_g_gpio >> 8)
+   0148 75 F0 00            416 	mov	b,#0x00
+   014B 12s00r00            417 	lcall	_GPIO_init
+                    014E    418 	C$main.c$71$1$1 ==.
+                            419 ;	../main.c:71: GPIO_config( &g_gpio, LED_D0, GPIO_OUTPUT_MODE );
+                            420 ;	genAssign
+   014E 90s00r00            421 	mov	dptr,#_GPIO_config_PARM_2
+   0151 74 00               422 	mov	a,#0x00
+   0153 F0                  423 	movx	@dptr,a
+                            424 ;	genAssign
+   0154 90s00r00            425 	mov	dptr,#_GPIO_config_PARM_3
+   0157 74 05               426 	mov	a,#0x05
+   0159 F0                  427 	movx	@dptr,a
+   015A E4                  428 	clr	a
+   015B A3                  429 	inc	dptr
+   015C F0                  430 	movx	@dptr,a
+   015D A3                  431 	inc	dptr
+   015E F0                  432 	movx	@dptr,a
+   015F A3                  433 	inc	dptr
+   0160 F0                  434 	movx	@dptr,a
+                            435 ;	genCall
+   0161 75 82r00            436 	mov	dpl,#_g_gpio
+   0164 75 83s00            437 	mov	dph,#(_g_gpio >> 8)
+   0167 75 F0 00            438 	mov	b,#0x00
+   016A 12s00r00            439 	lcall	_GPIO_config
+                    016D    440 	C$main.c$73$1$1 ==.
+                            441 ;	../main.c:73: GPIO_config( &g_gpio, LED_D1, GPIO_OUTPUT_MODE );
+                            442 ;	genAssign
+   016D 90s00r00            443 	mov	dptr,#_GPIO_config_PARM_2
+   0170 74 01               444 	mov	a,#0x01
+   0172 F0                  445 	movx	@dptr,a
+                            446 ;	genAssign
+   0173 90s00r00            447 	mov	dptr,#_GPIO_config_PARM_3
+   0176 74 05               448 	mov	a,#0x05
+   0178 F0                  449 	movx	@dptr,a
+   0179 E4                  450 	clr	a
+   017A A3                  451 	inc	dptr
+   017B F0                  452 	movx	@dptr,a
+   017C A3                  453 	inc	dptr
+   017D F0                  454 	movx	@dptr,a
+   017E A3                  455 	inc	dptr
+   017F F0                  456 	movx	@dptr,a
+                            457 ;	genCall
+   0180 75 82r00            458 	mov	dpl,#_g_gpio
+   0183 75 83s00            459 	mov	dph,#(_g_gpio >> 8)
+   0186 75 F0 00            460 	mov	b,#0x00
+   0189 12s00r00            461 	lcall	_GPIO_config
+                    018C    462 	C$main.c$75$1$1 ==.
+                            463 ;	../main.c:75: GPIO_config( &g_gpio, LED_D2, GPIO_OUTPUT_MODE );
+                            464 ;	genAssign
+   018C 90s00r00            465 	mov	dptr,#_GPIO_config_PARM_2
+   018F 74 02               466 	mov	a,#0x02
+   0191 F0                  467 	movx	@dptr,a
+                            468 ;	genAssign
+   0192 90s00r00            469 	mov	dptr,#_GPIO_config_PARM_3
+   0195 74 05               470 	mov	a,#0x05
+   0197 F0                  471 	movx	@dptr,a
+   0198 E4                  472 	clr	a
+   0199 A3                  473 	inc	dptr
+   019A F0                  474 	movx	@dptr,a
+   019B A3                  475 	inc	dptr
+   019C F0                  476 	movx	@dptr,a
+   019D A3                  477 	inc	dptr
+   019E F0                  478 	movx	@dptr,a
+                            479 ;	genCall
+   019F 75 82r00            480 	mov	dpl,#_g_gpio
+   01A2 75 83s00            481 	mov	dph,#(_g_gpio >> 8)
+   01A5 75 F0 00            482 	mov	b,#0x00
+   01A8 12s00r00            483 	lcall	_GPIO_config
+                    01AB    484 	C$main.c$77$1$1 ==.
+                            485 ;	../main.c:77: GPIO_config( &g_gpio, LED_D3, GPIO_OUTPUT_MODE );
+                            486 ;	genAssign
+   01AB 90s00r00            487 	mov	dptr,#_GPIO_config_PARM_2
+   01AE 74 03               488 	mov	a,#0x03
+   01B0 F0                  489 	movx	@dptr,a
+                            490 ;	genAssign
+   01B1 90s00r00            491 	mov	dptr,#_GPIO_config_PARM_3
+   01B4 74 05               492 	mov	a,#0x05
+   01B6 F0                  493 	movx	@dptr,a
+   01B7 E4                  494 	clr	a
+   01B8 A3                  495 	inc	dptr
+   01B9 F0                  496 	movx	@dptr,a
+   01BA A3                  497 	inc	dptr
+   01BB F0                  498 	movx	@dptr,a
+   01BC A3                  499 	inc	dptr
+   01BD F0                  500 	movx	@dptr,a
+                            501 ;	genCall
+   01BE 75 82r00            502 	mov	dpl,#_g_gpio
+   01C1 75 83s00            503 	mov	dph,#(_g_gpio >> 8)
+   01C4 75 F0 00            504 	mov	b,#0x00
+   01C7 12s00r00            505 	lcall	_GPIO_config
+                    01CA    506 	C$main.c$79$1$1 ==.
+                            507 ;	../main.c:79: GPIO_config( &g_gpio, LED_D4, GPIO_OUTPUT_MODE );
+                            508 ;	genAssign
+   01CA 90s00r00            509 	mov	dptr,#_GPIO_config_PARM_2
+   01CD 74 04               510 	mov	a,#0x04
+   01CF F0                  511 	movx	@dptr,a
+                            512 ;	genAssign
+   01D0 90s00r00            513 	mov	dptr,#_GPIO_config_PARM_3
+   01D3 74 05               514 	mov	a,#0x05
+   01D5 F0                  515 	movx	@dptr,a
+   01D6 E4                  516 	clr	a
+   01D7 A3                  517 	inc	dptr
+   01D8 F0                  518 	movx	@dptr,a
+   01D9 A3                  519 	inc	dptr
+   01DA F0                  520 	movx	@dptr,a
+   01DB A3                  521 	inc	dptr
+   01DC F0                  522 	movx	@dptr,a
+                            523 ;	genCall
+   01DD 75 82r00            524 	mov	dpl,#_g_gpio
+   01E0 75 83s00            525 	mov	dph,#(_g_gpio >> 8)
+   01E3 75 F0 00            526 	mov	b,#0x00
+   01E6 12s00r00            527 	lcall	_GPIO_config
+                    01E9    528 	C$main.c$81$1$1 ==.
+                            529 ;	../main.c:81: GPIO_config( &g_gpio, LED_D5, GPIO_OUTPUT_MODE );
+                            530 ;	genAssign
+   01E9 90s00r00            531 	mov	dptr,#_GPIO_config_PARM_2
+   01EC 74 05               532 	mov	a,#0x05
+   01EE F0                  533 	movx	@dptr,a
+                            534 ;	genAssign
+   01EF 90s00r00            535 	mov	dptr,#_GPIO_config_PARM_3
+   01F2 74 05               536 	mov	a,#0x05
+   01F4 F0                  537 	movx	@dptr,a
+   01F5 E4                  538 	clr	a
+   01F6 A3                  539 	inc	dptr
+   01F7 F0                  540 	movx	@dptr,a
+   01F8 A3                  541 	inc	dptr
+   01F9 F0                  542 	movx	@dptr,a
+   01FA A3                  543 	inc	dptr
+   01FB F0                  544 	movx	@dptr,a
+                            545 ;	genCall
+   01FC 75 82r00            546 	mov	dpl,#_g_gpio
+   01FF 75 83s00            547 	mov	dph,#(_g_gpio >> 8)
+   0202 75 F0 00            548 	mov	b,#0x00
+   0205 12s00r00            549 	lcall	_GPIO_config
+                    0208    550 	C$main.c$83$1$1 ==.
+                            551 ;	../main.c:83: GPIO_config( &g_gpio, LED_D6, GPIO_OUTPUT_MODE );
+                            552 ;	genAssign
+   0208 90s00r00            553 	mov	dptr,#_GPIO_config_PARM_2
+   020B 74 06               554 	mov	a,#0x06
+   020D F0                  555 	movx	@dptr,a
+                            556 ;	genAssign
+   020E 90s00r00            557 	mov	dptr,#_GPIO_config_PARM_3
+   0211 74 05               558 	mov	a,#0x05
+   0213 F0                  559 	movx	@dptr,a
+   0214 E4                  560 	clr	a
+   0215 A3                  561 	inc	dptr
+   0216 F0                  562 	movx	@dptr,a
+   0217 A3                  563 	inc	dptr
+   0218 F0                  564 	movx	@dptr,a
+   0219 A3                  565 	inc	dptr
+   021A F0                  566 	movx	@dptr,a
+                            567 ;	genCall
+   021B 75 82r00            568 	mov	dpl,#_g_gpio
+   021E 75 83s00            569 	mov	dph,#(_g_gpio >> 8)
+   0221 75 F0 00            570 	mov	b,#0x00
+   0224 12s00r00            571 	lcall	_GPIO_config
+                    0227    572 	C$main.c$85$1$1 ==.
+                            573 ;	../main.c:85: GPIO_config( &g_gpio, LED_D7, GPIO_OUTPUT_MODE );
+                            574 ;	genAssign
+   0227 90s00r00            575 	mov	dptr,#_GPIO_config_PARM_2
+   022A 74 07               576 	mov	a,#0x07
+   022C F0                  577 	movx	@dptr,a
+                            578 ;	genAssign
+   022D 90s00r00            579 	mov	dptr,#_GPIO_config_PARM_3
+   0230 74 05               580 	mov	a,#0x05
+   0232 F0                  581 	movx	@dptr,a
+   0233 E4                  582 	clr	a
+   0234 A3                  583 	inc	dptr
+   0235 F0                  584 	movx	@dptr,a
+   0236 A3                  585 	inc	dptr
+   0237 F0                  586 	movx	@dptr,a
+   0238 A3                  587 	inc	dptr
+   0239 F0                  588 	movx	@dptr,a
+                            589 ;	genCall
+   023A 75 82r00            590 	mov	dpl,#_g_gpio
+   023D 75 83s00            591 	mov	dph,#(_g_gpio >> 8)
+   0240 75 F0 00            592 	mov	b,#0x00
+   0243 12s00r00            593 	lcall	_GPIO_config
+                    0246    594 	C$main.c$87$1$1 ==.
+                            595 ;	../main.c:87: GPIO_config( &g_gpio, LED_D8, GPIO_OUTPUT_MODE );
+                            596 ;	genAssign
+   0246 90s00r00            597 	mov	dptr,#_GPIO_config_PARM_2
+   0249 74 08               598 	mov	a,#0x08
+   024B F0                  599 	movx	@dptr,a
+                            600 ;	genAssign
+   024C 90s00r00            601 	mov	dptr,#_GPIO_config_PARM_3
+   024F 74 05               602 	mov	a,#0x05
+   0251 F0                  603 	movx	@dptr,a
+   0252 E4                  604 	clr	a
+   0253 A3                  605 	inc	dptr
+   0254 F0                  606 	movx	@dptr,a
+   0255 A3                  607 	inc	dptr
+   0256 F0                  608 	movx	@dptr,a
+   0257 A3                  609 	inc	dptr
+   0258 F0                  610 	movx	@dptr,a
+                            611 ;	genCall
+   0259 75 82r00            612 	mov	dpl,#_g_gpio
+   025C 75 83s00            613 	mov	dph,#(_g_gpio >> 8)
+   025F 75 F0 00            614 	mov	b,#0x00
+   0262 12s00r00            615 	lcall	_GPIO_config
+                    0265    616 	C$main.c$90$1$1 ==.
+                            617 ;	../main.c:90: GPIO_set_output( &g_gpio, LED_D0, 0);
+                            618 ;	genAssign
+   0265 90s00r00            619 	mov	dptr,#_GPIO_set_output_PARM_2
+   0268 74 00               620 	mov	a,#0x00
+   026A F0                  621 	movx	@dptr,a
+                            622 ;	genAssign
+   026B 90s00r00            623 	mov	dptr,#_GPIO_set_output_PARM_3
+   026E 74 00               624 	mov	a,#0x00
+   0270 F0                  625 	movx	@dptr,a
+                            626 ;	genCall
+   0271 75 82r00            627 	mov	dpl,#_g_gpio
+   0274 75 83s00            628 	mov	dph,#(_g_gpio >> 8)
+   0277 75 F0 00            629 	mov	b,#0x00
+   027A 12s00r00            630 	lcall	_GPIO_set_output
+                    027D    631 	C$main.c$92$1$1 ==.
+                            632 ;	../main.c:92: GPIO_set_output( &g_gpio, LED_D1, 0);
+                            633 ;	genAssign
+   027D 90s00r00            634 	mov	dptr,#_GPIO_set_output_PARM_2
+   0280 74 01               635 	mov	a,#0x01
+   0282 F0                  636 	movx	@dptr,a
+                            637 ;	genAssign
+   0283 90s00r00            638 	mov	dptr,#_GPIO_set_output_PARM_3
+   0286 74 00               639 	mov	a,#0x00
+   0288 F0                  640 	movx	@dptr,a
+                            641 ;	genCall
+   0289 75 82r00            642 	mov	dpl,#_g_gpio
+   028C 75 83s00            643 	mov	dph,#(_g_gpio >> 8)
+   028F 75 F0 00            644 	mov	b,#0x00
+   0292 12s00r00            645 	lcall	_GPIO_set_output
+                    0295    646 	C$main.c$94$1$1 ==.
+                            647 ;	../main.c:94: GPIO_set_output( &g_gpio, LED_D2, 0);
+                            648 ;	genAssign
+   0295 90s00r00            649 	mov	dptr,#_GPIO_set_output_PARM_2
+   0298 74 02               650 	mov	a,#0x02
+   029A F0                  651 	movx	@dptr,a
+                            652 ;	genAssign
+   029B 90s00r00            653 	mov	dptr,#_GPIO_set_output_PARM_3
+   029E 74 00               654 	mov	a,#0x00
+   02A0 F0                  655 	movx	@dptr,a
+                            656 ;	genCall
+   02A1 75 82r00            657 	mov	dpl,#_g_gpio
+   02A4 75 83s00            658 	mov	dph,#(_g_gpio >> 8)
+   02A7 75 F0 00            659 	mov	b,#0x00
+   02AA 12s00r00            660 	lcall	_GPIO_set_output
+                    02AD    661 	C$main.c$96$1$1 ==.
+                            662 ;	../main.c:96: GPIO_set_output( &g_gpio, LED_D3, 0);
+                            663 ;	genAssign
+   02AD 90s00r00            664 	mov	dptr,#_GPIO_set_output_PARM_2
+   02B0 74 03               665 	mov	a,#0x03
+   02B2 F0                  666 	movx	@dptr,a
+                            667 ;	genAssign
+   02B3 90s00r00            668 	mov	dptr,#_GPIO_set_output_PARM_3
+   02B6 74 00               669 	mov	a,#0x00
+   02B8 F0                  670 	movx	@dptr,a
+                            671 ;	genCall
+   02B9 75 82r00            672 	mov	dpl,#_g_gpio
+   02BC 75 83s00            673 	mov	dph,#(_g_gpio >> 8)
+   02BF 75 F0 00            674 	mov	b,#0x00
+   02C2 12s00r00            675 	lcall	_GPIO_set_output
+                    02C5    676 	C$main.c$98$1$1 ==.
+                            677 ;	../main.c:98: GPIO_set_output( &g_gpio, LED_D4, 0);
+                            678 ;	genAssign
+   02C5 90s00r00            679 	mov	dptr,#_GPIO_set_output_PARM_2
+   02C8 74 04               680 	mov	a,#0x04
+   02CA F0                  681 	movx	@dptr,a
+                            682 ;	genAssign
+   02CB 90s00r00            683 	mov	dptr,#_GPIO_set_output_PARM_3
+   02CE 74 00               684 	mov	a,#0x00
+   02D0 F0                  685 	movx	@dptr,a
+                            686 ;	genCall
+   02D1 75 82r00            687 	mov	dpl,#_g_gpio
+   02D4 75 83s00            688 	mov	dph,#(_g_gpio >> 8)
+   02D7 75 F0 00            689 	mov	b,#0x00
+   02DA 12s00r00            690 	lcall	_GPIO_set_output
+                    02DD    691 	C$main.c$100$1$1 ==.
+                            692 ;	../main.c:100: GPIO_set_output( &g_gpio, LED_D5, 0);
+                            693 ;	genAssign
+   02DD 90s00r00            694 	mov	dptr,#_GPIO_set_output_PARM_2
+   02E0 74 05               695 	mov	a,#0x05
+   02E2 F0                  696 	movx	@dptr,a
+                            697 ;	genAssign
+   02E3 90s00r00            698 	mov	dptr,#_GPIO_set_output_PARM_3
+   02E6 74 00               699 	mov	a,#0x00
+   02E8 F0                  700 	movx	@dptr,a
+                            701 ;	genCall
+   02E9 75 82r00            702 	mov	dpl,#_g_gpio
+   02EC 75 83s00            703 	mov	dph,#(_g_gpio >> 8)
+   02EF 75 F0 00            704 	mov	b,#0x00
+   02F2 12s00r00            705 	lcall	_GPIO_set_output
+                    02F5    706 	C$main.c$102$1$1 ==.
+                            707 ;	../main.c:102: GPIO_set_output( &g_gpio, LED_D6, 0);
+                            708 ;	genAssign
+   02F5 90s00r00            709 	mov	dptr,#_GPIO_set_output_PARM_2
+   02F8 74 06               710 	mov	a,#0x06
+   02FA F0                  711 	movx	@dptr,a
+                            712 ;	genAssign
+   02FB 90s00r00            713 	mov	dptr,#_GPIO_set_output_PARM_3
+   02FE 74 00               714 	mov	a,#0x00
+   0300 F0                  715 	movx	@dptr,a
+                            716 ;	genCall
+   0301 75 82r00            717 	mov	dpl,#_g_gpio
+   0304 75 83s00            718 	mov	dph,#(_g_gpio >> 8)
+   0307 75 F0 00            719 	mov	b,#0x00
+   030A 12s00r00            720 	lcall	_GPIO_set_output
+                    030D    721 	C$main.c$104$1$1 ==.
+                            722 ;	../main.c:104: GPIO_set_output( &g_gpio, LED_D7, 0);
+                            723 ;	genAssign
+   030D 90s00r00            724 	mov	dptr,#_GPIO_set_output_PARM_2
+   0310 74 07               725 	mov	a,#0x07
+   0312 F0                  726 	movx	@dptr,a
+                            727 ;	genAssign
+   0313 90s00r00            728 	mov	dptr,#_GPIO_set_output_PARM_3
+   0316 74 00               729 	mov	a,#0x00
+   0318 F0                  730 	movx	@dptr,a
+                            731 ;	genCall
+   0319 75 82r00            732 	mov	dpl,#_g_gpio
+   031C 75 83s00            733 	mov	dph,#(_g_gpio >> 8)
+   031F 75 F0 00            734 	mov	b,#0x00
+   0322 12s00r00            735 	lcall	_GPIO_set_output
+                    0325    736 	C$main.c$106$1$1 ==.
+                            737 ;	../main.c:106: GPIO_set_output( &g_gpio, LED_D8, 0);
+                            738 ;	genAssign
+   0325 90s00r00            739 	mov	dptr,#_GPIO_set_output_PARM_2
+   0328 74 08               740 	mov	a,#0x08
+   032A F0                  741 	movx	@dptr,a
+                            742 ;	genAssign
+   032B 90s00r00            743 	mov	dptr,#_GPIO_set_output_PARM_3
+   032E 74 00               744 	mov	a,#0x00
+   0330 F0                  745 	movx	@dptr,a
+                            746 ;	genCall
+   0331 75 82r00            747 	mov	dpl,#_g_gpio
+   0334 75 83s00            748 	mov	dph,#(_g_gpio >> 8)
+   0337 75 F0 00            749 	mov	b,#0x00
+   033A 12s00r00            750 	lcall	_GPIO_set_output
+                    033D    751 	C$main.c$108$1$1 ==.
+                            752 ;	../main.c:108: UART_send( &g_uart0, uart_msg, sizeof(uart_msg) );
+                            753 ;	genCast
+   033D 90s00r00            754 	mov	dptr,#_UART_send_PARM_2
+   0340 74r08               755 	mov	a,#_main_uart_msg_1_1
+   0342 F0                  756 	movx	@dptr,a
+   0343 A3                  757 	inc	dptr
+   0344 74s00               758 	mov	a,#(_main_uart_msg_1_1 >> 8)
+   0346 F0                  759 	movx	@dptr,a
+   0347 A3                  760 	inc	dptr
+   0348 74 00               761 	mov	a,#0x0
+   034A F0                  762 	movx	@dptr,a
+                            763 ;	genAssign
+   034B 90s00r00            764 	mov	dptr,#_UART_send_PARM_3
+   034E 74 1F               765 	mov	a,#0x1F
+   0350 F0                  766 	movx	@dptr,a
+   0351 E4                  767 	clr	a
+   0352 A3                  768 	inc	dptr
+   0353 F0                  769 	movx	@dptr,a
+                            770 ;	genCall
+   0354 75 82r03            771 	mov	dpl,#_g_uart0
+   0357 75 83s00            772 	mov	dph,#(_g_uart0 >> 8)
+   035A 75 F0 00            773 	mov	b,#0x00
+   035D 12s00r00            774 	lcall	_UART_send
+                    0360    775 	C$main.c$109$1$1 ==.
+                            776 ;	../main.c:109: UART_send( &g_uart0, linefeed, sizeof(linefeed) );
+                            777 ;	genCast
+   0360 90s00r00            778 	mov	dptr,#_UART_send_PARM_2
+   0363 74r27               779 	mov	a,#_main_linefeed_1_1
+   0365 F0                  780 	movx	@dptr,a
+   0366 A3                  781 	inc	dptr
+   0367 74s00               782 	mov	a,#(_main_linefeed_1_1 >> 8)
+   0369 F0                  783 	movx	@dptr,a
+   036A A3                  784 	inc	dptr
+   036B 74 00               785 	mov	a,#0x0
+   036D F0                  786 	movx	@dptr,a
+                            787 ;	genAssign
+   036E 90s00r00            788 	mov	dptr,#_UART_send_PARM_3
+   0371 74 03               789 	mov	a,#0x03
+   0373 F0                  790 	movx	@dptr,a
+   0374 E4                  791 	clr	a
+   0375 A3                  792 	inc	dptr
+   0376 F0                  793 	movx	@dptr,a
+                            794 ;	genCall
+   0377 75 82r03            795 	mov	dpl,#_g_uart0
+   037A 75 83s00            796 	mov	dph,#(_g_uart0 >> 8)
+   037D 75 F0 00            797 	mov	b,#0x00
+   0380 12s00r00            798 	lcall	_UART_send
+                    0383    799 	C$main.c$111$1$1 ==.
+                            800 ;	../main.c:111: while( 1 )
+   0383                     801 00102$:
+                    0383    802 	C$main.c$115$2$2 ==.
+                            803 ;	../main.c:115: GPIO_set_output( &g_gpio, LED_D0, 1);
+                            804 ;	genAssign
+   0383 90s00r00            805 	mov	dptr,#_GPIO_set_output_PARM_2
+   0386 74 00               806 	mov	a,#0x00
+   0388 F0                  807 	movx	@dptr,a
+                            808 ;	genAssign
+   0389 90s00r00            809 	mov	dptr,#_GPIO_set_output_PARM_3
+   038C 74 01               810 	mov	a,#0x01
+   038E F0                  811 	movx	@dptr,a
+                            812 ;	genCall
+   038F 75 82r00            813 	mov	dpl,#_g_gpio
+   0392 75 83s00            814 	mov	dph,#(_g_gpio >> 8)
+   0395 75 F0 00            815 	mov	b,#0x00
+   0398 12s00r00            816 	lcall	_GPIO_set_output
+                    039B    817 	C$main.c$117$2$2 ==.
+                            818 ;	../main.c:117: wait(LED_scanning_delay);
+                            819 ;	genCall
+   039B 75 82 28            820 	mov	dpl,#0x28
+   039E 75 83 00            821 	mov	dph,#0x00
+   03A1 12s07r59            822 	lcall	_wait
+                    03A4    823 	C$main.c$119$2$2 ==.
+                            824 ;	../main.c:119: GPIO_set_output( &g_gpio, LED_D0, 0);
+                            825 ;	genAssign
+   03A4 90s00r00            826 	mov	dptr,#_GPIO_set_output_PARM_2
+   03A7 74 00               827 	mov	a,#0x00
+   03A9 F0                  828 	movx	@dptr,a
+                            829 ;	genAssign
+   03AA 90s00r00            830 	mov	dptr,#_GPIO_set_output_PARM_3
+   03AD 74 00               831 	mov	a,#0x00
+   03AF F0                  832 	movx	@dptr,a
+                            833 ;	genCall
+   03B0 75 82r00            834 	mov	dpl,#_g_gpio
+   03B3 75 83s00            835 	mov	dph,#(_g_gpio >> 8)
+   03B6 75 F0 00            836 	mov	b,#0x00
+   03B9 12s00r00            837 	lcall	_GPIO_set_output
+                    03BC    838 	C$main.c$121$2$2 ==.
+                            839 ;	../main.c:121: GPIO_set_output( &g_gpio, LED_D1, 1);
+                            840 ;	genAssign
+   03BC 90s00r00            841 	mov	dptr,#_GPIO_set_output_PARM_2
+   03BF 74 01               842 	mov	a,#0x01
+   03C1 F0                  843 	movx	@dptr,a
+                            844 ;	genAssign
+   03C2 90s00r00            845 	mov	dptr,#_GPIO_set_output_PARM_3
+   03C5 74 01               846 	mov	a,#0x01
+   03C7 F0                  847 	movx	@dptr,a
+                            848 ;	genCall
+   03C8 75 82r00            849 	mov	dpl,#_g_gpio
+   03CB 75 83s00            850 	mov	dph,#(_g_gpio >> 8)
+   03CE 75 F0 00            851 	mov	b,#0x00
+   03D1 12s00r00            852 	lcall	_GPIO_set_output
+                    03D4    853 	C$main.c$123$2$2 ==.
+                            854 ;	../main.c:123: wait(LED_scanning_delay);
+                            855 ;	genCall
+   03D4 75 82 28            856 	mov	dpl,#0x28
+   03D7 75 83 00            857 	mov	dph,#0x00
+   03DA 12s07r59            858 	lcall	_wait
+                    03DD    859 	C$main.c$125$2$2 ==.
+                            860 ;	../main.c:125: GPIO_set_output( &g_gpio, LED_D1, 0);
+                            861 ;	genAssign
+   03DD 90s00r00            862 	mov	dptr,#_GPIO_set_output_PARM_2
+   03E0 74 01               863 	mov	a,#0x01
+   03E2 F0                  864 	movx	@dptr,a
+                            865 ;	genAssign
+   03E3 90s00r00            866 	mov	dptr,#_GPIO_set_output_PARM_3
+   03E6 74 00               867 	mov	a,#0x00
+   03E8 F0                  868 	movx	@dptr,a
+                            869 ;	genCall
+   03E9 75 82r00            870 	mov	dpl,#_g_gpio
+   03EC 75 83s00            871 	mov	dph,#(_g_gpio >> 8)
+   03EF 75 F0 00            872 	mov	b,#0x00
+   03F2 12s00r00            873 	lcall	_GPIO_set_output
+                    03F5    874 	C$main.c$127$2$2 ==.
+                            875 ;	../main.c:127: GPIO_set_output( &g_gpio, LED_D2, 1);
+                            876 ;	genAssign
+   03F5 90s00r00            877 	mov	dptr,#_GPIO_set_output_PARM_2
+   03F8 74 02               878 	mov	a,#0x02
+   03FA F0                  879 	movx	@dptr,a
+                            880 ;	genAssign
+   03FB 90s00r00            881 	mov	dptr,#_GPIO_set_output_PARM_3
+   03FE 74 01               882 	mov	a,#0x01
+   0400 F0                  883 	movx	@dptr,a
+                            884 ;	genCall
+   0401 75 82r00            885 	mov	dpl,#_g_gpio
+   0404 75 83s00            886 	mov	dph,#(_g_gpio >> 8)
+   0407 75 F0 00            887 	mov	b,#0x00
+   040A 12s00r00            888 	lcall	_GPIO_set_output
+                    040D    889 	C$main.c$129$2$2 ==.
+                            890 ;	../main.c:129: wait(LED_scanning_delay);
+                            891 ;	genCall
+   040D 75 82 28            892 	mov	dpl,#0x28
+   0410 75 83 00            893 	mov	dph,#0x00
+   0413 12s07r59            894 	lcall	_wait
+                    0416    895 	C$main.c$131$2$2 ==.
+                            896 ;	../main.c:131: GPIO_set_output( &g_gpio, LED_D2, 0);
+                            897 ;	genAssign
+   0416 90s00r00            898 	mov	dptr,#_GPIO_set_output_PARM_2
+   0419 74 02               899 	mov	a,#0x02
+   041B F0                  900 	movx	@dptr,a
+                            901 ;	genAssign
+   041C 90s00r00            902 	mov	dptr,#_GPIO_set_output_PARM_3
+   041F 74 00               903 	mov	a,#0x00
+   0421 F0                  904 	movx	@dptr,a
+                            905 ;	genCall
+   0422 75 82r00            906 	mov	dpl,#_g_gpio
+   0425 75 83s00            907 	mov	dph,#(_g_gpio >> 8)
+   0428 75 F0 00            908 	mov	b,#0x00
+   042B 12s00r00            909 	lcall	_GPIO_set_output
+                    042E    910 	C$main.c$133$2$2 ==.
+                            911 ;	../main.c:133: GPIO_set_output( &g_gpio, LED_D3, 1);
+                            912 ;	genAssign
+   042E 90s00r00            913 	mov	dptr,#_GPIO_set_output_PARM_2
+   0431 74 03               914 	mov	a,#0x03
+   0433 F0                  915 	movx	@dptr,a
+                            916 ;	genAssign
+   0434 90s00r00            917 	mov	dptr,#_GPIO_set_output_PARM_3
+   0437 74 01               918 	mov	a,#0x01
+   0439 F0                  919 	movx	@dptr,a
+                            920 ;	genCall
+   043A 75 82r00            921 	mov	dpl,#_g_gpio
+   043D 75 83s00            922 	mov	dph,#(_g_gpio >> 8)
+   0440 75 F0 00            923 	mov	b,#0x00
+   0443 12s00r00            924 	lcall	_GPIO_set_output
+                    0446    925 	C$main.c$135$2$2 ==.
+                            926 ;	../main.c:135: wait(LED_scanning_delay);
+                            927 ;	genCall
+   0446 75 82 28            928 	mov	dpl,#0x28
+   0449 75 83 00            929 	mov	dph,#0x00
+   044C 12s07r59            930 	lcall	_wait
+                    044F    931 	C$main.c$137$2$2 ==.
+                            932 ;	../main.c:137: GPIO_set_output( &g_gpio, LED_D3, 0);
+                            933 ;	genAssign
+   044F 90s00r00            934 	mov	dptr,#_GPIO_set_output_PARM_2
+   0452 74 03               935 	mov	a,#0x03
+   0454 F0                  936 	movx	@dptr,a
+                            937 ;	genAssign
+   0455 90s00r00            938 	mov	dptr,#_GPIO_set_output_PARM_3
+   0458 74 00               939 	mov	a,#0x00
+   045A F0                  940 	movx	@dptr,a
+                            941 ;	genCall
+   045B 75 82r00            942 	mov	dpl,#_g_gpio
+   045E 75 83s00            943 	mov	dph,#(_g_gpio >> 8)
+   0461 75 F0 00            944 	mov	b,#0x00
+   0464 12s00r00            945 	lcall	_GPIO_set_output
+                    0467    946 	C$main.c$139$2$2 ==.
+                            947 ;	../main.c:139: GPIO_set_output( &g_gpio, LED_D4, 1);
+                            948 ;	genAssign
+   0467 90s00r00            949 	mov	dptr,#_GPIO_set_output_PARM_2
+   046A 74 04               950 	mov	a,#0x04
+   046C F0                  951 	movx	@dptr,a
+                            952 ;	genAssign
+   046D 90s00r00            953 	mov	dptr,#_GPIO_set_output_PARM_3
+   0470 74 01               954 	mov	a,#0x01
+   0472 F0                  955 	movx	@dptr,a
+                            956 ;	genCall
+   0473 75 82r00            957 	mov	dpl,#_g_gpio
+   0476 75 83s00            958 	mov	dph,#(_g_gpio >> 8)
+   0479 75 F0 00            959 	mov	b,#0x00
+   047C 12s00r00            960 	lcall	_GPIO_set_output
+                    047F    961 	C$main.c$141$2$2 ==.
+                            962 ;	../main.c:141: wait(LED_scanning_delay);
+                            963 ;	genCall
+   047F 75 82 28            964 	mov	dpl,#0x28
+   0482 75 83 00            965 	mov	dph,#0x00
+   0485 12s07r59            966 	lcall	_wait
+                    0488    967 	C$main.c$143$2$2 ==.
+                            968 ;	../main.c:143: GPIO_set_output( &g_gpio, LED_D4, 0);
+                            969 ;	genAssign
+   0488 90s00r00            970 	mov	dptr,#_GPIO_set_output_PARM_2
+   048B 74 04               971 	mov	a,#0x04
+   048D F0                  972 	movx	@dptr,a
+                            973 ;	genAssign
+   048E 90s00r00            974 	mov	dptr,#_GPIO_set_output_PARM_3
+   0491 74 00               975 	mov	a,#0x00
+   0493 F0                  976 	movx	@dptr,a
+                            977 ;	genCall
+   0494 75 82r00            978 	mov	dpl,#_g_gpio
+   0497 75 83s00            979 	mov	dph,#(_g_gpio >> 8)
+   049A 75 F0 00            980 	mov	b,#0x00
+   049D 12s00r00            981 	lcall	_GPIO_set_output
+                    04A0    982 	C$main.c$145$2$2 ==.
+                            983 ;	../main.c:145: GPIO_set_output( &g_gpio, LED_D5, 1);
+                            984 ;	genAssign
+   04A0 90s00r00            985 	mov	dptr,#_GPIO_set_output_PARM_2
+   04A3 74 05               986 	mov	a,#0x05
+   04A5 F0                  987 	movx	@dptr,a
+                            988 ;	genAssign
+   04A6 90s00r00            989 	mov	dptr,#_GPIO_set_output_PARM_3
+   04A9 74 01               990 	mov	a,#0x01
+   04AB F0                  991 	movx	@dptr,a
+                            992 ;	genCall
+   04AC 75 82r00            993 	mov	dpl,#_g_gpio
+   04AF 75 83s00            994 	mov	dph,#(_g_gpio >> 8)
+   04B2 75 F0 00            995 	mov	b,#0x00
+   04B5 12s00r00            996 	lcall	_GPIO_set_output
+                    04B8    997 	C$main.c$147$2$2 ==.
+                            998 ;	../main.c:147: wait(LED_scanning_delay);
+                            999 ;	genCall
+   04B8 75 82 28           1000 	mov	dpl,#0x28
+   04BB 75 83 00           1001 	mov	dph,#0x00
+   04BE 12s07r59           1002 	lcall	_wait
+                    04C1   1003 	C$main.c$149$2$2 ==.
+                           1004 ;	../main.c:149: GPIO_set_output( &g_gpio, LED_D5, 0);
+                           1005 ;	genAssign
+   04C1 90s00r00           1006 	mov	dptr,#_GPIO_set_output_PARM_2
+   04C4 74 05              1007 	mov	a,#0x05
+   04C6 F0                 1008 	movx	@dptr,a
+                           1009 ;	genAssign
+   04C7 90s00r00           1010 	mov	dptr,#_GPIO_set_output_PARM_3
+   04CA 74 00              1011 	mov	a,#0x00
+   04CC F0                 1012 	movx	@dptr,a
+                           1013 ;	genCall
+   04CD 75 82r00           1014 	mov	dpl,#_g_gpio
+   04D0 75 83s00           1015 	mov	dph,#(_g_gpio >> 8)
+   04D3 75 F0 00           1016 	mov	b,#0x00
+   04D6 12s00r00           1017 	lcall	_GPIO_set_output
+                    04D9   1018 	C$main.c$151$2$2 ==.
+                           1019 ;	../main.c:151: GPIO_set_output( &g_gpio, LED_D6, 1);
+                           1020 ;	genAssign
+   04D9 90s00r00           1021 	mov	dptr,#_GPIO_set_output_PARM_2
+   04DC 74 06              1022 	mov	a,#0x06
+   04DE F0                 1023 	movx	@dptr,a
+                           1024 ;	genAssign
+   04DF 90s00r00           1025 	mov	dptr,#_GPIO_set_output_PARM_3
+   04E2 74 01              1026 	mov	a,#0x01
+   04E4 F0                 1027 	movx	@dptr,a
+                           1028 ;	genCall
+   04E5 75 82r00           1029 	mov	dpl,#_g_gpio
+   04E8 75 83s00           1030 	mov	dph,#(_g_gpio >> 8)
+   04EB 75 F0 00           1031 	mov	b,#0x00
+   04EE 12s00r00           1032 	lcall	_GPIO_set_output
+                    04F1   1033 	C$main.c$153$2$2 ==.
+                           1034 ;	../main.c:153: wait(LED_scanning_delay);
+                           1035 ;	genCall
+   04F1 75 82 28           1036 	mov	dpl,#0x28
+   04F4 75 83 00           1037 	mov	dph,#0x00
+   04F7 12s07r59           1038 	lcall	_wait
+                    04FA   1039 	C$main.c$155$2$2 ==.
+                           1040 ;	../main.c:155: GPIO_set_output( &g_gpio, LED_D6, 0);
+                           1041 ;	genAssign
+   04FA 90s00r00           1042 	mov	dptr,#_GPIO_set_output_PARM_2
+   04FD 74 06              1043 	mov	a,#0x06
+   04FF F0                 1044 	movx	@dptr,a
+                           1045 ;	genAssign
+   0500 90s00r00           1046 	mov	dptr,#_GPIO_set_output_PARM_3
+   0503 74 00              1047 	mov	a,#0x00
+   0505 F0                 1048 	movx	@dptr,a
+                           1049 ;	genCall
+   0506 75 82r00           1050 	mov	dpl,#_g_gpio
+   0509 75 83s00           1051 	mov	dph,#(_g_gpio >> 8)
+   050C 75 F0 00           1052 	mov	b,#0x00
+   050F 12s00r00           1053 	lcall	_GPIO_set_output
+                    0512   1054 	C$main.c$157$2$2 ==.
+                           1055 ;	../main.c:157: GPIO_set_output( &g_gpio, LED_D7, 1);
+                           1056 ;	genAssign
+   0512 90s00r00           1057 	mov	dptr,#_GPIO_set_output_PARM_2
+   0515 74 07              1058 	mov	a,#0x07
+   0517 F0                 1059 	movx	@dptr,a
+                           1060 ;	genAssign
+   0518 90s00r00           1061 	mov	dptr,#_GPIO_set_output_PARM_3
+   051B 74 01              1062 	mov	a,#0x01
+   051D F0                 1063 	movx	@dptr,a
+                           1064 ;	genCall
+   051E 75 82r00           1065 	mov	dpl,#_g_gpio
+   0521 75 83s00           1066 	mov	dph,#(_g_gpio >> 8)
+   0524 75 F0 00           1067 	mov	b,#0x00
+   0527 12s00r00           1068 	lcall	_GPIO_set_output
+                    052A   1069 	C$main.c$159$2$2 ==.
+                           1070 ;	../main.c:159: wait(LED_scanning_delay);
+                           1071 ;	genCall
+   052A 75 82 28           1072 	mov	dpl,#0x28
+   052D 75 83 00           1073 	mov	dph,#0x00
+   0530 12s07r59           1074 	lcall	_wait
+                    0533   1075 	C$main.c$161$2$2 ==.
+                           1076 ;	../main.c:161: GPIO_set_output( &g_gpio, LED_D7, 0);
+                           1077 ;	genAssign
+   0533 90s00r00           1078 	mov	dptr,#_GPIO_set_output_PARM_2
+   0536 74 07              1079 	mov	a,#0x07
+   0538 F0                 1080 	movx	@dptr,a
+                           1081 ;	genAssign
+   0539 90s00r00           1082 	mov	dptr,#_GPIO_set_output_PARM_3
+   053C 74 00              1083 	mov	a,#0x00
+   053E F0                 1084 	movx	@dptr,a
+                           1085 ;	genCall
+   053F 75 82r00           1086 	mov	dpl,#_g_gpio
+   0542 75 83s00           1087 	mov	dph,#(_g_gpio >> 8)
+   0545 75 F0 00           1088 	mov	b,#0x00
+   0548 12s00r00           1089 	lcall	_GPIO_set_output
+                    054B   1090 	C$main.c$163$2$2 ==.
+                           1091 ;	../main.c:163: GPIO_set_output( &g_gpio, LED_D8, 1);
+                           1092 ;	genAssign
+   054B 90s00r00           1093 	mov	dptr,#_GPIO_set_output_PARM_2
+   054E 74 08              1094 	mov	a,#0x08
+   0550 F0                 1095 	movx	@dptr,a
+                           1096 ;	genAssign
+   0551 90s00r00           1097 	mov	dptr,#_GPIO_set_output_PARM_3
+   0554 74 01              1098 	mov	a,#0x01
+   0556 F0                 1099 	movx	@dptr,a
+                           1100 ;	genCall
+   0557 75 82r00           1101 	mov	dpl,#_g_gpio
+   055A 75 83s00           1102 	mov	dph,#(_g_gpio >> 8)
+   055D 75 F0 00           1103 	mov	b,#0x00
+   0560 12s00r00           1104 	lcall	_GPIO_set_output
+                    0563   1105 	C$main.c$165$2$2 ==.
+                           1106 ;	../main.c:165: wait(LED_scanning_delay);
+                           1107 ;	genCall
+   0563 75 82 28           1108 	mov	dpl,#0x28
+   0566 75 83 00           1109 	mov	dph,#0x00
+   0569 12s07r59           1110 	lcall	_wait
+                    056C   1111 	C$main.c$171$2$2 ==.
+                           1112 ;	../main.c:171: GPIO_set_output( &g_gpio, LED_D8, 0);
+                           1113 ;	genAssign
+   056C 90s00r00           1114 	mov	dptr,#_GPIO_set_output_PARM_2
+   056F 74 08              1115 	mov	a,#0x08
+   0571 F0                 1116 	movx	@dptr,a
+                           1117 ;	genAssign
+   0572 90s00r00           1118 	mov	dptr,#_GPIO_set_output_PARM_3
+   0575 74 00              1119 	mov	a,#0x00
+   0577 F0                 1120 	movx	@dptr,a
+                           1121 ;	genCall
+   0578 75 82r00           1122 	mov	dpl,#_g_gpio
+   057B 75 83s00           1123 	mov	dph,#(_g_gpio >> 8)
+   057E 75 F0 00           1124 	mov	b,#0x00
+   0581 12s00r00           1125 	lcall	_GPIO_set_output
+                    0584   1126 	C$main.c$173$2$2 ==.
+                           1127 ;	../main.c:173: GPIO_set_output( &g_gpio, LED_D7, 1);
+                           1128 ;	genAssign
+   0584 90s00r00           1129 	mov	dptr,#_GPIO_set_output_PARM_2
+   0587 74 07              1130 	mov	a,#0x07
+   0589 F0                 1131 	movx	@dptr,a
+                           1132 ;	genAssign
+   058A 90s00r00           1133 	mov	dptr,#_GPIO_set_output_PARM_3
+   058D 74 01              1134 	mov	a,#0x01
+   058F F0                 1135 	movx	@dptr,a
+                           1136 ;	genCall
+   0590 75 82r00           1137 	mov	dpl,#_g_gpio
+   0593 75 83s00           1138 	mov	dph,#(_g_gpio >> 8)
+   0596 75 F0 00           1139 	mov	b,#0x00
+   0599 12s00r00           1140 	lcall	_GPIO_set_output
+                    059C   1141 	C$main.c$175$2$2 ==.
+                           1142 ;	../main.c:175: wait(LED_scanning_delay);
+                           1143 ;	genCall
+   059C 75 82 28           1144 	mov	dpl,#0x28
+   059F 75 83 00           1145 	mov	dph,#0x00
+   05A2 12s07r59           1146 	lcall	_wait
+                    05A5   1147 	C$main.c$177$2$2 ==.
+                           1148 ;	../main.c:177: GPIO_set_output( &g_gpio, LED_D7, 0);
+                           1149 ;	genAssign
+   05A5 90s00r00           1150 	mov	dptr,#_GPIO_set_output_PARM_2
+   05A8 74 07              1151 	mov	a,#0x07
+   05AA F0                 1152 	movx	@dptr,a
+                           1153 ;	genAssign
+   05AB 90s00r00           1154 	mov	dptr,#_GPIO_set_output_PARM_3
+   05AE 74 00              1155 	mov	a,#0x00
+   05B0 F0                 1156 	movx	@dptr,a
+                           1157 ;	genCall
+   05B1 75 82r00           1158 	mov	dpl,#_g_gpio
+   05B4 75 83s00           1159 	mov	dph,#(_g_gpio >> 8)
+   05B7 75 F0 00           1160 	mov	b,#0x00
+   05BA 12s00r00           1161 	lcall	_GPIO_set_output
+                    05BD   1162 	C$main.c$179$2$2 ==.
+                           1163 ;	../main.c:179: GPIO_set_output( &g_gpio, LED_D6, 1);
+                           1164 ;	genAssign
+   05BD 90s00r00           1165 	mov	dptr,#_GPIO_set_output_PARM_2
+   05C0 74 06              1166 	mov	a,#0x06
+   05C2 F0                 1167 	movx	@dptr,a
+                           1168 ;	genAssign
+   05C3 90s00r00           1169 	mov	dptr,#_GPIO_set_output_PARM_3
+   05C6 74 01              1170 	mov	a,#0x01
+   05C8 F0                 1171 	movx	@dptr,a
+                           1172 ;	genCall
+   05C9 75 82r00           1173 	mov	dpl,#_g_gpio
+   05CC 75 83s00           1174 	mov	dph,#(_g_gpio >> 8)
+   05CF 75 F0 00           1175 	mov	b,#0x00
+   05D2 12s00r00           1176 	lcall	_GPIO_set_output
+                    05D5   1177 	C$main.c$181$2$2 ==.
+                           1178 ;	../main.c:181: wait(LED_scanning_delay);
+                           1179 ;	genCall
+   05D5 75 82 28           1180 	mov	dpl,#0x28
+   05D8 75 83 00           1181 	mov	dph,#0x00
+   05DB 12s07r59           1182 	lcall	_wait
+                    05DE   1183 	C$main.c$183$2$2 ==.
+                           1184 ;	../main.c:183: GPIO_set_output( &g_gpio, LED_D6, 0);
+                           1185 ;	genAssign
+   05DE 90s00r00           1186 	mov	dptr,#_GPIO_set_output_PARM_2
+   05E1 74 06              1187 	mov	a,#0x06
+   05E3 F0                 1188 	movx	@dptr,a
+                           1189 ;	genAssign
+   05E4 90s00r00           1190 	mov	dptr,#_GPIO_set_output_PARM_3
+   05E7 74 00              1191 	mov	a,#0x00
+   05E9 F0                 1192 	movx	@dptr,a
+                           1193 ;	genCall
+   05EA 75 82r00           1194 	mov	dpl,#_g_gpio
+   05ED 75 83s00           1195 	mov	dph,#(_g_gpio >> 8)
+   05F0 75 F0 00           1196 	mov	b,#0x00
+   05F3 12s00r00           1197 	lcall	_GPIO_set_output
+                    05F6   1198 	C$main.c$185$2$2 ==.
+                           1199 ;	../main.c:185: GPIO_set_output( &g_gpio, LED_D5, 1);
+                           1200 ;	genAssign
+   05F6 90s00r00           1201 	mov	dptr,#_GPIO_set_output_PARM_2
+   05F9 74 05              1202 	mov	a,#0x05
+   05FB F0                 1203 	movx	@dptr,a
+                           1204 ;	genAssign
+   05FC 90s00r00           1205 	mov	dptr,#_GPIO_set_output_PARM_3
+   05FF 74 01              1206 	mov	a,#0x01
+   0601 F0                 1207 	movx	@dptr,a
+                           1208 ;	genCall
+   0602 75 82r00           1209 	mov	dpl,#_g_gpio
+   0605 75 83s00           1210 	mov	dph,#(_g_gpio >> 8)
+   0608 75 F0 00           1211 	mov	b,#0x00
+   060B 12s00r00           1212 	lcall	_GPIO_set_output
+                    060E   1213 	C$main.c$187$2$2 ==.
+                           1214 ;	../main.c:187: wait(LED_scanning_delay);
+                           1215 ;	genCall
+   060E 75 82 28           1216 	mov	dpl,#0x28
+   0611 75 83 00           1217 	mov	dph,#0x00
+   0614 12s07r59           1218 	lcall	_wait
+                    0617   1219 	C$main.c$189$2$2 ==.
+                           1220 ;	../main.c:189: GPIO_set_output( &g_gpio, LED_D5, 0);
+                           1221 ;	genAssign
+   0617 90s00r00           1222 	mov	dptr,#_GPIO_set_output_PARM_2
+   061A 74 05              1223 	mov	a,#0x05
+   061C F0                 1224 	movx	@dptr,a
+                           1225 ;	genAssign
+   061D 90s00r00           1226 	mov	dptr,#_GPIO_set_output_PARM_3
+   0620 74 00              1227 	mov	a,#0x00
+   0622 F0                 1228 	movx	@dptr,a
+                           1229 ;	genCall
+   0623 75 82r00           1230 	mov	dpl,#_g_gpio
+   0626 75 83s00           1231 	mov	dph,#(_g_gpio >> 8)
+   0629 75 F0 00           1232 	mov	b,#0x00
+   062C 12s00r00           1233 	lcall	_GPIO_set_output
+                    062F   1234 	C$main.c$191$2$2 ==.
+                           1235 ;	../main.c:191: GPIO_set_output( &g_gpio, LED_D4, 1);
+                           1236 ;	genAssign
+   062F 90s00r00           1237 	mov	dptr,#_GPIO_set_output_PARM_2
+   0632 74 04              1238 	mov	a,#0x04
+   0634 F0                 1239 	movx	@dptr,a
+                           1240 ;	genAssign
+   0635 90s00r00           1241 	mov	dptr,#_GPIO_set_output_PARM_3
+   0638 74 01              1242 	mov	a,#0x01
+   063A F0                 1243 	movx	@dptr,a
+                           1244 ;	genCall
+   063B 75 82r00           1245 	mov	dpl,#_g_gpio
+   063E 75 83s00           1246 	mov	dph,#(_g_gpio >> 8)
+   0641 75 F0 00           1247 	mov	b,#0x00
+   0644 12s00r00           1248 	lcall	_GPIO_set_output
+                    0647   1249 	C$main.c$193$2$2 ==.
+                           1250 ;	../main.c:193: wait(LED_scanning_delay);
+                           1251 ;	genCall
+   0647 75 82 28           1252 	mov	dpl,#0x28
+   064A 75 83 00           1253 	mov	dph,#0x00
+   064D 12s07r59           1254 	lcall	_wait
+                    0650   1255 	C$main.c$195$2$2 ==.
+                           1256 ;	../main.c:195: GPIO_set_output( &g_gpio, LED_D4, 0);
+                           1257 ;	genAssign
+   0650 90s00r00           1258 	mov	dptr,#_GPIO_set_output_PARM_2
+   0653 74 04              1259 	mov	a,#0x04
+   0655 F0                 1260 	movx	@dptr,a
+                           1261 ;	genAssign
+   0656 90s00r00           1262 	mov	dptr,#_GPIO_set_output_PARM_3
+   0659 74 00              1263 	mov	a,#0x00
+   065B F0                 1264 	movx	@dptr,a
+                           1265 ;	genCall
+   065C 75 82r00           1266 	mov	dpl,#_g_gpio
+   065F 75 83s00           1267 	mov	dph,#(_g_gpio >> 8)
+   0662 75 F0 00           1268 	mov	b,#0x00
+   0665 12s00r00           1269 	lcall	_GPIO_set_output
+                    0668   1270 	C$main.c$197$2$2 ==.
+                           1271 ;	../main.c:197: GPIO_set_output( &g_gpio, LED_D3, 1);
+                           1272 ;	genAssign
+   0668 90s00r00           1273 	mov	dptr,#_GPIO_set_output_PARM_2
+   066B 74 03              1274 	mov	a,#0x03
+   066D F0                 1275 	movx	@dptr,a
+                           1276 ;	genAssign
+   066E 90s00r00           1277 	mov	dptr,#_GPIO_set_output_PARM_3
+   0671 74 01              1278 	mov	a,#0x01
+   0673 F0                 1279 	movx	@dptr,a
+                           1280 ;	genCall
+   0674 75 82r00           1281 	mov	dpl,#_g_gpio
+   0677 75 83s00           1282 	mov	dph,#(_g_gpio >> 8)
+   067A 75 F0 00           1283 	mov	b,#0x00
+   067D 12s00r00           1284 	lcall	_GPIO_set_output
+                    0680   1285 	C$main.c$199$2$2 ==.
+                           1286 ;	../main.c:199: wait(LED_scanning_delay);
+                           1287 ;	genCall
+   0680 75 82 28           1288 	mov	dpl,#0x28
+   0683 75 83 00           1289 	mov	dph,#0x00
+   0686 12s07r59           1290 	lcall	_wait
+                    0689   1291 	C$main.c$201$2$2 ==.
+                           1292 ;	../main.c:201: GPIO_set_output( &g_gpio, LED_D3, 0);
+                           1293 ;	genAssign
+   0689 90s00r00           1294 	mov	dptr,#_GPIO_set_output_PARM_2
+   068C 74 03              1295 	mov	a,#0x03
+   068E F0                 1296 	movx	@dptr,a
+                           1297 ;	genAssign
+   068F 90s00r00           1298 	mov	dptr,#_GPIO_set_output_PARM_3
+   0692 74 00              1299 	mov	a,#0x00
+   0694 F0                 1300 	movx	@dptr,a
+                           1301 ;	genCall
+   0695 75 82r00           1302 	mov	dpl,#_g_gpio
+   0698 75 83s00           1303 	mov	dph,#(_g_gpio >> 8)
+   069B 75 F0 00           1304 	mov	b,#0x00
+   069E 12s00r00           1305 	lcall	_GPIO_set_output
+                    06A1   1306 	C$main.c$203$2$2 ==.
+                           1307 ;	../main.c:203: GPIO_set_output( &g_gpio, LED_D2, 1);
+                           1308 ;	genAssign
+   06A1 90s00r00           1309 	mov	dptr,#_GPIO_set_output_PARM_2
+   06A4 74 02              1310 	mov	a,#0x02
+   06A6 F0                 1311 	movx	@dptr,a
+                           1312 ;	genAssign
+   06A7 90s00r00           1313 	mov	dptr,#_GPIO_set_output_PARM_3
+   06AA 74 01              1314 	mov	a,#0x01
+   06AC F0                 1315 	movx	@dptr,a
+                           1316 ;	genCall
+   06AD 75 82r00           1317 	mov	dpl,#_g_gpio
+   06B0 75 83s00           1318 	mov	dph,#(_g_gpio >> 8)
+   06B3 75 F0 00           1319 	mov	b,#0x00
+   06B6 12s00r00           1320 	lcall	_GPIO_set_output
+                    06B9   1321 	C$main.c$205$2$2 ==.
+                           1322 ;	../main.c:205: wait(LED_scanning_delay);
+                           1323 ;	genCall
+   06B9 75 82 28           1324 	mov	dpl,#0x28
+   06BC 75 83 00           1325 	mov	dph,#0x00
+   06BF 12s07r59           1326 	lcall	_wait
+                    06C2   1327 	C$main.c$207$2$2 ==.
+                           1328 ;	../main.c:207: GPIO_set_output( &g_gpio, LED_D2, 0);
+                           1329 ;	genAssign
+   06C2 90s00r00           1330 	mov	dptr,#_GPIO_set_output_PARM_2
+   06C5 74 02              1331 	mov	a,#0x02
+   06C7 F0                 1332 	movx	@dptr,a
+                           1333 ;	genAssign
+   06C8 90s00r00           1334 	mov	dptr,#_GPIO_set_output_PARM_3
+   06CB 74 00              1335 	mov	a,#0x00
+   06CD F0                 1336 	movx	@dptr,a
+                           1337 ;	genCall
+   06CE 75 82r00           1338 	mov	dpl,#_g_gpio
+   06D1 75 83s00           1339 	mov	dph,#(_g_gpio >> 8)
+   06D4 75 F0 00           1340 	mov	b,#0x00
+   06D7 12s00r00           1341 	lcall	_GPIO_set_output
+                    06DA   1342 	C$main.c$209$2$2 ==.
+                           1343 ;	../main.c:209: GPIO_set_output( &g_gpio, LED_D1, 1);
+                           1344 ;	genAssign
+   06DA 90s00r00           1345 	mov	dptr,#_GPIO_set_output_PARM_2
+   06DD 74 01              1346 	mov	a,#0x01
+   06DF F0                 1347 	movx	@dptr,a
+                           1348 ;	genAssign
+   06E0 90s00r00           1349 	mov	dptr,#_GPIO_set_output_PARM_3
+   06E3 74 01              1350 	mov	a,#0x01
+   06E5 F0                 1351 	movx	@dptr,a
+                           1352 ;	genCall
+   06E6 75 82r00           1353 	mov	dpl,#_g_gpio
+   06E9 75 83s00           1354 	mov	dph,#(_g_gpio >> 8)
+   06EC 75 F0 00           1355 	mov	b,#0x00
+   06EF 12s00r00           1356 	lcall	_GPIO_set_output
+                    06F2   1357 	C$main.c$211$2$2 ==.
+                           1358 ;	../main.c:211: wait(LED_scanning_delay);
+                           1359 ;	genCall
+   06F2 75 82 28           1360 	mov	dpl,#0x28
+   06F5 75 83 00           1361 	mov	dph,#0x00
+   06F8 12s07r59           1362 	lcall	_wait
+                    06FB   1363 	C$main.c$213$2$2 ==.
+                           1364 ;	../main.c:213: GPIO_set_output( &g_gpio, LED_D1, 0);
+                           1365 ;	genAssign
+   06FB 90s00r00           1366 	mov	dptr,#_GPIO_set_output_PARM_2
+   06FE 74 01              1367 	mov	a,#0x01
+   0700 F0                 1368 	movx	@dptr,a
+                           1369 ;	genAssign
+   0701 90s00r00           1370 	mov	dptr,#_GPIO_set_output_PARM_3
+   0704 74 00              1371 	mov	a,#0x00
+   0706 F0                 1372 	movx	@dptr,a
+                           1373 ;	genCall
+   0707 75 82r00           1374 	mov	dpl,#_g_gpio
+   070A 75 83s00           1375 	mov	dph,#(_g_gpio >> 8)
+   070D 75 F0 00           1376 	mov	b,#0x00
+   0710 12s00r00           1377 	lcall	_GPIO_set_output
+                    0713   1378 	C$main.c$215$2$2 ==.
+                           1379 ;	../main.c:215: GPIO_set_output( &g_gpio, LED_D0, 1);
+                           1380 ;	genAssign
+   0713 90s00r00           1381 	mov	dptr,#_GPIO_set_output_PARM_2
+   0716 74 00              1382 	mov	a,#0x00
+   0718 F0                 1383 	movx	@dptr,a
+                           1384 ;	genAssign
+   0719 90s00r00           1385 	mov	dptr,#_GPIO_set_output_PARM_3
+   071C 74 01              1386 	mov	a,#0x01
+   071E F0                 1387 	movx	@dptr,a
+                           1388 ;	genCall
+   071F 75 82r00           1389 	mov	dpl,#_g_gpio
+   0722 75 83s00           1390 	mov	dph,#(_g_gpio >> 8)
+   0725 75 F0 00           1391 	mov	b,#0x00
+   0728 12s00r00           1392 	lcall	_GPIO_set_output
+                    072B   1393 	C$main.c$217$2$2 ==.
+                           1394 ;	../main.c:217: wait(LED_scanning_delay);
+                           1395 ;	genCall
+   072B 75 82 28           1396 	mov	dpl,#0x28
+   072E 75 83 00           1397 	mov	dph,#0x00
+   0731 12s07r59           1398 	lcall	_wait
+                    0734   1399 	C$main.c$219$2$2 ==.
+                           1400 ;	../main.c:219: GPIO_set_output( &g_gpio, LED_D0, 0);
+                           1401 ;	genAssign
+   0734 90s00r00           1402 	mov	dptr,#_GPIO_set_output_PARM_2
+   0737 74 00              1403 	mov	a,#0x00
+   0739 F0                 1404 	movx	@dptr,a
+                           1405 ;	genAssign
+   073A 90s00r00           1406 	mov	dptr,#_GPIO_set_output_PARM_3
+   073D 74 00              1407 	mov	a,#0x00
+   073F F0                 1408 	movx	@dptr,a
+                           1409 ;	genCall
+   0740 75 82r00           1410 	mov	dpl,#_g_gpio
+   0743 75 83s00           1411 	mov	dph,#(_g_gpio >> 8)
+   0746 75 F0 00           1412 	mov	b,#0x00
+   0749 12s00r00           1413 	lcall	_GPIO_set_output
+                    074C   1414 	C$main.c$221$2$2 ==.
+                           1415 ;	../main.c:221: wait(LED_scanning_delay);
+                           1416 ;	genCall
+   074C 75 82 28           1417 	mov	dpl,#0x28
+   074F 75 83 00           1418 	mov	dph,#0x00
+   0752 12s07r59           1419 	lcall	_wait
+   0755 02s03r83           1420 	ljmp	00102$
+   0758                    1421 00104$:
+                    0758   1422 	C$main.c$225$1$1 ==.
+                    0758   1423 	XG$main$0$0 ==.
+   0758 22                 1424 	ret
+                           1425 ;------------------------------------------------------------
+                           1426 ;Allocation info for local variables in function 'wait'
+                           1427 ;------------------------------------------------------------
+                           1428 ;time_in_ms                Allocated with name '_wait_time_in_ms_1_1'
+                           1429 ;i                         Allocated with name '_wait_i_1_1'
+                           1430 ;------------------------------------------------------------
+                    0759   1431 	G$wait$0$0 ==.
+                    0759   1432 	C$main.c$229$1$1 ==.
+                           1433 ;	../main.c:229: void wait(int time_in_ms)
+                           1434 ;	-----------------------------------------
+                           1435 ;	 function wait
+                           1436 ;	-----------------------------------------
+   0759                    1437 _wait:
+                           1438 ;	genReceive
+   0759 AA 83              1439 	mov	r2,dph
+   075B E5 82              1440 	mov	a,dpl
+   075D 90s00r2A           1441 	mov	dptr,#_wait_time_in_ms_1_1
+   0760 F0                 1442 	movx	@dptr,a
+   0761 A3                 1443 	inc	dptr
+   0762 EA                 1444 	mov	a,r2
+   0763 F0                 1445 	movx	@dptr,a
+                    0764   1446 	C$main.c$234$1$1 ==.
+                           1447 ;	../main.c:234: for (i=0; i < time_in_ms*10000; i++)
+                           1448 ;	genAssign
+   0764 90s00r2C           1449 	mov	dptr,#_wait_i_1_1
+   0767 E4                 1450 	clr	a
+   0768 F0                 1451 	movx	@dptr,a
+   0769 A3                 1452 	inc	dptr
+   076A F0                 1453 	movx	@dptr,a
+                           1454 ;	genAssign
+   076B 90s00r2A           1455 	mov	dptr,#_wait_time_in_ms_1_1
+   076E E0                 1456 	movx	a,@dptr
+   076F FA                 1457 	mov	r2,a
+   0770 A3                 1458 	inc	dptr
+   0771 E0                 1459 	movx	a,@dptr
+   0772 FB                 1460 	mov	r3,a
+                           1461 ;	genAssign
+   0773 90s00r00           1462 	mov	dptr,#__mulint_PARM_2
+   0776 EA                 1463 	mov	a,r2
+   0777 F0                 1464 	movx	@dptr,a
+   0778 A3                 1465 	inc	dptr
+   0779 EB                 1466 	mov	a,r3
+   077A F0                 1467 	movx	@dptr,a
+                           1468 ;	genCall
+   077B 75 82 10           1469 	mov	dpl,#0x10
+   077E 75 83 27           1470 	mov	dph,#0x27
+   0781 12s00r00           1471 	lcall	__mulint
+   0784 AA 82              1472 	mov	r2,dpl
+   0786 AB 83              1473 	mov	r3,dph
+   0788                    1474 00101$:
+                           1475 ;	genAssign
+   0788 90s00r2C           1476 	mov	dptr,#_wait_i_1_1
+   078B E0                 1477 	movx	a,@dptr
+   078C FC                 1478 	mov	r4,a
+   078D A3                 1479 	inc	dptr
+   078E E0                 1480 	movx	a,@dptr
+   078F FD                 1481 	mov	r5,a
+                           1482 ;	genCmpLt
+                           1483 ;	genCmp
+   0790 C3                 1484 	clr	c
+   0791 EC                 1485 	mov	a,r4
+   0792 9A                 1486 	subb	a,r2
+   0793 ED                 1487 	mov	a,r5
+   0794 64 80              1488 	xrl	a,#0x80
+   0796 8B F0              1489 	mov	b,r3
+   0798 63 F0 80           1490 	xrl	b,#0x80
+   079B 95 F0              1491 	subb	a,b
+                           1492 ;	genIfxJump
+   079D 40 03              1493 	jc	00109$
+   079F 02s07rB3           1494 	ljmp	00105$
+   07A2                    1495 00109$:
+                           1496 ;	genPlus
+   07A2 90s00r2C           1497 	mov	dptr,#_wait_i_1_1
+                           1498 ;	genPlusIncr
+   07A5 74 01              1499 	mov	a,#0x01
+   07A7 25 04              1500 	add	a,ar4
+   07A9 F0                 1501 	movx	@dptr,a
+   07AA 74 00              1502 	mov	a,#0x00
+   07AC 35 05              1503 	addc	a,ar5
+   07AE A3                 1504 	inc	dptr
+   07AF F0                 1505 	movx	@dptr,a
+   07B0 02s07r88           1506 	ljmp	00101$
+   07B3                    1507 00105$:
+                    07B3   1508 	C$main.c$239$1$1 ==.
+                    07B3   1509 	XG$wait$0$0 ==.
+   07B3 22                 1510 	ret
+                           1511 	.area CSEG    (CODE)
+                           1512 	.area CONST   (CODE)
+                           1513 	.area XINIT   (CODE)
+                           1514 	.area CABS    (ABS,CODE)

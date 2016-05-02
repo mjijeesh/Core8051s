@@ -1,0 +1,142 @@
+#Build: Synplify Pro D-2009.12A, Build 040R, Jan 20 2010
+#install: D:\Actel\Libero_v9.0\Synopsys\synplify_D200912A
+#OS: Windows XP 5.1
+#Hostname: JM-LAPTOP
+
+#Implementation: synthesis
+
+#Mon Jun 21 15:33:28 2010
+
+$ Start of Compile
+#Mon Jun 21 15:33:28 2010
+
+Synopsys VHDL Compiler, version comp475rc, Build 060R, built Jan 15 2010
+Copyright (C) 1994-2010, Synopsys Inc.  All Rights Reserved
+
+@N: CD720 :"D:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\lib\vhd\std.vhd":123:18:123:21|Setting time resolution to ns
+Top entity isn't set yet!
+VHDL syntax check successful!
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\hdl\memory_mux.vhd":6:7:6:16|Synthesizing work.memory_mux.one 
+Post processing for work.memory_mux.one
+@END
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Mon Jun 21 15:33:28 2010
+
+###########################################################]
+Synopsys Actel Technology Mapper, Version map500act, Build 058R, Built Jan 18 2010 09:16:23
+Copyright (C) 1994-2010, Synopsys Inc.  All Rights Reserved
+Product Version D-2009.12A
+@N: MF249 |Running in 32-bit mode.
+@N: MF258 |Gated clock conversion disabled 
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+Finished RTL optimizations (Time elapsed 0h:00m:01s; Memory used current: 55MB peak: 57MB)
+
+Finished factoring (Time elapsed 0h:00m:01s; Memory used current: 55MB peak: 57MB)
+
+Finished gated-clock and generated-clock conversion (Time elapsed 0h:00m:01s; Memory used current: 55MB peak: 57MB)
+
+Finished generic timing optimizations - Pass 1 (Time elapsed 0h:00m:01s; Memory used current: 55MB peak: 57MB)
+
+Starting Early Timing Optimization (Time elapsed 0h:00m:01s; Memory used current: 55MB peak: 57MB)
+
+Finished Early Timing Optimization (Time elapsed 0h:00m:01s; Memory used current: 55MB peak: 57MB)
+
+Finished generic timing optimizations - Pass 2 (Time elapsed 0h:00m:01s; Memory used current: 55MB peak: 57MB)
+
+Finished preparing to map (Time elapsed 0h:00m:01s; Memory used current: 55MB peak: 57MB)
+
+Finished technology mapping (Time elapsed 0h:00m:01s; Memory used current: 55MB peak: 57MB)
+
+Finished technology timing optimizations and critical path resynthesis (Time elapsed 0h:00m:01s; Memory used current: 55MB peak: 57MB)
+
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+Finished restoring hierarchy (Time elapsed 0h:00m:01s; Memory used current: 55MB peak: 57MB)
+
+Writing Analyst data base C:\Actelprj\AFS_ADV_KIT_8051\synthesis\memory_mux.srm
+Finished Writing Netlist Databases (Time elapsed 0h:00m:01s; Memory used current: 55MB peak: 57MB)
+
+Writing EDIF Netlist and constraint files
+D-2009.12A
+Finished Writing EDIF Netlist and constraint files (Time elapsed 0h:00m:01s; Memory used current: 56MB peak: 57MB)
+
+
+
+##### START OF TIMING REPORT #####[
+# Timing Report written on Mon Jun 21 15:33:31 2010
+#
+
+
+Top view:               memory_mux
+Library name:           fusion
+Operating conditions:   COMWC-1 ( T = 70.0, V = 1.42, P = 1.48, tree_type = balanced_tree )
+Requested Frequency:    100.0 MHz
+Wire load mode:         top
+Wire load model:        fusion
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |This timing report estimates place and route data. Please look at the place and route timing report for final timing..
+
+@N: MT322 |Clock constraints cover only FF-to-FF paths associated with the clock..
+
+
+
+Performance Summary 
+*******************
+
+
+Worst slack in design: NA
+
+
+
+
+
+
+Interface Information 
+*********************
+
+		No IO constraint found 
+
+
+##### END OF TIMING REPORT #####]
+
+--------------------------------------------------------------------------------
+Target Part: M1AFS1500_FBGA256_-1
+Report for cell memory_mux.one
+  Core Cell usage:
+              cell count     area count*area
+               GND     1      0.0        0.0
+               MX2     8      1.0        8.0
+               VCC     1      0.0        0.0
+
+
+                   -----          ----------
+             TOTAL    10                 8.0
+
+
+  IO Cell usage:
+              cell count
+             INBUF    17
+            OUTBUF     8
+                   -----
+             TOTAL    25
+
+
+Core Cells         : 8 of 38400 (0%)
+IO Cells           : 25 of 252 (10%)
+
+  RAM/ROM Usage Summary
+Block Rams : 0 of 60 (0%)
+
+Mapper successful!
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Mon Jun 21 15:33:31 2010
+
+###########################################################]

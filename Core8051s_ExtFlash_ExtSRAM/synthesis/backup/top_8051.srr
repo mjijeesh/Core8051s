@@ -1,0 +1,1135 @@
+#Build: Synplify Pro D-2009.12A, Build 040R, Jan 20 2010
+#install: C:\Actel\Libero_v9.0\Synopsys\synplify_D200912A
+#OS: Windows XP 5.1
+#Hostname: JM-LAPTOP
+
+#Implementation: synthesis
+
+#Tue Apr 27 15:45:57 2010
+
+$ Start of Compile
+#Tue Apr 27 15:45:57 2010
+
+Synopsys VHDL Compiler, version comp475rc, Build 060R, built Jan 15 2010
+Copyright (C) 1994-2010, Synopsys Inc.  All Rights Reserved
+
+@N: CD720 :"C:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\lib\vhd\std.vhd":123:18:123:21|Setting time resolution to ns
+Top entity isn't set yet!
+VHDL syntax check successful!
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\component\work\top_8051\top_8051.vhd":8:7:8:14|Synthesizing work.top_8051.def_arch 
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\hdl\memory_interface.vhd":7:7:7:12|Synthesizing work.memory.def_arch 
+@W: CD638 :"C:\Actelprj\AFS_ADV_KIT_8051\hdl\memory_interface.vhd":46:7:46:16|Signal int_ram_rd is undriven 
+@W: CD638 :"C:\Actelprj\AFS_ADV_KIT_8051\hdl\memory_interface.vhd":47:7:47:16|Signal int_ram_wr is undriven 
+@W: CD638 :"C:\Actelprj\AFS_ADV_KIT_8051\hdl\memory_interface.vhd":48:7:48:16|Signal int_nvm_cs is undriven 
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\smartgen\INT_RAM8kX8\INT_RAM8kX8.vhd":8:7:8:17|Synthesizing work.int_ram8kx8.def_arch 
+@N: CD630 :"C:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\lib\proasic\fusion.vhd":3182:10:3182:15|Synthesizing fusion.ram4k9.syn_black_box 
+Post processing for fusion.ram4k9.syn_black_box
+@N: CD630 :"C:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\lib\proasic\fusion.vhd":2117:10:2117:12|Synthesizing fusion.inv.syn_black_box 
+Post processing for fusion.inv.syn_black_box
+@N: CD630 :"C:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\lib\proasic\fusion.vhd":2179:10:2179:12|Synthesizing fusion.mx2.syn_black_box 
+Post processing for fusion.mx2.syn_black_box
+@N: CD630 :"C:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\lib\proasic\fusion.vhd":2381:10:2381:12|Synthesizing fusion.or2.syn_black_box 
+Post processing for fusion.or2.syn_black_box
+@N: CD630 :"C:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\lib\proasic\fusion.vhd":3149:10:3149:13|Synthesizing fusion.buff.syn_black_box 
+Post processing for fusion.buff.syn_black_box
+@N: CD630 :"C:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\lib\proasic\fusion.vhd":1491:10:1491:13|Synthesizing fusion.dfn1.syn_black_box 
+Post processing for fusion.dfn1.syn_black_box
+@N: CD630 :"C:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\lib\proasic\fusion.vhd":1899:10:1899:12|Synthesizing fusion.gnd.syn_black_box 
+Post processing for fusion.gnd.syn_black_box
+@N: CD630 :"C:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\lib\proasic\fusion.vhd":3019:10:3019:12|Synthesizing fusion.vcc.syn_black_box 
+Post processing for fusion.vcc.syn_black_box
+Post processing for work.int_ram8kx8.def_arch
+@W: CL168 :"C:\Actelprj\AFS_ADV_KIT_8051\smartgen\INT_RAM8kX8\INT_RAM8kX8.vhd":346:4:346:14|Pruning instance AFF1_0_inst - not in use ... 
+Post processing for work.memory.def_arch
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\smartgen\PLL_50Mh_12Mh\PLL_50Mh_12Mh.vhd":8:7:8:19|Synthesizing work.pll_50mh_12mh.def_arch 
+@N: CD630 :"C:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\lib\proasic\fusion.vhd":4214:10:4214:12|Synthesizing fusion.pll.syn_black_box 
+Post processing for fusion.pll.syn_black_box
+@N: CD630 :"C:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\lib\proasic\fusion.vhd":406:10:406:15|Synthesizing fusion.pllint.syn_black_box 
+Post processing for fusion.pllint.syn_black_box
+Post processing for work.pll_50mh_12mh.def_arch
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\component\work\sys\sys.vhd":12:7:12:9|Synthesizing work.sys.def_arch 
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\coreapbsram.vhd":19:7:19:17|Synthesizing coreapbsram_lib.coreapbsram.coreapbsram_o 
+@W: CD604 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\coreapbsram.vhd":421:0:421:13|OTHERS clause is not synthesized 
+@W: CD604 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\coreapbsram.vhd":433:0:433:13|OTHERS clause is not synthesized 
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\sram_512to8192x8_fusion.vhd":17:7:17:19|Synthesizing coreapbsram_lib.coreapbsram_l.coreapbsram_o 
+@W: CD434 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\sram_512to8192x8_fusion.vhd":297:102:297:116|Signal coreapbsram_oii in the sensitivity list is not used in the process
+@W: CD434 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\sram_512to8192x8_fusion.vhd":297:118:297:132|Signal coreapbsram_ili in the sensitivity list is not used in the process
+@W: CD434 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\sram_512to8192x8_fusion.vhd":297:134:297:148|Signal coreapbsram_lli in the sensitivity list is not used in the process
+@W: CD434 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\sram_512to8192x8_fusion.vhd":297:150:297:165|Signal coreapbsram_o1ol in the sensitivity list is not used in the process
+@W: CD434 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\sram_512to8192x8_fusion.vhd":297:167:297:182|Signal coreapbsram_l1ol in the sensitivity list is not used in the process
+@W: CD434 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\sram_512to8192x8_fusion.vhd":297:184:297:199|Signal coreapbsram_i1ol in the sensitivity list is not used in the process
+@W: CD434 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\sram_512to8192x8_fusion.vhd":297:201:297:216|Signal coreapbsram_ooll in the sensitivity list is not used in the process
+@W: CD434 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\sram_512to8192x8_fusion.vhd":297:218:297:233|Signal coreapbsram_loll in the sensitivity list is not used in the process
+@W: CD434 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\sram_512to8192x8_fusion.vhd":297:235:297:250|Signal coreapbsram_ioll in the sensitivity list is not used in the process
+@W: CD434 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\sram_512to8192x8_fusion.vhd":297:252:297:267|Signal coreapbsram_olll in the sensitivity list is not used in the process
+@W: CD434 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\sram_512to8192x8_fusion.vhd":297:269:297:284|Signal coreapbsram_llll in the sensitivity list is not used in the process
+@W: CD434 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\sram_512to8192x8_fusion.vhd":297:286:297:301|Signal coreapbsram_illl in the sensitivity list is not used in the process
+@W: CD434 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\sram_512to8192x8_fusion.vhd":297:303:297:318|Signal coreapbsram_oill in the sensitivity list is not used in the process
+@W: CD434 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\sram_512to8192x8_fusion.vhd":297:320:297:335|Signal coreapbsram_lill in the sensitivity list is not used in the process
+@W: CD434 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\sram_512to8192x8_fusion.vhd":297:337:297:352|Signal coreapbsram_iill in the sensitivity list is not used in the process
+Post processing for coreapbsram_lib.coreapbsram_l.coreapbsram_o
+@W: CL168 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\sram_512to8192x8_fusion.vhd":8205:0:8205:15|Pruning instance CoreApbSRAM_L11l - not in use ... 
+@W: CL168 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\sram_512to8192x8_fusion.vhd":8129:0:8129:15|Pruning instance COReApbSram_o11L - not in use ... 
+@W: CL168 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\sram_512to8192x8_fusion.vhd":8053:0:8053:15|Pruning instance COREAPBSram_i01l - not in use ... 
+@W: CL168 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\sram_512to8192x8_fusion.vhd":7977:0:7977:15|Pruning instance CoreApbSraM_L01L - not in use ... 
+@W: CL168 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\sram_512to8192x8_fusion.vhd":7901:0:7901:15|Pruning instance CorEAPBSRAM_o01l - not in use ... 
+@W: CL168 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\sram_512to8192x8_fusion.vhd":7825:0:7825:15|Pruning instance COreApbSram_II1L - not in use ... 
+@W: CL168 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\sram_512to8192x8_fusion.vhd":7749:0:7749:15|Pruning instance CoreApbSraM_LI1L - not in use ... 
+@W: CL168 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\sram_512to8192x8_fusion.vhd":7673:0:7673:15|Pruning instance COREAPBSram_oi1l - not in use ... 
+@W: CL168 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\sram_512to8192x8_fusion.vhd":7597:0:7597:15|Pruning instance CoREAPBSRAm_il1l - not in use ... 
+@W: CL168 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\sram_512to8192x8_fusion.vhd":7521:0:7521:15|Pruning instance CoreAPBSRAM_ll1l - not in use ... 
+@W: CL168 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\sram_512to8192x8_fusion.vhd":7445:0:7445:15|Pruning instance COREApbSram_ol1L - not in use ... 
+@W: CL168 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\sram_512to8192x8_fusion.vhd":7369:0:7369:15|Pruning instance COREAPBSram_io1l - not in use ... 
+@W: CL168 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\sram_512to8192x8_fusion.vhd":7293:0:7293:15|Pruning instance CoreApBSRAM_Lo1l - not in use ... 
+@W: CL168 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\sram_512to8192x8_fusion.vhd":7217:0:7217:15|Pruning instance COREApbSram_oo1L - not in use ... 
+@W: CL168 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\sram_512to8192x8_fusion.vhd":7141:0:7141:15|Pruning instance COREAPBSram_i10l - not in use ... 
+@W: CL169 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\sram_512to8192x8_fusion.vhd":291:0:291:1|Pruning Register CoreApbSram_LI0(12 downto 9)  
+Post processing for coreapbsram_lib.coreapbsram.coreapbsram_o
+@W: CL168 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\coreapbsram.vhd":484:0:484:14|Pruning instance CorEAPBSram_il0.CoreApbSRAM_Lo0 - not in use ... 
+@W: CL168 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\coreapbsram.vhd":474:0:474:14|Pruning instance CorEAPBSram_il0.CoreApbSRAM_oo0 - not in use ... 
+@W: CL168 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\coreapbsram.vhd":464:0:464:14|Pruning instance CorEAPBSram_il0.COREApbSram_I1I - not in use ... 
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreTimer\1.1.101\rtl\vhdl\u\CoreTimer.vhd":12:7:12:15|Synthesizing work.coretimer.synth 
+@N: CD364 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreTimer\1.1.101\rtl\vhdl\u\CoreTimer.vhd":268:28:268:32|Removed redundant assignment
+Post processing for work.coretimer.synth
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUARTapb.vhd":44:7:44:17|Synthesizing coreuartapb_lib.coreuartapb.translated 
+@N: CD364 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUARTapb.vhd":246:12:246:22|Removed redundant assignment
+@N: CD364 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUARTapb.vhd":270:12:270:22|Removed redundant assignment
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":34:7:34:14|Synthesizing coreuartapb_lib.coreuart.translated 
+@W: CD434 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":228:21:228:31|Signal rx_dout_reg in the sensitivity list is not used in the process
+@W: CD434 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":228:34:228:49|Signal parity_err_xhdl1 in the sensitivity list is not used in the process
+@W: CD434 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":254:28:254:44|Signal rx_dout_reg_empty in the sensitivity list is not used in the process
+@W: CD604 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":299:9:299:22|OTHERS clause is not synthesized 
+@W: CD638 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":153:10:153:20|Signal tx_dout_reg is undriven 
+@W: CD638 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":154:10:154:16|Signal rx_dout is undriven 
+@W: CD638 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":159:10:159:22|Signal fifo_empty_tx is undriven 
+@W: CD638 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":160:10:160:22|Signal fifo_empty_rx is undriven 
+@W: CD638 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":164:10:164:21|Signal fifo_full_tx is undriven 
+@W: CD638 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":165:10:165:21|Signal fifo_full_rx is undriven 
+@W: CD638 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":170:10:170:17|Signal data_en0 is undriven 
+@W: CD638 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":171:10:171:17|Signal data_en1 is undriven 
+@W: CD638 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":173:10:173:19|Signal data_ready is undriven 
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\Rx_async.vhd":22:7:22:14|Synthesizing coreuartapb_lib.rx_async.translated 
+@N: CD233 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\Rx_async.vhd":49:24:49:25|Using sequential encoding for type receive_states
+@W: CD604 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\Rx_async.vhd":213:15:213:29|OTHERS clause is not synthesized 
+@W: CD604 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\Rx_async.vhd":305:15:305:29|OTHERS clause is not synthesized 
+Post processing for coreuartapb_lib.rx_async.translated
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\Tx_async.vhd":22:7:22:14|Synthesizing coreuartapb_lib.tx_async.translated 
+@N: CD364 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\Tx_async.vhd":257:15:257:23|Removed redundant assignment
+@W: CD638 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\Tx_async.vhd":63:10:63:19|Signal fifo_write is undriven 
+Post processing for coreuartapb_lib.tx_async.translated
+@W: CL190 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\Tx_async.vhd":110:6:110:7|Optimizing register bit fifo_read_en0 to a constant 1
+@W: CL169 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\Tx_async.vhd":110:6:110:7|Pruning Register fifo_read_en0  
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\Clock_gen.vhd":23:7:23:15|Synthesizing coreuartapb_lib.clock_gen.rtl 
+Post processing for coreuartapb_lib.clock_gen.rtl
+Post processing for coreuartapb_lib.coreuart.translated
+@W: CL240 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":164:10:164:21|fifo_full_tx is not assigned a value (floating) - a simulation mismatch is possible 
+@W: CL240 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":160:10:160:22|fifo_empty_rx is not assigned a value (floating) - a simulation mismatch is possible 
+@W: CL240 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":159:10:159:22|fifo_empty_tx is not assigned a value (floating) - a simulation mismatch is possible 
+@W: CL252 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":154:10:154:16|Bit 0 of signal rx_dout is floating - a simulation mismatch is possible
+@W: CL252 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":154:10:154:16|Bit 1 of signal rx_dout is floating - a simulation mismatch is possible
+@W: CL252 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":154:10:154:16|Bit 2 of signal rx_dout is floating - a simulation mismatch is possible
+@W: CL252 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":154:10:154:16|Bit 3 of signal rx_dout is floating - a simulation mismatch is possible
+@W: CL252 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":154:10:154:16|Bit 4 of signal rx_dout is floating - a simulation mismatch is possible
+@W: CL252 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":154:10:154:16|Bit 5 of signal rx_dout is floating - a simulation mismatch is possible
+@W: CL252 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":154:10:154:16|Bit 6 of signal rx_dout is floating - a simulation mismatch is possible
+@W: CL252 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":154:10:154:16|Bit 7 of signal rx_dout is floating - a simulation mismatch is possible
+@W: CL252 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":153:10:153:20|Bit 0 of signal tx_dout_reg is floating - a simulation mismatch is possible
+@W: CL252 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":153:10:153:20|Bit 1 of signal tx_dout_reg is floating - a simulation mismatch is possible
+@W: CL252 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":153:10:153:20|Bit 2 of signal tx_dout_reg is floating - a simulation mismatch is possible
+@W: CL252 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":153:10:153:20|Bit 3 of signal tx_dout_reg is floating - a simulation mismatch is possible
+@W: CL252 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":153:10:153:20|Bit 4 of signal tx_dout_reg is floating - a simulation mismatch is possible
+@W: CL252 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":153:10:153:20|Bit 5 of signal tx_dout_reg is floating - a simulation mismatch is possible
+@W: CL252 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":153:10:153:20|Bit 6 of signal tx_dout_reg is floating - a simulation mismatch is possible
+@W: CL252 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":153:10:153:20|Bit 7 of signal tx_dout_reg is floating - a simulation mismatch is possible
+@W: CL169 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":317:7:317:8|Pruning Register rx_dout_reg_empty  
+@W: CL169 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":306:6:306:7|Pruning Register rx_dout_reg(7 downto 0)  
+@W: CL169 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":278:6:278:7|Pruning Register rx_state(1 downto 0)  
+@W: CL169 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":267:6:267:7|Pruning Register clear_parity_reg0  
+@W: CL169 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":267:6:267:7|Pruning Register clear_parity_reg  
+@W: CL169 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":213:6:213:7|Pruning Register fifo_write_tx  
+@W: CL245 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":345:6:345:12|Bit 0 of input tx_dout_reg of instance make_TX is floating
+@W: CL245 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":345:6:345:12|Bit 1 of input tx_dout_reg of instance make_TX is floating
+@W: CL245 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":345:6:345:12|Bit 2 of input tx_dout_reg of instance make_TX is floating
+@W: CL245 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":345:6:345:12|Bit 3 of input tx_dout_reg of instance make_TX is floating
+@W: CL245 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":345:6:345:12|Bit 4 of input tx_dout_reg of instance make_TX is floating
+@W: CL245 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":345:6:345:12|Bit 5 of input tx_dout_reg of instance make_TX is floating
+@W: CL245 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":345:6:345:12|Bit 6 of input tx_dout_reg of instance make_TX is floating
+@W: CL245 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":345:6:345:12|Bit 7 of input tx_dout_reg of instance make_TX is floating
+@W: CL167 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":345:6:345:12|Input fifo_empty of instance make_TX is floating
+@W: CL167 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\CoreUART.vhd":345:6:345:12|Input fifo_full of instance make_TX is floating
+Post processing for coreuartapb_lib.coreuartapb.translated
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreGPIO\1.2.103\rtl\vhdl\u\CoreGPIO.vhd":22:7:22:14|Synthesizing work.coregpio.synth 
+Post processing for work.coregpio.synth
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\core8051s_fusion.vhd":23:7:23:15|Synthesizing work.core8051s.str 
+@W: CD638 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\core8051s_fusion.vhd":425:7:425:13|Signal tracedo is undriven 
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\ocia51.vhd":25:7:25:12|Synthesizing work.ocia51.rtl 
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\trigger.vhd":22:7:22:13|Synthesizing work.trigger.rtl 
+@W: CD638 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\trigger.vhd":99:10:99:24|Signal trigxbrksetting is undriven 
+Post processing for work.trigger.rtl
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\trace.vhd":25:7:25:11|Synthesizing work.trace.rtl 
+@W: CD434 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\trace.vhd":275:51:275:54|Signal jxir in the sensitivity list is not used in the process
+@W: CD434 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\trace.vhd":275:57:275:58|Signal ir in the sensitivity list is not used in the process
+@W: CD434 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\trace.vhd":275:61:275:64|Signal jxdr in the sensitivity list is not used in the process
+@W: CD434 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\trace.vhd":275:67:275:69|Signal jdo in the sensitivity list is not used in the process
+Post processing for work.trace.rtl
+@W: CL169 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\trace.vhd":106:3:106:4|Pruning Register TrigToff2  
+@W: CL169 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\trace.vhd":106:3:106:4|Pruning Register TrigTon2  
+@W: CL169 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\trace.vhd":106:3:106:4|Pruning Register PCA(15 downto 0)  
+@W: CL169 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\trace.vhd":106:3:106:4|Pruning Register PC(15 downto 0)  
+@W: CL169 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\trace.vhd":106:3:106:4|Pruning Register resetDelay  
+@W: CL169 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\trace.vhd":106:3:106:4|Pruning Register TraceType(3 downto 0)  
+@W: CL189 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\trace.vhd":106:3:106:4|Register bit Jump0 is always 0, optimizing ...
+@W: CL169 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\trace.vhd":106:3:106:4|Pruning Register Jump0  
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\debug.vhd":23:7:23:11|Synthesizing work.debug.rtl 
+Post processing for work.debug.rtl
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\jtagfusion.vhd":36:7:36:13|Synthesizing work.jtagapa.rtl 
+@N: CD630 :"C:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\lib\proasic\fusion.vhd":4364:10:4364:14|Synthesizing fusion.ujtag.syn_black_box 
+Post processing for fusion.ujtag.syn_black_box
+Post processing for work.jtagapa.rtl
+Post processing for work.ocia51.rtl
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\RAM256X8_fusion.vhd":13:7:13:14|Synthesizing work.ram256x8.def_arch 
+Post processing for work.ram256x8.def_arch
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\core8051s_globs_fusion.vhd":25:7:25:20|Synthesizing work.core8051_globs.str 
+Post processing for work.core8051_globs.str
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\main8051.vhd":31:7:31:14|Synthesizing work.main8051.str 
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\instrdec.vhd":16:7:16:14|Synthesizing work.instrdec.str 
+Post processing for work.instrdec.str
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\oci.vhd":22:7:22:9|Synthesizing work.oci.rtl 
+Post processing for work.oci.rtl
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\ramsfrctrl.vhd":24:7:24:21|Synthesizing work.ram_sfr_control.rtl 
+Post processing for work.ram_sfr_control.rtl
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\rstctrl.vhd":21:7:21:13|Synthesizing work.rstctrl.rtl 
+Post processing for work.rstctrl.rtl
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\pmu.vhd":27:7:27:9|Synthesizing work.pmu.rtl 
+Post processing for work.pmu.rtl
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\memctrl.vhd":26:7:26:20|Synthesizing work.memory_control.rtl 
+@N: CD233 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\memctrl.vhd":139:26:139:27|Using sequential encoding for type apbctrl_state_names
+@W: CD604 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\memctrl.vhd":291:12:291:26|OTHERS clause is not synthesized 
+@W: CD434 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\memctrl.vhd":816:8:816:10|Signal dps in the sensitivity list is not used in the process
+@W: CD434 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\memctrl.vhd":816:21:816:27|Signal dp1_add in the sensitivity list is not used in the process
+@W: CD434 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\memctrl.vhd":816:43:816:47|Signal dptr1 in the sensitivity list is not used in the process
+@W: CD434 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\memctrl.vhd":817:8:817:12|Signal p2reg in the sensitivity list is not used in the process
+@W: CG296 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\memctrl.vhd":815:4:815:10|Incomplete sensitivity list - assuming completeness
+@W: CG290 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\memctrl.vhd":860:32:860:40|Referenced variable memaddr_i is not in sensitivity list
+@W: CD638 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\memctrl.vhd":160:10:160:14|Signal dptr1 is undriven 
+@W: CD638 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\memctrl.vhd":161:10:161:16|Signal dp1_inc is undriven 
+@W: CD638 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\memctrl.vhd":162:10:162:16|Signal dp1_add is undriven 
+@W: CD638 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\memctrl.vhd":165:10:165:12|Signal dps is undriven 
+@W: CD638 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\memctrl.vhd":214:10:214:18|Signal dps_wrclk is undriven 
+Post processing for work.memory_control.rtl
+@W: CL252 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\memctrl.vhd":165:10:165:12|Bit 0 of signal dps is floating - a simulation mismatch is possible
+@W: CL252 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\memctrl.vhd":165:10:165:12|Bit 1 of signal dps is floating - a simulation mismatch is possible
+@W: CL252 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\memctrl.vhd":165:10:165:12|Bit 2 of signal dps is floating - a simulation mismatch is possible
+@W: CL252 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\memctrl.vhd":165:10:165:12|Bit 3 of signal dps is floating - a simulation mismatch is possible
+@W: CL252 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\memctrl.vhd":165:10:165:12|Bit 4 of signal dps is floating - a simulation mismatch is possible
+@W: CL252 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\memctrl.vhd":165:10:165:12|Bit 5 of signal dps is floating - a simulation mismatch is possible
+@W: CL252 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\memctrl.vhd":165:10:165:12|Bit 6 of signal dps is floating - a simulation mismatch is possible
+@W: CL252 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\memctrl.vhd":165:10:165:12|Bit 7 of signal dps is floating - a simulation mismatch is possible
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":22:7:22:9|Synthesizing work.isr.rtl 
+@W: CD638 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":193:7:193:16|Signal ien0_wrclk is undriven 
+@W: CD638 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":194:7:194:16|Signal ien1_wrclk is undriven 
+@W: CD638 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":195:7:195:15|Signal ip0_wrclk is undriven 
+@W: CD638 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":196:7:196:15|Signal ip1_wrclk is undriven 
+Post processing for work.isr.rtl
+@W: CL169 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":409:2:409:3|Pruning Register int7_ff  
+@W: CL169 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":409:2:409:3|Pruning Register int6_ff  
+@W: CL169 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":409:2:409:3|Pruning Register int5_ff  
+@W: CL169 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":409:2:409:3|Pruning Register int4_ff  
+@W: CL169 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":409:2:409:3|Pruning Register int3_ff  
+@W: CL169 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":409:2:409:3|Pruning Register int2_ff  
+@W: CL169 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":409:2:409:3|Pruning Register int1_ff  
+@W: CL169 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":409:2:409:3|Pruning Register int0_ff  
+@W: CL169 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":308:3:308:4|Pruning Register ien1(7 downto 0)  
+@W: CL170 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":394:3:394:4|Pruning bit <7> of ip1(7 downto 0) - not in use ... 
+@W: CL170 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":394:3:394:4|Pruning bit <6> of ip1(7 downto 0) - not in use ... 
+@W: CL170 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":394:3:394:4|Pruning bit <5> of ip1(7 downto 0) - not in use ... 
+@W: CL170 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":394:3:394:4|Pruning bit <4> of ip1(7 downto 0) - not in use ... 
+@W: CL170 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":394:3:394:4|Pruning bit <3> of ip1(7 downto 0) - not in use ... 
+@W: CL170 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":394:3:394:4|Pruning bit <1> of ip1(7 downto 0) - not in use ... 
+@W: CL170 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":351:3:351:4|Pruning bit <7> of ip0(7 downto 0) - not in use ... 
+@W: CL170 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":351:3:351:4|Pruning bit <6> of ip0(7 downto 0) - not in use ... 
+@W: CL170 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":351:3:351:4|Pruning bit <5> of ip0(7 downto 0) - not in use ... 
+@W: CL170 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":351:3:351:4|Pruning bit <4> of ip0(7 downto 0) - not in use ... 
+@W: CL170 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":351:3:351:4|Pruning bit <3> of ip0(7 downto 0) - not in use ... 
+@W: CL170 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":351:3:351:4|Pruning bit <1> of ip0(7 downto 0) - not in use ... 
+@W: CL170 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":265:3:265:4|Pruning bit <6> of ien0(7 downto 0) - not in use ... 
+@W: CL170 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":265:3:265:4|Pruning bit <5> of ien0(7 downto 0) - not in use ... 
+@W: CL170 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":265:3:265:4|Pruning bit <4> of ien0(7 downto 0) - not in use ... 
+@W: CL170 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":265:3:265:4|Pruning bit <3> of ien0(7 downto 0) - not in use ... 
+@W: CL170 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":265:3:265:4|Pruning bit <1> of ien0(7 downto 0) - not in use ... 
+@W: CL190 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":800:2:800:3|Optimizing register bit int_vect(4) to a constant 0
+@W: CL190 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":843:2:843:3|Optimizing register bit l2_reg to a constant 0
+@W: CL190 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":843:2:843:3|Optimizing register bit l3_reg to a constant 0
+@W: CL260 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":800:2:800:3|Pruning Register bit 4 of int_vect(4 downto 0)  
+@W: CL169 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":843:2:843:3|Pruning Register l2_reg  
+@W: CL169 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":843:2:843:3|Pruning Register l3_reg  
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\cpu.vhd":21:7:21:18|Synthesizing work.control_unit.rtl 
+Post processing for work.control_unit.rtl
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\clkctrl.vhd":23:7:23:19|Synthesizing work.clock_control.rtl 
+@W: CD639 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\clkctrl.vhd":71:11:71:15|Bit <3> of signal ckcon is undriven 
+@W: CD639 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\clkctrl.vhd":71:11:71:15|Bit <7> of signal ckcon is undriven 
+@W: CD638 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\clkctrl.vhd":76:11:76:20|Signal pcon_wrclk is undriven 
+@W: CD638 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\clkctrl.vhd":77:11:77:21|Signal ckcon_wrclk is undriven 
+Post processing for work.clock_control.rtl
+@W: CL170 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\clkctrl.vhd":171:7:171:8|Pruning bit <6> of pcon(7 downto 2) - not in use ... 
+@W: CL170 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\clkctrl.vhd":171:7:171:8|Pruning bit <5> of pcon(7 downto 2) - not in use ... 
+@W: CL170 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\clkctrl.vhd":171:7:171:8|Pruning bit <4> of pcon(7 downto 2) - not in use ... 
+@W: CL170 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\clkctrl.vhd":171:7:171:8|Pruning bit <3> of pcon(7 downto 2) - not in use ... 
+@W: CL170 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\clkctrl.vhd":171:7:171:8|Pruning bit <2> of pcon(7 downto 2) - not in use ... 
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\alu.vhd":26:7:26:9|Synthesizing work.alu.rtl 
+Post processing for work.alu.rtl
+Post processing for work.main8051.str
+Post processing for work.core8051s.str
+@W: CL245 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\core8051s_fusion.vhd":607:4:607:14|Bit 0 of input tracedo of instance ocia51_inst is floating
+@W: CL245 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\core8051s_fusion.vhd":607:4:607:14|Bit 1 of input tracedo of instance ocia51_inst is floating
+@W: CL245 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\core8051s_fusion.vhd":607:4:607:14|Bit 2 of input tracedo of instance ocia51_inst is floating
+@W: CL245 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\core8051s_fusion.vhd":607:4:607:14|Bit 3 of input tracedo of instance ocia51_inst is floating
+@W: CL245 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\core8051s_fusion.vhd":607:4:607:14|Bit 4 of input tracedo of instance ocia51_inst is floating
+@W: CL245 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\core8051s_fusion.vhd":607:4:607:14|Bit 5 of input tracedo of instance ocia51_inst is floating
+@W: CL245 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\core8051s_fusion.vhd":607:4:607:14|Bit 6 of input tracedo of instance ocia51_inst is floating
+@W: CL245 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\core8051s_fusion.vhd":607:4:607:14|Bit 7 of input tracedo of instance ocia51_inst is floating
+@W: CL245 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\core8051s_fusion.vhd":607:4:607:14|Bit 8 of input tracedo of instance ocia51_inst is floating
+@W: CL245 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\core8051s_fusion.vhd":607:4:607:14|Bit 9 of input tracedo of instance ocia51_inst is floating
+@W: CL245 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\core8051s_fusion.vhd":607:4:607:14|Bit 10 of input tracedo of instance ocia51_inst is floating
+@W: CL245 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\core8051s_fusion.vhd":607:4:607:14|Bit 11 of input tracedo of instance ocia51_inst is floating
+@W: CL245 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\core8051s_fusion.vhd":607:4:607:14|Bit 12 of input tracedo of instance ocia51_inst is floating
+@W: CL245 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\core8051s_fusion.vhd":607:4:607:14|Bit 13 of input tracedo of instance ocia51_inst is floating
+@W: CL245 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\core8051s_fusion.vhd":607:4:607:14|Bit 14 of input tracedo of instance ocia51_inst is floating
+@W: CL245 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\core8051s_fusion.vhd":607:4:607:14|Bit 15 of input tracedo of instance ocia51_inst is floating
+@W: CL245 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\core8051s_fusion.vhd":607:4:607:14|Bit 16 of input tracedo of instance ocia51_inst is floating
+@W: CL245 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\core8051s_fusion.vhd":607:4:607:14|Bit 17 of input tracedo of instance ocia51_inst is floating
+@W: CL245 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\core8051s_fusion.vhd":607:4:607:14|Bit 18 of input tracedo of instance ocia51_inst is floating
+@W: CL245 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\core8051s_fusion.vhd":607:4:607:14|Bit 19 of input tracedo of instance ocia51_inst is floating
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreAPB3\2.1.101\rtl\vhdl\u\CoreAPB3.vhd":13:7:13:14|Synthesizing work.coreapb3.structural 
+@W: CD604 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreAPB3\2.1.101\rtl\vhdl\u\CoreAPB3.vhd":389:16:389:29|OTHERS clause is not synthesized 
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreAPB3\2.1.101\rtl\vhdl\u\MuxPtoB3.vhd":24:7:24:14|Synthesizing work.muxptob3.synth 
+@W: CD604 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreAPB3\2.1.101\rtl\vhdl\u\MuxPtoB3.vhd":210:6:210:21|OTHERS clause is not synthesized 
+@W: CD604 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreAPB3\2.1.101\rtl\vhdl\u\MuxPtoB3.vhd":243:6:243:21|OTHERS clause is not synthesized 
+@W: CD604 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreAPB3\2.1.101\rtl\vhdl\u\MuxPtoB3.vhd":275:6:275:21|OTHERS clause is not synthesized 
+Post processing for work.muxptob3.synth
+Post processing for work.coreapb3.structural
+Post processing for work.sys.def_arch
+Post processing for work.top_8051.def_arch
+@W: CL168 :"C:\Actelprj\AFS_ADV_KIT_8051\component\work\top_8051\top_8051.vhd":194:4:194:8|Pruning instance 	GND - not in use ... 
+@W: CL159 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreAPB3\2.1.101\rtl\vhdl\u\CoreAPB3.vhd":104:4:104:13|Input PSLVERRS12 is unused
+@W: CL159 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreAPB3\2.1.101\rtl\vhdl\u\CoreAPB3.vhd":105:4:105:13|Input PSLVERRS13 is unused
+@W: CL159 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreAPB3\2.1.101\rtl\vhdl\u\CoreAPB3.vhd":106:4:106:13|Input PSLVERRS14 is unused
+@W: CL246 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\alu.vhd":62:4:62:12|Input port bits 62 to 118 of instr_dec(0 to 118) are unused 
+@W: CL190 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\clkctrl.vhd":209:8:209:9|Optimizing register bit waitcount(2) to a constant 0
+@W: CL260 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\clkctrl.vhd":209:8:209:9|Pruning Register bit 2 of waitcount(2 downto 0)  
+@W: CL246 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\clkctrl.vhd":56:4:56:11|Input port bits 6 to 0 of sfrdatai(7 downto 0) are unused 
+@W: CL246 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\cpu.vhd":77:4:77:12|Input port bits 0 to 61 of instr_dec(0 to 118) are unused 
+@W: CL247 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\cpu.vhd":77:4:77:12|Input port bit 63 of instr_dec(0 to 118) is unused 
+@W: CL246 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\cpu.vhd":77:4:77:12|Input port bits 65 to 118 of instr_dec(0 to 118) are unused 
+@W: CL190 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":899:2:899:3|Optimizing register bit is_reg(2) to a constant 0
+@W: CL190 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":899:2:899:3|Optimizing register bit is_reg(3) to a constant 0
+@W: CL260 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":899:2:899:3|Pruning Register bit 3 of is_reg(3 downto 0)  
+@W: CL260 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":899:2:899:3|Pruning Register bit 2 of is_reg(3 downto 0)  
+@W: CL260 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":800:2:800:3|Pruning Register bit 3 of int_vect(3 downto 0)  
+@W: CL260 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":800:2:800:3|Pruning Register bit 2 of int_vect(3 downto 0)  
+@W: CL189 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":913:2:913:3|Register bit t0ack is always 0, optimizing ...
+@W: CL189 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":929:2:929:3|Register bit t1ack is always 0, optimizing ...
+@W: CL169 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":913:2:913:3|Pruning Register t0ack  
+@W: CL169 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":929:2:929:3|Pruning Register t1ack  
+@W: CL246 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":96:4:96:11|Input port bits 6 to 3 of sfrdatai(7 downto 0) are unused 
+@W: CL247 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":96:4:96:11|Input port bit 1 of sfrdatai(7 downto 0) is unused 
+@W: CL246 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":104:4:104:12|Input port bits 0 to 61 of instr_dec(0 to 118) are unused 
+@W: CL246 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":104:4:104:12|Input port bits 64 to 118 of instr_dec(0 to 118) are unused 
+@W: CL159 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":42:4:42:6|Input tf0 is unused
+@W: CL159 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":46:4:46:6|Input tf1 is unused
+@W: CL159 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":50:4:50:7|Input int0 is unused
+@W: CL159 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":51:4:51:7|Input int1 is unused
+@W: CL159 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":52:4:52:7|Input int2 is unused
+@W: CL159 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":53:4:53:7|Input int3 is unused
+@W: CL159 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":54:4:54:7|Input int4 is unused
+@W: CL159 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":55:4:55:7|Input int5 is unused
+@W: CL159 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":56:4:56:7|Input int6 is unused
+@W: CL159 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":57:4:57:7|Input int7 is unused
+@W: CL159 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":60:4:60:6|Input ri0 is unused
+@W: CL159 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\isr.vhd":61:4:61:6|Input ti0 is unused
+@N: CL201 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\memctrl.vhd":298:8:298:9|Trying to extract state machine for register apbCtrlSMCurrentState
+Extracted state machine for register apbCtrlSMCurrentState
+State machine has 3 reachable states with original encodings of:
+   00
+   01
+   10
+@W: CL246 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\memctrl.vhd":49:4:49:8|Input port bits 4 to 0 of instr(7 downto 0) are unused 
+@W: CL246 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\memctrl.vhd":113:4:113:12|Input port bits 0 to 64 of instr_dec(0 to 118) are unused 
+@W: CL246 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\memctrl.vhd":113:4:113:12|Input port bits 94 to 118 of instr_dec(0 to 118) are unused 
+@W: CL246 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\memctrl.vhd":125:4:125:9|Input port bits 7 to 0 of prdata(31 downto 0) are unused 
+@W: CL159 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\memctrl.vhd":69:4:69:8|Input p2reg is unused
+@W: CL246 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\pmu.vhd":50:4:50:11|Input port bits 7 to 2 of sfrdatai(7 downto 0) are unused 
+@W: CL246 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\ramsfrctrl.vhd":86:4:86:12|Input port bits 0 to 7 of instr_dec(0 to 118) are unused 
+@W: CL246 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\ramsfrctrl.vhd":86:4:86:12|Input port bits 9 to 78 of instr_dec(0 to 118) are unused 
+@W: CL246 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\ramsfrctrl.vhd":86:4:86:12|Input port bits 80 to 87 of instr_dec(0 to 118) are unused 
+@W: CL246 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\ramsfrctrl.vhd":86:4:86:12|Input port bits 89 to 93 of instr_dec(0 to 118) are unused 
+@W: CL247 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\debug.vhd":26:3:26:4|Input port bit 4 of ir(7 downto 0) is unused 
+@W: CL246 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\debug.vhd":27:3:27:5|Input port bits 39 to 24 of jdo(39 downto 0) are unused 
+@W: CL138 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\trace.vhd":106:3:106:4|Register 'TraceRun_xhdl' is only assigned 0 or its old value; the register will be removed
+@W: CL138 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\trace.vhd":106:3:106:4|Register 'TraceWr_xhdl' is only assigned 0 or its old value; the register will be removed
+@W: CL138 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\trace.vhd":106:3:106:4|Register 'TraceWrapped_xhdl' is only assigned 0 or its old value; the register will be removed
+@W: CL138 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\trace.vhd":344:4:344:5|Register 'TraceA_xhdl' is only assigned 0 or its old value; the register will be removed
+@W: CL169 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\trace.vhd":98:6:98:7|Pruning Register syncReset  
+@W: CL159 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\trace.vhd":33:3:33:5|Input CLK is unused
+@W: CL159 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\trace.vhd":34:3:34:7|Input urstb is unused
+@W: CL159 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\trace.vhd":35:3:35:8|Input RESETB is unused
+@W: CL159 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\trace.vhd":36:3:36:4|Input IR is unused
+@W: CL159 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\trace.vhd":37:3:37:5|Input JDO is unused
+@W: CL159 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\trace.vhd":38:3:38:6|Input JXIR is unused
+@W: CL159 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\trace.vhd":39:3:39:6|Input JXDR is unused
+@W: CL159 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\trace.vhd":42:3:42:7|Input fetch is unused
+@W: CL159 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\trace.vhd":43:3:43:7|Input flush is unused
+@W: CL159 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\trace.vhd":50:3:50:9|Input TrigTon is unused
+@W: CL159 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\trace.vhd":51:3:51:10|Input TrigToff is unused
+@W: CL246 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\trigger.vhd":34:3:34:4|Input port bits 4 to 2 of ir(7 downto 0) are unused 
+@W: CL159 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CORE8051S\2.2.100\rtl\vhdl\u\core8051s_fusion.vhd":90:4:90:10|Input PSLVERR is unused
+@W: CL159 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreGPIO\1.2.103\rtl\vhdl\u\CoreGPIO.vhd":32:8:32:12|Input PADDR is unused
+@W: CL190 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\Tx_async.vhd":183:6:183:7|Optimizing register bit fifo_read_en1 to a constant 1
+@W: CL190 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\Tx_async.vhd":183:6:183:7|Optimizing register bit fifo_read_tx_xhdl3 to a constant 1
+@W: CL169 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\Tx_async.vhd":183:6:183:7|Pruning Register fifo_read_tx_xhdl3  
+@W: CL169 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\Tx_async.vhd":183:6:183:7|Pruning Register fifo_read_en1  
+@N: CL201 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\Tx_async.vhd":110:6:110:7|Trying to extract state machine for register xmit_state
+Extracted state machine for register xmit_state
+State machine has 6 reachable states with original encodings of:
+   00000000000000000000000000000000
+   00000000000000000000000000000001
+   00000000000000000000000000000010
+   00000000000000000000000000000011
+   00000000000000000000000000000100
+   00000000000000000000000000000101
+@W: CL159 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\Tx_async.vhd":34:6:34:16|Input tx_dout_reg is unused
+@W: CL159 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\Tx_async.vhd":35:6:35:15|Input fifo_empty is unused
+@W: CL159 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\Tx_async.vhd":36:6:36:14|Input fifo_full is unused
+@N: CL201 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\CoreUARTapb\3.1.105\rtl\vhdl\amba\Rx_async.vhd":180:6:180:7|Trying to extract state machine for register rx_state
+Extracted state machine for register rx_state
+State machine has 3 reachable states with original encodings of:
+   00
+   01
+   10
+@W: CL246 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\sram_512to8192x8_fusion.vhd":22:0:22:13|Input port bits 12 to 9 of coreapbsram_li(12 downto 0) are unused 
+@W: CL246 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\sram_512to8192x8_fusion.vhd":23:0:23:13|Input port bits 12 to 9 of coreapbsram_ii(12 downto 0) are unused 
+@W: CL246 :"C:\Actelprj\AFS_ADV_KIT_8051\component\Actel\DirectCore\COREAPBSRAM\2.0.102\rtl\vhdl\core_obfuscated\coreapbsram.vhd":31:0:31:4|Input port bits 16 to 15 of paddr(16 downto 0) are unused 
+@END
+Process took 0h:00m:17s realtime, 0h:00m:16s cputime
+# Tue Apr 27 15:46:15 2010
+
+###########################################################]
+Synopsys Actel Technology Mapper, Version map500act, Build 058R, Built Jan 18 2010 09:16:23
+Copyright (C) 1994-2010, Synopsys Inc.  All Rights Reserved
+Product Version D-2009.12A
+@N: MF249 |Running in 32-bit mode.
+@N: MF258 |Gated clock conversion disabled 
+
+Automatic dissolve during optimization of view:work.ocia51(rtl) of xhdl_trace(trace)
+Automatic dissolve during optimization of view:work.CORE8051S(str) of CORE8051_GLOBS_inst(CORE8051_GLOBS)
+Automatic dissolve at startup in view:work.MAIN8051(str) of U_PMU(PMU)
+Automatic dissolve at startup in view:work.MAIN8051(str) of U_ISR(ISR)
+Automatic dissolve at startup in view:work.MAIN8051(str) of U_CLKCTRL(CLOCK_CONTROL)
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\pmu.vhd":119:2:119:3|Removing sequential instance U_PMU.clkcpu_gate_pre of view:PrimLib.dffs(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\pmu.vhd":129:2:129:3|Removing sequential instance U_PMU.clkcpu_gate of view:PrimLib.dffs(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\isr.vhd":961:2:961:3|Removing sequential instance U_ISR.int1ack of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\isr.vhd":945:2:945:3|Removing sequential instance U_ISR.int0ack of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\clkctrl.vhd":171:7:171:8|Removing sequential instance U_CLKCTRL.pcon[7] of view:PrimLib.dffre(prim) because there are no references to its outputs 
+Automatic dissolve at startup in view:work.CORE8051S(str) of internal_ram(RAM256X8)
+Automatic dissolve at startup in view:coreapbsram_lib.COREAPBSRAM(coreapbsram_o) of CorEAPBSram_il0\.CoreAPBSRam_io0(CoreApbSRAM_L)
+Automatic dissolve at startup in view:work.sys(def_arch) of COREAPBSRAM_0(COREAPBSRAM)
+Automatic dissolve at startup in view:work.sys(def_arch) of CoreGPIO_00(CoreGPIO)
+Automatic dissolve at startup in view:work.sys(def_arch) of CoreAPB3_00(CoreAPB3)
+Automatic dissolve at startup in view:work.memory(def_arch) of EXT_DATA_MEMORY(INT_RAM8kX8)
+Automatic dissolve at startup in view:work.top_8051(def_arch) of memory_0(memory)
+Automatic dissolve at startup in view:work.top_8051(def_arch) of PLL_50Mh_12Mh_0(PLL_50Mh_12Mh)
+@W: BN132 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\rstctrl.vhd":171:2:171:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_RSTCTRL.WDOGRES_1,  because it is equivalent to instance sys_0.Core8051s_00.MAIN8051_inst.U_RSTCTRL.reset_ff
+@W: BN132 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\rstctrl.vhd":171:2:171:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_RSTCTRL.WDOGRES_2,  because it is equivalent to instance sys_0.Core8051s_00.MAIN8051_inst.U_RSTCTRL.rst_o
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+Finished RTL optimizations (Time elapsed 0h:00m:02s; Memory used current: 60MB peak: 62MB)
+
+@N: MO106 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coreapb3\2.1.101\rtl\vhdl\u\coreapb3.vhd":372:12:372:15|Found ROM, 'CoreAPB3_00.PSELECT_17[15:0]', 16 words by 16 bits 
+@W: MO129 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[8] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[9] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[10] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[11] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[12] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[13] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[14] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[15] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[16] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[17] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[18] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[19] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[20] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[21] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[22] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[23] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[24] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[25] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[26] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[27] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[28] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[29] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[30] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":103:8:103:9|Sequential instance sys_0.CoreGPIO_00.inData_s1[31] has been reduced to a combinational gate by constant propagation
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Removing sequential instance CoreGPIO_00.dataOut[31] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Removing sequential instance CoreGPIO_00.dataOut[30] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Removing sequential instance CoreGPIO_00.dataOut[29] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Removing sequential instance CoreGPIO_00.dataOut[28] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Removing sequential instance CoreGPIO_00.dataOut[27] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Removing sequential instance CoreGPIO_00.dataOut[26] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Removing sequential instance CoreGPIO_00.dataOut[25] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Removing sequential instance CoreGPIO_00.dataOut[24] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Removing sequential instance CoreGPIO_00.dataOut[23] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Removing sequential instance CoreGPIO_00.dataOut[22] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Removing sequential instance CoreGPIO_00.dataOut[21] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Removing sequential instance CoreGPIO_00.dataOut[20] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Removing sequential instance CoreGPIO_00.dataOut[19] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Removing sequential instance CoreGPIO_00.dataOut[18] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Removing sequential instance CoreGPIO_00.dataOut[17] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Removing sequential instance CoreGPIO_00.dataOut[16] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Removing sequential instance CoreGPIO_00.dataOut[15] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Removing sequential instance CoreGPIO_00.dataOut[14] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Removing sequential instance CoreGPIO_00.dataOut[13] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Removing sequential instance CoreGPIO_00.dataOut[12] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Removing sequential instance CoreGPIO_00.dataOut[11] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Removing sequential instance CoreGPIO_00.dataOut[10] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Removing sequential instance CoreGPIO_00.dataOut[9] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coregpio\1.2.103\rtl\vhdl\u\coregpio.vhd":71:8:71:9|Removing sequential instance CoreGPIO_00.dataOut[8] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@W: MO129 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\clkctrl.vhd":209:8:209:9|Sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_CLKCTRL.waitcount[1] has been reduced to a combinational gate by constant propagation
+@N: MF176 |Default generator successful 
+@N: MF176 |Default generator successful 
+@N: MF176 |Default generator successful 
+@N: MF176 |Default generator successful 
+@N: MF176 |Default generator successful 
+@N: MF176 |Default generator successful 
+@N: MF176 |Default generator successful 
+@N: MF176 |Default generator successful 
+@N: MF176 |Default generator successful 
+@N: MO106 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\cpu.vhd":346:9:346:12|Found ROM, 'nr_cycles_a[2:0]', 256 words by 3 bits 
+@N: MO106 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\cpu.vhd":346:9:346:12|Found ROM, 'nr_bytes_a[1:0]', 256 words by 2 bits 
+@N: MF179 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\cpu.vhd":146:27:146:44|Found 4 bit by 4 bit '<' comparator, 'un2_cyc_lt_nr_cyc'
+@N: MF179 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\cpu.vhd":242:18:242:34|Found 4 bit by 4 bit '<' comparator, 'un2_data_fetch_e'
+@W: MO161 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\cpu.vhd":1175:2:1175:3|Register bit nr_cycles[3] is always 0, optimizing ...
+Encoding state machine work.MEMORY_CONTROL(rtl)-apbCtrlSMCurrentState[0:2]
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+@N: MF176 |Default generator successful 
+@N: MF176 |Default generator successful 
+@N: MF176 |Default generator successful 
+@N: MF238 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\memctrl.vhd":587:12:587:34|Found 16 bit incrementor, 'un1_pc_inc[15:0]'
+@N: MF238 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\memctrl.vhd":646:19:646:43|Found 16 bit incrementor, 'dp_inc[15:0]'
+@N: MF176 |Default generator successful 
+@N: MF179 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\trigger.vhd":272:14:272:55|Found 16 bit by 16 bit '<' comparator, 'matche\.trigmatchpair\.un1258_matche'
+@N: MF179 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\trigger.vhd":272:14:272:55|Found 16 bit by 16 bit '<' comparator, 'matche\.trigmatchpair\.un1440_matche'
+@N: MF179 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\trigger.vhd":273:7:273:48|Found 16 bit by 16 bit '<' comparator, 'matche\.trigmatchpair\.un1262_matche'
+@N: MF179 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\trigger.vhd":273:7:273:48|Found 16 bit by 16 bit '<' comparator, 'matche\.trigmatchpair\.un1444_matche'
+@N:"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coreuartapb\3.1.105\rtl\vhdl\amba\clock_gen.vhd":49:20:49:21|Found counter in view:coreuartapb_lib.Clock_gen(rtl) inst baud_cntr[7:0]
+@N:"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coreuartapb\3.1.105\rtl\vhdl\amba\clock_gen.vhd":72:21:72:22|Found counter in view:coreuartapb_lib.Clock_gen(rtl) inst xmit_cntr[3:0]
+@N:"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coreuartapb\3.1.105\rtl\vhdl\amba\tx_async.vhd":198:6:198:7|Found counter in view:coreuartapb_lib.Tx_async(translated) inst xmit_bit_sel[3:0]
+Encoding state machine coreuartapb_lib.Tx_async(translated)-xmit_state[0:5]
+original code -> new code
+   00000000000000000000000000000000 -> 000001
+   00000000000000000000000000000001 -> 000010
+   00000000000000000000000000000010 -> 000100
+   00000000000000000000000000000011 -> 001000
+   00000000000000000000000000000100 -> 010000
+   00000000000000000000000000000101 -> 100000
+@N:"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coreuartapb\3.1.105\rtl\vhdl\amba\rx_async.vhd":227:6:227:7|Found counter in view:coreuartapb_lib.Rx_async(translated) inst rx_bit_cnt[3:0]
+@N:"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coreuartapb\3.1.105\rtl\vhdl\amba\rx_async.vhd":139:6:139:7|Found counter in view:coreuartapb_lib.Rx_async(translated) inst receive_count[3:0]
+Encoding state machine coreuartapb_lib.Rx_async(translated)-rx_state[0:2]
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+@N:"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":258:8:258:9|Found counter in view:work.CoreTimer(synth) inst Count[31:0]
+@N:"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coretimer\1.1.101\rtl\vhdl\u\coretimer.vhd":192:8:192:9|Found counter in view:work.CoreTimer(synth) inst PreScale[9:0]
+Automatic dissolve during optimization of view:work.MEMORY_CONTROL(rtl) of un16_stretchcount_1_1(PM_top_8051_ADDC__0_2_M1AFS1500_FBGA256_-1)
+@W: BN132 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\memctrl.vhd":307:8:307:9|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.penable_i,  because it is equivalent to instance sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.apbCtrlSMCurrentState[1]
+Automatic dissolve during optimization of view:coreuartapb_lib.CoreUARTapb(translated) of uUART(COREUART)
+Auto Dissolve of Core8051s_00 (inst of view:work.CORE8051S(str))
+Auto Dissolve of CoreAPB3_00.uMuxPtoB3 (inst of view:work.MuxPtoB3(synth))
+Finished factoring (Time elapsed 0h:00m:15s; Memory used current: 83MB peak: 84MB)
+
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coreuartapb\3.1.105\rtl\vhdl\amba\rx_async.vhd":324:6:324:7|Removing sequential instance sys_0.CoreUARTapb_00.uUART.make_RX.fifo_write_xhdl6 of view:PrimLib.dffs(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\coreuartapb\3.1.105\rtl\vhdl\amba\rx_async.vhd":324:6:324:7|Removing sequential instance sys_0.CoreUARTapb_00.uUART.make_RX.clear_parity_en_xhdl3 of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\trigger.vhd":405:6:405:7|Removing sequential instance sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.xhdl_trigger.TrigTon2 of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\trigger.vhd":405:6:405:7|Removing sequential instance sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.xhdl_trigger.TrigTon0 of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\trigger.vhd":405:6:405:7|Removing sequential instance sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.xhdl_trigger.TrigToff2 of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\trigger.vhd":405:6:405:7|Removing sequential instance sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.xhdl_trigger.TrigToff0 of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\trigger.vhd":405:6:405:7|Removing sequential instance sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.xhdl_trigger.TrigOut2 of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\trigger.vhd":405:6:405:7|Removing sequential instance sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.xhdl_trigger.TrigOut0 of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\trigger.vhd":405:6:405:7|Removing sequential instance sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.xhdl_trigger.TrigTon3 of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\trigger.vhd":405:6:405:7|Removing sequential instance sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.xhdl_trigger.TrigTon1 of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\trigger.vhd":405:6:405:7|Removing sequential instance sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.xhdl_trigger.TrigToff3 of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\trigger.vhd":405:6:405:7|Removing sequential instance sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.xhdl_trigger.TrigToff1 of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\trigger.vhd":405:6:405:7|Removing sequential instance sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.xhdl_trigger.TrigOut3 of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\trigger.vhd":405:6:405:7|Removing sequential instance sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.xhdl_trigger.TrigOut1 of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\debug.vhd":81:5:81:6|Removing sequential instance sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.xhdl_debug.BreakOut_xhdl of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\jtagfusion.vhd":350:6:350:7|Removing sequential instance sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.AuxOut_xhdl of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@A: BN291 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\jtagfusion.vhd":350:6:350:7|Boundary register sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.AuxOut_xhdl has been packed into a complex cell. To disable this register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\isr.vhd":265:3:265:4|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_ISR.ien0[0] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\isr.vhd":265:3:265:4|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_ISR.ien0[2] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\isr.vhd":265:3:265:4|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_ISR.ien0[7] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\isr.vhd":351:3:351:4|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_ISR.ip0[0] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\isr.vhd":351:3:351:4|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_ISR.ip0[2] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\isr.vhd":394:3:394:4|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_ISR.ip1[0] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\isr.vhd":394:3:394:4|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_ISR.ip1[2] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\rstctrl.vhd":186:2:186:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_RSTCTRL.WDOGRESN of view:PrimLib.dff(prim) because there are no references to its outputs 
+@N: BN116 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\cpu.vhd":326:2:326:3|Removing sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_CPU.rmwinstr of view:PrimLib.dffr(prim) because there are no references to its outputs 
+Finished gated-clock and generated-clock conversion (Time elapsed 0h:00m:16s; Memory used current: 83MB peak: 85MB)
+
+@W: MO129 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\clkctrl.vhd":209:8:209:9|Sequential instance sys_0.Core8051s_00.MAIN8051_inst.U_CLKCTRL.waitcount[0] has been reduced to a combinational gate by constant propagation
+@W: MO161 :"c:\actelprj\afs_adv_kit_8051\component\actel\directcore\core8051s\2.2.100\rtl\vhdl\u\debug.vhd":81:5:81:6|Register bit sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.xhdl_debug.BreakInType_xhdl is always 0, optimizing ...
+Finished generic timing optimizations - Pass 1 (Time elapsed 0h:00m:21s; Memory used current: 77MB peak: 91MB)
+
+Starting Early Timing Optimization (Time elapsed 0h:00m:21s; Memory used current: 78MB peak: 91MB)
+
+Finished Early Timing Optimization (Time elapsed 0h:00m:23s; Memory used current: 78MB peak: 91MB)
+
+Finished generic timing optimizations - Pass 2 (Time elapsed 0h:00m:23s; Memory used current: 77MB peak: 91MB)
+
+Finished preparing to map (Time elapsed 0h:00m:29s; Memory used current: 90MB peak: 91MB)
+
+
+High Fanout Net Report
+**********************
+
+Driver Instance / Pin Name                                                            Fanout, notes                   
+----------------------------------------------------------------------------------------------------------------------
+sys_0.Core8051s_00.MAIN8051_inst.U_PMU.nrsto / Q                                      548 : 547 asynchronous set/reset
+sys_0.Core8051s_00.MAIN8051_inst.U_ALU.acc[0] / Q                                     27                              
+sys_0.Core8051s_00.MAIN8051_inst.U_ALU.acc[1] / Q                                     27                              
+sys_0.Core8051s_00.MAIN8051_inst.U_ALU.acc[2] / Q                                     27                              
+sys_0.Core8051s_00.MAIN8051_inst.U_ALU.acc[3] / Q                                     25                              
+sys_0.Core8051s_00.MAIN8051_inst.U_ALU.acc[4] / Q                                     25                              
+sys_0.Core8051s_00.MAIN8051_inst.U_RAMSFRCTRL.ram_sfr_address[0] / Q                  49                              
+sys_0.Core8051s_00.MAIN8051_inst.U_RAMSFRCTRL.ram_sfr_address[1] / Q                  25                              
+sys_0.Core8051s_00.MAIN8051_inst.U_RAMSFRCTRL.ram_sfr_address[2] / Q                  25                              
+sys_0.CoreTimer_00.un5_loaden_0_a7 / Y                                                33                              
+sys_0.CoreUARTapb_00.uUART.make_CLOCK_GEN.baud_clock_int / Q                          25                              
+sys_0.Core8051s_00.oci1_trace0.ocia51_inst.apa1.jtagapa_inst.xhdl_UJTAG / URSTB       51 : 50 asynchronous set/reset  
+sys_0.Core8051s_00.oci1_trace0.ocia51_inst.xhdl_trigger.Trigger_xhdl[38] / Q          40                              
+sys_0.Core8051s_00.oci1_trace0.ocia51_inst.xhdl_trigger.Trigger_xhdl[77] / Q          25                              
+sys_0.Core8051s_00.oci1_trace0.ocia51_inst.xhdl_trigger.Trigger_xhdl[78] / Q          41                              
+sys_0.Core8051s_00.oci1_trace0.ocia51_inst.xhdl_trigger.Trigger_xhdl[118] / Q         40                              
+sys_0.Core8051s_00.oci1_trace0.ocia51_inst.xhdl_trigger.Trigger_xhdl[157] / Q         26                              
+sys_0.Core8051s_00.oci1_trace0.ocia51_inst.xhdl_trigger.Trigger_xhdl[158] / Q         40                              
+sys_0.Core8051s_00.MAIN8051_inst.U_CPU.instrreg[4] / Q                                27                              
+NSYSRESET_pad / Y                                                                     203 : 202 asynchronous set/reset
+sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.memaddr_i[0] / Q                           45                              
+sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.memaddr_i[1] / Q                           45                              
+sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.memaddr_i[2] / Q                           86                              
+sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.memaddr_i[3] / Q                           86                              
+sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.memaddr_i[4] / Q                           62                              
+sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.memaddr_i[5] / Q                           45                              
+sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.memaddr_i[6] / Q                           45                              
+sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.memaddr_i[7] / Q                           44                              
+sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.memaddr_i[8] / Q                           47                              
+sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.memaddr_i[9] / Q                           45                              
+sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.memaddr_i[10] / Q                          45                              
+sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.memaddr_i[11] / Q                          45                              
+sys_0.Core8051s_00.memdatai_8051[0] / Y                                               37                              
+sys_0.Core8051s_00.memdatai_8051[1] / Y                                               34                              
+sys_0.Core8051s_00.memdatai_8051[2] / Y                                               29                              
+sys_0.Core8051s_00.memdatai_8051[3] / Y                                               37                              
+sys_0.Core8051s_00.memdatai_8051[4] / Y                                               35                              
+sys_0.Core8051s_00.memdatai_8051[5] / Y                                               42                              
+sys_0.Core8051s_00.memdatai_8051[6] / Y                                               41                              
+sys_0.Core8051s_00.memdatai_8051[7] / Y                                               41                              
+sys_0.Core8051s_00.MAIN8051_inst.U_CPU.un2_c1_0_a2 / Y                                66                              
+sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.rel_m_7[7] / Y                             25                              
+sys_0.CoreTimer_00.Countlde_0_0 / Y                                                   32                              
+sys_0.CoreTimer_00.un1_loadenreg_0_s_0 / Y                                            32                              
+sys_0.Core8051s_00.MAIN8051_inst.U_CPU.un2_c2_0_a2 / Y                                38                              
+sys_0.Core8051s_00.MAIN8051_inst.U_RAMSFRCTRL.un52_spince / Y                         28                              
+sys_0.Core8051s_00.MAIN8051_inst.u_instrdec.INCL_MUL_DIV_DA_11.un567_decvec_i / Y     41                              
+sys_0.Core8051s_00.oci1_trace0.ocia51_inst.apa1.jtagapa_inst.SR_4_sqmuxa / Y          40                              
+sys_0.Core8051s_00.oci1_trace0.ocia51_inst.apa1.jtagapa_inst.SR_5_sqmuxa / Y          40                              
+sys_0.Core8051s_00.oci1_trace0.ocia51_inst.apa1.jtagapa_inst.SR_29[38] / Y            36                              
+sys_0.Core8051s_00.oci1_trace0.ocia51_inst.apa1.jtagapa_inst.SR_6_sqmuxa / Y          40                              
+sys_0.Core8051s_00.oci1_trace0.ocia51_inst.apa1.jtagapa_inst.SR_7_sqmuxa / Y          40                              
+sys_0.CoreAPB3_00.PSELECT_0_a4[2] / Y                                                 33                              
+sys_0.Core8051s_00.oci1_trace0.ocia51_inst.xhdl_trigger.un1_jxdr / Y                  59                              
+sys_0.CoreTimer_00.PrdataNext_0_iv_0_i_o7[3] / Y                                      31                              
+sys_0.Core8051s_00.oci1_trace0.ocia51_inst.xhdl_trigger.Trigger_xhdl_220_e / Y        27                              
+sys_0.Core8051s_00.oci1_trace0.ocia51_inst.xhdl_trigger.Trigger_xhdl_259_e / Y        27                              
+sys_0.Core8051s_00.oci1_trace0.ocia51_inst.xhdl_trigger.Trigger_xhdl_299_e / Y        26                              
+sys_0.Core8051s_00.oci1_trace0.ocia51_inst.xhdl_trigger.Trigger_xhdl_339_e / Y        25                              
+======================================================================================================================
+
+@N: FP130 |Promoting Net NSYSRESET_c on CLKBUF  NSYSRESET_pad 
+@N: FP130 |Promoting Net sys_0.Core8051s_00_PRESETN on CLKINT  I_275 
+@N: FP130 |Promoting Net SRAM_ADDR_c[2] on CLKINT  I_276 
+@N: FP130 |Promoting Net SRAM_ADDR_c[3] on CLKINT  I_277 
+@N: FP130 |Promoting Net sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.udrck on CLKINT  sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.udrck 
+Replicating Combinational Instance sys_0.Core8051s_00.oci1_trace0.ocia51_inst.xhdl_trigger.Trigger_xhdl_339_e, fanout 25 segments 2
+Replicating Combinational Instance sys_0.Core8051s_00.oci1_trace0.ocia51_inst.xhdl_trigger.Trigger_xhdl_299_e, fanout 26 segments 2
+Replicating Combinational Instance sys_0.Core8051s_00.oci1_trace0.ocia51_inst.xhdl_trigger.Trigger_xhdl_259_e, fanout 27 segments 2
+Replicating Combinational Instance sys_0.Core8051s_00.oci1_trace0.ocia51_inst.xhdl_trigger.Trigger_xhdl_220_e, fanout 27 segments 2
+Replicating Combinational Instance sys_0.CoreTimer_00.PrdataNext_0_iv_0_i_o7[3], fanout 31 segments 2
+Replicating Combinational Instance sys_0.Core8051s_00.oci1_trace0.ocia51_inst.xhdl_trigger.un1_jxdr, fanout 63 segments 3
+Replicating Combinational Instance sys_0.CoreAPB3_00.PSELECT_0_a4[2], fanout 33 segments 2
+Replicating Combinational Instance sys_0.Core8051s_00.oci1_trace0.ocia51_inst.apa1.jtagapa_inst.SR_7_sqmuxa, fanout 40 segments 2
+Replicating Combinational Instance sys_0.Core8051s_00.oci1_trace0.ocia51_inst.apa1.jtagapa_inst.SR_6_sqmuxa, fanout 40 segments 2
+Replicating Combinational Instance sys_0.Core8051s_00.oci1_trace0.ocia51_inst.apa1.jtagapa_inst.SR_29[38], fanout 36 segments 2
+Replicating Combinational Instance sys_0.Core8051s_00.oci1_trace0.ocia51_inst.apa1.jtagapa_inst.SR_5_sqmuxa, fanout 40 segments 2
+Replicating Combinational Instance sys_0.Core8051s_00.oci1_trace0.ocia51_inst.apa1.jtagapa_inst.SR_4_sqmuxa, fanout 40 segments 2
+Replicating Combinational Instance sys_0.Core8051s_00.MAIN8051_inst.u_instrdec.INCL_MUL_DIV_DA_11.un567_decvec_i, fanout 41 segments 2
+Replicating Combinational Instance sys_0.Core8051s_00.MAIN8051_inst.U_RAMSFRCTRL.un52_spince, fanout 28 segments 2
+Replicating Combinational Instance sys_0.Core8051s_00.MAIN8051_inst.U_CPU.un2_c2_0_a2, fanout 38 segments 2
+Replicating Combinational Instance sys_0.CoreTimer_00.un1_loadenreg_0_s_0, fanout 32 segments 2
+Replicating Combinational Instance sys_0.CoreTimer_00.Countlde_0_0, fanout 32 segments 2
+Replicating Combinational Instance sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.rel_m_7[7], fanout 25 segments 2
+Replicating Combinational Instance sys_0.Core8051s_00.MAIN8051_inst.U_CPU.un2_c1_0_a2, fanout 66 segments 3
+Replicating Combinational Instance sys_0.Core8051s_00.memdatai_8051[7], fanout 41 segments 2
+Replicating Combinational Instance sys_0.Core8051s_00.memdatai_8051[6], fanout 41 segments 2
+Replicating Combinational Instance sys_0.Core8051s_00.memdatai_8051[5], fanout 42 segments 2
+Replicating Combinational Instance sys_0.Core8051s_00.memdatai_8051[4], fanout 35 segments 2
+Replicating Combinational Instance sys_0.Core8051s_00.memdatai_8051[3], fanout 37 segments 2
+Replicating Combinational Instance sys_0.Core8051s_00.memdatai_8051[2], fanout 29 segments 2
+Replicating Combinational Instance sys_0.Core8051s_00.memdatai_8051[1], fanout 34 segments 2
+Replicating Combinational Instance sys_0.Core8051s_00.memdatai_8051[0], fanout 37 segments 2
+Replicating Sequential Instance sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.memaddr_i[11], fanout 45 segments 2
+Replicating Sequential Instance sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.memaddr_i[10], fanout 45 segments 2
+Replicating Sequential Instance sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.memaddr_i[9], fanout 45 segments 2
+Replicating Sequential Instance sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.memaddr_i[8], fanout 47 segments 2
+Replicating Sequential Instance sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.memaddr_i[7], fanout 44 segments 2
+Replicating Sequential Instance sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.memaddr_i[6], fanout 45 segments 2
+Replicating Sequential Instance sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.memaddr_i[5], fanout 45 segments 2
+Replicating Sequential Instance sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.memaddr_i[4], fanout 63 segments 3
+Replicating Sequential Instance sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.memaddr_i[1], fanout 45 segments 2
+Replicating Sequential Instance sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.memaddr_i[0], fanout 45 segments 2
+Replicating Sequential Instance sys_0.Core8051s_00.MAIN8051_inst.U_CPU.instrreg[4], fanout 27 segments 2
+Replicating Sequential Instance sys_0.Core8051s_00.oci1_trace0.ocia51_inst.xhdl_trigger.Trigger_xhdl[158], fanout 40 segments 2
+Replicating Sequential Instance sys_0.Core8051s_00.oci1_trace0.ocia51_inst.xhdl_trigger.Trigger_xhdl[157], fanout 26 segments 2
+Replicating Sequential Instance sys_0.Core8051s_00.oci1_trace0.ocia51_inst.xhdl_trigger.Trigger_xhdl[118], fanout 40 segments 2
+Replicating Sequential Instance sys_0.Core8051s_00.oci1_trace0.ocia51_inst.xhdl_trigger.Trigger_xhdl[78], fanout 41 segments 2
+Replicating Sequential Instance sys_0.Core8051s_00.oci1_trace0.ocia51_inst.xhdl_trigger.Trigger_xhdl[77], fanout 25 segments 2
+Replicating Sequential Instance sys_0.Core8051s_00.oci1_trace0.ocia51_inst.xhdl_trigger.Trigger_xhdl[38], fanout 40 segments 2
+Buffering sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.urstb, fanout 51 segments 3
+Replicating Sequential Instance sys_0.CoreUARTapb_00.uUART.make_CLOCK_GEN.baud_clock_int, fanout 25 segments 2
+Replicating Combinational Instance sys_0.CoreTimer_00.un5_loaden_0_a7, fanout 33 segments 2
+Replicating Sequential Instance sys_0.Core8051s_00.MAIN8051_inst.U_RAMSFRCTRL.ram_sfr_address[2], fanout 25 segments 2
+Replicating Sequential Instance sys_0.Core8051s_00.MAIN8051_inst.U_RAMSFRCTRL.ram_sfr_address[1], fanout 25 segments 2
+Replicating Sequential Instance sys_0.Core8051s_00.MAIN8051_inst.U_RAMSFRCTRL.ram_sfr_address[0], fanout 49 segments 3
+Replicating Sequential Instance sys_0.Core8051s_00.MAIN8051_inst.U_ALU.acc[4], fanout 25 segments 2
+Replicating Sequential Instance sys_0.Core8051s_00.MAIN8051_inst.U_ALU.acc[3], fanout 25 segments 2
+Replicating Sequential Instance sys_0.Core8051s_00.MAIN8051_inst.U_ALU.acc[2], fanout 27 segments 2
+Replicating Sequential Instance sys_0.Core8051s_00.MAIN8051_inst.U_ALU.acc[1], fanout 27 segments 2
+Replicating Sequential Instance sys_0.Core8051s_00.MAIN8051_inst.U_ALU.acc[0], fanout 27 segments 2
+Finished technology mapping (Time elapsed 0h:00m:32s; Memory used current: 96MB peak: 100MB)
+
+Finished technology timing optimizations and critical path resynthesis (Time elapsed 0h:00m:33s; Memory used current: 96MB peak: 100MB)
+
+
+Added 2 Buffers
+Added 58 Cells via replication
+	Added 28 Sequential Cells via replication
+	Added 30 Combinational Cells via replication
+Finished restoring hierarchy (Time elapsed 0h:00m:34s; Memory used current: 98MB peak: 100MB)
+
+Writing Analyst data base C:\Actelprj\AFS_ADV_KIT_8051\synthesis\top_8051.srm
+Finished Writing Netlist Databases (Time elapsed 0h:00m:35s; Memory used current: 95MB peak: 100MB)
+
+Writing EDIF Netlist and constraint files
+D-2009.12A
+Finished Writing EDIF Netlist and constraint files (Time elapsed 0h:00m:38s; Memory used current: 99MB peak: 101MB)
+
+@W: MT420 |Found inferred clock top_8051|DebugIf_TCK with period 100.00ns. A user-defined clock should be declared on object "p:DebugIf_TCK"
+
+@W: MT420 |Found inferred clock top_8051|PLL_50Mh_12Mh_0.PLL_50Mh_12Mh_0_GLA_inferred_clock with period 100.00ns. A user-defined clock should be declared on object "n:PLL_50Mh_12Mh_0_GLA"
+
+@W: MT420 |Found inferred clock jtagapa|udrck with period 100.00ns. A user-defined clock should be declared on object "n:sys_0.Core8051s_00.oci1_trace0.ocia51_inst.apa1.jtagapa_inst.udrck"
+
+
+
+##### START OF TIMING REPORT #####[
+# Timing Report written on Tue Apr 27 15:47:09 2010
+#
+
+
+Top view:               top_8051
+Library name:           fusion
+Operating conditions:   COMWC-1 ( T = 70.0, V = 1.42, P = 1.48, tree_type = balanced_tree )
+Requested Frequency:    10.0 MHz
+Wire load mode:         top
+Wire load model:        fusion
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |This timing report estimates place and route data. Please look at the place and route timing report for final timing..
+
+@N: MT322 |Clock constraints cover only FF-to-FF paths associated with the clock..
+
+
+
+Performance Summary 
+*******************
+
+
+Worst slack in design: 31.477
+
+                                                                Requested     Estimated     Requested     Estimated                Clock        Clock              
+Starting Clock                                                  Frequency     Frequency     Period        Period        Slack      Type         Group              
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+jtagapa|udrck                                                   10.0 MHz      84.6 MHz      100.000       11.827        88.173     inferred     Inferred_clkgroup_1
+top_8051|PLL_50Mh_12Mh_0.PLL_50Mh_12Mh_0_GLA_inferred_clock     10.0 MHz      20.7 MHz      100.000       48.355        31.477     inferred     Inferred_clkgroup_2
+===================================================================================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                                                                                                                    |    rise  to  rise    |    fall  to  fall   |    rise  to  fall    |    fall  to  rise  
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                                                     Ending                                                       |  constraint  slack   |  constraint  slack  |  constraint  slack   |  constraint  slack 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+top_8051|DebugIf_TCK                                         jtagapa|udrck                                                |  No paths    -       |  No paths    -      |  No paths    -       |  Diff grp    -     
+top_8051|DebugIf_TCK                                         top_8051|PLL_50Mh_12Mh_0.PLL_50Mh_12Mh_0_GLA_inferred_clock  |  No paths    -       |  No paths    -      |  No paths    -       |  Diff grp    -     
+jtagapa|udrck                                                top_8051|DebugIf_TCK                                         |  No paths    -       |  No paths    -      |  Diff grp    -       |  No paths    -     
+jtagapa|udrck                                                jtagapa|udrck                                                |  100.000     88.173  |  No paths    -      |  No paths    -       |  No paths    -     
+jtagapa|udrck                                                top_8051|PLL_50Mh_12Mh_0.PLL_50Mh_12Mh_0_GLA_inferred_clock  |  Diff grp    -       |  No paths    -      |  No paths    -       |  No paths    -     
+top_8051|PLL_50Mh_12Mh_0.PLL_50Mh_12Mh_0_GLA_inferred_clock  jtagapa|udrck                                                |  Diff grp    -       |  No paths    -      |  No paths    -       |  No paths    -     
+top_8051|PLL_50Mh_12Mh_0.PLL_50Mh_12Mh_0_GLA_inferred_clock  top_8051|PLL_50Mh_12Mh_0.PLL_50Mh_12Mh_0_GLA_inferred_clock  |  100.000     51.645  |  No paths    -      |  50.000      31.477  |  50.000      48.682
+===================================================================================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+		No IO constraint found 
+
+
+
+====================================
+Detailed Report for Clock: jtagapa|udrck
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                                            Starting                                           Arrival           
+Instance                                                                    Reference         Type         Pin     Net         Time        Slack 
+                                                                            Clock                                                                
+-------------------------------------------------------------------------------------------------------------------------------------------------
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.IR_xhdl[7]   jtagapa|udrck     DFN1E1C0     Q       IR[7]       0.627       88.173
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.IR_xhdl[6]   jtagapa|udrck     DFN1E1C0     Q       IR[6]       0.627       88.234
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.IR_xhdl[5]   jtagapa|udrck     DFN1E1C0     Q       IR[5]       0.627       88.328
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.IR_xhdl[0]   jtagapa|udrck     DFN1E1C0     Q       IR[0]       0.627       89.414
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.IR_xhdl[1]   jtagapa|udrck     DFN1E1P0     Q       IR[1]       0.627       89.510
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.IR_xhdl[3]   jtagapa|udrck     DFN1E1C0     Q       IR[3]       0.627       93.277
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.SR[0]        jtagapa|udrck     DFN1C0       Q       JDO[0]      0.627       93.289
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.SR[24]       jtagapa|udrck     DFN1C0       Q       JDO[24]     0.627       93.456
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.SR[1]        jtagapa|udrck     DFN1C0       Q       JDO[1]      0.627       93.533
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.SR[8]        jtagapa|udrck     DFN1C0       Q       JDO[8]      0.627       93.690
+=================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                                                        Starting                                           Required           
+Instance                                                                Reference         Type       Pin     Net           Time         Slack 
+                                                                        Clock                                                                 
+----------------------------------------------------------------------------------------------------------------------------------------------
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.SR[28]   jtagapa|udrck     DFN1C0     D       SR_29[28]     99.512       88.173
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.SR[29]   jtagapa|udrck     DFN1C0     D       SR_29[29]     99.512       88.173
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.SR[30]   jtagapa|udrck     DFN1C0     D       SR_29[30]     99.512       88.173
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.SR[31]   jtagapa|udrck     DFN1C0     D       SR_29[31]     99.512       88.173
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.SR[9]    jtagapa|udrck     DFN1C0     D       SR_29[9]      99.512       88.401
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.SR[24]   jtagapa|udrck     DFN1C0     D       SR_29[24]     99.512       88.401
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.SR[25]   jtagapa|udrck     DFN1C0     D       SR_29[25]     99.512       88.401
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.SR[27]   jtagapa|udrck     DFN1C0     D       SR_29[27]     99.512       88.401
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.SR[32]   jtagapa|udrck     DFN1C0     D       SR_29[32]     99.512       88.401
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.SR[36]   jtagapa|udrck     DFN1C0     D       SR_29[36]     99.512       88.401
+==============================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      100.000
+    - Setup time:                            0.488
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         99.512
+
+    - Propagation time:                      11.339
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 88.173
+
+    Number of logic level(s):                7
+    Starting point:                          sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.IR_xhdl[7] / Q
+    Ending point:                            sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.SR[28] / D
+    The start point is clocked by            jtagapa|udrck [rising] on pin CLK
+    The end   point is clocked by            jtagapa|udrck [rising] on pin CLK
+
+Instance / Net                                                                                   Pin      Pin               Arrival     No. of    
+Name                                                                                Type         Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------------------------------------------
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.IR_xhdl[7]           DFN1E1C0     Q        Out     0.627     0.627       -         
+IR[7]                                                                               Net          -        -       1.454     -           10        
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.xhdl_trigger.un1_jxdr_0                 OR3B         B        In      -         2.081       -         
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.xhdl_trigger.un1_jxdr_0                 OR3B         Y        Out     0.516     2.597       -         
+un1_jxdr_0                                                                          Net          -        -       1.395     -           8         
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.xhdl_UJTAG_RNI8FVI   NOR3         C        In      -         3.992       -         
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.xhdl_UJTAG_RNI8FVI   NOR3         Y        Out     0.581     4.573       -         
+SR_4_sqmuxa_0                                                                       Net          -        -       1.007     -           4         
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.xhdl_UJTAG_RNIT61U   NOR2A        A        In      -         5.580       -         
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.xhdl_UJTAG_RNIT61U   NOR2A        Y        Out     0.534     6.114       -         
+SR_7_sqmuxa                                                                         Net          -        -       2.003     -           20        
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.SR_RNO_6[28]         OR2B         A        In      -         8.117       -         
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.SR_RNO_6[28]         OR2B         Y        Out     0.438     8.554       -         
+Trigger_m_i[148]                                                                    Net          -        -       0.274     -           1         
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.SR_RNO_3[28]         NOR3C        C        In      -         8.828       -         
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.SR_RNO_3[28]         NOR3C        Y        Out     0.566     9.394       -         
+SR_29_1_iv_2[28]                                                                    Net          -        -       0.274     -           1         
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.SR_RNO_0[28]         NOR3C        C        In      -         9.668       -         
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.SR_RNO_0[28]         NOR3C        Y        Out     0.566     10.234      -         
+SR_29_1_iv_3[28]                                                                    Net          -        -       0.274     -           1         
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.SR_RNO[28]           AO1B         C        In      -         10.508      -         
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.SR_RNO[28]           AO1B         Y        Out     0.558     11.065      -         
+SR_29[28]                                                                           Net          -        -       0.274     -           1         
+sys_0.Core8051s_00.oci1_trace0\.ocia51_inst.apa1\.jtagapa_inst.SR[28]               DFN1C0       D        In      -         11.339      -         
+==================================================================================================================================================
+Total path delay (propagation time + setup) of 11.827 is 4.874(41.2%) logic and 6.953(58.8%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+
+====================================
+Detailed Report for Clock: top_8051|PLL_50Mh_12Mh_0.PLL_50Mh_12Mh_0_GLA_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                                     Starting                                                                                                 Arrival           
+Instance                                                             Reference                                                       Type         Pin     Net                 Time        Slack 
+                                                                     Clock                                                                                                                      
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+sys_0.Core8051s_00.MAIN8051_inst.U_CPU.instrreg[3]                   top_8051|PLL_50Mh_12Mh_0.PLL_50Mh_12Mh_0_GLA_inferred_clock     DFN1E1C0     Q       instr[3]            0.627       31.477
+sys_0.Core8051s_00.MAIN8051_inst.U_CPU.instrreg[2]                   top_8051|PLL_50Mh_12Mh_0.PLL_50Mh_12Mh_0_GLA_inferred_clock     DFN1E1C0     Q       instr[2]            0.627       31.990
+sys_0.Core8051s_00.MAIN8051_inst.U_CPU.instrreg[5]                   top_8051|PLL_50Mh_12Mh_0.PLL_50Mh_12Mh_0_GLA_inferred_clock     DFN1E1C0     Q       instr[5]            0.627       33.338
+sys_0.Core8051s_00.MAIN8051_inst.U_CPU.instrreg[7]                   top_8051|PLL_50Mh_12Mh_0.PLL_50Mh_12Mh_0_GLA_inferred_clock     DFN1E1C0     Q       instr[7]            0.627       33.658
+sys_0.Core8051s_00.MAIN8051_inst.U_CPU.instrreg[1]                   top_8051|PLL_50Mh_12Mh_0.PLL_50Mh_12Mh_0_GLA_inferred_clock     DFN1E1C0     Q       instr[1]            0.494       34.556
+sys_0.Core8051s_00.MAIN8051_inst.U_CPU.instrreg[6]                   top_8051|PLL_50Mh_12Mh_0.PLL_50Mh_12Mh_0_GLA_inferred_clock     DFN1E1C0     Q       instr[6]            0.494       34.610
+sys_0.Core8051s_00.MAIN8051_inst.U_CPU.instrreg[0]                   top_8051|PLL_50Mh_12Mh_0.PLL_50Mh_12Mh_0_GLA_inferred_clock     DFN1E1C0     Q       instr[0]            0.627       34.624
+sys_0.Core8051s_00.MAIN8051_inst.U_CPU.instrreg[4]                   top_8051|PLL_50Mh_12Mh_0.PLL_50Mh_12Mh_0_GLA_inferred_clock     DFN1E1C0     Q       instr[4]            0.627       34.646
+sys_0.Core8051s_00.MAIN8051_inst.U_CPU.instrreg_0[4]                 top_8051|PLL_50Mh_12Mh_0.PLL_50Mh_12Mh_0_GLA_inferred_clock     DFN1E1C0     Q       instr_0[4]          0.627       37.336
+sys_0.Core8051s_00.MAIN8051_inst.U_RAMSFRCTRL.ram_sfr_address[6]     top_8051|PLL_50Mh_12Mh_0.PLL_50Mh_12Mh_0_GLA_inferred_clock     DFN1C0       Q       sfraddr_8051[6]     0.627       42.512
+================================================================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                                               Starting                                                                                                              Required           
+Instance                                                       Reference                                                       Type       Pin      Net                               Time         Slack 
+                                                               Clock                                                                                                                                    
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+sys_0.Core8051s_00.MAIN8051_inst.U_PMU.clkper_gate_pre         top_8051|PLL_50Mh_12Mh_0.PLL_50Mh_12Mh_0_GLA_inferred_clock     DFN0P0     D        N_9                               49.394       31.477
+sys_0.Core8051s_00.MAIN8051_inst.U_PMU.nrsto                   top_8051|PLL_50Mh_12Mh_0.PLL_50Mh_12Mh_0_GLA_inferred_clock     DFN0       D        mempsrdrst_i                      49.394       47.733
+sys_0.Core8051s_00.MAIN8051_inst.U_PMU.clkper_gate             top_8051|PLL_50Mh_12Mh_0.PLL_50Mh_12Mh_0_GLA_inferred_clock     DFN1P0     D        clkper_gate_pre                   49.512       48.682
+sys_0.Core8051s_00.MAIN8051_inst.U_RAMSFRCTRL.sp[7]            top_8051|PLL_50Mh_12Mh_0.PLL_50Mh_12Mh_0_GLA_inferred_clock     DFN1C0     D        sp_5[7]                           99.542       51.645
+sys_0.Core8051s_00.internal_ram.RAM256X8_R0C0                  top_8051|PLL_50Mh_12Mh_0.PLL_50Mh_12Mh_0_GLA_inferred_clock     RAM4K9     BLKB     WEBP                              99.780       52.529
+sys_0.Core8051s_00.MAIN8051_inst.U_RAMSFRCTRL.sp[6]            top_8051|PLL_50Mh_12Mh_0.PLL_50Mh_12Mh_0_GLA_inferred_clock     DFN1C0     D        sp_5[6]                           99.542       52.822
+sys_0.Core8051s_00.MAIN8051_inst.U_RAMSFRCTRL.use_bypass       top_8051|PLL_50Mh_12Mh_0.PLL_50Mh_12Mh_0_GLA_inferred_clock     DFN1C0     D        ram_sfr_address_RNIA96RJB1[4]     99.542       53.002
+sys_0.Core8051s_00.MAIN8051_inst.U_RAMSFRCTRL.sp[5]            top_8051|PLL_50Mh_12Mh_0.PLL_50Mh_12Mh_0_GLA_inferred_clock     DFN1C0     D        sp_5[5]                           99.542       53.070
+sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.stretchcount[1]     top_8051|PLL_50Mh_12Mh_0.PLL_50Mh_12Mh_0_GLA_inferred_clock     DFN1C0     D        N_31                              99.512       53.127
+sys_0.Core8051s_00.MAIN8051_inst.U_MEMCTRL.stretchcount[0]     top_8051|PLL_50Mh_12Mh_0.PLL_50Mh_12Mh_0_GLA_inferred_clock     DFN1C0     D        stretchcount_14[0]                99.542       53.177
+========================================================================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      50.000
+    - Setup time:                            0.606
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         49.394
+
+    - Propagation time:                      17.917
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     31.477
+
+    Number of logic level(s):                9
+    Starting point:                          sys_0.Core8051s_00.MAIN8051_inst.U_CPU.instrreg[3] / Q
+    Ending point:                            sys_0.Core8051s_00.MAIN8051_inst.U_PMU.clkper_gate_pre / D
+    The start point is clocked by            top_8051|PLL_50Mh_12Mh_0.PLL_50Mh_12Mh_0_GLA_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            top_8051|PLL_50Mh_12Mh_0.PLL_50Mh_12Mh_0_GLA_inferred_clock [falling] on pin CLK
+
+Instance / Net                                                                     Pin      Pin               Arrival     No. of    
+Name                                                                  Type         Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------------------------------------------
+sys_0.Core8051s_00.MAIN8051_inst.U_CPU.instrreg[3]                    DFN1E1C0     Q        Out     0.627     0.627       -         
+instr[3]                                                              Net          -        -       2.026     -           21        
+sys_0.Core8051s_00.MAIN8051_inst.U_RAMSFRCTRL.un43_spince_3           OR2          A        In      -         2.653       -         
+sys_0.Core8051s_00.MAIN8051_inst.U_RAMSFRCTRL.un43_spince_3           OR2          Y        Out     0.432     3.085       -         
+un2_spdece_4                                                          Net          -        -       1.849     -           16        
+sys_0.Core8051s_00.MAIN8051_inst.u_instrdec.un2331_decvec_i_o2        OR2A         B        In      -         4.934       -         
+sys_0.Core8051s_00.MAIN8051_inst.u_instrdec.un2331_decvec_i_o2        OR2A         Y        Out     0.550     5.484       -         
+N_218                                                                 Net          -        -       1.089     -           5         
+sys_0.Core8051s_00.MAIN8051_inst.u_instrdec.un843_decvec_i_o2         NOR2         A        In      -         6.572       -         
+sys_0.Core8051s_00.MAIN8051_inst.u_instrdec.un843_decvec_i_o2         NOR2         Y        Out     0.432     7.004       -         
+N_226                                                                 Net          -        -       1.849     -           16        
+sys_0.Core8051s_00.MAIN8051_inst.u_instrdec.un2267_decvec_11_0_a2     OR3C         C        In      -         8.853       -         
+sys_0.Core8051s_00.MAIN8051_inst.u_instrdec.un2267_decvec_11_0_a2     OR3C         Y        Out     0.566     9.419       -         
+instr_dec_i[55]                                                       Net          -        -       1.420     -           9         
+sys_0.Core8051s_00.MAIN8051_inst.U_ALU.aluresult_sn_m1_0_0            AX1E         A        In      -         10.839      -         
+sys_0.Core8051s_00.MAIN8051_inst.U_ALU.aluresult_sn_m1_0_0            AX1E         Y        Out     0.825     11.664      -         
+aluresult_sn_N_2                                                      Net          -        -       1.395     -           8         
+sys_0.Core8051s_00.MAIN8051_inst.U_ALU.b1_RNI9N7F4[1]                 MX2          S        In      -         13.059      -         
+sys_0.Core8051s_00.MAIN8051_inst.U_ALU.b1_RNI9N7F4[1]                 MX2          Y        Out     0.337     13.396      -         
+aluresult[1]                                                          Net          -        -       0.274     -           1         
+sys_0.Core8051s_00.MAIN8051_inst.U_RAMSFRCTRL.datareg_RNIQDNK4[1]     MX2C         B        In      -         13.670      -         
+sys_0.Core8051s_00.MAIN8051_inst.U_RAMSFRCTRL.datareg_RNIQDNK4[1]     MX2C         Y        Out     0.486     14.156      -         
+N_151                                                                 Net          -        -       0.274     -           1         
+sys_0.Core8051s_00.MAIN8051_inst.U_RAMSFRCTRL.db_accreg_RNIN8RR4      MX2B         A        In      -         14.430      -         
+sys_0.Core8051s_00.MAIN8051_inst.U_RAMSFRCTRL.db_accreg_RNIN8RR4      MX2B         Y        Out     0.484     14.913      -         
+sfrdatao_8051[1]                                                      Net          -        -       1.964     -           19        
+sys_0.Core8051s_00.MAIN8051_inst.U_PMU.clkper_gate_pre_RNO            OA1C         B        In      -         16.878      -         
+sys_0.Core8051s_00.MAIN8051_inst.U_PMU.clkper_gate_pre_RNO            OA1C         Y        Out     0.766     17.644      -         
+N_9                                                                   Net          -        -       0.274     -           1         
+sys_0.Core8051s_00.MAIN8051_inst.U_PMU.clkper_gate_pre                DFN0P0       D        In      -         17.917      -         
+====================================================================================================================================
+Total path delay (propagation time + setup) of 18.523 is 6.112(33.0%) logic and 12.412(67.0%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+##### END OF TIMING REPORT #####]
+
+--------------------------------------------------------------------------------
+Target Part: M1AFS1500_FBGA256_-1
+Report for cell top_8051.def_arch
+  Core Cell usage:
+              cell count     area count*area
+              AND2    57      1.0       57.0
+             AND2A    18      1.0       18.0
+              AND3    47      1.0       47.0
+               AO1    37      1.0       37.0
+              AO13    14      1.0       14.0
+              AO16     3      1.0        3.0
+              AO17     8      1.0        8.0
+              AO18     8      1.0        8.0
+              AO1A    32      1.0       32.0
+              AO1B    73      1.0       73.0
+              AO1C    29      1.0       29.0
+              AO1D    18      1.0       18.0
+              AOI1    15      1.0       15.0
+             AOI1A    35      1.0       35.0
+             AOI1B   198      1.0      198.0
+              AOI5     1      1.0        1.0
+               AX1     2      1.0        2.0
+              AX1A     8      1.0        8.0
+              AX1B    23      1.0       23.0
+              AX1C     9      1.0        9.0
+              AX1D    15      1.0       15.0
+              AX1E    13      1.0       13.0
+              AXO6     1      1.0        1.0
+             AXOI1     1      1.0        1.0
+             AXOI4     1      1.0        1.0
+             AXOI5     1      1.0        1.0
+             AXOI7     2      1.0        2.0
+              BUFF     4      1.0        4.0
+            CLKINT     4      0.0        0.0
+               GND    32      0.0        0.0
+               INV    10      1.0       10.0
+              MAJ3     9      1.0        9.0
+              MIN3    10      1.0       10.0
+               MX2   330      1.0      330.0
+              MX2A    58      1.0       58.0
+              MX2B   144      1.0      144.0
+              MX2C   334      1.0      334.0
+             NAND2    22      1.0       22.0
+              NOR2   157      1.0      157.0
+             NOR2A   227      1.0      227.0
+             NOR2B   170      1.0      170.0
+              NOR3    31      1.0       31.0
+             NOR3A    87      1.0       87.0
+             NOR3B    61      1.0       61.0
+             NOR3C   236      1.0      236.0
+               OA1    42      1.0       42.0
+              OA1A    53      1.0       53.0
+              OA1B    15      1.0       15.0
+              OA1C    23      1.0       23.0
+              OAI1    19      1.0       19.0
+               OR2   149      1.0      149.0
+              OR2A   319      1.0      319.0
+              OR2B   527      1.0      527.0
+               OR3    49      1.0       49.0
+              OR3A    68      1.0       68.0
+              OR3B    73      1.0       73.0
+              OR3C   149      1.0      149.0
+               PLL     1      0.0        0.0
+            PLLINT     1      0.0        0.0
+               VCC    32      0.0        0.0
+               XA1    33      1.0       33.0
+              XA1A    34      1.0       34.0
+              XA1B    12      1.0       12.0
+              XA1C     6      1.0        6.0
+              XAI1     9      1.0        9.0
+             XAI1A     8      1.0        8.0
+             XNOR2   196      1.0      196.0
+             XNOR3    14      1.0       14.0
+               XO1     4      1.0        4.0
+              XO1A     7      1.0        7.0
+              XOR2   138      1.0      138.0
+              XOR3    14      1.0       14.0
+
+
+              DFN0     1      1.0        1.0
+            DFN0P0     1      1.0        1.0
+              DFN1     3      1.0        3.0
+            DFN1C0   300      1.0      300.0
+            DFN1E0     1      1.0        1.0
+          DFN1E0C0   189      1.0      189.0
+          DFN1E0P0     3      1.0        3.0
+          DFN1E1C0   286      1.0      286.0
+          DFN1E1P0    35      1.0       35.0
+            DFN1P0    13      1.0       13.0
+            RAM4K9    18      0.0        0.0
+                   -----          ----------
+             TOTAL  5440              5352.0
+
+
+  IO Cell usage:
+              cell count
+             BIBUF     8
+            CLKBUF     1
+             INBUF    10
+            OUTBUF    35
+             UJTAG     1
+                   -----
+             TOTAL    55
+
+
+Core Cells         : 5352 of 38400 (14%)
+IO Cells           : 55 of 252 (22%)
+
+  RAM/ROM Usage Summary
+Block Rams : 18 of 60 (30%)
+
+Mapper successful!
+Process took 0h:00m:50s realtime, 0h:00m:39s cputime
+# Tue Apr 27 15:47:09 2010
+
+###########################################################]

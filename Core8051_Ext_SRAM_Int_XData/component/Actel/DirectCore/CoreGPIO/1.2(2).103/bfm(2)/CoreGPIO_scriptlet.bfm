@@ -1,0 +1,11 @@
+#-----------------------------------------------------------
+# Resource: CoreGPIO
+# Instance: VAR_resource
+#-----------------------------------------------------------
+# Write 0x99 to CoreGPIO register (aliased throughout the full APB slot) - e.g. use offset 0x74
+write   b   VAR_resource    0x74 0x99;
+
+# read the CoreGPIO register (from any location in slot) - e.g use offset 0x82
+# Don't know what this read value will be - depends on what is connected
+# to CoreGPIO inputs. If nothing connected, then it will read zz.
+read    b   VAR_resource    0x80;

@@ -1,0 +1,11 @@
+<!--
+	Actel SoftConsole IDE
+	Default c8051-elf memory map for actel-map tool.
+-->
+<board>
+ <memory-map>
+    <memory-device address="0x800000" size="64k" type="ram">
+      <description>CODE</description>
+    </memory-device>
+  </memory-map>
+</board>

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Resource: CoreTimer
+# Instance: VAR_resource
+#-----------------------------------------------------------
+# Write 0x9876 to timer load value register
+write   h   VAR_resource    0x00 0x9876;
+
+# read timer current value register
+read    h   VAR_resource    0x04;
+
+# check timer load value register
+readcheck h VAR_resource    0x00 0x9876; # Expect value 0x9876

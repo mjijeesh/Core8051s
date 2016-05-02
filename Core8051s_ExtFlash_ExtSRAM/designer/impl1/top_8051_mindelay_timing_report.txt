@@ -1,0 +1,895 @@
+Timing Report Min Delay Analysis
+
+SmartTime Version v11.7
+Microsemi Corporation - Microsemi Libero Software Release v11.7 (Version 11.7.0.119)
+Date: Mon May 02 15:11:17 2016
+
+
+Design: top_8051
+Family: Fusion
+Die: M1AFS1500
+Package: 484 FBGA
+Temperature Range: 0 - 70 C
+Voltage Range: 1.425 - 1.575 V
+Speed Grade: -2
+Design State: Post-Layout
+Data source: Silicon verified
+Min Operating Conditions: BEST - 1.575 V - 0 C
+Max Operating Conditions: WORST - 1.425 V - 70 C
+Using Enhanced Min Delay Analysis
+Scenario for Timing Analysis: Primary
+
+
+-----------------------------------------------------
+SUMMARY
+
+Clock Domain:               top_8051|DebugIf_TCK
+Period (ns):                50.000
+Frequency (MHz):            20.000
+Required Period (ns):       10.000
+Required Frequency (MHz):   100.000
+External Setup (ns):        12.981
+External Hold (ns):         0.000
+Min Clock-To-Out (ns):      6.283
+Max Clock-To-Out (ns):      12.981
+
+Clock Domain:               PLL_50Mh_6Mh_0/Core:GLA
+Period (ns):                35.977
+Frequency (MHz):            27.796
+Required Period (ns):       166.667
+Required Frequency (MHz):   6.000
+External Setup (ns):        26.638
+External Hold (ns):         0.437
+Min Clock-To-Out (ns):      4.314
+Max Clock-To-Out (ns):      19.561
+
+Clock Domain:               rc_osc_0/RCOSC1:CLKOUT
+Period (ns):                N/A
+Frequency (MHz):            N/A
+Required Period (ns):       10.000
+Required Frequency (MHz):   100.000
+External Setup (ns):        N/A
+External Hold (ns):         N/A
+Min Clock-To-Out (ns):      N/A
+Max Clock-To-Out (ns):      N/A
+
+Clock Domain:               sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:UDRCK
+Period (ns):                14.565
+Frequency (MHz):            68.658
+Required Period (ns):       N/A
+Required Frequency (MHz):   N/A
+External Setup (ns):        N/A
+External Hold (ns):         N/A
+Min Clock-To-Out (ns):      N/A
+Max Clock-To-Out (ns):      N/A
+
+                            Input to Output
+Min Delay (ns):             N/A
+Max Delay (ns):             N/A
+
+END SUMMARY
+-----------------------------------------------------
+
+Clock Domain top_8051|DebugIf_TCK
+
+Info: The maximum frequency of this clock domain is limited by the minimum pulse widths of pin sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:TCK
+
+SET Register to Register
+
+No Path
+
+END SET Register to Register
+
+----------------------------------------------------
+
+SET External Hold
+
+Path 1
+  From:                        DebugIf_TMS
+  To:                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:TMS
+  Delay (ns):                  0.000
+  Slack (ns):
+  Arrival (ns):                0.000
+  Required (ns):
+  Hold (ns):                   0.000
+  External Hold (ns):          0.000
+
+Path 2
+  From:                        DebugIf_TDI
+  To:                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:TDI
+  Delay (ns):                  0.000
+  Slack (ns):
+  Arrival (ns):                0.000
+  Required (ns):
+  Hold (ns):                   0.000
+  External Hold (ns):          0.000
+
+
+Expanded Path 1
+  From: DebugIf_TMS
+  To: sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:TMS
+  data arrival time                              0.000
+  data required time                         -   N/C
+  slack                                          N/C
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        DebugIf_TMS (r)
+               +     0.000          net: DebugIf_TMS
+  0.000                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:TMS (r)
+                                    
+  0.000                        data arrival time
+  ________________________________________________________
+  Data required time calculation
+  N/C                          top_8051|DebugIf_TCK
+               +     0.000          Clock source
+  N/C                          DebugIf_TCK (r)
+               +     0.000          net: DebugIf_TCK
+  N/C                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:TCK (r)
+               +     0.000          Library hold time: ADLIB:UJTAG
+  N/C                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:TMS
+
+
+END SET External Hold
+
+----------------------------------------------------
+
+SET Clock to Output
+
+Path 1
+  From:                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:TCK
+  To:                          DebugIf_TDO
+  Delay (ns):                  6.283
+  Slack (ns):
+  Arrival (ns):                6.283
+  Required (ns):
+  Clock to Out (ns):           6.283
+
+
+Expanded Path 1
+  From: sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:TCK
+  To: DebugIf_TDO
+  data arrival time                              6.283
+  data required time                         -   N/C
+  slack                                          N/C
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        top_8051|DebugIf_TCK
+               +     0.000          Clock source
+  0.000                        DebugIf_TCK (f)
+               +     0.000          net: DebugIf_TCK
+  0.000                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:TCK (f)
+               +     6.283          cell: ADLIB:UJTAG
+  6.283                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:TDO (r)
+               +     0.000          net: DebugIf_TDO
+  6.283                        DebugIf_TDO (r)
+                                    
+  6.283                        data arrival time
+  ________________________________________________________
+  Data required time calculation
+  N/C                          top_8051|DebugIf_TCK
+               +     0.000          Clock source
+  N/C                          DebugIf_TCK (r)
+                                    
+  N/C                          DebugIf_TDO (r)
+
+
+END SET Clock to Output
+
+----------------------------------------------------
+
+SET Register to Asynchronous
+
+No Path
+
+END SET Register to Asynchronous
+
+----------------------------------------------------
+
+SET External Removal
+
+Path 1
+  From:                        DebugIf_TRSTN
+  To:                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:TRSTB
+  Delay (ns):                  0.000
+  Slack (ns):
+  Arrival (ns):                0.000
+  Required (ns):
+  Removal (ns):                0.000
+  External Removal (ns):       0.000
+
+
+Expanded Path 1
+  From: DebugIf_TRSTN
+  To: sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:TRSTB
+  data arrival time                              0.000
+  data required time                         -   N/C
+  slack                                          N/C
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        DebugIf_TRSTN (r)
+               +     0.000          net: DebugIf_TRSTN
+  0.000                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:TRSTB (r)
+                                    
+  0.000                        data arrival time
+  ________________________________________________________
+  Data required time calculation
+  N/C                          top_8051|DebugIf_TCK
+               +     0.000          Clock source
+  N/C                          DebugIf_TCK (r)
+               +     0.000          net: DebugIf_TCK
+  N/C                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:TCK (r)
+               +     0.000          Library removal time: ADLIB:UJTAG
+  N/C                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:TRSTB
+
+
+END SET External Removal
+
+----------------------------------------------------
+
+SET Asynchronous to Register
+
+No Path
+
+END SET Asynchronous to Register
+
+----------------------------------------------------
+
+Clock Domain PLL_50Mh_6Mh_0/Core:GLA
+
+SET Register to Register
+
+Path 1
+  From:                        sys_0/CoreUARTapb_0/uUART/tx_hold_reg[7]:CLK
+  To:                          sys_0/CoreUARTapb_0/uUART/make_TX/tx_byte[7]:D
+  Delay (ns):                  0.338
+  Slack (ns):                  0.310
+  Arrival (ns):                2.393
+  Required (ns):               2.083
+  Hold (ns):                   0.000
+
+Path 2
+  From:                        sys_0/CoreUARTapb_0/uUART/tx_hold_reg[4]:CLK
+  To:                          sys_0/CoreUARTapb_0/uUART/make_TX/tx_byte[4]:D
+  Delay (ns):                  0.338
+  Slack (ns):                  0.313
+  Arrival (ns):                2.396
+  Required (ns):               2.083
+  Hold (ns):                   0.000
+
+Path 3
+  From:                        sys_0/CoreUARTapb_0/uUART/tx_hold_reg[0]:CLK
+  To:                          sys_0/CoreUARTapb_0/uUART/make_TX/tx_byte[0]:D
+  Delay (ns):                  0.338
+  Slack (ns):                  0.321
+  Arrival (ns):                2.404
+  Required (ns):               2.083
+  Hold (ns):                   0.000
+
+Path 4
+  From:                        sys_0/CoreUARTapb_0/uUART/tx_hold_reg[5]:CLK
+  To:                          sys_0/CoreUARTapb_0/uUART/make_TX/tx_byte[5]:D
+  Delay (ns):                  0.338
+  Slack (ns):                  0.321
+  Arrival (ns):                2.404
+  Required (ns):               2.083
+  Hold (ns):                   0.000
+
+Path 5
+  From:                        sys_0/CoreUARTapb_0/uUART/tx_hold_reg[3]:CLK
+  To:                          sys_0/CoreUARTapb_0/uUART/make_TX/tx_byte[3]:D
+  Delay (ns):                  0.338
+  Slack (ns):                  0.321
+  Arrival (ns):                2.404
+  Required (ns):               2.083
+  Hold (ns):                   0.000
+
+
+Expanded Path 1
+  From: sys_0/CoreUARTapb_0/uUART/tx_hold_reg[7]:CLK
+  To: sys_0/CoreUARTapb_0/uUART/make_TX/tx_byte[7]:D
+  data arrival time                              2.393
+  data required time                         -   2.083
+  slack                                          0.310
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        PLL_50Mh_6Mh_0/Core:GLA
+               +     0.000          Clock source
+  0.000                        PLL_50Mh_6Mh_0/Core:GLA (r)
+               +     1.586          Clock generation
+  1.586
+               +     0.469          net: GLA
+  2.055                        sys_0/CoreUARTapb_0/uUART/tx_hold_reg[7]:CLK (r)
+               +     0.210          cell: ADLIB:DFN1E1C0
+  2.265                        sys_0/CoreUARTapb_0/uUART/tx_hold_reg[7]:Q (r)
+               +     0.128          net: sys_0/CoreUARTapb_0/uUART/tx_hold_reg[7]
+  2.393                        sys_0/CoreUARTapb_0/uUART/make_TX/tx_byte[7]:D (r)
+                                    
+  2.393                        data arrival time
+  ________________________________________________________
+  Data required time calculation
+  0.000                        PLL_50Mh_6Mh_0/Core:GLA
+               +     0.000          Clock source
+  0.000                        PLL_50Mh_6Mh_0/Core:GLA (r)
+               +     1.586          Clock generation
+  1.586
+               +     0.497          net: GLA
+  2.083                        sys_0/CoreUARTapb_0/uUART/make_TX/tx_byte[7]:CLK (r)
+               +     0.000          Library hold time: ADLIB:DFN1E0C0
+  2.083                        sys_0/CoreUARTapb_0/uUART/make_TX/tx_byte[7]:D
+                                    
+  2.083                        data required time
+
+
+END SET Register to Register
+
+----------------------------------------------------
+
+SET External Hold
+
+Path 1
+  From:                        SWITCH[3]
+  To:                          sys_0/CoreGPIO_0/gpin1[3]:D
+  Delay (ns):                  1.672
+  Slack (ns):
+  Arrival (ns):                1.672
+  Required (ns):
+  Hold (ns):                   0.000
+  External Hold (ns):          0.437
+
+Path 2
+  From:                        NSYSRESET
+  To:                          sys_0/CORE8051S_0/MAIN8051_inst/U_RSTCTRL/WDOGRES_1:D
+  Delay (ns):                  1.747
+  Slack (ns):
+  Arrival (ns):                1.747
+  Required (ns):
+  Hold (ns):                   0.000
+  External Hold (ns):          0.385
+
+Path 3
+  From:                        SWITCH[4]
+  To:                          sys_0/CoreGPIO_0/gpin1[4]:D
+  Delay (ns):                  1.743
+  Slack (ns):
+  Arrival (ns):                1.743
+  Required (ns):
+  Hold (ns):                   0.000
+  External Hold (ns):          0.363
+
+Path 4
+  From:                        SWITCH[7]
+  To:                          sys_0/CoreGPIO_0/gpin1[7]:D
+  Delay (ns):                  1.753
+  Slack (ns):
+  Arrival (ns):                1.753
+  Required (ns):
+  Hold (ns):                   0.000
+  External Hold (ns):          0.350
+
+Path 5
+  From:                        SWITCH[0]
+  To:                          sys_0/CoreGPIO_0/gpin1[0]:D
+  Delay (ns):                  1.839
+  Slack (ns):
+  Arrival (ns):                1.839
+  Required (ns):
+  Hold (ns):                   0.000
+  External Hold (ns):          0.261
+
+
+Expanded Path 1
+  From: SWITCH[3]
+  To: sys_0/CoreGPIO_0/gpin1[3]:D
+  data arrival time                              1.672
+  data required time                         -   N/C
+  slack                                          N/C
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        SWITCH[3] (f)
+               +     0.000          net: SWITCH[3]
+  0.000                        SWITCH_pad[3]/U0/U0:PAD (f)
+               +     0.230          cell: ADLIB:IOPAD_IN
+  0.230                        SWITCH_pad[3]/U0/U0:Y (f)
+               +     0.000          net: SWITCH_pad[3]/U0/NET1
+  0.230                        SWITCH_pad[3]/U0/U1:YIN (f)
+               +     0.015          cell: ADLIB:IOIN_IB
+  0.245                        SWITCH_pad[3]/U0/U1:Y (f)
+               +     1.427          net: SWITCH_c[3]
+  1.672                        sys_0/CoreGPIO_0/gpin1[3]:D (f)
+                                    
+  1.672                        data arrival time
+  ________________________________________________________
+  Data required time calculation
+  N/C                          PLL_50Mh_6Mh_0/Core:GLA
+               +     0.000          Clock source
+  N/C                          PLL_50Mh_6Mh_0/Core:GLA (r)
+               +     1.586          Clock generation
+  N/C
+               +     0.523          net: GLA
+  N/C                          sys_0/CoreGPIO_0/gpin1[3]:CLK (r)
+               +     0.000          Library hold time: ADLIB:DFN1C0
+  N/C                          sys_0/CoreGPIO_0/gpin1[3]:D
+
+
+END SET External Hold
+
+----------------------------------------------------
+
+SET Clock to Output
+
+Path 1
+  From:                        sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/memaddr_i[4]:CLK
+  To:                          MEM_ADDR[4]
+  Delay (ns):                  2.270
+  Slack (ns):
+  Arrival (ns):                4.314
+  Required (ns):
+  Clock to Out (ns):           4.314
+
+Path 2
+  From:                        sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/memaddr_i[6]:CLK
+  To:                          MEM_ADDR[6]
+  Delay (ns):                  2.372
+  Slack (ns):
+  Arrival (ns):                4.410
+  Required (ns):
+  Clock to Out (ns):           4.410
+
+Path 3
+  From:                        sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/memaddr_i[7]:CLK
+  To:                          MEM_ADDR[7]
+  Delay (ns):                  2.391
+  Slack (ns):
+  Arrival (ns):                4.422
+  Required (ns):
+  Clock to Out (ns):           4.422
+
+Path 4
+  From:                        sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/memaddr_i[8]:CLK
+  To:                          MEM_ADDR[8]
+  Delay (ns):                  2.475
+  Slack (ns):
+  Arrival (ns):                4.512
+  Required (ns):
+  Clock to Out (ns):           4.512
+
+Path 5
+  From:                        sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/memaddr_i[1]:CLK
+  To:                          MEM_ADDR[1]
+  Delay (ns):                  2.490
+  Slack (ns):
+  Arrival (ns):                4.530
+  Required (ns):
+  Clock to Out (ns):           4.530
+
+
+Expanded Path 1
+  From: sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/memaddr_i[4]:CLK
+  To: MEM_ADDR[4]
+  data arrival time                              4.314
+  data required time                         -   N/C
+  slack                                          N/C
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        PLL_50Mh_6Mh_0/Core:GLA
+               +     0.000          Clock source
+  0.000                        PLL_50Mh_6Mh_0/Core:GLA (r)
+               +     1.586          Clock generation
+  1.586
+               +     0.458          net: GLA
+  2.044                        sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/memaddr_i[4]:CLK (r)
+               +     0.210          cell: ADLIB:DFN1C0
+  2.254                        sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/memaddr_i[4]:Q (r)
+               +     0.906          net: MEM_ADDR_c[4]
+  3.160                        MEM_ADDR_pad[4]/U0/U1:D (r)
+               +     0.236          cell: ADLIB:IOTRI_OB_EB
+  3.396                        MEM_ADDR_pad[4]/U0/U1:DOUT (r)
+               +     0.000          net: MEM_ADDR_pad[4]/U0/NET1
+  3.396                        MEM_ADDR_pad[4]/U0/U0:D (r)
+               +     0.918          cell: ADLIB:IOPAD_TRI
+  4.314                        MEM_ADDR_pad[4]/U0/U0:PAD (r)
+               +     0.000          net: MEM_ADDR[4]
+  4.314                        MEM_ADDR[4] (r)
+                                    
+  4.314                        data arrival time
+  ________________________________________________________
+  Data required time calculation
+  N/C                          PLL_50Mh_6Mh_0/Core:GLA
+               +     0.000          Clock source
+  N/C                          PLL_50Mh_6Mh_0/Core:GLA (r)
+               +     1.586          Clock generation
+  N/C
+                                    
+  N/C                          MEM_ADDR[4] (r)
+
+
+END SET Clock to Output
+
+----------------------------------------------------
+
+SET Register to Asynchronous
+
+Path 1
+  From:                        sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/nrsto:CLK
+  To:                          sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/clkper_gate_pre:PRE
+  Delay (ns):                  1.684
+  Slack (ns):                  1.668
+  Arrival (ns):                3.736
+  Required (ns):               2.068
+  Removal (ns):                0.000
+  Skew (ns):                   -0.016
+
+Path 2
+  From:                        sys_0/CORE8051S_0/MAIN8051_inst/U_RSTCTRL/WDOGRESN:CLK
+  To:                          sys_0/CoreWatchdog_0/WdogResCount[0]:CLR
+  Delay (ns):                  0.351
+  Slack (ns):                  83.660
+  Arrival (ns):                2.397
+  Required (ns):               -81.263
+  Removal (ns):                0.000
+  Skew (ns):                   -0.025
+
+Path 3
+  From:                        sys_0/CORE8051S_0/MAIN8051_inst/U_RSTCTRL/WDOGRESN:CLK
+  To:                          sys_0/CoreWatchdog_0/WdogResCount[1]:CLR
+  Delay (ns):                  0.351
+  Slack (ns):                  83.660
+  Arrival (ns):                2.397
+  Required (ns):               -81.263
+  Removal (ns):                0.000
+  Skew (ns):                   -0.025
+
+Path 4
+  From:                        sys_0/CORE8051S_0/MAIN8051_inst/U_RSTCTRL/WDOGRESN:CLK
+  To:                          sys_0/CoreWatchdog_0/WDOGRES/U1:CLR
+  Delay (ns):                  0.351
+  Slack (ns):                  83.676
+  Arrival (ns):                2.397
+  Required (ns):               -81.279
+  Removal (ns):                0.000
+  Skew (ns):                   -0.009
+
+Path 5
+  From:                        sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/nrsto:CLK
+  To:                          sys_0/CoreGPIO_0/GEN_BITS.0.REG_GEN.CONFIG_regrff_16:CLR
+  Delay (ns):                  1.683
+  Slack (ns):                  84.946
+  Arrival (ns):                3.735
+  Required (ns):               -81.211
+  Removal (ns):                0.000
+  Skew (ns):                   -0.071
+
+
+Expanded Path 1
+  From: sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/nrsto:CLK
+  To: sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/clkper_gate_pre:PRE
+  data arrival time                              3.736
+  data required time                         -   2.068
+  slack                                          1.668
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        PLL_50Mh_6Mh_0/Core:GLA
+               +     0.000          Clock source
+  0.000                        PLL_50Mh_6Mh_0/Core:GLA (f)
+               +     1.586          Clock generation
+  1.586
+               +     0.466          net: GLA
+  2.052                        sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/nrsto:CLK (f)
+               +     0.191          cell: ADLIB:DFN0
+  2.243                        sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/nrsto:Q (r)
+               +     0.536          net: sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/nrsto
+  2.779                        sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/nrsto_RNIBVGD/U_CLKSRC:A (r)
+               +     0.506          cell: ADLIB:CLKSRC
+  3.285                        sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/nrsto_RNIBVGD/U_CLKSRC:Y (r)
+               +     0.451          net: sys_0/Core8051s_00_PRESETN
+  3.736                        sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/clkper_gate_pre:PRE (r)
+                                    
+  3.736                        data arrival time
+  ________________________________________________________
+  Data required time calculation
+  0.000                        PLL_50Mh_6Mh_0/Core:GLA
+               +     0.000          Clock source
+  0.000                        PLL_50Mh_6Mh_0/Core:GLA (f)
+               +     1.586          Clock generation
+  1.586
+               +     0.482          net: GLA
+  2.068                        sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/clkper_gate_pre:CLK (f)
+               +     0.000          Library removal time: ADLIB:DFN0P0
+  2.068                        sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/clkper_gate_pre:PRE
+                                    
+  2.068                        data required time
+
+
+END SET Register to Asynchronous
+
+----------------------------------------------------
+
+SET External Removal
+
+Path 1
+  From:                        NSYSRESET
+  To:                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/xhdl_trigger/Trigger_xhdl[102]:CLR
+  Delay (ns):                  1.085
+  Slack (ns):
+  Arrival (ns):                1.085
+  Required (ns):
+  Removal (ns):                0.000
+  External Removal (ns):       1.047
+
+Path 2
+  From:                        NSYSRESET
+  To:                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/xhdl_trigger/Trigger_xhdl[23]:CLR
+  Delay (ns):                  1.092
+  Slack (ns):
+  Arrival (ns):                1.092
+  Required (ns):
+  Removal (ns):                0.000
+  External Removal (ns):       1.040
+
+Path 3
+  From:                        NSYSRESET
+  To:                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/xhdl_debug/OCIopcode[23]:CLR
+  Delay (ns):                  1.092
+  Slack (ns):
+  Arrival (ns):                1.092
+  Required (ns):
+  Removal (ns):                0.000
+  External Removal (ns):       1.040
+
+Path 4
+  From:                        NSYSRESET
+  To:                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/xhdl_trigger/Trigger_xhdl[143]:CLR
+  Delay (ns):                  1.092
+  Slack (ns):
+  Arrival (ns):                1.092
+  Required (ns):
+  Removal (ns):                0.000
+  External Removal (ns):       1.040
+
+Path 5
+  From:                        NSYSRESET
+  To:                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/xhdl_trigger/Trigger_xhdl[25]:CLR
+  Delay (ns):                  1.092
+  Slack (ns):
+  Arrival (ns):                1.092
+  Required (ns):
+  Removal (ns):                0.000
+  External Removal (ns):       1.040
+
+
+Expanded Path 1
+  From: NSYSRESET
+  To: sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/xhdl_trigger/Trigger_xhdl[102]:CLR
+  data arrival time                              1.085
+  data required time                         -   N/C
+  slack                                          N/C
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        NSYSRESET (r)
+               +     0.000          net: NSYSRESET
+  0.000                        NSYSRESET_pad/U0/U0:PAD (r)
+               +     0.330          cell: ADLIB:IOPAD_IN
+  0.330                        NSYSRESET_pad/U0/U0:Y (r)
+               +     0.000          net: NSYSRESET_pad/U0/NET1
+  0.330                        NSYSRESET_pad/U0/U1:A (r)
+               +     0.330          cell: ADLIB:CLKSRC
+  0.660                        NSYSRESET_pad/U0/U1:Y (r)
+               +     0.425          net: NSYSRESET_c
+  1.085                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/xhdl_trigger/Trigger_xhdl[102]:CLR (r)
+                                    
+  1.085                        data arrival time
+  ________________________________________________________
+  Data required time calculation
+  N/C                          PLL_50Mh_6Mh_0/Core:GLA
+               +     0.000          Clock source
+  N/C                          PLL_50Mh_6Mh_0/Core:GLA (r)
+               +     1.586          Clock generation
+  N/C
+               +     0.546          net: GLA
+  N/C                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/xhdl_trigger/Trigger_xhdl[102]:CLK (r)
+               +     0.000          Library removal time: ADLIB:DFN1E1C0
+  N/C                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/xhdl_trigger/Trigger_xhdl[102]:CLR
+
+
+END SET External Removal
+
+----------------------------------------------------
+
+SET Asynchronous to Register
+
+No Path
+
+END SET Asynchronous to Register
+
+----------------------------------------------------
+
+Clock Domain rc_osc_0/RCOSC1:CLKOUT
+
+SET Register to Register
+
+No Path
+
+END SET Register to Register
+
+----------------------------------------------------
+
+SET External Hold
+
+No Path
+
+END SET External Hold
+
+----------------------------------------------------
+
+SET Clock to Output
+
+No Path
+
+END SET Clock to Output
+
+----------------------------------------------------
+
+SET Register to Asynchronous
+
+No Path
+
+END SET Register to Asynchronous
+
+----------------------------------------------------
+
+SET External Removal
+
+No Path
+
+END SET External Removal
+
+----------------------------------------------------
+
+SET Asynchronous to Register
+
+No Path
+
+END SET Asynchronous to Register
+
+----------------------------------------------------
+
+Clock Domain sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:UDRCK
+
+SET Register to Register
+
+Path 1
+  From:                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/IR_xhdl[4]/U1:CLK
+  To:                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/IR_xhdl[4]/U1:D
+  Delay (ns):                  0.684
+  Slack (ns):
+  Arrival (ns):                1.543
+  Required (ns):
+  Hold (ns):                   0.000
+
+Path 2
+  From:                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/IR_xhdl[5]/U1:CLK
+  To:                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/IR_xhdl[5]/U1:D
+  Delay (ns):                  0.678
+  Slack (ns):
+  Arrival (ns):                1.257
+  Required (ns):
+  Hold (ns):                   0.000
+
+Path 3
+  From:                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/IR_xhdl[1]/U1:CLK
+  To:                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/IR_xhdl[1]/U1:D
+  Delay (ns):                  0.754
+  Slack (ns):
+  Arrival (ns):                1.501
+  Required (ns):
+  Hold (ns):                   0.000
+
+Path 4
+  From:                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/IR_xhdl[6]/U1:CLK
+  To:                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/IR_xhdl[6]/U1:D
+  Delay (ns):                  0.733
+  Slack (ns):
+  Arrival (ns):                1.409
+  Required (ns):
+  Hold (ns):                   0.000
+
+Path 5
+  From:                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/IR_xhdl[3]/U1:CLK
+  To:                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/IR_xhdl[3]/U1:D
+  Delay (ns):                  0.742
+  Slack (ns):
+  Arrival (ns):                1.443
+  Required (ns):
+  Hold (ns):                   0.000
+
+
+Expanded Path 1
+  From: sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/IR_xhdl[4]/U1:CLK
+  To: sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/IR_xhdl[4]/U1:D
+  data arrival time                              1.543
+  data required time                         -   N/C
+  slack                                          N/C
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:UDRCK
+               +     0.000          Clock source
+  0.000                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:UDRCK (r)
+               +     0.859          net: sys_0/CORE8051S_0/oci1_trace0_ocia51_inst/ujtag1_jtagu_inst/udrck
+  0.859                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/IR_xhdl[4]/U1:CLK (r)
+               +     0.191          cell: ADLIB:DFN1C0
+  1.050                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/IR_xhdl[4]/U1:Q (r)
+               +     0.154          net: sys_0/CORE8051S_0/oci1_trace0_ocia51_inst/ujtag1_jtagu_inst/IR_xhdl[4]
+  1.204                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/IR_xhdl[4]/U0:A (r)
+               +     0.205          cell: ADLIB:MX2
+  1.409                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/IR_xhdl[4]/U0:Y (r)
+               +     0.134          net: sys_0/CORE8051S_0/oci1_trace0_ocia51_inst/ujtag1_jtagu_inst/IR_xhdl[4]/Y
+  1.543                        sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/IR_xhdl[4]/U1:D (r)
+                                    
+  1.543                        data arrival time
+  ________________________________________________________
+  Data required time calculation
+  N/C                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:UDRCK
+               +     0.000          Clock source
+  N/C                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst:UDRCK (r)
+               +     1.126          net: sys_0/CORE8051S_0/oci1_trace0_ocia51_inst/ujtag1_jtagu_inst/udrck
+  N/C                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/IR_xhdl[4]/U1:CLK (r)
+               +     0.000          Library hold time: ADLIB:DFN1C0
+  N/C                          sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/IR_xhdl[4]/U1:D
+
+
+END SET Register to Register
+
+----------------------------------------------------
+
+SET External Hold
+
+No Path
+
+END SET External Hold
+
+----------------------------------------------------
+
+SET Clock to Output
+
+No Path
+
+END SET Clock to Output
+
+----------------------------------------------------
+
+SET Register to Asynchronous
+
+No Path
+
+END SET Register to Asynchronous
+
+----------------------------------------------------
+
+SET External Removal
+
+No Path
+
+END SET External Removal
+
+----------------------------------------------------
+
+SET Asynchronous to Register
+
+No Path
+
+END SET Asynchronous to Register
+
+----------------------------------------------------
+
+Path set Pin to Pin
+
+SET Input to Output
+
+No Path
+
+END SET Input to Output
+
+----------------------------------------------------
+
+Path set User Sets
+

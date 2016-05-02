@@ -1,0 +1,30 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+core_watchdog.rel: ../drivers/CoreWatchdog/core_watchdog.c ../hal/hal.h \
+  ../hal/Core8051s/SDCC/cpu_types.h \
+  C:/Program\ Files\ (x86)/Microsemi/SoftConsole\ v3.4/Sourcery-G++/bin/../include/stdint.h \
+  C:/Program\ Files\ (x86)/Microsemi/SoftConsole\ v3.4/Sourcery-G++/bin/../include/stddef.h \
+  ../hal/hw_reg_access.h ../drivers/CoreWatchdog/corewatchdog_regs.h \
+  ../drivers/CoreWatchdog/core_watchdog.h \
+  ../hal/Core8051s/SDCC/cpu_types.h ../hal/hal_assert.h
+
+../hal/hal.h:
+
+../hal/Core8051s/SDCC/cpu_types.h:
+
+C:/Program\ Files\ (x86)/Microsemi/SoftConsole\ v3.4/Sourcery-G++/bin/../include/stdint.h:
+
+C:/Program\ Files\ (x86)/Microsemi/SoftConsole\ v3.4/Sourcery-G++/bin/../include/stddef.h:
+
+../hal/hw_reg_access.h:
+
+../drivers/CoreWatchdog/corewatchdog_regs.h:
+
+../drivers/CoreWatchdog/core_watchdog.h:
+
+../hal/Core8051s/SDCC/cpu_types.h:
+
+../hal/hal_assert.h:
+

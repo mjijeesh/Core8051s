@@ -1,0 +1,29 @@
+Target Part: M1AFS1500_FBGA256_-1
+Report for cell memory_mux.one
+  Core Cell usage:
+              cell count     area count*area
+               GND     1      0.0        0.0
+               INV     4      1.0        4.0
+               OR2     1      1.0        1.0
+               VCC     1      0.0        0.0
+
+
+                   -----          ----------
+             TOTAL     7                 5.0
+
+
+  IO Cell usage:
+              cell count
+             BIBUF     8
+             INBUF    28
+            OUTBUF    46
+                   -----
+             TOTAL    82
+
+
+Core Cells         : 5 of 38400 (0%)
+IO Cells           : 82
+
+  RAM/ROM Usage Summary
+Block Rams : 0 of 60 (0%)
+

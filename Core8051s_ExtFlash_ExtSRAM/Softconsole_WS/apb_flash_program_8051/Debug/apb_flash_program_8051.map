@@ -1,0 +1,1098 @@
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+CABS                               0000   0000 =      0. bytes (ABS,CON,CODE)
+
+      Value  Global
+   --------  --------------------------------
+  0C:FFFFFF00    s_BSEG
+  0C:0000    l_BIT_BANK
+  0C:0000    l_BSEG
+  0C:0000    l_BSEG_BYTES
+  0C:0000    l_CABS
+  0C:0000    l_GSINIT1
+  0C:0000    l_GSINIT5
+  0C:0000    l_IABS
+  0C:0000    l_ISEG
+  0C:0000    l_OSEG
+  0C:0000    l_PSEG
+  0C:0000    l_REG_BANK_1
+  0C:0000    l_REG_BANK_2
+  0C:0000    l_REG_BANK_3
+  0C:0000    l_RSEG
+  0C:0000    l_XINIT
+  0C:0000    l_XISEG
+  0C:0000    l_XSEG
+  0C:0000    l__CODE
+  0C:0000    s_CABS
+  0C:0000    s_DSEG
+  0C:0000    s_HOME
+  0C:0000    s_IABS
+  0C:0000    s_ISEG
+  0C:0000    s_PSEG
+  0C:0000    s_REG_BANK_0
+  0C:0000    s_SSEG
+  0C:0000    s_XISEG
+  0C:0000    s_XSEG
+  0C:0003    l_GSFINAL
+  0C:0003    l_GSINIT0
+  0C:0008    l_HOME
+  0C:0008    l_REG_BANK_0
+  0C:0008    s_GSINIT0
+  0C:0008    s_REG_BANK_1
+  0C:000A    l_GSINIT2
+  0C:000B    s_GSINIT1
+  0C:000B    s_GSINIT2
+  0C:0010    s_REG_BANK_2
+  0C:0015    s_GSINIT3
+  0C:0018    l_GSINIT
+  0C:0018    s_BIT_BANK
+  0C:0018    s_OSEG
+  0C:0018    s_REG_BANK_3
+  0C:0020    s_BSEG_BYTES
+  0C:0020    s__CODE
+  0C:0022    l_GSINIT3
+  0C:0027    s_RSEG
+  0C:0028    l_GSINIT4
+  0C:0037    s_GSINIT4
+  0C:005F    s_GSINIT
+  0C:005F    s_GSINIT5
+  0C:006D    l_CONST
+  0C:0070    l_DSEG
+  0C:0077    s_GSFINAL
+  0C:007A    s_CSEG
+  0C:00D9    l_SSEG
+  0C:0100    l_IRAM
+  0C:0357    l_CSEG
+  0C:03D1    s_CONST
+  0C:043E    s_XINIT
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+IABS                               0000   0000 =      0. bytes (ABS,CON)
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+.  .ABS.                           0000   0000 =      0. bytes (ABS,CON)
+
+      Value  Global
+   --------  --------------------------------
+     0080    G$P0$0$0
+     0080    G$P0_0$0$0
+     0080    _P0
+     0080    _P0_0
+     0081    G$P0_1$0$0
+     0081    G$SP$0$0
+     0081    _P0_1
+     0081    _SP
+     0082    G$DPL$0$0
+     0082    G$P0_2$0$0
+     0082    _DPL
+     0082    _P0_2
+     0083    G$DPH$0$0
+     0083    G$P0_3$0$0
+     0083    _DPH
+     0083    _P0_3
+     0084    G$P0_4$0$0
+     0084    _P0_4
+     0085    G$P0_5$0$0
+     0085    _P0_5
+     0086    G$P0_6$0$0
+     0086    _P0_6
+     0087    G$P0_7$0$0
+     0087    G$PCON$0$0
+     0087    _P0_7
+     0087    _PCON
+     0088    G$IT0$0$0
+     0088    G$TCON$0$0
+     0088    _IT0
+     0088    _TCON
+     0089    G$IE0$0$0
+     0089    G$TMOD$0$0
+     0089    _IE0
+     0089    _TMOD
+     008A    G$IT1$0$0
+     008A    G$TL0$0$0
+     008A    _IT1
+     008A    _TL0
+     008B    G$IE1$0$0
+     008B    G$TL1$0$0
+     008B    _IE1
+     008B    _TL1
+     008C    G$TH0$0$0
+     008C    G$TR0$0$0
+     008C    _TH0
+     008C    _TR0
+     008D    G$TF0$0$0
+     008D    G$TH1$0$0
+     008D    _TF0
+     008D    _TH1
+     008E    G$TR1$0$0
+     008E    _TR1
+     008F    G$TF1$0$0
+     008F    _TF1
+     0090    G$P1$0$0
+     0090    G$P1_0$0$0
+     0090    _P1
+     0090    _P1_0
+     0091    G$P1_1$0$0
+     0091    _P1_1
+     0092    G$P1_2$0$0
+     0092    _P1_2
+     0093    G$P1_3$0$0
+     0093    _P1_3
+     0094    G$P1_4$0$0
+     0094    _P1_4
+     0095    G$P1_5$0$0
+     0095    _P1_5
+     0096    G$P1_6$0$0
+     0096    _P1_6
+     0097    G$P1_7$0$0
+     0097    _P1_7
+     0098    G$RI$0$0
+     0098    G$SCON$0$0
+     0098    _RI
+     0098    _SCON
+     0099    G$SBUF$0$0
+     0099    G$TI$0$0
+     0099    _SBUF
+     0099    _TI
+     009A    G$RB8$0$0
+     009A    _RB8
+     009B    G$TB8$0$0
+     009B    _TB8
+     009C    G$REN$0$0
+     009C    _REN
+     009D    G$SM2$0$0
+     009D    _SM2
+     009E    G$SM1$0$0
+     009E    _SM1
+     009F    G$SM0$0$0
+     009F    _SM0
+     00A0    G$P2$0$0
+     00A0    G$P2_0$0$0
+     00A0    _P2
+     00A0    _P2_0
+     00A0    __XPAGE
+     00A1    G$P2_1$0$0
+     00A1    _P2_1
+     00A2    G$P2_2$0$0
+     00A2    _P2_2
+     00A3    G$P2_3$0$0
+     00A3    _P2_3
+     00A4    G$P2_4$0$0
+     00A4    _P2_4
+     00A5    G$P2_5$0$0
+     00A5    _P2_5
+     00A6    G$P2_6$0$0
+     00A6    _P2_6
+     00A7    G$P2_7$0$0
+     00A7    _P2_7
+     00A8    G$EX0$0$0
+     00A8    G$IE$0$0
+     00A8    _EX0
+     00A8    _IE
+     00A9    G$ET0$0$0
+     00A9    _ET0
+     00AA    G$EX1$0$0
+     00AA    _EX1
+     00AB    G$ET1$0$0
+     00AB    _ET1
+     00AC    G$ES$0$0
+     00AC    _ES
+     00AF    G$EA$0$0
+     00AF    _EA
+     00B0    G$P3$0$0
+     00B0    G$P3_0$0$0
+     00B0    G$RXD$0$0
+     00B0    _P3
+     00B0    _P3_0
+     00B0    _RXD
+     00B1    G$P3_1$0$0
+     00B1    G$TXD$0$0
+     00B1    _P3_1
+     00B1    _TXD
+     00B2    G$INT0$0$0
+     00B2    G$P3_2$0$0
+     00B2    _INT0
+     00B2    _P3_2
+     00B3    G$INT1$0$0
+     00B3    G$P3_3$0$0
+     00B3    _INT1
+     00B3    _P3_3
+     00B4    G$P3_4$0$0
+     00B4    G$T0$0$0
+     00B4    _P3_4
+     00B4    _T0
+     00B5    G$P3_5$0$0
+     00B5    G$T1$0$0
+     00B5    _P3_5
+     00B5    _T1
+     00B6    G$P3_6$0$0
+     00B6    G$WR$0$0
+     00B6    _P3_6
+     00B6    _WR
+     00B7    G$P3_7$0$0
+     00B7    G$RD$0$0
+     00B7    _P3_7
+     00B7    _RD
+     00B8    G$IP$0$0
+     00B8    G$PX0$0$0
+     00B8    _IP
+     00B8    _PX0
+     00B9    G$PT0$0$0
+     00B9    _PT0
+     00BA    G$PX1$0$0
+     00BA    _PX1
+     00BB    G$PT1$0$0
+     00BB    _PT1
+     00BC    G$PS$0$0
+     00BC    _PS
+     00D0    G$P$0$0
+     00D0    G$PSW$0$0
+     00D0    _P
+     00D0    _PSW
+     00D1    G$F1$0$0
+     00D1    _F1
+     00D2    G$OV$0$0
+     00D2    _OV
+     00D3    G$RS0$0$0
+     00D3    _RS0
+     00D4    G$RS1$0$0
+     00D4    _RS1
+     00D5    G$F0$0$0
+     00D5    _F0
+     00D6    G$AC$0$0
+     00D6    _AC
+     00D7    G$CY$0$0
+     00D7    _CY
+     00E0    G$ACC$0$0
+     00E0    _ACC
+     00F0    G$B$0$0
+     00F0    _B
+     00F5    _B_5
+     00F6    _B_6
+     00F7    _B_7
+     1000    G$FLASH$0$0
+     1000    _FLASH
+     F300    G$xdata_buffer$0$0
+     F300    _xdata_buffer
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+BSEG_BYTES                         0020   0000 =      0. bytes (REL,CON)
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+_CODE                              0020   0000 =      0. bytes (REL,CON)
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+REG_BANK_0                         0000   0008 =      8. bytes (REL,OVR)
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+REG_BANK_1                         0008   0000 =      0. bytes (REL,OVR)
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+REG_BANK_2                         0010   0000 =      0. bytes (REL,OVR)
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+REG_BANK_3                         0018   0000 =      0. bytes (REL,OVR)
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bits  (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+BSEG                               FFFFFF00   0000 =      0. bits  (REL,CON,BIT)
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+BIT_BANK                           0018   0000 =      0. bytes (REL,OVR)
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+DSEG                               0000   0070 =    112. bytes (REL,CON)
+
+      Value  Global
+   --------  --------------------------------
+     0018    G$GPIO_BASE_ADDR$0$0
+     0018    _GPIO_BASE_ADDR
+     001A    G$FLASH_BASE_ADDR$0$0
+     001A    _FLASH_BASE_ADDR
+     001C    G$UART0_BASE_ADDR$0$0
+     001C    _UART0_BASE_ADDR
+     001E    G$SRAM_BASE_ADDR$0$0
+     001E    _SRAM_BASE_ADDR
+     0020    F___apb_flash_loader$checkSum$0$0
+     0021    LFlashProgramPage$addr$1$1
+     0021    _FlashProgramPage_PARM_2
+     0023    LFlashProgramPage$size$1$1
+     0023    _FlashProgramPage_PARM_3
+     0024    LFlashProgramPage$buffer$1$1
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+OSEG                               0018   0000 =      0. bytes (REL,OVR)
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+ISEG                               0000   0000 =      0. bytes (REL,CON)
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+SSEG                               0000   00D9 =    217. bytes (REL,OVR)
+
+      Value  Global
+   --------  --------------------------------
+     0027    __start__stack
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+RSEG                               0027   0000 =      0. bytes (REL,CON)
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+PSEG                               0000   0000 =      0. bytes (REL,CON,PAG,XDATA)
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+XSEG                               0000   0000 =      0. bytes (REL,CON,XDATA)
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+XISEG                              0000   0000 =      0. bytes (REL,CON,XDATA)
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+HOME                               0000   0008 =      8. bytes (REL,CON,CODE)
+
+      Value  Global
+   --------  --------------------------------
+  0C:0000    A$apb_flash_loader$413
+  0C:0003    A$apb_flash_loader$459
+  0C:0003    __sdcc_program_startup
+  0C:0006    A$apb_flash_loader$461
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+GSINIT0                            0008   0003 =      3. bytes (REL,CON,CODE)
+
+      Value  Global
+   --------  --------------------------------
+  0C:0008    __sdcc_gsinit_startup
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+GSINIT1                            000B   0000 =      0. bytes (REL,CON,CODE)
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+GSINIT2                            000B   000A =     10. bytes (REL,CON,CODE)
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+GSINIT3                            0015   0022 =     34. bytes (REL,CON,CODE)
+
+      Value  Global
+   --------  --------------------------------
+  0C:0015    __mcs51_genXINIT
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+GSINIT4                            0037   0028 =     40. bytes (REL,CON,CODE)
+
+      Value  Global
+   --------  --------------------------------
+  0C:0037    __mcs51_genRAMCLEAR
+  0C:003D    __mcs51_genXRAMCLEAR
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+GSINIT5                            005F   0000 =      0. bytes (REL,CON,CODE)
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+GSINIT                             005F   0018 =     24. bytes (REL,CON,CODE)
+
+      Value  Global
+   --------  --------------------------------
+  0C:005F    A$apb_flash_loader$431
+  0C:005F    C$apb_flash_loader.c$28$1$1
+  0C:0062    A$apb_flash_loader$432
+  0C:0065    A$apb_flash_loader$437
+  0C:0065    C$apb_flash_loader.c$29$1$1
+  0C:0068    A$apb_flash_loader$438
+  0C:006B    A$apb_flash_loader$443
+  0C:006B    C$apb_flash_loader.c$30$1$1
+  0C:006E    A$apb_flash_loader$444
+  0C:0071    A$apb_flash_loader$449
+  0C:0071    C$apb_flash_loader.c$31$1$1
+  0C:0074    A$apb_flash_loader$450
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+GSFINAL                            0077   0003 =      3. bytes (REL,CON,CODE)
+
+      Value  Global
+   --------  --------------------------------
+  0C:0077    A$apb_flash_loader$452
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+CSEG                               007A   0357 =    855. bytes (REL,CON,CODE)
+
+      Value  Global
+   --------  --------------------------------
+  0C:007A    A$apb_flash_loader$492
+  0C:007A    C$apb_flash_loader.c$124$0$0
+  0C:007A    C$apb_flash_loader.c$133$1$1
+  0C:007A    G$main$0$0
+  0C:007A    _main
+  0C:007C    A$apb_flash_loader$493
+  0C:007E    A$apb_flash_loader$497
+  0C:007E    C$apb_flash_loader.c$137$1$1
+  0C:0081    A$apb_flash_loader$498
+  0C:0083    A$apb_flash_loader$499
+  0C:0085    A$apb_flash_loader$500
+  0C:0088    A$apb_flash_loader$501
+  0C:008A    A$apb_flash_loader$502
+  0C:008C    A$apb_flash_loader$506
+  0C:008C    C$apb_flash_loader.c$139$1$1
+  0C:008F    A$apb_flash_loader$507
+  0C:0092    A$apb_flash_loader$508
+  0C:0095    A$apb_flash_loader$509
+  0C:0097    A$apb_flash_loader$510
+  0C:0099    A$apb_flash_loader$511
+  0C:009C    A$apb_flash_loader$512
+  0C:009E    A$apb_flash_loader$513
+  0C:00A0    A$apb_flash_loader$517
+  0C:00A0    C$apb_flash_loader.c$143$1$1
+  0C:00A2    A$apb_flash_loader$522
+  0C:00A2    C$apb_flash_loader.c$144$2$2
+  0C:00A4    A$apb_flash_loader$523
+  0C:00A6    A$apb_flash_loader$524
+  0C:00A8    A$apb_flash_loader$525
+  0C:00AA    A$apb_flash_loader$526
+  0C:00AC    A$apb_flash_loader$527
+  0C:00AF    A$apb_flash_loader$528
+  0C:00B1    A$apb_flash_loader$529
+  0C:00B3    A$apb_flash_loader$530
+  0C:00B5    A$apb_flash_loader$535
+  0C:00B5    C$apb_flash_loader.c$145$2$2
+  0C:00B7    A$apb_flash_loader$536
+  0C:00B9    A$apb_flash_loader$537
+  0C:00BA    A$apb_flash_loader$538
+  0C:00BC    A$apb_flash_loader$539
+  0C:00BE    A$apb_flash_loader$540
+  0C:00BF    A$apb_flash_loader$543
+  0C:00C0    A$apb_flash_loader$547
+  0C:00C0    C$apb_flash_loader.c$143$2$2
+  0C:00C1    A$apb_flash_loader$549
+  0C:00C3    A$apb_flash_loader$550
+  0C:00C6    A$apb_flash_loader$555
+  0C:00C6    C$apb_flash_loader.c$148$1$1
+  0C:00C8    A$apb_flash_loader$556
+  0C:00CA    A$apb_flash_loader$560
+  0C:00CA    C$apb_flash_loader.c$149$1$1
+  0C:00CC    A$apb_flash_loader$564
+  0C:00CE    A$apb_flash_loader$568
+  0C:00D1    A$apb_flash_loader$571
+  0C:00D3    A$apb_flash_loader$572
+  0C:00D6    A$apb_flash_loader$577
+  0C:00D6    C$apb_flash_loader.c$156$3$4
+  0C:00D8    A$apb_flash_loader$578
+  0C:00DA    A$apb_flash_loader$579
+  0C:00DC    A$apb_flash_loader$580
+  0C:00DE    A$apb_flash_loader$581
+  0C:00E1    A$apb_flash_loader$582
+  0C:00E3    A$apb_flash_loader$583
+  0C:00E5    A$apb_flash_loader$584
+  0C:00E7    A$apb_flash_loader$585
+  0C:00E9    A$apb_flash_loader$586
+  0C:00EB    A$apb_flash_loader$591
+  0C:00EB    C$apb_flash_loader.c$157$3$4
+  0C:00ED    A$apb_flash_loader$592
+  0C:00F0    A$apb_flash_loader$595
+  0C:00F1    A$apb_flash_loader$596
+  0C:00F2    A$apb_flash_loader$600
+  0C:00F2    C$apb_flash_loader.c$158$3$4
+  0C:00F4    A$apb_flash_loader$601
+  0C:00F6    A$apb_flash_loader$602
+  0C:00F8    A$apb_flash_loader$603
+  0C:00FA    A$apb_flash_loader$604
+  0C:00FC    A$apb_flash_loader$605
+  0C:00FF    A$apb_flash_loader$606
+  0C:0101    A$apb_flash_loader$607
+  0C:0103    A$apb_flash_loader$608
+  0C:0105    A$apb_flash_loader$609
+  0C:0107    A$apb_flash_loader$613
+  0C:0107    C$apb_flash_loader.c$159$3$4
+  0C:010A    A$apb_flash_loader$614
+  0C:010D    A$apb_flash_loader$615
+  0C:0110    A$apb_flash_loader$616
+  0C:0112    A$apb_flash_loader$617
+  0C:0114    A$apb_flash_loader$618
+  0C:0116    A$apb_flash_loader$619
+  0C:0118    A$apb_flash_loader$620
+  0C:011B    A$apb_flash_loader$621
+  0C:011D    A$apb_flash_loader$622
+  0C:011F    A$apb_flash_loader$623
+  0C:0121    A$apb_flash_loader$624
+  0C:0123    A$apb_flash_loader$629
+  0C:0123    C$apb_flash_loader.c$160$3$4
+  0C:0124    A$apb_flash_loader$634
+  0C:0124    C$apb_flash_loader.c$155$2$3
+  0C:0125    A$apb_flash_loader$635
+  0C:0128    A$apb_flash_loader$640
+  0C:0128    C$apb_flash_loader.c$164$2$3
+  0C:012B    A$apb_flash_loader$641
+  0C:012E    A$apb_flash_loader$642
+  0C:0131    A$apb_flash_loader$643
+  0C:0133    A$apb_flash_loader$644
+  0C:0135    A$apb_flash_loader$645
+  0C:0137    A$apb_flash_loader$646
+  0C:013A    A$apb_flash_loader$647
+  0C:013C    A$apb_flash_loader$648
+  0C:013E    A$apb_flash_loader$649
+  0C:0140    A$apb_flash_loader$653
+  0C:0140    C$apb_flash_loader.c$165$2$3
+  0C:0142    A$apb_flash_loader$654
+  0C:0144    A$apb_flash_loader$655
+  0C:0146    A$apb_flash_loader$656
+  0C:0149    A$apb_flash_loader$657
+  0C:014B    A$apb_flash_loader$658
+  0C:014D    A$apb_flash_loader$659
+  0C:014F    A$apb_flash_loader$663
+  0C:014F    C$apb_flash_loader.c$169$2$3
+  0C:0151    A$apb_flash_loader$668
+  0C:0151    C$apb_flash_loader.c$170$3$5
+  0C:0153    A$apb_flash_loader$669
+  0C:0155    A$apb_flash_loader$671
+  0C:0157    A$apb_flash_loader$673
+  0C:015A    A$apb_flash_loader$674
+  0C:015D    A$apb_flash_loader$675
+  0C:0160    A$apb_flash_loader$676
+  0C:0162    A$apb_flash_loader$677
+  0C:0164    A$apb_flash_loader$678
+  0C:0166    A$apb_flash_loader$679
+  0C:0168    A$apb_flash_loader$680
+  0C:016B    A$apb_flash_loader$681
+  0C:016D    A$apb_flash_loader$682
+  0C:016F    A$apb_flash_loader$683
+  0C:0171    A$apb_flash_loader$684
+  0C:0173    A$apb_flash_loader$688
+  0C:0173    C$apb_flash_loader.c$171$3$5
+  0C:0176    A$apb_flash_loader$689
+  0C:0179    A$apb_flash_loader$690
+  0C:017C    A$apb_flash_loader$691
+  0C:017E    A$apb_flash_loader$692
+  0C:0180    A$apb_flash_loader$693
+  0C:0182    A$apb_flash_loader$694
+  0C:0184    A$apb_flash_loader$695
+  0C:0187    A$apb_flash_loader$696
+  0C:0189    A$apb_flash_loader$697
+  0C:018B    A$apb_flash_loader$698
+  0C:018D    A$apb_flash_loader$699
+  0C:018F    A$apb_flash_loader$703
+  0C:018F    C$apb_flash_loader.c$172$3$5
+  0C:0192    A$apb_flash_loader$704
+  0C:0195    A$apb_flash_loader$705
+  0C:0198    A$apb_flash_loader$706
+  0C:019A    A$apb_flash_loader$707
+  0C:019C    A$apb_flash_loader$708
+  0C:019E    A$apb_flash_loader$709
+  0C:01A0    A$apb_flash_loader$710
+  0C:01A3    A$apb_flash_loader$711
+  0C:01A5    A$apb_flash_loader$712
+  0C:01A7    A$apb_flash_loader$713
+  0C:01A9    A$apb_flash_loader$714
+  0C:01AB    A$apb_flash_loader$719
+  0C:01AB    C$apb_flash_loader.c$173$3$5
+  0C:01AD    A$apb_flash_loader$720
+  0C:01AF    A$apb_flash_loader$721
+  0C:01B0    A$apb_flash_loader$722
+  0C:01B2    A$apb_flash_loader$723
+  0C:01B4    A$apb_flash_loader$724
+  0C:01B5    A$apb_flash_loader$726
+  0C:01B7    A$apb_flash_loader$727
+  0C:01B9    A$apb_flash_loader$729
+  0C:01BC    A$apb_flash_loader$736
+  0C:01BC    C$apb_flash_loader.c$169$3$5
+  0C:01BC    C$apb_flash_loader.c$176$2$3
+  0C:01BF    A$apb_flash_loader$737
+  0C:01C2    A$apb_flash_loader$738
+  0C:01C5    A$apb_flash_loader$739
+  0C:01C8    A$apb_flash_loader$743
+  0C:01C8    C$apb_flash_loader.c$180$2$3
+  0C:01CB    A$apb_flash_loader$747
+  0C:01CB    C$apb_flash_loader.c$186$1$1
+  0C:01CB    XG$main$0$0
+  0C:01CC    A$apb_flash_loader$761
+  0C:01CC    C$apb_flash_loader.c$188$1$1
+  0C:01CC    G$uart_config$0$0
+  0C:01CC    _uart_config
+  0C:01CE    A$apb_flash_loader$766
+  0C:01CE    C$apb_flash_loader.c$190$1$1
+  0C:01D1    A$apb_flash_loader$767
+  0C:01D4    A$apb_flash_loader$768
+  0C:01D5    A$apb_flash_loader$769
+  0C:01D6    A$apb_flash_loader$770
+  0C:01D7    A$apb_flash_loader$771
+  0C:01D8    A$apb_flash_loader$772
+  0C:01D9    A$apb_flash_loader$773
+  0C:01DA    A$apb_flash_loader$774
+  0C:01DB    A$apb_flash_loader$775
+  0C:01DC    A$apb_flash_loader$778
+  0C:01DD    A$apb_flash_loader$779
+  0C:01DE    A$apb_flash_loader$784
+  0C:01DE    C$apb_flash_loader.c$191$1$1
+  0C:01E0    A$apb_flash_loader$785
+  0C:01E2    A$apb_flash_loader$786
+  0C:01E4    A$apb_flash_loader$787
+  0C:01E6    A$apb_flash_loader$788
+  0C:01E8    A$apb_flash_loader$789
+  0C:01EA    A$apb_flash_loader$792
+  0C:01EC    A$apb_flash_loader$793
+  0C:01ED    A$apb_flash_loader$797
+  0C:01ED    C$apb_flash_loader.c$192$1$1
+  0C:01ED    XG$uart_config$0$0
+  0C:01EE    A$apb_flash_loader$817
+  0C:01EE    C$apb_flash_loader.c$196$1$1
+  0C:01EE    C$apb_flash_loader.c$199$1$1
+  0C:01EE    C$apb_flash_loader.c$200$2$2
+  0C:01EE    G$uartWaitXmt$0$0
+  0C:01EE    _uartWaitXmt
+  0C:01F0    A$apb_flash_loader$818
+  0C:01F2    A$apb_flash_loader$819
+  0C:01F4    A$apb_flash_loader$820
+  0C:01F6    A$apb_flash_loader$821
+  0C:01F8    A$apb_flash_loader$822
+  0C:01FA    A$apb_flash_loader$825
+  0C:01FB    A$apb_flash_loader$826
+  0C:01FC    A$apb_flash_loader$830
+  0C:01FC    C$apb_flash_loader.c$201$1$1
+  0C:01FD    A$apb_flash_loader$832
+  0C:0200    A$apb_flash_loader$833
+  0C:0203    A$apb_flash_loader$838
+  0C:0203    C$apb_flash_loader.c$202$1$1
+  0C:0203    XG$uartWaitXmt$0$0
+  0C:0204    A$apb_flash_loader$858
+  0C:0204    C$apb_flash_loader.c$205$1$1
+  0C:0204    C$apb_flash_loader.c$208$1$1
+  0C:0204    C$apb_flash_loader.c$209$2$2
+  0C:0204    G$uartWaitRxd$0$0
+  0C:0204    _uartWaitRxd
+  0C:0206    A$apb_flash_loader$859
+  0C:0208    A$apb_flash_loader$860
+  0C:020A    A$apb_flash_loader$861
+  0C:020C    A$apb_flash_loader$862
+  0C:020E    A$apb_flash_loader$863
+  0C:0210    A$apb_flash_loader$866
+  0C:0211    A$apb_flash_loader$867
+  0C:0212    A$apb_flash_loader$871
+  0C:0212    C$apb_flash_loader.c$210$1$1
+  0C:0213    A$apb_flash_loader$873
+  0C:0216    A$apb_flash_loader$874
+  0C:0219    A$apb_flash_loader$879
+  0C:0219    C$apb_flash_loader.c$211$1$1
+  0C:0219    XG$uartWaitRxd$0$0
+  0C:021A    A$apb_flash_loader$895
+  0C:021A    C$apb_flash_loader.c$218$1$1
+  0C:021A    C$apb_flash_loader.c$222$1$1
+  0C:021A    G$uart_getchar$0$0
+  0C:021A    _uart_getchar
+  0C:021D    A$apb_flash_loader$900
+  0C:021D    C$apb_flash_loader.c$223$1$1
+  0C:0220    A$apb_flash_loader$901
+  0C:0223    A$apb_flash_loader$902
+  0C:0224    A$apb_flash_loader$903
+  0C:0225    A$apb_flash_loader$904
+  0C:0226    A$apb_flash_loader$905
+  0C:0227    A$apb_flash_loader$908
+  0C:0228    A$apb_flash_loader$909
+  0C:0229    A$apb_flash_loader$913
+  0C:0229    C$apb_flash_loader.c$224$1$1
+  0C:022B    A$apb_flash_loader$917
+  0C:022B    C$apb_flash_loader.c$225$1$1
+  0C:022B    XG$uart_getchar$0$0
+  0C:022C    A$apb_flash_loader$931
+  0C:022C    C$apb_flash_loader.c$229$1$1
+  0C:022C    G$uart_putchar$0$0
+  0C:022C    _uart_putchar
+  0C:022E    A$apb_flash_loader$935
+  0C:022E    C$apb_flash_loader.c$231$1$1
+  0C:0230    A$apb_flash_loader$936
+  0C:0233    A$apb_flash_loader$937
+  0C:0235    A$apb_flash_loader$941
+  0C:0235    C$apb_flash_loader.c$232$1$1
+  0C:0238    A$apb_flash_loader$942
+  0C:023B    A$apb_flash_loader$945
+  0C:023C    A$apb_flash_loader$946
+  0C:023D    A$apb_flash_loader$950
+  0C:023D    C$apb_flash_loader.c$235$1$1
+  0C:023D    XG$uart_putchar$0$0
+  0C:023E    A$apb_flash_loader$965
+  0C:023E    C$apb_flash_loader.c$237$1$1
+  0C:023E    G$printf$0$0
+  0C:023E    _printf
+  0C:0240    A$apb_flash_loader$966
+  0C:0242    A$apb_flash_loader$967
+  0C:0244    A$apb_flash_loader$972
+  0C:0244    C$apb_flash_loader.c$240$1$1
+  0C:0246    A$apb_flash_loader$973
+  0C:0248    A$apb_flash_loader$974
+  0C:024A    A$apb_flash_loader$975
+  0C:024D    A$apb_flash_loader$976
+  0C:024E    A$apb_flash_loader$977
+  0C:024F    A$apb_flash_loader$978
+  0C:0251    A$apb_flash_loader$979
+  0C:0253    A$apb_flash_loader$985
+  0C:0253    C$apb_flash_loader.c$242$1$1
+  0C:0256    A$apb_flash_loader$986
+  0C:0259    A$apb_flash_loader$991
+  0C:0259    C$apb_flash_loader.c$243$2$2
+  0C:025B    A$apb_flash_loader$992
+  0C:025D    A$apb_flash_loader$993
+  0C:025F    A$apb_flash_loader$994
+  0C:0261    A$apb_flash_loader$995
+  0C:0264    A$apb_flash_loader$996
+  0C:0266    A$apb_flash_loader$997
+  0C:0268    A$apb_flash_loader$998
+  0C:026A    A$apb_flash_loader$1003
+  0C:026A    C$apb_flash_loader.c$244$2$2
+  0C:026C    A$apb_flash_loader$1004
+  0C:026E    A$apb_flash_loader$1005
+  0C:0270    A$apb_flash_loader$1006
+  0C:0273    A$apb_flash_loader$1007
+  0C:0274    A$apb_flash_loader$1008
+  0C:0275    A$apb_flash_loader$1009
+  0C:0277    A$apb_flash_loader$1010
+  0C:0279    A$apb_flash_loader$1011
+  0C:027C    A$apb_flash_loader$1015
+  0C:027C    C$apb_flash_loader.c$246$1$1
+  0C:027C    XG$printf$0$0
+  0C:027D    A$apb_flash_loader$1030
+  0C:027D    C$apb_flash_loader.c$251$1$1
+  0C:027D    G$FlashErasePage$0$0
+  0C:027D    _FlashErasePage
+  0C:027F    A$apb_flash_loader$1031
+  0C:0281    A$apb_flash_loader$1039
+  0C:0281    C$apb_flash_loader.c$256$1$1
+  0C:0281    C$apb_flash_loader.c$257$2$2
+  0C:0284    A$apb_flash_loader$1040
+  0C:0287    A$apb_flash_loader$1041
+  0C:0288    A$apb_flash_loader$1042
+  0C:0289    A$apb_flash_loader$1043
+  0C:028A    A$apb_flash_loader$1044
+  0C:028B    A$apb_flash_loader$1047
+  0C:028C    A$apb_flash_loader$1048
+  0C:028D    A$apb_flash_loader$1052
+  0C:028D    C$apb_flash_loader.c$259$1$1
+  0C:028E    A$apb_flash_loader$1054
+  0C:0291    A$apb_flash_loader$1055
+  0C:0294    A$apb_flash_loader$1061
+  0C:0294    C$apb_flash_loader.c$261$1$1
+  0C:0297    A$apb_flash_loader$1062
+  0C:029A    A$apb_flash_loader$1063
+  0C:029B    A$apb_flash_loader$1064
+  0C:029C    A$apb_flash_loader$1065
+  0C:029D    A$apb_flash_loader$1066
+  0C:029E    A$apb_flash_loader$1067
+  0C:029F    A$apb_flash_loader$1068
+  0C:02A0    A$apb_flash_loader$1069
+  0C:02A1    A$apb_flash_loader$1070
+  0C:02A2    A$apb_flash_loader$1072
+  0C:02A4    A$apb_flash_loader$1075
+  0C:02A5    A$apb_flash_loader$1076
+  0C:02A6    A$apb_flash_loader$1081
+  0C:02A6    C$apb_flash_loader.c$262$1$1
+  0C:02A8    A$apb_flash_loader$1082
+  0C:02AA    A$apb_flash_loader$1083
+  0C:02AC    A$apb_flash_loader$1084
+  0C:02AE    A$apb_flash_loader$1085
+  0C:02B0    A$apb_flash_loader$1086
+  0C:02B2    A$apb_flash_loader$1088
+  0C:02B4    A$apb_flash_loader$1091
+  0C:02B5    A$apb_flash_loader$1092
+  0C:02B6    A$apb_flash_loader$1096
+  0C:02B6    C$apb_flash_loader.c$266$1$1
+  0C:02B9    A$apb_flash_loader$1097
+  0C:02BC    A$apb_flash_loader$1100
+  0C:02BE    A$apb_flash_loader$1101
+  0C:02BF    A$apb_flash_loader$1109
+  0C:02BF    C$apb_flash_loader.c$268$1$1
+  0C:02BF    C$apb_flash_loader.c$269$2$3
+  0C:02C2    A$apb_flash_loader$1110
+  0C:02C5    A$apb_flash_loader$1111
+  0C:02C6    A$apb_flash_loader$1112
+  0C:02C7    A$apb_flash_loader$1113
+  0C:02C8    A$apb_flash_loader$1114
+  0C:02C9    A$apb_flash_loader$1117
+  0C:02CA    A$apb_flash_loader$1118
+  0C:02CB    A$apb_flash_loader$1122
+  0C:02CB    C$apb_flash_loader.c$271$1$1
+  0C:02CC    A$apb_flash_loader$1124
+  0C:02CF    A$apb_flash_loader$1125
+  0C:02D2    A$apb_flash_loader$1130
+  0C:02D2    C$apb_flash_loader.c$274$1$1
+  0C:02D2    XG$FlashErasePage$0$0
+  0C:02D3    A$apb_flash_loader$1149
+  0C:02D3    C$apb_flash_loader.c$279$1$1
+  0C:02D3    G$FlashProgramPage$0$0
+  0C:02D3    _FlashProgramPage
+  0C:02D6    A$apb_flash_loader$1150
+  0C:02D9    A$apb_flash_loader$1151
+  0C:02DC    A$apb_flash_loader$1155
+  0C:02DC    C$apb_flash_loader.c$283$1$1
+  0C:02DE    A$apb_flash_loader$1156
+  0C:02E0    A$apb_flash_loader$1160
+  0C:02E0    C$apb_flash_loader.c$285$1$1
+  0C:02E2    A$apb_flash_loader$1161
+  0C:02E4    A$apb_flash_loader$1162
+  0C:02E7    A$apb_flash_loader$1163
+  0C:02E9    A$apb_flash_loader$1164
+  0C:02EB    A$apb_flash_loader$1169
+  0C:02EB    C$apb_flash_loader.c$287$1$1
+  0C:02EE    A$apb_flash_loader$1170
+  0C:02F1    A$apb_flash_loader$1171
+  0C:02F2    A$apb_flash_loader$1172
+  0C:02F3    A$apb_flash_loader$1173
+  0C:02F4    A$apb_flash_loader$1174
+  0C:02F5    A$apb_flash_loader$1175
+  0C:02F6    A$apb_flash_loader$1176
+  0C:02F7    A$apb_flash_loader$1177
+  0C:02F8    A$apb_flash_loader$1178
+  0C:02F9    A$apb_flash_loader$1180
+  0C:02FB    A$apb_flash_loader$1183
+  0C:02FC    A$apb_flash_loader$1184
+  0C:02FD    A$apb_flash_loader$1189
+  0C:02FD    C$apb_flash_loader.c$288$1$1
+  0C:02FF    A$apb_flash_loader$1190
+  0C:0301    A$apb_flash_loader$1191
+  0C:0303    A$apb_flash_loader$1192
+  0C:0305    A$apb_flash_loader$1193
+  0C:0307    A$apb_flash_loader$1194
+  0C:0309    A$apb_flash_loader$1196
+  0C:030B    A$apb_flash_loader$1199
+  0C:030C    A$apb_flash_loader$1200
+  0C:030D    A$apb_flash_loader$1205
+  0C:030D    C$apb_flash_loader.c$290$1$1
+  0C:030F    A$apb_flash_loader$1206
+  0C:0311    A$apb_flash_loader$1207
+  0C:0313    A$apb_flash_loader$1208
+  0C:0315    A$apb_flash_loader$1209
+  0C:0317    A$apb_flash_loader$1210
+  0C:0319    A$apb_flash_loader$1213
+  0C:031A    A$apb_flash_loader$1217
+  0C:031A    C$apb_flash_loader.c$291$1$1
+  0C:031C    A$apb_flash_loader$1218
+  0C:031E    A$apb_flash_loader$1219
+  0C:0321    A$apb_flash_loader$1220
+  0C:0323    A$apb_flash_loader$1221
+  0C:0325    A$apb_flash_loader$1225
+  0C:0327    A$apb_flash_loader$1229
+  0C:0328    A$apb_flash_loader$1230
+  0C:0329    A$apb_flash_loader$1231
+  0C:032B    A$apb_flash_loader$1233
+  0C:032D    A$apb_flash_loader$1234
+  0C:0330    A$apb_flash_loader$1240
+  0C:0330    C$apb_flash_loader.c$294$2$2
+  0C:0333    A$apb_flash_loader$1241
+  0C:0336    A$apb_flash_loader$1242
+  0C:0337    A$apb_flash_loader$1243
+  0C:0338    A$apb_flash_loader$1244
+  0C:0339    A$apb_flash_loader$1245
+  0C:033A    A$apb_flash_loader$1246
+  0C:033B    A$apb_flash_loader$1247
+  0C:033C    A$apb_flash_loader$1248
+  0C:033D    A$apb_flash_loader$1249
+  0C:033E    A$apb_flash_loader$1251
+  0C:0340    A$apb_flash_loader$1254
+  0C:0341    A$apb_flash_loader$1255
+  0C:0342    A$apb_flash_loader$1260
+  0C:0342    C$apb_flash_loader.c$295$2$2
+  0C:0344    A$apb_flash_loader$1261
+  0C:0346    A$apb_flash_loader$1262
+  0C:0348    A$apb_flash_loader$1263
+  0C:034A    A$apb_flash_loader$1264
+  0C:034C    A$apb_flash_loader$1265
+  0C:034E    A$apb_flash_loader$1267
+  0C:0350    A$apb_flash_loader$1270
+  0C:0351    A$apb_flash_loader$1271
+  0C:0352    A$apb_flash_loader$1276
+  0C:0352    C$apb_flash_loader.c$296$2$2
+  0C:0354    A$apb_flash_loader$1277
+  0C:0356    A$apb_flash_loader$1278
+  0C:0357    A$apb_flash_loader$1279
+  0C:0359    A$apb_flash_loader$1280
+  0C:035B    A$apb_flash_loader$1281
+  0C:035C    A$apb_flash_loader$1283
+  0C:035E    A$apb_flash_loader$1284
+  0C:0360    A$apb_flash_loader$1285
+  0C:0361    A$apb_flash_loader$1286
+  0C:0363    A$apb_flash_loader$1287
+  0C:0365    A$apb_flash_loader$1288
+  0C:0366    A$apb_flash_loader$1289
+  0C:0368    A$apb_flash_loader$1292
+  0C:036A    A$apb_flash_loader$1293
+  0C:036C    A$apb_flash_loader$1294
+  0C:036E    A$apb_flash_loader$1295
+  0C:0371    A$apb_flash_loader$1296
+  0C:0372    A$apb_flash_loader$1299
+  0C:0374    A$apb_flash_loader$1300
+  0C:0376    A$apb_flash_loader$1301
+  0C:0377    A$apb_flash_loader$1302
+  0C:0378    A$apb_flash_loader$1306
+  0C:0378    C$apb_flash_loader.c$297$2$2
+  0C:037A    A$apb_flash_loader$1307
+  0C:037C    A$apb_flash_loader$1308
+  0C:037E    A$apb_flash_loader$1309
+  0C:0381    A$apb_flash_loader$1310
+  0C:0383    A$apb_flash_loader$1311
+  0C:0385    A$apb_flash_loader$1312
+  0C:0387    A$apb_flash_loader$1317
+  0C:0387    C$apb_flash_loader.c$298$2$2
+  0C:0388    A$apb_flash_loader$1318
+  0C:038B    A$apb_flash_loader$1319
+  0C:038C    A$apb_flash_loader$1325
+  0C:038C    C$apb_flash_loader.c$293$1$1
+  0C:038D    A$apb_flash_loader$1326
+  0C:0390    A$apb_flash_loader$1331
+  0C:0390    C$apb_flash_loader.c$301$1$1
+  0C:0393    A$apb_flash_loader$1332
+  0C:0396    A$apb_flash_loader$1335
+  0C:0398    A$apb_flash_loader$1336
+  0C:0399    A$apb_flash_loader$1340
+  0C:0399    C$apb_flash_loader.c$304$1$1
+  0C:039C    A$apb_flash_loader$1344
+  0C:039C    C$apb_flash_loader.c$306$1$1
+  0C:039C    XG$FlashProgramPage$0$0
+  0C:039D    A$apb_flash_loader$1364
+  0C:039D    C$apb_flash_loader.c$309$1$1
+  0C:039D    C$apb_flash_loader.c$312$1$1
+  0C:039D    C$apb_flash_loader.c$313$2$2
+  0C:039D    G$FlashBusyCheck$0$0
+  0C:039D    _FlashBusyCheck
+  0C:03A0    A$apb_flash_loader$1365
+  0C:03A3    A$apb_flash_loader$1366
+  0C:03A4    A$apb_flash_loader$1367
+  0C:03A5    A$apb_flash_loader$1368
+  0C:03A6    A$apb_flash_loader$1369
+  0C:03A7    A$apb_flash_loader$1372
+  0C:03A8    A$apb_flash_loader$1373
+  0C:03A9    A$apb_flash_loader$1377
+  0C:03A9    C$apb_flash_loader.c$315$1$1
+  0C:03AA    A$apb_flash_loader$1379
+  0C:03AD    A$apb_flash_loader$1380
+  0C:03B0    A$apb_flash_loader$1385
+  0C:03B0    C$apb_flash_loader.c$317$1$1
+  0C:03B0    XG$FlashBusyCheck$0$0
+  0C:03B1    __gptrget
+  0C:03CD    __sdcc_external_startup
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+CONST                              03D1   006D =    109. bytes (REL,CON,CODE)
+
+      Value  Global
+   --------  --------------------------------
+  0C:03D1    G$ascii$0$0
+  0C:03D1    _ascii
+  0C:03E2    F___apb_flash_loader$_str_0$0$0
+  0C:03FF    F___apb_flash_loader$_str_1$0$0
+  0C:0402    F___apb_flash_loader$_str_2$0$0
+  0C:041C    F___apb_flash_loader$_str_3$0$0
+  0C:042E    F___apb_flash_loader$_str_4$0$0
+  0C:0432    F___apb_flash_loader$_str_5$0$0
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+XINIT                              043E   0000 =      0. bytes (REL,CON,CODE)
+ASxxxx Linker V01.75 + NoICE + SDCC Feb 1999,  page 1.
+
+Files Linked      [ module(s) ]
+
+./apb_flash_loader.rel
+
+Libraries Linked            [   object  file   ]
+
+E:\Microsemi\Libero_v10.1\SoftConsole\Sourcery-G++\bin\..\lib\small/mcs51.lib    [     crtclear.rel ]
+E:\Microsemi\Libero_v10.1\SoftConsole\Sourcery-G++\bin\..\lib\small/mcs51.lib    [     crtxinit.rel ]
+E:\Microsemi\Libero_v10.1\SoftConsole\Sourcery-G++\bin\..\lib\small/mcs51.lib    [    crtxclear.rel ]
+E:\Microsemi\Libero_v10.1\SoftConsole\Sourcery-G++\bin\..\lib\small/mcs51.lib    [   crtpagesfr.rel ]
+E:\Microsemi\Libero_v10.1\SoftConsole\Sourcery-G++\bin\..\lib\small/mcs51.lib    [     crtstart.rel ]
+E:\Microsemi\Libero_v10.1\SoftConsole\Sourcery-G++\bin\..\lib\small/libsdcc.lib    [         _gptrget ]
+E:\Microsemi\Libero_v10.1\SoftConsole\Sourcery-G++\bin\..\lib\small/libsdcc.lib    [         _startup ]
+
+ASxxxx Linker V01.75 + NoICE + SDCC Feb 1999,  page 2.
+
+User Base Address Definitions
+
+HOME = 0x0000
+ISEG = 0x0000
+BSEG = 0x0000
+
+

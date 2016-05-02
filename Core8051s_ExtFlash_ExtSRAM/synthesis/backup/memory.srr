@@ -1,0 +1,223 @@
+#Build: Synplify Pro D-2009.12A, Build 040R, Jan 20 2010
+#install: C:\Actel\Libero_v9.0\Synopsys\synplify_D200912A
+#OS: Windows XP 5.1
+#Hostname: JM-LAPTOP
+
+#Implementation: synthesis
+
+#Tue Apr 27 14:49:01 2010
+
+$ Start of Compile
+#Tue Apr 27 14:49:01 2010
+
+Synopsys VHDL Compiler, version comp475rc, Build 060R, built Jan 15 2010
+Copyright (C) 1994-2010, Synopsys Inc.  All Rights Reserved
+
+@N: CD720 :"C:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\lib\vhd\std.vhd":123:18:123:21|Setting time resolution to ns
+Top entity isn't set yet!
+VHDL syntax check successful!
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\hdl\memory_interface.vhd":7:7:7:12|Synthesizing work.memory.def_arch 
+@W: CD638 :"C:\Actelprj\AFS_ADV_KIT_8051\hdl\memory_interface.vhd":46:7:46:16|Signal int_ram_rd is undriven 
+@W: CD638 :"C:\Actelprj\AFS_ADV_KIT_8051\hdl\memory_interface.vhd":47:7:47:16|Signal int_ram_wr is undriven 
+@W: CD638 :"C:\Actelprj\AFS_ADV_KIT_8051\hdl\memory_interface.vhd":48:7:48:16|Signal int_nvm_cs is undriven 
+@N: CD630 :"C:\Actelprj\AFS_ADV_KIT_8051\smartgen\INT_RAM8kX8\INT_RAM8kX8.vhd":8:7:8:17|Synthesizing work.int_ram8kx8.def_arch 
+@N: CD630 :"C:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\lib\proasic\fusion.vhd":3182:10:3182:15|Synthesizing fusion.ram4k9.syn_black_box 
+Post processing for fusion.ram4k9.syn_black_box
+@N: CD630 :"C:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\lib\proasic\fusion.vhd":2117:10:2117:12|Synthesizing fusion.inv.syn_black_box 
+Post processing for fusion.inv.syn_black_box
+@N: CD630 :"C:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\lib\proasic\fusion.vhd":2179:10:2179:12|Synthesizing fusion.mx2.syn_black_box 
+Post processing for fusion.mx2.syn_black_box
+@N: CD630 :"C:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\lib\proasic\fusion.vhd":2381:10:2381:12|Synthesizing fusion.or2.syn_black_box 
+Post processing for fusion.or2.syn_black_box
+@N: CD630 :"C:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\lib\proasic\fusion.vhd":3149:10:3149:13|Synthesizing fusion.buff.syn_black_box 
+Post processing for fusion.buff.syn_black_box
+@N: CD630 :"C:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\lib\proasic\fusion.vhd":1491:10:1491:13|Synthesizing fusion.dfn1.syn_black_box 
+Post processing for fusion.dfn1.syn_black_box
+@N: CD630 :"C:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\lib\proasic\fusion.vhd":1899:10:1899:12|Synthesizing fusion.gnd.syn_black_box 
+Post processing for fusion.gnd.syn_black_box
+@N: CD630 :"C:\Actel\Libero_v9.0\Synopsys\synplify_D200912A\lib\proasic\fusion.vhd":3019:10:3019:12|Synthesizing fusion.vcc.syn_black_box 
+Post processing for fusion.vcc.syn_black_box
+Post processing for work.int_ram8kx8.def_arch
+@W: CL168 :"C:\Actelprj\AFS_ADV_KIT_8051\smartgen\INT_RAM8kX8\INT_RAM8kX8.vhd":346:4:346:14|Pruning instance AFF1_0_inst - not in use ... 
+Post processing for work.memory.def_arch
+@W: CL240 :"C:\Actelprj\AFS_ADV_KIT_8051\hdl\memory_interface.vhd":15:8:15:14|MEMACKO is not assigned a value (floating) - a simulation mismatch is possible 
+@W: CL240 :"C:\Actelprj\AFS_ADV_KIT_8051\hdl\memory_interface.vhd":14:8:14:16|MEMPSACKO is not assigned a value (floating) - a simulation mismatch is possible 
+@END
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Tue Apr 27 14:49:02 2010
+
+###########################################################]
+Synopsys Actel Technology Mapper, Version map500act, Build 058R, Built Jan 18 2010 09:16:23
+Copyright (C) 1994-2010, Synopsys Inc.  All Rights Reserved
+Product Version D-2009.12A
+@N: MF249 |Running in 32-bit mode.
+@N: MF258 |Gated clock conversion disabled 
+
+Automatic dissolve at startup in view:work.memory(def_arch) of EXT_DATA_MEMORY(INT_RAM8kX8)
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+Finished RTL optimizations (Time elapsed 0h:00m:01s; Memory used current: 56MB peak: 57MB)
+
+Finished factoring (Time elapsed 0h:00m:01s; Memory used current: 56MB peak: 57MB)
+
+Finished gated-clock and generated-clock conversion (Time elapsed 0h:00m:01s; Memory used current: 56MB peak: 57MB)
+
+Finished generic timing optimizations - Pass 1 (Time elapsed 0h:00m:01s; Memory used current: 56MB peak: 57MB)
+
+Starting Early Timing Optimization (Time elapsed 0h:00m:01s; Memory used current: 56MB peak: 57MB)
+
+Finished Early Timing Optimization (Time elapsed 0h:00m:01s; Memory used current: 56MB peak: 57MB)
+
+Finished generic timing optimizations - Pass 2 (Time elapsed 0h:00m:01s; Memory used current: 56MB peak: 57MB)
+
+Finished preparing to map (Time elapsed 0h:00m:02s; Memory used current: 56MB peak: 57MB)
+
+
+High Fanout Net Report
+**********************
+
+Driver Instance / Pin Name     Fanout, notes
+--------------------------------------------
+MEMADDR_pad[0] / Y             33           
+MEMADDR_pad[1] / Y             33           
+MEMADDR_pad[2] / Y             33           
+MEMADDR_pad[3] / Y             33           
+MEMADDR_pad[4] / Y             33           
+MEMADDR_pad[5] / Y             33           
+MEMADDR_pad[6] / Y             33           
+MEMADDR_pad[7] / Y             33           
+MEMADDR_pad[8] / Y             33           
+MEMADDR_pad[9] / Y             33           
+MEMADDR_pad[10] / Y            33           
+MEMADDR_pad[11] / Y            33           
+============================================
+
+@N: FP130 |Promoting Net SYSCLK_c on CLKBUF  SYSCLK_pad 
+Buffering MEMADDR_c_c[11], fanout 33 segments 2
+Buffering MEMADDR_c_c[10], fanout 33 segments 2
+Buffering MEMADDR_c_c[9], fanout 33 segments 2
+Buffering MEMADDR_c_c[8], fanout 33 segments 2
+Buffering MEMADDR_c_c[7], fanout 33 segments 2
+Buffering MEMADDR_c_c[6], fanout 33 segments 2
+Buffering MEMADDR_c_c[5], fanout 33 segments 2
+Buffering MEMADDR_c_c[4], fanout 33 segments 2
+Buffering MEMADDR_c_c[3], fanout 33 segments 2
+Buffering MEMADDR_c_c[2], fanout 33 segments 2
+Buffering MEMADDR_c_c[1], fanout 33 segments 2
+Buffering MEMADDR_c_c[0], fanout 33 segments 2
+Finished technology mapping (Time elapsed 0h:00m:02s; Memory used current: 56MB peak: 57MB)
+
+Finished technology timing optimizations and critical path resynthesis (Time elapsed 0h:00m:02s; Memory used current: 56MB peak: 57MB)
+
+
+Added 12 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+Finished restoring hierarchy (Time elapsed 0h:00m:02s; Memory used current: 56MB peak: 57MB)
+
+Writing Analyst data base C:\Actelprj\AFS_ADV_KIT_8051\synthesis\memory.srm
+Finished Writing Netlist Databases (Time elapsed 0h:00m:02s; Memory used current: 56MB peak: 57MB)
+
+Writing EDIF Netlist and constraint files
+D-2009.12A
+Finished Writing EDIF Netlist and constraint files (Time elapsed 0h:00m:02s; Memory used current: 56MB peak: 57MB)
+
+@W: MT420 |Found inferred clock memory|SYSCLK with period 10.00ns. A user-defined clock should be declared on object "p:SYSCLK"
+
+
+
+##### START OF TIMING REPORT #####[
+# Timing Report written on Tue Apr 27 14:49:09 2010
+#
+
+
+Top view:               memory
+Library name:           fusion
+Operating conditions:   COMWC-1 ( T = 70.0, V = 1.42, P = 1.48, tree_type = balanced_tree )
+Requested Frequency:    100.0 MHz
+Wire load mode:         top
+Wire load model:        fusion
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |This timing report estimates place and route data. Please look at the place and route timing report for final timing..
+
+@N: MT322 |Clock constraints cover only FF-to-FF paths associated with the clock..
+
+
+
+Performance Summary 
+*******************
+
+
+Worst slack in design: NA
+
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks            |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+--------------------------------------------------------------------------------------------------------
+Starting  Ending  |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+--------------------------------------------------------------------------------------------------------
+========================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+		No IO constraint found 
+
+
+##### END OF TIMING REPORT #####]
+
+--------------------------------------------------------------------------------
+Target Part: M1AFS1500_FBGA256_-1
+Report for cell memory.def_arch
+  Core Cell usage:
+              cell count     area count*area
+              BUFF    14      1.0       14.0
+               GND     2      0.0        0.0
+               INV     6      1.0        6.0
+               MX2    16      1.0       16.0
+              NOR2     1      1.0        1.0
+               OR2     4      1.0        4.0
+               VCC     2      0.0        0.0
+
+
+              DFN1     1      1.0        1.0
+            RAM4K9    16      0.0        0.0
+                   -----          ----------
+             TOTAL    62                42.0
+
+
+  IO Cell usage:
+              cell count
+             BIBUF     8
+            CLKBUF     1
+             INBUF    28
+            OUTBUF    36
+                   -----
+             TOTAL    73
+
+
+Core Cells         : 42 of 38400 (0%)
+IO Cells           : 73 of 252 (29%)
+
+  RAM/ROM Usage Summary
+Block Rams : 16 of 60 (26%)
+
+Mapper successful!
+Process took 0h:00m:02s realtime, 0h:00m:02s cputime
+# Tue Apr 27 14:49:09 2010
+
+###########################################################]

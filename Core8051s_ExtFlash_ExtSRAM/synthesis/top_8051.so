@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<SynplifyOutput>
+	<result>Success</result>
+	<design>top_8051</design>
+	<target_edif>C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\synthesis\top_8051.edn</target_edif>
+</SynplifyOutput>

@@ -1,0 +1,64 @@
+Synopsys Microsemi Technology Pre-mapping, Version mapact, Build 1659R, Built Dec 10 2015 09:42:41
+Copyright (C) 1994-2015, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+Product Version J-2015.03M-SP1-2
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 99MB)
+
+@L: C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\synthesis\top_8051_scck.rpt 
+Printing clock  summary report in "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\synthesis\top_8051_scck.rpt" file 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled 
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 116MB peak: 121MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 116MB peak: 121MB)
+
+@N: BN362 :"c:\proj\dev-kits\m1afs-adv-dev-kit\core8051s_extflash_extsram\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\clkctrl.vhd":175:7:175:8|Removing sequential instance pcon[7] of view:PrimLib.dffre(prim) in hierarchy view:work.CLOCK_CONTROL(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\proj\dev-kits\m1afs-adv-dev-kit\core8051s_extflash_extsram\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\cpu.vhd":330:2:330:3|Removing sequential instance rmwinstr of view:PrimLib.dffre(prim) in hierarchy view:work.CONTROL_UNIT(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\proj\dev-kits\m1afs-adv-dev-kit\core8051s_extflash_extsram\component\work\sys\coreuartapb_0\rtl\vhdl\core\rx_async.vhd":443:6:443:7|Removing sequential instance fifo_write_xhdl6 of view:PrimLib.dffs(prim) in hierarchy view:coreuartapb_lib.sys_CoreUARTapb_0_Rx_async(translated) because there are no references to its outputs 
+@N: BN362 :"c:\proj\dev-kits\m1afs-adv-dev-kit\core8051s_extflash_extsram\component\work\sys\coreuartapb_0\rtl\vhdl\core\rx_async.vhd":443:6:443:7|Removing sequential instance clear_parity_en_xhdl3 of view:PrimLib.dffr(prim) in hierarchy view:coreuartapb_lib.sys_CoreUARTapb_0_Rx_async(translated) because there are no references to its outputs 
+@N: BN362 :"c:\proj\dev-kits\m1afs-adv-dev-kit\core8051s_extflash_extsram\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|Removing sequential instance TrigTon1 of view:PrimLib.dffr(prim) in hierarchy view:work.trigger(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\proj\dev-kits\m1afs-adv-dev-kit\core8051s_extflash_extsram\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|Removing sequential instance TrigTon0 of view:PrimLib.dffr(prim) in hierarchy view:work.trigger(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\proj\dev-kits\m1afs-adv-dev-kit\core8051s_extflash_extsram\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|Removing sequential instance TrigTon2 of view:PrimLib.dffr(prim) in hierarchy view:work.trigger(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\proj\dev-kits\m1afs-adv-dev-kit\core8051s_extflash_extsram\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|Removing sequential instance TrigTon3 of view:PrimLib.dffr(prim) in hierarchy view:work.trigger(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\proj\dev-kits\m1afs-adv-dev-kit\core8051s_extflash_extsram\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|Removing sequential instance TrigToff1 of view:PrimLib.dffr(prim) in hierarchy view:work.trigger(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\proj\dev-kits\m1afs-adv-dev-kit\core8051s_extflash_extsram\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|Removing sequential instance TrigToff0 of view:PrimLib.dffr(prim) in hierarchy view:work.trigger(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\proj\dev-kits\m1afs-adv-dev-kit\core8051s_extflash_extsram\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|Removing sequential instance TrigToff2 of view:PrimLib.dffr(prim) in hierarchy view:work.trigger(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\proj\dev-kits\m1afs-adv-dev-kit\core8051s_extflash_extsram\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|Removing sequential instance TrigToff3 of view:PrimLib.dffr(prim) in hierarchy view:work.trigger(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\proj\dev-kits\m1afs-adv-dev-kit\core8051s_extflash_extsram\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\debug.vhd":84:5:84:6|Removing sequential instance BreakOut_xhdl of view:PrimLib.dffre(prim) in hierarchy view:work.debug(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\proj\dev-kits\m1afs-adv-dev-kit\core8051s_extflash_extsram\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\jtagu_fusion.vhd":354:6:354:7|Removing sequential instance AuxOut_xhdl of view:PrimLib.dffre(prim) in hierarchy view:work.jtagu(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\proj\dev-kits\m1afs-adv-dev-kit\core8051s_extflash_extsram\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|Removing sequential instance TrigOut1 of view:PrimLib.dffr(prim) in hierarchy view:work.trigger(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\proj\dev-kits\m1afs-adv-dev-kit\core8051s_extflash_extsram\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|Removing sequential instance TrigOut0 of view:PrimLib.dffr(prim) in hierarchy view:work.trigger(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\proj\dev-kits\m1afs-adv-dev-kit\core8051s_extflash_extsram\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|Removing sequential instance TrigOut2 of view:PrimLib.dffr(prim) in hierarchy view:work.trigger(rtl) because there are no references to its outputs 
+@N: BN362 :"c:\proj\dev-kits\m1afs-adv-dev-kit\core8051s_extflash_extsram\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\trigger.vhd":409:6:409:7|Removing sequential instance TrigOut3 of view:PrimLib.dffr(prim) in hierarchy view:work.trigger(rtl) because there are no references to its outputs 
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 123MB peak: 125MB)
+
+
+
+@S |Clock Summary
+*****************
+
+Start                               Requested     Requested     Clock        Clock              
+Clock                               Frequency     Period        Type         Group              
+------------------------------------------------------------------------------------------------
+PLL_50Mh_6Mh|GLA_inferred_clock     100.0 MHz     10.000        inferred     Inferred_clkgroup_2
+jtagu|udrck                         100.0 MHz     10.000        inferred     Inferred_clkgroup_1
+top_8051|DebugIf_TCK                100.0 MHz     10.000        inferred     Inferred_clkgroup_0
+================================================================================================
+
+@W: MT530 :"c:\proj\dev-kits\m1afs-adv-dev-kit\core8051s_extflash_extsram\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\jtagu_fusion.vhd":180:0:180:9|Found inferred clock top_8051|DebugIf_TCK which controls 0 sequential elements including sys_0.CORE8051S_0.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.UJTAG_inst. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\proj\dev-kits\m1afs-adv-dev-kit\core8051s_extflash_extsram\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\jtagu_fusion.vhd":354:6:354:7|Found inferred clock jtagu|udrck which controls 50 sequential elements including sys_0.CORE8051S_0.oci1_trace0\.ocia51_inst.ujtag1\.jtagu_inst.IR_xhdl[7:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\proj\dev-kits\m1afs-adv-dev-kit\core8051s_extflash_extsram\component\actel\directcore\core8051s\2.4.101\rtl\vhdl\u\alu.vhd":547:8:547:9|Found inferred clock PLL_50Mh_6Mh|GLA_inferred_clock which controls 1464 sequential elements including sys_0.CORE8051S_0.MAIN8051_inst.U_ALU.psw[7:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+
+Finished Pre Mapping Phase.
+@N: BN225 |Writing default property annotation file C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\synthesis\top_8051.sap.
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 58MB peak: 125MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Mon May 02 15:02:32 2016
+
+###########################################################]

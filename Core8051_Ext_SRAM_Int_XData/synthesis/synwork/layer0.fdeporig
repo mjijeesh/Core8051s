@@ -1,0 +1,304 @@
+#defaultlanguage:vhdl
+#OPTIONS:"|-layerid|0|-orig_srs|C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\synthesis\\synwork\\top_8051_comp.srs|-top|work.top_8051|-prodtype|synplify_pro|-nram|-fixsmult|-divnmod|-encrypt|-pro|-lite|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-ignore_undefined_lib|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|COREAPB3_LIB|-lib|COREAPB3_LIB|-lib|COREAPB3_LIB|-lib|COREGPIO_LIB|-lib|COREGPIO_LIB|-lib|CORETIMER_LIB|-lib|CORETIMER_LIB|-lib|COREUARTAPB_LIB|-lib|COREUARTAPB_LIB|-lib|COREUARTAPB_LIB|-lib|COREUARTAPB_LIB|-lib|COREUARTAPB_LIB|-lib|COREUARTAPB_LIB|-lib|COREUARTAPB_LIB|-lib|COREAPB3_LIB|-lib|COREGPIO_LIB|-lib|COREUARTAPB_LIB|-lib|work|-lib|work"
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.7\\Synplify\\bin64\\c_vhdl.exe":1449201926
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.7\\Synplify\\lib\\vhd\\location.map":1449201932
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.7\\Synplify\\lib\\vhd\\std.vhd":1449201932
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.7\\Synplify\\lib\\vhd\\snps_haps_pkg.vhd":1449201932
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.7\\Synplify\\lib\\vhd\\std1164.vhd":1449201932
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.7\\Synplify\\lib\\vhd\\numeric.vhd":1449201932
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.7\\Synplify\\lib\\vhd\\umr_capim.vhd":1449201932
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.7\\Synplify\\lib\\vhd\\arith.vhd":1449201932
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.7\\Synplify\\lib\\vhd\\unsigned.vhd":1449201932
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.7\\Synplify\\lib\\vhd\\hyperents.vhd":1449201932
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\smartgen\\PLL_50Mh_6Mh\\PLL_50Mh_6Mh.vhd":1462166381
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\smartgen\\RAM4Kx8\\RAM4Kx8.vhd":1462166677
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\hdl\\memory_mux.vhd":1462166466
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\smartgen\\rc_osc\\rc_osc.vhd":1461931012
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\Actel\\DirectCore\\CORE8051S\\2.4.101\\rtl\\vhdl\\u\\core8051s_globs_fusion.vhd":1419244712
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\Actel\\DirectCore\\CORE8051S\\2.4.101\\rtl\\vhdl\\u\\core8051s_utility.vhd":1419244712
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\Actel\\DirectCore\\CORE8051S\\2.4.101\\rtl\\vhdl\\u\\alu.vhd":1419244712
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\Actel\\DirectCore\\CORE8051S\\2.4.101\\rtl\\vhdl\\u\\clkctrl.vhd":1419244712
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\Actel\\DirectCore\\CORE8051S\\2.4.101\\rtl\\vhdl\\u\\cpu.vhd":1419244712
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\Actel\\DirectCore\\CORE8051S\\2.4.101\\rtl\\vhdl\\u\\intctrl.vhd":1419244712
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\Actel\\DirectCore\\CORE8051S\\2.4.101\\rtl\\vhdl\\u\\isr.vhd":1419244712
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\Actel\\DirectCore\\CORE8051S\\2.4.101\\rtl\\vhdl\\u\\memctrl.vhd":1419244712
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\Actel\\DirectCore\\CORE8051S\\2.4.101\\rtl\\vhdl\\u\\oci.vhd":1419244712
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\Actel\\DirectCore\\CORE8051S\\2.4.101\\rtl\\vhdl\\u\\pmu.vhd":1419244712
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\Actel\\DirectCore\\CORE8051S\\2.4.101\\rtl\\vhdl\\u\\ramsfrctrl.vhd":1419244712
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\Actel\\DirectCore\\CORE8051S\\2.4.101\\rtl\\vhdl\\u\\rstctrl.vhd":1419244712
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\Actel\\DirectCore\\CORE8051S\\2.4.101\\rtl\\vhdl\\u\\instrdec.vhd":1419244712
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\Actel\\DirectCore\\CORE8051S\\2.4.101\\rtl\\vhdl\\u\\main8051.vhd":1419244712
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\Actel\\DirectCore\\CORE8051S\\2.4.101\\rtl\\vhdl\\u\\ram256x20_fusion.vhd":1419244712
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\Actel\\DirectCore\\CORE8051S\\2.4.101\\rtl\\vhdl\\u\\ram256x8_fusion.vhd":1419244712
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\Actel\\DirectCore\\CORE8051S\\2.4.101\\rtl\\vhdl\\u\\ram256x8_block_ram.vhd":1419244712
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\Actel\\DirectCore\\CORE8051S\\2.4.101\\rtl\\vhdl\\u\\ram256x8_registers.vhd":1419244712
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\Actel\\DirectCore\\CORE8051S\\2.4.101\\rtl\\vhdl\\u\\jtagdef.vhd":1419244712
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\Actel\\DirectCore\\CORE8051S\\2.4.101\\rtl\\vhdl\\u\\debug.vhd":1419244712
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\Actel\\DirectCore\\CORE8051S\\2.4.101\\rtl\\vhdl\\u\\jtag.vhd":1419244712
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\Actel\\DirectCore\\CORE8051S\\2.4.101\\rtl\\vhdl\\u\\jtagu_fusion.vhd":1419244712
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\Actel\\DirectCore\\CORE8051S\\2.4.101\\rtl\\vhdl\\u\\trace.vhd":1419244712
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\Actel\\DirectCore\\CORE8051S\\2.4.101\\rtl\\vhdl\\u\\trigger.vhd":1419244712
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\Actel\\DirectCore\\CORE8051S\\2.4.101\\rtl\\vhdl\\u\\ocia51.vhd":1419244712
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\Actel\\DirectCore\\CORE8051S\\2.4.101\\rtl\\vhdl\\u\\core8051s.vhd":1419244712
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\Actel\\DirectCore\\CoreWatchdog\\1.1.101\\rtl\\vhdl\\u\\CoreWatchdog.vhd":1461930741
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\Actel\\DirectCore\\CoreAPB3\\4.1.100\\rtl\\vhdl\\core\\coreapb3_muxptob3.vhd":1438149326
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\Actel\\DirectCore\\CoreAPB3\\4.1.100\\rtl\\vhdl\\core\\coreapb3_iaddr_reg.vhd":1438149326
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\Actel\\DirectCore\\CoreAPB3\\4.1.100\\rtl\\vhdl\\core\\coreapb3.vhd":1438149326
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\Actel\\DirectCore\\CoreGPIO\\3.1.101\\rtl\\vhdl\\core\\coregpio_pkg.vhd":1455272602
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\Actel\\DirectCore\\CoreGPIO\\3.1.101\\rtl\\vhdl\\core\\coregpio.vhd":1455272602
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\Actel\\DirectCore\\CoreTimer\\2.0.103\\rtl\\vhdl\\core\\coretimer_pkg.vhd":1461821131
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\Actel\\DirectCore\\CoreTimer\\2.0.103\\rtl\\vhdl\\core\\coretimer.vhd":1461821131
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\work\\sys\\CoreUARTapb_0\\rtl\\vhdl\\core\\Clock_gen.vhd":1462166191
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\work\\sys\\CoreUARTapb_0\\rtl\\vhdl\\core\\Rx_async.vhd":1462166191
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\work\\sys\\CoreUARTapb_0\\rtl\\vhdl\\core\\Tx_async.vhd":1462166191
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\work\\sys\\CoreUARTapb_0\\rtl\\vhdl\\core\\fifo_256x8_fusion.vhd":1462166230
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\work\\sys\\CoreUARTapb_0\\rtl\\vhdl\\core\\coreuart_pkg.vhd":1462166191
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\work\\sys\\CoreUARTapb_0\\rtl\\vhdl\\core\\CoreUART.vhd":1462166191
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\work\\sys\\CoreUARTapb_0\\rtl\\vhdl\\core\\CoreUARTapb.vhd":1462166191
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\Actel\\DirectCore\\CoreAPB3\\4.1.100\\rtl\\vhdl\\core\\components.vhd":1438149326
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\Actel\\DirectCore\\CoreGPIO\\3.1.101\\rtl\\vhdl\\core\\components.vhd":1455272602
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\work\\sys\\CoreUARTapb_0\\rtl\\vhdl\\core\\components.vhd":1462166191
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\work\\sys\\sys.vhd":1462166230
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051_Ext_SRAM_Int_XData\\component\\work\\top_8051\\top_8051.vhd":1462166687
+0 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\smartgen\PLL_50Mh_6Mh\PLL_50Mh_6Mh.vhd" vhdl
+1 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\smartgen\RAM4Kx8\RAM4Kx8.vhd" vhdl
+2 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\hdl\memory_mux.vhd" vhdl
+3 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\smartgen\rc_osc\rc_osc.vhd" vhdl
+4 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\core8051s_globs_fusion.vhd" vhdl
+5 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\core8051s_utility.vhd" vhdl
+6 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\alu.vhd" vhdl
+7 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\clkctrl.vhd" vhdl
+8 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\cpu.vhd" vhdl
+9 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\intctrl.vhd" vhdl
+10 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd" vhdl
+11 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\memctrl.vhd" vhdl
+12 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\oci.vhd" vhdl
+13 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\pmu.vhd" vhdl
+14 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\ramsfrctrl.vhd" vhdl
+15 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\rstctrl.vhd" vhdl
+16 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\instrdec.vhd" vhdl
+17 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\main8051.vhd" vhdl
+18 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\ram256x20_fusion.vhd" vhdl
+19 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\ram256x8_fusion.vhd" vhdl
+20 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\ram256x8_block_ram.vhd" vhdl
+21 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\ram256x8_registers.vhd" vhdl
+22 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\jtagdef.vhd" vhdl
+23 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\debug.vhd" vhdl
+24 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\jtag.vhd" vhdl
+25 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\jtagu_fusion.vhd" vhdl
+26 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\trace.vhd" vhdl
+27 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\trigger.vhd" vhdl
+28 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\ocia51.vhd" vhdl
+29 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\core8051s.vhd" vhdl
+30 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreWatchdog\1.1.101\rtl\vhdl\u\CoreWatchdog.vhd" vhdl
+31 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3_muxptob3.vhd" vhdl
+32 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3_iaddr_reg.vhd" vhdl
+33 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd" vhdl
+34 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio_pkg.vhd" vhdl
+35 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd" vhdl
+36 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreTimer\2.0.103\rtl\vhdl\core\coretimer_pkg.vhd" vhdl
+37 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreTimer\2.0.103\rtl\vhdl\core\coretimer.vhd" vhdl
+38 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\Clock_gen.vhd" vhdl
+39 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\Rx_async.vhd" vhdl
+40 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\Tx_async.vhd" vhdl
+41 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\fifo_256x8_fusion.vhd" vhdl
+42 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\coreuart_pkg.vhd" vhdl
+43 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\CoreUART.vhd" vhdl
+44 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\CoreUARTapb.vhd" vhdl
+45 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\components.vhd" vhdl
+46 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\components.vhd" vhdl
+47 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\components.vhd" vhdl
+48 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\sys\sys.vhd" vhdl
+49 "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051_Ext_SRAM_Int_XData\component\work\top_8051\top_8051.vhd" vhdl
+
+# Dependency Lists (Uses list)
+0 -1
+1 -1
+2 1 
+3 -1
+4 -1
+5 -1
+6 5 
+7 5 
+8 5 
+9 5 
+10 5 
+11 5 
+12 5 
+13 5 
+14 5 
+15 5 
+16 5 
+17 6 7 8 10 9 11 13 15 14 12 16 5 
+18 -1
+19 -1
+20 -1
+21 -1
+22 -1
+23 22 
+24 22 
+25 22 
+26 22 
+27 22 
+28 25 24 23 26 27 22 
+29 17 4 21 20 19 28 18 
+30 -1
+31 -1
+32 -1
+33 31 32 
+34 -1
+35 34 
+36 -1
+37 36 
+38 -1
+39 -1
+40 -1
+41 -1
+42 -1
+43 38 40 39 41 42 
+44 43 42 
+45 -1
+46 -1
+47 -1
+48 29 33 35 37 44 30 45 46 47 
+49 2 0 3 48 
+
+# Dependency Lists (Users Of)
+0 49 
+1 2 
+2 49 
+3 49 
+4 29 
+5 17 16 15 14 13 12 11 10 9 8 7 6 
+6 17 
+7 17 
+8 17 
+9 17 
+10 17 
+11 17 
+12 17 
+13 17 
+14 17 
+15 17 
+16 17 
+17 29 
+18 29 
+19 29 
+20 29 
+21 29 
+22 28 27 26 25 24 23 
+23 28 
+24 28 
+25 28 
+26 28 
+27 28 
+28 29 
+29 48 
+30 48 
+31 33 
+32 33 
+33 48 
+34 35 
+35 48 
+36 37 
+37 48 
+38 43 
+39 43 
+40 43 
+41 43 
+42 44 43 
+43 44 
+44 48 
+45 48 
+46 48 
+47 48 
+48 49 
+49 -1
+
+# Design Unit to File Association
+arch work pll_50mh_6mh def_arch 0
+module work pll_50mh_6mh 0
+arch work ram4kx8 def_arch 1
+module work ram4kx8 1
+arch work memory_mux one 2
+module work memory_mux 2
+arch work rc_osc def_arch 3
+module work rc_osc 3
+arch work core8051_globs str 4
+module work core8051_globs 4
+arch work alu rtl 6
+module work alu 6
+arch work clock_control rtl 7
+module work clock_control 7
+arch work control_unit rtl 8
+module work control_unit 8
+arch work intctrl rtl 9
+module work intctrl 9
+arch work isr rtl 10
+module work isr 10
+arch work memory_control rtl 11
+module work memory_control 11
+arch work oci rtl 12
+module work oci 12
+arch work pmu rtl 13
+module work pmu 13
+arch work ram_sfr_control rtl 14
+module work ram_sfr_control 14
+arch work rstctrl rtl 15
+module work rstctrl 15
+arch work instrdec str 16
+module work instrdec 16
+arch work main8051 str 17
+module work main8051 17
+arch work ram256x20 def_arch 18
+module work ram256x20 18
+arch work ram256x8 def_arch 19
+module work ram256x8 19
+arch work ram256x8_block_ram def_arch 20
+module work ram256x8_block_ram 20
+arch work ram256x8_registers def_arch 21
+module work ram256x8_registers 21
+arch work debug rtl 23
+module work debug 23
+arch work jtag rtl 24
+module work jtag 24
+arch work jtagu rtl 25
+module work jtagu 25
+arch work trace rtl 26
+module work trace 26
+arch work trigger rtl 27
+module work trigger 27
+arch work ocia51 rtl 28
+module work ocia51 28
+arch work core8051s str 29
+module work core8051s 29
+arch work corewatchdog synth 30
+module work corewatchdog 30
+arch coreapb3_lib coreapb3_muxptob3 coreapb3_muxptob3_arch 31
+module coreapb3_lib coreapb3_muxptob3 31
+arch coreapb3_lib coreapb3_iaddr_reg rtl 32
+module coreapb3_lib coreapb3_iaddr_reg 32
+arch coreapb3_lib coreapb3 coreapb3_arch 33
+module coreapb3_lib coreapb3 33
+arch coregpio_lib coregpio rtl 35
+module coregpio_lib coregpio 35
+arch coretimer_lib coretimer synth 37
+module coretimer_lib coretimer 37
+arch coreuartapb_lib sys_coreuartapb_0_clock_gen rtl 38
+module coreuartapb_lib sys_coreuartapb_0_clock_gen 38
+arch coreuartapb_lib sys_coreuartapb_0_rx_async translated 39
+module coreuartapb_lib sys_coreuartapb_0_rx_async 39
+arch coreuartapb_lib sys_coreuartapb_0_tx_async translated 40
+module coreuartapb_lib sys_coreuartapb_0_tx_async 40
+arch coreuartapb_lib sys_coreuartapb_0_fifo_256x8_pa3 translated 41
+module coreuartapb_lib sys_coreuartapb_0_fifo_256x8_pa3 41
+arch coreuartapb_lib sys_coreuartapb_0_fifo_256x8 translated 41
+module coreuartapb_lib sys_coreuartapb_0_fifo_256x8 41
+arch coreuartapb_lib sys_coreuartapb_0_coreuart translated 43
+module coreuartapb_lib sys_coreuartapb_0_coreuart 43
+arch coreuartapb_lib sys_coreuartapb_0_coreuartapb translated 44
+module coreuartapb_lib sys_coreuartapb_0_coreuartapb 44
+arch work sys rtl 48
+module work sys 48
+arch work top_8051 rtl 49
+module work top_8051 49

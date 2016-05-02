@@ -1,0 +1,40 @@
+Synopsys Actel Technology Pre-mapping, Version mapact, Build 729R, Built Jun 20 2012 09:47:40
+Copyright (C) 1994-2012, Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+Product Version F-2012.03M-SP1 
+
+Mapper Startup Complete (Time elapsed 0h:00m:00s; Memory used current: 91MB peak: 92MB)
+
+@L: E:\Reference_Design_2013\Intel_Flash_ExternalSRAM_8051s\synthesis\memory_mux_scck.rpt 
+Printing clock  summary report in "E:\Reference_Design_2013\Intel_Flash_ExternalSRAM_8051s\synthesis\memory_mux_scck.rpt" file 
+@N: MF248 |Running in 64-bit mode.
+@N: MF258 |Gated clock conversion disabled 
+@N: MF547 |Generated clock conversion disabled 
+
+Design Input Complete (Time elapsed 0h:00m:00s; Memory used current: 91MB peak: 92MB)
+
+
+Mapper Initialization Complete (Time elapsed 0h:00m:00s; Memory used current: 91MB peak: 92MB)
+
+
+
+Clock Summary
+**************
+
+Start      Requested     Requested     Clock      Clock          
+Clock      Frequency     Period        Type       Group          
+-----------------------------------------------------------------
+System     1.0 MHz       1000.000      system     system_clkgroup
+=================================================================
+
+
+Finished Pre Mapping Phase. (Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 102MB)
+
+@N: BN225 |Writing default property annotation file E:\Reference_Design_2013\Intel_Flash_ExternalSRAM_8051s\synthesis\memory_mux.sap.
+Pre-mapping successful!
+
+At Mapper Exit (Time elapsed 0h:00m:00s; Memory used current: 38MB peak: 102MB)
+
+Process took 0h:00m:02s realtime, 0h:00m:01s cputime
+# Mon May 20 12:26:40 2013
+
+###########################################################]

@@ -1,0 +1,18 @@
+#add_file options
+add_file -vhdl "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s_ExtFlash_ExtSRAM/smartgen/nvm64k/nvm64k.vhd"
+add_file -vhdl "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s_ExtFlash_ExtSRAM/hdl/flash_control.vhd"
+set_option -top_module work.FlashApb
+
+#device options
+set_option -technology Fusion
+set_option -part M1AFS1500
+
+#compilation/mapping options
+set_option -symbolic_fsm_compiler true
+
+#compilation/mapping options
+set_option -frequency 100.000
+
+#simulation options
+impl -active "synthesis"
+project -result_file "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s_ExtFlash_ExtSRAM/synthesis/FlashApb.edn"

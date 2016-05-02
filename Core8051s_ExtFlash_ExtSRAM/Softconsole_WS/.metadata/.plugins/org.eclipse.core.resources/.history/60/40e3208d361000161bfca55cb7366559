@@ -1,0 +1,5 @@
+hw_reg_access.rel: ../hal/Core8051s/SDCC/hw_reg_access.c ../hal/hal.h \
+  ../hal/Core8051s/SDCC/cpu_types.h \
+  C:/Program\ Files\ (x86)/Microsemi/SoftConsole\ v3.4/Sourcery-G++/bin/../include/stdint.h \
+  C:/Program\ Files\ (x86)/Microsemi/SoftConsole\ v3.4/Sourcery-G++/bin/../include/stddef.h \
+  ../hal/hw_reg_access.h ../hal/hw_reg_access.h

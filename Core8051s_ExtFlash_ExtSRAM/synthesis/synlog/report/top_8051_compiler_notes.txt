@@ -1,0 +1,225 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N: CD720 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\vhd\std.vhd":123:18:123:21|Setting time resolution to ns
+@N:"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\work\top_8051\top_8051.vhd":17:7:17:14|Top entity is set to top_8051.
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\work\top_8051\top_8051.vhd":17:7:17:14|Synthesizing work.top_8051.rtl 
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\work\sys\sys.vhd":30:7:30:9|Synthesizing work.sys.rtl 
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreWatchdog\1.1.101\rtl\vhdl\u\CoreWatchdog.vhd":12:7:12:18|Synthesizing work.corewatchdog.synth 
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreWatchdog\1.1.101\rtl\vhdl\u\CoreWatchdog.vhd":276:20:276:31|Removed redundant assignment
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\CoreUARTapb.vhd":62:7:62:35|Synthesizing coreuartapb_lib.sys_coreuartapb_0_coreuartapb.translated 
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\CoreUARTapb.vhd":305:16:305:26|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\CoreUARTapb.vhd":333:15:333:25|Removed redundant assignment
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\CoreUART.vhd":34:7:34:32|Synthesizing coreuartapb_lib.sys_coreuartapb_0_coreuart.translated 
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\CoreUART.vhd":450:13:450:24|Removed redundant assignment
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\Rx_async.vhd":33:7:33:32|Synthesizing coreuartapb_lib.sys_coreuartapb_0_rx_async.translated 
+@N: CD233 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\Rx_async.vhd":64:24:64:25|Using sequential encoding for type receive_states
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\Rx_async.vhd":233:15:233:29|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\Rx_async.vhd":256:19:256:26|Removed redundant assignment
+@N: CL177 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\Rx_async.vhd":443:6:443:7|Sharing sequential element clear_framing_error_en_i.
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\Tx_async.vhd":33:7:33:32|Synthesizing coreuartapb_lib.sys_coreuartapb_0_tx_async.translated 
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\Tx_async.vhd":311:12:311:20|Removed redundant assignment
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\Clock_gen.vhd":35:7:35:33|Synthesizing coreuartapb_lib.sys_coreuartapb_0_clock_gen.rtl 
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreTimer\2.0.103\rtl\vhdl\core\coretimer.vhd":29:7:29:15|Synthesizing coretimer_lib.coretimer.synth 
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreTimer\2.0.103\rtl\vhdl\core\coretimer.vhd":323:24:323:28|Removed redundant assignment
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":29:7:29:14|Synthesizing coregpio_lib.coregpio.rtl 
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":566:16:566:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":593:16:593:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":620:16:620:24|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":666:18:666:26|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":669:14:669:22|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":566:16:566:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":593:16:593:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":620:16:620:24|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":666:18:666:26|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":669:14:669:22|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":566:16:566:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":593:16:593:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":620:16:620:24|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":666:18:666:26|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":669:14:669:22|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":566:16:566:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":593:16:593:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":620:16:620:24|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":666:18:666:26|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":669:14:669:22|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":566:16:566:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":593:16:593:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":620:16:620:24|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":666:18:666:26|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":669:14:669:22|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":566:16:566:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":593:16:593:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":620:16:620:24|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":666:18:666:26|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":669:14:669:22|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":566:16:566:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":593:16:593:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":620:16:620:24|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":666:18:666:26|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":669:14:669:22|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":566:16:566:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":593:16:593:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":620:16:620:24|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":666:18:666:26|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":669:14:669:22|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":566:16:566:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":593:16:593:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":620:16:620:24|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":666:18:666:26|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":669:14:669:22|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":566:16:566:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":593:16:593:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":620:16:620:24|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":666:18:666:26|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":669:14:669:22|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":566:16:566:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":593:16:593:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":620:16:620:24|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":666:18:666:26|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":669:14:669:22|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":566:16:566:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":593:16:593:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":620:16:620:24|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":666:18:666:26|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":669:14:669:22|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":566:16:566:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":593:16:593:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":620:16:620:24|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":666:18:666:26|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":669:14:669:22|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":566:16:566:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":593:16:593:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":620:16:620:24|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":666:18:666:26|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":669:14:669:22|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":566:16:566:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":593:16:593:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":620:16:620:24|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":666:18:666:26|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":669:14:669:22|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":566:16:566:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":593:16:593:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":620:16:620:24|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":666:18:666:26|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":669:14:669:22|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":566:16:566:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":593:16:593:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":620:16:620:24|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":666:18:666:26|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":669:14:669:22|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":566:16:566:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":593:16:593:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":620:16:620:24|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":666:18:666:26|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":669:14:669:22|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":566:16:566:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":593:16:593:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":620:16:620:24|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":666:18:666:26|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":669:14:669:22|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":566:16:566:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":593:16:593:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":620:16:620:24|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":666:18:666:26|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":669:14:669:22|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":566:16:566:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":593:16:593:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":620:16:620:24|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":666:18:666:26|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":669:14:669:22|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":566:16:566:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":593:16:593:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":620:16:620:24|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":666:18:666:26|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":669:14:669:22|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":566:16:566:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":593:16:593:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":620:16:620:24|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":666:18:666:26|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":669:14:669:22|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":566:16:566:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":593:16:593:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":620:16:620:24|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":666:18:666:26|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":669:14:669:22|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":566:16:566:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":593:16:593:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":620:16:620:24|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":666:18:666:26|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":669:14:669:22|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":566:16:566:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":593:16:593:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":620:16:620:24|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":666:18:666:26|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":669:14:669:22|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":566:16:566:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":593:16:593:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":620:16:620:24|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":666:18:666:26|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":669:14:669:22|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":566:16:566:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":593:16:593:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":620:16:620:24|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":666:18:666:26|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":669:14:669:22|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":566:16:566:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":593:16:593:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":620:16:620:24|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":666:18:666:26|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":669:14:669:22|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":566:16:566:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":593:16:593:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":620:16:620:24|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":666:18:666:26|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":669:14:669:22|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":566:16:566:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":593:16:593:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":620:16:620:24|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":666:18:666:26|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":669:14:669:22|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":566:16:566:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":593:16:593:23|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":620:16:620:24|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":666:18:666:26|Removed redundant assignment
+@N: CD364 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":669:14:669:22|Removed redundant assignment
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3.vhd":34:7:34:14|Synthesizing coreapb3_lib.coreapb3.coreapb3_arch 
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vhdl\core\coreapb3_muxptob3.vhd":33:7:33:23|Synthesizing coreapb3_lib.coreapb3_muxptob3.coreapb3_muxptob3_arch 
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\core8051s.vhd":25:7:25:15|Synthesizing work.core8051s.str 
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\ocia51.vhd":29:7:29:12|Synthesizing work.ocia51.rtl 
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\trigger.vhd":26:7:26:13|Synthesizing work.trigger.rtl 
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\trace.vhd":29:7:29:11|Synthesizing work.trace.rtl 
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\debug.vhd":26:7:26:11|Synthesizing work.debug.rtl 
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\jtagu_fusion.vhd":40:7:40:11|Synthesizing work.jtagu.rtl 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\proasic\fusion.vhd":4364:10:4364:14|Synthesizing fusion.ujtag.syn_black_box 
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\ram256x8_fusion.vhd":20:7:20:14|Synthesizing work.ram256x8.def_arch 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\proasic\fusion.vhd":3182:10:3182:15|Synthesizing fusion.ram4k9.syn_black_box 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\proasic\fusion.vhd":2117:10:2117:12|Synthesizing fusion.inv.syn_black_box 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\proasic\fusion.vhd":1899:10:1899:12|Synthesizing fusion.gnd.syn_black_box 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\proasic\fusion.vhd":3019:10:3019:12|Synthesizing fusion.vcc.syn_black_box 
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\core8051s_globs_fusion.vhd":29:7:29:20|Synthesizing work.core8051_globs.str 
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\main8051.vhd":35:7:35:14|Synthesizing work.main8051.str 
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\instrdec.vhd":19:7:19:14|Synthesizing work.instrdec.str 
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\oci.vhd":26:7:26:9|Synthesizing work.oci.rtl 
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\ramsfrctrl.vhd":28:7:28:21|Synthesizing work.ram_sfr_control.rtl 
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\rstctrl.vhd":25:7:25:13|Synthesizing work.rstctrl.rtl 
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\pmu.vhd":31:7:31:9|Synthesizing work.pmu.rtl 
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\memctrl.vhd":30:7:30:20|Synthesizing work.memory_control.rtl 
+@N: CD233 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\memctrl.vhd":150:26:150:27|Using sequential encoding for type apbctrl_state_names
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\intctrl.vhd":28:7:28:13|Synthesizing work.intctrl.rtl 
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":26:7:26:9|Synthesizing work.isr.rtl 
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\cpu.vhd":25:7:25:18|Synthesizing work.control_unit.rtl 
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\clkctrl.vhd":27:7:27:19|Synthesizing work.clock_control.rtl 
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\alu.vhd":30:7:30:9|Synthesizing work.alu.rtl 
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\smartgen\rc_osc\rc_osc.vhd":8:7:8:12|Synthesizing work.rc_osc.def_arch 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\proasic\fusion.vhd":4460:10:4460:14|Synthesizing fusion.rcosc.syn_black_box 
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\smartgen\PLL_50Mh_6Mh\PLL_50Mh_6Mh.vhd":8:7:8:18|Synthesizing work.pll_50mh_6mh.def_arch 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\proasic\fusion.vhd":4214:10:4214:12|Synthesizing fusion.pll.syn_black_box 
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\hdl\memory_mux.vhd":6:7:6:16|Synthesizing work.memory_mux.one 
+@N: CL201 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\isr.vhd":904:2:904:3|Trying to extract state machine for register is_reg
+@N: CL201 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\memctrl.vhd":312:8:312:9|Trying to extract state machine for register apbCtrlSMCurrentState
+@N: CL177 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\vhdl\u\memctrl.vhd":321:8:321:9|Sharing sequential element penable_i.
+@N: CL134 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\Actel\DirectCore\CoreGPIO\3.1.101\rtl\vhdl\core\coregpio.vhd":521:8:521:9|Found RAM CONFIG_reg, depth=32, width=8
+@N: CL201 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\Tx_async.vhd":134:4:134:5|Trying to extract state machine for register xmit_state
+@N: CL201 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\component\work\sys\CoreUARTapb_0\rtl\vhdl\core\Rx_async.vhd":264:6:264:7|Trying to extract state machine for register rx_state
+@N|Running in 64-bit mode
+

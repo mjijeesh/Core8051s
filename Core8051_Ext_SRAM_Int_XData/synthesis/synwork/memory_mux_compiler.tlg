@@ -1,0 +1,3 @@
+@N: CD630 :"E:\Reference_Design_2013\Intel_Flash_ExternalSRAM_8051s\hdl\memory_mux.vhd":6:7:6:16|Synthesizing work.memory_mux.one 
+@W: CD638 :"E:\Reference_Design_2013\Intel_Flash_ExternalSRAM_8051s\hdl\memory_mux.vhd":56:7:56:20|Signal flash_memdatai is undriven 
+Post processing for work.memory_mux.one

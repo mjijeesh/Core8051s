@@ -1,0 +1,5 @@
+MEMORY
+{
+    /* SOFTCONSOLE FLASH USE: intel-28f640-1x8 */
+    CODE (rx) : ORIGIN = 0x800000, LENGTH = 64k
+}

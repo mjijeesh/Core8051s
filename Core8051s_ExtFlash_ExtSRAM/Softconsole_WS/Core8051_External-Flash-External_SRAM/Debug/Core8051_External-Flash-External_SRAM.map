@@ -1,0 +1,895 @@
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+CABS                               0000   0000 =      0. bytes (ABS,CON,CODE)
+
+      Value  Global
+   --------  --------------------------------
+  0C:FFFFFF00    s_BSEG
+  0C:0000    l_BIT_BANK
+  0C:0000    l_BSEG
+  0C:0000    l_BSEG_BYTES
+  0C:0000    l_CABS
+  0C:0000    l_GSINIT
+  0C:0000    l_GSINIT1
+  0C:0000    l_GSINIT5
+  0C:0000    l_IABS
+  0C:0000    l_ISEG
+  0C:0000    l_OSEG
+  0C:0000    l_PSEG
+  0C:0000    l_REG_BANK_1
+  0C:0000    l_REG_BANK_2
+  0C:0000    l_REG_BANK_3
+  0C:0000    l_RSEG
+  0C:0000    l__CODE
+  0C:0000    s_CABS
+  0C:0000    s_DSEG
+  0C:0000    s_HOME
+  0C:0000    s_IABS
+  0C:0000    s_ISEG
+  0C:0000    s_PSEG
+  0C:0000    s_REG_BANK_0
+  0C:0000    s_SSEG
+  0C:0000    s_XSEG
+  0C:0003    l_GSFINAL
+  0C:0003    l_GSINIT0
+  0C:0004    l_XINIT
+  0C:0004    l_XISEG
+  0C:0008    l_HOME
+  0C:0008    l_REG_BANK_0
+  0C:0008    s_GSINIT0
+  0C:0008    s_REG_BANK_1
+  0C:0008    s_RSEG
+  0C:000A    l_GSINIT2
+  0C:000B    s_GSINIT1
+  0C:000B    s_GSINIT2
+  0C:0010    s_REG_BANK_2
+  0C:0015    s_GSINIT3
+  0C:0018    s_BIT_BANK
+  0C:0018    s_OSEG
+  0C:0018    s_REG_BANK_3
+  0C:0020    s_BSEG_BYTES
+  0C:0020    s__CODE
+  0C:0022    l_GSINIT3
+  0C:0028    l_GSINIT4
+  0C:0037    s_GSINIT4
+  0C:005F    s_GSFINAL
+  0C:005F    s_GSINIT
+  0C:005F    s_GSINIT5
+  0C:0062    s_CSEG
+  0C:006D    l_CONST
+  0C:0080    l_DSEG
+  0C:0088    l_XSEG
+  0C:0088    s_XISEG
+  0C:00F8    l_SSEG
+  0C:0100    l_IRAM
+  0C:022E    l_CSEG
+  0C:0290    s_CONST
+  0C:02FD    s_XINIT
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+IABS                               0000   0000 =      0. bytes (ABS,CON)
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+.  .ABS.                           0000   0000 =      0. bytes (ABS,CON)
+
+      Value  Global
+   --------  --------------------------------
+     0080    G$P0$0$0
+     0080    G$P0_0$0$0
+     0080    _P0
+     0080    _P0_0
+     0081    G$P0_1$0$0
+     0081    G$SP$0$0
+     0081    _P0_1
+     0081    _SP
+     0082    G$DPL$0$0
+     0082    G$P0_2$0$0
+     0082    _DPL
+     0082    _P0_2
+     0083    G$DPH$0$0
+     0083    G$P0_3$0$0
+     0083    _DPH
+     0083    _P0_3
+     0084    G$P0_4$0$0
+     0084    _P0_4
+     0085    G$P0_5$0$0
+     0085    _P0_5
+     0086    G$P0_6$0$0
+     0086    _P0_6
+     0087    G$P0_7$0$0
+     0087    G$PCON$0$0
+     0087    _P0_7
+     0087    _PCON
+     0088    G$IT0$0$0
+     0088    G$TCON$0$0
+     0088    _IT0
+     0088    _TCON
+     0089    G$IE0$0$0
+     0089    G$TMOD$0$0
+     0089    _IE0
+     0089    _TMOD
+     008A    G$IT1$0$0
+     008A    G$TL0$0$0
+     008A    _IT1
+     008A    _TL0
+     008B    G$IE1$0$0
+     008B    G$TL1$0$0
+     008B    _IE1
+     008B    _TL1
+     008C    G$TH0$0$0
+     008C    G$TR0$0$0
+     008C    _TH0
+     008C    _TR0
+     008D    G$TF0$0$0
+     008D    G$TH1$0$0
+     008D    _TF0
+     008D    _TH1
+     008E    G$TR1$0$0
+     008E    _TR1
+     008F    G$TF1$0$0
+     008F    _TF1
+     0090    G$P1$0$0
+     0090    G$P1_0$0$0
+     0090    _P1
+     0090    _P1_0
+     0091    G$P1_1$0$0
+     0091    _P1_1
+     0092    G$P1_2$0$0
+     0092    _P1_2
+     0093    G$P1_3$0$0
+     0093    _P1_3
+     0094    G$P1_4$0$0
+     0094    _P1_4
+     0095    G$P1_5$0$0
+     0095    _P1_5
+     0096    G$P1_6$0$0
+     0096    _P1_6
+     0097    G$P1_7$0$0
+     0097    _P1_7
+     0098    G$RI$0$0
+     0098    G$SCON$0$0
+     0098    _RI
+     0098    _SCON
+     0099    G$SBUF$0$0
+     0099    G$TI$0$0
+     0099    _SBUF
+     0099    _TI
+     009A    G$RB8$0$0
+     009A    _RB8
+     009B    G$TB8$0$0
+     009B    _TB8
+     009C    G$REN$0$0
+     009C    _REN
+     009D    G$SM2$0$0
+     009D    _SM2
+     009E    G$SM1$0$0
+     009E    _SM1
+     009F    G$SM0$0$0
+     009F    _SM0
+     00A0    G$P2$0$0
+     00A0    G$P2_0$0$0
+     00A0    _P2
+     00A0    _P2_0
+     00A0    __XPAGE
+     00A1    G$P2_1$0$0
+     00A1    _P2_1
+     00A2    G$P2_2$0$0
+     00A2    _P2_2
+     00A3    G$P2_3$0$0
+     00A3    _P2_3
+     00A4    G$P2_4$0$0
+     00A4    _P2_4
+     00A5    G$P2_5$0$0
+     00A5    _P2_5
+     00A6    G$P2_6$0$0
+     00A6    _P2_6
+     00A7    G$P2_7$0$0
+     00A7    _P2_7
+     00A8    G$EX0$0$0
+     00A8    G$IE$0$0
+     00A8    _EX0
+     00A8    _IE
+     00A9    G$ET0$0$0
+     00A9    _ET0
+     00AA    G$EX1$0$0
+     00AA    _EX1
+     00AB    G$ET1$0$0
+     00AB    _ET1
+     00AC    G$ES$0$0
+     00AC    _ES
+     00AF    G$EA$0$0
+     00AF    _EA
+     00B0    G$P3$0$0
+     00B0    G$P3_0$0$0
+     00B0    G$RXD$0$0
+     00B0    _P3
+     00B0    _P3_0
+     00B0    _RXD
+     00B1    G$P3_1$0$0
+     00B1    G$TXD$0$0
+     00B1    _P3_1
+     00B1    _TXD
+     00B2    G$INT0$0$0
+     00B2    G$P3_2$0$0
+     00B2    _INT0
+     00B2    _P3_2
+     00B3    G$INT1$0$0
+     00B3    G$P3_3$0$0
+     00B3    _INT1
+     00B3    _P3_3
+     00B4    G$P3_4$0$0
+     00B4    G$T0$0$0
+     00B4    _P3_4
+     00B4    _T0
+     00B5    G$P3_5$0$0
+     00B5    G$T1$0$0
+     00B5    _P3_5
+     00B5    _T1
+     00B6    G$P3_6$0$0
+     00B6    G$WR$0$0
+     00B6    _P3_6
+     00B6    _WR
+     00B7    G$P3_7$0$0
+     00B7    G$RD$0$0
+     00B7    _P3_7
+     00B7    _RD
+     00B8    G$IP$0$0
+     00B8    G$PX0$0$0
+     00B8    _IP
+     00B8    _PX0
+     00B9    G$PT0$0$0
+     00B9    _PT0
+     00BA    G$PX1$0$0
+     00BA    _PX1
+     00BB    G$PT1$0$0
+     00BB    _PT1
+     00BC    G$PS$0$0
+     00BC    _PS
+     00D0    G$P$0$0
+     00D0    G$PSW$0$0
+     00D0    _P
+     00D0    _PSW
+     00D1    G$F1$0$0
+     00D1    _F1
+     00D2    G$OV$0$0
+     00D2    _OV
+     00D3    G$RS0$0$0
+     00D3    _RS0
+     00D4    G$RS1$0$0
+     00D4    _RS1
+     00D5    G$F0$0$0
+     00D5    _F0
+     00D6    G$AC$0$0
+     00D6    _AC
+     00D7    G$CY$0$0
+     00D7    _CY
+     00E0    G$ACC$0$0
+     00E0    _ACC
+     00F0    G$B$0$0
+     00F0    _B
+     00F5    _B_5
+     00F6    _B_6
+     00F7    _B_7
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+BSEG_BYTES                         0020   0000 =      0. bytes (REL,CON)
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+_CODE                              0020   0000 =      0. bytes (REL,CON)
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+REG_BANK_0                         0000   0008 =      8. bytes (REL,OVR)
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+REG_BANK_1                         0008   0000 =      0. bytes (REL,OVR)
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+REG_BANK_2                         0010   0000 =      0. bytes (REL,OVR)
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+REG_BANK_3                         0018   0000 =      0. bytes (REL,OVR)
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bits  (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+BSEG                               FFFFFF00   0000 =      0. bits  (REL,CON,BIT)
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+BIT_BANK                           0018   0000 =      0. bytes (REL,OVR)
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+DSEG                               0000   0080 =    128. bytes (REL,CON)
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+OSEG                               0018   0000 =      0. bytes (REL,OVR)
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+ISEG                               0000   0000 =      0. bytes (REL,CON)
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+SSEG                               0000   00F8 =    248. bytes (REL,OVR)
+
+      Value  Global
+   --------  --------------------------------
+     0008    __start__stack
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+RSEG                               0008   0000 =      0. bytes (REL,CON)
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+PSEG                               0000   0000 =      0. bytes (REL,CON,PAG,XDATA)
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+XSEG                               0000   0088 =    136. bytes (REL,CON,XDATA)
+
+      Value  Global
+   --------  --------------------------------
+  0D:0000    Lmain$ram_buffer$1$1
+  0D:0080    Lmain$i$1$1
+  0D:0081    Lmain$k$1$1
+  0D:0082    Luart_config$baudRate$1$1
+  0D:0083    Luart_putchar$c$1$1
+  0D:0084    Lprintf$str$1$1
+  0D:0087    Lprintf$c$1$1
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+XISEG                              0088   0004 =      4. bytes (REL,CON,XDATA)
+
+      Value  Global
+   --------  --------------------------------
+  0D:0088    G$GPIO_BASE_ADDR$0$0
+  0D:0088    _GPIO_BASE_ADDR
+  0D:008A    G$UART0_BASE_ADDR$0$0
+  0D:008A    _UART0_BASE_ADDR
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+HOME                               0000   0008 =      8. bytes (REL,CON,CODE)
+
+      Value  Global
+   --------  --------------------------------
+  0C:0000    A$main$405
+  0C:0003    A$main$427
+  0C:0003    __sdcc_program_startup
+  0C:0006    A$main$429
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+GSINIT0                            0008   0003 =      3. bytes (REL,CON,CODE)
+
+      Value  Global
+   --------  --------------------------------
+  0C:0008    __sdcc_gsinit_startup
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+GSINIT1                            000B   0000 =      0. bytes (REL,CON,CODE)
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+GSINIT2                            000B   000A =     10. bytes (REL,CON,CODE)
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+GSINIT3                            0015   0022 =     34. bytes (REL,CON,CODE)
+
+      Value  Global
+   --------  --------------------------------
+  0C:0015    __mcs51_genXINIT
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+GSINIT4                            0037   0028 =     40. bytes (REL,CON,CODE)
+
+      Value  Global
+   --------  --------------------------------
+  0C:0037    __mcs51_genRAMCLEAR
+  0C:003D    __mcs51_genXRAMCLEAR
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+GSINIT5                            005F   0000 =      0. bytes (REL,CON,CODE)
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+GSINIT                             005F   0000 =      0. bytes (REL,CON,CODE)
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+GSFINAL                            005F   0003 =      3. bytes (REL,CON,CODE)
+
+      Value  Global
+   --------  --------------------------------
+  0C:005F    A$main$420
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+CSEG                               0062   022E =    558. bytes (REL,CON,CODE)
+
+      Value  Global
+   --------  --------------------------------
+  0C:0062    A$main$460
+  0C:0062    C$main.c$100$1$1
+  0C:0062    C$main.c$86$0$0
+  0C:0062    G$main$0$0
+  0C:0062    _main
+  0C:0065    A$main$461
+  0C:0068    A$main$465
+  0C:0068    C$main.c$102$1$1
+  0C:006B    A$main$466
+  0C:006E    A$main$467
+  0C:0071    A$main$468
+  0C:0074    A$main$472
+  0C:0077    A$main$473
+  0C:0079    A$main$474
+  0C:007A    A$main$477
+  0C:007D    A$main$478
+  0C:007E    A$main$479
+  0C:007F    A$main$482
+  0C:0082    A$main$485
+  0C:0084    A$main$486
+  0C:0087    A$main$491
+  0C:0087    C$main.c$107$3$3
+  0C:0089    A$main$492
+  0C:008C    A$main$493
+  0C:008E    A$main$494
+  0C:0090    A$main$498
+  0C:0090    C$main.c$108$3$3
+  0C:0092    A$main$499
+  0C:0094    A$main$500
+  0C:0096    A$main$501
+  0C:0098    A$main$502
+  0C:009A    A$main$503
+  0C:009C    A$main$506
+  0C:009D    A$main$507
+  0C:009E    A$main$511
+  0C:009E    C$main.c$109$3$3
+  0C:00A0    A$main$512
+  0C:00A2    A$main$513
+  0C:00A5    A$main$514
+  0C:00A7    A$main$518
+  0C:00A7    C$main.c$110$3$3
+  0C:00AA    A$main$519
+  0C:00AD    A$main$520
+  0C:00B0    A$main$521
+  0C:00B2    A$main$522
+  0C:00B5    A$main$523
+  0C:00B7    A$main$527
+  0C:00B7    C$main.c$106$2$2
+  0C:00BA    A$main$529
+  0C:00BB    A$main$530
+  0C:00BC    A$main$531
+  0C:00BD    A$main$532
+  0C:00C0    A$main$537
+  0C:00C0    C$main.c$115$2$2
+  0C:00C3    A$main$538
+  0C:00C6    A$main$539
+  0C:00C9    A$main$540
+  0C:00CB    A$main$541
+  0C:00CE    A$main$542
+  0C:00D0    A$main$546
+  0C:00D0    C$main.c$116$2$2
+  0C:00D3    A$main$547
+  0C:00D6    A$main$548
+  0C:00D9    A$main$549
+  0C:00DB    A$main$550
+  0C:00DE    A$main$551
+  0C:00E0    A$main$555
+  0C:00E0    C$main.c$117$2$2
+  0C:00E2    A$main$556
+  0C:00E5    A$main$557
+  0C:00E7    A$main$561
+  0C:00E7    C$main.c$119$2$2
+  0C:00EA    A$main$562
+  0C:00ED    A$main$563
+  0C:00F0    A$main$564
+  0C:00F2    A$main$565
+  0C:00F5    A$main$566
+  0C:00F7    A$main$570
+  0C:00FA    A$main$571
+  0C:00FC    A$main$572
+  0C:00FD    A$main$576
+  0C:0100    A$main$577
+  0C:0101    A$main$578
+  0C:0102    A$main$581
+  0C:0103    A$main$582
+  0C:0104    A$main$583
+  0C:0105    A$main$585
+  0C:0107    A$main$586
+  0C:010A    A$main$591
+  0C:010A    C$main.c$121$3$4
+  0C:010C    A$main$592
+  0C:010E    A$main$593
+  0C:0110    A$main$594
+  0C:0112    A$main$595
+  0C:0114    A$main$596
+  0C:0116    A$main$599
+  0C:0117    A$main$600
+  0C:0118    A$main$602
+  0C:011A    A$main$603
+  0C:011C    A$main$604
+  0C:011E    A$main$605
+  0C:0121    A$main$606
+  0C:0123    A$main$607
+  0C:0125    A$main$611
+  0C:0125    C$main.c$120$2$2
+  0C:0128    A$main$613
+  0C:0129    A$main$614
+  0C:012A    A$main$615
+  0C:012B    A$main$616
+  0C:012E    A$main$621
+  0C:012E    C$main.c$124$2$2
+  0C:0131    A$main$622
+  0C:0134    A$main$623
+  0C:0137    A$main$624
+  0C:013A    A$main$628
+  0C:013A    C$main.c$125$2$2
+  0C:013D    A$main$629
+  0C:0140    A$main$630
+  0C:0143    A$main$631
+  0C:0146    A$main$635
+  0C:0146    C$main.c$129$2$2
+  0C:0149    A$main$639
+  0C:0149    C$main.c$135$1$1
+  0C:0149    XG$main$0$0
+  0C:014A    A$main$653
+  0C:014A    C$main.c$137$1$1
+  0C:014A    G$uart_config$0$0
+  0C:014A    _uart_config
+  0C:014C    A$main$654
+  0C:014F    A$main$655
+  0C:0150    A$main$659
+  0C:0150    C$main.c$139$1$1
+  0C:0153    A$main$660
+  0C:0154    A$main$661
+  0C:0155    A$main$662
+  0C:0156    A$main$663
+  0C:0157    A$main$664
+  0C:0158    A$main$667
+  0C:015A    A$main$668
+  0C:015C    A$main$669
+  0C:015D    A$main$670
+  0C:015F    A$main$671
+  0C:0161    A$main$672
+  0C:0162    A$main$674
+  0C:0165    A$main$675
+  0C:0166    A$main$676
+  0C:0167    A$main$679
+  0C:0169    A$main$680
+  0C:016B    A$main$681
+  0C:016C    A$main$682
+  0C:016D    A$main$686
+  0C:016D    C$main.c$140$1$1
+  0C:0170    A$main$687
+  0C:0171    A$main$688
+  0C:0172    A$main$689
+  0C:0173    A$main$690
+  0C:0174    A$main$691
+  0C:0175    A$main$694
+  0C:0177    A$main$695
+  0C:0179    A$main$696
+  0C:017B    A$main$697
+  0C:017D    A$main$698
+  0C:017F    A$main$699
+  0C:0181    A$main$702
+  0C:0183    A$main$703
+  0C:0184    A$main$707
+  0C:0184    C$main.c$141$1$1
+  0C:0184    XG$uart_config$0$0
+  0C:0185    A$main$726
+  0C:0185    C$main.c$145$1$1
+  0C:0185    C$main.c$148$1$1
+  0C:0185    C$main.c$149$2$2
+  0C:0185    G$uartWaitXmt$0$0
+  0C:0185    _uartWaitXmt
+  0C:0188    A$main$727
+  0C:0189    A$main$728
+  0C:018A    A$main$729
+  0C:018B    A$main$730
+  0C:018C    A$main$731
+  0C:018D    A$main$734
+  0C:018F    A$main$735
+  0C:0191    A$main$736
+  0C:0193    A$main$737
+  0C:0195    A$main$738
+  0C:0197    A$main$739
+  0C:0199    A$main$742
+  0C:019A    A$main$743
+  0C:019B    A$main$747
+  0C:019B    C$main.c$150$1$1
+  0C:019C    A$main$749
+  0C:019F    A$main$750
+  0C:01A2    A$main$755
+  0C:01A2    C$main.c$151$1$1
+  0C:01A2    XG$uartWaitXmt$0$0
+  0C:01A3    A$main$774
+  0C:01A3    C$main.c$154$1$1
+  0C:01A3    C$main.c$157$1$1
+  0C:01A3    C$main.c$158$2$2
+  0C:01A3    G$uartWaitRxd$0$0
+  0C:01A3    _uartWaitRxd
+  0C:01A6    A$main$775
+  0C:01A7    A$main$776
+  0C:01A8    A$main$777
+  0C:01A9    A$main$778
+  0C:01AA    A$main$779
+  0C:01AB    A$main$782
+  0C:01AD    A$main$783
+  0C:01AF    A$main$784
+  0C:01B1    A$main$785
+  0C:01B3    A$main$786
+  0C:01B5    A$main$787
+  0C:01B7    A$main$790
+  0C:01B8    A$main$791
+  0C:01B9    A$main$795
+  0C:01B9    C$main.c$159$1$1
+  0C:01BA    A$main$797
+  0C:01BD    A$main$798
+  0C:01C0    A$main$803
+  0C:01C0    C$main.c$160$1$1
+  0C:01C0    XG$uartWaitRxd$0$0
+  0C:01C1    A$main$819
+  0C:01C1    C$main.c$167$1$1
+  0C:01C1    C$main.c$171$1$1
+  0C:01C1    G$uart_getchar$0$0
+  0C:01C1    _uart_getchar
+  0C:01C4    A$main$823
+  0C:01C4    C$main.c$172$1$1
+  0C:01C7    A$main$824
+  0C:01C8    A$main$825
+  0C:01C9    A$main$826
+  0C:01CA    A$main$827
+  0C:01CB    A$main$828
+  0C:01CC    A$main$831
+  0C:01CE    A$main$832
+  0C:01D0    A$main$833
+  0C:01D1    A$main$834
+  0C:01D2    A$main$835
+  0C:01D3    A$main$836
+  0C:01D4    A$main$839
+  0C:01D5    A$main$840
+  0C:01D6    A$main$844
+  0C:01D6    C$main.c$173$1$1
+  0C:01D8    A$main$848
+  0C:01D8    C$main.c$174$1$1
+  0C:01D8    XG$uart_getchar$0$0
+  0C:01D9    A$main$862
+  0C:01D9    C$main.c$178$1$1
+  0C:01D9    G$uart_putchar$0$0
+  0C:01D9    _uart_putchar
+  0C:01DB    A$main$863
+  0C:01DE    A$main$864
+  0C:01DF    A$main$868
+  0C:01DF    C$main.c$180$1$1
+  0C:01E2    A$main$872
+  0C:01E2    C$main.c$181$1$1
+  0C:01E5    A$main$873
+  0C:01E6    A$main$874
+  0C:01E7    A$main$875
+  0C:01E8    A$main$876
+  0C:01E9    A$main$877
+  0C:01EA    A$main$879
+  0C:01ED    A$main$880
+  0C:01EE    A$main$881
+  0C:01EF    A$main$884
+  0C:01F1    A$main$885
+  0C:01F3    A$main$886
+  0C:01F4    A$main$887
+  0C:01F5    A$main$891
+  0C:01F5    C$main.c$184$1$1
+  0C:01F5    XG$uart_putchar$0$0
+  0C:01F6    A$main$906
+  0C:01F6    C$main.c$186$1$1
+  0C:01F6    G$printf$0$0
+  0C:01F6    _printf
+  0C:01F8    A$main$907
+  0C:01FA    A$main$908
+  0C:01FC    A$main$909
+  0C:01FF    A$main$910
+  0C:0200    A$main$911
+  0C:0201    A$main$912
+  0C:0202    A$main$913
+  0C:0203    A$main$914
+  0C:0204    A$main$915
+  0C:0205    A$main$916
+  0C:0206    A$main$920
+  0C:0206    C$main.c$189$1$1
+  0C:0209    A$main$921
+  0C:020A    A$main$922
+  0C:020B    A$main$923
+  0C:020C    A$main$924
+  0C:020D    A$main$925
+  0C:020E    A$main$926
+  0C:020F    A$main$927
+  0C:0210    A$main$928
+  0C:0211    A$main$931
+  0C:0213    A$main$932
+  0C:0215    A$main$933
+  0C:0217    A$main$934
+  0C:021A    A$main$935
+  0C:021B    A$main$937
+  0C:021E    A$main$939
+  0C:0220    A$main$940
+  0C:0222    A$main$941
+  0C:0223    A$main$942
+  0C:0225    A$main$943
+  0C:0227    A$main$944
+  0C:0228    A$main$945
+  0C:0229    A$main$946
+  0C:022A    A$main$947
+  0C:022B    A$main$948
+  0C:022C    A$main$950
+  0C:022F    A$main$951
+  0C:0230    A$main$952
+  0C:0231    A$main$957
+  0C:0231    C$main.c$191$1$1
+  0C:0234    A$main$958
+  0C:0235    A$main$959
+  0C:0236    A$main$962
+  0C:0239    A$main$963
+  0C:023C    A$main$968
+  0C:023C    C$main.c$192$2$2
+  0C:023E    A$main$969
+  0C:0241    A$main$973
+  0C:0241    C$main.c$193$2$2
+  0C:0244    A$main$974
+  0C:0245    A$main$975
+  0C:0246    A$main$976
+  0C:0247    A$main$977
+  0C:0248    A$main$978
+  0C:0249    A$main$979
+  0C:024A    A$main$980
+  0C:024B    A$main$981
+  0C:024C    A$main$984
+  0C:024E    A$main$985
+  0C:0250    A$main$986
+  0C:0252    A$main$987
+  0C:0255    A$main$988
+  0C:0256    A$main$990
+  0C:0259    A$main$992
+  0C:025B    A$main$993
+  0C:025D    A$main$994
+  0C:025E    A$main$995
+  0C:0260    A$main$996
+  0C:0262    A$main$997
+  0C:0263    A$main$998
+  0C:0264    A$main$999
+  0C:0265    A$main$1000
+  0C:0266    A$main$1001
+  0C:0267    A$main$1003
+  0C:026A    A$main$1004
+  0C:026B    A$main$1005
+  0C:026C    A$main$1006
+  0C:026F    A$main$1010
+  0C:026F    C$main.c$195$1$1
+  0C:026F    XG$printf$0$0
+  0C:0270    __gptrget
+  0C:028C    __sdcc_external_startup
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+CONST                              0290   006D =    109. bytes (REL,CON,CODE)
+
+      Value  Global
+   --------  --------------------------------
+  0C:0290    G$ascii$0$0
+  0C:0290    _ascii
+  0C:02A1    F___main$_str_0$0$0
+  0C:02BE    F___main$_str_1$0$0
+  0C:02C1    F___main$_str_2$0$0
+  0C:02DA    F___main$_str_3$0$0
+  0C:02DD    F___main$_str_4$0$0
+  0C:02F1    F___main$_str_5$0$0
+
+Hexadecimal
+
+Area                               Addr   Size   Decimal Bytes (Attributes)
+--------------------------------   ----   ----   ------- ----- ------------
+XINIT                              02FD   0004 =      4. bytes (REL,CON,CODE)
+
+      Value  Global
+   --------  --------------------------------
+  0C:02FD    F___main$__xinit_GPIO_BASE_ADDR$0$0
+  0C:02FF    F___main$__xinit_UART0_BASE_ADDR$0$0
+ASxxxx Linker V01.75 + NoICE + SDCC Feb 1999,  page 1.
+
+Files Linked      [ module(s) ]
+
+./main.rel      
+
+Libraries Linked            [   object  file   ]
+
+E:\Microsemi\Libero_v10.1\SoftConsole\Sourcery-G++\bin\..\lib\large/mcs51.lib    [     crtclear.rel ]
+E:\Microsemi\Libero_v10.1\SoftConsole\Sourcery-G++\bin\..\lib\large/mcs51.lib    [     crtxinit.rel ]
+E:\Microsemi\Libero_v10.1\SoftConsole\Sourcery-G++\bin\..\lib\large/mcs51.lib    [    crtxclear.rel ]
+E:\Microsemi\Libero_v10.1\SoftConsole\Sourcery-G++\bin\..\lib\large/mcs51.lib    [   crtpagesfr.rel ]
+E:\Microsemi\Libero_v10.1\SoftConsole\Sourcery-G++\bin\..\lib\large/mcs51.lib    [     crtstart.rel ]
+E:\Microsemi\Libero_v10.1\SoftConsole\Sourcery-G++\bin\..\lib\large/libsdcc.lib    [         _gptrget ]
+E:\Microsemi\Libero_v10.1\SoftConsole\Sourcery-G++\bin\..\lib\large/libsdcc.lib    [         _startup ]
+
+ASxxxx Linker V01.75 + NoICE + SDCC Feb 1999,  page 2.
+
+User Base Address Definitions
+
+HOME = 0x0000
+ISEG = 0x0000
+BSEG = 0x0000
+
+

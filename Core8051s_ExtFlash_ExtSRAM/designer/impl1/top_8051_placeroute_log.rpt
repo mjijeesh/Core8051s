@@ -1,0 +1,88 @@
+Microsemi Libero Software
+Version: 11.7.0.119
+Release: v11.7
+
+Info: The design top_8051.adb was last modified by software version 11.7.0.119.
+Opened an existing Libero design top_8051.adb.
+'BA_NAME' set to 'top_8051_ba'
+'IDE_DESIGNERVIEW_NAME' set to 'Impl1'
+'IDE_DESIGNERVIEW_COUNT' set to '1'
+'IDE_DESIGNERVIEW_REV0' set to 'Impl1'
+'IDE_DESIGNERVIEW_REVNUM0' set to '1'
+'IDE_DESIGNERVIEW_ROOTDIR' set to
+'C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\designer'
+'IDE_DESIGNERVIEW_LASTREV' set to '1'
+***** Layout Variables *********************************************
+
+Mode: TIMING_DRIVEN
+Power-driven Layout: OFF
+Incremental Placement: OFF
+Incremental Route: OFF
+
+
+Info: I/O Bank Assigner detected (1) out of (5) I/O Bank(s) with locked I/O technologies.
+
+Running I/O Bank Assigner.
+
+I/O Bank Assigner completed successfully.
+ 
+
+Planning global net placement...
+
+
+Global net placement completed successfully.
+
+                        o - o - o - o - o - o
+
+Timing-driven Placer Started: Mon May 02 15:04:03 2016
+
+Placer Finished: Mon May 02 15:05:55 2016
+Total Placer CPU Time:     00:01:52
+
+                        o - o - o - o - o - o
+
+
+Timing-driven Router 
+Design: top_8051                        Started: Mon May 02 15:06:03 2016
+
+ 
+Iterative improvement...
+
+Timing-driven Router completed successfully.
+
+Design: top_8051                        
+Finished: Mon May 02 15:10:47 2016
+Total CPU Time:     00:04:42            Total Elapsed Time: 00:04:44
+Total Memory Usage: 645.1 Mbytes
+                        o - o - o - o - o - o
+
+Loading the Timing data for the design.
+Finished loading the Timing data.
+TIMER: Max delay timing requirements have been met.
+TIMER: Min delay timing requirements have been met.
+
+The Layout command succeeded ( 00:07:01 )
+Wrote status report to file: top_8051_place_and_route_report.txt
+
+The Report command succeeded ( 00:00:00 )
+Wrote globalnet report to file: top_8051_globalnet_report.txt
+
+The Report command succeeded ( 00:00:00 )
+Wrote globalusage report to file: top_8051_globalusage_report.txt
+
+The Report command succeeded ( 00:00:00 )
+Wrote iobank report to file: top_8051_iobank_report.txt
+
+The Report command succeeded ( 00:00:01 )
+Wrote pin report to file: top_8051_report_pin_byname.txt
+
+The Report command succeeded ( 00:00:02 )
+Wrote pin report to file: top_8051_report_pin_bynumber.txt
+
+The Report command succeeded ( 00:00:00 )
+Design saved to file
+C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s_ExtFlash_ExtSRAM\designer\impl1\top_8051.adb.
+
+The Execute Script command succeeded ( 00:07:10 )
+Design closed.
+
