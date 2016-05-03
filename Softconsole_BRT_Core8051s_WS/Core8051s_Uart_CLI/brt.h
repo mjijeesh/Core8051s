@@ -1,0 +1,142 @@
+//**********************************************************************
+// This code was created by SoC Solutions and is free for use with     *
+// Actel products.  For support e-mail support@socsolutions.com.       *
+//**********************************************************************
+#ifndef BRT_H_
+#define BRT_H_
+
+/* All the SA has one word of status word stored from 0x0000 to 0x007C  for RX and
+ *  0x0F00 to 0xF7C for TX
+ * To calculate the location for a particular SA status word location
+ *   BRT_RX_STATUS_WRD_BASE + (SA * 4) for RX
+ *   BRT_TX_STATUS_WRD_BASE + (SA * 4) for TX
+ *   SA0 is for MODE code
+ * */
+#define BRT_RX_STATUS_WRD_BASE  0x0000
+#define BRT_TX_STATUS_WRD_BASE  0x03C0   // 0x0F00
+
+
+#define  BRT_RX_BUFF_BASE      0x0020   //0x0080  // SA1 to SA31
+#define  BRT_TX_BUFF_BASE      0x0420  // 0x1080  // SA1 to SA31
+#define  BRT_BUFF_SIZE         128     // each buffer is 32 word length
+#define  BRT_BUFF_ADDR_SIZE    32      // for calculating the Address  ( 128/4 = 32)
+
+
+/*  The below offset value is used to calcualte the Subaddress store location for a particulas SA */
+#define  BRT_RX_TX_ADDR_OFSET 0x0400   // 1024 location between RX_SA1 and TX_SA1
+
+
+
+#define BRT_RX_SA1             0x0020
+#define BRT_RX_SA2             0x0040
+#define BRT_RX_SA3             0x0060
+#define BRT_RX_SA4             0x0080
+#define BRT_RX_SA5             0x00A0
+#define BRT_RX_SA6             0x00C0
+#define BRT_RX_SA7             0x00E0
+#define BRT_RX_SA8             0x0100
+#define BRT_RX_SA9             0x0120
+#define BRT_RX_SA10            0x0140
+#define BRT_RX_SA11            0x0160
+#define BRT_RX_SA12            0x0180
+#define BRT_RX_SA13            0x01A0
+#define BRT_RX_SA14            0x01C0
+#define BRT_RX_SA15            0x01E0
+#define BRT_RX_SA16            0x0200
+#define BRT_RX_SA17            0x0220
+#define BRT_RX_SA18            0x0240
+#define BRT_RX_SA19            0x0260
+#define BRT_RX_SA20            0x0280
+#define BRT_RX_SA21            0x02A0
+#define BRT_RX_SA22            0x02C0
+#define BRT_RX_SA23            0x02E0
+#define BRT_RX_SA24            0x0300
+#define BRT_RX_SA25            0x0320
+#define BRT_RX_SA26            0x0340
+#define BRT_RX_SA27            0x0360
+#define BRT_RX_SA28            0x0380
+#define BRT_RX_SA29            0x03A0
+#define BRT_RX_SA30            0x03C0
+
+
+
+#define BRT_TX_SA1             0x0420  //1080
+#define BRT_TX_SA2             0x0440
+#define BRT_TX_SA3             0x0460
+#define BRT_TX_SA4             0x0480
+#define BRT_TX_SA5             0x04A0
+#define BRT_TX_SA6             0x04C0
+#define BRT_TX_SA7             0x04E0
+#define BRT_TX_SA8             0x0500
+#define BRT_TX_SA9             0x0520
+#define BRT_TX_SA10            0x0540
+#define BRT_TX_SA11            0x0560
+#define BRT_TX_SA12            0x0580
+#define BRT_TX_SA13            0x05A0
+#define BRT_TX_SA14            0x05C0
+#define BRT_TX_SA15            0x05E0
+
+#define BRT_TX_SA16            0x0600
+#define BRT_TX_SA17            0x0620
+#define BRT_TX_SA18            0x0640
+#define BRT_TX_SA19            0x0660
+#define BRT_TX_SA20            0x0680
+#define BRT_TX_SA21            0x06A0
+#define BRT_TX_SA22            0x06C0
+#define BRT_TX_SA23            0x06E0
+#define BRT_TX_SA24            0x0700
+#define BRT_TX_SA25            0x0720
+#define BRT_TX_SA26            0x0740
+#define BRT_TX_SA27            0x0760
+#define BRT_TX_SA28            0x0780
+#define BRT_TX_SA29            0x07A0
+#define BRT_TX_SA30            0x07C0
+
+
+
+#define BRT_REG_OFFSET         0x07E0  // start location of BRT control/status register
+
+#define BRT_CONTROL_REG       0x07E0
+#define BRT_INT_REG           0x07E1
+#define BRT_VWORD_REG         0x07E2
+
+#define BRT_LEG_REG0          0x07F0
+#define BRT_LEG_REG1          0x07F1
+#define BRT_LEG_REG2          0x07F2
+#define BRT_LEG_REG3          0x07F3
+#define BRT_LEG_REG4          0x07F4
+#define BRT_LEG_REG5          0x07F5
+#define BRT_LEG_REG6          0x07F6
+#define BRT_LEG_REG7          0x07F7
+#define BRT_LEG_REG8          0x07F8
+#define BRT_LEG_REG9          0x07F9
+#define BRT_LEG_REGA          0x07fA
+#define BRT_LEG_REGB          0x07FB
+#define BRT_LEG_REGC          0x07FC
+#define BRT_LEG_REGD          0x07FD
+#define BRT_LEG_REGE          0x07FE
+#define BRT_LEG_REGF          0x07FF
+
+#define BRT_RTADDR_SOFT_MODE  0x0000
+
+
+
+
+
+
+void display_brt_data(uint32_t brt_baseaddr,uint8_t subaddr);
+
+void init_rt_tx_buff(unsigned int  baseAddr , unsigned char subAddr, unsigned short initval  );
+void init_rt_rx_buff(unsigned int  baseAddr , unsigned char subAddr, unsigned short initval  );
+
+void brt_init(unsigned int baseAddr);
+
+
+unsigned short read_status_word_tx ( unsigned int baseAddr, unsigned char subAddr);
+unsigned short read_status_word_rx ( unsigned int baseAddr, unsigned char subaddr);
+
+void modify_rt_address(uint32_t brt_base_addr,  uint8_t rtaddr);
+
+
+
+#endif /* BRT_H_ */

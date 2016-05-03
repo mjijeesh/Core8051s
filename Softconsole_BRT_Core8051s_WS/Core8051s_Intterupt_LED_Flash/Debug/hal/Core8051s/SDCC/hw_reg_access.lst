@@ -1,0 +1,944 @@
+                              1 ;--------------------------------------------------------
+                              2 ; File Created by SDCC : FreeWare ANSI-C Compiler
+                              3 ; Version 2.6.3 #4543 (Dec 31 2006)
+                              4 ; This file generated Mon May 02 12:52:00 2016
+                              5 ;--------------------------------------------------------
+                              6 	.module ___hal_Core8051s_SDCC_hw_reg_access
+                              7 	.optsdcc -mmcs51 --model-large
+                              8 	
+                              9 ;--------------------------------------------------------
+                             10 ; Public variables in this module
+                             11 ;--------------------------------------------------------
+                             12 	.globl _HW_get_8bit_reg_field_PARM_3
+                             13 	.globl _HW_get_8bit_reg_field_PARM_2
+                             14 	.globl _HW_set_8bit_reg_field_PARM_4
+                             15 	.globl _HW_set_8bit_reg_field_PARM_3
+                             16 	.globl _HW_set_8bit_reg_field_PARM_2
+                             17 	.globl _HW_get_16bit_reg_field_PARM_3
+                             18 	.globl _HW_get_16bit_reg_field_PARM_2
+                             19 	.globl _HW_set_16bit_reg_field_PARM_4
+                             20 	.globl _HW_set_16bit_reg_field_PARM_3
+                             21 	.globl _HW_set_16bit_reg_field_PARM_2
+                             22 	.globl _HW_get_32bit_reg_field_PARM_3
+                             23 	.globl _HW_get_32bit_reg_field_PARM_2
+                             24 	.globl _HW_set_32bit_reg_field_PARM_4
+                             25 	.globl _HW_set_32bit_reg_field_PARM_3
+                             26 	.globl _HW_set_32bit_reg_field_PARM_2
+                             27 	.globl _HW_set_32bit_reg_field
+                             28 	.globl _HW_get_32bit_reg_field
+                             29 	.globl _HW_set_16bit_reg_field
+                             30 	.globl _HW_get_16bit_reg_field
+                             31 	.globl _HW_set_8bit_reg_field
+                             32 	.globl _HW_get_8bit_reg_field
+                             33 ;--------------------------------------------------------
+                             34 ; special function registers
+                             35 ;--------------------------------------------------------
+                             36 	.area RSEG    (DATA)
+                             37 ;--------------------------------------------------------
+                             38 ; special function bits
+                             39 ;--------------------------------------------------------
+                             40 	.area RSEG    (DATA)
+                             41 ;--------------------------------------------------------
+                             42 ; overlayable register banks
+                             43 ;--------------------------------------------------------
+                             44 	.area REG_BANK_0	(REL,OVR,DATA)
+   0000                      45 	.ds 8
+                             46 ;--------------------------------------------------------
+                             47 ; internal ram data
+                             48 ;--------------------------------------------------------
+                             49 	.area DSEG    (DATA)
+                    0000     50 LHW_set_32bit_reg_field$sloc0$1$0==.
+   0000                      51 _HW_set_32bit_reg_field_sloc0_1_0:
+   0000                      52 	.ds 2
+                    0002     53 LHW_set_32bit_reg_field$sloc1$1$0==.
+   0002                      54 _HW_set_32bit_reg_field_sloc1_1_0:
+   0002                      55 	.ds 4
+                    0006     56 LHW_set_32bit_reg_field$sloc2$1$0==.
+   0006                      57 _HW_set_32bit_reg_field_sloc2_1_0:
+   0006                      58 	.ds 1
+                    0007     59 LHW_set_16bit_reg_field$sloc0$1$0==.
+   0007                      60 _HW_set_16bit_reg_field_sloc0_1_0:
+   0007                      61 	.ds 1
+                             62 ;--------------------------------------------------------
+                             63 ; overlayable items in internal ram 
+                             64 ;--------------------------------------------------------
+                             65 	.area OSEG    (OVR,DATA)
+                             66 ;--------------------------------------------------------
+                             67 ; indirectly addressable internal ram data
+                             68 ;--------------------------------------------------------
+                             69 	.area ISEG    (DATA)
+                             70 ;--------------------------------------------------------
+                             71 ; absolute internal ram data
+                             72 ;--------------------------------------------------------
+                             73 	.area IABS    (ABS,DATA)
+                             74 	.area IABS    (ABS,DATA)
+                             75 ;--------------------------------------------------------
+                             76 ; bit data
+                             77 ;--------------------------------------------------------
+                             78 	.area BSEG    (BIT)
+                             79 ;--------------------------------------------------------
+                             80 ; paged external ram data
+                             81 ;--------------------------------------------------------
+                             82 	.area PSEG    (PAG,XDATA)
+                             83 ;--------------------------------------------------------
+                             84 ; external ram data
+                             85 ;--------------------------------------------------------
+                             86 	.area XSEG    (XDATA)
+                    0000     87 LHW_set_32bit_reg_field$shift$1$1==.
+   0000                      88 _HW_set_32bit_reg_field_PARM_2:
+   0000                      89 	.ds 1
+                    0001     90 LHW_set_32bit_reg_field$mask$1$1==.
+   0001                      91 _HW_set_32bit_reg_field_PARM_3:
+   0001                      92 	.ds 4
+                    0005     93 LHW_set_32bit_reg_field$value$1$1==.
+   0005                      94 _HW_set_32bit_reg_field_PARM_4:
+   0005                      95 	.ds 4
+                    0009     96 LHW_set_32bit_reg_field$reg_addr$1$1==.
+   0009                      97 _HW_set_32bit_reg_field_reg_addr_1_1:
+   0009                      98 	.ds 2
+                    000B     99 LHW_set_32bit_reg_field$temp32$1$1==.
+   000B                     100 _HW_set_32bit_reg_field_temp32_1_1:
+   000B                     101 	.ds 4
+                    000F    102 LHW_get_32bit_reg_field$shift$1$1==.
+   000F                     103 _HW_get_32bit_reg_field_PARM_2:
+   000F                     104 	.ds 1
+                    0010    105 LHW_get_32bit_reg_field$mask$1$1==.
+   0010                     106 _HW_get_32bit_reg_field_PARM_3:
+   0010                     107 	.ds 4
+                    0014    108 LHW_get_32bit_reg_field$reg_addr$1$1==.
+   0014                     109 _HW_get_32bit_reg_field_reg_addr_1_1:
+   0014                     110 	.ds 2
+                    0016    111 LHW_get_32bit_reg_field$temp32$1$1==.
+   0016                     112 _HW_get_32bit_reg_field_temp32_1_1:
+   0016                     113 	.ds 4
+                    001A    114 LHW_set_16bit_reg_field$shift$1$1==.
+   001A                     115 _HW_set_16bit_reg_field_PARM_2:
+   001A                     116 	.ds 1
+                    001B    117 LHW_set_16bit_reg_field$mask$1$1==.
+   001B                     118 _HW_set_16bit_reg_field_PARM_3:
+   001B                     119 	.ds 2
+                    001D    120 LHW_set_16bit_reg_field$in_value16$1$1==.
+   001D                     121 _HW_set_16bit_reg_field_PARM_4:
+   001D                     122 	.ds 2
+                    001F    123 LHW_set_16bit_reg_field$reg_addr$1$1==.
+   001F                     124 _HW_set_16bit_reg_field_reg_addr_1_1:
+   001F                     125 	.ds 2
+                    0021    126 LHW_set_16bit_reg_field$temp16$1$1==.
+   0021                     127 _HW_set_16bit_reg_field_temp16_1_1:
+   0021                     128 	.ds 2
+                    0023    129 LHW_get_16bit_reg_field$shift$1$1==.
+   0023                     130 _HW_get_16bit_reg_field_PARM_2:
+   0023                     131 	.ds 1
+                    0024    132 LHW_get_16bit_reg_field$mask$1$1==.
+   0024                     133 _HW_get_16bit_reg_field_PARM_3:
+   0024                     134 	.ds 2
+                    0026    135 LHW_get_16bit_reg_field$reg_addr$1$1==.
+   0026                     136 _HW_get_16bit_reg_field_reg_addr_1_1:
+   0026                     137 	.ds 2
+                    0028    138 LHW_get_16bit_reg_field$temp16$1$1==.
+   0028                     139 _HW_get_16bit_reg_field_temp16_1_1:
+   0028                     140 	.ds 2
+                    002A    141 LHW_set_8bit_reg_field$shift$1$1==.
+   002A                     142 _HW_set_8bit_reg_field_PARM_2:
+   002A                     143 	.ds 1
+                    002B    144 LHW_set_8bit_reg_field$mask$1$1==.
+   002B                     145 _HW_set_8bit_reg_field_PARM_3:
+   002B                     146 	.ds 1
+                    002C    147 LHW_set_8bit_reg_field$value$1$1==.
+   002C                     148 _HW_set_8bit_reg_field_PARM_4:
+   002C                     149 	.ds 1
+                    002D    150 LHW_set_8bit_reg_field$reg_addr$1$1==.
+   002D                     151 _HW_set_8bit_reg_field_reg_addr_1_1:
+   002D                     152 	.ds 2
+                    002F    153 LHW_set_8bit_reg_field$temp8$1$1==.
+   002F                     154 _HW_set_8bit_reg_field_temp8_1_1:
+   002F                     155 	.ds 1
+                    0030    156 LHW_get_8bit_reg_field$shift$1$1==.
+   0030                     157 _HW_get_8bit_reg_field_PARM_2:
+   0030                     158 	.ds 1
+                    0031    159 LHW_get_8bit_reg_field$mask$1$1==.
+   0031                     160 _HW_get_8bit_reg_field_PARM_3:
+   0031                     161 	.ds 1
+                    0032    162 LHW_get_8bit_reg_field$reg_addr$1$1==.
+   0032                     163 _HW_get_8bit_reg_field_reg_addr_1_1:
+   0032                     164 	.ds 2
+                    0034    165 LHW_get_8bit_reg_field$temp8$1$1==.
+   0034                     166 _HW_get_8bit_reg_field_temp8_1_1:
+   0034                     167 	.ds 1
+                            168 ;--------------------------------------------------------
+                            169 ; external initialized ram data
+                            170 ;--------------------------------------------------------
+                            171 	.area XISEG   (XDATA)
+                            172 	.area HOME    (CODE)
+                            173 	.area GSINIT0 (CODE)
+                            174 	.area GSINIT1 (CODE)
+                            175 	.area GSINIT2 (CODE)
+                            176 	.area GSINIT3 (CODE)
+                            177 	.area GSINIT4 (CODE)
+                            178 	.area GSINIT5 (CODE)
+                            179 	.area GSINIT  (CODE)
+                            180 	.area GSFINAL (CODE)
+                            181 	.area CSEG    (CODE)
+                            182 ;--------------------------------------------------------
+                            183 ; global & static initialisations
+                            184 ;--------------------------------------------------------
+                            185 	.area HOME    (CODE)
+                            186 	.area GSINIT  (CODE)
+                            187 	.area GSFINAL (CODE)
+                            188 	.area GSINIT  (CODE)
+                            189 ;--------------------------------------------------------
+                            190 ; Home
+                            191 ;--------------------------------------------------------
+                            192 	.area HOME    (CODE)
+                            193 	.area HOME    (CODE)
+                            194 ;--------------------------------------------------------
+                            195 ; code
+                            196 ;--------------------------------------------------------
+                            197 	.area CSEG    (CODE)
+                            198 ;------------------------------------------------------------
+                            199 ;Allocation info for local variables in function 'HW_set_32bit_reg_field'
+                            200 ;------------------------------------------------------------
+                            201 ;sloc0                     Allocated with name '_HW_set_32bit_reg_field_sloc0_1_0'
+                            202 ;sloc1                     Allocated with name '_HW_set_32bit_reg_field_sloc1_1_0'
+                            203 ;sloc2                     Allocated with name '_HW_set_32bit_reg_field_sloc2_1_0'
+                            204 ;shift                     Allocated with name '_HW_set_32bit_reg_field_PARM_2'
+                            205 ;mask                      Allocated with name '_HW_set_32bit_reg_field_PARM_3'
+                            206 ;value                     Allocated with name '_HW_set_32bit_reg_field_PARM_4'
+                            207 ;reg_addr                  Allocated with name '_HW_set_32bit_reg_field_reg_addr_1_1'
+                            208 ;temp32                    Allocated with name '_HW_set_32bit_reg_field_temp32_1_1'
+                            209 ;------------------------------------------------------------
+                    0000    210 	G$HW_set_32bit_reg_field$0$0 ==.
+                    0000    211 	C$hw_reg_access.c$16$0$0 ==.
+                            212 ;	../hal/Core8051s/SDCC/hw_reg_access.c:16: HW_set_32bit_reg_field
+                            213 ;	-----------------------------------------
+                            214 ;	 function HW_set_32bit_reg_field
+                            215 ;	-----------------------------------------
+   0000                     216 _HW_set_32bit_reg_field:
+                    0002    217 	ar2 = 0x02
+                    0003    218 	ar3 = 0x03
+                    0004    219 	ar4 = 0x04
+                    0005    220 	ar5 = 0x05
+                    0006    221 	ar6 = 0x06
+                    0007    222 	ar7 = 0x07
+                    0000    223 	ar0 = 0x00
+                    0001    224 	ar1 = 0x01
+                            225 ;	genReceive
+   0000 AA 83               226 	mov	r2,dph
+   0002 E5 82               227 	mov	a,dpl
+   0004 90s00r09            228 	mov	dptr,#_HW_set_32bit_reg_field_reg_addr_1_1
+   0007 F0                  229 	movx	@dptr,a
+   0008 A3                  230 	inc	dptr
+   0009 EA                  231 	mov	a,r2
+   000A F0                  232 	movx	@dptr,a
+                    000B    233 	C$hw_reg_access.c$25$1$1 ==.
+                            234 ;	../hal/Core8051s/SDCC/hw_reg_access.c:25: temp32 = HW_get_32bit_reg( reg_addr );
+                            235 ;	genAssign
+   000B 90s00r09            236 	mov	dptr,#_HW_set_32bit_reg_field_reg_addr_1_1
+   000E E0                  237 	movx	a,@dptr
+   000F F5*00               238 	mov	_HW_set_32bit_reg_field_sloc0_1_0,a
+   0011 A3                  239 	inc	dptr
+   0012 E0                  240 	movx	a,@dptr
+   0013 F5*01               241 	mov	(_HW_set_32bit_reg_field_sloc0_1_0 + 1),a
+                            242 ;	genCall
+   0015 85*00 82            243 	mov	dpl,_HW_set_32bit_reg_field_sloc0_1_0
+   0018 85*01 83            244 	mov	dph,(_HW_set_32bit_reg_field_sloc0_1_0 + 1)
+   001B 12s00r00            245 	lcall	_HW_get_32bit_reg
+   001E AC 82               246 	mov	r4,dpl
+   0020 AD 83               247 	mov	r5,dph
+   0022 AE F0               248 	mov	r6,b
+   0024 FF                  249 	mov	r7,a
+                            250 ;	genAssign
+   0025 90s00r0B            251 	mov	dptr,#_HW_set_32bit_reg_field_temp32_1_1
+   0028 EC                  252 	mov	a,r4
+   0029 F0                  253 	movx	@dptr,a
+   002A A3                  254 	inc	dptr
+   002B ED                  255 	mov	a,r5
+   002C F0                  256 	movx	@dptr,a
+   002D A3                  257 	inc	dptr
+   002E EE                  258 	mov	a,r6
+   002F F0                  259 	movx	@dptr,a
+   0030 A3                  260 	inc	dptr
+   0031 EF                  261 	mov	a,r7
+   0032 F0                  262 	movx	@dptr,a
+                    0033    263 	C$hw_reg_access.c$26$1$1 ==.
+                            264 ;	../hal/Core8051s/SDCC/hw_reg_access.c:26: temp32 = ((temp32 & ~mask) | (((value) << shift) & mask));
+                            265 ;	genAssign
+   0033 90s00r01            266 	mov	dptr,#_HW_set_32bit_reg_field_PARM_3
+   0036 E0                  267 	movx	a,@dptr
+   0037 FC                  268 	mov	r4,a
+   0038 A3                  269 	inc	dptr
+   0039 E0                  270 	movx	a,@dptr
+   003A FD                  271 	mov	r5,a
+   003B A3                  272 	inc	dptr
+   003C E0                  273 	movx	a,@dptr
+   003D FE                  274 	mov	r6,a
+   003E A3                  275 	inc	dptr
+   003F E0                  276 	movx	a,@dptr
+   0040 FF                  277 	mov	r7,a
+                            278 ;	genCpl
+   0041 EC                  279 	mov	a,r4
+   0042 F4                  280 	cpl	a
+   0043 F5*02               281 	mov	_HW_set_32bit_reg_field_sloc1_1_0,a
+   0045 ED                  282 	mov	a,r5
+   0046 F4                  283 	cpl	a
+   0047 F5*03               284 	mov	(_HW_set_32bit_reg_field_sloc1_1_0 + 1),a
+   0049 EE                  285 	mov	a,r6
+   004A F4                  286 	cpl	a
+   004B F5*04               287 	mov	(_HW_set_32bit_reg_field_sloc1_1_0 + 2),a
+   004D EF                  288 	mov	a,r7
+   004E F4                  289 	cpl	a
+   004F F5*05               290 	mov	(_HW_set_32bit_reg_field_sloc1_1_0 + 3),a
+                            291 ;	genAssign
+   0051 90s00r0B            292 	mov	dptr,#_HW_set_32bit_reg_field_temp32_1_1
+   0054 E0                  293 	movx	a,@dptr
+   0055 FA                  294 	mov	r2,a
+   0056 A3                  295 	inc	dptr
+   0057 E0                  296 	movx	a,@dptr
+   0058 FB                  297 	mov	r3,a
+   0059 A3                  298 	inc	dptr
+   005A E0                  299 	movx	a,@dptr
+   005B F8                  300 	mov	r0,a
+   005C A3                  301 	inc	dptr
+   005D E0                  302 	movx	a,@dptr
+   005E F9                  303 	mov	r1,a
+                            304 ;	genAnd
+   005F EA                  305 	mov	a,r2
+   0060 52*02               306 	anl	_HW_set_32bit_reg_field_sloc1_1_0,a
+   0062 EB                  307 	mov	a,r3
+   0063 52*03               308 	anl	(_HW_set_32bit_reg_field_sloc1_1_0 + 1),a
+   0065 E8                  309 	mov	a,r0
+   0066 52*04               310 	anl	(_HW_set_32bit_reg_field_sloc1_1_0 + 2),a
+   0068 E9                  311 	mov	a,r1
+   0069 52*05               312 	anl	(_HW_set_32bit_reg_field_sloc1_1_0 + 3),a
+                            313 ;	genAssign
+   006B 90s00r00            314 	mov	dptr,#_HW_set_32bit_reg_field_PARM_2
+   006E E0                  315 	movx	a,@dptr
+   006F F5*06               316 	mov	_HW_set_32bit_reg_field_sloc2_1_0,a
+                            317 ;	genAssign
+   0071 90s00r05            318 	mov	dptr,#_HW_set_32bit_reg_field_PARM_4
+   0074 E0                  319 	movx	a,@dptr
+   0075 FB                  320 	mov	r3,a
+   0076 A3                  321 	inc	dptr
+   0077 E0                  322 	movx	a,@dptr
+   0078 F8                  323 	mov	r0,a
+   0079 A3                  324 	inc	dptr
+   007A E0                  325 	movx	a,@dptr
+   007B F9                  326 	mov	r1,a
+   007C A3                  327 	inc	dptr
+   007D E0                  328 	movx	a,@dptr
+   007E FA                  329 	mov	r2,a
+                            330 ;	genLeftShift
+   007F 85*06 F0            331 	mov	b,_HW_set_32bit_reg_field_sloc2_1_0
+   0082 05 F0               332 	inc	b
+   0084 80 0D               333 	sjmp	00104$
+   0086                     334 00103$:
+   0086 EB                  335 	mov	a,r3
+   0087 25 E0               336 	add	a,acc
+   0089 FB                  337 	mov	r3,a
+   008A E8                  338 	mov	a,r0
+   008B 33                  339 	rlc	a
+   008C F8                  340 	mov	r0,a
+   008D E9                  341 	mov	a,r1
+   008E 33                  342 	rlc	a
+   008F F9                  343 	mov	r1,a
+   0090 EA                  344 	mov	a,r2
+   0091 33                  345 	rlc	a
+   0092 FA                  346 	mov	r2,a
+   0093                     347 00104$:
+   0093 D5 F0 F0            348 	djnz	b,00103$
+                            349 ;	genAnd
+   0096 EB                  350 	mov	a,r3
+   0097 52 04               351 	anl	ar4,a
+   0099 E8                  352 	mov	a,r0
+   009A 52 05               353 	anl	ar5,a
+   009C E9                  354 	mov	a,r1
+   009D 52 06               355 	anl	ar6,a
+   009F EA                  356 	mov	a,r2
+   00A0 52 07               357 	anl	ar7,a
+                            358 ;	genOr
+   00A2 90s00r0B            359 	mov	dptr,#_HW_set_32bit_reg_field_temp32_1_1
+   00A5 EC                  360 	mov	a,r4
+   00A6 45*02               361 	orl	a,_HW_set_32bit_reg_field_sloc1_1_0
+   00A8 F0                  362 	movx	@dptr,a
+   00A9 ED                  363 	mov	a,r5
+   00AA 45*03               364 	orl	a,(_HW_set_32bit_reg_field_sloc1_1_0 + 1)
+   00AC A3                  365 	inc	dptr
+   00AD F0                  366 	movx	@dptr,a
+   00AE EE                  367 	mov	a,r6
+   00AF 45*04               368 	orl	a,(_HW_set_32bit_reg_field_sloc1_1_0 + 2)
+   00B1 A3                  369 	inc	dptr
+   00B2 F0                  370 	movx	@dptr,a
+   00B3 EF                  371 	mov	a,r7
+   00B4 45*05               372 	orl	a,(_HW_set_32bit_reg_field_sloc1_1_0 + 3)
+   00B6 A3                  373 	inc	dptr
+   00B7 F0                  374 	movx	@dptr,a
+                    00B8    375 	C$hw_reg_access.c$27$1$1 ==.
+                            376 ;	../hal/Core8051s/SDCC/hw_reg_access.c:27: HW_set_32bit_reg(reg_addr, temp32);
+                            377 ;	genAssign
+   00B8 90s00r0B            378 	mov	dptr,#_HW_set_32bit_reg_field_temp32_1_1
+   00BB E0                  379 	movx	a,@dptr
+   00BC FA                  380 	mov	r2,a
+   00BD A3                  381 	inc	dptr
+   00BE E0                  382 	movx	a,@dptr
+   00BF FB                  383 	mov	r3,a
+   00C0 A3                  384 	inc	dptr
+   00C1 E0                  385 	movx	a,@dptr
+   00C2 FC                  386 	mov	r4,a
+   00C3 A3                  387 	inc	dptr
+   00C4 E0                  388 	movx	a,@dptr
+   00C5 FD                  389 	mov	r5,a
+                            390 ;	genAssign
+   00C6 90s00r00            391 	mov	dptr,#_HW_set_32bit_reg_PARM_2
+   00C9 EA                  392 	mov	a,r2
+   00CA F0                  393 	movx	@dptr,a
+   00CB A3                  394 	inc	dptr
+   00CC EB                  395 	mov	a,r3
+   00CD F0                  396 	movx	@dptr,a
+   00CE A3                  397 	inc	dptr
+   00CF EC                  398 	mov	a,r4
+   00D0 F0                  399 	movx	@dptr,a
+   00D1 A3                  400 	inc	dptr
+   00D2 ED                  401 	mov	a,r5
+   00D3 F0                  402 	movx	@dptr,a
+                            403 ;	genCall
+   00D4 85*00 82            404 	mov	dpl,_HW_set_32bit_reg_field_sloc0_1_0
+   00D7 85*01 83            405 	mov	dph,(_HW_set_32bit_reg_field_sloc0_1_0 + 1)
+   00DA 12s00r00            406 	lcall	_HW_set_32bit_reg
+   00DD                     407 00101$:
+                    00DD    408 	C$hw_reg_access.c$28$1$1 ==.
+                    00DD    409 	XG$HW_set_32bit_reg_field$0$0 ==.
+   00DD 22                  410 	ret
+                            411 ;------------------------------------------------------------
+                            412 ;Allocation info for local variables in function 'HW_get_32bit_reg_field'
+                            413 ;------------------------------------------------------------
+                            414 ;shift                     Allocated with name '_HW_get_32bit_reg_field_PARM_2'
+                            415 ;mask                      Allocated with name '_HW_get_32bit_reg_field_PARM_3'
+                            416 ;reg_addr                  Allocated with name '_HW_get_32bit_reg_field_reg_addr_1_1'
+                            417 ;temp32                    Allocated with name '_HW_get_32bit_reg_field_temp32_1_1'
+                            418 ;------------------------------------------------------------
+                    00DE    419 	G$HW_get_32bit_reg_field$0$0 ==.
+                    00DE    420 	C$hw_reg_access.c$34$1$1 ==.
+                            421 ;	../hal/Core8051s/SDCC/hw_reg_access.c:34: HW_get_32bit_reg_field
+                            422 ;	-----------------------------------------
+                            423 ;	 function HW_get_32bit_reg_field
+                            424 ;	-----------------------------------------
+   00DE                     425 _HW_get_32bit_reg_field:
+                            426 ;	genReceive
+   00DE AA 83               427 	mov	r2,dph
+   00E0 E5 82               428 	mov	a,dpl
+   00E2 90s00r14            429 	mov	dptr,#_HW_get_32bit_reg_field_reg_addr_1_1
+   00E5 F0                  430 	movx	@dptr,a
+   00E6 A3                  431 	inc	dptr
+   00E7 EA                  432 	mov	a,r2
+   00E8 F0                  433 	movx	@dptr,a
+                    00E9    434 	C$hw_reg_access.c$42$1$1 ==.
+                            435 ;	../hal/Core8051s/SDCC/hw_reg_access.c:42: temp32 = (HW_get_32bit_reg(reg_addr) & mask) >> shift;
+                            436 ;	genAssign
+   00E9 90s00r14            437 	mov	dptr,#_HW_get_32bit_reg_field_reg_addr_1_1
+   00EC E0                  438 	movx	a,@dptr
+   00ED FA                  439 	mov	r2,a
+   00EE A3                  440 	inc	dptr
+   00EF E0                  441 	movx	a,@dptr
+   00F0 FB                  442 	mov	r3,a
+                            443 ;	genCall
+   00F1 8A 82               444 	mov	dpl,r2
+   00F3 8B 83               445 	mov	dph,r3
+   00F5 12s00r00            446 	lcall	_HW_get_32bit_reg
+   00F8 AA 82               447 	mov	r2,dpl
+   00FA AB 83               448 	mov	r3,dph
+   00FC AC F0               449 	mov	r4,b
+   00FE FD                  450 	mov	r5,a
+                            451 ;	genAssign
+   00FF 90s00r10            452 	mov	dptr,#_HW_get_32bit_reg_field_PARM_3
+   0102 E0                  453 	movx	a,@dptr
+   0103 FE                  454 	mov	r6,a
+   0104 A3                  455 	inc	dptr
+   0105 E0                  456 	movx	a,@dptr
+   0106 FF                  457 	mov	r7,a
+   0107 A3                  458 	inc	dptr
+   0108 E0                  459 	movx	a,@dptr
+   0109 F8                  460 	mov	r0,a
+   010A A3                  461 	inc	dptr
+   010B E0                  462 	movx	a,@dptr
+   010C F9                  463 	mov	r1,a
+                            464 ;	genAnd
+   010D EE                  465 	mov	a,r6
+   010E 52 02               466 	anl	ar2,a
+   0110 EF                  467 	mov	a,r7
+   0111 52 03               468 	anl	ar3,a
+   0113 E8                  469 	mov	a,r0
+   0114 52 04               470 	anl	ar4,a
+   0116 E9                  471 	mov	a,r1
+   0117 52 05               472 	anl	ar5,a
+                            473 ;	genAssign
+   0119 90s00r0F            474 	mov	dptr,#_HW_get_32bit_reg_field_PARM_2
+   011C E0                  475 	movx	a,@dptr
+   011D FE                  476 	mov	r6,a
+                            477 ;	genRightShift
+   011E 8E F0               478 	mov	b,r6
+   0120 05 F0               479 	inc	b
+   0122 80 0D               480 	sjmp	00104$
+   0124                     481 00103$:
+   0124 C3                  482 	clr	c
+   0125 ED                  483 	mov	a,r5
+   0126 13                  484 	rrc	a
+   0127 FD                  485 	mov	r5,a
+   0128 EC                  486 	mov	a,r4
+   0129 13                  487 	rrc	a
+   012A FC                  488 	mov	r4,a
+   012B EB                  489 	mov	a,r3
+   012C 13                  490 	rrc	a
+   012D FB                  491 	mov	r3,a
+   012E EA                  492 	mov	a,r2
+   012F 13                  493 	rrc	a
+   0130 FA                  494 	mov	r2,a
+   0131                     495 00104$:
+   0131 D5 F0 F0            496 	djnz	b,00103$
+                            497 ;	genAssign
+   0134 90s00r16            498 	mov	dptr,#_HW_get_32bit_reg_field_temp32_1_1
+   0137 EA                  499 	mov	a,r2
+   0138 F0                  500 	movx	@dptr,a
+   0139 A3                  501 	inc	dptr
+   013A EB                  502 	mov	a,r3
+   013B F0                  503 	movx	@dptr,a
+   013C A3                  504 	inc	dptr
+   013D EC                  505 	mov	a,r4
+   013E F0                  506 	movx	@dptr,a
+   013F A3                  507 	inc	dptr
+   0140 ED                  508 	mov	a,r5
+   0141 F0                  509 	movx	@dptr,a
+                    0142    510 	C$hw_reg_access.c$43$1$1 ==.
+                            511 ;	../hal/Core8051s/SDCC/hw_reg_access.c:43: return temp32;
+                            512 ;	genAssign
+   0142 90s00r16            513 	mov	dptr,#_HW_get_32bit_reg_field_temp32_1_1
+   0145 E0                  514 	movx	a,@dptr
+   0146 FA                  515 	mov	r2,a
+   0147 A3                  516 	inc	dptr
+   0148 E0                  517 	movx	a,@dptr
+   0149 FB                  518 	mov	r3,a
+   014A A3                  519 	inc	dptr
+   014B E0                  520 	movx	a,@dptr
+   014C FC                  521 	mov	r4,a
+   014D A3                  522 	inc	dptr
+   014E E0                  523 	movx	a,@dptr
+   014F FD                  524 	mov	r5,a
+                            525 ;	genRet
+   0150 8A 82               526 	mov	dpl,r2
+   0152 8B 83               527 	mov	dph,r3
+   0154 8C F0               528 	mov	b,r4
+   0156 ED                  529 	mov	a,r5
+   0157                     530 00101$:
+                    0157    531 	C$hw_reg_access.c$44$1$1 ==.
+                    0157    532 	XG$HW_get_32bit_reg_field$0$0 ==.
+   0157 22                  533 	ret
+                            534 ;------------------------------------------------------------
+                            535 ;Allocation info for local variables in function 'HW_set_16bit_reg_field'
+                            536 ;------------------------------------------------------------
+                            537 ;sloc0                     Allocated with name '_HW_set_16bit_reg_field_sloc0_1_0'
+                            538 ;shift                     Allocated with name '_HW_set_16bit_reg_field_PARM_2'
+                            539 ;mask                      Allocated with name '_HW_set_16bit_reg_field_PARM_3'
+                            540 ;in_value16                Allocated with name '_HW_set_16bit_reg_field_PARM_4'
+                            541 ;reg_addr                  Allocated with name '_HW_set_16bit_reg_field_reg_addr_1_1'
+                            542 ;temp16                    Allocated with name '_HW_set_16bit_reg_field_temp16_1_1'
+                            543 ;------------------------------------------------------------
+                    0158    544 	G$HW_set_16bit_reg_field$0$0 ==.
+                    0158    545 	C$hw_reg_access.c$49$1$1 ==.
+                            546 ;	../hal/Core8051s/SDCC/hw_reg_access.c:49: void HW_set_16bit_reg_field
+                            547 ;	-----------------------------------------
+                            548 ;	 function HW_set_16bit_reg_field
+                            549 ;	-----------------------------------------
+   0158                     550 _HW_set_16bit_reg_field:
+                            551 ;	genReceive
+   0158 AA 83               552 	mov	r2,dph
+   015A E5 82               553 	mov	a,dpl
+   015C 90s00r1F            554 	mov	dptr,#_HW_set_16bit_reg_field_reg_addr_1_1
+   015F F0                  555 	movx	@dptr,a
+   0160 A3                  556 	inc	dptr
+   0161 EA                  557 	mov	a,r2
+   0162 F0                  558 	movx	@dptr,a
+                    0163    559 	C$hw_reg_access.c$58$1$1 ==.
+                            560 ;	../hal/Core8051s/SDCC/hw_reg_access.c:58: temp16 = HW_get_16bit_reg( reg_addr );
+                            561 ;	genAssign
+   0163 90s00r1F            562 	mov	dptr,#_HW_set_16bit_reg_field_reg_addr_1_1
+   0166 E0                  563 	movx	a,@dptr
+   0167 FA                  564 	mov	r2,a
+   0168 A3                  565 	inc	dptr
+   0169 E0                  566 	movx	a,@dptr
+   016A FB                  567 	mov	r3,a
+                            568 ;	genCall
+   016B 8A 82               569 	mov	dpl,r2
+   016D 8B 83               570 	mov	dph,r3
+   016F C0 02               571 	push	ar2
+   0171 C0 03               572 	push	ar3
+   0173 12s00r00            573 	lcall	_HW_get_16bit_reg
+   0176 E5 82               574 	mov	a,dpl
+   0178 85 83 F0            575 	mov	b,dph
+   017B D0 03               576 	pop	ar3
+   017D D0 02               577 	pop	ar2
+                            578 ;	genAssign
+   017F 90s00r21            579 	mov	dptr,#_HW_set_16bit_reg_field_temp16_1_1
+   0182 F0                  580 	movx	@dptr,a
+   0183 A3                  581 	inc	dptr
+   0184 E5 F0               582 	mov	a,b
+   0186 F0                  583 	movx	@dptr,a
+                    0187    584 	C$hw_reg_access.c$59$1$1 ==.
+                            585 ;	../hal/Core8051s/SDCC/hw_reg_access.c:59: temp16 = ((temp16  & ~mask) | (((in_value16) << shift) & mask));
+                            586 ;	genAssign
+   0187 90s00r1B            587 	mov	dptr,#_HW_set_16bit_reg_field_PARM_3
+   018A E0                  588 	movx	a,@dptr
+   018B FC                  589 	mov	r4,a
+   018C A3                  590 	inc	dptr
+   018D E0                  591 	movx	a,@dptr
+   018E FD                  592 	mov	r5,a
+                            593 ;	genCpl
+   018F EC                  594 	mov	a,r4
+   0190 F4                  595 	cpl	a
+   0191 FE                  596 	mov	r6,a
+   0192 ED                  597 	mov	a,r5
+   0193 F4                  598 	cpl	a
+   0194 FF                  599 	mov	r7,a
+                            600 ;	genAssign
+   0195 90s00r21            601 	mov	dptr,#_HW_set_16bit_reg_field_temp16_1_1
+   0198 E0                  602 	movx	a,@dptr
+   0199 F8                  603 	mov	r0,a
+   019A A3                  604 	inc	dptr
+   019B E0                  605 	movx	a,@dptr
+   019C F9                  606 	mov	r1,a
+                            607 ;	genAnd
+   019D E8                  608 	mov	a,r0
+   019E 52 06               609 	anl	ar6,a
+   01A0 E9                  610 	mov	a,r1
+   01A1 52 07               611 	anl	ar7,a
+                            612 ;	genAssign
+   01A3 90s00r1A            613 	mov	dptr,#_HW_set_16bit_reg_field_PARM_2
+   01A6 E0                  614 	movx	a,@dptr
+   01A7 F5*07               615 	mov	_HW_set_16bit_reg_field_sloc0_1_0,a
+                            616 ;	genAssign
+   01A9 90s00r1D            617 	mov	dptr,#_HW_set_16bit_reg_field_PARM_4
+   01AC E0                  618 	movx	a,@dptr
+   01AD F9                  619 	mov	r1,a
+   01AE A3                  620 	inc	dptr
+   01AF E0                  621 	movx	a,@dptr
+   01B0 F8                  622 	mov	r0,a
+                            623 ;	genLeftShift
+   01B1 85*07 F0            624 	mov	b,_HW_set_16bit_reg_field_sloc0_1_0
+   01B4 05 F0               625 	inc	b
+   01B6 80 07               626 	sjmp	00104$
+   01B8                     627 00103$:
+   01B8 E9                  628 	mov	a,r1
+   01B9 25 E0               629 	add	a,acc
+   01BB F9                  630 	mov	r1,a
+   01BC E8                  631 	mov	a,r0
+   01BD 33                  632 	rlc	a
+   01BE F8                  633 	mov	r0,a
+   01BF                     634 00104$:
+   01BF D5 F0 F6            635 	djnz	b,00103$
+                            636 ;	genAnd
+   01C2 E9                  637 	mov	a,r1
+   01C3 52 04               638 	anl	ar4,a
+   01C5 E8                  639 	mov	a,r0
+   01C6 52 05               640 	anl	ar5,a
+                            641 ;	genOr
+   01C8 90s00r21            642 	mov	dptr,#_HW_set_16bit_reg_field_temp16_1_1
+   01CB EC                  643 	mov	a,r4
+   01CC 4E                  644 	orl	a,r6
+   01CD F0                  645 	movx	@dptr,a
+   01CE ED                  646 	mov	a,r5
+   01CF 4F                  647 	orl	a,r7
+   01D0 A3                  648 	inc	dptr
+   01D1 F0                  649 	movx	@dptr,a
+                    01D2    650 	C$hw_reg_access.c$60$1$1 ==.
+                            651 ;	../hal/Core8051s/SDCC/hw_reg_access.c:60: HW_set_16bit_reg(reg_addr, temp16);
+                            652 ;	genAssign
+   01D2 90s00r21            653 	mov	dptr,#_HW_set_16bit_reg_field_temp16_1_1
+   01D5 E0                  654 	movx	a,@dptr
+   01D6 FC                  655 	mov	r4,a
+   01D7 A3                  656 	inc	dptr
+   01D8 E0                  657 	movx	a,@dptr
+   01D9 FD                  658 	mov	r5,a
+                            659 ;	genAssign
+   01DA 90s00r00            660 	mov	dptr,#_HW_set_16bit_reg_PARM_2
+   01DD EC                  661 	mov	a,r4
+   01DE F0                  662 	movx	@dptr,a
+   01DF A3                  663 	inc	dptr
+   01E0 ED                  664 	mov	a,r5
+   01E1 F0                  665 	movx	@dptr,a
+                            666 ;	genCall
+   01E2 8A 82               667 	mov	dpl,r2
+   01E4 8B 83               668 	mov	dph,r3
+   01E6 12s00r00            669 	lcall	_HW_set_16bit_reg
+   01E9                     670 00101$:
+                    01E9    671 	C$hw_reg_access.c$61$1$1 ==.
+                    01E9    672 	XG$HW_set_16bit_reg_field$0$0 ==.
+   01E9 22                  673 	ret
+                            674 ;------------------------------------------------------------
+                            675 ;Allocation info for local variables in function 'HW_get_16bit_reg_field'
+                            676 ;------------------------------------------------------------
+                            677 ;shift                     Allocated with name '_HW_get_16bit_reg_field_PARM_2'
+                            678 ;mask                      Allocated with name '_HW_get_16bit_reg_field_PARM_3'
+                            679 ;reg_addr                  Allocated with name '_HW_get_16bit_reg_field_reg_addr_1_1'
+                            680 ;temp16                    Allocated with name '_HW_get_16bit_reg_field_temp16_1_1'
+                            681 ;------------------------------------------------------------
+                    01EA    682 	G$HW_get_16bit_reg_field$0$0 ==.
+                    01EA    683 	C$hw_reg_access.c$66$1$1 ==.
+                            684 ;	../hal/Core8051s/SDCC/hw_reg_access.c:66: uint16_t HW_get_16bit_reg_field
+                            685 ;	-----------------------------------------
+                            686 ;	 function HW_get_16bit_reg_field
+                            687 ;	-----------------------------------------
+   01EA                     688 _HW_get_16bit_reg_field:
+                            689 ;	genReceive
+   01EA AA 83               690 	mov	r2,dph
+   01EC E5 82               691 	mov	a,dpl
+   01EE 90s00r26            692 	mov	dptr,#_HW_get_16bit_reg_field_reg_addr_1_1
+   01F1 F0                  693 	movx	@dptr,a
+   01F2 A3                  694 	inc	dptr
+   01F3 EA                  695 	mov	a,r2
+   01F4 F0                  696 	movx	@dptr,a
+                    01F5    697 	C$hw_reg_access.c$74$1$1 ==.
+                            698 ;	../hal/Core8051s/SDCC/hw_reg_access.c:74: temp16 = (HW_get_16bit_reg(reg_addr) & mask) >> shift;
+                            699 ;	genAssign
+   01F5 90s00r26            700 	mov	dptr,#_HW_get_16bit_reg_field_reg_addr_1_1
+   01F8 E0                  701 	movx	a,@dptr
+   01F9 FA                  702 	mov	r2,a
+   01FA A3                  703 	inc	dptr
+   01FB E0                  704 	movx	a,@dptr
+   01FC FB                  705 	mov	r3,a
+                            706 ;	genCall
+   01FD 8A 82               707 	mov	dpl,r2
+   01FF 8B 83               708 	mov	dph,r3
+   0201 12s00r00            709 	lcall	_HW_get_16bit_reg
+   0204 AA 82               710 	mov	r2,dpl
+   0206 AB 83               711 	mov	r3,dph
+                            712 ;	genAssign
+   0208 90s00r24            713 	mov	dptr,#_HW_get_16bit_reg_field_PARM_3
+   020B E0                  714 	movx	a,@dptr
+   020C FC                  715 	mov	r4,a
+   020D A3                  716 	inc	dptr
+   020E E0                  717 	movx	a,@dptr
+   020F FD                  718 	mov	r5,a
+                            719 ;	genAnd
+   0210 EC                  720 	mov	a,r4
+   0211 52 02               721 	anl	ar2,a
+   0213 ED                  722 	mov	a,r5
+   0214 52 03               723 	anl	ar3,a
+                            724 ;	genAssign
+   0216 90s00r23            725 	mov	dptr,#_HW_get_16bit_reg_field_PARM_2
+   0219 E0                  726 	movx	a,@dptr
+   021A FC                  727 	mov	r4,a
+                            728 ;	genRightShift
+   021B 8C F0               729 	mov	b,r4
+   021D 05 F0               730 	inc	b
+   021F 80 07               731 	sjmp	00104$
+   0221                     732 00103$:
+   0221 C3                  733 	clr	c
+   0222 EB                  734 	mov	a,r3
+   0223 13                  735 	rrc	a
+   0224 FB                  736 	mov	r3,a
+   0225 EA                  737 	mov	a,r2
+   0226 13                  738 	rrc	a
+   0227 FA                  739 	mov	r2,a
+   0228                     740 00104$:
+   0228 D5 F0 F6            741 	djnz	b,00103$
+                            742 ;	genAssign
+   022B 90s00r28            743 	mov	dptr,#_HW_get_16bit_reg_field_temp16_1_1
+   022E EA                  744 	mov	a,r2
+   022F F0                  745 	movx	@dptr,a
+   0230 A3                  746 	inc	dptr
+   0231 EB                  747 	mov	a,r3
+   0232 F0                  748 	movx	@dptr,a
+                    0233    749 	C$hw_reg_access.c$75$1$1 ==.
+                            750 ;	../hal/Core8051s/SDCC/hw_reg_access.c:75: return temp16;
+                            751 ;	genAssign
+   0233 90s00r28            752 	mov	dptr,#_HW_get_16bit_reg_field_temp16_1_1
+   0236 E0                  753 	movx	a,@dptr
+   0237 FA                  754 	mov	r2,a
+   0238 A3                  755 	inc	dptr
+   0239 E0                  756 	movx	a,@dptr
+   023A FB                  757 	mov	r3,a
+                            758 ;	genRet
+   023B 8A 82               759 	mov	dpl,r2
+   023D 8B 83               760 	mov	dph,r3
+   023F                     761 00101$:
+                    023F    762 	C$hw_reg_access.c$76$1$1 ==.
+                    023F    763 	XG$HW_get_16bit_reg_field$0$0 ==.
+   023F 22                  764 	ret
+                            765 ;------------------------------------------------------------
+                            766 ;Allocation info for local variables in function 'HW_set_8bit_reg_field'
+                            767 ;------------------------------------------------------------
+                            768 ;shift                     Allocated with name '_HW_set_8bit_reg_field_PARM_2'
+                            769 ;mask                      Allocated with name '_HW_set_8bit_reg_field_PARM_3'
+                            770 ;value                     Allocated with name '_HW_set_8bit_reg_field_PARM_4'
+                            771 ;reg_addr                  Allocated with name '_HW_set_8bit_reg_field_reg_addr_1_1'
+                            772 ;temp8                     Allocated with name '_HW_set_8bit_reg_field_temp8_1_1'
+                            773 ;------------------------------------------------------------
+                    0240    774 	G$HW_set_8bit_reg_field$0$0 ==.
+                    0240    775 	C$hw_reg_access.c$81$1$1 ==.
+                            776 ;	../hal/Core8051s/SDCC/hw_reg_access.c:81: void HW_set_8bit_reg_field
+                            777 ;	-----------------------------------------
+                            778 ;	 function HW_set_8bit_reg_field
+                            779 ;	-----------------------------------------
+   0240                     780 _HW_set_8bit_reg_field:
+                            781 ;	genReceive
+   0240 AA 83               782 	mov	r2,dph
+   0242 E5 82               783 	mov	a,dpl
+   0244 90s00r2D            784 	mov	dptr,#_HW_set_8bit_reg_field_reg_addr_1_1
+   0247 F0                  785 	movx	@dptr,a
+   0248 A3                  786 	inc	dptr
+   0249 EA                  787 	mov	a,r2
+   024A F0                  788 	movx	@dptr,a
+                    024B    789 	C$hw_reg_access.c$90$1$1 ==.
+                            790 ;	../hal/Core8051s/SDCC/hw_reg_access.c:90: temp8 = HW_get_8bit_reg( reg_addr );
+                            791 ;	genAssign
+   024B 90s00r2D            792 	mov	dptr,#_HW_set_8bit_reg_field_reg_addr_1_1
+   024E E0                  793 	movx	a,@dptr
+   024F FA                  794 	mov	r2,a
+   0250 A3                  795 	inc	dptr
+   0251 E0                  796 	movx	a,@dptr
+   0252 FB                  797 	mov	r3,a
+                            798 ;	genCall
+   0253 8A 82               799 	mov	dpl,r2
+   0255 8B 83               800 	mov	dph,r3
+   0257 C0 02               801 	push	ar2
+   0259 C0 03               802 	push	ar3
+   025B 12s00r00            803 	lcall	_HW_get_8bit_reg
+   025E E5 82               804 	mov	a,dpl
+   0260 D0 03               805 	pop	ar3
+   0262 D0 02               806 	pop	ar2
+                            807 ;	genAssign
+   0264 90s00r2F            808 	mov	dptr,#_HW_set_8bit_reg_field_temp8_1_1
+   0267 F0                  809 	movx	@dptr,a
+                    0268    810 	C$hw_reg_access.c$91$1$1 ==.
+                            811 ;	../hal/Core8051s/SDCC/hw_reg_access.c:91: temp8 = ((temp8  & ~mask) | (((value) << shift) & mask));
+                            812 ;	genAssign
+   0268 90s00r2B            813 	mov	dptr,#_HW_set_8bit_reg_field_PARM_3
+   026B E0                  814 	movx	a,@dptr
+   026C FC                  815 	mov	r4,a
+                            816 ;	genCpl
+   026D EC                  817 	mov	a,r4
+   026E F4                  818 	cpl	a
+   026F FD                  819 	mov	r5,a
+                            820 ;	genAssign
+   0270 90s00r2F            821 	mov	dptr,#_HW_set_8bit_reg_field_temp8_1_1
+   0273 E0                  822 	movx	a,@dptr
+   0274 FE                  823 	mov	r6,a
+                            824 ;	genAnd
+   0275 EE                  825 	mov	a,r6
+   0276 52 05               826 	anl	ar5,a
+                            827 ;	genAssign
+   0278 90s00r2A            828 	mov	dptr,#_HW_set_8bit_reg_field_PARM_2
+   027B E0                  829 	movx	a,@dptr
+   027C FE                  830 	mov	r6,a
+                            831 ;	genAssign
+   027D 90s00r2C            832 	mov	dptr,#_HW_set_8bit_reg_field_PARM_4
+   0280 E0                  833 	movx	a,@dptr
+   0281 FF                  834 	mov	r7,a
+                            835 ;	genLeftShift
+   0282 8E F0               836 	mov	b,r6
+   0284 05 F0               837 	inc	b
+   0286 EF                  838 	mov	a,r7
+   0287 80 02               839 	sjmp	00105$
+   0289                     840 00103$:
+   0289 25 E0               841 	add	a,acc
+   028B                     842 00105$:
+   028B D5 F0 FB            843 	djnz	b,00103$
+                            844 ;	genAnd
+   028E 5C                  845 	anl	a,r4
+                            846 ;	genOr
+   028F 90s00r2F            847 	mov	dptr,#_HW_set_8bit_reg_field_temp8_1_1
+   0292 4D                  848 	orl	a,r5
+   0293 F0                  849 	movx	@dptr,a
+                    0294    850 	C$hw_reg_access.c$92$1$1 ==.
+                            851 ;	../hal/Core8051s/SDCC/hw_reg_access.c:92: HW_set_8bit_reg(reg_addr, temp8);
+                            852 ;	genAssign
+   0294 90s00r2F            853 	mov	dptr,#_HW_set_8bit_reg_field_temp8_1_1
+   0297 E0                  854 	movx	a,@dptr
+   0298 FC                  855 	mov	r4,a
+                            856 ;	genAssign
+   0299 90s00r00            857 	mov	dptr,#_HW_set_8bit_reg_PARM_2
+   029C EC                  858 	mov	a,r4
+   029D F0                  859 	movx	@dptr,a
+                            860 ;	genCall
+   029E 8A 82               861 	mov	dpl,r2
+   02A0 8B 83               862 	mov	dph,r3
+   02A2 12s00r00            863 	lcall	_HW_set_8bit_reg
+   02A5                     864 00101$:
+                    02A5    865 	C$hw_reg_access.c$93$1$1 ==.
+                    02A5    866 	XG$HW_set_8bit_reg_field$0$0 ==.
+   02A5 22                  867 	ret
+                            868 ;------------------------------------------------------------
+                            869 ;Allocation info for local variables in function 'HW_get_8bit_reg_field'
+                            870 ;------------------------------------------------------------
+                            871 ;shift                     Allocated with name '_HW_get_8bit_reg_field_PARM_2'
+                            872 ;mask                      Allocated with name '_HW_get_8bit_reg_field_PARM_3'
+                            873 ;reg_addr                  Allocated with name '_HW_get_8bit_reg_field_reg_addr_1_1'
+                            874 ;temp8                     Allocated with name '_HW_get_8bit_reg_field_temp8_1_1'
+                            875 ;------------------------------------------------------------
+                    02A6    876 	G$HW_get_8bit_reg_field$0$0 ==.
+                    02A6    877 	C$hw_reg_access.c$98$1$1 ==.
+                            878 ;	../hal/Core8051s/SDCC/hw_reg_access.c:98: uint8_t HW_get_8bit_reg_field
+                            879 ;	-----------------------------------------
+                            880 ;	 function HW_get_8bit_reg_field
+                            881 ;	-----------------------------------------
+   02A6                     882 _HW_get_8bit_reg_field:
+                            883 ;	genReceive
+   02A6 AA 83               884 	mov	r2,dph
+   02A8 E5 82               885 	mov	a,dpl
+   02AA 90s00r32            886 	mov	dptr,#_HW_get_8bit_reg_field_reg_addr_1_1
+   02AD F0                  887 	movx	@dptr,a
+   02AE A3                  888 	inc	dptr
+   02AF EA                  889 	mov	a,r2
+   02B0 F0                  890 	movx	@dptr,a
+                    02B1    891 	C$hw_reg_access.c$106$1$1 ==.
+                            892 ;	../hal/Core8051s/SDCC/hw_reg_access.c:106: temp8 = (HW_get_8bit_reg(reg_addr) & mask) >> shift;
+                            893 ;	genAssign
+   02B1 90s00r32            894 	mov	dptr,#_HW_get_8bit_reg_field_reg_addr_1_1
+   02B4 E0                  895 	movx	a,@dptr
+   02B5 FA                  896 	mov	r2,a
+   02B6 A3                  897 	inc	dptr
+   02B7 E0                  898 	movx	a,@dptr
+   02B8 FB                  899 	mov	r3,a
+                            900 ;	genCall
+   02B9 8A 82               901 	mov	dpl,r2
+   02BB 8B 83               902 	mov	dph,r3
+   02BD 12s00r00            903 	lcall	_HW_get_8bit_reg
+   02C0 AA 82               904 	mov	r2,dpl
+                            905 ;	genAssign
+   02C2 90s00r31            906 	mov	dptr,#_HW_get_8bit_reg_field_PARM_3
+   02C5 E0                  907 	movx	a,@dptr
+   02C6 FB                  908 	mov	r3,a
+                            909 ;	genAnd
+   02C7 EB                  910 	mov	a,r3
+   02C8 52 02               911 	anl	ar2,a
+                            912 ;	genAssign
+   02CA 90s00r30            913 	mov	dptr,#_HW_get_8bit_reg_field_PARM_2
+   02CD E0                  914 	movx	a,@dptr
+   02CE FB                  915 	mov	r3,a
+                            916 ;	genRightShift
+   02CF 8B F0               917 	mov	b,r3
+   02D1 05 F0               918 	inc	b
+   02D3 EA                  919 	mov	a,r2
+   02D4 80 02               920 	sjmp	00104$
+   02D6                     921 00103$:
+   02D6 C3                  922 	clr	c
+   02D7 13                  923 	rrc	a
+   02D8                     924 00104$:
+   02D8 D5 F0 FB            925 	djnz	b,00103$
+                            926 ;	genAssign
+   02DB 90s00r34            927 	mov	dptr,#_HW_get_8bit_reg_field_temp8_1_1
+   02DE F0                  928 	movx	@dptr,a
+                    02DF    929 	C$hw_reg_access.c$107$1$1 ==.
+                            930 ;	../hal/Core8051s/SDCC/hw_reg_access.c:107: return temp8;
+                            931 ;	genAssign
+   02DF 90s00r34            932 	mov	dptr,#_HW_get_8bit_reg_field_temp8_1_1
+   02E2 E0                  933 	movx	a,@dptr
+   02E3 FA                  934 	mov	r2,a
+                            935 ;	genRet
+   02E4 8A 82               936 	mov	dpl,r2
+   02E6                     937 00101$:
+                    02E6    938 	C$hw_reg_access.c$108$1$1 ==.
+                    02E6    939 	XG$HW_get_8bit_reg_field$0$0 ==.
+   02E6 22                  940 	ret
+                            941 	.area CSEG    (CODE)
+                            942 	.area CONST   (CODE)
+                            943 	.area XINIT   (CODE)
+                            944 	.area CABS    (ABS,CODE)

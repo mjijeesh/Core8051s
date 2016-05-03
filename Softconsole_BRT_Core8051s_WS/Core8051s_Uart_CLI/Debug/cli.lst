@@ -1,0 +1,3432 @@
+                              1 ;--------------------------------------------------------
+                              2 ; File Created by SDCC : FreeWare ANSI-C Compiler
+                              3 ; Version 2.6.3 #4543 (Dec 31 2006)
+                              4 ; This file generated Tue May 03 17:52:18 2016
+                              5 ;--------------------------------------------------------
+                              6 	.module ___cli
+                              7 	.optsdcc -mmcs51 --model-large
+                              8 	
+                              9 ;--------------------------------------------------------
+                             10 ; Public variables in this module
+                             11 ;--------------------------------------------------------
+                             12 	.globl _last_rt_subaddress
+                             13 	.globl _user_input
+                             14 	.globl _display_brt_data_PARM_2
+                             15 	.globl _temp
+                             16 	.globl _last_msg_no
+                             17 	.globl _last_sub_address
+                             18 	.globl _rx_char_ptr
+                             19 	.globl _rx_char
+                             20 	.globl _key
+                             21 	.globl _display_help
+                             22 	.globl _display_prompt
+                             23 	.globl _get_key_selection
+                             24 	.globl _read_user_input
+                             25 	.globl _display_brt_regs
+                             26 	.globl _display_brt_data
+                             27 	.globl _process_uart_data
+                             28 	.globl _display_mem_data
+                             29 ;--------------------------------------------------------
+                             30 ; special function registers
+                             31 ;--------------------------------------------------------
+                             32 	.area RSEG    (DATA)
+                             33 ;--------------------------------------------------------
+                             34 ; special function bits
+                             35 ;--------------------------------------------------------
+                             36 	.area RSEG    (DATA)
+                             37 ;--------------------------------------------------------
+                             38 ; overlayable register banks
+                             39 ;--------------------------------------------------------
+                             40 	.area REG_BANK_0	(REL,OVR,DATA)
+   0000                      41 	.ds 8
+                             42 ;--------------------------------------------------------
+                             43 ; internal ram data
+                             44 ;--------------------------------------------------------
+                             45 	.area DSEG    (DATA)
+                    0000     46 Ldisplay_brt_regs$sloc0$1$0==.
+   0000                      47 _display_brt_regs_sloc0_1_0:
+   0000                      48 	.ds 1
+                             49 ;--------------------------------------------------------
+                             50 ; overlayable items in internal ram 
+                             51 ;--------------------------------------------------------
+                             52 	.area OSEG    (OVR,DATA)
+                             53 ;--------------------------------------------------------
+                             54 ; indirectly addressable internal ram data
+                             55 ;--------------------------------------------------------
+                             56 	.area ISEG    (DATA)
+                             57 ;--------------------------------------------------------
+                             58 ; absolute internal ram data
+                             59 ;--------------------------------------------------------
+                             60 	.area IABS    (ABS,DATA)
+                             61 	.area IABS    (ABS,DATA)
+                             62 ;--------------------------------------------------------
+                             63 ; bit data
+                             64 ;--------------------------------------------------------
+                             65 	.area BSEG    (BIT)
+                             66 ;--------------------------------------------------------
+                             67 ; paged external ram data
+                             68 ;--------------------------------------------------------
+                             69 	.area PSEG    (PAG,XDATA)
+                             70 ;--------------------------------------------------------
+                             71 ; external ram data
+                             72 ;--------------------------------------------------------
+                             73 	.area XSEG    (XDATA)
+                    0000     74 G$key$0$0==.
+   0000                      75 _key::
+   0000                      76 	.ds 1
+                    0001     77 G$rx_char$0$0==.
+   0001                      78 _rx_char::
+   0001                      79 	.ds 10
+                    000B     80 G$rx_char_ptr$0$0==.
+   000B                      81 _rx_char_ptr::
+   000B                      82 	.ds 3
+                    000E     83 G$last_sub_address$0$0==.
+   000E                      84 _last_sub_address::
+   000E                      85 	.ds 1
+                    000F     86 G$last_msg_no$0$0==.
+   000F                      87 _last_msg_no::
+   000F                      88 	.ds 1
+                    0010     89 G$temp$0$0==.
+   0010                      90 _temp::
+   0010                      91 	.ds 1
+                    0011     92 Ldisplay_help$tx_data$1$1==.
+   0011                      93 _display_help_tx_data_1_1:
+   0011                      94 	.ds 960
+                    03D1     95 Lget_key_selection$rx_data$1$1==.
+   03D1                      96 _get_key_selection_rx_data_1_1:
+   03D1                      97 	.ds 2
+                    03D3     98 Lread_user_input$rx_char_ptr$1$1==.
+   03D3                      99 _read_user_input_rx_char_ptr_1_1:
+   03D3                     100 	.ds 3
+                    03D6    101 Lread_user_input$recv_char$1$1==.
+   03D6                     102 _read_user_input_recv_char_1_1:
+   03D6                     103 	.ds 1
+                    03D7    104 Lread_user_input$index$1$1==.
+   03D7                     105 _read_user_input_index_1_1:
+   03D7                     106 	.ds 1
+                    03D8    107 Ldisplay_brt_regs$mem_addr$1$1==.
+   03D8                     108 _display_brt_regs_mem_addr_1_1:
+   03D8                     109 	.ds 4
+                    03DC    110 Ldisplay_brt_regs$i$1$1==.
+   03DC                     111 _display_brt_regs_i_1_1:
+   03DC                     112 	.ds 1
+                    03DD    113 Ldisplay_brt_data$subaddr$1$1==.
+   03DD                     114 _display_brt_data_PARM_2:
+   03DD                     115 	.ds 1
+                    03DE    116 Ldisplay_brt_data$brt_baseaddr$1$1==.
+   03DE                     117 _display_brt_data_brt_baseaddr_1_1:
+   03DE                     118 	.ds 4
+                    03E2    119 Ldisplay_brt_data$tx_sub_address$1$1==.
+   03E2                     120 _display_brt_data_tx_sub_address_1_1:
+   03E2                     121 	.ds 2
+                    03E4    122 Ldisplay_brt_data$rx_sub_address$1$1==.
+   03E4                     123 _display_brt_data_rx_sub_address_1_1:
+   03E4                     124 	.ds 2
+                    03E6    125 Ldisplay_brt_data$i$1$1==.
+   03E6                     126 _display_brt_data_i_1_1:
+   03E6                     127 	.ds 1
+                    03E7    128 Ldisplay_brt_data$m$1$1==.
+   03E7                     129 _display_brt_data_m_1_1:
+   03E7                     130 	.ds 1
+                    03E8    131 Lprocess_uart_data$key$1$1==.
+   03E8                     132 _process_uart_data_key_1_1:
+   03E8                     133 	.ds 1
+                    03E9    134 Ldisplay_mem_data$mem_data$1$1==.
+   03E9                     135 _display_mem_data_mem_data_1_1:
+   03E9                     136 	.ds 2
+                    03EB    137 Ldisplay_mem_data$tx_sub_address$1$1==.
+   03EB                     138 _display_mem_data_tx_sub_address_1_1:
+   03EB                     139 	.ds 2
+                    03ED    140 Ldisplay_mem_data$rx_sub_address$1$1==.
+   03ED                     141 _display_mem_data_rx_sub_address_1_1:
+   03ED                     142 	.ds 2
+                    03EF    143 Ldisplay_mem_data$i$1$1==.
+   03EF                     144 _display_mem_data_i_1_1:
+   03EF                     145 	.ds 1
+                    03F0    146 Ldisplay_mem_data$m$1$1==.
+   03F0                     147 _display_mem_data_m_1_1:
+   03F0                     148 	.ds 1
+                            149 ;--------------------------------------------------------
+                            150 ; external initialized ram data
+                            151 ;--------------------------------------------------------
+                            152 	.area XISEG   (XDATA)
+                    0000    153 G$user_input$0$0==.
+   0000                     154 _user_input::
+   0000                     155 	.ds 4
+                    0004    156 G$last_rt_subaddress$0$0==.
+   0004                     157 _last_rt_subaddress::
+   0004                     158 	.ds 1
+                            159 	.area HOME    (CODE)
+                            160 	.area GSINIT0 (CODE)
+                            161 	.area GSINIT1 (CODE)
+                            162 	.area GSINIT2 (CODE)
+                            163 	.area GSINIT3 (CODE)
+                            164 	.area GSINIT4 (CODE)
+                            165 	.area GSINIT5 (CODE)
+                            166 	.area GSINIT  (CODE)
+                            167 	.area GSFINAL (CODE)
+                            168 	.area CSEG    (CODE)
+                            169 ;--------------------------------------------------------
+                            170 ; global & static initialisations
+                            171 ;--------------------------------------------------------
+                            172 	.area HOME    (CODE)
+                            173 	.area GSINIT  (CODE)
+                            174 	.area GSFINAL (CODE)
+                            175 	.area GSINIT  (CODE)
+                            176 ;--------------------------------------------------------
+                            177 ; Home
+                            178 ;--------------------------------------------------------
+                            179 	.area HOME    (CODE)
+                            180 	.area HOME    (CODE)
+                            181 ;--------------------------------------------------------
+                            182 ; code
+                            183 ;--------------------------------------------------------
+                            184 	.area CSEG    (CODE)
+                            185 ;------------------------------------------------------------
+                            186 ;Allocation info for local variables in function 'display_help'
+                            187 ;------------------------------------------------------------
+                            188 ;tx_data                   Allocated with name '_display_help_tx_data_1_1'
+                            189 ;------------------------------------------------------------
+                    0000    190 	G$display_help$0$0 ==.
+                    0000    191 	C$cli.c$20$0$0 ==.
+                            192 ;	../cli.c:20: void display_help(void){
+                            193 ;	-----------------------------------------
+                            194 ;	 function display_help
+                            195 ;	-----------------------------------------
+   0000                     196 _display_help:
+                    0002    197 	ar2 = 0x02
+                    0003    198 	ar3 = 0x03
+                    0004    199 	ar4 = 0x04
+                    0005    200 	ar5 = 0x05
+                    0006    201 	ar6 = 0x06
+                    0007    202 	ar7 = 0x07
+                    0000    203 	ar0 = 0x00
+                    0001    204 	ar1 = 0x01
+                    0000    205 	C$cli.c$21$1$0 ==.
+                            206 ;	../cli.c:21: uint8_t tx_data[24][40] = {
+                            207 ;	genPointerSet
+                            208 ;     genFarPointerSet
+   0000 90s00r11            209 	mov	dptr,#_display_help_tx_data_1_1
+   0003 74 0D               210 	mov	a,#0x0D
+   0005 F0                  211 	movx	@dptr,a
+                            212 ;	genPointerSet
+                            213 ;     genFarPointerSet
+   0006 90s00r12            214 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0001)
+   0009 74 0A               215 	mov	a,#0x0A
+   000B F0                  216 	movx	@dptr,a
+                            217 ;	genPointerSet
+                            218 ;     genFarPointerSet
+   000C 90s00r13            219 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0002)
+   000F 74 52               220 	mov	a,#0x52
+   0011 F0                  221 	movx	@dptr,a
+                            222 ;	genPointerSet
+                            223 ;     genFarPointerSet
+   0012 90s00r14            224 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0003)
+   0015 74 20               225 	mov	a,#0x20
+   0017 F0                  226 	movx	@dptr,a
+                            227 ;	genPointerSet
+                            228 ;     genFarPointerSet
+   0018 90s00r15            229 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0004)
+   001B 74 52               230 	mov	a,#0x52
+   001D F0                  231 	movx	@dptr,a
+                            232 ;	genPointerSet
+                            233 ;     genFarPointerSet
+   001E 90s00r16            234 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0005)
+   0021 74 65               235 	mov	a,#0x65
+   0023 F0                  236 	movx	@dptr,a
+                            237 ;	genPointerSet
+                            238 ;     genFarPointerSet
+   0024 90s00r17            239 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0006)
+   0027 74 61               240 	mov	a,#0x61
+   0029 F0                  241 	movx	@dptr,a
+                            242 ;	genPointerSet
+                            243 ;     genFarPointerSet
+   002A 90s00r18            244 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0007)
+   002D 74 64               245 	mov	a,#0x64
+   002F F0                  246 	movx	@dptr,a
+                            247 ;	genPointerSet
+                            248 ;     genFarPointerSet
+   0030 90s00r19            249 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0008)
+   0033 74 20               250 	mov	a,#0x20
+   0035 F0                  251 	movx	@dptr,a
+                            252 ;	genPointerSet
+                            253 ;     genFarPointerSet
+   0036 90s00r1A            254 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0009)
+   0039 74 42               255 	mov	a,#0x42
+   003B F0                  256 	movx	@dptr,a
+                            257 ;	genPointerSet
+                            258 ;     genFarPointerSet
+   003C 90s00r1B            259 	mov	dptr,#(_display_help_tx_data_1_1 + 0x000a)
+   003F 74 52               260 	mov	a,#0x52
+   0041 F0                  261 	movx	@dptr,a
+                            262 ;	genPointerSet
+                            263 ;     genFarPointerSet
+   0042 90s00r1C            264 	mov	dptr,#(_display_help_tx_data_1_1 + 0x000b)
+   0045 74 54               265 	mov	a,#0x54
+   0047 F0                  266 	movx	@dptr,a
+                            267 ;	genPointerSet
+                            268 ;     genFarPointerSet
+   0048 90s00r1D            269 	mov	dptr,#(_display_help_tx_data_1_1 + 0x000c)
+   004B 74 20               270 	mov	a,#0x20
+   004D F0                  271 	movx	@dptr,a
+                            272 ;	genPointerSet
+                            273 ;     genFarPointerSet
+   004E 90s00r1E            274 	mov	dptr,#(_display_help_tx_data_1_1 + 0x000d)
+   0051 74 52               275 	mov	a,#0x52
+   0053 F0                  276 	movx	@dptr,a
+                            277 ;	genPointerSet
+                            278 ;     genFarPointerSet
+   0054 90s00r1F            279 	mov	dptr,#(_display_help_tx_data_1_1 + 0x000e)
+   0057 74 65               280 	mov	a,#0x65
+   0059 F0                  281 	movx	@dptr,a
+                            282 ;	genPointerSet
+                            283 ;     genFarPointerSet
+   005A 90s00r20            284 	mov	dptr,#(_display_help_tx_data_1_1 + 0x000f)
+   005D 74 67               285 	mov	a,#0x67
+   005F F0                  286 	movx	@dptr,a
+                            287 ;	genPointerSet
+                            288 ;     genFarPointerSet
+   0060 90s00r21            289 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0010)
+   0063 74 69               290 	mov	a,#0x69
+   0065 F0                  291 	movx	@dptr,a
+                            292 ;	genPointerSet
+                            293 ;     genFarPointerSet
+   0066 90s00r22            294 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0011)
+   0069 74 73               295 	mov	a,#0x73
+   006B F0                  296 	movx	@dptr,a
+                            297 ;	genPointerSet
+                            298 ;     genFarPointerSet
+   006C 90s00r23            299 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0012)
+   006F 74 74               300 	mov	a,#0x74
+   0071 F0                  301 	movx	@dptr,a
+                            302 ;	genPointerSet
+                            303 ;     genFarPointerSet
+   0072 90s00r24            304 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0013)
+   0075 74 65               305 	mov	a,#0x65
+   0077 F0                  306 	movx	@dptr,a
+                            307 ;	genPointerSet
+                            308 ;     genFarPointerSet
+   0078 90s00r25            309 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0014)
+   007B 74 72               310 	mov	a,#0x72
+   007D F0                  311 	movx	@dptr,a
+                            312 ;	genPointerSet
+                            313 ;     genFarPointerSet
+   007E 90s00r26            314 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0015)
+   0081 74 20               315 	mov	a,#0x20
+   0083 F0                  316 	movx	@dptr,a
+                            317 ;	genPointerSet
+                            318 ;     genFarPointerSet
+   0084 90s00r27            319 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0016)
+   0087 74 20               320 	mov	a,#0x20
+   0089 F0                  321 	movx	@dptr,a
+                            322 ;	genPointerSet
+                            323 ;     genFarPointerSet
+   008A 90s00r28            324 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0017)
+   008D 74 09               325 	mov	a,#0x09
+   008F F0                  326 	movx	@dptr,a
+                            327 ;	genPointerSet
+                            328 ;     genFarPointerSet
+   0090 90s00r29            329 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0018)
+   0093 74 09               330 	mov	a,#0x09
+   0095 F0                  331 	movx	@dptr,a
+                            332 ;	genPointerSet
+                            333 ;     genFarPointerSet
+   0096 90s00r2A            334 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0019)
+   0099 74 20               335 	mov	a,#0x20
+   009B F0                  336 	movx	@dptr,a
+                            337 ;	genPointerSet
+                            338 ;     genFarPointerSet
+   009C 90s00r2B            339 	mov	dptr,#(_display_help_tx_data_1_1 + 0x001a)
+   009F 74 20               340 	mov	a,#0x20
+   00A1 F0                  341 	movx	@dptr,a
+                            342 ;	genPointerSet
+                            343 ;     genFarPointerSet
+   00A2 90s00r2C            344 	mov	dptr,#(_display_help_tx_data_1_1 + 0x001b)
+   00A5 74 20               345 	mov	a,#0x20
+   00A7 F0                  346 	movx	@dptr,a
+                            347 ;	genPointerSet
+                            348 ;     genFarPointerSet
+   00A8 90s00r2D            349 	mov	dptr,#(_display_help_tx_data_1_1 + 0x001c)
+   00AB 74 00               350 	mov	a,#0x00
+   00AD F0                  351 	movx	@dptr,a
+                            352 ;	genPointerSet
+                            353 ;     genFarPointerSet
+   00AE 90s00r39            354 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0028)
+   00B1 74 0D               355 	mov	a,#0x0D
+   00B3 F0                  356 	movx	@dptr,a
+                            357 ;	genPointerSet
+                            358 ;     genFarPointerSet
+   00B4 90s00r3A            359 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0029)
+   00B7 74 0A               360 	mov	a,#0x0A
+   00B9 F0                  361 	movx	@dptr,a
+                            362 ;	genPointerSet
+                            363 ;     genFarPointerSet
+   00BA 90s00r3B            364 	mov	dptr,#(_display_help_tx_data_1_1 + 0x002a)
+   00BD 74 4D               365 	mov	a,#0x4D
+   00BF F0                  366 	movx	@dptr,a
+                            367 ;	genPointerSet
+                            368 ;     genFarPointerSet
+   00C0 90s00r3C            369 	mov	dptr,#(_display_help_tx_data_1_1 + 0x002b)
+   00C3 74 20               370 	mov	a,#0x20
+   00C5 F0                  371 	movx	@dptr,a
+                            372 ;	genPointerSet
+                            373 ;     genFarPointerSet
+   00C6 90s00r3D            374 	mov	dptr,#(_display_help_tx_data_1_1 + 0x002c)
+   00C9 74 4D               375 	mov	a,#0x4D
+   00CB F0                  376 	movx	@dptr,a
+                            377 ;	genPointerSet
+                            378 ;     genFarPointerSet
+   00CC 90s00r3E            379 	mov	dptr,#(_display_help_tx_data_1_1 + 0x002d)
+   00CF 74 6F               380 	mov	a,#0x6F
+   00D1 F0                  381 	movx	@dptr,a
+                            382 ;	genPointerSet
+                            383 ;     genFarPointerSet
+   00D2 90s00r3F            384 	mov	dptr,#(_display_help_tx_data_1_1 + 0x002e)
+   00D5 74 64               385 	mov	a,#0x64
+   00D7 F0                  386 	movx	@dptr,a
+                            387 ;	genPointerSet
+                            388 ;     genFarPointerSet
+   00D8 90s00r40            389 	mov	dptr,#(_display_help_tx_data_1_1 + 0x002f)
+   00DB 74 69               390 	mov	a,#0x69
+   00DD F0                  391 	movx	@dptr,a
+                            392 ;	genPointerSet
+                            393 ;     genFarPointerSet
+   00DE 90s00r41            394 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0030)
+   00E1 74 66               395 	mov	a,#0x66
+   00E3 F0                  396 	movx	@dptr,a
+                            397 ;	genPointerSet
+                            398 ;     genFarPointerSet
+   00E4 90s00r42            399 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0031)
+   00E7 74 79               400 	mov	a,#0x79
+   00E9 F0                  401 	movx	@dptr,a
+                            402 ;	genPointerSet
+                            403 ;     genFarPointerSet
+   00EA 90s00r43            404 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0032)
+   00ED 74 20               405 	mov	a,#0x20
+   00EF F0                  406 	movx	@dptr,a
+                            407 ;	genPointerSet
+                            408 ;     genFarPointerSet
+   00F0 90s00r44            409 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0033)
+   00F3 74 20               410 	mov	a,#0x20
+   00F5 F0                  411 	movx	@dptr,a
+                            412 ;	genPointerSet
+                            413 ;     genFarPointerSet
+   00F6 90s00r45            414 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0034)
+   00F9 74 42               415 	mov	a,#0x42
+   00FB F0                  416 	movx	@dptr,a
+                            417 ;	genPointerSet
+                            418 ;     genFarPointerSet
+   00FC 90s00r46            419 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0035)
+   00FF 74 52               420 	mov	a,#0x52
+   0101 F0                  421 	movx	@dptr,a
+                            422 ;	genPointerSet
+                            423 ;     genFarPointerSet
+   0102 90s00r47            424 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0036)
+   0105 74 54               425 	mov	a,#0x54
+   0107 F0                  426 	movx	@dptr,a
+                            427 ;	genPointerSet
+                            428 ;     genFarPointerSet
+   0108 90s00r48            429 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0037)
+   010B 74 20               430 	mov	a,#0x20
+   010D F0                  431 	movx	@dptr,a
+                            432 ;	genPointerSet
+                            433 ;     genFarPointerSet
+   010E 90s00r49            434 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0038)
+   0111 74 54               435 	mov	a,#0x54
+   0113 F0                  436 	movx	@dptr,a
+                            437 ;	genPointerSet
+                            438 ;     genFarPointerSet
+   0114 90s00r4A            439 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0039)
+   0117 74 58               440 	mov	a,#0x58
+   0119 F0                  441 	movx	@dptr,a
+                            442 ;	genPointerSet
+                            443 ;     genFarPointerSet
+   011A 90s00r4B            444 	mov	dptr,#(_display_help_tx_data_1_1 + 0x003a)
+   011D 74 20               445 	mov	a,#0x20
+   011F F0                  446 	movx	@dptr,a
+                            447 ;	genPointerSet
+                            448 ;     genFarPointerSet
+   0120 90s00r4C            449 	mov	dptr,#(_display_help_tx_data_1_1 + 0x003b)
+   0123 74 42               450 	mov	a,#0x42
+   0125 F0                  451 	movx	@dptr,a
+                            452 ;	genPointerSet
+                            453 ;     genFarPointerSet
+   0126 90s00r4D            454 	mov	dptr,#(_display_help_tx_data_1_1 + 0x003c)
+   0129 74 75               455 	mov	a,#0x75
+   012B F0                  456 	movx	@dptr,a
+                            457 ;	genPointerSet
+                            458 ;     genFarPointerSet
+   012C 90s00r4E            459 	mov	dptr,#(_display_help_tx_data_1_1 + 0x003d)
+   012F 74 66               460 	mov	a,#0x66
+   0131 F0                  461 	movx	@dptr,a
+                            462 ;	genPointerSet
+                            463 ;     genFarPointerSet
+   0132 90s00r4F            464 	mov	dptr,#(_display_help_tx_data_1_1 + 0x003e)
+   0135 74 66               465 	mov	a,#0x66
+   0137 F0                  466 	movx	@dptr,a
+                            467 ;	genPointerSet
+                            468 ;     genFarPointerSet
+   0138 90s00r50            469 	mov	dptr,#(_display_help_tx_data_1_1 + 0x003f)
+   013B 74 65               470 	mov	a,#0x65
+   013D F0                  471 	movx	@dptr,a
+                            472 ;	genPointerSet
+                            473 ;     genFarPointerSet
+   013E 90s00r51            474 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0040)
+   0141 74 72               475 	mov	a,#0x72
+   0143 F0                  476 	movx	@dptr,a
+                            477 ;	genPointerSet
+                            478 ;     genFarPointerSet
+   0144 90s00r52            479 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0041)
+   0147 74 20               480 	mov	a,#0x20
+   0149 F0                  481 	movx	@dptr,a
+                            482 ;	genPointerSet
+                            483 ;     genFarPointerSet
+   014A 90s00r53            484 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0042)
+   014D 74 09               485 	mov	a,#0x09
+   014F F0                  486 	movx	@dptr,a
+                            487 ;	genPointerSet
+                            488 ;     genFarPointerSet
+   0150 90s00r54            489 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0043)
+   0153 74 09               490 	mov	a,#0x09
+   0155 F0                  491 	movx	@dptr,a
+                            492 ;	genPointerSet
+                            493 ;     genFarPointerSet
+   0156 90s00r55            494 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0044)
+   0159 74 20               495 	mov	a,#0x20
+   015B F0                  496 	movx	@dptr,a
+                            497 ;	genPointerSet
+                            498 ;     genFarPointerSet
+   015C 90s00r56            499 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0045)
+   015F 74 20               500 	mov	a,#0x20
+   0161 F0                  501 	movx	@dptr,a
+                            502 ;	genPointerSet
+                            503 ;     genFarPointerSet
+   0162 90s00r57            504 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0046)
+   0165 74 20               505 	mov	a,#0x20
+   0167 F0                  506 	movx	@dptr,a
+                            507 ;	genPointerSet
+                            508 ;     genFarPointerSet
+   0168 90s00r58            509 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0047)
+   016B 74 00               510 	mov	a,#0x00
+   016D F0                  511 	movx	@dptr,a
+                            512 ;	genPointerSet
+                            513 ;     genFarPointerSet
+   016E 90s00r61            514 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0050)
+   0171 74 0D               515 	mov	a,#0x0D
+   0173 F0                  516 	movx	@dptr,a
+                            517 ;	genPointerSet
+                            518 ;     genFarPointerSet
+   0174 90s00r62            519 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0051)
+   0177 74 0A               520 	mov	a,#0x0A
+   0179 F0                  521 	movx	@dptr,a
+                            522 ;	genPointerSet
+                            523 ;     genFarPointerSet
+   017A 90s00r63            524 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0052)
+   017D 74 44               525 	mov	a,#0x44
+   017F F0                  526 	movx	@dptr,a
+                            527 ;	genPointerSet
+                            528 ;     genFarPointerSet
+   0180 90s00r64            529 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0053)
+   0183 74 20               530 	mov	a,#0x20
+   0185 F0                  531 	movx	@dptr,a
+                            532 ;	genPointerSet
+                            533 ;     genFarPointerSet
+   0186 90s00r65            534 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0054)
+   0189 74 44               535 	mov	a,#0x44
+   018B F0                  536 	movx	@dptr,a
+                            537 ;	genPointerSet
+                            538 ;     genFarPointerSet
+   018C 90s00r66            539 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0055)
+   018F 74 69               540 	mov	a,#0x69
+   0191 F0                  541 	movx	@dptr,a
+                            542 ;	genPointerSet
+                            543 ;     genFarPointerSet
+   0192 90s00r67            544 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0056)
+   0195 74 73               545 	mov	a,#0x73
+   0197 F0                  546 	movx	@dptr,a
+                            547 ;	genPointerSet
+                            548 ;     genFarPointerSet
+   0198 90s00r68            549 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0057)
+   019B 74 70               550 	mov	a,#0x70
+   019D F0                  551 	movx	@dptr,a
+                            552 ;	genPointerSet
+                            553 ;     genFarPointerSet
+   019E 90s00r69            554 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0058)
+   01A1 74 6C               555 	mov	a,#0x6C
+   01A3 F0                  556 	movx	@dptr,a
+                            557 ;	genPointerSet
+                            558 ;     genFarPointerSet
+   01A4 90s00r6A            559 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0059)
+   01A7 74 61               560 	mov	a,#0x61
+   01A9 F0                  561 	movx	@dptr,a
+                            562 ;	genPointerSet
+                            563 ;     genFarPointerSet
+   01AA 90s00r6B            564 	mov	dptr,#(_display_help_tx_data_1_1 + 0x005a)
+   01AD 74 79               565 	mov	a,#0x79
+   01AF F0                  566 	movx	@dptr,a
+                            567 ;	genPointerSet
+                            568 ;     genFarPointerSet
+   01B0 90s00r6C            569 	mov	dptr,#(_display_help_tx_data_1_1 + 0x005b)
+   01B3 74 20               570 	mov	a,#0x20
+   01B5 F0                  571 	movx	@dptr,a
+                            572 ;	genPointerSet
+                            573 ;     genFarPointerSet
+   01B6 90s00r6D            574 	mov	dptr,#(_display_help_tx_data_1_1 + 0x005c)
+   01B9 74 42               575 	mov	a,#0x42
+   01BB F0                  576 	movx	@dptr,a
+                            577 ;	genPointerSet
+                            578 ;     genFarPointerSet
+   01BC 90s00r6E            579 	mov	dptr,#(_display_help_tx_data_1_1 + 0x005d)
+   01BF 74 52               580 	mov	a,#0x52
+   01C1 F0                  581 	movx	@dptr,a
+                            582 ;	genPointerSet
+                            583 ;     genFarPointerSet
+   01C2 90s00r6F            584 	mov	dptr,#(_display_help_tx_data_1_1 + 0x005e)
+   01C5 74 54               585 	mov	a,#0x54
+   01C7 F0                  586 	movx	@dptr,a
+                            587 ;	genPointerSet
+                            588 ;     genFarPointerSet
+   01C8 90s00r70            589 	mov	dptr,#(_display_help_tx_data_1_1 + 0x005f)
+   01CB 74 20               590 	mov	a,#0x20
+   01CD F0                  591 	movx	@dptr,a
+                            592 ;	genPointerSet
+                            593 ;     genFarPointerSet
+   01CE 90s00r71            594 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0060)
+   01D1 74 20               595 	mov	a,#0x20
+   01D3 F0                  596 	movx	@dptr,a
+                            597 ;	genPointerSet
+                            598 ;     genFarPointerSet
+   01D4 90s00r72            599 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0061)
+   01D7 74 54               600 	mov	a,#0x54
+   01D9 F0                  601 	movx	@dptr,a
+                            602 ;	genPointerSet
+                            603 ;     genFarPointerSet
+   01DA 90s00r73            604 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0062)
+   01DD 74 58               605 	mov	a,#0x58
+   01DF F0                  606 	movx	@dptr,a
+                            607 ;	genPointerSet
+                            608 ;     genFarPointerSet
+   01E0 90s00r74            609 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0063)
+   01E3 74 2F               610 	mov	a,#0x2F
+   01E5 F0                  611 	movx	@dptr,a
+                            612 ;	genPointerSet
+                            613 ;     genFarPointerSet
+   01E6 90s00r75            614 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0064)
+   01E9 74 52               615 	mov	a,#0x52
+   01EB F0                  616 	movx	@dptr,a
+                            617 ;	genPointerSet
+                            618 ;     genFarPointerSet
+   01EC 90s00r76            619 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0065)
+   01EF 74 58               620 	mov	a,#0x58
+   01F1 F0                  621 	movx	@dptr,a
+                            622 ;	genPointerSet
+                            623 ;     genFarPointerSet
+   01F2 90s00r77            624 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0066)
+   01F5 74 20               625 	mov	a,#0x20
+   01F7 F0                  626 	movx	@dptr,a
+                            627 ;	genPointerSet
+                            628 ;     genFarPointerSet
+   01F8 90s00r78            629 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0067)
+   01FB 74 42               630 	mov	a,#0x42
+   01FD F0                  631 	movx	@dptr,a
+                            632 ;	genPointerSet
+                            633 ;     genFarPointerSet
+   01FE 90s00r79            634 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0068)
+   0201 74 75               635 	mov	a,#0x75
+   0203 F0                  636 	movx	@dptr,a
+                            637 ;	genPointerSet
+                            638 ;     genFarPointerSet
+   0204 90s00r7A            639 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0069)
+   0207 74 66               640 	mov	a,#0x66
+   0209 F0                  641 	movx	@dptr,a
+                            642 ;	genPointerSet
+                            643 ;     genFarPointerSet
+   020A 90s00r7B            644 	mov	dptr,#(_display_help_tx_data_1_1 + 0x006a)
+   020D 74 66               645 	mov	a,#0x66
+   020F F0                  646 	movx	@dptr,a
+                            647 ;	genPointerSet
+                            648 ;     genFarPointerSet
+   0210 90s00r7C            649 	mov	dptr,#(_display_help_tx_data_1_1 + 0x006b)
+   0213 74 65               650 	mov	a,#0x65
+   0215 F0                  651 	movx	@dptr,a
+                            652 ;	genPointerSet
+                            653 ;     genFarPointerSet
+   0216 90s00r7D            654 	mov	dptr,#(_display_help_tx_data_1_1 + 0x006c)
+   0219 74 72               655 	mov	a,#0x72
+   021B F0                  656 	movx	@dptr,a
+                            657 ;	genPointerSet
+                            658 ;     genFarPointerSet
+   021C 90s00r7E            659 	mov	dptr,#(_display_help_tx_data_1_1 + 0x006d)
+   021F 74 20               660 	mov	a,#0x20
+   0221 F0                  661 	movx	@dptr,a
+                            662 ;	genPointerSet
+                            663 ;     genFarPointerSet
+   0222 90s00r7F            664 	mov	dptr,#(_display_help_tx_data_1_1 + 0x006e)
+   0225 74 44               665 	mov	a,#0x44
+   0227 F0                  666 	movx	@dptr,a
+                            667 ;	genPointerSet
+                            668 ;     genFarPointerSet
+   0228 90s00r80            669 	mov	dptr,#(_display_help_tx_data_1_1 + 0x006f)
+   022B 74 61               670 	mov	a,#0x61
+   022D F0                  671 	movx	@dptr,a
+                            672 ;	genPointerSet
+                            673 ;     genFarPointerSet
+   022E 90s00r81            674 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0070)
+   0231 74 74               675 	mov	a,#0x74
+   0233 F0                  676 	movx	@dptr,a
+                            677 ;	genPointerSet
+                            678 ;     genFarPointerSet
+   0234 90s00r82            679 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0071)
+   0237 74 61               680 	mov	a,#0x61
+   0239 F0                  681 	movx	@dptr,a
+                            682 ;	genPointerSet
+                            683 ;     genFarPointerSet
+   023A 90s00r83            684 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0072)
+   023D 74 00               685 	mov	a,#0x00
+   023F F0                  686 	movx	@dptr,a
+                            687 ;	genPointerSet
+                            688 ;     genFarPointerSet
+   0240 90s00r89            689 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0078)
+   0243 74 0D               690 	mov	a,#0x0D
+   0245 F0                  691 	movx	@dptr,a
+                            692 ;	genPointerSet
+                            693 ;     genFarPointerSet
+   0246 90s00r8A            694 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0079)
+   0249 74 0A               695 	mov	a,#0x0A
+   024B F0                  696 	movx	@dptr,a
+                            697 ;	genPointerSet
+                            698 ;     genFarPointerSet
+   024C 90s00r8B            699 	mov	dptr,#(_display_help_tx_data_1_1 + 0x007a)
+   024F 74 42               700 	mov	a,#0x42
+   0251 F0                  701 	movx	@dptr,a
+                            702 ;	genPointerSet
+                            703 ;     genFarPointerSet
+   0252 90s00r8C            704 	mov	dptr,#(_display_help_tx_data_1_1 + 0x007b)
+   0255 74 20               705 	mov	a,#0x20
+   0257 F0                  706 	movx	@dptr,a
+                            707 ;	genPointerSet
+                            708 ;     genFarPointerSet
+   0258 90s00r8D            709 	mov	dptr,#(_display_help_tx_data_1_1 + 0x007c)
+   025B 74 44               710 	mov	a,#0x44
+   025D F0                  711 	movx	@dptr,a
+                            712 ;	genPointerSet
+                            713 ;     genFarPointerSet
+   025E 90s00r8E            714 	mov	dptr,#(_display_help_tx_data_1_1 + 0x007d)
+   0261 74 69               715 	mov	a,#0x69
+   0263 F0                  716 	movx	@dptr,a
+                            717 ;	genPointerSet
+                            718 ;     genFarPointerSet
+   0264 90s00r8F            719 	mov	dptr,#(_display_help_tx_data_1_1 + 0x007e)
+   0267 74 73               720 	mov	a,#0x73
+   0269 F0                  721 	movx	@dptr,a
+                            722 ;	genPointerSet
+                            723 ;     genFarPointerSet
+   026A 90s00r90            724 	mov	dptr,#(_display_help_tx_data_1_1 + 0x007f)
+   026D 74 70               725 	mov	a,#0x70
+   026F F0                  726 	movx	@dptr,a
+                            727 ;	genPointerSet
+                            728 ;     genFarPointerSet
+   0270 90s00r91            729 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0080)
+   0273 74 6C               730 	mov	a,#0x6C
+   0275 F0                  731 	movx	@dptr,a
+                            732 ;	genPointerSet
+                            733 ;     genFarPointerSet
+   0276 90s00r92            734 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0081)
+   0279 74 61               735 	mov	a,#0x61
+   027B F0                  736 	movx	@dptr,a
+                            737 ;	genPointerSet
+                            738 ;     genFarPointerSet
+   027C 90s00r93            739 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0082)
+   027F 74 79               740 	mov	a,#0x79
+   0281 F0                  741 	movx	@dptr,a
+                            742 ;	genPointerSet
+                            743 ;     genFarPointerSet
+   0282 90s00r94            744 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0083)
+   0285 74 20               745 	mov	a,#0x20
+   0287 F0                  746 	movx	@dptr,a
+                            747 ;	genPointerSet
+                            748 ;     genFarPointerSet
+   0288 90s00r95            749 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0084)
+   028B 74 42               750 	mov	a,#0x42
+   028D F0                  751 	movx	@dptr,a
+                            752 ;	genPointerSet
+                            753 ;     genFarPointerSet
+   028E 90s00r96            754 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0085)
+   0291 74 43               755 	mov	a,#0x43
+   0293 F0                  756 	movx	@dptr,a
+                            757 ;	genPointerSet
+                            758 ;     genFarPointerSet
+   0294 90s00r97            759 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0086)
+   0297 74 20               760 	mov	a,#0x20
+   0299 F0                  761 	movx	@dptr,a
+                            762 ;	genPointerSet
+                            763 ;     genFarPointerSet
+   029A 90s00r98            764 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0087)
+   029D 74 6D               765 	mov	a,#0x6D
+   029F F0                  766 	movx	@dptr,a
+                            767 ;	genPointerSet
+                            768 ;     genFarPointerSet
+   02A0 90s00r99            769 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0088)
+   02A3 74 65               770 	mov	a,#0x65
+   02A5 F0                  771 	movx	@dptr,a
+                            772 ;	genPointerSet
+                            773 ;     genFarPointerSet
+   02A6 90s00r9A            774 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0089)
+   02A9 74 73               775 	mov	a,#0x73
+   02AB F0                  776 	movx	@dptr,a
+                            777 ;	genPointerSet
+                            778 ;     genFarPointerSet
+   02AC 90s00r9B            779 	mov	dptr,#(_display_help_tx_data_1_1 + 0x008a)
+   02AF 74 73               780 	mov	a,#0x73
+   02B1 F0                  781 	movx	@dptr,a
+                            782 ;	genPointerSet
+                            783 ;     genFarPointerSet
+   02B2 90s00r9C            784 	mov	dptr,#(_display_help_tx_data_1_1 + 0x008b)
+   02B5 74 61               785 	mov	a,#0x61
+   02B7 F0                  786 	movx	@dptr,a
+                            787 ;	genPointerSet
+                            788 ;     genFarPointerSet
+   02B8 90s00r9D            789 	mov	dptr,#(_display_help_tx_data_1_1 + 0x008c)
+   02BB 74 67               790 	mov	a,#0x67
+   02BD F0                  791 	movx	@dptr,a
+                            792 ;	genPointerSet
+                            793 ;     genFarPointerSet
+   02BE 90s00r9E            794 	mov	dptr,#(_display_help_tx_data_1_1 + 0x008d)
+   02C1 74 65               795 	mov	a,#0x65
+   02C3 F0                  796 	movx	@dptr,a
+                            797 ;	genPointerSet
+                            798 ;     genFarPointerSet
+   02C4 90s00r9F            799 	mov	dptr,#(_display_help_tx_data_1_1 + 0x008e)
+   02C7 74 73               800 	mov	a,#0x73
+   02C9 F0                  801 	movx	@dptr,a
+                            802 ;	genPointerSet
+                            803 ;     genFarPointerSet
+   02CA 90s00rA0            804 	mov	dptr,#(_display_help_tx_data_1_1 + 0x008f)
+   02CD 74 20               805 	mov	a,#0x20
+   02CF F0                  806 	movx	@dptr,a
+                            807 ;	genPointerSet
+                            808 ;     genFarPointerSet
+   02D0 90s00rA1            809 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0090)
+   02D3 74 20               810 	mov	a,#0x20
+   02D5 F0                  811 	movx	@dptr,a
+                            812 ;	genPointerSet
+                            813 ;     genFarPointerSet
+   02D6 90s00rA2            814 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0091)
+   02D9 74 20               815 	mov	a,#0x20
+   02DB F0                  816 	movx	@dptr,a
+                            817 ;	genPointerSet
+                            818 ;     genFarPointerSet
+   02DC 90s00rA3            819 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0092)
+   02DF 74 20               820 	mov	a,#0x20
+   02E1 F0                  821 	movx	@dptr,a
+                            822 ;	genPointerSet
+                            823 ;     genFarPointerSet
+   02E2 90s00rA4            824 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0093)
+   02E5 74 20               825 	mov	a,#0x20
+   02E7 F0                  826 	movx	@dptr,a
+                            827 ;	genPointerSet
+                            828 ;     genFarPointerSet
+   02E8 90s00rA5            829 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0094)
+   02EB 74 20               830 	mov	a,#0x20
+   02ED F0                  831 	movx	@dptr,a
+                            832 ;	genPointerSet
+                            833 ;     genFarPointerSet
+   02EE 90s00rA6            834 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0095)
+   02F1 74 20               835 	mov	a,#0x20
+   02F3 F0                  836 	movx	@dptr,a
+                            837 ;	genPointerSet
+                            838 ;     genFarPointerSet
+   02F4 90s00rA7            839 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0096)
+   02F7 74 20               840 	mov	a,#0x20
+   02F9 F0                  841 	movx	@dptr,a
+                            842 ;	genPointerSet
+                            843 ;     genFarPointerSet
+   02FA 90s00rA8            844 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0097)
+   02FD 74 00               845 	mov	a,#0x00
+   02FF F0                  846 	movx	@dptr,a
+                            847 ;	genPointerSet
+                            848 ;     genFarPointerSet
+   0300 90s00rB1            849 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00a0)
+   0303 74 0D               850 	mov	a,#0x0D
+   0305 F0                  851 	movx	@dptr,a
+                            852 ;	genPointerSet
+                            853 ;     genFarPointerSet
+   0306 90s00rB2            854 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00a1)
+   0309 74 0A               855 	mov	a,#0x0A
+   030B F0                  856 	movx	@dptr,a
+                            857 ;	genPointerSet
+                            858 ;     genFarPointerSet
+   030C 90s00rB3            859 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00a2)
+   030F 74 58               860 	mov	a,#0x58
+   0311 F0                  861 	movx	@dptr,a
+                            862 ;	genPointerSet
+                            863 ;     genFarPointerSet
+   0312 90s00rB4            864 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00a3)
+   0315 74 20               865 	mov	a,#0x20
+   0317 F0                  866 	movx	@dptr,a
+                            867 ;	genPointerSet
+                            868 ;     genFarPointerSet
+   0318 90s00rB5            869 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00a4)
+   031B 74 53               870 	mov	a,#0x53
+   031D F0                  871 	movx	@dptr,a
+                            872 ;	genPointerSet
+                            873 ;     genFarPointerSet
+   031E 90s00rB6            874 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00a5)
+   0321 74 74               875 	mov	a,#0x74
+   0323 F0                  876 	movx	@dptr,a
+                            877 ;	genPointerSet
+                            878 ;     genFarPointerSet
+   0324 90s00rB7            879 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00a6)
+   0327 74 61               880 	mov	a,#0x61
+   0329 F0                  881 	movx	@dptr,a
+                            882 ;	genPointerSet
+                            883 ;     genFarPointerSet
+   032A 90s00rB8            884 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00a7)
+   032D 74 72               885 	mov	a,#0x72
+   032F F0                  886 	movx	@dptr,a
+                            887 ;	genPointerSet
+                            888 ;     genFarPointerSet
+   0330 90s00rB9            889 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00a8)
+   0333 74 74               890 	mov	a,#0x74
+   0335 F0                  891 	movx	@dptr,a
+                            892 ;	genPointerSet
+                            893 ;     genFarPointerSet
+   0336 90s00rBA            894 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00a9)
+   0339 74 20               895 	mov	a,#0x20
+   033B F0                  896 	movx	@dptr,a
+                            897 ;	genPointerSet
+                            898 ;     genFarPointerSet
+   033C 90s00rBB            899 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00aa)
+   033F 74 42               900 	mov	a,#0x42
+   0341 F0                  901 	movx	@dptr,a
+                            902 ;	genPointerSet
+                            903 ;     genFarPointerSet
+   0342 90s00rBC            904 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00ab)
+   0345 74 52               905 	mov	a,#0x52
+   0347 F0                  906 	movx	@dptr,a
+                            907 ;	genPointerSet
+                            908 ;     genFarPointerSet
+   0348 90s00rBD            909 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00ac)
+   034B 74 4D               910 	mov	a,#0x4D
+   034D F0                  911 	movx	@dptr,a
+                            912 ;	genPointerSet
+                            913 ;     genFarPointerSet
+   034E 90s00rBE            914 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00ad)
+   0351 74 20               915 	mov	a,#0x20
+   0353 F0                  916 	movx	@dptr,a
+                            917 ;	genPointerSet
+                            918 ;     genFarPointerSet
+   0354 90s00rBF            919 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00ae)
+   0357 74 42               920 	mov	a,#0x42
+   0359 F0                  921 	movx	@dptr,a
+                            922 ;	genPointerSet
+                            923 ;     genFarPointerSet
+   035A 90s00rC0            924 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00af)
+   035D 74 43               925 	mov	a,#0x43
+   035F F0                  926 	movx	@dptr,a
+                            927 ;	genPointerSet
+                            928 ;     genFarPointerSet
+   0360 90s00rC1            929 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00b0)
+   0363 74 20               930 	mov	a,#0x20
+   0365 F0                  931 	movx	@dptr,a
+                            932 ;	genPointerSet
+                            933 ;     genFarPointerSet
+   0366 90s00rC2            934 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00b1)
+   0369 74 20               935 	mov	a,#0x20
+   036B F0                  936 	movx	@dptr,a
+                            937 ;	genPointerSet
+                            938 ;     genFarPointerSet
+   036C 90s00rC3            939 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00b2)
+   036F 74 20               940 	mov	a,#0x20
+   0371 F0                  941 	movx	@dptr,a
+                            942 ;	genPointerSet
+                            943 ;     genFarPointerSet
+   0372 90s00rC4            944 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00b3)
+   0375 74 20               945 	mov	a,#0x20
+   0377 F0                  946 	movx	@dptr,a
+                            947 ;	genPointerSet
+                            948 ;     genFarPointerSet
+   0378 90s00rC5            949 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00b4)
+   037B 74 20               950 	mov	a,#0x20
+   037D F0                  951 	movx	@dptr,a
+                            952 ;	genPointerSet
+                            953 ;     genFarPointerSet
+   037E 90s00rC6            954 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00b5)
+   0381 74 20               955 	mov	a,#0x20
+   0383 F0                  956 	movx	@dptr,a
+                            957 ;	genPointerSet
+                            958 ;     genFarPointerSet
+   0384 90s00rC7            959 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00b6)
+   0387 74 20               960 	mov	a,#0x20
+   0389 F0                  961 	movx	@dptr,a
+                            962 ;	genPointerSet
+                            963 ;     genFarPointerSet
+   038A 90s00rC8            964 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00b7)
+   038D 74 20               965 	mov	a,#0x20
+   038F F0                  966 	movx	@dptr,a
+                            967 ;	genPointerSet
+                            968 ;     genFarPointerSet
+   0390 90s00rC9            969 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00b8)
+   0393 74 20               970 	mov	a,#0x20
+   0395 F0                  971 	movx	@dptr,a
+                            972 ;	genPointerSet
+                            973 ;     genFarPointerSet
+   0396 90s00rCA            974 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00b9)
+   0399 74 20               975 	mov	a,#0x20
+   039B F0                  976 	movx	@dptr,a
+                            977 ;	genPointerSet
+                            978 ;     genFarPointerSet
+   039C 90s00rCB            979 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00ba)
+   039F 74 20               980 	mov	a,#0x20
+   03A1 F0                  981 	movx	@dptr,a
+                            982 ;	genPointerSet
+                            983 ;     genFarPointerSet
+   03A2 90s00rCC            984 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00bb)
+   03A5 74 20               985 	mov	a,#0x20
+   03A7 F0                  986 	movx	@dptr,a
+                            987 ;	genPointerSet
+                            988 ;     genFarPointerSet
+   03A8 90s00rCD            989 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00bc)
+   03AB 74 20               990 	mov	a,#0x20
+   03AD F0                  991 	movx	@dptr,a
+                            992 ;	genPointerSet
+                            993 ;     genFarPointerSet
+   03AE 90s00rCE            994 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00bd)
+   03B1 74 20               995 	mov	a,#0x20
+   03B3 F0                  996 	movx	@dptr,a
+                            997 ;	genPointerSet
+                            998 ;     genFarPointerSet
+   03B4 90s00rCF            999 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00be)
+   03B7 74 20              1000 	mov	a,#0x20
+   03B9 F0                 1001 	movx	@dptr,a
+                           1002 ;	genPointerSet
+                           1003 ;     genFarPointerSet
+   03BA 90s00rD0           1004 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00bf)
+   03BD 74 00              1005 	mov	a,#0x00
+   03BF F0                 1006 	movx	@dptr,a
+                           1007 ;	genPointerSet
+                           1008 ;     genFarPointerSet
+   03C0 90s00rD9           1009 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00c8)
+   03C3 74 0D              1010 	mov	a,#0x0D
+   03C5 F0                 1011 	movx	@dptr,a
+                           1012 ;	genPointerSet
+                           1013 ;     genFarPointerSet
+   03C6 90s00rDA           1014 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00c9)
+   03C9 74 0A              1015 	mov	a,#0x0A
+   03CB F0                 1016 	movx	@dptr,a
+                           1017 ;	genPointerSet
+                           1018 ;     genFarPointerSet
+   03CC 90s00rDB           1019 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00ca)
+   03CF 74 43              1020 	mov	a,#0x43
+   03D1 F0                 1021 	movx	@dptr,a
+                           1022 ;	genPointerSet
+                           1023 ;     genFarPointerSet
+   03D2 90s00rDC           1024 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00cb)
+   03D5 74 20              1025 	mov	a,#0x20
+   03D7 F0                 1026 	movx	@dptr,a
+                           1027 ;	genPointerSet
+                           1028 ;     genFarPointerSet
+   03D8 90s00rDD           1029 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00cc)
+   03DB 74 43              1030 	mov	a,#0x43
+   03DD F0                 1031 	movx	@dptr,a
+                           1032 ;	genPointerSet
+                           1033 ;     genFarPointerSet
+   03DE 90s00rDE           1034 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00cd)
+   03E1 74 68              1035 	mov	a,#0x68
+   03E3 F0                 1036 	movx	@dptr,a
+                           1037 ;	genPointerSet
+                           1038 ;     genFarPointerSet
+   03E4 90s00rDF           1039 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00ce)
+   03E7 74 61              1040 	mov	a,#0x61
+   03E9 F0                 1041 	movx	@dptr,a
+                           1042 ;	genPointerSet
+                           1043 ;     genFarPointerSet
+   03EA 90s00rE0           1044 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00cf)
+   03ED 74 6E              1045 	mov	a,#0x6E
+   03EF F0                 1046 	movx	@dptr,a
+                           1047 ;	genPointerSet
+                           1048 ;     genFarPointerSet
+   03F0 90s00rE1           1049 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00d0)
+   03F3 74 67              1050 	mov	a,#0x67
+   03F5 F0                 1051 	movx	@dptr,a
+                           1052 ;	genPointerSet
+                           1053 ;     genFarPointerSet
+   03F6 90s00rE2           1054 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00d1)
+   03F9 74 65              1055 	mov	a,#0x65
+   03FB F0                 1056 	movx	@dptr,a
+                           1057 ;	genPointerSet
+                           1058 ;     genFarPointerSet
+   03FC 90s00rE3           1059 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00d2)
+   03FF 74 20              1060 	mov	a,#0x20
+   0401 F0                 1061 	movx	@dptr,a
+                           1062 ;	genPointerSet
+                           1063 ;     genFarPointerSet
+   0402 90s00rE4           1064 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00d3)
+   0405 74 74              1065 	mov	a,#0x74
+   0407 F0                 1066 	movx	@dptr,a
+                           1067 ;	genPointerSet
+                           1068 ;     genFarPointerSet
+   0408 90s00rE5           1069 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00d4)
+   040B 74 68              1070 	mov	a,#0x68
+   040D F0                 1071 	movx	@dptr,a
+                           1072 ;	genPointerSet
+                           1073 ;     genFarPointerSet
+   040E 90s00rE6           1074 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00d5)
+   0411 74 65              1075 	mov	a,#0x65
+   0413 F0                 1076 	movx	@dptr,a
+                           1077 ;	genPointerSet
+                           1078 ;     genFarPointerSet
+   0414 90s00rE7           1079 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00d6)
+   0417 74 20              1080 	mov	a,#0x20
+   0419 F0                 1081 	movx	@dptr,a
+                           1082 ;	genPointerSet
+                           1083 ;     genFarPointerSet
+   041A 90s00rE8           1084 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00d7)
+   041D 74 42              1085 	mov	a,#0x42
+   041F F0                 1086 	movx	@dptr,a
+                           1087 ;	genPointerSet
+                           1088 ;     genFarPointerSet
+   0420 90s00rE9           1089 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00d8)
+   0423 74 52              1090 	mov	a,#0x52
+   0425 F0                 1091 	movx	@dptr,a
+                           1092 ;	genPointerSet
+                           1093 ;     genFarPointerSet
+   0426 90s00rEA           1094 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00d9)
+   0429 74 54              1095 	mov	a,#0x54
+   042B F0                 1096 	movx	@dptr,a
+                           1097 ;	genPointerSet
+                           1098 ;     genFarPointerSet
+   042C 90s00rEB           1099 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00da)
+   042F 74 20              1100 	mov	a,#0x20
+   0431 F0                 1101 	movx	@dptr,a
+                           1102 ;	genPointerSet
+                           1103 ;     genFarPointerSet
+   0432 90s00rEC           1104 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00db)
+   0435 74 41              1105 	mov	a,#0x41
+   0437 F0                 1106 	movx	@dptr,a
+                           1107 ;	genPointerSet
+                           1108 ;     genFarPointerSet
+   0438 90s00rED           1109 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00dc)
+   043B 74 64              1110 	mov	a,#0x64
+   043D F0                 1111 	movx	@dptr,a
+                           1112 ;	genPointerSet
+                           1113 ;     genFarPointerSet
+   043E 90s00rEE           1114 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00dd)
+   0441 74 64              1115 	mov	a,#0x64
+   0443 F0                 1116 	movx	@dptr,a
+                           1117 ;	genPointerSet
+                           1118 ;     genFarPointerSet
+   0444 90s00rEF           1119 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00de)
+   0447 74 72              1120 	mov	a,#0x72
+   0449 F0                 1121 	movx	@dptr,a
+                           1122 ;	genPointerSet
+                           1123 ;     genFarPointerSet
+   044A 90s00rF0           1124 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00df)
+   044D 74 65              1125 	mov	a,#0x65
+   044F F0                 1126 	movx	@dptr,a
+                           1127 ;	genPointerSet
+                           1128 ;     genFarPointerSet
+   0450 90s00rF1           1129 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00e0)
+   0453 74 73              1130 	mov	a,#0x73
+   0455 F0                 1131 	movx	@dptr,a
+                           1132 ;	genPointerSet
+                           1133 ;     genFarPointerSet
+   0456 90s00rF2           1134 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00e1)
+   0459 74 73              1135 	mov	a,#0x73
+   045B F0                 1136 	movx	@dptr,a
+                           1137 ;	genPointerSet
+                           1138 ;     genFarPointerSet
+   045C 90s00rF3           1139 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00e2)
+   045F 74 28              1140 	mov	a,#0x28
+   0461 F0                 1141 	movx	@dptr,a
+                           1142 ;	genPointerSet
+                           1143 ;     genFarPointerSet
+   0462 90s00rF4           1144 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00e3)
+   0465 74 44              1145 	mov	a,#0x44
+   0467 F0                 1146 	movx	@dptr,a
+                           1147 ;	genPointerSet
+                           1148 ;     genFarPointerSet
+   0468 90s00rF5           1149 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00e4)
+   046B 74 65              1150 	mov	a,#0x65
+   046D F0                 1151 	movx	@dptr,a
+                           1152 ;	genPointerSet
+                           1153 ;     genFarPointerSet
+   046E 90s00rF6           1154 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00e5)
+   0471 74 66              1155 	mov	a,#0x66
+   0473 F0                 1156 	movx	@dptr,a
+                           1157 ;	genPointerSet
+                           1158 ;     genFarPointerSet
+   0474 90s00rF7           1159 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00e6)
+   0477 74 61              1160 	mov	a,#0x61
+   0479 F0                 1161 	movx	@dptr,a
+                           1162 ;	genPointerSet
+                           1163 ;     genFarPointerSet
+   047A 90s00rF8           1164 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00e7)
+   047D 74 75              1165 	mov	a,#0x75
+   047F F0                 1166 	movx	@dptr,a
+                           1167 ;	genPointerSet
+                           1168 ;     genFarPointerSet
+   0480 90s00rF9           1169 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00e8)
+   0483 74 6C              1170 	mov	a,#0x6C
+   0485 F0                 1171 	movx	@dptr,a
+                           1172 ;	genPointerSet
+                           1173 ;     genFarPointerSet
+   0486 90s00rFA           1174 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00e9)
+   0489 74 74              1175 	mov	a,#0x74
+   048B F0                 1176 	movx	@dptr,a
+                           1177 ;	genPointerSet
+                           1178 ;     genFarPointerSet
+   048C 90s00rFB           1179 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00ea)
+   048F 74 3A              1180 	mov	a,#0x3A
+   0491 F0                 1181 	movx	@dptr,a
+                           1182 ;	genPointerSet
+                           1183 ;     genFarPointerSet
+   0492 90s00rFC           1184 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00eb)
+   0495 74 30              1185 	mov	a,#0x30
+   0497 F0                 1186 	movx	@dptr,a
+                           1187 ;	genPointerSet
+                           1188 ;     genFarPointerSet
+   0498 90s00rFD           1189 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00ec)
+   049B 74 78              1190 	mov	a,#0x78
+   049D F0                 1191 	movx	@dptr,a
+                           1192 ;	genPointerSet
+                           1193 ;     genFarPointerSet
+   049E 90s00rFE           1194 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00ed)
+   04A1 74 34              1195 	mov	a,#0x34
+   04A3 F0                 1196 	movx	@dptr,a
+                           1197 ;	genPointerSet
+                           1198 ;     genFarPointerSet
+   04A4 90s00rFF           1199 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00ee)
+   04A7 74 20              1200 	mov	a,#0x20
+   04A9 F0                 1201 	movx	@dptr,a
+                           1202 ;	genPointerSet
+                           1203 ;     genFarPointerSet
+   04AA 90s01r00           1204 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00ef)
+   04AD 74 00              1205 	mov	a,#0x00
+   04AF F0                 1206 	movx	@dptr,a
+                           1207 ;	genPointerSet
+                           1208 ;     genFarPointerSet
+   04B0 90s01r01           1209 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00f0)
+   04B3 74 0D              1210 	mov	a,#0x0D
+   04B5 F0                 1211 	movx	@dptr,a
+                           1212 ;	genPointerSet
+                           1213 ;     genFarPointerSet
+   04B6 90s01r02           1214 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00f1)
+   04B9 74 0A              1215 	mov	a,#0x0A
+   04BB F0                 1216 	movx	@dptr,a
+                           1217 ;	genPointerSet
+                           1218 ;     genFarPointerSet
+   04BC 90s01r03           1219 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00f2)
+   04BF 74 4E              1220 	mov	a,#0x4E
+   04C1 F0                 1221 	movx	@dptr,a
+                           1222 ;	genPointerSet
+                           1223 ;     genFarPointerSet
+   04C2 90s01r04           1224 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00f3)
+   04C5 74 20              1225 	mov	a,#0x20
+   04C7 F0                 1226 	movx	@dptr,a
+                           1227 ;	genPointerSet
+                           1228 ;     genFarPointerSet
+   04C8 90s01r05           1229 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00f4)
+   04CB 74 63              1230 	mov	a,#0x63
+   04CD F0                 1231 	movx	@dptr,a
+                           1232 ;	genPointerSet
+                           1233 ;     genFarPointerSet
+   04CE 90s01r06           1234 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00f5)
+   04D1 74 68              1235 	mov	a,#0x68
+   04D3 F0                 1236 	movx	@dptr,a
+                           1237 ;	genPointerSet
+                           1238 ;     genFarPointerSet
+   04D4 90s01r07           1239 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00f6)
+   04D7 74 61              1240 	mov	a,#0x61
+   04D9 F0                 1241 	movx	@dptr,a
+                           1242 ;	genPointerSet
+                           1243 ;     genFarPointerSet
+   04DA 90s01r08           1244 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00f7)
+   04DD 74 6E              1245 	mov	a,#0x6E
+   04DF F0                 1246 	movx	@dptr,a
+                           1247 ;	genPointerSet
+                           1248 ;     genFarPointerSet
+   04E0 90s01r09           1249 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00f8)
+   04E3 74 67              1250 	mov	a,#0x67
+   04E5 F0                 1251 	movx	@dptr,a
+                           1252 ;	genPointerSet
+                           1253 ;     genFarPointerSet
+   04E6 90s01r0A           1254 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00f9)
+   04E9 74 65              1255 	mov	a,#0x65
+   04EB F0                 1256 	movx	@dptr,a
+                           1257 ;	genPointerSet
+                           1258 ;     genFarPointerSet
+   04EC 90s01r0B           1259 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00fa)
+   04EF 74 20              1260 	mov	a,#0x20
+   04F1 F0                 1261 	movx	@dptr,a
+                           1262 ;	genPointerSet
+                           1263 ;     genFarPointerSet
+   04F2 90s01r0C           1264 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00fb)
+   04F5 74 74              1265 	mov	a,#0x74
+   04F7 F0                 1266 	movx	@dptr,a
+                           1267 ;	genPointerSet
+                           1268 ;     genFarPointerSet
+   04F8 90s01r0D           1269 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00fc)
+   04FB 74 68              1270 	mov	a,#0x68
+   04FD F0                 1271 	movx	@dptr,a
+                           1272 ;	genPointerSet
+                           1273 ;     genFarPointerSet
+   04FE 90s01r0E           1274 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00fd)
+   0501 74 65              1275 	mov	a,#0x65
+   0503 F0                 1276 	movx	@dptr,a
+                           1277 ;	genPointerSet
+                           1278 ;     genFarPointerSet
+   0504 90s01r0F           1279 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00fe)
+   0507 74 20              1280 	mov	a,#0x20
+   0509 F0                 1281 	movx	@dptr,a
+                           1282 ;	genPointerSet
+                           1283 ;     genFarPointerSet
+   050A 90s01r10           1284 	mov	dptr,#(_display_help_tx_data_1_1 + 0x00ff)
+   050D 74 42              1285 	mov	a,#0x42
+   050F F0                 1286 	movx	@dptr,a
+                           1287 ;	genPointerSet
+                           1288 ;     genFarPointerSet
+   0510 90s01r11           1289 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0100)
+   0513 74 43              1290 	mov	a,#0x43
+   0515 F0                 1291 	movx	@dptr,a
+                           1292 ;	genPointerSet
+                           1293 ;     genFarPointerSet
+   0516 90s01r12           1294 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0101)
+   0519 74 20              1295 	mov	a,#0x20
+   051B F0                 1296 	movx	@dptr,a
+                           1297 ;	genPointerSet
+                           1298 ;     genFarPointerSet
+   051C 90s01r13           1299 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0102)
+   051F 74 44              1300 	mov	a,#0x44
+   0521 F0                 1301 	movx	@dptr,a
+                           1302 ;	genPointerSet
+                           1303 ;     genFarPointerSet
+   0522 90s01r14           1304 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0103)
+   0525 74 61              1305 	mov	a,#0x61
+   0527 F0                 1306 	movx	@dptr,a
+                           1307 ;	genPointerSet
+                           1308 ;     genFarPointerSet
+   0528 90s01r15           1309 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0104)
+   052B 74 74              1310 	mov	a,#0x74
+   052D F0                 1311 	movx	@dptr,a
+                           1312 ;	genPointerSet
+                           1313 ;     genFarPointerSet
+   052E 90s01r16           1314 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0105)
+   0531 74 61              1315 	mov	a,#0x61
+   0533 F0                 1316 	movx	@dptr,a
+                           1317 ;	genPointerSet
+                           1318 ;     genFarPointerSet
+   0534 90s01r17           1319 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0106)
+   0537 74 20              1320 	mov	a,#0x20
+   0539 F0                 1321 	movx	@dptr,a
+                           1322 ;	genPointerSet
+                           1323 ;     genFarPointerSet
+   053A 90s01r18           1324 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0107)
+   053D 74 76              1325 	mov	a,#0x76
+   053F F0                 1326 	movx	@dptr,a
+                           1327 ;	genPointerSet
+                           1328 ;     genFarPointerSet
+   0540 90s01r19           1329 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0108)
+   0543 74 61              1330 	mov	a,#0x61
+   0545 F0                 1331 	movx	@dptr,a
+                           1332 ;	genPointerSet
+                           1333 ;     genFarPointerSet
+   0546 90s01r1A           1334 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0109)
+   0549 74 6C              1335 	mov	a,#0x6C
+   054B F0                 1336 	movx	@dptr,a
+                           1337 ;	genPointerSet
+                           1338 ;     genFarPointerSet
+   054C 90s01r1B           1339 	mov	dptr,#(_display_help_tx_data_1_1 + 0x010a)
+   054F 74 75              1340 	mov	a,#0x75
+   0551 F0                 1341 	movx	@dptr,a
+                           1342 ;	genPointerSet
+                           1343 ;     genFarPointerSet
+   0552 90s01r1C           1344 	mov	dptr,#(_display_help_tx_data_1_1 + 0x010b)
+   0555 74 65              1345 	mov	a,#0x65
+   0557 F0                 1346 	movx	@dptr,a
+                           1347 ;	genPointerSet
+                           1348 ;     genFarPointerSet
+   0558 90s01r1D           1349 	mov	dptr,#(_display_help_tx_data_1_1 + 0x010c)
+   055B 74 73              1350 	mov	a,#0x73
+   055D F0                 1351 	movx	@dptr,a
+                           1352 ;	genPointerSet
+                           1353 ;     genFarPointerSet
+   055E 90s01r1E           1354 	mov	dptr,#(_display_help_tx_data_1_1 + 0x010d)
+   0561 74 20              1355 	mov	a,#0x20
+   0563 F0                 1356 	movx	@dptr,a
+                           1357 ;	genPointerSet
+                           1358 ;     genFarPointerSet
+   0564 90s01r1F           1359 	mov	dptr,#(_display_help_tx_data_1_1 + 0x010e)
+   0567 74 20              1360 	mov	a,#0x20
+   0569 F0                 1361 	movx	@dptr,a
+                           1362 ;	genPointerSet
+                           1363 ;     genFarPointerSet
+   056A 90s01r20           1364 	mov	dptr,#(_display_help_tx_data_1_1 + 0x010f)
+   056D 74 20              1365 	mov	a,#0x20
+   056F F0                 1366 	movx	@dptr,a
+                           1367 ;	genPointerSet
+                           1368 ;     genFarPointerSet
+   0570 90s01r21           1369 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0110)
+   0573 74 00              1370 	mov	a,#0x00
+   0575 F0                 1371 	movx	@dptr,a
+                           1372 ;	genPointerSet
+                           1373 ;     genFarPointerSet
+   0576 90s01r29           1374 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0118)
+   0579 74 0D              1375 	mov	a,#0x0D
+   057B F0                 1376 	movx	@dptr,a
+                           1377 ;	genPointerSet
+                           1378 ;     genFarPointerSet
+   057C 90s01r2A           1379 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0119)
+   057F 74 0A              1380 	mov	a,#0x0A
+   0581 F0                 1381 	movx	@dptr,a
+                           1382 ;	genPointerSet
+                           1383 ;     genFarPointerSet
+   0582 90s01r2B           1384 	mov	dptr,#(_display_help_tx_data_1_1 + 0x011a)
+   0585 74 48              1385 	mov	a,#0x48
+   0587 F0                 1386 	movx	@dptr,a
+                           1387 ;	genPointerSet
+                           1388 ;     genFarPointerSet
+   0588 90s01r2C           1389 	mov	dptr,#(_display_help_tx_data_1_1 + 0x011b)
+   058B 74 20              1390 	mov	a,#0x20
+   058D F0                 1391 	movx	@dptr,a
+                           1392 ;	genPointerSet
+                           1393 ;     genFarPointerSet
+   058E 90s01r2D           1394 	mov	dptr,#(_display_help_tx_data_1_1 + 0x011c)
+   0591 74 44              1395 	mov	a,#0x44
+   0593 F0                 1396 	movx	@dptr,a
+                           1397 ;	genPointerSet
+                           1398 ;     genFarPointerSet
+   0594 90s01r2E           1399 	mov	dptr,#(_display_help_tx_data_1_1 + 0x011d)
+   0597 74 69              1400 	mov	a,#0x69
+   0599 F0                 1401 	movx	@dptr,a
+                           1402 ;	genPointerSet
+                           1403 ;     genFarPointerSet
+   059A 90s01r2F           1404 	mov	dptr,#(_display_help_tx_data_1_1 + 0x011e)
+   059D 74 73              1405 	mov	a,#0x73
+   059F F0                 1406 	movx	@dptr,a
+                           1407 ;	genPointerSet
+                           1408 ;     genFarPointerSet
+   05A0 90s01r30           1409 	mov	dptr,#(_display_help_tx_data_1_1 + 0x011f)
+   05A3 74 70              1410 	mov	a,#0x70
+   05A5 F0                 1411 	movx	@dptr,a
+                           1412 ;	genPointerSet
+                           1413 ;     genFarPointerSet
+   05A6 90s01r31           1414 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0120)
+   05A9 74 6C              1415 	mov	a,#0x6C
+   05AB F0                 1416 	movx	@dptr,a
+                           1417 ;	genPointerSet
+                           1418 ;     genFarPointerSet
+   05AC 90s01r32           1419 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0121)
+   05AF 74 61              1420 	mov	a,#0x61
+   05B1 F0                 1421 	movx	@dptr,a
+                           1422 ;	genPointerSet
+                           1423 ;     genFarPointerSet
+   05B2 90s01r33           1424 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0122)
+   05B5 74 79              1425 	mov	a,#0x79
+   05B7 F0                 1426 	movx	@dptr,a
+                           1427 ;	genPointerSet
+                           1428 ;     genFarPointerSet
+   05B8 90s01r34           1429 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0123)
+   05BB 74 20              1430 	mov	a,#0x20
+   05BD F0                 1431 	movx	@dptr,a
+                           1432 ;	genPointerSet
+                           1433 ;     genFarPointerSet
+   05BE 90s01r35           1434 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0124)
+   05C1 74 54              1435 	mov	a,#0x54
+   05C3 F0                 1436 	movx	@dptr,a
+                           1437 ;	genPointerSet
+                           1438 ;     genFarPointerSet
+   05C4 90s01r36           1439 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0125)
+   05C7 74 68              1440 	mov	a,#0x68
+   05C9 F0                 1441 	movx	@dptr,a
+                           1442 ;	genPointerSet
+                           1443 ;     genFarPointerSet
+   05CA 90s01r37           1444 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0126)
+   05CD 74 69              1445 	mov	a,#0x69
+   05CF F0                 1446 	movx	@dptr,a
+                           1447 ;	genPointerSet
+                           1448 ;     genFarPointerSet
+   05D0 90s01r38           1449 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0127)
+   05D3 74 73              1450 	mov	a,#0x73
+   05D5 F0                 1451 	movx	@dptr,a
+                           1452 ;	genPointerSet
+                           1453 ;     genFarPointerSet
+   05D6 90s01r39           1454 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0128)
+   05D9 74 20              1455 	mov	a,#0x20
+   05DB F0                 1456 	movx	@dptr,a
+                           1457 ;	genPointerSet
+                           1458 ;     genFarPointerSet
+   05DC 90s01r3A           1459 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0129)
+   05DF 74 4D              1460 	mov	a,#0x4D
+   05E1 F0                 1461 	movx	@dptr,a
+                           1462 ;	genPointerSet
+                           1463 ;     genFarPointerSet
+   05E2 90s01r3B           1464 	mov	dptr,#(_display_help_tx_data_1_1 + 0x012a)
+   05E5 74 65              1465 	mov	a,#0x65
+   05E7 F0                 1466 	movx	@dptr,a
+                           1467 ;	genPointerSet
+                           1468 ;     genFarPointerSet
+   05E8 90s01r3C           1469 	mov	dptr,#(_display_help_tx_data_1_1 + 0x012b)
+   05EB 74 6E              1470 	mov	a,#0x6E
+   05ED F0                 1471 	movx	@dptr,a
+                           1472 ;	genPointerSet
+                           1473 ;     genFarPointerSet
+   05EE 90s01r3D           1474 	mov	dptr,#(_display_help_tx_data_1_1 + 0x012c)
+   05F1 74 75              1475 	mov	a,#0x75
+   05F3 F0                 1476 	movx	@dptr,a
+                           1477 ;	genPointerSet
+                           1478 ;     genFarPointerSet
+   05F4 90s01r3E           1479 	mov	dptr,#(_display_help_tx_data_1_1 + 0x012d)
+   05F7 74 20              1480 	mov	a,#0x20
+   05F9 F0                 1481 	movx	@dptr,a
+                           1482 ;	genPointerSet
+                           1483 ;     genFarPointerSet
+   05FA 90s01r3F           1484 	mov	dptr,#(_display_help_tx_data_1_1 + 0x012e)
+   05FD 74 20              1485 	mov	a,#0x20
+   05FF F0                 1486 	movx	@dptr,a
+                           1487 ;	genPointerSet
+                           1488 ;     genFarPointerSet
+   0600 90s01r40           1489 	mov	dptr,#(_display_help_tx_data_1_1 + 0x012f)
+   0603 74 20              1490 	mov	a,#0x20
+   0605 F0                 1491 	movx	@dptr,a
+                           1492 ;	genPointerSet
+                           1493 ;     genFarPointerSet
+   0606 90s01r41           1494 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0130)
+   0609 74 20              1495 	mov	a,#0x20
+   060B F0                 1496 	movx	@dptr,a
+                           1497 ;	genPointerSet
+                           1498 ;     genFarPointerSet
+   060C 90s01r42           1499 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0131)
+   060F 74 20              1500 	mov	a,#0x20
+   0611 F0                 1501 	movx	@dptr,a
+                           1502 ;	genPointerSet
+                           1503 ;     genFarPointerSet
+   0612 90s01r43           1504 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0132)
+   0615 74 20              1505 	mov	a,#0x20
+   0617 F0                 1506 	movx	@dptr,a
+                           1507 ;	genPointerSet
+                           1508 ;     genFarPointerSet
+   0618 90s01r44           1509 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0133)
+   061B 74 20              1510 	mov	a,#0x20
+   061D F0                 1511 	movx	@dptr,a
+                           1512 ;	genPointerSet
+                           1513 ;     genFarPointerSet
+   061E 90s01r45           1514 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0134)
+   0621 74 20              1515 	mov	a,#0x20
+   0623 F0                 1516 	movx	@dptr,a
+                           1517 ;	genPointerSet
+                           1518 ;     genFarPointerSet
+   0624 90s01r46           1519 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0135)
+   0627 74 0D              1520 	mov	a,#0x0D
+   0629 F0                 1521 	movx	@dptr,a
+                           1522 ;	genPointerSet
+                           1523 ;     genFarPointerSet
+   062A 90s01r47           1524 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0136)
+   062D 74 0A              1525 	mov	a,#0x0A
+   062F F0                 1526 	movx	@dptr,a
+                           1527 ;	genPointerSet
+                           1528 ;     genFarPointerSet
+   0630 90s01r48           1529 	mov	dptr,#(_display_help_tx_data_1_1 + 0x0137)
+   0633 74 00              1530 	mov	a,#0x00
+   0635 F0                 1531 	movx	@dptr,a
+                    0636   1532 	C$cli.c$33$1$1 ==.
+                           1533 ;	../cli.c:33: UART_send(&g_stdio_uart, tx_data[0],sizeof(tx_data));
+                           1534 ;	genCast
+   0636 90s00r00           1535 	mov	dptr,#_UART_send_PARM_2
+   0639 74r11              1536 	mov	a,#_display_help_tx_data_1_1
+   063B F0                 1537 	movx	@dptr,a
+   063C A3                 1538 	inc	dptr
+   063D 74s00              1539 	mov	a,#(_display_help_tx_data_1_1 >> 8)
+   063F F0                 1540 	movx	@dptr,a
+   0640 A3                 1541 	inc	dptr
+   0641 74 00              1542 	mov	a,#0x0
+   0643 F0                 1543 	movx	@dptr,a
+                           1544 ;	genAssign
+   0644 90s00r00           1545 	mov	dptr,#_UART_send_PARM_3
+   0647 74 C0              1546 	mov	a,#0xC0
+   0649 F0                 1547 	movx	@dptr,a
+   064A A3                 1548 	inc	dptr
+   064B 74 03              1549 	mov	a,#0x03
+   064D F0                 1550 	movx	@dptr,a
+                           1551 ;	genCall
+   064E 75 82r00           1552 	mov	dpl,#_g_stdio_uart
+   0651 75 83s00           1553 	mov	dph,#(_g_stdio_uart >> 8)
+   0654 75 F0 00           1554 	mov	b,#0x00
+   0657 12s00r00           1555 	lcall	_UART_send
+   065A                    1556 00101$:
+                    065A   1557 	C$cli.c$36$1$1 ==.
+                    065A   1558 	XG$display_help$0$0 ==.
+   065A 22                 1559 	ret
+                           1560 ;------------------------------------------------------------
+                           1561 ;Allocation info for local variables in function 'display_prompt'
+                           1562 ;------------------------------------------------------------
+                           1563 ;------------------------------------------------------------
+                    065B   1564 	G$display_prompt$0$0 ==.
+                    065B   1565 	C$cli.c$40$1$1 ==.
+                           1566 ;	../cli.c:40: void display_prompt(void) {
+                           1567 ;	-----------------------------------------
+                           1568 ;	 function display_prompt
+                           1569 ;	-----------------------------------------
+   065B                    1570 _display_prompt:
+                    065B   1571 	C$cli.c$42$1$1 ==.
+                           1572 ;	../cli.c:42: dp_display_text("\r\nCore1553BRT>");
+                           1573 ;	genCall
+   065B 75 82r00           1574 	mov	dpl,#__str_8
+   065E 75 83s00           1575 	mov	dph,#(__str_8 >> 8)
+   0661 75 F0 80           1576 	mov	b,#0x80
+   0664 12s00r00           1577 	lcall	_dp_display_text
+   0667                    1578 00101$:
+                    0667   1579 	C$cli.c$45$1$1 ==.
+                    0667   1580 	XG$display_prompt$0$0 ==.
+   0667 22                 1581 	ret
+                           1582 ;------------------------------------------------------------
+                           1583 ;Allocation info for local variables in function 'get_key_selection'
+                           1584 ;------------------------------------------------------------
+                           1585 ;rx_data                   Allocated with name '_get_key_selection_rx_data_1_1'
+                           1586 ;rx_size                   Allocated with name '_get_key_selection_rx_size_1_1'
+                           1587 ;------------------------------------------------------------
+                    0668   1588 	G$get_key_selection$0$0 ==.
+                    0668   1589 	C$cli.c$49$1$1 ==.
+                           1590 ;	../cli.c:49: uint8_t get_key_selection(void)
+                           1591 ;	-----------------------------------------
+                           1592 ;	 function get_key_selection
+                           1593 ;	-----------------------------------------
+   0668                    1594 _get_key_selection:
+                    0668   1595 	C$cli.c$56$2$2 ==.
+                           1596 ;	../cli.c:56: do {
+   0668                    1597 00101$:
+                    0668   1598 	C$cli.c$57$2$2 ==.
+                           1599 ;	../cli.c:57: rx_size = UART_get_rx(&g_stdio_uart, &rx_data[1],1);
+                           1600 ;	genCast
+   0668 90s00r00           1601 	mov	dptr,#_UART_get_rx_PARM_2
+   066B 74rD2              1602 	mov	a,#(_get_key_selection_rx_data_1_1 + 0x0001)
+   066D F0                 1603 	movx	@dptr,a
+   066E A3                 1604 	inc	dptr
+   066F 74s03              1605 	mov	a,#((_get_key_selection_rx_data_1_1 + 0x0001) >> 8)
+   0671 F0                 1606 	movx	@dptr,a
+   0672 A3                 1607 	inc	dptr
+   0673 74 00              1608 	mov	a,#0x0
+   0675 F0                 1609 	movx	@dptr,a
+                           1610 ;	genAssign
+   0676 90s00r00           1611 	mov	dptr,#_UART_get_rx_PARM_3
+   0679 74 01              1612 	mov	a,#0x01
+   067B F0                 1613 	movx	@dptr,a
+   067C E4                 1614 	clr	a
+   067D A3                 1615 	inc	dptr
+   067E F0                 1616 	movx	@dptr,a
+                           1617 ;	genCall
+   067F 75 82r00           1618 	mov	dpl,#_g_stdio_uart
+   0682 75 83s00           1619 	mov	dph,#(_g_stdio_uart >> 8)
+   0685 75 F0 00           1620 	mov	b,#0x00
+   0688 12s00r00           1621 	lcall	_UART_get_rx
+   068B AA 82              1622 	mov	r2,dpl
+   068D AB 83              1623 	mov	r3,dph
+                           1624 ;	genCast
+                    068F   1625 	C$cli.c$58$1$1 ==.
+                           1626 ;	../cli.c:58: }while(rx_size == 0);
+                           1627 ;	genIfx
+   068F EA                 1628 	mov	a,r2
+                           1629 ;	genIfxJump
+   0690 70 03              1630 	jnz	00108$
+   0692 02s06r68           1631 	ljmp	00101$
+   0695                    1632 00108$:
+                    0695   1633 	C$cli.c$60$1$1 ==.
+                           1634 ;	../cli.c:60: key = rx_data[1];
+                           1635 ;	genPointerGet
+                           1636 ;	genFarPointerGet
+   0695 90s03rD2           1637 	mov	dptr,#(_get_key_selection_rx_data_1_1 + 0x0001)
+   0698 E0                 1638 	movx	a,@dptr
+   0699 FA                 1639 	mov	r2,a
+                           1640 ;	genAssign
+   069A 90s00r00           1641 	mov	dptr,#_key
+   069D EA                 1642 	mov	a,r2
+   069E F0                 1643 	movx	@dptr,a
+                    069F   1644 	C$cli.c$62$1$1 ==.
+                           1645 ;	../cli.c:62: UART_send (&g_stdio_uart, &key,sizeof (key));
+                           1646 ;	genCast
+   069F 90s00r00           1647 	mov	dptr,#_UART_send_PARM_2
+   06A2 74r00              1648 	mov	a,#_key
+   06A4 F0                 1649 	movx	@dptr,a
+   06A5 A3                 1650 	inc	dptr
+   06A6 74s00              1651 	mov	a,#(_key >> 8)
+   06A8 F0                 1652 	movx	@dptr,a
+   06A9 A3                 1653 	inc	dptr
+   06AA 74 00              1654 	mov	a,#0x0
+   06AC F0                 1655 	movx	@dptr,a
+                           1656 ;	genAssign
+   06AD 90s00r00           1657 	mov	dptr,#_UART_send_PARM_3
+   06B0 74 01              1658 	mov	a,#0x01
+   06B2 F0                 1659 	movx	@dptr,a
+   06B3 E4                 1660 	clr	a
+   06B4 A3                 1661 	inc	dptr
+   06B5 F0                 1662 	movx	@dptr,a
+                           1663 ;	genCall
+   06B6 75 82r00           1664 	mov	dpl,#_g_stdio_uart
+   06B9 75 83s00           1665 	mov	dph,#(_g_stdio_uart >> 8)
+   06BC 75 F0 00           1666 	mov	b,#0x00
+   06BF 12s00r00           1667 	lcall	_UART_send
+                    06C2   1668 	C$cli.c$63$1$1 ==.
+                           1669 ;	../cli.c:63: return rx_data[1];
+                           1670 ;	genPointerGet
+                           1671 ;	genFarPointerGet
+   06C2 90s03rD2           1672 	mov	dptr,#(_get_key_selection_rx_data_1_1 + 0x0001)
+   06C5 E0                 1673 	movx	a,@dptr
+   06C6 FA                 1674 	mov	r2,a
+                           1675 ;	genRet
+   06C7 8A 82              1676 	mov	dpl,r2
+   06C9                    1677 00104$:
+                    06C9   1678 	C$cli.c$65$1$1 ==.
+                    06C9   1679 	XG$get_key_selection$0$0 ==.
+   06C9 22                 1680 	ret
+                           1681 ;------------------------------------------------------------
+                           1682 ;Allocation info for local variables in function 'read_user_input'
+                           1683 ;------------------------------------------------------------
+                           1684 ;rx_char_ptr               Allocated with name '_read_user_input_rx_char_ptr_1_1'
+                           1685 ;recv_char                 Allocated with name '_read_user_input_recv_char_1_1'
+                           1686 ;size                      Allocated with name '_read_user_input_size_1_1'
+                           1687 ;index                     Allocated with name '_read_user_input_index_1_1'
+                           1688 ;------------------------------------------------------------
+                    06CA   1689 	G$read_user_input$0$0 ==.
+                    06CA   1690 	C$cli.c$72$1$1 ==.
+                           1691 ;	../cli.c:72: void read_user_input (uint8_t *rx_char_ptr)
+                           1692 ;	-----------------------------------------
+                           1693 ;	 function read_user_input
+                           1694 ;	-----------------------------------------
+   06CA                    1695 _read_user_input:
+                           1696 ;	genReceive
+   06CA AA F0              1697 	mov	r2,b
+   06CC AB 83              1698 	mov	r3,dph
+   06CE E5 82              1699 	mov	a,dpl
+   06D0 90s03rD3           1700 	mov	dptr,#_read_user_input_rx_char_ptr_1_1
+   06D3 F0                 1701 	movx	@dptr,a
+   06D4 A3                 1702 	inc	dptr
+   06D5 EB                 1703 	mov	a,r3
+   06D6 F0                 1704 	movx	@dptr,a
+   06D7 A3                 1705 	inc	dptr
+   06D8 EA                 1706 	mov	a,r2
+   06D9 F0                 1707 	movx	@dptr,a
+                    06DA   1708 	C$cli.c$74$1$1 ==.
+                           1709 ;	../cli.c:74: uint8_t recv_char=0;
+                           1710 ;	genAssign
+   06DA 90s03rD6           1711 	mov	dptr,#_read_user_input_recv_char_1_1
+   06DD 74 00              1712 	mov	a,#0x00
+   06DF F0                 1713 	movx	@dptr,a
+                    06E0   1714 	C$cli.c$77$1$1 ==.
+                           1715 ;	../cli.c:77: for(index = 0; index < 10; index++)
+                           1716 ;	genAssign
+   06E0 90s03rD7           1717 	mov	dptr,#_read_user_input_index_1_1
+   06E3 74 00              1718 	mov	a,#0x00
+   06E5 F0                 1719 	movx	@dptr,a
+   06E6                    1720 00106$:
+                           1721 ;	genAssign
+   06E6 90s03rD7           1722 	mov	dptr,#_read_user_input_index_1_1
+   06E9 E0                 1723 	movx	a,@dptr
+   06EA FA                 1724 	mov	r2,a
+                           1725 ;	genCmpLt
+                           1726 ;	genCmp
+   06EB BA 0A 00           1727 	cjne	r2,#0x0A,00117$
+   06EE                    1728 00117$:
+                           1729 ;	genIfxJump
+   06EE 40 03              1730 	jc	00118$
+   06F0 02s07r0B           1731 	ljmp	00109$
+   06F3                    1732 00118$:
+                    06F3   1733 	C$cli.c$79$2$2 ==.
+                           1734 ;	../cli.c:79: rx_char[index] = '0';
+                           1735 ;	genPlus
+   06F3 E5 02              1736 	mov	a,ar2
+   06F5 24r01              1737 	add	a,#_rx_char
+   06F7 F5 82              1738 	mov	dpl,a
+   06F9 74 00              1739 	mov	a,#0x00
+   06FB 34s00              1740 	addc	a,#(_rx_char >> 8)
+   06FD F5 83              1741 	mov	dph,a
+                           1742 ;	genPointerSet
+                           1743 ;     genFarPointerSet
+   06FF 74 30              1744 	mov	a,#0x30
+   0701 F0                 1745 	movx	@dptr,a
+                    0702   1746 	C$cli.c$77$1$1 ==.
+                           1747 ;	../cli.c:77: for(index = 0; index < 10; index++)
+                           1748 ;	genPlus
+   0702 90s03rD7           1749 	mov	dptr,#_read_user_input_index_1_1
+                           1750 ;	genPlusIncr
+   0705 EA                 1751 	mov	a,r2
+   0706 04                 1752 	inc	a
+   0707 F0                 1753 	movx	@dptr,a
+   0708 02s06rE6           1754 	ljmp	00106$
+   070B                    1755 00109$:
+                    070B   1756 	C$cli.c$81$1$1 ==.
+                           1757 ;	../cli.c:81: index = 0;
+                           1758 ;	genAssign
+   070B 90s03rD7           1759 	mov	dptr,#_read_user_input_index_1_1
+   070E 74 00              1760 	mov	a,#0x00
+   0710 F0                 1761 	movx	@dptr,a
+                    0711   1762 	C$cli.c$82$3$4 ==.
+                           1763 ;	../cli.c:82: while(recv_char != 13)  //'\n'
+                           1764 ;	genAssign
+   0711 90s03rD3           1765 	mov	dptr,#_read_user_input_rx_char_ptr_1_1
+   0714 E0                 1766 	movx	a,@dptr
+   0715 FA                 1767 	mov	r2,a
+   0716 A3                 1768 	inc	dptr
+   0717 E0                 1769 	movx	a,@dptr
+   0718 FB                 1770 	mov	r3,a
+   0719 A3                 1771 	inc	dptr
+   071A E0                 1772 	movx	a,@dptr
+   071B FC                 1773 	mov	r4,a
+   071C                    1774 00103$:
+                           1775 ;	genAssign
+   071C 90s03rD6           1776 	mov	dptr,#_read_user_input_recv_char_1_1
+   071F E0                 1777 	movx	a,@dptr
+   0720 FD                 1778 	mov	r5,a
+                           1779 ;	genCmpEq
+                           1780 ;	gencjneshort
+   0721 BD 0D 03           1781 	cjne	r5,#0x0D,00119$
+   0724 02s07rBC           1782 	ljmp	00110$
+   0727                    1783 00119$:
+                    0727   1784 	C$cli.c$84$2$3 ==.
+                           1785 ;	../cli.c:84: size = UART_get_rx(&g_stdio_uart, &recv_char,1);
+                           1786 ;	genCast
+   0727 90s00r00           1787 	mov	dptr,#_UART_get_rx_PARM_2
+   072A 74rD6              1788 	mov	a,#_read_user_input_recv_char_1_1
+   072C F0                 1789 	movx	@dptr,a
+   072D A3                 1790 	inc	dptr
+   072E 74s03              1791 	mov	a,#(_read_user_input_recv_char_1_1 >> 8)
+   0730 F0                 1792 	movx	@dptr,a
+   0731 A3                 1793 	inc	dptr
+   0732 74 00              1794 	mov	a,#0x0
+   0734 F0                 1795 	movx	@dptr,a
+                           1796 ;	genAssign
+   0735 90s00r00           1797 	mov	dptr,#_UART_get_rx_PARM_3
+   0738 74 01              1798 	mov	a,#0x01
+   073A F0                 1799 	movx	@dptr,a
+   073B E4                 1800 	clr	a
+   073C A3                 1801 	inc	dptr
+   073D F0                 1802 	movx	@dptr,a
+                           1803 ;	genCall
+   073E 75 82r00           1804 	mov	dpl,#_g_stdio_uart
+   0741 75 83s00           1805 	mov	dph,#(_g_stdio_uart >> 8)
+   0744 75 F0 00           1806 	mov	b,#0x00
+   0747 C0 02              1807 	push	ar2
+   0749 C0 03              1808 	push	ar3
+   074B C0 04              1809 	push	ar4
+   074D 12s00r00           1810 	lcall	_UART_get_rx
+   0750 AD 82              1811 	mov	r5,dpl
+   0752 AE 83              1812 	mov	r6,dph
+   0754 D0 04              1813 	pop	ar4
+   0756 D0 03              1814 	pop	ar3
+   0758 D0 02              1815 	pop	ar2
+                           1816 ;	genCast
+                    075A   1817 	C$cli.c$85$2$3 ==.
+                           1818 ;	../cli.c:85: if(size > 0)
+                           1819 ;	genIfx
+   075A ED                 1820 	mov	a,r5
+                           1821 ;	genIfxJump
+   075B 70 03              1822 	jnz	00120$
+   075D 02s07r1C           1823 	ljmp	00103$
+   0760                    1824 00120$:
+                    0760   1825 	C$cli.c$88$3$4 ==.
+                           1826 ;	../cli.c:88: rx_char_ptr[index] = recv_char;
+                           1827 ;	genAssign
+   0760 90s03rD7           1828 	mov	dptr,#_read_user_input_index_1_1
+   0763 E0                 1829 	movx	a,@dptr
+   0764 FD                 1830 	mov	r5,a
+                           1831 ;	genPlus
+   0765 E5 05              1832 	mov	a,ar5
+   0767 25 02              1833 	add	a,ar2
+   0769 FE                 1834 	mov	r6,a
+   076A 74 00              1835 	mov	a,#0x00
+   076C 35 03              1836 	addc	a,ar3
+   076E FF                 1837 	mov	r7,a
+   076F 8C 00              1838 	mov	ar0,r4
+                           1839 ;	genAssign
+   0771 90s03rD6           1840 	mov	dptr,#_read_user_input_recv_char_1_1
+   0774 E0                 1841 	movx	a,@dptr
+   0775 F9                 1842 	mov	r1,a
+                           1843 ;	genPointerSet
+                           1844 ;	genGenPointerSet
+   0776 8E 82              1845 	mov	dpl,r6
+   0778 8F 83              1846 	mov	dph,r7
+   077A 88 F0              1847 	mov	b,r0
+   077C E9                 1848 	mov	a,r1
+   077D 12s00r00           1849 	lcall	__gptrput
+                    0780   1850 	C$cli.c$89$3$4 ==.
+                           1851 ;	../cli.c:89: UART_send (&g_stdio_uart, (uint8_t *)&recv_char,sizeof(recv_char));
+                           1852 ;	genCast
+   0780 90s00r00           1853 	mov	dptr,#_UART_send_PARM_2
+   0783 74rD6              1854 	mov	a,#_read_user_input_recv_char_1_1
+   0785 F0                 1855 	movx	@dptr,a
+   0786 A3                 1856 	inc	dptr
+   0787 74s03              1857 	mov	a,#(_read_user_input_recv_char_1_1 >> 8)
+   0789 F0                 1858 	movx	@dptr,a
+   078A A3                 1859 	inc	dptr
+   078B 74 00              1860 	mov	a,#0x0
+   078D F0                 1861 	movx	@dptr,a
+                           1862 ;	genAssign
+   078E 90s00r00           1863 	mov	dptr,#_UART_send_PARM_3
+   0791 74 01              1864 	mov	a,#0x01
+   0793 F0                 1865 	movx	@dptr,a
+   0794 E4                 1866 	clr	a
+   0795 A3                 1867 	inc	dptr
+   0796 F0                 1868 	movx	@dptr,a
+                           1869 ;	genCall
+   0797 75 82r00           1870 	mov	dpl,#_g_stdio_uart
+   079A 75 83s00           1871 	mov	dph,#(_g_stdio_uart >> 8)
+   079D 75 F0 00           1872 	mov	b,#0x00
+   07A0 C0 02              1873 	push	ar2
+   07A2 C0 03              1874 	push	ar3
+   07A4 C0 04              1875 	push	ar4
+   07A6 C0 05              1876 	push	ar5
+   07A8 12s00r00           1877 	lcall	_UART_send
+   07AB D0 05              1878 	pop	ar5
+   07AD D0 04              1879 	pop	ar4
+   07AF D0 03              1880 	pop	ar3
+   07B1 D0 02              1881 	pop	ar2
+                    07B3   1882 	C$cli.c$90$3$4 ==.
+                           1883 ;	../cli.c:90: index++;
+                           1884 ;	genPlus
+   07B3 90s03rD7           1885 	mov	dptr,#_read_user_input_index_1_1
+                           1886 ;	genPlusIncr
+   07B6 ED                 1887 	mov	a,r5
+   07B7 04                 1888 	inc	a
+   07B8 F0                 1889 	movx	@dptr,a
+                    07B9   1890 	C$cli.c$91$1$1 ==.
+                           1891 ;	../cli.c:91: size = 0; // clear the rcvd flag
+   07B9 02s07r1C           1892 	ljmp	00103$
+   07BC                    1893 00110$:
+                    07BC   1894 	C$cli.c$95$1$1 ==.
+                    07BC   1895 	XG$read_user_input$0$0 ==.
+   07BC 22                 1896 	ret
+                           1897 ;------------------------------------------------------------
+                           1898 ;Allocation info for local variables in function 'display_brt_regs'
+                           1899 ;------------------------------------------------------------
+                           1900 ;sloc0                     Allocated with name '_display_brt_regs_sloc0_1_0'
+                           1901 ;mem_addr                  Allocated with name '_display_brt_regs_mem_addr_1_1'
+                           1902 ;mem_data                  Allocated with name '_display_brt_regs_mem_data_1_1'
+                           1903 ;i                         Allocated with name '_display_brt_regs_i_1_1'
+                           1904 ;------------------------------------------------------------
+                    07BD   1905 	G$display_brt_regs$0$0 ==.
+                    07BD   1906 	C$cli.c$102$1$1 ==.
+                           1907 ;	../cli.c:102: void display_brt_regs(void){
+                           1908 ;	-----------------------------------------
+                           1909 ;	 function display_brt_regs
+                           1910 ;	-----------------------------------------
+   07BD                    1911 _display_brt_regs:
+                    07BD   1912 	C$cli.c$107$1$1 ==.
+                           1913 ;	../cli.c:107: mem_addr  = ( APB3_BASE_ADDRESS + CORE1553BRT_0) + BRT_REG_OFFSET ;  // base address of BRT instance, 32location from here onwards
+                           1914 ;	genAssign
+   07BD 90s03rD8           1915 	mov	dptr,#_display_brt_regs_mem_addr_1_1
+   07C0 74 E0              1916 	mov	a,#0xE0
+   07C2 F0                 1917 	movx	@dptr,a
+   07C3 A3                 1918 	inc	dptr
+   07C4 74 FF              1919 	mov	a,#0xFF
+   07C6 F0                 1920 	movx	@dptr,a
+   07C7 A3                 1921 	inc	dptr
+   07C8 74 00              1922 	mov	a,#0x00
+   07CA F0                 1923 	movx	@dptr,a
+   07CB A3                 1924 	inc	dptr
+   07CC 74 00              1925 	mov	a,#0x00
+   07CE F0                 1926 	movx	@dptr,a
+                    07CF   1927 	C$cli.c$109$1$1 ==.
+                           1928 ;	../cli.c:109: dp_display_text("\n\r BRT Register Contents\r\n ");
+                           1929 ;	genCall
+   07CF 75 82r0F           1930 	mov	dpl,#__str_9
+   07D2 75 83s00           1931 	mov	dph,#(__str_9 >> 8)
+   07D5 75 F0 80           1932 	mov	b,#0x80
+   07D8 12s00r00           1933 	lcall	_dp_display_text
+                    07DB   1934 	C$cli.c$110$1$1 ==.
+                           1935 ;	../cli.c:110: for ( i=0; i<= 32 ;i++) {
+                           1936 ;	genAssign
+   07DB 90s03rDC           1937 	mov	dptr,#_display_brt_regs_i_1_1
+   07DE 74 00              1938 	mov	a,#0x00
+   07E0 F0                 1939 	movx	@dptr,a
+   07E1                    1940 00101$:
+                           1941 ;	genAssign
+   07E1 90s03rDC           1942 	mov	dptr,#_display_brt_regs_i_1_1
+   07E4 E0                 1943 	movx	a,@dptr
+   07E5 F5*00              1944 	mov	_display_brt_regs_sloc0_1_0,a
+                           1945 ;	genCmpGt
+                           1946 ;	genCmp
+   07E7 C3                 1947 	clr	c
+   07E8 74 20              1948 	mov	a,#0x20
+   07EA 95*00              1949 	subb	a,_display_brt_regs_sloc0_1_0
+                           1950 ;	genIfxJump
+   07EC 50 03              1951 	jnc	00109$
+   07EE 02s08rCB           1952 	ljmp	00105$
+   07F1                    1953 00109$:
+                    07F1   1954 	C$cli.c$111$2$2 ==.
+                           1955 ;	../cli.c:111: dp_display_text("\r\n");
+                           1956 ;	genCall
+   07F1 75 82r2B           1957 	mov	dpl,#__str_10
+   07F4 75 83s00           1958 	mov	dph,#(__str_10 >> 8)
+   07F7 75 F0 80           1959 	mov	b,#0x80
+   07FA 12s00r00           1960 	lcall	_dp_display_text
+                    07FD   1961 	C$cli.c$112$2$2 ==.
+                           1962 ;	../cli.c:112: dp_display_value(i,DEC);
+                           1963 ;	genCast
+   07FD AB*00              1964 	mov	r3,_display_brt_regs_sloc0_1_0
+   07FF 7C 00              1965 	mov	r4,#0x00
+   0801 7D 00              1966 	mov	r5,#0x00
+   0803 7E 00              1967 	mov	r6,#0x00
+                           1968 ;	genAssign
+   0805 90s00r00           1969 	mov	dptr,#_dp_display_value_PARM_2
+   0808 74 01              1970 	mov	a,#0x01
+   080A F0                 1971 	movx	@dptr,a
+   080B E4                 1972 	clr	a
+   080C A3                 1973 	inc	dptr
+   080D F0                 1974 	movx	@dptr,a
+                           1975 ;	genCall
+   080E 8B 82              1976 	mov	dpl,r3
+   0810 8C 83              1977 	mov	dph,r4
+   0812 8D F0              1978 	mov	b,r5
+   0814 EE                 1979 	mov	a,r6
+   0815 12s00r00           1980 	lcall	_dp_display_value
+                    0818   1981 	C$cli.c$113$2$2 ==.
+                           1982 ;	../cli.c:113: dp_display_text("\t");
+                           1983 ;	genCall
+   0818 75 82r2E           1984 	mov	dpl,#__str_11
+   081B 75 83s00           1985 	mov	dph,#(__str_11 >> 8)
+   081E 75 F0 80           1986 	mov	b,#0x80
+   0821 12s00r00           1987 	lcall	_dp_display_text
+                    0824   1988 	C$cli.c$114$2$2 ==.
+                           1989 ;	../cli.c:114: dp_display_value(mem_addr,HEX);
+                           1990 ;	genAssign
+   0824 90s03rD8           1991 	mov	dptr,#_display_brt_regs_mem_addr_1_1
+   0827 E0                 1992 	movx	a,@dptr
+   0828 FB                 1993 	mov	r3,a
+   0829 A3                 1994 	inc	dptr
+   082A E0                 1995 	movx	a,@dptr
+   082B FC                 1996 	mov	r4,a
+   082C A3                 1997 	inc	dptr
+   082D E0                 1998 	movx	a,@dptr
+   082E FD                 1999 	mov	r5,a
+   082F A3                 2000 	inc	dptr
+   0830 E0                 2001 	movx	a,@dptr
+   0831 FE                 2002 	mov	r6,a
+                           2003 ;	genAssign
+   0832 90s00r00           2004 	mov	dptr,#_dp_display_value_PARM_2
+   0835 E4                 2005 	clr	a
+   0836 F0                 2006 	movx	@dptr,a
+   0837 A3                 2007 	inc	dptr
+   0838 F0                 2008 	movx	@dptr,a
+                           2009 ;	genCall
+   0839 8B 82              2010 	mov	dpl,r3
+   083B 8C 83              2011 	mov	dph,r4
+   083D 8D F0              2012 	mov	b,r5
+   083F EE                 2013 	mov	a,r6
+   0840 C0 03              2014 	push	ar3
+   0842 C0 04              2015 	push	ar4
+   0844 C0 05              2016 	push	ar5
+   0846 C0 06              2017 	push	ar6
+   0848 12s00r00           2018 	lcall	_dp_display_value
+   084B D0 06              2019 	pop	ar6
+   084D D0 05              2020 	pop	ar5
+   084F D0 04              2021 	pop	ar4
+   0851 D0 03              2022 	pop	ar3
+                    0853   2023 	C$cli.c$115$2$2 ==.
+                           2024 ;	../cli.c:115: dp_display_text("\t");
+                           2025 ;	genCall
+   0853 75 82r2E           2026 	mov	dpl,#__str_11
+   0856 75 83s00           2027 	mov	dph,#(__str_11 >> 8)
+   0859 75 F0 80           2028 	mov	b,#0x80
+   085C C0 03              2029 	push	ar3
+   085E C0 04              2030 	push	ar4
+   0860 C0 05              2031 	push	ar5
+   0862 C0 06              2032 	push	ar6
+   0864 12s00r00           2033 	lcall	_dp_display_text
+   0867 D0 06              2034 	pop	ar6
+   0869 D0 05              2035 	pop	ar5
+   086B D0 04              2036 	pop	ar4
+   086D D0 03              2037 	pop	ar3
+                    086F   2038 	C$cli.c$116$2$2 ==.
+                           2039 ;	../cli.c:116: mem_data = HW_get_16bit_reg(mem_addr);
+                           2040 ;	genCast
+   086F 8B 07              2041 	mov	ar7,r3
+   0871 8C 00              2042 	mov	ar0,r4
+                           2043 ;	genCall
+   0873 8F 82              2044 	mov	dpl,r7
+   0875 88 83              2045 	mov	dph,r0
+   0877 C0 03              2046 	push	ar3
+   0879 C0 04              2047 	push	ar4
+   087B C0 05              2048 	push	ar5
+   087D C0 06              2049 	push	ar6
+   087F 12s00r00           2050 	lcall	_HW_get_16bit_reg
+   0882 AF 82              2051 	mov	r7,dpl
+   0884 A8 83              2052 	mov	r0,dph
+   0886 D0 06              2053 	pop	ar6
+   0888 D0 05              2054 	pop	ar5
+   088A D0 04              2055 	pop	ar4
+   088C D0 03              2056 	pop	ar3
+                           2057 ;	genCast
+   088E 79 00              2058 	mov	r1,#0x00
+   0890 7A 00              2059 	mov	r2,#0x00
+                    0892   2060 	C$cli.c$117$2$2 ==.
+                           2061 ;	../cli.c:117: dp_display_value(mem_data,HEX);
+                           2062 ;	genAssign
+   0892 90s00r00           2063 	mov	dptr,#_dp_display_value_PARM_2
+   0895 E4                 2064 	clr	a
+   0896 F0                 2065 	movx	@dptr,a
+   0897 A3                 2066 	inc	dptr
+   0898 F0                 2067 	movx	@dptr,a
+                           2068 ;	genCall
+   0899 8F 82              2069 	mov	dpl,r7
+   089B 88 83              2070 	mov	dph,r0
+   089D 89 F0              2071 	mov	b,r1
+   089F EA                 2072 	mov	a,r2
+   08A0 C0 03              2073 	push	ar3
+   08A2 C0 04              2074 	push	ar4
+   08A4 C0 05              2075 	push	ar5
+   08A6 C0 06              2076 	push	ar6
+   08A8 12s00r00           2077 	lcall	_dp_display_value
+   08AB D0 06              2078 	pop	ar6
+   08AD D0 05              2079 	pop	ar5
+   08AF D0 04              2080 	pop	ar4
+   08B1 D0 03              2081 	pop	ar3
+                    08B3   2082 	C$cli.c$118$2$2 ==.
+                           2083 ;	../cli.c:118: mem_addr = mem_addr++;
+                           2084 ;	genAssign
+   08B3 90s03rD8           2085 	mov	dptr,#_display_brt_regs_mem_addr_1_1
+   08B6 EB                 2086 	mov	a,r3
+   08B7 F0                 2087 	movx	@dptr,a
+   08B8 A3                 2088 	inc	dptr
+   08B9 EC                 2089 	mov	a,r4
+   08BA F0                 2090 	movx	@dptr,a
+   08BB A3                 2091 	inc	dptr
+   08BC ED                 2092 	mov	a,r5
+   08BD F0                 2093 	movx	@dptr,a
+   08BE A3                 2094 	inc	dptr
+   08BF EE                 2095 	mov	a,r6
+   08C0 F0                 2096 	movx	@dptr,a
+                    08C1   2097 	C$cli.c$110$1$1 ==.
+                           2098 ;	../cli.c:110: for ( i=0; i<= 32 ;i++) {
+                           2099 ;	genPlus
+   08C1 90s03rDC           2100 	mov	dptr,#_display_brt_regs_i_1_1
+                           2101 ;	genPlusIncr
+   08C4 E5*00              2102 	mov	a,_display_brt_regs_sloc0_1_0
+   08C6 04                 2103 	inc	a
+   08C7 F0                 2104 	movx	@dptr,a
+   08C8 02s07rE1           2105 	ljmp	00101$
+   08CB                    2106 00105$:
+                    08CB   2107 	C$cli.c$120$1$1 ==.
+                    08CB   2108 	XG$display_brt_regs$0$0 ==.
+   08CB 22                 2109 	ret
+                           2110 ;------------------------------------------------------------
+                           2111 ;Allocation info for local variables in function 'display_brt_data'
+                           2112 ;------------------------------------------------------------
+                           2113 ;subaddr                   Allocated with name '_display_brt_data_PARM_2'
+                           2114 ;brt_baseaddr              Allocated with name '_display_brt_data_brt_baseaddr_1_1'
+                           2115 ;mem_addr                  Allocated with name '_display_brt_data_mem_addr_1_1'
+                           2116 ;mem_data                  Allocated with name '_display_brt_data_mem_data_1_1'
+                           2117 ;tx_sub_address            Allocated with name '_display_brt_data_tx_sub_address_1_1'
+                           2118 ;rx_sub_address            Allocated with name '_display_brt_data_rx_sub_address_1_1'
+                           2119 ;i                         Allocated with name '_display_brt_data_i_1_1'
+                           2120 ;m                         Allocated with name '_display_brt_data_m_1_1'
+                           2121 ;------------------------------------------------------------
+                    08CC   2122 	G$display_brt_data$0$0 ==.
+                    08CC   2123 	C$cli.c$129$1$1 ==.
+                           2124 ;	../cli.c:129: void display_brt_data(uint32_t brt_baseaddr,uint8_t subaddr){
+                           2125 ;	-----------------------------------------
+                           2126 ;	 function display_brt_data
+                           2127 ;	-----------------------------------------
+   08CC                    2128 _display_brt_data:
+                           2129 ;	genReceive
+   08CC AA 82              2130 	mov	r2,dpl
+   08CE AB 83              2131 	mov	r3,dph
+   08D0 AC F0              2132 	mov	r4,b
+   08D2 FD                 2133 	mov	r5,a
+   08D3 90s03rDE           2134 	mov	dptr,#_display_brt_data_brt_baseaddr_1_1
+   08D6 EA                 2135 	mov	a,r2
+   08D7 F0                 2136 	movx	@dptr,a
+   08D8 A3                 2137 	inc	dptr
+   08D9 EB                 2138 	mov	a,r3
+   08DA F0                 2139 	movx	@dptr,a
+   08DB A3                 2140 	inc	dptr
+   08DC EC                 2141 	mov	a,r4
+   08DD F0                 2142 	movx	@dptr,a
+   08DE A3                 2143 	inc	dptr
+   08DF ED                 2144 	mov	a,r5
+   08E0 F0                 2145 	movx	@dptr,a
+                    08E1   2146 	C$cli.c$136$1$1 ==.
+                           2147 ;	../cli.c:136: mem_addr  = (APB3_BASE_ADDRESS +  brt_baseaddr);  // 16 location from here onwards
+                           2148 ;	genAssign
+   08E1 90s03rDE           2149 	mov	dptr,#_display_brt_data_brt_baseaddr_1_1
+   08E4 E0                 2150 	movx	a,@dptr
+   08E5 FA                 2151 	mov	r2,a
+   08E6 A3                 2152 	inc	dptr
+   08E7 E0                 2153 	movx	a,@dptr
+   08E8 FB                 2154 	mov	r3,a
+   08E9 A3                 2155 	inc	dptr
+   08EA E0                 2156 	movx	a,@dptr
+   08EB FC                 2157 	mov	r4,a
+   08EC A3                 2158 	inc	dptr
+   08ED E0                 2159 	movx	a,@dptr
+   08EE FD                 2160 	mov	r5,a
+                           2161 ;	genPlus
+                           2162 ;	genPlusIncr
+                           2163 ;     genPlus shortcut
+   08EF 74 F0              2164 	mov	a,#0xF0
+   08F1 25 03              2165 	add	a,ar3
+   08F3 FB                 2166 	mov	r3,a
+   08F4 74 00              2167 	mov	a,#0x00
+   08F6 35 04              2168 	addc	a,ar4
+   08F8 FC                 2169 	mov	r4,a
+   08F9 74 00              2170 	mov	a,#0x00
+   08FB 35 05              2171 	addc	a,ar5
+   08FD FD                 2172 	mov	r5,a
+                           2173 ;	genCast
+                    08FE   2174 	C$cli.c$138$1$1 ==.
+                           2175 ;	../cli.c:138: rx_sub_address = mem_addr + (BRT_RX_SA1 * subaddr);   //0x1080
+                           2176 ;	genAssign
+   08FE 90s03rDD           2177 	mov	dptr,#_display_brt_data_PARM_2
+   0901 E0                 2178 	movx	a,@dptr
+   0902 FC                 2179 	mov	r4,a
+                           2180 ;	genMult
+                           2181 ;	genMultOneByte
+   0903 EC                 2182 	mov	a,r4
+   0904 75 F0 20           2183 	mov	b,#0x20
+   0907 A4                 2184 	mul	ab
+                           2185 ;	genPlus
+   0908 25 02              2186 	add	a,ar2
+   090A FA                 2187 	mov	r2,a
+   090B E5 03              2188 	mov	a,ar3
+   090D 35 F0              2189 	addc	a,b
+   090F FB                 2190 	mov	r3,a
+                           2191 ;	genAssign
+   0910 90s03rE4           2192 	mov	dptr,#_display_brt_data_rx_sub_address_1_1
+   0913 EA                 2193 	mov	a,r2
+   0914 F0                 2194 	movx	@dptr,a
+   0915 A3                 2195 	inc	dptr
+   0916 EB                 2196 	mov	a,r3
+   0917 F0                 2197 	movx	@dptr,a
+                    0918   2198 	C$cli.c$139$1$1 ==.
+                           2199 ;	../cli.c:139: tx_sub_address = rx_sub_address + BRT_RX_TX_ADDR_OFSET;
+                           2200 ;	genPlus
+   0918 90s03rE2           2201 	mov	dptr,#_display_brt_data_tx_sub_address_1_1
+                           2202 ;	genPlusIncr
+                           2203 ;     genPlus shortcut
+   091B EA                 2204 	mov	a,r2
+   091C F0                 2205 	movx	@dptr,a
+   091D 74 04              2206 	mov	a,#0x04
+   091F 25 03              2207 	add	a,ar3
+   0921 A3                 2208 	inc	dptr
+   0922 F0                 2209 	movx	@dptr,a
+                    0923   2210 	C$cli.c$141$1$1 ==.
+                           2211 ;	../cli.c:141: dp_display_text("\n\r BRT SA");
+                           2212 ;	genCall
+   0923 75 82r30           2213 	mov	dpl,#__str_12
+   0926 75 83s00           2214 	mov	dph,#(__str_12 >> 8)
+   0929 75 F0 80           2215 	mov	b,#0x80
+   092C C0 04              2216 	push	ar4
+   092E 12s00r00           2217 	lcall	_dp_display_text
+   0931 D0 04              2218 	pop	ar4
+                    0933   2219 	C$cli.c$142$1$1 ==.
+                           2220 ;	../cli.c:142: dp_display_value(subaddr,DEC);
+                           2221 ;	genCast
+   0933 7A 00              2222 	mov	r2,#0x00
+   0935 7B 00              2223 	mov	r3,#0x00
+   0937 7D 00              2224 	mov	r5,#0x00
+                           2225 ;	genAssign
+   0939 90s00r00           2226 	mov	dptr,#_dp_display_value_PARM_2
+   093C 74 01              2227 	mov	a,#0x01
+   093E F0                 2228 	movx	@dptr,a
+   093F E4                 2229 	clr	a
+   0940 A3                 2230 	inc	dptr
+   0941 F0                 2231 	movx	@dptr,a
+                           2232 ;	genCall
+   0942 8C 82              2233 	mov	dpl,r4
+   0944 8A 83              2234 	mov	dph,r2
+   0946 8B F0              2235 	mov	b,r3
+   0948 ED                 2236 	mov	a,r5
+   0949 C0 02              2237 	push	ar2
+   094B C0 03              2238 	push	ar3
+   094D C0 04              2239 	push	ar4
+   094F C0 05              2240 	push	ar5
+   0951 12s00r00           2241 	lcall	_dp_display_value
+   0954 D0 05              2242 	pop	ar5
+   0956 D0 04              2243 	pop	ar4
+   0958 D0 03              2244 	pop	ar3
+   095A D0 02              2245 	pop	ar2
+                    095C   2246 	C$cli.c$143$1$1 ==.
+                           2247 ;	../cli.c:143: dp_display_text("   RX Buffer\r\n");
+                           2248 ;	genCall
+   095C 75 82r3A           2249 	mov	dpl,#__str_13
+   095F 75 83s00           2250 	mov	dph,#(__str_13 >> 8)
+   0962 75 F0 80           2251 	mov	b,#0x80
+   0965 C0 02              2252 	push	ar2
+   0967 C0 03              2253 	push	ar3
+   0969 C0 04              2254 	push	ar4
+   096B C0 05              2255 	push	ar5
+   096D 12s00r00           2256 	lcall	_dp_display_text
+   0970 D0 05              2257 	pop	ar5
+   0972 D0 04              2258 	pop	ar4
+   0974 D0 03              2259 	pop	ar3
+   0976 D0 02              2260 	pop	ar2
+                    0978   2261 	C$cli.c$145$1$1 ==.
+                           2262 ;	../cli.c:145: for ( i=1; i <= 4 ;i++) {
+                           2263 ;	genAssign
+   0978 90s03rE6           2264 	mov	dptr,#_display_brt_data_i_1_1
+   097B 74 01              2265 	mov	a,#0x01
+   097D F0                 2266 	movx	@dptr,a
+   097E                    2267 00104$:
+                           2268 ;	genAssign
+   097E 90s03rE6           2269 	mov	dptr,#_display_brt_data_i_1_1
+   0981 E0                 2270 	movx	a,@dptr
+   0982 FE                 2271 	mov	r6,a
+                           2272 ;	genCmpGt
+                           2273 ;	genCmp
+   0983 C3                 2274 	clr	c
+   0984 74 04              2275 	mov	a,#0x04
+   0986 9E                 2276 	subb	a,r6
+                           2277 ;	genIfxJump
+   0987 50 03              2278 	jnc	00125$
+   0989 02s0ArFE           2279 	ljmp	00107$
+   098C                    2280 00125$:
+                    098C   2281 	C$cli.c$146$2$2 ==.
+                           2282 ;	../cli.c:146: dp_display_text("\r\n");
+                           2283 ;	genCall
+   098C 75 82r2B           2284 	mov	dpl,#__str_10
+   098F 75 83s00           2285 	mov	dph,#(__str_10 >> 8)
+   0992 75 F0 80           2286 	mov	b,#0x80
+   0995 C0 02              2287 	push	ar2
+   0997 C0 03              2288 	push	ar3
+   0999 C0 04              2289 	push	ar4
+   099B C0 05              2290 	push	ar5
+   099D C0 06              2291 	push	ar6
+   099F 12s00r00           2292 	lcall	_dp_display_text
+   09A2 D0 06              2293 	pop	ar6
+   09A4 D0 05              2294 	pop	ar5
+   09A6 D0 04              2295 	pop	ar4
+   09A8 D0 03              2296 	pop	ar3
+   09AA D0 02              2297 	pop	ar2
+                    09AC   2298 	C$cli.c$147$2$2 ==.
+                           2299 ;	../cli.c:147: dp_display_value(i,DEC);
+                           2300 ;	genCast
+   09AC 7F 00              2301 	mov	r7,#0x00
+   09AE 78 00              2302 	mov	r0,#0x00
+   09B0 79 00              2303 	mov	r1,#0x00
+                           2304 ;	genAssign
+   09B2 90s00r00           2305 	mov	dptr,#_dp_display_value_PARM_2
+   09B5 74 01              2306 	mov	a,#0x01
+   09B7 F0                 2307 	movx	@dptr,a
+   09B8 E4                 2308 	clr	a
+   09B9 A3                 2309 	inc	dptr
+   09BA F0                 2310 	movx	@dptr,a
+                           2311 ;	genCall
+   09BB 8E 82              2312 	mov	dpl,r6
+   09BD 8F 83              2313 	mov	dph,r7
+   09BF 88 F0              2314 	mov	b,r0
+   09C1 E9                 2315 	mov	a,r1
+   09C2 C0 02              2316 	push	ar2
+   09C4 C0 03              2317 	push	ar3
+   09C6 C0 04              2318 	push	ar4
+   09C8 C0 05              2319 	push	ar5
+   09CA 12s00r00           2320 	lcall	_dp_display_value
+   09CD D0 05              2321 	pop	ar5
+   09CF D0 04              2322 	pop	ar4
+   09D1 D0 03              2323 	pop	ar3
+   09D3 D0 02              2324 	pop	ar2
+                    09D5   2325 	C$cli.c$148$2$2 ==.
+                           2326 ;	../cli.c:148: dp_display_text("\t");
+                           2327 ;	genCall
+   09D5 75 82r2E           2328 	mov	dpl,#__str_11
+   09D8 75 83s00           2329 	mov	dph,#(__str_11 >> 8)
+   09DB 75 F0 80           2330 	mov	b,#0x80
+   09DE C0 02              2331 	push	ar2
+   09E0 C0 03              2332 	push	ar3
+   09E2 C0 04              2333 	push	ar4
+   09E4 C0 05              2334 	push	ar5
+   09E6 12s00r00           2335 	lcall	_dp_display_text
+   09E9 D0 05              2336 	pop	ar5
+   09EB D0 04              2337 	pop	ar4
+   09ED D0 03              2338 	pop	ar3
+   09EF D0 02              2339 	pop	ar2
+                    09F1   2340 	C$cli.c$149$2$2 ==.
+                           2341 ;	../cli.c:149: dp_display_value(rx_sub_address ,HEX);// ( 8* i) for calculating current address of the total 32 location
+                           2342 ;	genAssign
+   09F1 90s03rE4           2343 	mov	dptr,#_display_brt_data_rx_sub_address_1_1
+   09F4 E0                 2344 	movx	a,@dptr
+   09F5 FE                 2345 	mov	r6,a
+   09F6 A3                 2346 	inc	dptr
+   09F7 E0                 2347 	movx	a,@dptr
+   09F8 FF                 2348 	mov	r7,a
+                           2349 ;	genCast
+   09F9 78 00              2350 	mov	r0,#0x00
+   09FB 79 00              2351 	mov	r1,#0x00
+                           2352 ;	genAssign
+   09FD 90s00r00           2353 	mov	dptr,#_dp_display_value_PARM_2
+   0A00 E4                 2354 	clr	a
+   0A01 F0                 2355 	movx	@dptr,a
+   0A02 A3                 2356 	inc	dptr
+   0A03 F0                 2357 	movx	@dptr,a
+                           2358 ;	genCall
+   0A04 8E 82              2359 	mov	dpl,r6
+   0A06 8F 83              2360 	mov	dph,r7
+   0A08 88 F0              2361 	mov	b,r0
+   0A0A E9                 2362 	mov	a,r1
+   0A0B C0 02              2363 	push	ar2
+   0A0D C0 03              2364 	push	ar3
+   0A0F C0 04              2365 	push	ar4
+   0A11 C0 05              2366 	push	ar5
+   0A13 12s00r00           2367 	lcall	_dp_display_value
+   0A16 D0 05              2368 	pop	ar5
+   0A18 D0 04              2369 	pop	ar4
+   0A1A D0 03              2370 	pop	ar3
+   0A1C D0 02              2371 	pop	ar2
+                    0A1E   2372 	C$cli.c$150$2$2 ==.
+                           2373 ;	../cli.c:150: dp_display_text("\t");
+                           2374 ;	genCall
+   0A1E 75 82r2E           2375 	mov	dpl,#__str_11
+   0A21 75 83s00           2376 	mov	dph,#(__str_11 >> 8)
+   0A24 75 F0 80           2377 	mov	b,#0x80
+   0A27 C0 02              2378 	push	ar2
+   0A29 C0 03              2379 	push	ar3
+   0A2B C0 04              2380 	push	ar4
+   0A2D C0 05              2381 	push	ar5
+   0A2F 12s00r00           2382 	lcall	_dp_display_text
+   0A32 D0 05              2383 	pop	ar5
+   0A34 D0 04              2384 	pop	ar4
+   0A36 D0 03              2385 	pop	ar3
+   0A38 D0 02              2386 	pop	ar2
+                    0A3A   2387 	C$cli.c$152$2$2 ==.
+                           2388 ;	../cli.c:152: for (m=1; m <=8 ;m++){
+                           2389 ;	genAssign
+   0A3A 90s03rE7           2390 	mov	dptr,#_display_brt_data_m_1_1
+   0A3D 74 08              2391 	mov	a,#0x08
+   0A3F F0                 2392 	movx	@dptr,a
+   0A40                    2393 00103$:
+                    0A40   2394 	C$cli.c$154$1$1 ==.
+                           2395 ;	../cli.c:154: mem_data= HW_get_16bit_reg(rx_sub_address);
+                           2396 ;	genIpush
+   0A40 C0 04              2397 	push	ar4
+   0A42 C0 02              2398 	push	ar2
+   0A44 C0 03              2399 	push	ar3
+   0A46 C0 05              2400 	push	ar5
+                           2401 ;	genAssign
+   0A48 90s03rE4           2402 	mov	dptr,#_display_brt_data_rx_sub_address_1_1
+   0A4B E0                 2403 	movx	a,@dptr
+   0A4C FE                 2404 	mov	r6,a
+   0A4D A3                 2405 	inc	dptr
+   0A4E E0                 2406 	movx	a,@dptr
+   0A4F FF                 2407 	mov	r7,a
+                           2408 ;	genCall
+   0A50 8E 82              2409 	mov	dpl,r6
+   0A52 8F 83              2410 	mov	dph,r7
+   0A54 C0 02              2411 	push	ar2
+   0A56 C0 03              2412 	push	ar3
+   0A58 C0 04              2413 	push	ar4
+   0A5A C0 05              2414 	push	ar5
+   0A5C C0 06              2415 	push	ar6
+   0A5E C0 07              2416 	push	ar7
+   0A60 12s00r00           2417 	lcall	_HW_get_16bit_reg
+   0A63 A8 82              2418 	mov	r0,dpl
+   0A65 A9 83              2419 	mov	r1,dph
+   0A67 D0 07              2420 	pop	ar7
+   0A69 D0 06              2421 	pop	ar6
+   0A6B D0 05              2422 	pop	ar5
+   0A6D D0 04              2423 	pop	ar4
+   0A6F D0 03              2424 	pop	ar3
+   0A71 D0 02              2425 	pop	ar2
+                    0A73   2426 	C$cli.c$155$3$3 ==.
+                           2427 ;	../cli.c:155: dp_display_value(mem_data,HEX);
+                           2428 ;	genCast
+   0A73 7A 00              2429 	mov	r2,#0x00
+   0A75 7B 00              2430 	mov	r3,#0x00
+                           2431 ;	genAssign
+   0A77 90s00r00           2432 	mov	dptr,#_dp_display_value_PARM_2
+   0A7A E4                 2433 	clr	a
+   0A7B F0                 2434 	movx	@dptr,a
+   0A7C A3                 2435 	inc	dptr
+   0A7D F0                 2436 	movx	@dptr,a
+                           2437 ;	genCall
+   0A7E 88 82              2438 	mov	dpl,r0
+   0A80 89 83              2439 	mov	dph,r1
+   0A82 8A F0              2440 	mov	b,r2
+   0A84 EB                 2441 	mov	a,r3
+   0A85 C0 02              2442 	push	ar2
+   0A87 C0 03              2443 	push	ar3
+   0A89 C0 04              2444 	push	ar4
+   0A8B C0 05              2445 	push	ar5
+   0A8D C0 06              2446 	push	ar6
+   0A8F C0 07              2447 	push	ar7
+   0A91 12s00r00           2448 	lcall	_dp_display_value
+   0A94 D0 07              2449 	pop	ar7
+   0A96 D0 06              2450 	pop	ar6
+   0A98 D0 05              2451 	pop	ar5
+   0A9A D0 04              2452 	pop	ar4
+   0A9C D0 03              2453 	pop	ar3
+   0A9E D0 02              2454 	pop	ar2
+                    0AA0   2455 	C$cli.c$156$3$3 ==.
+                           2456 ;	../cli.c:156: dp_display_text("\t");
+                           2457 ;	genCall
+   0AA0 75 82r2E           2458 	mov	dpl,#__str_11
+   0AA3 75 83s00           2459 	mov	dph,#(__str_11 >> 8)
+   0AA6 75 F0 80           2460 	mov	b,#0x80
+   0AA9 C0 02              2461 	push	ar2
+   0AAB C0 03              2462 	push	ar3
+   0AAD C0 04              2463 	push	ar4
+   0AAF C0 05              2464 	push	ar5
+   0AB1 C0 06              2465 	push	ar6
+   0AB3 C0 07              2466 	push	ar7
+   0AB5 12s00r00           2467 	lcall	_dp_display_text
+   0AB8 D0 07              2468 	pop	ar7
+   0ABA D0 06              2469 	pop	ar6
+   0ABC D0 05              2470 	pop	ar5
+   0ABE D0 04              2471 	pop	ar4
+   0AC0 D0 03              2472 	pop	ar3
+   0AC2 D0 02              2473 	pop	ar2
+                    0AC4   2474 	C$cli.c$157$3$3 ==.
+                           2475 ;	../cli.c:157: rx_sub_address = rx_sub_address + 1;
+                           2476 ;	genPlus
+   0AC4 90s03rE4           2477 	mov	dptr,#_display_brt_data_rx_sub_address_1_1
+                           2478 ;	genPlusIncr
+   0AC7 74 01              2479 	mov	a,#0x01
+   0AC9 25 06              2480 	add	a,ar6
+   0ACB F0                 2481 	movx	@dptr,a
+   0ACC 74 00              2482 	mov	a,#0x00
+   0ACE 35 07              2483 	addc	a,ar7
+   0AD0 A3                 2484 	inc	dptr
+   0AD1 F0                 2485 	movx	@dptr,a
+                           2486 ;	genAssign
+   0AD2 90s03rE7           2487 	mov	dptr,#_display_brt_data_m_1_1
+   0AD5 E0                 2488 	movx	a,@dptr
+   0AD6 FA                 2489 	mov	r2,a
+                           2490 ;	genMinus
+                           2491 ;	genMinusDec
+   0AD7 EA                 2492 	mov	a,r2
+   0AD8 14                 2493 	dec	a
+                           2494 ;	genAssign
+   0AD9 90s03rE7           2495 	mov	dptr,#_display_brt_data_m_1_1
+   0ADC F0                 2496 	movx	@dptr,a
+                    0ADD   2497 	C$cli.c$152$3$3 ==.
+                           2498 ;	../cli.c:152: for (m=1; m <=8 ;m++){
+                           2499 ;	genAssign
+   0ADD 90s03rE7           2500 	mov	dptr,#_display_brt_data_m_1_1
+   0AE0 E0                 2501 	movx	a,@dptr
+   0AE1 FA                 2502 	mov	r2,a
+                           2503 ;	genIfx
+   0AE2 EA                 2504 	mov	a,r2
+                           2505 ;	genIpop
+   0AE3 D0 05              2506 	pop	ar5
+   0AE5 D0 03              2507 	pop	ar3
+   0AE7 D0 02              2508 	pop	ar2
+   0AE9 D0 04              2509 	pop	ar4
+                           2510 ;	genIfxJump
+   0AEB 60 03              2511 	jz	00126$
+   0AED 02s0Ar40           2512 	ljmp	00103$
+   0AF0                    2513 00126$:
+                    0AF0   2514 	C$cli.c$145$1$1 ==.
+                           2515 ;	../cli.c:145: for ( i=1; i <= 4 ;i++) {
+                           2516 ;	genAssign
+   0AF0 90s03rE6           2517 	mov	dptr,#_display_brt_data_i_1_1
+   0AF3 E0                 2518 	movx	a,@dptr
+   0AF4 FE                 2519 	mov	r6,a
+                           2520 ;	genPlus
+   0AF5 90s03rE6           2521 	mov	dptr,#_display_brt_data_i_1_1
+                           2522 ;	genPlusIncr
+   0AF8 EE                 2523 	mov	a,r6
+   0AF9 04                 2524 	inc	a
+   0AFA F0                 2525 	movx	@dptr,a
+   0AFB 02s09r7E           2526 	ljmp	00104$
+   0AFE                    2527 00107$:
+                    0AFE   2528 	C$cli.c$163$1$1 ==.
+                           2529 ;	../cli.c:163: dp_display_text("\n\r BRT SA");
+                           2530 ;	genCall
+   0AFE 75 82r30           2531 	mov	dpl,#__str_12
+   0B01 75 83s00           2532 	mov	dph,#(__str_12 >> 8)
+   0B04 75 F0 80           2533 	mov	b,#0x80
+   0B07 C0 02              2534 	push	ar2
+   0B09 C0 03              2535 	push	ar3
+   0B0B C0 04              2536 	push	ar4
+   0B0D C0 05              2537 	push	ar5
+   0B0F 12s00r00           2538 	lcall	_dp_display_text
+   0B12 D0 05              2539 	pop	ar5
+   0B14 D0 04              2540 	pop	ar4
+   0B16 D0 03              2541 	pop	ar3
+   0B18 D0 02              2542 	pop	ar2
+                    0B1A   2543 	C$cli.c$164$1$1 ==.
+                           2544 ;	../cli.c:164: dp_display_value(subaddr,DEC);
+                           2545 ;	genAssign
+   0B1A 90s00r00           2546 	mov	dptr,#_dp_display_value_PARM_2
+   0B1D 74 01              2547 	mov	a,#0x01
+   0B1F F0                 2548 	movx	@dptr,a
+   0B20 E4                 2549 	clr	a
+   0B21 A3                 2550 	inc	dptr
+   0B22 F0                 2551 	movx	@dptr,a
+                           2552 ;	genCall
+   0B23 8C 82              2553 	mov	dpl,r4
+   0B25 8A 83              2554 	mov	dph,r2
+   0B27 8B F0              2555 	mov	b,r3
+   0B29 ED                 2556 	mov	a,r5
+   0B2A 12s00r00           2557 	lcall	_dp_display_value
+                    0B2D   2558 	C$cli.c$165$1$1 ==.
+                           2559 ;	../cli.c:165: dp_display_text("  TX Buffer\r\n");
+                           2560 ;	genCall
+   0B2D 75 82r49           2561 	mov	dpl,#__str_14
+   0B30 75 83s00           2562 	mov	dph,#(__str_14 >> 8)
+   0B33 75 F0 80           2563 	mov	b,#0x80
+   0B36 12s00r00           2564 	lcall	_dp_display_text
+                    0B39   2565 	C$cli.c$167$1$1 ==.
+                           2566 ;	../cli.c:167: for ( i=1; i <= 4 ;i++) {
+                           2567 ;	genAssign
+   0B39 90s03rE6           2568 	mov	dptr,#_display_brt_data_i_1_1
+   0B3C 74 01              2569 	mov	a,#0x01
+   0B3E F0                 2570 	movx	@dptr,a
+   0B3F                    2571 00111$:
+                           2572 ;	genAssign
+   0B3F 90s03rE6           2573 	mov	dptr,#_display_brt_data_i_1_1
+   0B42 E0                 2574 	movx	a,@dptr
+   0B43 FA                 2575 	mov	r2,a
+                           2576 ;	genCmpGt
+                           2577 ;	genCmp
+   0B44 C3                 2578 	clr	c
+   0B45 74 04              2579 	mov	a,#0x04
+   0B47 9A                 2580 	subb	a,r2
+                           2581 ;	genIfxJump
+   0B48 50 03              2582 	jnc	00127$
+   0B4A 02s0Cr2F           2583 	ljmp	00115$
+   0B4D                    2584 00127$:
+                    0B4D   2585 	C$cli.c$168$2$4 ==.
+                           2586 ;	../cli.c:168: dp_display_text("\r\n");
+                           2587 ;	genCall
+   0B4D 75 82r2B           2588 	mov	dpl,#__str_10
+   0B50 75 83s00           2589 	mov	dph,#(__str_10 >> 8)
+   0B53 75 F0 80           2590 	mov	b,#0x80
+   0B56 C0 02              2591 	push	ar2
+   0B58 12s00r00           2592 	lcall	_dp_display_text
+   0B5B D0 02              2593 	pop	ar2
+                    0B5D   2594 	C$cli.c$169$2$4 ==.
+                           2595 ;	../cli.c:169: dp_display_value(i,DEC);
+                           2596 ;	genCast
+   0B5D 7B 00              2597 	mov	r3,#0x00
+   0B5F 7C 00              2598 	mov	r4,#0x00
+   0B61 7D 00              2599 	mov	r5,#0x00
+                           2600 ;	genAssign
+   0B63 90s00r00           2601 	mov	dptr,#_dp_display_value_PARM_2
+   0B66 74 01              2602 	mov	a,#0x01
+   0B68 F0                 2603 	movx	@dptr,a
+   0B69 E4                 2604 	clr	a
+   0B6A A3                 2605 	inc	dptr
+   0B6B F0                 2606 	movx	@dptr,a
+                           2607 ;	genCall
+   0B6C 8A 82              2608 	mov	dpl,r2
+   0B6E 8B 83              2609 	mov	dph,r3
+   0B70 8C F0              2610 	mov	b,r4
+   0B72 ED                 2611 	mov	a,r5
+   0B73 12s00r00           2612 	lcall	_dp_display_value
+                    0B76   2613 	C$cli.c$170$2$4 ==.
+                           2614 ;	../cli.c:170: dp_display_text("\t");
+                           2615 ;	genCall
+   0B76 75 82r2E           2616 	mov	dpl,#__str_11
+   0B79 75 83s00           2617 	mov	dph,#(__str_11 >> 8)
+   0B7C 75 F0 80           2618 	mov	b,#0x80
+   0B7F 12s00r00           2619 	lcall	_dp_display_text
+                    0B82   2620 	C$cli.c$171$2$4 ==.
+                           2621 ;	../cli.c:171: dp_display_value(tx_sub_address,HEX);
+                           2622 ;	genAssign
+   0B82 90s03rE2           2623 	mov	dptr,#_display_brt_data_tx_sub_address_1_1
+   0B85 E0                 2624 	movx	a,@dptr
+   0B86 FA                 2625 	mov	r2,a
+   0B87 A3                 2626 	inc	dptr
+   0B88 E0                 2627 	movx	a,@dptr
+   0B89 FB                 2628 	mov	r3,a
+                           2629 ;	genCast
+   0B8A 7C 00              2630 	mov	r4,#0x00
+   0B8C 7D 00              2631 	mov	r5,#0x00
+                           2632 ;	genAssign
+   0B8E 90s00r00           2633 	mov	dptr,#_dp_display_value_PARM_2
+   0B91 E4                 2634 	clr	a
+   0B92 F0                 2635 	movx	@dptr,a
+   0B93 A3                 2636 	inc	dptr
+   0B94 F0                 2637 	movx	@dptr,a
+                           2638 ;	genCall
+   0B95 8A 82              2639 	mov	dpl,r2
+   0B97 8B 83              2640 	mov	dph,r3
+   0B99 8C F0              2641 	mov	b,r4
+   0B9B ED                 2642 	mov	a,r5
+   0B9C 12s00r00           2643 	lcall	_dp_display_value
+                    0B9F   2644 	C$cli.c$172$2$4 ==.
+                           2645 ;	../cli.c:172: dp_display_text("\t");
+                           2646 ;	genCall
+   0B9F 75 82r2E           2647 	mov	dpl,#__str_11
+   0BA2 75 83s00           2648 	mov	dph,#(__str_11 >> 8)
+   0BA5 75 F0 80           2649 	mov	b,#0x80
+   0BA8 12s00r00           2650 	lcall	_dp_display_text
+                    0BAB   2651 	C$cli.c$174$2$4 ==.
+                           2652 ;	../cli.c:174: for (m=1; m <=8 ;m++){
+                           2653 ;	genAssign
+   0BAB 90s03rE7           2654 	mov	dptr,#_display_brt_data_m_1_1
+   0BAE 74 08              2655 	mov	a,#0x08
+   0BB0 F0                 2656 	movx	@dptr,a
+   0BB1                    2657 00110$:
+                    0BB1   2658 	C$cli.c$176$3$5 ==.
+                           2659 ;	../cli.c:176: mem_data= HW_get_16bit_reg(tx_sub_address);
+                           2660 ;	genAssign
+   0BB1 90s03rE2           2661 	mov	dptr,#_display_brt_data_tx_sub_address_1_1
+   0BB4 E0                 2662 	movx	a,@dptr
+   0BB5 FA                 2663 	mov	r2,a
+   0BB6 A3                 2664 	inc	dptr
+   0BB7 E0                 2665 	movx	a,@dptr
+   0BB8 FB                 2666 	mov	r3,a
+                           2667 ;	genCall
+   0BB9 8A 82              2668 	mov	dpl,r2
+   0BBB 8B 83              2669 	mov	dph,r3
+   0BBD C0 02              2670 	push	ar2
+   0BBF C0 03              2671 	push	ar3
+   0BC1 12s00r00           2672 	lcall	_HW_get_16bit_reg
+   0BC4 AC 82              2673 	mov	r4,dpl
+   0BC6 AD 83              2674 	mov	r5,dph
+   0BC8 D0 03              2675 	pop	ar3
+   0BCA D0 02              2676 	pop	ar2
+                    0BCC   2677 	C$cli.c$177$3$5 ==.
+                           2678 ;	../cli.c:177: dp_display_value(mem_data,HEX);
+                           2679 ;	genCast
+   0BCC 7E 00              2680 	mov	r6,#0x00
+   0BCE 7F 00              2681 	mov	r7,#0x00
+                           2682 ;	genAssign
+   0BD0 90s00r00           2683 	mov	dptr,#_dp_display_value_PARM_2
+   0BD3 E4                 2684 	clr	a
+   0BD4 F0                 2685 	movx	@dptr,a
+   0BD5 A3                 2686 	inc	dptr
+   0BD6 F0                 2687 	movx	@dptr,a
+                           2688 ;	genCall
+   0BD7 8C 82              2689 	mov	dpl,r4
+   0BD9 8D 83              2690 	mov	dph,r5
+   0BDB 8E F0              2691 	mov	b,r6
+   0BDD EF                 2692 	mov	a,r7
+   0BDE C0 02              2693 	push	ar2
+   0BE0 C0 03              2694 	push	ar3
+   0BE2 12s00r00           2695 	lcall	_dp_display_value
+   0BE5 D0 03              2696 	pop	ar3
+   0BE7 D0 02              2697 	pop	ar2
+                    0BE9   2698 	C$cli.c$178$3$5 ==.
+                           2699 ;	../cli.c:178: dp_display_text("\t");
+                           2700 ;	genCall
+   0BE9 75 82r2E           2701 	mov	dpl,#__str_11
+   0BEC 75 83s00           2702 	mov	dph,#(__str_11 >> 8)
+   0BEF 75 F0 80           2703 	mov	b,#0x80
+   0BF2 C0 02              2704 	push	ar2
+   0BF4 C0 03              2705 	push	ar3
+   0BF6 12s00r00           2706 	lcall	_dp_display_text
+   0BF9 D0 03              2707 	pop	ar3
+   0BFB D0 02              2708 	pop	ar2
+                    0BFD   2709 	C$cli.c$179$3$5 ==.
+                           2710 ;	../cli.c:179: tx_sub_address = tx_sub_address + 1;
+                           2711 ;	genPlus
+   0BFD 90s03rE2           2712 	mov	dptr,#_display_brt_data_tx_sub_address_1_1
+                           2713 ;	genPlusIncr
+   0C00 74 01              2714 	mov	a,#0x01
+   0C02 25 02              2715 	add	a,ar2
+   0C04 F0                 2716 	movx	@dptr,a
+   0C05 74 00              2717 	mov	a,#0x00
+   0C07 35 03              2718 	addc	a,ar3
+   0C09 A3                 2719 	inc	dptr
+   0C0A F0                 2720 	movx	@dptr,a
+                           2721 ;	genAssign
+   0C0B 90s03rE7           2722 	mov	dptr,#_display_brt_data_m_1_1
+   0C0E E0                 2723 	movx	a,@dptr
+   0C0F FA                 2724 	mov	r2,a
+                           2725 ;	genMinus
+                           2726 ;	genMinusDec
+   0C10 EA                 2727 	mov	a,r2
+   0C11 14                 2728 	dec	a
+                           2729 ;	genAssign
+   0C12 90s03rE7           2730 	mov	dptr,#_display_brt_data_m_1_1
+   0C15 F0                 2731 	movx	@dptr,a
+                    0C16   2732 	C$cli.c$174$3$5 ==.
+                           2733 ;	../cli.c:174: for (m=1; m <=8 ;m++){
+                           2734 ;	genAssign
+   0C16 90s03rE7           2735 	mov	dptr,#_display_brt_data_m_1_1
+   0C19 E0                 2736 	movx	a,@dptr
+   0C1A FA                 2737 	mov	r2,a
+                           2738 ;	genIfx
+   0C1B EA                 2739 	mov	a,r2
+                           2740 ;	genIfxJump
+   0C1C 60 03              2741 	jz	00128$
+   0C1E 02s0BrB1           2742 	ljmp	00110$
+   0C21                    2743 00128$:
+                    0C21   2744 	C$cli.c$167$1$1 ==.
+                           2745 ;	../cli.c:167: for ( i=1; i <= 4 ;i++) {
+                           2746 ;	genAssign
+   0C21 90s03rE6           2747 	mov	dptr,#_display_brt_data_i_1_1
+   0C24 E0                 2748 	movx	a,@dptr
+   0C25 FA                 2749 	mov	r2,a
+                           2750 ;	genPlus
+   0C26 90s03rE6           2751 	mov	dptr,#_display_brt_data_i_1_1
+                           2752 ;	genPlusIncr
+   0C29 EA                 2753 	mov	a,r2
+   0C2A 04                 2754 	inc	a
+   0C2B F0                 2755 	movx	@dptr,a
+   0C2C 02s0Br3F           2756 	ljmp	00111$
+   0C2F                    2757 00115$:
+                    0C2F   2758 	C$cli.c$184$1$1 ==.
+                    0C2F   2759 	XG$display_brt_data$0$0 ==.
+   0C2F 22                 2760 	ret
+                           2761 ;------------------------------------------------------------
+                           2762 ;Allocation info for local variables in function 'process_uart_data'
+                           2763 ;------------------------------------------------------------
+                           2764 ;key                       Allocated with name '_process_uart_data_key_1_1'
+                           2765 ;------------------------------------------------------------
+                    0C30   2766 	G$process_uart_data$0$0 ==.
+                    0C30   2767 	C$cli.c$192$1$1 ==.
+                           2768 ;	../cli.c:192: void process_uart_data(uint8_t key)
+                           2769 ;	-----------------------------------------
+                           2770 ;	 function process_uart_data
+                           2771 ;	-----------------------------------------
+   0C30                    2772 _process_uart_data:
+                           2773 ;	genReceive
+   0C30 E5 82              2774 	mov	a,dpl
+   0C32 90s03rE8           2775 	mov	dptr,#_process_uart_data_key_1_1
+   0C35 F0                 2776 	movx	@dptr,a
+                    0C36   2777 	C$cli.c$194$1$1 ==.
+                           2778 ;	../cli.c:194: switch(key)
+                           2779 ;	genAssign
+   0C36 90s03rE8           2780 	mov	dptr,#_process_uart_data_key_1_1
+   0C39 E0                 2781 	movx	a,@dptr
+   0C3A FA                 2782 	mov	r2,a
+                           2783 ;	genCmpEq
+                           2784 ;	gencjneshort
+   0C3B BA 44 03           2785 	cjne	r2,#0x44,00116$
+   0C3E 02s0Cr6D           2786 	ljmp	00106$
+   0C41                    2787 00116$:
+                           2788 ;	genCmpEq
+                           2789 ;	gencjneshort
+   0C41 BA 48 03           2790 	cjne	r2,#0x48,00117$
+   0C44 02s0Cr67           2791 	ljmp	00104$
+   0C47                    2792 00117$:
+                           2793 ;	genCmpEq
+                           2794 ;	gencjneshort
+   0C47 BA 52 03           2795 	cjne	r2,#0x52,00118$
+   0C4A 02s0Cr61           2796 	ljmp	00102$
+   0C4D                    2797 00118$:
+                           2798 ;	genCmpEq
+                           2799 ;	gencjneshort
+   0C4D BA 64 03           2800 	cjne	r2,#0x64,00119$
+   0C50 02s0Cr6D           2801 	ljmp	00106$
+   0C53                    2802 00119$:
+                           2803 ;	genCmpEq
+                           2804 ;	gencjneshort
+   0C53 BA 68 03           2805 	cjne	r2,#0x68,00120$
+   0C56 02s0Cr67           2806 	ljmp	00104$
+   0C59                    2807 00120$:
+                           2808 ;	genCmpEq
+                           2809 ;	gencjneshort
+   0C59 BA 72 02           2810 	cjne	r2,#0x72,00121$
+   0C5C 80 03              2811 	sjmp	00122$
+   0C5E                    2812 00121$:
+   0C5E 02s0Cr84           2813 	ljmp	00108$
+   0C61                    2814 00122$:
+                    0C61   2815 	C$cli.c$197$2$2 ==.
+                           2816 ;	../cli.c:197: case 'R' : case 'r':
+   0C61                    2817 00102$:
+                    0C61   2818 	C$cli.c$200$3$3 ==.
+                           2819 ;	../cli.c:200: display_brt_regs();
+                           2820 ;	genCall
+   0C61 12s07rBD           2821 	lcall	_display_brt_regs
+                    0C64   2822 	C$cli.c$204$3$3 ==.
+                           2823 ;	../cli.c:204: break;
+   0C64 02s0Cr84           2824 	ljmp	00108$
+                    0C67   2825 	C$cli.c$209$2$2 ==.
+                           2826 ;	../cli.c:209: case 'H': case 'h':
+   0C67                    2827 00104$:
+                    0C67   2828 	C$cli.c$212$3$4 ==.
+                           2829 ;	../cli.c:212: display_help();
+                           2830 ;	genCall
+   0C67 12s00r00           2831 	lcall	_display_help
+                    0C6A   2832 	C$cli.c$213$3$4 ==.
+                           2833 ;	../cli.c:213: break;
+   0C6A 02s0Cr84           2834 	ljmp	00108$
+                    0C6D   2835 	C$cli.c$216$2$2 ==.
+                           2836 ;	../cli.c:216: case 'D': case 'd':
+   0C6D                    2837 00106$:
+                    0C6D   2838 	C$cli.c$242$3$5 ==.
+                           2839 ;	../cli.c:242: display_brt_data(CORE1553BRT_0 ,1);
+                           2840 ;	genAssign
+   0C6D 90s03rDD           2841 	mov	dptr,#_display_brt_data_PARM_2
+   0C70 74 01              2842 	mov	a,#0x01
+   0C72 F0                 2843 	movx	@dptr,a
+                           2844 ;	genCall
+   0C73 75 82 00           2845 	mov	dpl,#0x00
+   0C76 75 83 08           2846 	mov	dph,#0x08
+   0C79 75 F0 00           2847 	mov	b,#0x00
+   0C7C 74 00              2848 	mov	a,#0x00
+   0C7E 12s08rCC           2849 	lcall	_display_brt_data
+                    0C81   2850 	C$cli.c$243$3$5 ==.
+                           2851 ;	../cli.c:243: display_mem_data();
+                           2852 ;	genCall
+   0C81 12s0Cr88           2853 	lcall	_display_mem_data
+                    0C84   2854 	C$cli.c$253$1$1 ==.
+                           2855 ;	../cli.c:253: }
+   0C84                    2856 00108$:
+                    0C84   2857 	C$cli.c$256$1$1 ==.
+                           2858 ;	../cli.c:256: display_prompt();
+                           2859 ;	genCall
+   0C84 12s06r5B           2860 	lcall	_display_prompt
+   0C87                    2861 00109$:
+                    0C87   2862 	C$cli.c$258$1$1 ==.
+                    0C87   2863 	XG$process_uart_data$0$0 ==.
+   0C87 22                 2864 	ret
+                           2865 ;------------------------------------------------------------
+                           2866 ;Allocation info for local variables in function 'display_mem_data'
+                           2867 ;------------------------------------------------------------
+                           2868 ;mem_addr                  Allocated with name '_display_mem_data_mem_addr_1_1'
+                           2869 ;mem_data                  Allocated with name '_display_mem_data_mem_data_1_1'
+                           2870 ;tx_sub_address            Allocated with name '_display_mem_data_tx_sub_address_1_1'
+                           2871 ;rx_sub_address            Allocated with name '_display_mem_data_rx_sub_address_1_1'
+                           2872 ;i                         Allocated with name '_display_mem_data_i_1_1'
+                           2873 ;m                         Allocated with name '_display_mem_data_m_1_1'
+                           2874 ;------------------------------------------------------------
+                    0C88   2875 	G$display_mem_data$0$0 ==.
+                    0C88   2876 	C$cli.c$263$1$1 ==.
+                           2877 ;	../cli.c:263: void display_mem_data(void){
+                           2878 ;	-----------------------------------------
+                           2879 ;	 function display_mem_data
+                           2880 ;	-----------------------------------------
+   0C88                    2881 _display_mem_data:
+                    0C88   2882 	C$cli.c$273$1$1 ==.
+                           2883 ;	../cli.c:273: rx_sub_address = mem_addr;   //0x1080
+                           2884 ;	genAssign
+   0C88 90s03rED           2885 	mov	dptr,#_display_mem_data_rx_sub_address_1_1
+   0C8B 74 00              2886 	mov	a,#0x00
+   0C8D F0                 2887 	movx	@dptr,a
+   0C8E A3                 2888 	inc	dptr
+   0C8F 74 F5              2889 	mov	a,#0xF5
+   0C91 F0                 2890 	movx	@dptr,a
+                    0C92   2891 	C$cli.c$274$1$1 ==.
+                           2892 ;	../cli.c:274: tx_sub_address = mem_addr;
+                           2893 ;	genAssign
+   0C92 90s03rEB           2894 	mov	dptr,#_display_mem_data_tx_sub_address_1_1
+   0C95 74 00              2895 	mov	a,#0x00
+   0C97 F0                 2896 	movx	@dptr,a
+   0C98 A3                 2897 	inc	dptr
+   0C99 74 F5              2898 	mov	a,#0xF5
+   0C9B F0                 2899 	movx	@dptr,a
+                    0C9C   2900 	C$cli.c$275$1$1 ==.
+                           2901 ;	../cli.c:275: mem_data   = 0x0000;
+                           2902 ;	genAssign
+   0C9C 90s03rE9           2903 	mov	dptr,#_display_mem_data_mem_data_1_1
+   0C9F E4                 2904 	clr	a
+   0CA0 F0                 2905 	movx	@dptr,a
+   0CA1 A3                 2906 	inc	dptr
+   0CA2 F0                 2907 	movx	@dptr,a
+                    0CA3   2908 	C$cli.c$277$1$1 ==.
+                           2909 ;	../cli.c:277: dp_display_text("\n\r MEMORY FiLLING WIETH FOLLOWING DATA ");
+                           2910 ;	genCall
+   0CA3 75 82r57           2911 	mov	dpl,#__str_15
+   0CA6 75 83s00           2912 	mov	dph,#(__str_15 >> 8)
+   0CA9 75 F0 80           2913 	mov	b,#0x80
+   0CAC 12s00r00           2914 	lcall	_dp_display_text
+                    0CAF   2915 	C$cli.c$281$1$1 ==.
+                           2916 ;	../cli.c:281: for ( i=0; i <= 3 ;i++) {
+                           2917 ;	genAssign
+   0CAF 90s03rEF           2918 	mov	dptr,#_display_mem_data_i_1_1
+   0CB2 74 00              2919 	mov	a,#0x00
+   0CB4 F0                 2920 	movx	@dptr,a
+   0CB5                    2921 00104$:
+                           2922 ;	genAssign
+   0CB5 90s03rEF           2923 	mov	dptr,#_display_mem_data_i_1_1
+   0CB8 E0                 2924 	movx	a,@dptr
+   0CB9 FA                 2925 	mov	r2,a
+                           2926 ;	genCmpGt
+                           2927 ;	genCmp
+   0CBA C3                 2928 	clr	c
+   0CBB 74 03              2929 	mov	a,#0x03
+   0CBD 9A                 2930 	subb	a,r2
+                           2931 ;	genIfxJump
+   0CBE 50 03              2932 	jnc	00125$
+   0CC0 02s0DrDB           2933 	ljmp	00107$
+   0CC3                    2934 00125$:
+                    0CC3   2935 	C$cli.c$282$2$2 ==.
+                           2936 ;	../cli.c:282: dp_display_text("\r\n");
+                           2937 ;	genCall
+   0CC3 75 82r2B           2938 	mov	dpl,#__str_10
+   0CC6 75 83s00           2939 	mov	dph,#(__str_10 >> 8)
+   0CC9 75 F0 80           2940 	mov	b,#0x80
+   0CCC C0 02              2941 	push	ar2
+   0CCE 12s00r00           2942 	lcall	_dp_display_text
+   0CD1 D0 02              2943 	pop	ar2
+                    0CD3   2944 	C$cli.c$283$2$2 ==.
+                           2945 ;	../cli.c:283: dp_display_value(i,DEC);
+                           2946 ;	genCast
+   0CD3 7B 00              2947 	mov	r3,#0x00
+   0CD5 7C 00              2948 	mov	r4,#0x00
+   0CD7 7D 00              2949 	mov	r5,#0x00
+                           2950 ;	genAssign
+   0CD9 90s00r00           2951 	mov	dptr,#_dp_display_value_PARM_2
+   0CDC 74 01              2952 	mov	a,#0x01
+   0CDE F0                 2953 	movx	@dptr,a
+   0CDF E4                 2954 	clr	a
+   0CE0 A3                 2955 	inc	dptr
+   0CE1 F0                 2956 	movx	@dptr,a
+                           2957 ;	genCall
+   0CE2 8A 82              2958 	mov	dpl,r2
+   0CE4 8B 83              2959 	mov	dph,r3
+   0CE6 8C F0              2960 	mov	b,r4
+   0CE8 ED                 2961 	mov	a,r5
+   0CE9 12s00r00           2962 	lcall	_dp_display_value
+                    0CEC   2963 	C$cli.c$284$2$2 ==.
+                           2964 ;	../cli.c:284: dp_display_text("\t");
+                           2965 ;	genCall
+   0CEC 75 82r2E           2966 	mov	dpl,#__str_11
+   0CEF 75 83s00           2967 	mov	dph,#(__str_11 >> 8)
+   0CF2 75 F0 80           2968 	mov	b,#0x80
+   0CF5 12s00r00           2969 	lcall	_dp_display_text
+                    0CF8   2970 	C$cli.c$285$2$2 ==.
+                           2971 ;	../cli.c:285: dp_display_value(rx_sub_address,HEX);// ( 8* i) for calculating current address of the total 32 location
+                           2972 ;	genAssign
+   0CF8 90s03rED           2973 	mov	dptr,#_display_mem_data_rx_sub_address_1_1
+   0CFB E0                 2974 	movx	a,@dptr
+   0CFC FA                 2975 	mov	r2,a
+   0CFD A3                 2976 	inc	dptr
+   0CFE E0                 2977 	movx	a,@dptr
+   0CFF FB                 2978 	mov	r3,a
+                           2979 ;	genCast
+   0D00 7C 00              2980 	mov	r4,#0x00
+   0D02 7D 00              2981 	mov	r5,#0x00
+                           2982 ;	genAssign
+   0D04 90s00r00           2983 	mov	dptr,#_dp_display_value_PARM_2
+   0D07 E4                 2984 	clr	a
+   0D08 F0                 2985 	movx	@dptr,a
+   0D09 A3                 2986 	inc	dptr
+   0D0A F0                 2987 	movx	@dptr,a
+                           2988 ;	genCall
+   0D0B 8A 82              2989 	mov	dpl,r2
+   0D0D 8B 83              2990 	mov	dph,r3
+   0D0F 8C F0              2991 	mov	b,r4
+   0D11 ED                 2992 	mov	a,r5
+   0D12 12s00r00           2993 	lcall	_dp_display_value
+                    0D15   2994 	C$cli.c$286$2$2 ==.
+                           2995 ;	../cli.c:286: dp_display_text("\t");
+                           2996 ;	genCall
+   0D15 75 82r2E           2997 	mov	dpl,#__str_11
+   0D18 75 83s00           2998 	mov	dph,#(__str_11 >> 8)
+   0D1B 75 F0 80           2999 	mov	b,#0x80
+   0D1E 12s00r00           3000 	lcall	_dp_display_text
+                    0D21   3001 	C$cli.c$288$2$2 ==.
+                           3002 ;	../cli.c:288: for (m=1; m <=8 ;m++){
+                           3003 ;	genAssign
+   0D21 90s03rF0           3004 	mov	dptr,#_display_mem_data_m_1_1
+   0D24 74 08              3005 	mov	a,#0x08
+   0D26 F0                 3006 	movx	@dptr,a
+   0D27                    3007 00103$:
+                    0D27   3008 	C$cli.c$290$3$3 ==.
+                           3009 ;	../cli.c:290: HW_set_16bit_reg(rx_sub_address,mem_data);
+                           3010 ;	genAssign
+   0D27 90s03rED           3011 	mov	dptr,#_display_mem_data_rx_sub_address_1_1
+   0D2A E0                 3012 	movx	a,@dptr
+   0D2B FA                 3013 	mov	r2,a
+   0D2C A3                 3014 	inc	dptr
+   0D2D E0                 3015 	movx	a,@dptr
+   0D2E FB                 3016 	mov	r3,a
+                           3017 ;	genAssign
+   0D2F 90s03rE9           3018 	mov	dptr,#_display_mem_data_mem_data_1_1
+   0D32 E0                 3019 	movx	a,@dptr
+   0D33 FC                 3020 	mov	r4,a
+   0D34 A3                 3021 	inc	dptr
+   0D35 E0                 3022 	movx	a,@dptr
+   0D36 FD                 3023 	mov	r5,a
+                           3024 ;	genAssign
+   0D37 90s00r00           3025 	mov	dptr,#_HW_set_16bit_reg_PARM_2
+   0D3A EC                 3026 	mov	a,r4
+   0D3B F0                 3027 	movx	@dptr,a
+   0D3C A3                 3028 	inc	dptr
+   0D3D ED                 3029 	mov	a,r5
+   0D3E F0                 3030 	movx	@dptr,a
+                           3031 ;	genCall
+   0D3F 8A 82              3032 	mov	dpl,r2
+   0D41 8B 83              3033 	mov	dph,r3
+   0D43 C0 02              3034 	push	ar2
+   0D45 C0 03              3035 	push	ar3
+   0D47 C0 04              3036 	push	ar4
+   0D49 C0 05              3037 	push	ar5
+   0D4B 12s00r00           3038 	lcall	_HW_set_16bit_reg
+   0D4E D0 05              3039 	pop	ar5
+   0D50 D0 04              3040 	pop	ar4
+   0D52 D0 03              3041 	pop	ar3
+   0D54 D0 02              3042 	pop	ar2
+                    0D56   3043 	C$cli.c$291$3$3 ==.
+                           3044 ;	../cli.c:291: dp_display_value(mem_data,HEX);
+                           3045 ;	genCast
+   0D56 8C 06              3046 	mov	ar6,r4
+   0D58 8D 07              3047 	mov	ar7,r5
+   0D5A 78 00              3048 	mov	r0,#0x00
+   0D5C 79 00              3049 	mov	r1,#0x00
+                           3050 ;	genAssign
+   0D5E 90s00r00           3051 	mov	dptr,#_dp_display_value_PARM_2
+   0D61 E4                 3052 	clr	a
+   0D62 F0                 3053 	movx	@dptr,a
+   0D63 A3                 3054 	inc	dptr
+   0D64 F0                 3055 	movx	@dptr,a
+                           3056 ;	genCall
+   0D65 8E 82              3057 	mov	dpl,r6
+   0D67 8F 83              3058 	mov	dph,r7
+   0D69 88 F0              3059 	mov	b,r0
+   0D6B E9                 3060 	mov	a,r1
+   0D6C C0 02              3061 	push	ar2
+   0D6E C0 03              3062 	push	ar3
+   0D70 C0 04              3063 	push	ar4
+   0D72 C0 05              3064 	push	ar5
+   0D74 12s00r00           3065 	lcall	_dp_display_value
+   0D77 D0 05              3066 	pop	ar5
+   0D79 D0 04              3067 	pop	ar4
+   0D7B D0 03              3068 	pop	ar3
+   0D7D D0 02              3069 	pop	ar2
+                    0D7F   3070 	C$cli.c$292$3$3 ==.
+                           3071 ;	../cli.c:292: dp_display_text("\t");
+                           3072 ;	genCall
+   0D7F 75 82r2E           3073 	mov	dpl,#__str_11
+   0D82 75 83s00           3074 	mov	dph,#(__str_11 >> 8)
+   0D85 75 F0 80           3075 	mov	b,#0x80
+   0D88 C0 02              3076 	push	ar2
+   0D8A C0 03              3077 	push	ar3
+   0D8C C0 04              3078 	push	ar4
+   0D8E C0 05              3079 	push	ar5
+   0D90 12s00r00           3080 	lcall	_dp_display_text
+   0D93 D0 05              3081 	pop	ar5
+   0D95 D0 04              3082 	pop	ar4
+   0D97 D0 03              3083 	pop	ar3
+   0D99 D0 02              3084 	pop	ar2
+                    0D9B   3085 	C$cli.c$293$3$3 ==.
+                           3086 ;	../cli.c:293: rx_sub_address = rx_sub_address + 1;
+                           3087 ;	genPlus
+   0D9B 90s03rED           3088 	mov	dptr,#_display_mem_data_rx_sub_address_1_1
+                           3089 ;	genPlusIncr
+   0D9E 74 01              3090 	mov	a,#0x01
+   0DA0 25 02              3091 	add	a,ar2
+   0DA2 F0                 3092 	movx	@dptr,a
+   0DA3 74 00              3093 	mov	a,#0x00
+   0DA5 35 03              3094 	addc	a,ar3
+   0DA7 A3                 3095 	inc	dptr
+   0DA8 F0                 3096 	movx	@dptr,a
+                    0DA9   3097 	C$cli.c$294$3$3 ==.
+                           3098 ;	../cli.c:294: mem_data = mem_data + 4;
+                           3099 ;	genPlus
+   0DA9 90s03rE9           3100 	mov	dptr,#_display_mem_data_mem_data_1_1
+                           3101 ;	genPlusIncr
+   0DAC 74 04              3102 	mov	a,#0x04
+   0DAE 25 04              3103 	add	a,ar4
+   0DB0 F0                 3104 	movx	@dptr,a
+   0DB1 74 00              3105 	mov	a,#0x00
+   0DB3 35 05              3106 	addc	a,ar5
+   0DB5 A3                 3107 	inc	dptr
+   0DB6 F0                 3108 	movx	@dptr,a
+                           3109 ;	genAssign
+   0DB7 90s03rF0           3110 	mov	dptr,#_display_mem_data_m_1_1
+   0DBA E0                 3111 	movx	a,@dptr
+   0DBB FA                 3112 	mov	r2,a
+                           3113 ;	genMinus
+                           3114 ;	genMinusDec
+   0DBC EA                 3115 	mov	a,r2
+   0DBD 14                 3116 	dec	a
+                           3117 ;	genAssign
+   0DBE 90s03rF0           3118 	mov	dptr,#_display_mem_data_m_1_1
+   0DC1 F0                 3119 	movx	@dptr,a
+                    0DC2   3120 	C$cli.c$288$3$3 ==.
+                           3121 ;	../cli.c:288: for (m=1; m <=8 ;m++){
+                           3122 ;	genAssign
+   0DC2 90s03rF0           3123 	mov	dptr,#_display_mem_data_m_1_1
+   0DC5 E0                 3124 	movx	a,@dptr
+   0DC6 FA                 3125 	mov	r2,a
+                           3126 ;	genIfx
+   0DC7 EA                 3127 	mov	a,r2
+                           3128 ;	genIfxJump
+   0DC8 60 03              3129 	jz	00126$
+   0DCA 02s0Dr27           3130 	ljmp	00103$
+   0DCD                    3131 00126$:
+                    0DCD   3132 	C$cli.c$281$1$1 ==.
+                           3133 ;	../cli.c:281: for ( i=0; i <= 3 ;i++) {
+                           3134 ;	genAssign
+   0DCD 90s03rEF           3135 	mov	dptr,#_display_mem_data_i_1_1
+   0DD0 E0                 3136 	movx	a,@dptr
+   0DD1 FA                 3137 	mov	r2,a
+                           3138 ;	genPlus
+   0DD2 90s03rEF           3139 	mov	dptr,#_display_mem_data_i_1_1
+                           3140 ;	genPlusIncr
+   0DD5 EA                 3141 	mov	a,r2
+   0DD6 04                 3142 	inc	a
+   0DD7 F0                 3143 	movx	@dptr,a
+   0DD8 02s0CrB5           3144 	ljmp	00104$
+   0DDB                    3145 00107$:
+                    0DDB   3146 	C$cli.c$300$1$1 ==.
+                           3147 ;	../cli.c:300: dp_display_text("\n\r Reading back the data from the same location");
+                           3148 ;	genCall
+   0DDB 75 82r7F           3149 	mov	dpl,#__str_16
+   0DDE 75 83s00           3150 	mov	dph,#(__str_16 >> 8)
+   0DE1 75 F0 80           3151 	mov	b,#0x80
+   0DE4 12s00r00           3152 	lcall	_dp_display_text
+                    0DE7   3153 	C$cli.c$304$1$1 ==.
+                           3154 ;	../cli.c:304: for ( i=0; i <= 3 ;i++) {
+                           3155 ;	genAssign
+   0DE7 90s03rEF           3156 	mov	dptr,#_display_mem_data_i_1_1
+   0DEA 74 00              3157 	mov	a,#0x00
+   0DEC F0                 3158 	movx	@dptr,a
+   0DED                    3159 00111$:
+                           3160 ;	genAssign
+   0DED 90s03rEF           3161 	mov	dptr,#_display_mem_data_i_1_1
+   0DF0 E0                 3162 	movx	a,@dptr
+   0DF1 FA                 3163 	mov	r2,a
+                           3164 ;	genCmpGt
+                           3165 ;	genCmp
+   0DF2 C3                 3166 	clr	c
+   0DF3 74 03              3167 	mov	a,#0x03
+   0DF5 9A                 3168 	subb	a,r2
+                           3169 ;	genIfxJump
+   0DF6 50 03              3170 	jnc	00127$
+   0DF8 02s0ErDD           3171 	ljmp	00115$
+   0DFB                    3172 00127$:
+                    0DFB   3173 	C$cli.c$305$2$4 ==.
+                           3174 ;	../cli.c:305: dp_display_text("\r\n");
+                           3175 ;	genCall
+   0DFB 75 82r2B           3176 	mov	dpl,#__str_10
+   0DFE 75 83s00           3177 	mov	dph,#(__str_10 >> 8)
+   0E01 75 F0 80           3178 	mov	b,#0x80
+   0E04 C0 02              3179 	push	ar2
+   0E06 12s00r00           3180 	lcall	_dp_display_text
+   0E09 D0 02              3181 	pop	ar2
+                    0E0B   3182 	C$cli.c$306$2$4 ==.
+                           3183 ;	../cli.c:306: dp_display_value(i,DEC);
+                           3184 ;	genCast
+   0E0B 7B 00              3185 	mov	r3,#0x00
+   0E0D 7C 00              3186 	mov	r4,#0x00
+   0E0F 7D 00              3187 	mov	r5,#0x00
+                           3188 ;	genAssign
+   0E11 90s00r00           3189 	mov	dptr,#_dp_display_value_PARM_2
+   0E14 74 01              3190 	mov	a,#0x01
+   0E16 F0                 3191 	movx	@dptr,a
+   0E17 E4                 3192 	clr	a
+   0E18 A3                 3193 	inc	dptr
+   0E19 F0                 3194 	movx	@dptr,a
+                           3195 ;	genCall
+   0E1A 8A 82              3196 	mov	dpl,r2
+   0E1C 8B 83              3197 	mov	dph,r3
+   0E1E 8C F0              3198 	mov	b,r4
+   0E20 ED                 3199 	mov	a,r5
+   0E21 12s00r00           3200 	lcall	_dp_display_value
+                    0E24   3201 	C$cli.c$307$2$4 ==.
+                           3202 ;	../cli.c:307: dp_display_text("\t");
+                           3203 ;	genCall
+   0E24 75 82r2E           3204 	mov	dpl,#__str_11
+   0E27 75 83s00           3205 	mov	dph,#(__str_11 >> 8)
+   0E2A 75 F0 80           3206 	mov	b,#0x80
+   0E2D 12s00r00           3207 	lcall	_dp_display_text
+                    0E30   3208 	C$cli.c$308$2$4 ==.
+                           3209 ;	../cli.c:308: dp_display_value(tx_sub_address,HEX);
+                           3210 ;	genAssign
+   0E30 90s03rEB           3211 	mov	dptr,#_display_mem_data_tx_sub_address_1_1
+   0E33 E0                 3212 	movx	a,@dptr
+   0E34 FA                 3213 	mov	r2,a
+   0E35 A3                 3214 	inc	dptr
+   0E36 E0                 3215 	movx	a,@dptr
+   0E37 FB                 3216 	mov	r3,a
+                           3217 ;	genCast
+   0E38 7C 00              3218 	mov	r4,#0x00
+   0E3A 7D 00              3219 	mov	r5,#0x00
+                           3220 ;	genAssign
+   0E3C 90s00r00           3221 	mov	dptr,#_dp_display_value_PARM_2
+   0E3F E4                 3222 	clr	a
+   0E40 F0                 3223 	movx	@dptr,a
+   0E41 A3                 3224 	inc	dptr
+   0E42 F0                 3225 	movx	@dptr,a
+                           3226 ;	genCall
+   0E43 8A 82              3227 	mov	dpl,r2
+   0E45 8B 83              3228 	mov	dph,r3
+   0E47 8C F0              3229 	mov	b,r4
+   0E49 ED                 3230 	mov	a,r5
+   0E4A 12s00r00           3231 	lcall	_dp_display_value
+                    0E4D   3232 	C$cli.c$309$2$4 ==.
+                           3233 ;	../cli.c:309: dp_display_text("\t");
+                           3234 ;	genCall
+   0E4D 75 82r2E           3235 	mov	dpl,#__str_11
+   0E50 75 83s00           3236 	mov	dph,#(__str_11 >> 8)
+   0E53 75 F0 80           3237 	mov	b,#0x80
+   0E56 12s00r00           3238 	lcall	_dp_display_text
+                    0E59   3239 	C$cli.c$311$2$4 ==.
+                           3240 ;	../cli.c:311: for (m=1; m <=8 ;m++){
+                           3241 ;	genAssign
+   0E59 90s03rF0           3242 	mov	dptr,#_display_mem_data_m_1_1
+   0E5C 74 08              3243 	mov	a,#0x08
+   0E5E F0                 3244 	movx	@dptr,a
+   0E5F                    3245 00110$:
+                    0E5F   3246 	C$cli.c$313$3$5 ==.
+                           3247 ;	../cli.c:313: mem_data= HW_get_16bit_reg(tx_sub_address);
+                           3248 ;	genAssign
+   0E5F 90s03rEB           3249 	mov	dptr,#_display_mem_data_tx_sub_address_1_1
+   0E62 E0                 3250 	movx	a,@dptr
+   0E63 FA                 3251 	mov	r2,a
+   0E64 A3                 3252 	inc	dptr
+   0E65 E0                 3253 	movx	a,@dptr
+   0E66 FB                 3254 	mov	r3,a
+                           3255 ;	genCall
+   0E67 8A 82              3256 	mov	dpl,r2
+   0E69 8B 83              3257 	mov	dph,r3
+   0E6B C0 02              3258 	push	ar2
+   0E6D C0 03              3259 	push	ar3
+   0E6F 12s00r00           3260 	lcall	_HW_get_16bit_reg
+   0E72 AC 82              3261 	mov	r4,dpl
+   0E74 AD 83              3262 	mov	r5,dph
+   0E76 D0 03              3263 	pop	ar3
+   0E78 D0 02              3264 	pop	ar2
+                    0E7A   3265 	C$cli.c$314$3$5 ==.
+                           3266 ;	../cli.c:314: dp_display_value(mem_data,HEX);
+                           3267 ;	genCast
+   0E7A 7E 00              3268 	mov	r6,#0x00
+   0E7C 7F 00              3269 	mov	r7,#0x00
+                           3270 ;	genAssign
+   0E7E 90s00r00           3271 	mov	dptr,#_dp_display_value_PARM_2
+   0E81 E4                 3272 	clr	a
+   0E82 F0                 3273 	movx	@dptr,a
+   0E83 A3                 3274 	inc	dptr
+   0E84 F0                 3275 	movx	@dptr,a
+                           3276 ;	genCall
+   0E85 8C 82              3277 	mov	dpl,r4
+   0E87 8D 83              3278 	mov	dph,r5
+   0E89 8E F0              3279 	mov	b,r6
+   0E8B EF                 3280 	mov	a,r7
+   0E8C C0 02              3281 	push	ar2
+   0E8E C0 03              3282 	push	ar3
+   0E90 12s00r00           3283 	lcall	_dp_display_value
+   0E93 D0 03              3284 	pop	ar3
+   0E95 D0 02              3285 	pop	ar2
+                    0E97   3286 	C$cli.c$315$3$5 ==.
+                           3287 ;	../cli.c:315: dp_display_text("\t");
+                           3288 ;	genCall
+   0E97 75 82r2E           3289 	mov	dpl,#__str_11
+   0E9A 75 83s00           3290 	mov	dph,#(__str_11 >> 8)
+   0E9D 75 F0 80           3291 	mov	b,#0x80
+   0EA0 C0 02              3292 	push	ar2
+   0EA2 C0 03              3293 	push	ar3
+   0EA4 12s00r00           3294 	lcall	_dp_display_text
+   0EA7 D0 03              3295 	pop	ar3
+   0EA9 D0 02              3296 	pop	ar2
+                    0EAB   3297 	C$cli.c$316$3$5 ==.
+                           3298 ;	../cli.c:316: tx_sub_address = tx_sub_address + 1;
+                           3299 ;	genPlus
+   0EAB 90s03rEB           3300 	mov	dptr,#_display_mem_data_tx_sub_address_1_1
+                           3301 ;	genPlusIncr
+   0EAE 74 01              3302 	mov	a,#0x01
+   0EB0 25 02              3303 	add	a,ar2
+   0EB2 F0                 3304 	movx	@dptr,a
+   0EB3 74 00              3305 	mov	a,#0x00
+   0EB5 35 03              3306 	addc	a,ar3
+   0EB7 A3                 3307 	inc	dptr
+   0EB8 F0                 3308 	movx	@dptr,a
+                           3309 ;	genAssign
+   0EB9 90s03rF0           3310 	mov	dptr,#_display_mem_data_m_1_1
+   0EBC E0                 3311 	movx	a,@dptr
+   0EBD FA                 3312 	mov	r2,a
+                           3313 ;	genMinus
+                           3314 ;	genMinusDec
+   0EBE EA                 3315 	mov	a,r2
+   0EBF 14                 3316 	dec	a
+                           3317 ;	genAssign
+   0EC0 90s03rF0           3318 	mov	dptr,#_display_mem_data_m_1_1
+   0EC3 F0                 3319 	movx	@dptr,a
+                    0EC4   3320 	C$cli.c$311$3$5 ==.
+                           3321 ;	../cli.c:311: for (m=1; m <=8 ;m++){
+                           3322 ;	genAssign
+   0EC4 90s03rF0           3323 	mov	dptr,#_display_mem_data_m_1_1
+   0EC7 E0                 3324 	movx	a,@dptr
+   0EC8 FA                 3325 	mov	r2,a
+                           3326 ;	genIfx
+   0EC9 EA                 3327 	mov	a,r2
+                           3328 ;	genIfxJump
+   0ECA 60 03              3329 	jz	00128$
+   0ECC 02s0Er5F           3330 	ljmp	00110$
+   0ECF                    3331 00128$:
+                    0ECF   3332 	C$cli.c$304$1$1 ==.
+                           3333 ;	../cli.c:304: for ( i=0; i <= 3 ;i++) {
+                           3334 ;	genAssign
+   0ECF 90s03rEF           3335 	mov	dptr,#_display_mem_data_i_1_1
+   0ED2 E0                 3336 	movx	a,@dptr
+   0ED3 FA                 3337 	mov	r2,a
+                           3338 ;	genPlus
+   0ED4 90s03rEF           3339 	mov	dptr,#_display_mem_data_i_1_1
+                           3340 ;	genPlusIncr
+   0ED7 EA                 3341 	mov	a,r2
+   0ED8 04                 3342 	inc	a
+   0ED9 F0                 3343 	movx	@dptr,a
+   0EDA 02s0DrED           3344 	ljmp	00111$
+   0EDD                    3345 00115$:
+                    0EDD   3346 	C$cli.c$321$1$1 ==.
+                    0EDD   3347 	XG$display_mem_data$0$0 ==.
+   0EDD 22                 3348 	ret
+                           3349 	.area CSEG    (CODE)
+                           3350 	.area CONST   (CODE)
+                    0000   3351 F___cli$_str_8$0$0 == .
+   0000                    3352 __str_8:
+   0000 0D                 3353 	.db 0x0D
+   0001 0A                 3354 	.db 0x0A
+   0002 43 6F 72 65 31 35  3355 	.ascii "Core1553BRT>"
+        35 33 42 52 54 3E
+   000E 00                 3356 	.db 0x00
+                    000F   3357 F___cli$_str_9$0$0 == .
+   000F                    3358 __str_9:
+   000F 0A                 3359 	.db 0x0A
+   0010 0D                 3360 	.db 0x0D
+   0011 20 42 52 54 20 52  3361 	.ascii " BRT Register Contents"
+        65 67 69 73 74 65
+        72 20 43 6F 6E 74
+        65 6E 74 73
+   0027 0D                 3362 	.db 0x0D
+   0028 0A                 3363 	.db 0x0A
+   0029 20                 3364 	.ascii " "
+   002A 00                 3365 	.db 0x00
+                    002B   3366 F___cli$_str_10$0$0 == .
+   002B                    3367 __str_10:
+   002B 0D                 3368 	.db 0x0D
+   002C 0A                 3369 	.db 0x0A
+   002D 00                 3370 	.db 0x00
+                    002E   3371 F___cli$_str_11$0$0 == .
+   002E                    3372 __str_11:
+   002E 09                 3373 	.db 0x09
+   002F 00                 3374 	.db 0x00
+                    0030   3375 F___cli$_str_12$0$0 == .
+   0030                    3376 __str_12:
+   0030 0A                 3377 	.db 0x0A
+   0031 0D                 3378 	.db 0x0D
+   0032 20 42 52 54 20 53  3379 	.ascii " BRT SA"
+        41
+   0039 00                 3380 	.db 0x00
+                    003A   3381 F___cli$_str_13$0$0 == .
+   003A                    3382 __str_13:
+   003A 20 20 20 52 58 20  3383 	.ascii "   RX Buffer"
+        42 75 66 66 65 72
+   0046 0D                 3384 	.db 0x0D
+   0047 0A                 3385 	.db 0x0A
+   0048 00                 3386 	.db 0x00
+                    0049   3387 F___cli$_str_14$0$0 == .
+   0049                    3388 __str_14:
+   0049 20 20 54 58 20 42  3389 	.ascii "  TX Buffer"
+        75 66 66 65 72
+   0054 0D                 3390 	.db 0x0D
+   0055 0A                 3391 	.db 0x0A
+   0056 00                 3392 	.db 0x00
+                    0057   3393 F___cli$_str_15$0$0 == .
+   0057                    3394 __str_15:
+   0057 0A                 3395 	.db 0x0A
+   0058 0D                 3396 	.db 0x0D
+   0059 20 4D 45 4D 4F 52  3397 	.ascii " MEMORY FiLLING WIETH FOLLOWING DATA "
+        59 20 46 69 4C 4C
+        49 4E 47 20 57 49
+        45 54 48 20 46 4F
+        4C 4C 4F 57 49 4E
+        47 20 44 41 54 41
+        20
+   007E 00                 3398 	.db 0x00
+                    007F   3399 F___cli$_str_16$0$0 == .
+   007F                    3400 __str_16:
+   007F 0A                 3401 	.db 0x0A
+   0080 0D                 3402 	.db 0x0D
+   0081 20 52 65 61 64 69  3403 	.ascii " Reading back the data from the same location"
+        6E 67 20 62 61 63
+        6B 20 74 68 65 20
+        64 61 74 61 20 66
+        72 6F 6D 20 74 68
+        65 20 73 61 6D 65
+        20 6C 6F 63 61 74
+        69 6F 6E
+   00AE 00                 3404 	.db 0x00
+                           3405 	.area XINIT   (CODE)
+                    0000   3406 F___cli$__xinit_user_input$0$0 == .
+   0000                    3407 __xinit__user_input:
+   0000 00 00 00 00        3408 	.byte #0x00,#0x00,#0x00,#0x00
+                    0004   3409 F___cli$__xinit_last_rt_subaddress$0$0 == .
+   0004                    3410 __xinit__last_rt_subaddress:
+   0004 20                 3411 	.db #0x20
+                           3412 	.area CABS    (ABS,CODE)

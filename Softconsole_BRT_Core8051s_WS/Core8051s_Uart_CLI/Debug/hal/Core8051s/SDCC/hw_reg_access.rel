@@ -1,0 +1,945 @@
+;!FILE hal/Core8051s/SDCC/hw_reg_access.asm
+XH
+H 18 areas 258 global symbols
+M ___hal_Core8051s_SDCC_hw_reg_access
+O -mmcs51 --model-large
+S _HW_set_32bit_reg Ref0000
+S _HW_set_16bit_reg Ref0000
+S _HW_get_8bit_reg Ref0000
+S _HW_set_8bit_reg Ref0000
+S _HW_set_32bit_reg_PARM_2 Ref0000
+S _HW_set_16bit_reg_PARM_2 Ref0000
+S _HW_set_8bit_reg_PARM_2 Ref0000
+S _HW_get_32bit_reg Ref0000
+S _HW_get_16bit_reg Ref0000
+A _CODE size 0 flags 0 addr 0
+A RSEG size 0 flags 0 addr 0
+A REG_BANK_0 size 8 flags 4 addr 61706C6C
+A DSEG size 8 flags 0 addr 0
+S LHW_set_32bit_reg_field$sloc0$1$0 Def0000
+S LHW_set_32bit_reg_field$sloc1$1$0 Def0002
+S LHW_set_16bit_reg_field$sloc0$1$0 Def0007
+S LHW_set_32bit_reg_field$sloc2$1$0 Def0006
+A OSEG size 0 flags 4 addr 0
+A ISEG size 0 flags 0 addr 0
+A IABS size 0 flags 8 addr 0
+A BSEG size 0 flags 80 addr 0
+A PSEG size 0 flags 50 addr 0
+A XSEG size 35 flags 40 addr 0
+S _HW_get_32bit_reg_field_PARM_2 Def000F
+S LHW_set_16bit_reg_field$reg_addr$1$1 Def001F
+S _HW_get_32bit_reg_field_PARM_3 Def0010
+S _HW_get_16bit_reg_field_PARM_2 Def0023
+S LHW_set_16bit_reg_field$in_value16$1$1 Def001D
+S _HW_get_16bit_reg_field_PARM_3 Def0024
+S LHW_get_8bit_reg_field$reg_addr$1$1 Def0032
+S LHW_set_8bit_reg_field$mask$1$1 Def002B
+S LHW_set_8bit_reg_field$temp8$1$1 Def002F
+S _HW_set_32bit_reg_field_PARM_2 Def0000
+S _HW_set_32bit_reg_field_PARM_3 Def0001
+S _HW_set_32bit_reg_field_PARM_4 Def0005
+S _HW_set_16bit_reg_field_PARM_2 Def001A
+S _HW_set_16bit_reg_field_PARM_3 Def001B
+S _HW_set_16bit_reg_field_PARM_4 Def001D
+S LHW_set_8bit_reg_field$reg_addr$1$1 Def002D
+S _HW_get_8bit_reg_field_PARM_2 Def0030
+S _HW_get_8bit_reg_field_PARM_3 Def0031
+S LHW_get_32bit_reg_field$temp32$1$1 Def0016
+S LHW_get_32bit_reg_field$shift$1$1 Def000F
+S LHW_get_16bit_reg_field$temp16$1$1 Def0028
+S LHW_get_16bit_reg_field$shift$1$1 Def0023
+S _HW_set_8bit_reg_field_PARM_2 Def002A
+S _HW_set_8bit_reg_field_PARM_3 Def002B
+S _HW_set_8bit_reg_field_PARM_4 Def002C
+S LHW_set_32bit_reg_field$temp32$1$1 Def000B
+S LHW_set_32bit_reg_field$value$1$1 Def0005
+S LHW_set_32bit_reg_field$shift$1$1 Def0000
+S LHW_set_16bit_reg_field$temp16$1$1 Def0021
+S LHW_set_16bit_reg_field$shift$1$1 Def001A
+S LHW_get_32bit_reg_field$mask$1$1 Def0010
+S LHW_get_16bit_reg_field$mask$1$1 Def0024
+S LHW_get_8bit_reg_field$shift$1$1 Def0030
+S LHW_get_32bit_reg_field$reg_addr$1$1 Def0014
+S LHW_set_32bit_reg_field$mask$1$1 Def0001
+S LHW_get_16bit_reg_field$reg_addr$1$1 Def0026
+S LHW_set_16bit_reg_field$mask$1$1 Def001B
+S LHW_set_8bit_reg_field$value$1$1 Def002C
+S LHW_set_8bit_reg_field$shift$1$1 Def002A
+S LHW_get_8bit_reg_field$mask$1$1 Def0031
+S LHW_get_8bit_reg_field$temp8$1$1 Def0034
+S LHW_set_32bit_reg_field$reg_addr$1$1 Def0009
+A XISEG size 0 flags 40 addr 0
+A HOME size 0 flags 20 addr 0
+A GSINIT0 size 0 flags 20 addr 0
+A GSINIT1 size 0 flags 20 addr 0
+A GSINIT2 size 0 flags 20 addr 0
+A GSINIT3 size 0 flags 20 addr 0
+A GSINIT4 size 0 flags 20 addr 0
+A GSINIT5 size 0 flags 20 addr 0
+A GSINIT size 0 flags 20 addr 0
+A GSFINAL size 0 flags 20 addr 0
+A CSEG size 2E7 flags 20 addr 0
+S G$HW_set_32bit_reg_field$0$0 Def0000
+S G$HW_set_16bit_reg_field$0$0 Def0158
+S G$HW_get_8bit_reg_field$0$0 Def02A6
+S A$hw_reg_access$300 Def005B
+S A$hw_reg_access$400 Def00D1
+S A$hw_reg_access$310 Def0066
+S A$hw_reg_access$301 Def005C
+S C$hw_reg_access.c$106$1$1 Def02B1
+S A$hw_reg_access$500 Def0138
+S A$hw_reg_access$410 Def00DD
+S A$hw_reg_access$401 Def00D2
+S A$hw_reg_access$320 Def0075
+S A$hw_reg_access$311 Def0068
+S A$hw_reg_access$302 Def005D
+S A$hw_reg_access$230 Def0008
+S C$hw_reg_access.c$107$1$1 Def02DF
+S XG$HW_set_8bit_reg_field$0$0 Def02A5
+S A$hw_reg_access$501 Def0139
+S A$hw_reg_access$402 Def00D3
+S A$hw_reg_access$321 Def0076
+S A$hw_reg_access$312 Def0069
+S A$hw_reg_access$303 Def005E
+S A$hw_reg_access$240 Def0012
+S A$hw_reg_access$231 Def0009
+S C$hw_reg_access.c$108$1$1 Def02E6
+S A$hw_reg_access$700 Def01F5
+S A$hw_reg_access$610 Def01A0
+S A$hw_reg_access$601 Def0195
+S A$hw_reg_access$520 Def014B
+S A$hw_reg_access$502 Def013A
+S A$hw_reg_access$430 Def00E5
+S A$hw_reg_access$340 Def008C
+S A$hw_reg_access$331 Def007F
+S A$hw_reg_access$322 Def0077
+S A$hw_reg_access$241 Def0013
+S A$hw_reg_access$232 Def000A
+S A$hw_reg_access$800 Def0255
+S A$hw_reg_access$710 Def0204
+S A$hw_reg_access$701 Def01F8
+S A$hw_reg_access$620 Def01AE
+S A$hw_reg_access$611 Def01A1
+S A$hw_reg_access$602 Def0198
+S A$hw_reg_access$521 Def014C
+S A$hw_reg_access$503 Def013B
+S A$hw_reg_access$440 Def00EE
+S A$hw_reg_access$431 Def00E6
+S A$hw_reg_access$404 Def00D4
+S A$hw_reg_access$350 Def0096
+S A$hw_reg_access$341 Def008D
+S A$hw_reg_access$332 Def0082
+S A$hw_reg_access$323 Def0078
+S A$hw_reg_access$314 Def006B
+S A$hw_reg_access$305 Def005F
+S A$hw_reg_access$260 Def0030
+S A$hw_reg_access$251 Def0025
+S A$hw_reg_access$801 Def0257
+S A$hw_reg_access$720 Def0210
+S A$hw_reg_access$711 Def0206
+S A$hw_reg_access$702 Def01F9
+S A$hw_reg_access$630 Def01BB
+S A$hw_reg_access$621 Def01AF
+S A$hw_reg_access$603 Def0199
+S A$hw_reg_access$522 Def014D
+S A$hw_reg_access$513 Def0142
+S A$hw_reg_access$504 Def013C
+S A$hw_reg_access$450 Def00FE
+S A$hw_reg_access$441 Def00EF
+S A$hw_reg_access$432 Def00E7
+S A$hw_reg_access$405 Def00D7
+S A$hw_reg_access$360 Def00A5
+S A$hw_reg_access$351 Def0097
+S A$hw_reg_access$342 Def008E
+S A$hw_reg_access$333 Def0084
+S A$hw_reg_access$324 Def0079
+S A$hw_reg_access$315 Def006E
+S A$hw_reg_access$306 Def0060
+S A$hw_reg_access$270 Def0039
+S A$hw_reg_access$261 Def0031
+S A$hw_reg_access$252 Def0028
+S A$hw_reg_access$243 Def0015
+S A$hw_reg_access$910 Def02C7
+S A$hw_reg_access$901 Def02B9
+S A$hw_reg_access$802 Def0259
+S A$hw_reg_access$730 Def021D
+S A$hw_reg_access$721 Def0211
+S A$hw_reg_access$703 Def01FA
+S A$hw_reg_access$640 Def01C6
+S A$hw_reg_access$631 Def01BC
+S A$hw_reg_access$622 Def01B0
+S A$hw_reg_access$613 Def01A3
+S A$hw_reg_access$604 Def019A
+S A$hw_reg_access$523 Def014E
+S A$hw_reg_access$514 Def0145
+S A$hw_reg_access$505 Def013D
+S A$hw_reg_access$460 Def0109
+S A$hw_reg_access$442 Def00F0
+S A$hw_reg_access$433 Def00E8
+S A$hw_reg_access$406 Def00DA
+S A$hw_reg_access$370 Def00B2
+S A$hw_reg_access$361 Def00A6
+S A$hw_reg_access$352 Def0099
+S A$hw_reg_access$343 Def008F
+S A$hw_reg_access$325 Def007A
+S A$hw_reg_access$316 Def006F
+S A$hw_reg_access$307 Def0062
+S A$hw_reg_access$280 Def0042
+S A$hw_reg_access$271 Def003A
+S A$hw_reg_access$262 Def0032
+S A$hw_reg_access$253 Def0029
+S A$hw_reg_access$244 Def0018
+S A$hw_reg_access$226 Def0000
+S A$hw_reg_access$920 Def02D4
+S A$hw_reg_access$911 Def02C8
+S A$hw_reg_access$902 Def02BB
+S A$hw_reg_access$830 Def027C
+S A$hw_reg_access$821 Def0270
+S A$hw_reg_access$803 Def025B
+S A$hw_reg_access$731 Def021F
+S A$hw_reg_access$722 Def0213
+S A$hw_reg_access$713 Def0208
+S A$hw_reg_access$704 Def01FB
+S A$hw_reg_access$632 Def01BD
+S A$hw_reg_access$614 Def01A6
+S A$hw_reg_access$605 Def019B
+S A$hw_reg_access$533 Def0157
+S A$hw_reg_access$524 Def014F
+S A$hw_reg_access$515 Def0146
+S A$hw_reg_access$506 Def013E
+S A$hw_reg_access$470 Def0114
+S A$hw_reg_access$461 Def010A
+S A$hw_reg_access$452 Def00FF
+S A$hw_reg_access$380 Def00BC
+S A$hw_reg_access$371 Def00B3
+S A$hw_reg_access$362 Def00A8
+S A$hw_reg_access$353 Def009A
+S A$hw_reg_access$344 Def0090
+S A$hw_reg_access$335 Def0086
+S A$hw_reg_access$326 Def007B
+S A$hw_reg_access$308 Def0063
+S A$hw_reg_access$290 Def004F
+S A$hw_reg_access$281 Def0043
+S A$hw_reg_access$272 Def003B
+S A$hw_reg_access$254 Def002A
+S A$hw_reg_access$245 Def001B
+S A$hw_reg_access$236 Def000B
+S A$hw_reg_access$227 Def0002
+S A$hw_reg_access$903 Def02BD
+S A$hw_reg_access$822 Def0273
+S A$hw_reg_access$813 Def0268
+S A$hw_reg_access$804 Def025E
+S A$hw_reg_access$741 Def0228
+S A$hw_reg_access$723 Def0214
+S A$hw_reg_access$714 Def020B
+S A$hw_reg_access$705 Def01FC
+S A$hw_reg_access$660 Def01DA
+S A$hw_reg_access$642 Def01C8
+S A$hw_reg_access$633 Def01BE
+S A$hw_reg_access$624 Def01B1
+S A$hw_reg_access$615 Def01A7
+S A$hw_reg_access$606 Def019C
+S A$hw_reg_access$570 Def016D
+S A$hw_reg_access$552 Def0158
+S A$hw_reg_access$516 Def0147
+S A$hw_reg_access$507 Def013F
+S A$hw_reg_access$480 Def0122
+S A$hw_reg_access$471 Def0116
+S A$hw_reg_access$462 Def010B
+S A$hw_reg_access$453 Def0102
+S A$hw_reg_access$444 Def00F1
+S A$hw_reg_access$381 Def00BD
+S A$hw_reg_access$372 Def00B4
+S A$hw_reg_access$363 Def00A9
+S A$hw_reg_access$354 Def009C
+S A$hw_reg_access$345 Def0091
+S A$hw_reg_access$336 Def0087
+S A$hw_reg_access$327 Def007C
+S A$hw_reg_access$318 Def0071
+S A$hw_reg_access$309 Def0065
+S A$hw_reg_access$282 Def0045
+S A$hw_reg_access$273 Def003C
+S A$hw_reg_access$255 Def002B
+S A$hw_reg_access$246 Def001E
+S A$hw_reg_access$237 Def000E
+S A$hw_reg_access$228 Def0004
+S A$hw_reg_access$940 Def02E6
+S A$hw_reg_access$922 Def02D6
+S A$hw_reg_access$913 Def02CA
+S A$hw_reg_access$904 Def02C0
+S A$hw_reg_access$841 Def0289
+S A$hw_reg_access$832 Def027D
+S A$hw_reg_access$823 Def0274
+S A$hw_reg_access$814 Def026B
+S A$hw_reg_access$805 Def0260
+S A$hw_reg_access$760 Def023D
+S A$hw_reg_access$733 Def0221
+S A$hw_reg_access$715 Def020C
+S A$hw_reg_access$661 Def01DD
+S A$hw_reg_access$643 Def01CB
+S A$hw_reg_access$625 Def01B4
+S A$hw_reg_access$580 Def0182
+S A$hw_reg_access$571 Def016F
+S A$hw_reg_access$562 Def0163
+S A$hw_reg_access$553 Def015A
+S A$hw_reg_access$526 Def0150
+S A$hw_reg_access$517 Def0148
+S A$hw_reg_access$508 Def0140
+S A$hw_reg_access$490 Def012C
+S A$hw_reg_access$472 Def0117
+S A$hw_reg_access$463 Def010C
+S A$hw_reg_access$454 Def0103
+S A$hw_reg_access$445 Def00F3
+S A$hw_reg_access$427 Def00DE
+S A$hw_reg_access$391 Def00C6
+S A$hw_reg_access$382 Def00BE
+S A$hw_reg_access$373 Def00B6
+S A$hw_reg_access$364 Def00AA
+S A$hw_reg_access$355 Def009D
+S A$hw_reg_access$346 Def0092
+S A$hw_reg_access$337 Def0089
+S A$hw_reg_access$328 Def007D
+S A$hw_reg_access$319 Def0074
+S A$hw_reg_access$292 Def0051
+S A$hw_reg_access$283 Def0046
+S A$hw_reg_access$274 Def003D
+S A$hw_reg_access$256 Def002C
+S A$hw_reg_access$247 Def0020
+S A$hw_reg_access$238 Def000F
+S A$hw_reg_access$229 Def0007
+S G$HW_set_8bit_reg_field$0$0 Def0240
+S A$hw_reg_access$932 Def02DF
+S A$hw_reg_access$923 Def02D7
+S A$hw_reg_access$914 Def02CD
+S A$hw_reg_access$833 Def0280
+S A$hw_reg_access$815 Def026C
+S A$hw_reg_access$806 Def0262
+S A$hw_reg_access$752 Def0233
+S A$hw_reg_access$743 Def022B
+S A$hw_reg_access$734 Def0222
+S A$hw_reg_access$725 Def0216
+S A$hw_reg_access$716 Def020D
+S A$hw_reg_access$707 Def01FD
+S A$hw_reg_access$662 Def01DE
+S A$hw_reg_access$653 Def01D2
+S A$hw_reg_access$644 Def01CC
+S A$hw_reg_access$635 Def01BF
+S A$hw_reg_access$626 Def01B6
+S A$hw_reg_access$617 Def01A9
+S A$hw_reg_access$608 Def019D
+S A$hw_reg_access$590 Def018C
+S A$hw_reg_access$581 Def0183
+S A$hw_reg_access$572 Def0171
+S A$hw_reg_access$563 Def0166
+S A$hw_reg_access$554 Def015C
+S A$hw_reg_access$527 Def0152
+S A$hw_reg_access$518 Def0149
+S A$hw_reg_access$509 Def0141
+S A$hw_reg_access$491 Def012D
+S A$hw_reg_access$482 Def0124
+S A$hw_reg_access$455 Def0104
+S A$hw_reg_access$446 Def00F5
+S A$hw_reg_access$437 Def00E9
+S A$hw_reg_access$428 Def00E0
+S A$hw_reg_access$392 Def00C9
+S A$hw_reg_access$383 Def00BF
+S A$hw_reg_access$374 Def00B7
+S A$hw_reg_access$365 Def00AC
+S A$hw_reg_access$356 Def009F
+S A$hw_reg_access$338 Def008A
+S A$hw_reg_access$329 Def007E
+S A$hw_reg_access$293 Def0054
+S A$hw_reg_access$284 Def0047
+S A$hw_reg_access$275 Def003E
+S A$hw_reg_access$266 Def0033
+S A$hw_reg_access$257 Def002D
+S A$hw_reg_access$248 Def0022
+S A$hw_reg_access$239 Def0011
+S A$hw_reg_access$933 Def02E2
+S A$hw_reg_access$915 Def02CE
+S A$hw_reg_access$906 Def02C2
+S A$hw_reg_access$861 Def029E
+S A$hw_reg_access$843 Def028B
+S A$hw_reg_access$834 Def0281
+S A$hw_reg_access$825 Def0275
+S A$hw_reg_access$753 Def0236
+S A$hw_reg_access$744 Def022E
+S A$hw_reg_access$735 Def0223
+S A$hw_reg_access$726 Def0219
+S A$hw_reg_access$717 Def020E
+S A$hw_reg_access$708 Def01FF
+S A$hw_reg_access$690 Def01EA
+S A$hw_reg_access$663 Def01DF
+S A$hw_reg_access$654 Def01D5
+S A$hw_reg_access$645 Def01CD
+S A$hw_reg_access$618 Def01AC
+S A$hw_reg_access$609 Def019E
+S A$hw_reg_access$591 Def018D
+S A$hw_reg_access$582 Def0184
+S A$hw_reg_access$573 Def0173
+S A$hw_reg_access$564 Def0167
+S A$hw_reg_access$555 Def015F
+S A$hw_reg_access$528 Def0154
+S A$hw_reg_access$519 Def014A
+S A$hw_reg_access$492 Def012E
+S A$hw_reg_access$483 Def0125
+S A$hw_reg_access$474 Def0119
+S A$hw_reg_access$465 Def010D
+S A$hw_reg_access$456 Def0105
+S A$hw_reg_access$447 Def00F8
+S A$hw_reg_access$438 Def00EC
+S A$hw_reg_access$429 Def00E2
+S A$hw_reg_access$393 Def00CA
+S A$hw_reg_access$384 Def00C0
+S A$hw_reg_access$366 Def00AD
+S A$hw_reg_access$357 Def00A0
+S A$hw_reg_access$348 Def0093
+S A$hw_reg_access$339 Def008B
+S A$hw_reg_access$294 Def0055
+S A$hw_reg_access$285 Def0049
+S A$hw_reg_access$276 Def003F
+S A$hw_reg_access$267 Def0036
+S A$hw_reg_access$258 Def002E
+S A$hw_reg_access$249 Def0024
+S A$hw_reg_access$934 Def02E3
+S A$hw_reg_access$925 Def02D8
+S A$hw_reg_access$907 Def02C5
+S A$hw_reg_access$862 Def02A0
+S A$hw_reg_access$853 Def0294
+S A$hw_reg_access$826 Def0276
+S A$hw_reg_access$817 Def026D
+S A$hw_reg_access$808 Def0264
+S A$hw_reg_access$754 Def0237
+S A$hw_reg_access$745 Def022F
+S A$hw_reg_access$736 Def0224
+S A$hw_reg_access$727 Def021A
+S A$hw_reg_access$718 Def020F
+S A$hw_reg_access$709 Def0201
+S A$hw_reg_access$691 Def01EC
+S A$hw_reg_access$673 Def01E9
+S A$hw_reg_access$664 Def01E0
+S A$hw_reg_access$655 Def01D6
+S A$hw_reg_access$646 Def01CE
+S A$hw_reg_access$637 Def01C2
+S A$hw_reg_access$628 Def01B8
+S A$hw_reg_access$619 Def01AD
+S A$hw_reg_access$592 Def018E
+S A$hw_reg_access$583 Def0186
+S A$hw_reg_access$574 Def0176
+S A$hw_reg_access$565 Def0168
+S A$hw_reg_access$556 Def0160
+S A$hw_reg_access$529 Def0156
+S A$hw_reg_access$493 Def012F
+S A$hw_reg_access$484 Def0126
+S A$hw_reg_access$475 Def011C
+S A$hw_reg_access$466 Def010E
+S A$hw_reg_access$457 Def0106
+S A$hw_reg_access$448 Def00FA
+S A$hw_reg_access$439 Def00ED
+S A$hw_reg_access$394 Def00CB
+S A$hw_reg_access$385 Def00C1
+S A$hw_reg_access$367 Def00AE
+S A$hw_reg_access$295 Def0056
+S A$hw_reg_access$286 Def004A
+S A$hw_reg_access$277 Def0040
+S A$hw_reg_access$268 Def0037
+S A$hw_reg_access$259 Def002F
+S A$hw_reg_access$917 Def02CF
+S A$hw_reg_access$908 Def02C6
+S A$hw_reg_access$890 Def02B0
+S A$hw_reg_access$863 Def02A2
+S A$hw_reg_access$854 Def0297
+S A$hw_reg_access$845 Def028E
+S A$hw_reg_access$836 Def0282
+S A$hw_reg_access$818 Def026E
+S A$hw_reg_access$809 Def0267
+S A$hw_reg_access$782 Def0240
+S A$hw_reg_access$764 Def023F
+S A$hw_reg_access$755 Def0238
+S A$hw_reg_access$746 Def0230
+S A$hw_reg_access$737 Def0225
+S A$hw_reg_access$692 Def01EE
+S A$hw_reg_access$665 Def01E1
+S A$hw_reg_access$656 Def01D7
+S A$hw_reg_access$647 Def01CF
+S A$hw_reg_access$638 Def01C3
+S A$hw_reg_access$629 Def01B9
+S A$hw_reg_access$575 Def0178
+S A$hw_reg_access$566 Def0169
+S A$hw_reg_access$557 Def0161
+S A$hw_reg_access$494 Def0130
+S A$hw_reg_access$485 Def0127
+S A$hw_reg_access$476 Def011D
+S A$hw_reg_access$467 Def0110
+S A$hw_reg_access$458 Def0107
+S A$hw_reg_access$449 Def00FC
+S A$hw_reg_access$395 Def00CC
+S A$hw_reg_access$386 Def00C2
+S A$hw_reg_access$368 Def00AF
+S A$hw_reg_access$359 Def00A2
+S A$hw_reg_access$296 Def0057
+S A$hw_reg_access$287 Def004B
+S A$hw_reg_access$269 Def0038
+S A$hw_reg_access$936 Def02E4
+S A$hw_reg_access$927 Def02DB
+S A$hw_reg_access$918 Def02D1
+S A$hw_reg_access$855 Def0298
+S A$hw_reg_access$837 Def0284
+S A$hw_reg_access$828 Def0278
+S A$hw_reg_access$819 Def026F
+S A$hw_reg_access$792 Def024B
+S A$hw_reg_access$783 Def0242
+S A$hw_reg_access$756 Def0239
+S A$hw_reg_access$747 Def0231
+S A$hw_reg_access$738 Def0226
+S A$hw_reg_access$729 Def021B
+S A$hw_reg_access$693 Def01F1
+S A$hw_reg_access$657 Def01D8
+S A$hw_reg_access$648 Def01D0
+S A$hw_reg_access$639 Def01C5
+S A$hw_reg_access$594 Def018F
+S A$hw_reg_access$576 Def017B
+S A$hw_reg_access$567 Def016A
+S A$hw_reg_access$558 Def0162
+S A$hw_reg_access$486 Def0128
+S A$hw_reg_access$468 Def0111
+S A$hw_reg_access$459 Def0108
+S A$hw_reg_access$396 Def00CD
+S A$hw_reg_access$387 Def00C3
+S A$hw_reg_access$378 Def00B8
+S A$hw_reg_access$369 Def00B1
+S A$hw_reg_access$297 Def0058
+S A$hw_reg_access$288 Def004D
+S A$hw_reg_access$279 Def0041
+S C$hw_reg_access.c$16$0$0 Def0000
+S A$hw_reg_access$928 Def02DE
+S A$hw_reg_access$919 Def02D3
+S A$hw_reg_access$847 Def028F
+S A$hw_reg_access$838 Def0286
+S A$hw_reg_access$829 Def027B
+S A$hw_reg_access$793 Def024E
+S A$hw_reg_access$784 Def0244
+S A$hw_reg_access$757 Def023A
+S A$hw_reg_access$748 Def0232
+S A$hw_reg_access$739 Def0227
+S A$hw_reg_access$694 Def01F2
+S A$hw_reg_access$667 Def01E2
+S A$hw_reg_access$658 Def01D9
+S A$hw_reg_access$649 Def01D1
+S A$hw_reg_access$595 Def0190
+S A$hw_reg_access$577 Def017D
+S A$hw_reg_access$496 Def0131
+S A$hw_reg_access$487 Def0129
+S A$hw_reg_access$478 Def011E
+S A$hw_reg_access$469 Def0113
+S A$hw_reg_access$397 Def00CE
+S A$hw_reg_access$388 Def00C4
+S A$hw_reg_access$379 Def00BB
+S A$hw_reg_access$298 Def0059
+S A$hw_reg_access$289 Def004E
+S C$hw_reg_access.c$60$1$1 Def01D2
+S C$hw_reg_access.c$42$1$1 Def00E9
+S A$hw_reg_access$884 Def02A6
+S A$hw_reg_access$857 Def0299
+S A$hw_reg_access$848 Def0292
+S A$hw_reg_access$839 Def0287
+S A$hw_reg_access$794 Def024F
+S A$hw_reg_access$785 Def0247
+S A$hw_reg_access$695 Def01F3
+S A$hw_reg_access$668 Def01E4
+S A$hw_reg_access$596 Def0191
+S A$hw_reg_access$587 Def0187
+S A$hw_reg_access$569 Def016B
+S A$hw_reg_access$488 Def012A
+S A$hw_reg_access$479 Def0120
+S A$hw_reg_access$398 Def00CF
+S A$hw_reg_access$389 Def00C5
+S A$hw_reg_access$299 Def005A
+S C$hw_reg_access.c$61$1$1 Def01E9
+S C$hw_reg_access.c$43$1$1 Def0142
+S C$hw_reg_access.c$34$1$1 Def00DE
+S C$hw_reg_access.c$25$1$1 Def000B
+S A$hw_reg_access$894 Def02B1
+S A$hw_reg_access$885 Def02A8
+S A$hw_reg_access$867 Def02A5
+S A$hw_reg_access$858 Def029C
+S A$hw_reg_access$849 Def0293
+S A$hw_reg_access$795 Def0250
+S A$hw_reg_access$786 Def0248
+S A$hw_reg_access$759 Def023B
+S A$hw_reg_access$696 Def01F4
+S A$hw_reg_access$669 Def01E6
+S A$hw_reg_access$597 Def0192
+S A$hw_reg_access$588 Def018A
+S A$hw_reg_access$579 Def017F
+S A$hw_reg_access$498 Def0134
+S A$hw_reg_access$489 Def012B
+S A$hw_reg_access$399 Def00D0
+S C$hw_reg_access.c$44$1$1 Def0157
+S C$hw_reg_access.c$26$1$1 Def0033
+S A$hw_reg_access$895 Def02B4
+S A$hw_reg_access$886 Def02AA
+S A$hw_reg_access$859 Def029D
+S A$hw_reg_access$796 Def0251
+S A$hw_reg_access$787 Def0249
+S A$hw_reg_access$598 Def0193
+S A$hw_reg_access$589 Def018B
+S A$hw_reg_access$499 Def0137
+S C$hw_reg_access.c$90$1$1 Def024B
+S C$hw_reg_access.c$81$1$1 Def0240
+S C$hw_reg_access.c$27$1$1 Def00B8
+S A$hw_reg_access$896 Def02B5
+S A$hw_reg_access$887 Def02AD
+S A$hw_reg_access$797 Def0252
+S A$hw_reg_access$788 Def024A
+S A$hw_reg_access$599 Def0194
+S C$hw_reg_access.c$91$1$1 Def0268
+S C$hw_reg_access.c$28$1$1 Def00DD
+S A$hw_reg_access$897 Def02B6
+S A$hw_reg_access$888 Def02AE
+S C$hw_reg_access.c$92$1$1 Def0294
+S C$hw_reg_access.c$74$1$1 Def01F5
+S A$hw_reg_access$898 Def02B7
+S A$hw_reg_access$889 Def02AF
+S A$hw_reg_access$799 Def0253
+S C$hw_reg_access.c$93$1$1 Def02A5
+S C$hw_reg_access.c$75$1$1 Def0233
+S C$hw_reg_access.c$66$1$1 Def01EA
+S A$hw_reg_access$899 Def02B8
+S C$hw_reg_access.c$76$1$1 Def023F
+S C$hw_reg_access.c$58$1$1 Def0163
+S C$hw_reg_access.c$49$1$1 Def0158
+S _HW_get_32bit_reg_field Def00DE
+S C$hw_reg_access.c$59$1$1 Def0187
+S _HW_get_16bit_reg_field Def01EA
+S C$hw_reg_access.c$98$1$1 Def02A6
+S XG$HW_get_32bit_reg_field$0$0 Def0157
+S _HW_set_32bit_reg_field Def0000
+S XG$HW_get_16bit_reg_field$0$0 Def023F
+S _HW_set_16bit_reg_field Def0158
+S _HW_get_8bit_reg_field Def02A6
+S G$HW_get_32bit_reg_field$0$0 Def00DE
+S G$HW_get_16bit_reg_field$0$0 Def01EA
+S XG$HW_set_32bit_reg_field$0$0 Def00DD
+S XG$HW_set_16bit_reg_field$0$0 Def01E9
+S XG$HW_get_8bit_reg_field$0$0 Def02E6
+S _HW_set_8bit_reg_field Def0240
+A CONST size 0 flags 20 addr 0
+A XINIT size 0 flags 20 addr 0
+A CABS size 0 flags 28 addr 0
+T 00 00
+R 00 00 00 02
+T 00 00
+R 00 00 00 03
+T 00 00
+R 00 00 00 03
+T 00 02
+R 00 00 00 03
+T 00 02
+R 00 00 00 03
+T 00 06
+R 00 00 00 03
+T 00 06
+R 00 00 00 03
+T 00 07
+R 00 00 00 03
+T 00 07
+R 00 00 00 03
+T 00 00
+R 00 00 00 09
+T 00 00
+R 00 00 00 09
+T 00 01
+R 00 00 00 09
+T 00 01
+R 00 00 00 09
+T 00 05
+R 00 00 00 09
+T 00 05
+R 00 00 00 09
+T 00 09
+R 00 00 00 09
+T 00 09
+R 00 00 00 09
+T 00 0B
+R 00 00 00 09
+T 00 0B
+R 00 00 00 09
+T 00 0F
+R 00 00 00 09
+T 00 0F
+R 00 00 00 09
+T 00 10
+R 00 00 00 09
+T 00 10
+R 00 00 00 09
+T 00 14
+R 00 00 00 09
+T 00 14
+R 00 00 00 09
+T 00 16
+R 00 00 00 09
+T 00 16
+R 00 00 00 09
+T 00 1A
+R 00 00 00 09
+T 00 1A
+R 00 00 00 09
+T 00 1B
+R 00 00 00 09
+T 00 1B
+R 00 00 00 09
+T 00 1D
+R 00 00 00 09
+T 00 1D
+R 00 00 00 09
+T 00 1F
+R 00 00 00 09
+T 00 1F
+R 00 00 00 09
+T 00 21
+R 00 00 00 09
+T 00 21
+R 00 00 00 09
+T 00 23
+R 00 00 00 09
+T 00 23
+R 00 00 00 09
+T 00 24
+R 00 00 00 09
+T 00 24
+R 00 00 00 09
+T 00 26
+R 00 00 00 09
+T 00 26
+R 00 00 00 09
+T 00 28
+R 00 00 00 09
+T 00 28
+R 00 00 00 09
+T 00 2A
+R 00 00 00 09
+T 00 2A
+R 00 00 00 09
+T 00 2B
+R 00 00 00 09
+T 00 2B
+R 00 00 00 09
+T 00 2C
+R 00 00 00 09
+T 00 2C
+R 00 00 00 09
+T 00 2D
+R 00 00 00 09
+T 00 2D
+R 00 00 00 09
+T 00 2F
+R 00 00 00 09
+T 00 2F
+R 00 00 00 09
+T 00 30
+R 00 00 00 09
+T 00 30
+R 00 00 00 09
+T 00 31
+R 00 00 00 09
+T 00 31
+R 00 00 00 09
+T 00 32
+R 00 00 00 09
+T 00 32
+R 00 00 00 09
+T 00 34
+R 00 00 00 09
+T 00 34
+R 00 00 00 09
+T 00 00
+R 00 00 00 14
+T 00 00 AA 83 E5 82 90 00 09 F0 A3 EA F0 90 00 09
+R 00 00 00 14 00 07 00 09 00 0E 00 09
+T 00 0E E0 F5 00 00 00 A3 E0 F5 00 00 01 85
+R 00 00 00 14 F1 21 04 00 03 F1 21 0A 00 03
+T 00 16 00 00 00 82 85 00 00 01 83 12
+R 00 00 00 14 F1 21 02 00 03 F1 21 07 00 03
+T 00 1C 00 00 AC 82 AD 83 AE F0 FF 90 00 0B EC F0
+R 00 00 00 14 02 02 00 07 00 0C 00 09
+T 00 2A A3 ED F0 A3 EE F0 A3 EF F0 90 00 01 E0 FC
+R 00 00 00 14 00 0C 00 09
+T 00 38 A3 E0 FD A3 E0 FE A3 E0 FF EC F4 F5
+R 00 00 00 14
+T 00 44 00 00 02 ED F4 F5 00 00 03 EE F4 F5
+R 00 00 00 14 F1 21 02 00 03 F1 21 08 00 03
+T 00 4C 00 00 04 EF F4 F5 00 00 05 90
+R 00 00 00 14 F1 21 02 00 03 F1 21 08 00 03
+T 00 52 00 0B E0 FA A3 E0 FB A3 E0 F8 A3 E0 F9 EA
+R 00 00 00 14 00 02 00 09
+T 00 60 52 00 00 02 EB 52 00 00 03 E8 52
+R 00 00 00 14 F1 21 03 00 03 F1 21 08 00 03
+T 00 67 00 00 04 E9 52 00 00 05 90
+R 00 00 00 14 F1 21 02 00 03 F1 21 07 00 03
+T 00 6C 00 00 E0 F5 00 00 06 90
+R 00 00 00 14 00 02 00 09 F1 21 06 00 03
+T 00 72 00 05 E0 FB A3 E0 F8 A3 E0 F9 A3 E0 FA 85
+R 00 00 00 14 00 02 00 09
+T 00 80 00 00 06 F0 05 F0 80 0D
+R 00 00 00 14 F1 21 02 00 03
+T 00 86
+R 00 00 00 14
+T 00 86 EB 25 E0 FB E8 33 F8 E9 33 F9 EA 33 FA
+R 00 00 00 14
+T 00 93
+R 00 00 00 14
+T 00 93 D5 F0 F0 EB 52 04 E8 52 05 E9 52 06 EA 52
+R 00 00 00 14
+T 00 A1 07 90 00 0B EC 45 00 00 02 F0 ED 45
+R 00 00 00 14 00 04 00 09 F1 21 08 00 03
+T 00 AB 00 00 03 A3 F0 EE 45 00 00 04 A3 F0 EF 45
+R 00 00 00 14 F1 21 02 00 03 F1 21 09 00 03
+T 00 B5 00 00 05 A3 F0 90 00 0B E0 FA A3 E0 FB A3
+R 00 00 00 14 F1 21 02 00 03 00 08 00 09
+T 00 C1 E0 FC A3 E0 FD 90 00 00 EA F0 A3 EB F0 A3
+R 00 00 00 14 02 08 00 04
+T 00 CF EC F0 A3 ED F0 85 00 00 00 82 85 00 00 01
+R 00 00 00 14 F1 21 08 00 03 F1 21 0D 00 03
+T 00 D9 83 12 00 00
+R 00 00 00 14 02 04 00 00
+T 00 DD
+R 00 00 00 14
+T 00 DD 22
+R 00 00 00 14
+T 00 DE
+R 00 00 00 14
+T 00 DE AA 83 E5 82 90 00 14 F0 A3 EA F0 90 00 14
+R 00 00 00 14 00 07 00 09 00 0E 00 09
+T 00 EC E0 FA A3 E0 FB 8A 82 8B 83 12 00 00 AA 82
+R 00 00 00 14 02 0C 00 07
+T 00 FA AB 83 AC F0 FD 90 00 10 E0 FE A3 E0 FF A3
+R 00 00 00 14 00 08 00 09
+T 01 08 E0 F8 A3 E0 F9 EE 52 02 EF 52 03 E8 52 04
+R 00 00 00 14
+T 01 16 E9 52 05 90 00 0F E0 FE 8E F0 05 F0 80 0D
+R 00 00 00 14 00 06 00 09
+T 01 24
+R 00 00 00 14
+T 01 24 C3 ED 13 FD EC 13 FC EB 13 FB EA 13 FA
+R 00 00 00 14
+T 01 31
+R 00 00 00 14
+T 01 31 D5 F0 F0 90 00 16 EA F0 A3 EB F0 A3 EC F0
+R 00 00 00 14 00 06 00 09
+T 01 3F A3 ED F0 90 00 16 E0 FA A3 E0 FB A3 E0 FC
+R 00 00 00 14 00 06 00 09
+T 01 4D A3 E0 FD 8A 82 8B 83 8C F0 ED
+R 00 00 00 14
+T 01 57
+R 00 00 00 14
+T 01 57 22
+R 00 00 00 14
+T 01 58
+R 00 00 00 14
+T 01 58 AA 83 E5 82 90 00 1F F0 A3 EA F0 90 00 1F
+R 00 00 00 14 00 07 00 09 00 0E 00 09
+T 01 66 E0 FA A3 E0 FB 8A 82 8B 83 C0 02 C0 03 12
+R 00 00 00 14
+T 01 74 00 00 E5 82 85 83 F0 D0 03 D0 02 90 00 21
+R 00 00 00 14 02 02 00 08 00 0E 00 09
+T 01 82 F0 A3 E5 F0 F0 90 00 1B E0 FC A3 E0 FD EC
+R 00 00 00 14 00 08 00 09
+T 01 90 F4 FE ED F4 FF 90 00 21 E0 F8 A3 E0 F9 E8
+R 00 00 00 14 00 08 00 09
+T 01 9E 52 06 E9 52 07 90 00 1A E0 F5 00 00 07 90
+R 00 00 00 14 00 08 00 09 F1 21 0C 00 03
+T 01 AA 00 1D E0 F9 A3 E0 F8 85 00 00 07 F0 05 F0
+R 00 00 00 14 00 02 00 09 F1 21 0A 00 03
+T 01 B6 80 07
+R 00 00 00 14
+T 01 B8
+R 00 00 00 14
+T 01 B8 E9 25 E0 F9 E8 33 F8
+R 00 00 00 14
+T 01 BF
+R 00 00 00 14
+T 01 BF D5 F0 F6 E9 52 04 E8 52 05 90 00 21 EC 4E
+R 00 00 00 14 00 0C 00 09
+T 01 CD F0 ED 4F A3 F0 90 00 21 E0 FC A3 E0 FD 90
+R 00 00 00 14 00 08 00 09
+T 01 DB 00 00 EC F0 A3 ED F0 8A 82 8B 83 12 00 00
+R 00 00 00 14 02 02 00 05 02 0E 00 01
+T 01 E9
+R 00 00 00 14
+T 01 E9 22
+R 00 00 00 14
+T 01 EA
+R 00 00 00 14
+T 01 EA AA 83 E5 82 90 00 26 F0 A3 EA F0 90 00 26
+R 00 00 00 14 00 07 00 09 00 0E 00 09
+T 01 F8 E0 FA A3 E0 FB 8A 82 8B 83 12 00 00 AA 82
+R 00 00 00 14 02 0C 00 08
+T 02 06 AB 83 90 00 24 E0 FC A3 E0 FD EC 52 02 ED
+R 00 00 00 14 00 05 00 09
+T 02 14 52 03 90 00 23 E0 FC 8C F0 05 F0 80 07
+R 00 00 00 14 00 05 00 09
+T 02 21
+R 00 00 00 14
+T 02 21 C3 EB 13 FB EA 13 FA
+R 00 00 00 14
+T 02 28
+R 00 00 00 14
+T 02 28 D5 F0 F6 90 00 28 EA F0 A3 EB F0 90 00 28
+R 00 00 00 14 00 06 00 09 00 0E 00 09
+T 02 36 E0 FA A3 E0 FB 8A 82 8B 83
+R 00 00 00 14
+T 02 3F
+R 00 00 00 14
+T 02 3F 22
+R 00 00 00 14
+T 02 40
+R 00 00 00 14
+T 02 40 AA 83 E5 82 90 00 2D F0 A3 EA F0 90 00 2D
+R 00 00 00 14 00 07 00 09 00 0E 00 09
+T 02 4E E0 FA A3 E0 FB 8A 82 8B 83 C0 02 C0 03 12
+R 00 00 00 14
+T 02 5C 00 00 E5 82 D0 03 D0 02 90 00 2F F0 90
+R 00 00 00 14 02 02 00 02 00 0B 00 09
+T 02 69 00 2B E0 FC EC F4 FD 90 00 2F E0 FE EE 52
+R 00 00 00 14 00 02 00 09 00 0A 00 09
+T 02 77 05 90 00 2A E0 FE 90 00 2C E0 FF 8E F0 05
+R 00 00 00 14 00 04 00 09 00 09 00 09
+T 02 85 F0 EF 80 02
+R 00 00 00 14
+T 02 89
+R 00 00 00 14
+T 02 89 25 E0
+R 00 00 00 14
+T 02 8B
+R 00 00 00 14
+T 02 8B D5 F0 FB 5C 90 00 2F 4D F0 90 00 2F E0 FC
+R 00 00 00 14 00 07 00 09 00 0C 00 09
+T 02 99 90 00 00 EC F0 8A 82 8B 83 12 00 00
+R 00 00 00 14 02 03 00 06 02 0C 00 03
+T 02 A5
+R 00 00 00 14
+T 02 A5 22
+R 00 00 00 14
+T 02 A6
+R 00 00 00 14
+T 02 A6 AA 83 E5 82 90 00 32 F0 A3 EA F0 90 00 32
+R 00 00 00 14 00 07 00 09 00 0E 00 09
+T 02 B4 E0 FA A3 E0 FB 8A 82 8B 83 12 00 00 AA 82
+R 00 00 00 14 02 0C 00 02
+T 02 C2 90 00 31 E0 FB EB 52 02 90 00 30 E0 FB 8B
+R 00 00 00 14 00 03 00 09 00 0B 00 09
+T 02 D0 F0 05 F0 EA 80 02
+R 00 00 00 14
+T 02 D6
+R 00 00 00 14
+T 02 D6 C3 13
+R 00 00 00 14
+T 02 D8
+R 00 00 00 14
+T 02 D8 D5 F0 FB 90 00 34 F0 90 00 34 E0 FA 8A 82
+R 00 00 00 14 00 06 00 09 00 0A 00 09
+T 02 E6
+R 00 00 00 14
+T 02 E6 22
+R 00 00 00 14

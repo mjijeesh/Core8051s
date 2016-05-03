@@ -1,0 +1,239 @@
+/*
+ * main2.c
+ *
+ *  Created on: Mar 17, 2014
+ *      Author: Karthik.Padala
+ */
+
+#include "./drivers/CoreGPIO/core_gpio.h"
+#include "./drivers/CoreUARTapb/core_uart_apb.h"
+#include "./drivers/CoreWatchDog/core_watchdog.h"
+
+#include "hal.h"
+
+#include "Top_Level_hw_platform.h"
+
+#include "stdio.h"
+
+#define LED_D0		GPIO_0
+
+#define LED_D1		GPIO_1
+
+#define LED_D2		GPIO_2
+
+#define LED_D3		GPIO_3
+
+#define LED_D4		GPIO_4
+
+#define LED_D5		GPIO_5
+
+#define LED_D6		GPIO_6
+
+#define LED_D7		GPIO_7
+
+#define LED_D8		GPIO_8
+
+#define LED_scanning_delay   40
+
+#define UART_57600_BAUD			38					// 57600 baud @ 12MHz
+
+#define UART_9600_BAUD          38                  // 9600 baud @ 6Mhz
+
+#define WatchDog_COUNT			1000
+
+#define APB3_BASE_ADDRESS	    0xF000
+
+void wait (int time_in_ms);
+
+gpio_instance_t g_gpio;
+
+UART_instance_t g_stdio_uart;
+
+wd_instance_t g_wd;
+
+int main( void )
+{ 	
+	 const uint8_t uart_msg[] = "\n\r** Simple LED Sequence  **\n\r";
+	 const uint8_t linefeed[] = "\n\r";
+
+
+
+
+    UART_init( &g_stdio_uart, APB3_BASE_ADDRESS + COREUARTAPB_0, UART_9600_BAUD, DATA_8_BITS | NO_PARITY );
+
+	WD_init( &g_wd, APB3_BASE_ADDRESS + COREWATCHDOG_0, WatchDog_COUNT, WD_PRESCALER_DIV_16 );
+    WD_disable( &g_wd );
+
+    GPIO_init( &g_gpio,	APB3_BASE_ADDRESS + COREGPIO_0, GPIO_APB_32_BITS_BUS );
+
+     /* Configure MSS GPIOs. */
+
+    GPIO_config( &g_gpio, LED_D0, GPIO_OUTPUT_MODE );
+
+    GPIO_config( &g_gpio, LED_D1, GPIO_OUTPUT_MODE );
+
+    GPIO_config( &g_gpio, LED_D2, GPIO_OUTPUT_MODE );
+
+    GPIO_config( &g_gpio, LED_D3, GPIO_OUTPUT_MODE );
+
+    GPIO_config( &g_gpio, LED_D4, GPIO_OUTPUT_MODE );
+
+    GPIO_config( &g_gpio, LED_D5, GPIO_OUTPUT_MODE );
+
+    GPIO_config( &g_gpio, LED_D6, GPIO_OUTPUT_MODE );
+
+    GPIO_config( &g_gpio, LED_D7, GPIO_OUTPUT_MODE );
+
+    GPIO_config( &g_gpio, LED_D8, GPIO_OUTPUT_MODE );
+
+     // LEDs are off
+	GPIO_set_output( &g_gpio, LED_D0, 0);
+
+	GPIO_set_output( &g_gpio, LED_D1, 0);
+
+	GPIO_set_output( &g_gpio, LED_D2, 0);
+
+	GPIO_set_output( &g_gpio, LED_D3, 0);
+
+	GPIO_set_output( &g_gpio, LED_D4, 0);
+
+	GPIO_set_output( &g_gpio, LED_D5, 0);
+
+	GPIO_set_output( &g_gpio, LED_D6, 0);
+
+	GPIO_set_output( &g_gpio, LED_D7, 0);
+
+	GPIO_set_output( &g_gpio, LED_D8, 0);
+
+	UART_send( &g_stdio_uart, uart_msg, sizeof(uart_msg) );
+	UART_send( &g_stdio_uart, linefeed, sizeof(linefeed) );
+
+    while( 1 )
+    {
+
+
+        GPIO_set_output( &g_gpio, LED_D0, 1);
+
+        wait(LED_scanning_delay);
+
+        GPIO_set_output( &g_gpio, LED_D0, 0);
+
+        GPIO_set_output( &g_gpio, LED_D1, 1);
+
+        wait(LED_scanning_delay);
+
+        GPIO_set_output( &g_gpio, LED_D1, 0);
+
+        GPIO_set_output( &g_gpio, LED_D2, 1);
+
+        wait(LED_scanning_delay);
+
+        GPIO_set_output( &g_gpio, LED_D2, 0);
+
+        GPIO_set_output( &g_gpio, LED_D3, 1);
+
+        wait(LED_scanning_delay);
+
+        GPIO_set_output( &g_gpio, LED_D3, 0);
+
+        GPIO_set_output( &g_gpio, LED_D4, 1);
+
+        wait(LED_scanning_delay);
+
+        GPIO_set_output( &g_gpio, LED_D4, 0);
+
+        GPIO_set_output( &g_gpio, LED_D5, 1);
+
+        wait(LED_scanning_delay);
+
+        GPIO_set_output( &g_gpio, LED_D5, 0);
+
+        GPIO_set_output( &g_gpio, LED_D6, 1);
+
+        wait(LED_scanning_delay);
+
+        GPIO_set_output( &g_gpio, LED_D6, 0);
+
+        GPIO_set_output( &g_gpio, LED_D7, 1);
+
+        wait(LED_scanning_delay);
+
+        GPIO_set_output( &g_gpio, LED_D7, 0);
+
+        GPIO_set_output( &g_gpio, LED_D8, 1);
+
+        wait(LED_scanning_delay);
+
+        // reverse direction
+
+
+
+        GPIO_set_output( &g_gpio, LED_D8, 0);
+
+        GPIO_set_output( &g_gpio, LED_D7, 1);
+
+        wait(LED_scanning_delay);
+
+        GPIO_set_output( &g_gpio, LED_D7, 0);
+
+        GPIO_set_output( &g_gpio, LED_D6, 1);
+
+        wait(LED_scanning_delay);
+
+        GPIO_set_output( &g_gpio, LED_D6, 0);
+
+        GPIO_set_output( &g_gpio, LED_D5, 1);
+
+        wait(LED_scanning_delay);
+
+        GPIO_set_output( &g_gpio, LED_D5, 0);
+
+        GPIO_set_output( &g_gpio, LED_D4, 1);
+
+        wait(LED_scanning_delay);
+
+        GPIO_set_output( &g_gpio, LED_D4, 0);
+
+        GPIO_set_output( &g_gpio, LED_D3, 1);
+
+        wait(LED_scanning_delay);
+
+        GPIO_set_output( &g_gpio, LED_D3, 0);
+
+        GPIO_set_output( &g_gpio, LED_D2, 1);
+
+        wait(LED_scanning_delay);
+
+        GPIO_set_output( &g_gpio, LED_D2, 0);
+
+        GPIO_set_output( &g_gpio, LED_D1, 1);
+
+        wait(LED_scanning_delay);
+
+        GPIO_set_output( &g_gpio, LED_D1, 0);
+
+        GPIO_set_output( &g_gpio, LED_D0, 1);
+
+        wait(LED_scanning_delay);
+
+        GPIO_set_output( &g_gpio, LED_D0, 0);
+
+        wait(LED_scanning_delay);
+
+    }
+
+}
+
+//delay function
+
+void wait(int time_in_ms)
+
+{
+		int i;
+
+	for (i=0; i < time_in_ms*10000; i++)
+
+	{
+		;
+	}
+}

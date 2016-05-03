@@ -1,0 +1,27 @@
+/*
+ * cli.h
+ *
+ *  Created on: 02-May-2016
+ *      Author: jijeesh
+ */
+
+#ifndef CLI_H_
+#define CLI_H_
+
+
+extern UART_instance_t g_stdio_uart;
+uint8_t key; // store the Operation ke ySelection
+
+uint8_t rx_char[10];  // buffer for address/data from user input
+uint8_t *rx_char_ptr;  // pointer to above buffer
+
+
+
+void display_brt_regs(void);
+void read_user_input (uint8_t *rx_char_ptr);
+uint8_t get_key_selection(void);
+void display_prompt(void);
+void display_help(void);
+
+
+#endif /* CLI_H_ */

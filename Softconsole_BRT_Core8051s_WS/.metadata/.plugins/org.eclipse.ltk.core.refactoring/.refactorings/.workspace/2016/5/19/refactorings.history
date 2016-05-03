@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;Core8051s_Intterupt_LED_Flash&apos;" deleteContents="false" description="Delete resource &apos;Core8051s_Intterupt_LED_Flash&apos;" element1="/Core8051s_Intterupt_LED_Flash" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1462186072292"/>&#x0A;<refactoring comment="Rename resource &apos;Core8051s_UART_CLI&apos; to &apos;Core8051s_Uart_CLI&apos;" description="Rename resource &apos;Core8051s_UART_CLI&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/Core8051s_UART_CLI" name="Core8051s_Uart_CLI" stamp="1462186131055" updateReferences="true"/>
+</session>

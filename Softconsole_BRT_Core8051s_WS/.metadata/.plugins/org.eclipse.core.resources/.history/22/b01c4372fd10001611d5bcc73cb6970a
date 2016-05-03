@@ -1,0 +1,28 @@
+#ifndef Top_Level_HW_PLATFORM_H_
+#define Top_Level_HW_PLATFORM_H_
+/*****************************************************************************
+*
+*Created by Actel SmartDesign  Fri Mar 04 14:49:26 2011
+*
+*Memory map specification for peripherals in Top_Level
+*/
+
+/*-----------------------------------------------------------------------------
+* CORE8051S_0 subsystem memory map
+* Master(s) for this subsystem: CORE8051S_0 
+*---------------------------------------------------------------------------*/
+
+
+#define COREUARTAPB_0                   0x00000000U
+#define COREGPIO_0                      0x00000100U
+#define CORETIMER_0                     0x00000200U
+#define COREWATCHDOG_0                  0x00000300U
+#define COREAPBSRAM_0                   0x00000500U
+#define CORE1553BRT_0                   0x00000800U
+
+
+#define SRAM0_REG_OFFSET    0xA0
+
+
+
+#endif /* Top_Level_HW_PLATFORM_H_*/

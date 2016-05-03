@@ -1,0 +1,186 @@
+#include "core_gpio.h"  /* For getting GPIO read/write functions */
+#include "core_uart_apb.h"
+#include "socDefs.h"
+
+
+extern UART_instance_t g_uart0;
+
+void dp_display_text(uint8_t * text)
+{
+
+    unsigned int length;
+    length = 0;
+    while (text[length++]!='\0');
+
+   UART_send(&g_uart0, (unsigned char *)text,length);
+
+
+}
+
+void dp_display_value(uint32_t value,DPUINT descriptive)
+{
+	/* User Specific Code */
+	uint8_t value_text[256];
+	    int text_size;
+	    if (descriptive == HEX)
+	    {
+	        text_size = int_to_hex_int( value, value_text, 8);
+	    }
+	    else
+	    {
+	        text_size = int_to_dec_int( value, value_text, 8);
+	    }
+	    UART_send (&g_uart0, value_text, text_size);
+
+}
+void dp_display_array(uint8_t *value,DPUINT bytes, DPUINT descriptive)
+{
+	int idx;
+	    for (idx=0;idx<bytes;idx++)
+	    {
+	        dp_display_value(value[bytes-1-idx], descriptive);
+	        dp_display_text(" ");
+	    }
+
+}
+
+
+#define NB_NIBBLES_IN_INT		8
+
+DPUINT int_to_hex_int(DPUINT value, uint8_t * p_result, DPUINT result_size)
+{
+    int nibble_idx, nb_nibbles;
+    uint8_t conv_array[NB_NIBBLES_IN_INT];
+    unsigned int uvalue;
+    nibble_idx = 0;
+    uvalue = (unsigned int)value;
+
+    do {
+        int nibble = uvalue & 0x0F;
+
+        if ( nibble < 10 )
+            conv_array[nibble_idx] = nibble + '0';
+        else
+        conv_array[nibble_idx] = nibble  - 10 + 'A';
+        uvalue = (uvalue >> 4);
+        nibble_idx++;
+    } while ( ( nibble_idx < NB_NIBBLES_IN_INT ) && ( uvalue > 0 ) );
+
+    nb_nibbles = nibble_idx;
+    for ( nibble_idx = 0; (nibble_idx < nb_nibbles) && (nibble_idx < result_size) ;nibble_idx++ )
+    {
+        p_result[nibble_idx] = conv_array[nb_nibbles - nibble_idx - 1];
+    }
+    return nibble_idx;
+}
+
+DPUINT int_to_dec_int(DPUINT value, uint8_t * p_result, DPUINT result_size)
+{
+
+    uint8_t conv_array[NB_NIBBLES_IN_INT];
+    unsigned int uvalue;
+    unsigned int remainder;
+    unsigned int digit_idx,nb_digits;
+
+    uvalue = (unsigned int)value;
+    digit_idx=0;
+    if (uvalue)
+    {
+        while (uvalue)
+        {
+            remainder = uvalue % 10;
+            conv_array[digit_idx] = remainder + '0';
+            uvalue /= 10;
+            digit_idx++;
+        }
+    }
+    else
+    {
+        conv_array[digit_idx] = '0';
+        digit_idx++;
+    }
+
+
+    nb_digits = digit_idx;
+    for ( digit_idx = 0; (digit_idx < nb_digits); digit_idx++ )
+    {
+        p_result[digit_idx] = conv_array[nb_digits - digit_idx - 1];
+    }
+    return digit_idx;
+}
+
+
+//#include "../CMSIS/a2fxxxm3.h"
+
+#include "Socdefs.h"
+
+int xatoi (                                             /* 0:Failed, 1:Successful */
+		       uint8  **str,                          /* Pointer to pointer to the string */
+		       uint32  *res                             /* Pointer to the valiable to store the value */
+)
+{
+                unsigned long val;
+                unsigned char c, r, s = 0;
+
+
+                *res = 0;
+
+                while ((c = **str) == ' ') (*str)++;               /* Skip leading spaces */
+
+                if (c == '-') {                         /* negative? */
+                                s = 1;
+                                c = *(++(*str));
+                }
+
+                if (c == '0') {
+                                c = *(++(*str));
+                                switch (c) {
+                                case 'x':                                /* hexdecimal */
+                                case 'X':
+
+                                                r = 16; c = *(++(*str));
+                                                break;
+                                case 'b':                                /* binary */
+                                case 'B':
+
+                                                r = 2; c = *(++(*str));
+                                                break;
+                                default:
+                                                if (c <= ' ') return 1;          /* single zero */
+                                                if (c < '0' || c > '9') return 0;          /* invalid char */
+                                                r = 8;                      /* octal */
+                                }
+                } else {
+                                if (c < '0' || c > '9') return 0;          /* EOL or invalid char */
+                                r = 10;                                    /* decimal */
+                }
+
+                val = 0;
+                while (c > ' ') {
+                                if (c >= 'a') c -= 0x20;
+                                c -= '0';
+                                if (c >= 17) {
+                                                c -= 7;
+                                                if (c <= 9) return 0;           /* invalid char */
+                                }
+                                if (c >= r) return 0;                           /* invalid char for current radix */
+                                val = val * r + c;
+                                c = *(++(*str));
+                }
+                if (s) val = 0 - val;                                               /* apply sign if needed */
+
+                *res = val;
+                return 1;
+}
+
+
+uint8_t  getParity(unsigned int n)
+{
+	uint8_t parity = 0;
+    while (n)
+    {
+        parity = !parity;
+        n      = n & (n - 1);
+    }
+    return parity;
+}

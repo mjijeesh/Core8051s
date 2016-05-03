@@ -1,0 +1,2396 @@
+                              1 ;--------------------------------------------------------
+                              2 ; File Created by SDCC : FreeWare ANSI-C Compiler
+                              3 ; Version 2.6.3 #4543 (Dec 31 2006)
+                              4 ; This file generated Tue May 03 17:52:19 2016
+                              5 ;--------------------------------------------------------
+                              6 	.module ___misc
+                              7 	.optsdcc -mmcs51 --model-large
+                              8 	
+                              9 ;--------------------------------------------------------
+                             10 ; Public variables in this module
+                             11 ;--------------------------------------------------------
+                             12 	.globl _xatoi_PARM_2
+                             13 	.globl _int_to_dec_int_PARM_2
+                             14 	.globl _int_to_hex_int_PARM_3
+                             15 	.globl _int_to_hex_int_PARM_2
+                             16 	.globl _dp_display_array_PARM_3
+                             17 	.globl _dp_display_array_PARM_2
+                             18 	.globl _dp_display_value_PARM_2
+                             19 	.globl _dp_display_text
+                             20 	.globl _dp_display_value
+                             21 	.globl _dp_display_array
+                             22 	.globl _int_to_hex_int
+                             23 	.globl _int_to_dec_int
+                             24 	.globl _xatoi
+                             25 	.globl _getParity
+                             26 ;--------------------------------------------------------
+                             27 ; special function registers
+                             28 ;--------------------------------------------------------
+                             29 	.area RSEG    (DATA)
+                             30 ;--------------------------------------------------------
+                             31 ; special function bits
+                             32 ;--------------------------------------------------------
+                             33 	.area RSEG    (DATA)
+                             34 ;--------------------------------------------------------
+                             35 ; overlayable register banks
+                             36 ;--------------------------------------------------------
+                             37 	.area REG_BANK_0	(REL,OVR,DATA)
+   0000                      38 	.ds 8
+                             39 ;--------------------------------------------------------
+                             40 ; internal ram data
+                             41 ;--------------------------------------------------------
+                             42 	.area DSEG    (DATA)
+                    0000     43 Ldp_display_array$sloc0$1$0==.
+   0000                      44 _dp_display_array_sloc0_1_0:
+   0000                      45 	.ds 2
+                    0002     46 Ldp_display_array$sloc1$1$0==.
+   0002                      47 _dp_display_array_sloc1_1_0:
+   0002                      48 	.ds 2
+                    0004     49 Lint_to_hex_int$sloc0$1$0==.
+   0004                      50 _int_to_hex_int_sloc0_1_0:
+   0004                      51 	.ds 2
+                    0006     52 Lint_to_hex_int$sloc1$1$0==.
+   0006                      53 _int_to_hex_int_sloc1_1_0:
+   0006                      54 	.ds 3
+                    0009     55 Lint_to_dec_int$sloc0$1$0==.
+   0009                      56 _int_to_dec_int_sloc0_1_0:
+   0009                      57 	.ds 3
+                             58 ;--------------------------------------------------------
+                             59 ; overlayable items in internal ram 
+                             60 ;--------------------------------------------------------
+                             61 	.area OSEG    (OVR,DATA)
+                             62 ;--------------------------------------------------------
+                             63 ; indirectly addressable internal ram data
+                             64 ;--------------------------------------------------------
+                             65 	.area ISEG    (DATA)
+                             66 ;--------------------------------------------------------
+                             67 ; absolute internal ram data
+                             68 ;--------------------------------------------------------
+                             69 	.area IABS    (ABS,DATA)
+                             70 	.area IABS    (ABS,DATA)
+                             71 ;--------------------------------------------------------
+                             72 ; bit data
+                             73 ;--------------------------------------------------------
+                             74 	.area BSEG    (BIT)
+                             75 ;--------------------------------------------------------
+                             76 ; paged external ram data
+                             77 ;--------------------------------------------------------
+                             78 	.area PSEG    (PAG,XDATA)
+                             79 ;--------------------------------------------------------
+                             80 ; external ram data
+                             81 ;--------------------------------------------------------
+                             82 	.area XSEG    (XDATA)
+                    0000     83 Ldp_display_text$text$1$1==.
+   0000                      84 _dp_display_text_text_1_1:
+   0000                      85 	.ds 3
+                    0003     86 Ldp_display_text$length$1$1==.
+   0003                      87 _dp_display_text_length_1_1:
+   0003                      88 	.ds 2
+                    0005     89 Ldp_display_value$descriptive$1$1==.
+   0005                      90 _dp_display_value_PARM_2:
+   0005                      91 	.ds 2
+                    0007     92 Ldp_display_value$value$1$1==.
+   0007                      93 _dp_display_value_value_1_1:
+   0007                      94 	.ds 4
+                    000B     95 Ldp_display_value$value_text$1$1==.
+   000B                      96 _dp_display_value_value_text_1_1:
+   000B                      97 	.ds 256
+                    010B     98 Ldp_display_value$text_size$1$1==.
+   010B                      99 _dp_display_value_text_size_1_1:
+   010B                     100 	.ds 2
+                    010D    101 Ldp_display_array$bytes$1$1==.
+   010D                     102 _dp_display_array_PARM_2:
+   010D                     103 	.ds 2
+                    010F    104 Ldp_display_array$descriptive$1$1==.
+   010F                     105 _dp_display_array_PARM_3:
+   010F                     106 	.ds 2
+                    0111    107 Ldp_display_array$value$1$1==.
+   0111                     108 _dp_display_array_value_1_1:
+   0111                     109 	.ds 3
+                    0114    110 Ldp_display_array$idx$1$1==.
+   0114                     111 _dp_display_array_idx_1_1:
+   0114                     112 	.ds 2
+                    0116    113 Lint_to_hex_int$p_result$1$1==.
+   0116                     114 _int_to_hex_int_PARM_2:
+   0116                     115 	.ds 3
+                    0119    116 Lint_to_hex_int$result_size$1$1==.
+   0119                     117 _int_to_hex_int_PARM_3:
+   0119                     118 	.ds 2
+                    011B    119 Lint_to_hex_int$value$1$1==.
+   011B                     120 _int_to_hex_int_value_1_1:
+   011B                     121 	.ds 2
+                    011D    122 Lint_to_hex_int$nibble_idx$1$1==.
+   011D                     123 _int_to_hex_int_nibble_idx_1_1:
+   011D                     124 	.ds 2
+                    011F    125 Lint_to_hex_int$nb_nibbles$1$1==.
+   011F                     126 _int_to_hex_int_nb_nibbles_1_1:
+   011F                     127 	.ds 2
+                    0121    128 Lint_to_hex_int$conv_array$1$1==.
+   0121                     129 _int_to_hex_int_conv_array_1_1:
+   0121                     130 	.ds 8
+                    0129    131 Lint_to_hex_int$uvalue$1$1==.
+   0129                     132 _int_to_hex_int_uvalue_1_1:
+   0129                     133 	.ds 2
+                    012B    134 Lint_to_dec_int$p_result$1$1==.
+   012B                     135 _int_to_dec_int_PARM_2:
+   012B                     136 	.ds 3
+                    012E    137 Lint_to_dec_int$value$1$1==.
+   012E                     138 _int_to_dec_int_value_1_1:
+   012E                     139 	.ds 2
+                    0130    140 Lint_to_dec_int$conv_array$1$1==.
+   0130                     141 _int_to_dec_int_conv_array_1_1:
+   0130                     142 	.ds 8
+                    0138    143 Lint_to_dec_int$uvalue$1$1==.
+   0138                     144 _int_to_dec_int_uvalue_1_1:
+   0138                     145 	.ds 2
+                    013A    146 Lint_to_dec_int$digit_idx$1$1==.
+   013A                     147 _int_to_dec_int_digit_idx_1_1:
+   013A                     148 	.ds 2
+                    013C    149 Lint_to_dec_int$nb_digits$1$1==.
+   013C                     150 _int_to_dec_int_nb_digits_1_1:
+   013C                     151 	.ds 2
+                    013E    152 Lxatoi$res$1$1==.
+   013E                     153 _xatoi_PARM_2:
+   013E                     154 	.ds 3
+                    0141    155 Lxatoi$str$1$1==.
+   0141                     156 _xatoi_str_1_1:
+   0141                     157 	.ds 3
+                    0144    158 Lxatoi$val$1$1==.
+   0144                     159 _xatoi_val_1_1:
+   0144                     160 	.ds 4
+                    0148    161 Lxatoi$c$1$1==.
+   0148                     162 _xatoi_c_1_1:
+   0148                     163 	.ds 1
+                    0149    164 Lxatoi$r$1$1==.
+   0149                     165 _xatoi_r_1_1:
+   0149                     166 	.ds 1
+                    014A    167 Lxatoi$s$1$1==.
+   014A                     168 _xatoi_s_1_1:
+   014A                     169 	.ds 1
+                    014B    170 LgetParity$n$1$1==.
+   014B                     171 _getParity_n_1_1:
+   014B                     172 	.ds 2
+                    014D    173 LgetParity$parity$1$1==.
+   014D                     174 _getParity_parity_1_1:
+   014D                     175 	.ds 1
+                            176 ;--------------------------------------------------------
+                            177 ; external initialized ram data
+                            178 ;--------------------------------------------------------
+                            179 	.area XISEG   (XDATA)
+                            180 	.area HOME    (CODE)
+                            181 	.area GSINIT0 (CODE)
+                            182 	.area GSINIT1 (CODE)
+                            183 	.area GSINIT2 (CODE)
+                            184 	.area GSINIT3 (CODE)
+                            185 	.area GSINIT4 (CODE)
+                            186 	.area GSINIT5 (CODE)
+                            187 	.area GSINIT  (CODE)
+                            188 	.area GSFINAL (CODE)
+                            189 	.area CSEG    (CODE)
+                            190 ;--------------------------------------------------------
+                            191 ; global & static initialisations
+                            192 ;--------------------------------------------------------
+                            193 	.area HOME    (CODE)
+                            194 	.area GSINIT  (CODE)
+                            195 	.area GSFINAL (CODE)
+                            196 	.area GSINIT  (CODE)
+                            197 ;--------------------------------------------------------
+                            198 ; Home
+                            199 ;--------------------------------------------------------
+                            200 	.area HOME    (CODE)
+                            201 	.area HOME    (CODE)
+                            202 ;--------------------------------------------------------
+                            203 ; code
+                            204 ;--------------------------------------------------------
+                            205 	.area CSEG    (CODE)
+                            206 ;------------------------------------------------------------
+                            207 ;Allocation info for local variables in function 'dp_display_text'
+                            208 ;------------------------------------------------------------
+                            209 ;text                      Allocated with name '_dp_display_text_text_1_1'
+                            210 ;length                    Allocated with name '_dp_display_text_length_1_1'
+                            211 ;------------------------------------------------------------
+                    0000    212 	G$dp_display_text$0$0 ==.
+                    0000    213 	C$misc.c$8$0$0 ==.
+                            214 ;	../misc.c:8: void dp_display_text(uint8_t * text)
+                            215 ;	-----------------------------------------
+                            216 ;	 function dp_display_text
+                            217 ;	-----------------------------------------
+   0000                     218 _dp_display_text:
+                    0002    219 	ar2 = 0x02
+                    0003    220 	ar3 = 0x03
+                    0004    221 	ar4 = 0x04
+                    0005    222 	ar5 = 0x05
+                    0006    223 	ar6 = 0x06
+                    0007    224 	ar7 = 0x07
+                    0000    225 	ar0 = 0x00
+                    0001    226 	ar1 = 0x01
+                            227 ;	genReceive
+   0000 AA F0               228 	mov	r2,b
+   0002 AB 83               229 	mov	r3,dph
+   0004 E5 82               230 	mov	a,dpl
+   0006 90s00r00            231 	mov	dptr,#_dp_display_text_text_1_1
+   0009 F0                  232 	movx	@dptr,a
+   000A A3                  233 	inc	dptr
+   000B EB                  234 	mov	a,r3
+   000C F0                  235 	movx	@dptr,a
+   000D A3                  236 	inc	dptr
+   000E EA                  237 	mov	a,r2
+   000F F0                  238 	movx	@dptr,a
+                    0010    239 	C$misc.c$12$1$1 ==.
+                            240 ;	../misc.c:12: length = 0;
+                            241 ;	genAssign
+   0010 90s00r03            242 	mov	dptr,#_dp_display_text_length_1_1
+   0013 E4                  243 	clr	a
+   0014 F0                  244 	movx	@dptr,a
+   0015 A3                  245 	inc	dptr
+   0016 F0                  246 	movx	@dptr,a
+                    0017    247 	C$misc.c$13$1$1 ==.
+                            248 ;	../misc.c:13: while (text[length++]!='\0');
+                            249 ;	genAssign
+   0017 90s00r00            250 	mov	dptr,#_dp_display_text_text_1_1
+   001A E0                  251 	movx	a,@dptr
+   001B FA                  252 	mov	r2,a
+   001C A3                  253 	inc	dptr
+   001D E0                  254 	movx	a,@dptr
+   001E FB                  255 	mov	r3,a
+   001F A3                  256 	inc	dptr
+   0020 E0                  257 	movx	a,@dptr
+   0021 FC                  258 	mov	r4,a
+   0022                     259 00101$:
+                            260 ;	genAssign
+   0022 90s00r03            261 	mov	dptr,#_dp_display_text_length_1_1
+   0025 E0                  262 	movx	a,@dptr
+   0026 FD                  263 	mov	r5,a
+   0027 A3                  264 	inc	dptr
+   0028 E0                  265 	movx	a,@dptr
+   0029 FE                  266 	mov	r6,a
+                            267 ;	genPlus
+   002A 90s00r03            268 	mov	dptr,#_dp_display_text_length_1_1
+                            269 ;	genPlusIncr
+   002D 74 01               270 	mov	a,#0x01
+   002F 25 05               271 	add	a,ar5
+   0031 F0                  272 	movx	@dptr,a
+   0032 74 00               273 	mov	a,#0x00
+   0034 35 06               274 	addc	a,ar6
+   0036 A3                  275 	inc	dptr
+   0037 F0                  276 	movx	@dptr,a
+                            277 ;	genPlus
+   0038 E5 05               278 	mov	a,ar5
+   003A 25 02               279 	add	a,ar2
+   003C FD                  280 	mov	r5,a
+   003D E5 06               281 	mov	a,ar6
+   003F 35 03               282 	addc	a,ar3
+   0041 FE                  283 	mov	r6,a
+   0042 8C 07               284 	mov	ar7,r4
+                            285 ;	genPointerGet
+                            286 ;	genGenPointerGet
+   0044 8D 82               287 	mov	dpl,r5
+   0046 8E 83               288 	mov	dph,r6
+   0048 8F F0               289 	mov	b,r7
+   004A 12s00r00            290 	lcall	__gptrget
+   004D FD                  291 	mov	r5,a
+                            292 ;	genCmpEq
+                            293 ;	gencjneshort
+   004E BD 00 02            294 	cjne	r5,#0x00,00108$
+   0051 80 03               295 	sjmp	00109$
+   0053                     296 00108$:
+   0053 02s00r22            297 	ljmp	00101$
+   0056                     298 00109$:
+                    0056    299 	C$misc.c$15$1$1 ==.
+                            300 ;	../misc.c:15: UART_send(&g_stdio_uart, (uint8_t *)text,length);
+                            301 ;	genAssign
+   0056 90s00r03            302 	mov	dptr,#_dp_display_text_length_1_1
+   0059 E0                  303 	movx	a,@dptr
+   005A FD                  304 	mov	r5,a
+   005B A3                  305 	inc	dptr
+   005C E0                  306 	movx	a,@dptr
+   005D FE                  307 	mov	r6,a
+                            308 ;	genAssign
+   005E 90s00r00            309 	mov	dptr,#_UART_send_PARM_2
+   0061 EA                  310 	mov	a,r2
+   0062 F0                  311 	movx	@dptr,a
+   0063 A3                  312 	inc	dptr
+   0064 EB                  313 	mov	a,r3
+   0065 F0                  314 	movx	@dptr,a
+   0066 A3                  315 	inc	dptr
+   0067 EC                  316 	mov	a,r4
+   0068 F0                  317 	movx	@dptr,a
+                            318 ;	genAssign
+   0069 90s00r00            319 	mov	dptr,#_UART_send_PARM_3
+   006C ED                  320 	mov	a,r5
+   006D F0                  321 	movx	@dptr,a
+   006E A3                  322 	inc	dptr
+   006F EE                  323 	mov	a,r6
+   0070 F0                  324 	movx	@dptr,a
+                            325 ;	genCall
+   0071 75 82r00            326 	mov	dpl,#_g_stdio_uart
+   0074 75 83s00            327 	mov	dph,#(_g_stdio_uart >> 8)
+   0077 75 F0 00            328 	mov	b,#0x00
+   007A 12s00r00            329 	lcall	_UART_send
+   007D                     330 00104$:
+                    007D    331 	C$misc.c$16$1$1 ==.
+                    007D    332 	XG$dp_display_text$0$0 ==.
+   007D 22                  333 	ret
+                            334 ;------------------------------------------------------------
+                            335 ;Allocation info for local variables in function 'dp_display_value'
+                            336 ;------------------------------------------------------------
+                            337 ;descriptive               Allocated with name '_dp_display_value_PARM_2'
+                            338 ;value                     Allocated with name '_dp_display_value_value_1_1'
+                            339 ;value_text                Allocated with name '_dp_display_value_value_text_1_1'
+                            340 ;text_size                 Allocated with name '_dp_display_value_text_size_1_1'
+                            341 ;------------------------------------------------------------
+                    007E    342 	G$dp_display_value$0$0 ==.
+                    007E    343 	C$misc.c$18$1$1 ==.
+                            344 ;	../misc.c:18: void dp_display_value(uint32_t value,DPUINT descriptive)
+                            345 ;	-----------------------------------------
+                            346 ;	 function dp_display_value
+                            347 ;	-----------------------------------------
+   007E                     348 _dp_display_value:
+                            349 ;	genReceive
+   007E AA 82               350 	mov	r2,dpl
+   0080 AB 83               351 	mov	r3,dph
+   0082 AC F0               352 	mov	r4,b
+   0084 FD                  353 	mov	r5,a
+   0085 90s00r07            354 	mov	dptr,#_dp_display_value_value_1_1
+   0088 EA                  355 	mov	a,r2
+   0089 F0                  356 	movx	@dptr,a
+   008A A3                  357 	inc	dptr
+   008B EB                  358 	mov	a,r3
+   008C F0                  359 	movx	@dptr,a
+   008D A3                  360 	inc	dptr
+   008E EC                  361 	mov	a,r4
+   008F F0                  362 	movx	@dptr,a
+   0090 A3                  363 	inc	dptr
+   0091 ED                  364 	mov	a,r5
+   0092 F0                  365 	movx	@dptr,a
+                    0093    366 	C$misc.c$23$1$1 ==.
+                            367 ;	../misc.c:23: if (descriptive == HEX)
+                            368 ;	genAssign
+   0093 90s00r05            369 	mov	dptr,#_dp_display_value_PARM_2
+   0096 E0                  370 	movx	a,@dptr
+   0097 FA                  371 	mov	r2,a
+   0098 A3                  372 	inc	dptr
+   0099 E0                  373 	movx	a,@dptr
+   009A FB                  374 	mov	r3,a
+                            375 ;	genIfx
+   009B EA                  376 	mov	a,r2
+   009C 4B                  377 	orl	a,r3
+                            378 ;	genIfxJump
+   009D 60 03               379 	jz	00107$
+   009F 02s00rDE            380 	ljmp	00102$
+   00A2                     381 00107$:
+                    00A2    382 	C$misc.c$25$2$2 ==.
+                            383 ;	../misc.c:25: text_size = int_to_hex_int( value, value_text, 8);
+                            384 ;	genAssign
+   00A2 90s00r07            385 	mov	dptr,#_dp_display_value_value_1_1
+   00A5 E0                  386 	movx	a,@dptr
+   00A6 FA                  387 	mov	r2,a
+   00A7 A3                  388 	inc	dptr
+   00A8 E0                  389 	movx	a,@dptr
+   00A9 FB                  390 	mov	r3,a
+   00AA A3                  391 	inc	dptr
+   00AB E0                  392 	movx	a,@dptr
+   00AC FC                  393 	mov	r4,a
+   00AD A3                  394 	inc	dptr
+   00AE E0                  395 	movx	a,@dptr
+   00AF FD                  396 	mov	r5,a
+                            397 ;	genCast
+                            398 ;	genCast
+   00B0 90s01r16            399 	mov	dptr,#_int_to_hex_int_PARM_2
+   00B3 74r0B               400 	mov	a,#_dp_display_value_value_text_1_1
+   00B5 F0                  401 	movx	@dptr,a
+   00B6 A3                  402 	inc	dptr
+   00B7 74s00               403 	mov	a,#(_dp_display_value_value_text_1_1 >> 8)
+   00B9 F0                  404 	movx	@dptr,a
+   00BA A3                  405 	inc	dptr
+   00BB 74 00               406 	mov	a,#0x0
+   00BD F0                  407 	movx	@dptr,a
+                            408 ;	genAssign
+   00BE 90s01r19            409 	mov	dptr,#_int_to_hex_int_PARM_3
+   00C1 74 08               410 	mov	a,#0x08
+   00C3 F0                  411 	movx	@dptr,a
+   00C4 E4                  412 	clr	a
+   00C5 A3                  413 	inc	dptr
+   00C6 F0                  414 	movx	@dptr,a
+                            415 ;	genCall
+   00C7 8A 82               416 	mov	dpl,r2
+   00C9 8B 83               417 	mov	dph,r3
+   00CB 12s02r1A            418 	lcall	_int_to_hex_int
+   00CE E5 82               419 	mov	a,dpl
+   00D0 85 83 F0            420 	mov	b,dph
+                            421 ;	genAssign
+   00D3 90s01r0B            422 	mov	dptr,#_dp_display_value_text_size_1_1
+   00D6 F0                  423 	movx	@dptr,a
+   00D7 A3                  424 	inc	dptr
+   00D8 E5 F0               425 	mov	a,b
+   00DA F0                  426 	movx	@dptr,a
+   00DB 02s01r0E            427 	ljmp	00103$
+   00DE                     428 00102$:
+                    00DE    429 	C$misc.c$29$2$3 ==.
+                            430 ;	../misc.c:29: text_size = int_to_dec_int( value, value_text);
+                            431 ;	genAssign
+   00DE 90s00r07            432 	mov	dptr,#_dp_display_value_value_1_1
+   00E1 E0                  433 	movx	a,@dptr
+   00E2 FA                  434 	mov	r2,a
+   00E3 A3                  435 	inc	dptr
+   00E4 E0                  436 	movx	a,@dptr
+   00E5 FB                  437 	mov	r3,a
+   00E6 A3                  438 	inc	dptr
+   00E7 E0                  439 	movx	a,@dptr
+   00E8 FC                  440 	mov	r4,a
+   00E9 A3                  441 	inc	dptr
+   00EA E0                  442 	movx	a,@dptr
+   00EB FD                  443 	mov	r5,a
+                            444 ;	genCast
+                            445 ;	genCast
+   00EC 90s01r2B            446 	mov	dptr,#_int_to_dec_int_PARM_2
+   00EF 74r0B               447 	mov	a,#_dp_display_value_value_text_1_1
+   00F1 F0                  448 	movx	@dptr,a
+   00F2 A3                  449 	inc	dptr
+   00F3 74s00               450 	mov	a,#(_dp_display_value_value_text_1_1 >> 8)
+   00F5 F0                  451 	movx	@dptr,a
+   00F6 A3                  452 	inc	dptr
+   00F7 74 00               453 	mov	a,#0x0
+   00F9 F0                  454 	movx	@dptr,a
+                            455 ;	genCall
+   00FA 8A 82               456 	mov	dpl,r2
+   00FC 8B 83               457 	mov	dph,r3
+   00FE 12s03rB3            458 	lcall	_int_to_dec_int
+   0101 E5 82               459 	mov	a,dpl
+   0103 85 83 F0            460 	mov	b,dph
+                            461 ;	genAssign
+   0106 90s01r0B            462 	mov	dptr,#_dp_display_value_text_size_1_1
+   0109 F0                  463 	movx	@dptr,a
+   010A A3                  464 	inc	dptr
+   010B E5 F0               465 	mov	a,b
+   010D F0                  466 	movx	@dptr,a
+   010E                     467 00103$:
+                    010E    468 	C$misc.c$31$1$1 ==.
+                            469 ;	../misc.c:31: UART_send (&g_stdio_uart, value_text, text_size);
+                            470 ;	genAssign
+   010E 90s01r0B            471 	mov	dptr,#_dp_display_value_text_size_1_1
+   0111 E0                  472 	movx	a,@dptr
+   0112 FA                  473 	mov	r2,a
+   0113 A3                  474 	inc	dptr
+   0114 E0                  475 	movx	a,@dptr
+   0115 FB                  476 	mov	r3,a
+                            477 ;	genAssign
+   0116 90s00r00            478 	mov	dptr,#_UART_send_PARM_2
+   0119 74r0B               479 	mov	a,#_dp_display_value_value_text_1_1
+   011B F0                  480 	movx	@dptr,a
+   011C A3                  481 	inc	dptr
+   011D 74s00               482 	mov	a,#(_dp_display_value_value_text_1_1 >> 8)
+   011F F0                  483 	movx	@dptr,a
+   0120 A3                  484 	inc	dptr
+   0121 74 00               485 	mov	a,#0x00
+   0123 F0                  486 	movx	@dptr,a
+                            487 ;	genAssign
+   0124 90s00r00            488 	mov	dptr,#_UART_send_PARM_3
+   0127 EA                  489 	mov	a,r2
+   0128 F0                  490 	movx	@dptr,a
+   0129 A3                  491 	inc	dptr
+   012A EB                  492 	mov	a,r3
+   012B F0                  493 	movx	@dptr,a
+                            494 ;	genCall
+   012C 75 82r00            495 	mov	dpl,#_g_stdio_uart
+   012F 75 83s00            496 	mov	dph,#(_g_stdio_uart >> 8)
+   0132 75 F0 00            497 	mov	b,#0x00
+   0135 12s00r00            498 	lcall	_UART_send
+   0138                     499 00104$:
+                    0138    500 	C$misc.c$33$1$1 ==.
+                    0138    501 	XG$dp_display_value$0$0 ==.
+   0138 22                  502 	ret
+                            503 ;------------------------------------------------------------
+                            504 ;Allocation info for local variables in function 'dp_display_array'
+                            505 ;------------------------------------------------------------
+                            506 ;sloc0                     Allocated with name '_dp_display_array_sloc0_1_0'
+                            507 ;sloc1                     Allocated with name '_dp_display_array_sloc1_1_0'
+                            508 ;bytes                     Allocated with name '_dp_display_array_PARM_2'
+                            509 ;descriptive               Allocated with name '_dp_display_array_PARM_3'
+                            510 ;value                     Allocated with name '_dp_display_array_value_1_1'
+                            511 ;idx                       Allocated with name '_dp_display_array_idx_1_1'
+                            512 ;------------------------------------------------------------
+                    0139    513 	G$dp_display_array$0$0 ==.
+                    0139    514 	C$misc.c$34$1$1 ==.
+                            515 ;	../misc.c:34: void dp_display_array(uint8_t *value,DPUINT bytes, DPUINT descriptive)
+                            516 ;	-----------------------------------------
+                            517 ;	 function dp_display_array
+                            518 ;	-----------------------------------------
+   0139                     519 _dp_display_array:
+                            520 ;	genReceive
+   0139 AA F0               521 	mov	r2,b
+   013B AB 83               522 	mov	r3,dph
+   013D E5 82               523 	mov	a,dpl
+   013F 90s01r11            524 	mov	dptr,#_dp_display_array_value_1_1
+   0142 F0                  525 	movx	@dptr,a
+   0143 A3                  526 	inc	dptr
+   0144 EB                  527 	mov	a,r3
+   0145 F0                  528 	movx	@dptr,a
+   0146 A3                  529 	inc	dptr
+   0147 EA                  530 	mov	a,r2
+   0148 F0                  531 	movx	@dptr,a
+                    0149    532 	C$misc.c$37$1$1 ==.
+                            533 ;	../misc.c:37: for (idx=0;idx<bytes;idx++)
+                            534 ;	genAssign
+   0149 90s01r14            535 	mov	dptr,#_dp_display_array_idx_1_1
+   014C E4                  536 	clr	a
+   014D F0                  537 	movx	@dptr,a
+   014E A3                  538 	inc	dptr
+   014F F0                  539 	movx	@dptr,a
+                            540 ;	genAssign
+   0150 90s01r11            541 	mov	dptr,#_dp_display_array_value_1_1
+   0153 E0                  542 	movx	a,@dptr
+   0154 FA                  543 	mov	r2,a
+   0155 A3                  544 	inc	dptr
+   0156 E0                  545 	movx	a,@dptr
+   0157 FB                  546 	mov	r3,a
+   0158 A3                  547 	inc	dptr
+   0159 E0                  548 	movx	a,@dptr
+   015A FC                  549 	mov	r4,a
+                            550 ;	genAssign
+   015B 90s01r0F            551 	mov	dptr,#_dp_display_array_PARM_3
+   015E E0                  552 	movx	a,@dptr
+   015F F5*02               553 	mov	_dp_display_array_sloc1_1_0,a
+   0161 A3                  554 	inc	dptr
+   0162 E0                  555 	movx	a,@dptr
+   0163 F5*03               556 	mov	(_dp_display_array_sloc1_1_0 + 1),a
+                            557 ;	genAssign
+   0165 90s01r0D            558 	mov	dptr,#_dp_display_array_PARM_2
+   0168 E0                  559 	movx	a,@dptr
+   0169 FF                  560 	mov	r7,a
+   016A A3                  561 	inc	dptr
+   016B E0                  562 	movx	a,@dptr
+   016C F8                  563 	mov	r0,a
+   016D                     564 00101$:
+                            565 ;	genIpush
+                            566 ;	genAssign
+   016D 90s01r14            567 	mov	dptr,#_dp_display_array_idx_1_1
+   0170 E0                  568 	movx	a,@dptr
+   0171 F5*00               569 	mov	_dp_display_array_sloc0_1_0,a
+   0173 A3                  570 	inc	dptr
+   0174 E0                  571 	movx	a,@dptr
+   0175 F5*01               572 	mov	(_dp_display_array_sloc0_1_0 + 1),a
+                            573 ;	genAssign
+   0177 A9*00               574 	mov	r1,_dp_display_array_sloc0_1_0
+   0179 AD*01               575 	mov	r5,(_dp_display_array_sloc0_1_0 + 1)
+                            576 ;	genCmpLt
+                            577 ;	genCmp
+   017B C3                  578 	clr	c
+   017C E9                  579 	mov	a,r1
+   017D 9F                  580 	subb	a,r7
+   017E ED                  581 	mov	a,r5
+   017F 98                  582 	subb	a,r0
+   0180 E4                  583 	clr	a
+   0181 33                  584 	rlc	a
+                            585 ;	genIpop
+                            586 ;	genIfx
+                            587 ;	genIfxJump
+   0182 70 03               588 	jnz	00109$
+   0184 02s02r19            589 	ljmp	00105$
+   0187                     590 00109$:
+                    0187    591 	C$misc.c$39$2$2 ==.
+                            592 ;	../misc.c:39: dp_display_value(value[bytes-1-idx], descriptive);
+                            593 ;	genMinus
+                            594 ;	genMinusDec
+   0187 EF                  595 	mov	a,r7
+   0188 24 FF               596 	add	a,#0xff
+   018A F9                  597 	mov	r1,a
+   018B E8                  598 	mov	a,r0
+   018C 34 FF               599 	addc	a,#0xff
+   018E FD                  600 	mov	r5,a
+                            601 ;	genMinus
+   018F E9                  602 	mov	a,r1
+   0190 C3                  603 	clr	c
+   0191 95*00               604 	subb	a,_dp_display_array_sloc0_1_0
+   0193 F9                  605 	mov	r1,a
+   0194 ED                  606 	mov	a,r5
+   0195 95*01               607 	subb	a,(_dp_display_array_sloc0_1_0 + 1)
+   0197 FD                  608 	mov	r5,a
+                            609 ;	genPlus
+   0198 E5 01               610 	mov	a,ar1
+   019A 25 02               611 	add	a,ar2
+   019C F9                  612 	mov	r1,a
+   019D E5 05               613 	mov	a,ar5
+   019F 35 03               614 	addc	a,ar3
+   01A1 FD                  615 	mov	r5,a
+   01A2 8C 06               616 	mov	ar6,r4
+                            617 ;	genPointerGet
+                            618 ;	genGenPointerGet
+   01A4 89 82               619 	mov	dpl,r1
+   01A6 8D 83               620 	mov	dph,r5
+   01A8 8E F0               621 	mov	b,r6
+   01AA 12s00r00            622 	lcall	__gptrget
+   01AD F9                  623 	mov	r1,a
+                            624 ;	genIpush
+   01AE C0 02               625 	push	ar2
+   01B0 C0 03               626 	push	ar3
+   01B2 C0 04               627 	push	ar4
+                            628 ;	genCast
+   01B4 7D 00               629 	mov	r5,#0x00
+   01B6 7E 00               630 	mov	r6,#0x00
+   01B8 7A 00               631 	mov	r2,#0x00
+                            632 ;	genAssign
+   01BA 90s00r05            633 	mov	dptr,#_dp_display_value_PARM_2
+   01BD E5*02               634 	mov	a,_dp_display_array_sloc1_1_0
+   01BF F0                  635 	movx	@dptr,a
+   01C0 A3                  636 	inc	dptr
+   01C1 E5*03               637 	mov	a,(_dp_display_array_sloc1_1_0 + 1)
+   01C3 F0                  638 	movx	@dptr,a
+                            639 ;	genCall
+   01C4 89 82               640 	mov	dpl,r1
+   01C6 8D 83               641 	mov	dph,r5
+   01C8 8E F0               642 	mov	b,r6
+   01CA EA                  643 	mov	a,r2
+   01CB C0 02               644 	push	ar2
+   01CD C0 03               645 	push	ar3
+   01CF C0 04               646 	push	ar4
+   01D1 C0 07               647 	push	ar7
+   01D3 C0 00               648 	push	ar0
+   01D5 12s00r7E            649 	lcall	_dp_display_value
+   01D8 D0 00               650 	pop	ar0
+   01DA D0 07               651 	pop	ar7
+   01DC D0 04               652 	pop	ar4
+   01DE D0 03               653 	pop	ar3
+   01E0 D0 02               654 	pop	ar2
+                    01E2    655 	C$misc.c$40$2$2 ==.
+                            656 ;	../misc.c:40: dp_display_text(" ");
+                            657 ;	genCall
+   01E2 75 82r00            658 	mov	dpl,#__str_0
+   01E5 75 83s00            659 	mov	dph,#(__str_0 >> 8)
+   01E8 75 F0 80            660 	mov	b,#0x80
+   01EB C0 02               661 	push	ar2
+   01ED C0 03               662 	push	ar3
+   01EF C0 04               663 	push	ar4
+   01F1 C0 07               664 	push	ar7
+   01F3 C0 00               665 	push	ar0
+   01F5 12s00r00            666 	lcall	_dp_display_text
+   01F8 D0 00               667 	pop	ar0
+   01FA D0 07               668 	pop	ar7
+   01FC D0 04               669 	pop	ar4
+   01FE D0 03               670 	pop	ar3
+   0200 D0 02               671 	pop	ar2
+                    0202    672 	C$misc.c$37$1$1 ==.
+                            673 ;	../misc.c:37: for (idx=0;idx<bytes;idx++)
+                            674 ;	genPlus
+   0202 90s01r14            675 	mov	dptr,#_dp_display_array_idx_1_1
+                            676 ;	genPlusIncr
+   0205 74 01               677 	mov	a,#0x01
+   0207 25*00               678 	add	a,_dp_display_array_sloc0_1_0
+   0209 F0                  679 	movx	@dptr,a
+   020A 74 00               680 	mov	a,#0x00
+   020C 35*01               681 	addc	a,(_dp_display_array_sloc0_1_0 + 1)
+   020E A3                  682 	inc	dptr
+   020F F0                  683 	movx	@dptr,a
+                            684 ;	genIpop
+   0210 D0 04               685 	pop	ar4
+   0212 D0 03               686 	pop	ar3
+   0214 D0 02               687 	pop	ar2
+   0216 02s01r6D            688 	ljmp	00101$
+   0219                     689 00105$:
+                    0219    690 	C$misc.c$43$1$1 ==.
+                    0219    691 	XG$dp_display_array$0$0 ==.
+   0219 22                  692 	ret
+                            693 ;------------------------------------------------------------
+                            694 ;Allocation info for local variables in function 'int_to_hex_int'
+                            695 ;------------------------------------------------------------
+                            696 ;sloc0                     Allocated with name '_int_to_hex_int_sloc0_1_0'
+                            697 ;sloc1                     Allocated with name '_int_to_hex_int_sloc1_1_0'
+                            698 ;p_result                  Allocated with name '_int_to_hex_int_PARM_2'
+                            699 ;result_size               Allocated with name '_int_to_hex_int_PARM_3'
+                            700 ;value                     Allocated with name '_int_to_hex_int_value_1_1'
+                            701 ;nibble_idx                Allocated with name '_int_to_hex_int_nibble_idx_1_1'
+                            702 ;nb_nibbles                Allocated with name '_int_to_hex_int_nb_nibbles_1_1'
+                            703 ;conv_array                Allocated with name '_int_to_hex_int_conv_array_1_1'
+                            704 ;uvalue                    Allocated with name '_int_to_hex_int_uvalue_1_1'
+                            705 ;nibble                    Allocated with name '_int_to_hex_int_nibble_2_2'
+                            706 ;------------------------------------------------------------
+                    021A    707 	G$int_to_hex_int$0$0 ==.
+                    021A    708 	C$misc.c$48$1$1 ==.
+                            709 ;	../misc.c:48: DPUINT int_to_hex_int(DPUINT value, uint8_t * p_result, DPUINT result_size)
+                            710 ;	-----------------------------------------
+                            711 ;	 function int_to_hex_int
+                            712 ;	-----------------------------------------
+   021A                     713 _int_to_hex_int:
+                            714 ;	genReceive
+   021A AA 83               715 	mov	r2,dph
+   021C E5 82               716 	mov	a,dpl
+   021E 90s01r1B            717 	mov	dptr,#_int_to_hex_int_value_1_1
+   0221 F0                  718 	movx	@dptr,a
+   0222 A3                  719 	inc	dptr
+   0223 EA                  720 	mov	a,r2
+   0224 F0                  721 	movx	@dptr,a
+                    0225    722 	C$misc.c$53$1$1 ==.
+                            723 ;	../misc.c:53: nibble_idx = 0;
+                            724 ;	genAssign
+   0225 90s01r1D            725 	mov	dptr,#_int_to_hex_int_nibble_idx_1_1
+   0228 E4                  726 	clr	a
+   0229 F0                  727 	movx	@dptr,a
+   022A A3                  728 	inc	dptr
+   022B F0                  729 	movx	@dptr,a
+                    022C    730 	C$misc.c$54$1$1 ==.
+                            731 ;	../misc.c:54: uvalue = (unsigned int)value;
+                            732 ;	genAssign
+   022C 90s01r1B            733 	mov	dptr,#_int_to_hex_int_value_1_1
+   022F E0                  734 	movx	a,@dptr
+   0230 FA                  735 	mov	r2,a
+   0231 A3                  736 	inc	dptr
+   0232 E0                  737 	movx	a,@dptr
+   0233 FB                  738 	mov	r3,a
+                            739 ;	genAssign
+   0234 90s01r29            740 	mov	dptr,#_int_to_hex_int_uvalue_1_1
+   0237 EA                  741 	mov	a,r2
+   0238 F0                  742 	movx	@dptr,a
+   0239 A3                  743 	inc	dptr
+   023A EB                  744 	mov	a,r3
+   023B F0                  745 	movx	@dptr,a
+                    023C    746 	C$misc.c$56$2$2 ==.
+                            747 ;	../misc.c:56: do {
+   023C                     748 00105$:
+                    023C    749 	C$misc.c$57$2$2 ==.
+                            750 ;	../misc.c:57: int nibble = uvalue & 0x0F;
+                            751 ;	genAssign
+   023C 90s01r29            752 	mov	dptr,#_int_to_hex_int_uvalue_1_1
+   023F E0                  753 	movx	a,@dptr
+   0240 FA                  754 	mov	r2,a
+   0241 A3                  755 	inc	dptr
+   0242 E0                  756 	movx	a,@dptr
+   0243 FB                  757 	mov	r3,a
+                            758 ;	genAnd
+   0244 53 02 0F            759 	anl	ar2,#0x0F
+   0247 7B 00               760 	mov	r3,#0x00
+                    0249    761 	C$misc.c$59$2$2 ==.
+                            762 ;	../misc.c:59: if ( nibble < 10 )
+                            763 ;	genAssign
+   0249 8A 04               764 	mov	ar4,r2
+   024B 8B 05               765 	mov	ar5,r3
+                            766 ;	genCmpLt
+                            767 ;	genCmp
+   024D C3                  768 	clr	c
+   024E EC                  769 	mov	a,r4
+   024F 94 0A               770 	subb	a,#0x0A
+   0251 ED                  771 	mov	a,r5
+   0252 64 80               772 	xrl	a,#0x80
+   0254 94 80               773 	subb	a,#0x80
+                            774 ;	genIfxJump
+   0256 40 03               775 	jc	00121$
+   0258 02s02r7D            776 	ljmp	00102$
+   025B                     777 00121$:
+                    025B    778 	C$misc.c$60$2$2 ==.
+                            779 ;	../misc.c:60: conv_array[nibble_idx] = nibble + '0';
+                            780 ;	genAssign
+   025B 90s01r1D            781 	mov	dptr,#_int_to_hex_int_nibble_idx_1_1
+   025E E0                  782 	movx	a,@dptr
+   025F FC                  783 	mov	r4,a
+   0260 A3                  784 	inc	dptr
+   0261 E0                  785 	movx	a,@dptr
+   0262 FD                  786 	mov	r5,a
+                            787 ;	genPlus
+   0263 E5 04               788 	mov	a,ar4
+   0265 24r21               789 	add	a,#_int_to_hex_int_conv_array_1_1
+   0267 F5 82               790 	mov	dpl,a
+   0269 E5 05               791 	mov	a,ar5
+   026B 34s01               792 	addc	a,#(_int_to_hex_int_conv_array_1_1 >> 8)
+   026D F5 83               793 	mov	dph,a
+                            794 ;	genAssign
+   026F 8A 04               795 	mov	ar4,r2
+   0271 8B 05               796 	mov	ar5,r3
+                            797 ;	genCast
+                            798 ;	genPlus
+                            799 ;	genPlusIncr
+   0273 74 30               800 	mov	a,#0x30
+   0275 25 04               801 	add	a,ar4
+   0277 FC                  802 	mov	r4,a
+                            803 ;	genPointerSet
+                            804 ;     genFarPointerSet
+   0278 EC                  805 	mov	a,r4
+   0279 F0                  806 	movx	@dptr,a
+   027A 02s02r98            807 	ljmp	00103$
+   027D                     808 00102$:
+                    027D    809 	C$misc.c$62$2$2 ==.
+                            810 ;	../misc.c:62: conv_array[nibble_idx] = nibble  - 10 + 'A';
+                            811 ;	genAssign
+   027D 90s01r1D            812 	mov	dptr,#_int_to_hex_int_nibble_idx_1_1
+   0280 E0                  813 	movx	a,@dptr
+   0281 FC                  814 	mov	r4,a
+   0282 A3                  815 	inc	dptr
+   0283 E0                  816 	movx	a,@dptr
+   0284 FD                  817 	mov	r5,a
+                            818 ;	genPlus
+   0285 E5 04               819 	mov	a,ar4
+   0287 24r21               820 	add	a,#_int_to_hex_int_conv_array_1_1
+   0289 F5 82               821 	mov	dpl,a
+   028B E5 05               822 	mov	a,ar5
+   028D 34s01               823 	addc	a,#(_int_to_hex_int_conv_array_1_1 >> 8)
+   028F F5 83               824 	mov	dph,a
+                            825 ;	genAssign
+                            826 ;	genCast
+                            827 ;	genPlus
+                            828 ;	genPlusIncr
+   0291 74 37               829 	mov	a,#0x37
+   0293 25 02               830 	add	a,ar2
+   0295 FA                  831 	mov	r2,a
+                            832 ;	genPointerSet
+                            833 ;     genFarPointerSet
+   0296 EA                  834 	mov	a,r2
+   0297 F0                  835 	movx	@dptr,a
+   0298                     836 00103$:
+                    0298    837 	C$misc.c$63$2$2 ==.
+                            838 ;	../misc.c:63: uvalue = (uvalue >> 4);
+                            839 ;	genAssign
+   0298 90s01r29            840 	mov	dptr,#_int_to_hex_int_uvalue_1_1
+   029B E0                  841 	movx	a,@dptr
+   029C FA                  842 	mov	r2,a
+   029D A3                  843 	inc	dptr
+   029E E0                  844 	movx	a,@dptr
+   029F FB                  845 	mov	r3,a
+                            846 ;	genRightShift
+                            847 ;	genRightShiftLiteral
+                            848 ;	genrshTwo
+   02A0 EB                  849 	mov	a,r3
+   02A1 C4                  850 	swap	a
+   02A2 CA                  851 	xch	a,r2
+   02A3 C4                  852 	swap	a
+   02A4 54 0F               853 	anl	a,#0x0f
+   02A6 6A                  854 	xrl	a,r2
+   02A7 CA                  855 	xch	a,r2
+   02A8 54 0F               856 	anl	a,#0x0f
+   02AA CA                  857 	xch	a,r2
+   02AB 6A                  858 	xrl	a,r2
+   02AC CA                  859 	xch	a,r2
+   02AD FB                  860 	mov	r3,a
+                            861 ;	genAssign
+   02AE 90s01r29            862 	mov	dptr,#_int_to_hex_int_uvalue_1_1
+   02B1 EA                  863 	mov	a,r2
+   02B2 F0                  864 	movx	@dptr,a
+   02B3 A3                  865 	inc	dptr
+   02B4 EB                  866 	mov	a,r3
+   02B5 F0                  867 	movx	@dptr,a
+                    02B6    868 	C$misc.c$64$2$2 ==.
+                            869 ;	../misc.c:64: nibble_idx++;
+                            870 ;	genAssign
+   02B6 90s01r1D            871 	mov	dptr,#_int_to_hex_int_nibble_idx_1_1
+   02B9 E0                  872 	movx	a,@dptr
+   02BA FA                  873 	mov	r2,a
+   02BB A3                  874 	inc	dptr
+   02BC E0                  875 	movx	a,@dptr
+   02BD FB                  876 	mov	r3,a
+                            877 ;	genPlus
+   02BE 90s01r1D            878 	mov	dptr,#_int_to_hex_int_nibble_idx_1_1
+                            879 ;	genPlusIncr
+   02C1 74 01               880 	mov	a,#0x01
+   02C3 25 02               881 	add	a,ar2
+   02C5 F0                  882 	movx	@dptr,a
+   02C6 74 00               883 	mov	a,#0x00
+   02C8 35 03               884 	addc	a,ar3
+   02CA A3                  885 	inc	dptr
+   02CB F0                  886 	movx	@dptr,a
+                    02CC    887 	C$misc.c$65$1$1 ==.
+                            888 ;	../misc.c:65: } while ( ( nibble_idx < NB_NIBBLES_IN_INT ) && ( uvalue > 0 ) );
+                            889 ;	genAssign
+   02CC 90s01r1D            890 	mov	dptr,#_int_to_hex_int_nibble_idx_1_1
+   02CF E0                  891 	movx	a,@dptr
+   02D0 FA                  892 	mov	r2,a
+   02D1 A3                  893 	inc	dptr
+   02D2 E0                  894 	movx	a,@dptr
+   02D3 FB                  895 	mov	r3,a
+                            896 ;	genCmpLt
+                            897 ;	genCmp
+   02D4 C3                  898 	clr	c
+   02D5 EA                  899 	mov	a,r2
+   02D6 94 08               900 	subb	a,#0x08
+   02D8 EB                  901 	mov	a,r3
+   02D9 64 80               902 	xrl	a,#0x80
+   02DB 94 80               903 	subb	a,#0x80
+                            904 ;	genIfxJump
+   02DD 40 03               905 	jc	00122$
+   02DF 02s02rF1            906 	ljmp	00107$
+   02E2                     907 00122$:
+                            908 ;	genAssign
+   02E2 90s01r29            909 	mov	dptr,#_int_to_hex_int_uvalue_1_1
+   02E5 E0                  910 	movx	a,@dptr
+   02E6 FA                  911 	mov	r2,a
+   02E7 A3                  912 	inc	dptr
+   02E8 E0                  913 	movx	a,@dptr
+   02E9 FB                  914 	mov	r3,a
+                            915 ;	genIfx
+   02EA EA                  916 	mov	a,r2
+   02EB 4B                  917 	orl	a,r3
+                            918 ;	genIfxJump
+   02EC 60 03               919 	jz	00123$
+   02EE 02s02r3C            920 	ljmp	00105$
+   02F1                     921 00123$:
+   02F1                     922 00107$:
+                    02F1    923 	C$misc.c$67$1$1 ==.
+                            924 ;	../misc.c:67: nb_nibbles = nibble_idx;
+                            925 ;	genAssign
+   02F1 90s01r1D            926 	mov	dptr,#_int_to_hex_int_nibble_idx_1_1
+   02F4 E0                  927 	movx	a,@dptr
+   02F5 FA                  928 	mov	r2,a
+   02F6 A3                  929 	inc	dptr
+   02F7 E0                  930 	movx	a,@dptr
+   02F8 FB                  931 	mov	r3,a
+                            932 ;	genAssign
+   02F9 90s01r1F            933 	mov	dptr,#_int_to_hex_int_nb_nibbles_1_1
+   02FC EA                  934 	mov	a,r2
+   02FD F0                  935 	movx	@dptr,a
+   02FE A3                  936 	inc	dptr
+   02FF EB                  937 	mov	a,r3
+   0300 F0                  938 	movx	@dptr,a
+                    0301    939 	C$misc.c$68$1$1 ==.
+                            940 ;	../misc.c:68: for ( nibble_idx = 0; (nibble_idx < nb_nibbles) && (nibble_idx < result_size) ;nibble_idx++ )
+                            941 ;	genAssign
+   0301 90s01r1D            942 	mov	dptr,#_int_to_hex_int_nibble_idx_1_1
+   0304 E4                  943 	clr	a
+   0305 F0                  944 	movx	@dptr,a
+   0306 A3                  945 	inc	dptr
+   0307 F0                  946 	movx	@dptr,a
+                            947 ;	genAssign
+   0308 90s01r19            948 	mov	dptr,#_int_to_hex_int_PARM_3
+   030B E0                  949 	movx	a,@dptr
+   030C FA                  950 	mov	r2,a
+   030D A3                  951 	inc	dptr
+   030E E0                  952 	movx	a,@dptr
+   030F FB                  953 	mov	r3,a
+                            954 ;	genAssign
+   0310 90s01r16            955 	mov	dptr,#_int_to_hex_int_PARM_2
+   0313 E0                  956 	movx	a,@dptr
+   0314 FC                  957 	mov	r4,a
+   0315 A3                  958 	inc	dptr
+   0316 E0                  959 	movx	a,@dptr
+   0317 FD                  960 	mov	r5,a
+   0318 A3                  961 	inc	dptr
+   0319 E0                  962 	movx	a,@dptr
+   031A FE                  963 	mov	r6,a
+                            964 ;	genAssign
+   031B 90s01r1F            965 	mov	dptr,#_int_to_hex_int_nb_nibbles_1_1
+   031E E0                  966 	movx	a,@dptr
+   031F FF                  967 	mov	r7,a
+   0320 A3                  968 	inc	dptr
+   0321 E0                  969 	movx	a,@dptr
+   0322 F8                  970 	mov	r0,a
+   0323                     971 00109$:
+                            972 ;	genAssign
+   0323 90s01r1D            973 	mov	dptr,#_int_to_hex_int_nibble_idx_1_1
+   0326 E0                  974 	movx	a,@dptr
+   0327 F5*04               975 	mov	_int_to_hex_int_sloc0_1_0,a
+   0329 A3                  976 	inc	dptr
+   032A E0                  977 	movx	a,@dptr
+   032B F5*05               978 	mov	(_int_to_hex_int_sloc0_1_0 + 1),a
+                            979 ;	genCmpLt
+                            980 ;	genCmp
+   032D C3                  981 	clr	c
+   032E E5*04               982 	mov	a,_int_to_hex_int_sloc0_1_0
+   0330 9F                  983 	subb	a,r7
+   0331 E5*05               984 	mov	a,(_int_to_hex_int_sloc0_1_0 + 1)
+   0333 64 80               985 	xrl	a,#0x80
+   0335 88 F0               986 	mov	b,r0
+   0337 63 F0 80            987 	xrl	b,#0x80
+   033A 95 F0               988 	subb	a,b
+                            989 ;	genIfxJump
+   033C 40 03               990 	jc	00124$
+   033E 02s03rA6            991 	ljmp	00112$
+   0341                     992 00124$:
+                            993 ;	genIpush
+   0341 C0 04               994 	push	ar4
+   0343 C0 05               995 	push	ar5
+   0345 C0 06               996 	push	ar6
+                            997 ;	genAssign
+   0347 A9*04               998 	mov	r1,_int_to_hex_int_sloc0_1_0
+   0349 AC*05               999 	mov	r4,(_int_to_hex_int_sloc0_1_0 + 1)
+                           1000 ;	genCmpLt
+                           1001 ;	genCmp
+   034B C3                 1002 	clr	c
+   034C E9                 1003 	mov	a,r1
+   034D 9A                 1004 	subb	a,r2
+   034E EC                 1005 	mov	a,r4
+   034F 9B                 1006 	subb	a,r3
+   0350 E4                 1007 	clr	a
+   0351 33                 1008 	rlc	a
+                           1009 ;	genIpop
+   0352 D0 06              1010 	pop	ar6
+   0354 D0 05              1011 	pop	ar5
+   0356 D0 04              1012 	pop	ar4
+                           1013 ;	genIfx
+                           1014 ;	genIfxJump
+   0358 70 03              1015 	jnz	00125$
+   035A 02s03rA6           1016 	ljmp	00112$
+   035D                    1017 00125$:
+                    035D   1018 	C$misc.c$70$1$1 ==.
+                           1019 ;	../misc.c:70: p_result[nibble_idx] = conv_array[nb_nibbles - nibble_idx - 1];
+                           1020 ;	genIpush
+   035D C0 02              1021 	push	ar2
+   035F C0 03              1022 	push	ar3
+                           1023 ;	genPlus
+   0361 E5*04              1024 	mov	a,_int_to_hex_int_sloc0_1_0
+   0363 25 04              1025 	add	a,ar4
+   0365 F5*06              1026 	mov	_int_to_hex_int_sloc1_1_0,a
+   0367 E5*05              1027 	mov	a,(_int_to_hex_int_sloc0_1_0 + 1)
+   0369 35 05              1028 	addc	a,ar5
+   036B F5*07              1029 	mov	(_int_to_hex_int_sloc1_1_0 + 1),a
+   036D 8E*08              1030 	mov	(_int_to_hex_int_sloc1_1_0 + 2),r6
+                           1031 ;	genCast
+   036F 8F 02              1032 	mov	ar2,r7
+                           1033 ;	genCast
+   0371 AB*04              1034 	mov	r3,_int_to_hex_int_sloc0_1_0
+                           1035 ;	genMinus
+   0373 EA                 1036 	mov	a,r2
+   0374 C3                 1037 	clr	c
+   0375 95 03              1038 	subb	a,ar3
+                           1039 ;	genMinus
+                           1040 ;	genMinusDec
+   0377 14                 1041 	dec	a
+                           1042 ;	genPlus
+   0378 24r21              1043 	add	a,#_int_to_hex_int_conv_array_1_1
+   037A F5 82              1044 	mov	dpl,a
+   037C 74s01              1045 	mov	a,#(_int_to_hex_int_conv_array_1_1 >> 8)
+   037E 34 00              1046 	addc	a,#0x00
+   0380 F5 83              1047 	mov	dph,a
+                           1048 ;	genPointerGet
+                           1049 ;	genFarPointerGet
+   0382 E0                 1050 	movx	a,@dptr
+   0383 FA                 1051 	mov	r2,a
+                           1052 ;	genPointerSet
+                           1053 ;	genGenPointerSet
+   0384 85*06 82           1054 	mov	dpl,_int_to_hex_int_sloc1_1_0
+   0387 85*07 83           1055 	mov	dph,(_int_to_hex_int_sloc1_1_0 + 1)
+   038A 85*08 F0           1056 	mov	b,(_int_to_hex_int_sloc1_1_0 + 2)
+   038D EA                 1057 	mov	a,r2
+   038E 12s00r00           1058 	lcall	__gptrput
+                    0391   1059 	C$misc.c$68$1$1 ==.
+                           1060 ;	../misc.c:68: for ( nibble_idx = 0; (nibble_idx < nb_nibbles) && (nibble_idx < result_size) ;nibble_idx++ )
+                           1061 ;	genPlus
+   0391 90s01r1D           1062 	mov	dptr,#_int_to_hex_int_nibble_idx_1_1
+                           1063 ;	genPlusIncr
+   0394 74 01              1064 	mov	a,#0x01
+   0396 25*04              1065 	add	a,_int_to_hex_int_sloc0_1_0
+   0398 F0                 1066 	movx	@dptr,a
+   0399 74 00              1067 	mov	a,#0x00
+   039B 35*05              1068 	addc	a,(_int_to_hex_int_sloc0_1_0 + 1)
+   039D A3                 1069 	inc	dptr
+   039E F0                 1070 	movx	@dptr,a
+                           1071 ;	genIpop
+   039F D0 03              1072 	pop	ar3
+   03A1 D0 02              1073 	pop	ar2
+   03A3 02s03r23           1074 	ljmp	00109$
+   03A6                    1075 00112$:
+                    03A6   1076 	C$misc.c$72$1$1 ==.
+                           1077 ;	../misc.c:72: return nibble_idx;
+                           1078 ;	genAssign
+   03A6 90s01r1D           1079 	mov	dptr,#_int_to_hex_int_nibble_idx_1_1
+   03A9 E0                 1080 	movx	a,@dptr
+   03AA FA                 1081 	mov	r2,a
+   03AB A3                 1082 	inc	dptr
+   03AC E0                 1083 	movx	a,@dptr
+   03AD FB                 1084 	mov	r3,a
+                           1085 ;	genRet
+   03AE 8A 82              1086 	mov	dpl,r2
+   03B0 8B 83              1087 	mov	dph,r3
+   03B2                    1088 00113$:
+                    03B2   1089 	C$misc.c$73$1$1 ==.
+                    03B2   1090 	XG$int_to_hex_int$0$0 ==.
+   03B2 22                 1091 	ret
+                           1092 ;------------------------------------------------------------
+                           1093 ;Allocation info for local variables in function 'int_to_dec_int'
+                           1094 ;------------------------------------------------------------
+                           1095 ;sloc0                     Allocated with name '_int_to_dec_int_sloc0_1_0'
+                           1096 ;p_result                  Allocated with name '_int_to_dec_int_PARM_2'
+                           1097 ;value                     Allocated with name '_int_to_dec_int_value_1_1'
+                           1098 ;conv_array                Allocated with name '_int_to_dec_int_conv_array_1_1'
+                           1099 ;uvalue                    Allocated with name '_int_to_dec_int_uvalue_1_1'
+                           1100 ;remainder                 Allocated with name '_int_to_dec_int_remainder_1_1'
+                           1101 ;digit_idx                 Allocated with name '_int_to_dec_int_digit_idx_1_1'
+                           1102 ;nb_digits                 Allocated with name '_int_to_dec_int_nb_digits_1_1'
+                           1103 ;------------------------------------------------------------
+                    03B3   1104 	G$int_to_dec_int$0$0 ==.
+                    03B3   1105 	C$misc.c$75$1$1 ==.
+                           1106 ;	../misc.c:75: DPUINT int_to_dec_int(DPUINT value, uint8_t * p_result)
+                           1107 ;	-----------------------------------------
+                           1108 ;	 function int_to_dec_int
+                           1109 ;	-----------------------------------------
+   03B3                    1110 _int_to_dec_int:
+                           1111 ;	genReceive
+   03B3 AA 83              1112 	mov	r2,dph
+   03B5 E5 82              1113 	mov	a,dpl
+   03B7 90s01r2E           1114 	mov	dptr,#_int_to_dec_int_value_1_1
+   03BA F0                 1115 	movx	@dptr,a
+   03BB A3                 1116 	inc	dptr
+   03BC EA                 1117 	mov	a,r2
+   03BD F0                 1118 	movx	@dptr,a
+                    03BE   1119 	C$misc.c$83$1$1 ==.
+                           1120 ;	../misc.c:83: uvalue = (unsigned int)value;
+                           1121 ;	genAssign
+   03BE 90s01r2E           1122 	mov	dptr,#_int_to_dec_int_value_1_1
+   03C1 E0                 1123 	movx	a,@dptr
+   03C2 FA                 1124 	mov	r2,a
+   03C3 A3                 1125 	inc	dptr
+   03C4 E0                 1126 	movx	a,@dptr
+   03C5 FB                 1127 	mov	r3,a
+                           1128 ;	genAssign
+   03C6 90s01r38           1129 	mov	dptr,#_int_to_dec_int_uvalue_1_1
+   03C9 EA                 1130 	mov	a,r2
+   03CA F0                 1131 	movx	@dptr,a
+   03CB A3                 1132 	inc	dptr
+   03CC EB                 1133 	mov	a,r3
+   03CD F0                 1134 	movx	@dptr,a
+                    03CE   1135 	C$misc.c$84$1$1 ==.
+                           1136 ;	../misc.c:84: digit_idx=0;
+                           1137 ;	genAssign
+   03CE 90s01r3A           1138 	mov	dptr,#_int_to_dec_int_digit_idx_1_1
+   03D1 E4                 1139 	clr	a
+   03D2 F0                 1140 	movx	@dptr,a
+   03D3 A3                 1141 	inc	dptr
+   03D4 F0                 1142 	movx	@dptr,a
+                    03D5   1143 	C$misc.c$85$1$1 ==.
+                           1144 ;	../misc.c:85: if (uvalue)
+                           1145 ;	genIfx
+   03D5 EA                 1146 	mov	a,r2
+   03D6 4B                 1147 	orl	a,r3
+                           1148 ;	genIfxJump
+   03D7 70 03              1149 	jnz	00117$
+   03D9 02s04r58           1150 	ljmp	00105$
+   03DC                    1151 00117$:
+                    03DC   1152 	C$misc.c$87$3$3 ==.
+                           1153 ;	../misc.c:87: while (uvalue)
+   03DC                    1154 00101$:
+                           1155 ;	genAssign
+   03DC 90s01r38           1156 	mov	dptr,#_int_to_dec_int_uvalue_1_1
+   03DF E0                 1157 	movx	a,@dptr
+   03E0 FA                 1158 	mov	r2,a
+   03E1 A3                 1159 	inc	dptr
+   03E2 E0                 1160 	movx	a,@dptr
+   03E3 FB                 1161 	mov	r3,a
+                           1162 ;	genIfx
+   03E4 EA                 1163 	mov	a,r2
+   03E5 4B                 1164 	orl	a,r3
+                           1165 ;	genIfxJump
+   03E6 70 03              1166 	jnz	00118$
+   03E8 02s04r67           1167 	ljmp	00106$
+   03EB                    1168 00118$:
+                    03EB   1169 	C$misc.c$89$1$1 ==.
+                           1170 ;	../misc.c:89: remainder = uvalue % 10;
+                           1171 ;	genAssign
+   03EB 90s00r00           1172 	mov	dptr,#__moduint_PARM_2
+   03EE 74 0A              1173 	mov	a,#0x0A
+   03F0 F0                 1174 	movx	@dptr,a
+   03F1 E4                 1175 	clr	a
+   03F2 A3                 1176 	inc	dptr
+   03F3 F0                 1177 	movx	@dptr,a
+                    03F4   1178 	C$misc.c$90$1$1 ==.
+                           1179 ;	../misc.c:90: conv_array[digit_idx] = remainder + '0';
+                           1180 ;	genCall
+   03F4 8A 82              1181 	mov	dpl,r2
+   03F6 8B 83              1182 	mov	dph,r3
+   03F8 C0 02              1183 	push	ar2
+   03FA C0 03              1184 	push	ar3
+   03FC 12s00r00           1185 	lcall	__moduint
+   03FF AC 82              1186 	mov	r4,dpl
+   0401 AD 83              1187 	mov	r5,dph
+   0403 D0 03              1188 	pop	ar3
+   0405 D0 02              1189 	pop	ar2
+                           1190 ;	genAssign
+   0407 90s01r3A           1191 	mov	dptr,#_int_to_dec_int_digit_idx_1_1
+   040A E0                 1192 	movx	a,@dptr
+   040B FE                 1193 	mov	r6,a
+   040C A3                 1194 	inc	dptr
+   040D E0                 1195 	movx	a,@dptr
+   040E FF                 1196 	mov	r7,a
+                           1197 ;	genPlus
+   040F E5 06              1198 	mov	a,ar6
+   0411 24r30              1199 	add	a,#_int_to_dec_int_conv_array_1_1
+   0413 F5 82              1200 	mov	dpl,a
+   0415 E5 07              1201 	mov	a,ar7
+   0417 34s01              1202 	addc	a,#(_int_to_dec_int_conv_array_1_1 >> 8)
+   0419 F5 83              1203 	mov	dph,a
+                           1204 ;	genCast
+                           1205 ;	genPlus
+                           1206 ;	genPlusIncr
+   041B 74 30              1207 	mov	a,#0x30
+   041D 25 04              1208 	add	a,ar4
+   041F FC                 1209 	mov	r4,a
+                           1210 ;	genPointerSet
+                           1211 ;     genFarPointerSet
+   0420 EC                 1212 	mov	a,r4
+   0421 F0                 1213 	movx	@dptr,a
+                    0422   1214 	C$misc.c$91$1$1 ==.
+                           1215 ;	../misc.c:91: uvalue /= 10;
+                           1216 ;	genAssign
+   0422 90s00r00           1217 	mov	dptr,#__divuint_PARM_2
+   0425 74 0A              1218 	mov	a,#0x0A
+   0427 F0                 1219 	movx	@dptr,a
+   0428 E4                 1220 	clr	a
+   0429 A3                 1221 	inc	dptr
+   042A F0                 1222 	movx	@dptr,a
+                           1223 ;	genCall
+   042B 8A 82              1224 	mov	dpl,r2
+   042D 8B 83              1225 	mov	dph,r3
+   042F C0 06              1226 	push	ar6
+   0431 C0 07              1227 	push	ar7
+   0433 12s00r00           1228 	lcall	__divuint
+   0436 E5 82              1229 	mov	a,dpl
+   0438 85 83 F0           1230 	mov	b,dph
+   043B D0 07              1231 	pop	ar7
+   043D D0 06              1232 	pop	ar6
+                           1233 ;	genAssign
+   043F 90s01r38           1234 	mov	dptr,#_int_to_dec_int_uvalue_1_1
+   0442 F0                 1235 	movx	@dptr,a
+   0443 A3                 1236 	inc	dptr
+   0444 E5 F0              1237 	mov	a,b
+   0446 F0                 1238 	movx	@dptr,a
+                    0447   1239 	C$misc.c$92$3$3 ==.
+                           1240 ;	../misc.c:92: digit_idx++;
+                           1241 ;	genPlus
+   0447 90s01r3A           1242 	mov	dptr,#_int_to_dec_int_digit_idx_1_1
+                           1243 ;	genPlusIncr
+   044A 74 01              1244 	mov	a,#0x01
+   044C 25 06              1245 	add	a,ar6
+   044E F0                 1246 	movx	@dptr,a
+   044F 74 00              1247 	mov	a,#0x00
+   0451 35 07              1248 	addc	a,ar7
+   0453 A3                 1249 	inc	dptr
+   0454 F0                 1250 	movx	@dptr,a
+   0455 02s03rDC           1251 	ljmp	00101$
+   0458                    1252 00105$:
+                    0458   1253 	C$misc.c$97$2$4 ==.
+                           1254 ;	../misc.c:97: conv_array[digit_idx] = '0';
+                           1255 ;	genPointerSet
+                           1256 ;     genFarPointerSet
+   0458 90s01r30           1257 	mov	dptr,#_int_to_dec_int_conv_array_1_1
+   045B 74 30              1258 	mov	a,#0x30
+   045D F0                 1259 	movx	@dptr,a
+                    045E   1260 	C$misc.c$98$2$4 ==.
+                           1261 ;	../misc.c:98: digit_idx++;
+                           1262 ;	genAssign
+   045E 90s01r3A           1263 	mov	dptr,#_int_to_dec_int_digit_idx_1_1
+   0461 74 01              1264 	mov	a,#0x01
+   0463 F0                 1265 	movx	@dptr,a
+   0464 E4                 1266 	clr	a
+   0465 A3                 1267 	inc	dptr
+   0466 F0                 1268 	movx	@dptr,a
+   0467                    1269 00106$:
+                    0467   1270 	C$misc.c$102$1$1 ==.
+                           1271 ;	../misc.c:102: nb_digits = digit_idx;
+                           1272 ;	genAssign
+   0467 90s01r3A           1273 	mov	dptr,#_int_to_dec_int_digit_idx_1_1
+   046A E0                 1274 	movx	a,@dptr
+   046B FA                 1275 	mov	r2,a
+   046C A3                 1276 	inc	dptr
+   046D E0                 1277 	movx	a,@dptr
+   046E FB                 1278 	mov	r3,a
+                           1279 ;	genAssign
+   046F 90s01r3C           1280 	mov	dptr,#_int_to_dec_int_nb_digits_1_1
+   0472 EA                 1281 	mov	a,r2
+   0473 F0                 1282 	movx	@dptr,a
+   0474 A3                 1283 	inc	dptr
+   0475 EB                 1284 	mov	a,r3
+   0476 F0                 1285 	movx	@dptr,a
+                    0477   1286 	C$misc.c$103$1$1 ==.
+                           1287 ;	../misc.c:103: for ( digit_idx = 0; (digit_idx < nb_digits); digit_idx++ )
+                           1288 ;	genAssign
+   0477 90s01r3A           1289 	mov	dptr,#_int_to_dec_int_digit_idx_1_1
+   047A E4                 1290 	clr	a
+   047B F0                 1291 	movx	@dptr,a
+   047C A3                 1292 	inc	dptr
+   047D F0                 1293 	movx	@dptr,a
+                           1294 ;	genAssign
+   047E 90s01r2B           1295 	mov	dptr,#_int_to_dec_int_PARM_2
+   0481 E0                 1296 	movx	a,@dptr
+   0482 F5*09              1297 	mov	_int_to_dec_int_sloc0_1_0,a
+   0484 A3                 1298 	inc	dptr
+   0485 E0                 1299 	movx	a,@dptr
+   0486 F5*0A              1300 	mov	(_int_to_dec_int_sloc0_1_0 + 1),a
+   0488 A3                 1301 	inc	dptr
+   0489 E0                 1302 	movx	a,@dptr
+   048A F5*0B              1303 	mov	(_int_to_dec_int_sloc0_1_0 + 2),a
+                           1304 ;	genAssign
+   048C 90s01r3C           1305 	mov	dptr,#_int_to_dec_int_nb_digits_1_1
+   048F E0                 1306 	movx	a,@dptr
+   0490 FD                 1307 	mov	r5,a
+   0491 A3                 1308 	inc	dptr
+   0492 E0                 1309 	movx	a,@dptr
+   0493 FE                 1310 	mov	r6,a
+   0494                    1311 00107$:
+                           1312 ;	genAssign
+   0494 90s01r3A           1313 	mov	dptr,#_int_to_dec_int_digit_idx_1_1
+   0497 E0                 1314 	movx	a,@dptr
+   0498 FF                 1315 	mov	r7,a
+   0499 A3                 1316 	inc	dptr
+   049A E0                 1317 	movx	a,@dptr
+   049B F8                 1318 	mov	r0,a
+                           1319 ;	genCmpLt
+                           1320 ;	genCmp
+   049C C3                 1321 	clr	c
+   049D EF                 1322 	mov	a,r7
+   049E 9D                 1323 	subb	a,r5
+   049F E8                 1324 	mov	a,r0
+   04A0 9E                 1325 	subb	a,r6
+                           1326 ;	genIfxJump
+   04A1 40 03              1327 	jc	00119$
+   04A3 02s04rEA           1328 	ljmp	00110$
+   04A6                    1329 00119$:
+                    04A6   1330 	C$misc.c$105$2$5 ==.
+                           1331 ;	../misc.c:105: p_result[digit_idx] = conv_array[nb_digits - digit_idx - 1];
+                           1332 ;	genPlus
+   04A6 E5 07              1333 	mov	a,ar7
+   04A8 25*09              1334 	add	a,_int_to_dec_int_sloc0_1_0
+   04AA F9                 1335 	mov	r1,a
+   04AB E5 00              1336 	mov	a,ar0
+   04AD 35*0A              1337 	addc	a,(_int_to_dec_int_sloc0_1_0 + 1)
+   04AF FA                 1338 	mov	r2,a
+   04B0 AB*0B              1339 	mov	r3,(_int_to_dec_int_sloc0_1_0 + 2)
+                           1340 ;	genCast
+   04B2 8D 04              1341 	mov	ar4,r5
+                           1342 ;	genIpush
+   04B4 C0 05              1343 	push	ar5
+   04B6 C0 06              1344 	push	ar6
+                           1345 ;	genCast
+   04B8 8F 05              1346 	mov	ar5,r7
+                           1347 ;	genMinus
+   04BA EC                 1348 	mov	a,r4
+   04BB C3                 1349 	clr	c
+   04BC 95 05              1350 	subb	a,ar5
+                           1351 ;	genMinus
+                           1352 ;	genMinusDec
+   04BE 14                 1353 	dec	a
+                           1354 ;	genPlus
+   04BF 24r30              1355 	add	a,#_int_to_dec_int_conv_array_1_1
+   04C1 F5 82              1356 	mov	dpl,a
+   04C3 74s01              1357 	mov	a,#(_int_to_dec_int_conv_array_1_1 >> 8)
+   04C5 34 00              1358 	addc	a,#0x00
+   04C7 F5 83              1359 	mov	dph,a
+                           1360 ;	genPointerGet
+                           1361 ;	genFarPointerGet
+   04C9 E0                 1362 	movx	a,@dptr
+   04CA FC                 1363 	mov	r4,a
+                           1364 ;	genPointerSet
+                           1365 ;	genGenPointerSet
+   04CB 89 82              1366 	mov	dpl,r1
+   04CD 8A 83              1367 	mov	dph,r2
+   04CF 8B F0              1368 	mov	b,r3
+   04D1 EC                 1369 	mov	a,r4
+   04D2 12s00r00           1370 	lcall	__gptrput
+                    04D5   1371 	C$misc.c$103$1$1 ==.
+                           1372 ;	../misc.c:103: for ( digit_idx = 0; (digit_idx < nb_digits); digit_idx++ )
+                           1373 ;	genPlus
+   04D5 90s01r3A           1374 	mov	dptr,#_int_to_dec_int_digit_idx_1_1
+                           1375 ;	genPlusIncr
+   04D8 74 01              1376 	mov	a,#0x01
+   04DA 25 07              1377 	add	a,ar7
+   04DC F0                 1378 	movx	@dptr,a
+   04DD 74 00              1379 	mov	a,#0x00
+   04DF 35 00              1380 	addc	a,ar0
+   04E1 A3                 1381 	inc	dptr
+   04E2 F0                 1382 	movx	@dptr,a
+                           1383 ;	genIpop
+   04E3 D0 06              1384 	pop	ar6
+   04E5 D0 05              1385 	pop	ar5
+   04E7 02s04r94           1386 	ljmp	00107$
+   04EA                    1387 00110$:
+                    04EA   1388 	C$misc.c$107$1$1 ==.
+                           1389 ;	../misc.c:107: return digit_idx;
+                           1390 ;	genRet
+   04EA 8F 82              1391 	mov	dpl,r7
+   04EC 88 83              1392 	mov	dph,r0
+   04EE                    1393 00111$:
+                    04EE   1394 	C$misc.c$108$1$1 ==.
+                    04EE   1395 	XG$int_to_dec_int$0$0 ==.
+   04EE 22                 1396 	ret
+                           1397 ;------------------------------------------------------------
+                           1398 ;Allocation info for local variables in function 'xatoi'
+                           1399 ;------------------------------------------------------------
+                           1400 ;sloc0                     Allocated with name '_xatoi_sloc0_1_0'
+                           1401 ;res                       Allocated with name '_xatoi_PARM_2'
+                           1402 ;str                       Allocated with name '_xatoi_str_1_1'
+                           1403 ;val                       Allocated with name '_xatoi_val_1_1'
+                           1404 ;c                         Allocated with name '_xatoi_c_1_1'
+                           1405 ;r                         Allocated with name '_xatoi_r_1_1'
+                           1406 ;s                         Allocated with name '_xatoi_s_1_1'
+                           1407 ;------------------------------------------------------------
+                    04EF   1408 	G$xatoi$0$0 ==.
+                    04EF   1409 	C$misc.c$115$1$1 ==.
+                           1410 ;	../misc.c:115: int xatoi (                                             /* 0:Failed, 1:Successful */
+                           1411 ;	-----------------------------------------
+                           1412 ;	 function xatoi
+                           1413 ;	-----------------------------------------
+   04EF                    1414 _xatoi:
+                           1415 ;	genReceive
+   04EF AA F0              1416 	mov	r2,b
+   04F1 AB 83              1417 	mov	r3,dph
+   04F3 E5 82              1418 	mov	a,dpl
+   04F5 90s01r41           1419 	mov	dptr,#_xatoi_str_1_1
+   04F8 F0                 1420 	movx	@dptr,a
+   04F9 A3                 1421 	inc	dptr
+   04FA EB                 1422 	mov	a,r3
+   04FB F0                 1423 	movx	@dptr,a
+   04FC A3                 1424 	inc	dptr
+   04FD EA                 1425 	mov	a,r2
+   04FE F0                 1426 	movx	@dptr,a
+                    04FF   1427 	C$misc.c$121$1$1 ==.
+                           1428 ;	../misc.c:121: unsigned char c, r, s = 0;
+                           1429 ;	genAssign
+   04FF 90s01r4A           1430 	mov	dptr,#_xatoi_s_1_1
+   0502 74 00              1431 	mov	a,#0x00
+   0504 F0                 1432 	movx	@dptr,a
+                    0505   1433 	C$misc.c$124$1$1 ==.
+                           1434 ;	../misc.c:124: *res = 0;
+                           1435 ;	genAssign
+   0505 90s01r3E           1436 	mov	dptr,#_xatoi_PARM_2
+   0508 E0                 1437 	movx	a,@dptr
+   0509 FA                 1438 	mov	r2,a
+   050A A3                 1439 	inc	dptr
+   050B E0                 1440 	movx	a,@dptr
+   050C FB                 1441 	mov	r3,a
+   050D A3                 1442 	inc	dptr
+   050E E0                 1443 	movx	a,@dptr
+   050F FC                 1444 	mov	r4,a
+                           1445 ;	genPointerSet
+                           1446 ;	genGenPointerSet
+   0510 8A 82              1447 	mov	dpl,r2
+   0512 8B 83              1448 	mov	dph,r3
+   0514 8C F0              1449 	mov	b,r4
+   0516 74 00              1450 	mov	a,#0x00
+   0518 12s00r00           1451 	lcall	__gptrput
+   051B A3                 1452 	inc	dptr
+   051C 74 00              1453 	mov	a,#0x00
+   051E 12s00r00           1454 	lcall	__gptrput
+                    0521   1455 	C$misc.c$126$1$1 ==.
+                           1456 ;	../misc.c:126: while ((c = **str) == ' ') (*str)++;               /* Skip leading spaces */
+   0521                    1457 00101$:
+                           1458 ;	genIpush
+   0521 C0 02              1459 	push	ar2
+   0523 C0 03              1460 	push	ar3
+   0525 C0 04              1461 	push	ar4
+                           1462 ;	genAssign
+   0527 90s01r41           1463 	mov	dptr,#_xatoi_str_1_1
+   052A E0                 1464 	movx	a,@dptr
+   052B FD                 1465 	mov	r5,a
+   052C A3                 1466 	inc	dptr
+   052D E0                 1467 	movx	a,@dptr
+   052E FE                 1468 	mov	r6,a
+   052F A3                 1469 	inc	dptr
+   0530 E0                 1470 	movx	a,@dptr
+   0531 FF                 1471 	mov	r7,a
+                           1472 ;	genPointerGet
+                           1473 ;	genGenPointerGet
+   0532 8D 82              1474 	mov	dpl,r5
+   0534 8E 83              1475 	mov	dph,r6
+   0536 8F F0              1476 	mov	b,r7
+   0538 12s00r00           1477 	lcall	__gptrget
+   053B F8                 1478 	mov	r0,a
+   053C A3                 1479 	inc	dptr
+   053D 12s00r00           1480 	lcall	__gptrget
+   0540 F9                 1481 	mov	r1,a
+   0541 A3                 1482 	inc	dptr
+   0542 12s00r00           1483 	lcall	__gptrget
+   0545 FA                 1484 	mov	r2,a
+                           1485 ;	genPointerGet
+                           1486 ;	genGenPointerGet
+   0546 88 82              1487 	mov	dpl,r0
+   0548 89 83              1488 	mov	dph,r1
+   054A 8A F0              1489 	mov	b,r2
+   054C 12s00r00           1490 	lcall	__gptrget
+   054F F8                 1491 	mov	r0,a
+                           1492 ;	genAssign
+   0550 90s01r48           1493 	mov	dptr,#_xatoi_c_1_1
+   0553 E8                 1494 	mov	a,r0
+   0554 F0                 1495 	movx	@dptr,a
+                           1496 ;	genCmpEq
+                           1497 ;	gencjne
+                           1498 ;	gencjneshort
+   0555 B8 20 04           1499 	cjne	r0,#0x20,00155$
+   0558 74 01              1500 	mov	a,#0x01
+   055A 80 01              1501 	sjmp	00156$
+   055C                    1502 00155$:
+   055C E4                 1503 	clr	a
+   055D                    1504 00156$:
+                           1505 ;	genIpop
+   055D D0 04              1506 	pop	ar4
+   055F D0 03              1507 	pop	ar3
+   0561 D0 02              1508 	pop	ar2
+                           1509 ;	genIfx
+                           1510 ;	genIfxJump
+   0563 70 03              1511 	jnz	00157$
+   0565 02s05rA4           1512 	ljmp	00103$
+   0568                    1513 00157$:
+                           1514 ;	genIpush
+   0568 C0 02              1515 	push	ar2
+   056A C0 03              1516 	push	ar3
+   056C C0 04              1517 	push	ar4
+                           1518 ;	genPointerGet
+                           1519 ;	genGenPointerGet
+   056E 8D 82              1520 	mov	dpl,r5
+   0570 8E 83              1521 	mov	dph,r6
+   0572 8F F0              1522 	mov	b,r7
+   0574 12s00r00           1523 	lcall	__gptrget
+   0577 F8                 1524 	mov	r0,a
+   0578 A3                 1525 	inc	dptr
+   0579 12s00r00           1526 	lcall	__gptrget
+   057C F9                 1527 	mov	r1,a
+   057D A3                 1528 	inc	dptr
+   057E 12s00r00           1529 	lcall	__gptrget
+   0581 FA                 1530 	mov	r2,a
+                           1531 ;	genPlus
+                           1532 ;	genPlusIncr
+   0582 08                 1533 	inc	r0
+   0583 B8 00 01           1534 	cjne	r0,#0x00,00158$
+   0586 09                 1535 	inc	r1
+   0587                    1536 00158$:
+                           1537 ;	genPointerSet
+                           1538 ;	genGenPointerSet
+   0587 8D 82              1539 	mov	dpl,r5
+   0589 8E 83              1540 	mov	dph,r6
+   058B 8F F0              1541 	mov	b,r7
+   058D E8                 1542 	mov	a,r0
+   058E 12s00r00           1543 	lcall	__gptrput
+   0591 A3                 1544 	inc	dptr
+   0592 E9                 1545 	mov	a,r1
+   0593 12s00r00           1546 	lcall	__gptrput
+   0596 A3                 1547 	inc	dptr
+   0597 EA                 1548 	mov	a,r2
+   0598 12s00r00           1549 	lcall	__gptrput
+                           1550 ;	genIpop
+   059B D0 04              1551 	pop	ar4
+   059D D0 03              1552 	pop	ar3
+   059F D0 02              1553 	pop	ar2
+   05A1 02s05r21           1554 	ljmp	00101$
+   05A4                    1555 00103$:
+                    05A4   1556 	C$misc.c$128$1$1 ==.
+                           1557 ;	../misc.c:128: if (c == '-') {                         /* negative? */
+                           1558 ;	genCmpEq
+                           1559 ;	gencjneshort
+   05A4 B8 2D 02           1560 	cjne	r0,#0x2D,00159$
+   05A7 80 03              1561 	sjmp	00160$
+   05A9                    1562 00159$:
+   05A9 02s05rFA           1563 	ljmp	00105$
+   05AC                    1564 00160$:
+                    05AC   1565 	C$misc.c$129$1$1 ==.
+                           1566 ;	../misc.c:129: s = 1;
+                           1567 ;	genIpush
+   05AC C0 02              1568 	push	ar2
+   05AE C0 03              1569 	push	ar3
+   05B0 C0 04              1570 	push	ar4
+                           1571 ;	genAssign
+   05B2 90s01r4A           1572 	mov	dptr,#_xatoi_s_1_1
+   05B5 74 01              1573 	mov	a,#0x01
+   05B7 F0                 1574 	movx	@dptr,a
+                    05B8   1575 	C$misc.c$130$2$2 ==.
+                           1576 ;	../misc.c:130: c = *(++(*str));
+                           1577 ;	genPointerGet
+                           1578 ;	genGenPointerGet
+   05B8 8D 82              1579 	mov	dpl,r5
+   05BA 8E 83              1580 	mov	dph,r6
+   05BC 8F F0              1581 	mov	b,r7
+   05BE 12s00r00           1582 	lcall	__gptrget
+   05C1 F8                 1583 	mov	r0,a
+   05C2 A3                 1584 	inc	dptr
+   05C3 12s00r00           1585 	lcall	__gptrget
+   05C6 F9                 1586 	mov	r1,a
+   05C7 A3                 1587 	inc	dptr
+   05C8 12s00r00           1588 	lcall	__gptrget
+   05CB FA                 1589 	mov	r2,a
+                           1590 ;	genPlus
+                           1591 ;	genPlusIncr
+   05CC 08                 1592 	inc	r0
+   05CD B8 00 01           1593 	cjne	r0,#0x00,00161$
+   05D0 09                 1594 	inc	r1
+   05D1                    1595 00161$:
+                           1596 ;	genPointerSet
+                           1597 ;	genGenPointerSet
+   05D1 8D 82              1598 	mov	dpl,r5
+   05D3 8E 83              1599 	mov	dph,r6
+   05D5 8F F0              1600 	mov	b,r7
+   05D7 E8                 1601 	mov	a,r0
+   05D8 12s00r00           1602 	lcall	__gptrput
+   05DB A3                 1603 	inc	dptr
+   05DC E9                 1604 	mov	a,r1
+   05DD 12s00r00           1605 	lcall	__gptrput
+   05E0 A3                 1606 	inc	dptr
+   05E1 EA                 1607 	mov	a,r2
+   05E2 12s00r00           1608 	lcall	__gptrput
+                           1609 ;	genPointerGet
+                           1610 ;	genGenPointerGet
+   05E5 88 82              1611 	mov	dpl,r0
+   05E7 89 83              1612 	mov	dph,r1
+   05E9 8A F0              1613 	mov	b,r2
+   05EB 12s00r00           1614 	lcall	__gptrget
+   05EE F8                 1615 	mov	r0,a
+                           1616 ;	genAssign
+   05EF 90s01r48           1617 	mov	dptr,#_xatoi_c_1_1
+   05F2 E8                 1618 	mov	a,r0
+   05F3 F0                 1619 	movx	@dptr,a
+                    05F4   1620 	C$misc.c$171$1$1 ==.
+                           1621 ;	../misc.c:171: return 1;
+                           1622 ;	genIpop
+   05F4 D0 04              1623 	pop	ar4
+   05F6 D0 03              1624 	pop	ar3
+   05F8 D0 02              1625 	pop	ar2
+                    05FA   1626 	C$misc.c$130$1$1 ==.
+                           1627 ;	../misc.c:130: c = *(++(*str));
+   05FA                    1628 00105$:
+                    05FA   1629 	C$misc.c$133$1$1 ==.
+                           1630 ;	../misc.c:133: if (c == '0') {
+                           1631 ;	genAssign
+   05FA 90s01r48           1632 	mov	dptr,#_xatoi_c_1_1
+   05FD E0                 1633 	movx	a,@dptr
+   05FE FD                 1634 	mov	r5,a
+                           1635 ;	genCmpEq
+                           1636 ;	gencjneshort
+   05FF BD 30 02           1637 	cjne	r5,#0x30,00162$
+   0602 80 03              1638 	sjmp	00163$
+   0604                    1639 00162$:
+   0604 02s07r68           1640 	ljmp	00121$
+   0607                    1641 00163$:
+                    0607   1642 	C$misc.c$134$1$1 ==.
+                           1643 ;	../misc.c:134: c = *(++(*str));
+                           1644 ;	genIpush
+   0607 C0 02              1645 	push	ar2
+   0609 C0 03              1646 	push	ar3
+   060B C0 04              1647 	push	ar4
+                           1648 ;	genAssign
+   060D 90s01r41           1649 	mov	dptr,#_xatoi_str_1_1
+   0610 E0                 1650 	movx	a,@dptr
+   0611 FE                 1651 	mov	r6,a
+   0612 A3                 1652 	inc	dptr
+   0613 E0                 1653 	movx	a,@dptr
+   0614 FF                 1654 	mov	r7,a
+   0615 A3                 1655 	inc	dptr
+   0616 E0                 1656 	movx	a,@dptr
+   0617 F8                 1657 	mov	r0,a
+                           1658 ;	genPointerGet
+                           1659 ;	genGenPointerGet
+   0618 8E 82              1660 	mov	dpl,r6
+   061A 8F 83              1661 	mov	dph,r7
+   061C 88 F0              1662 	mov	b,r0
+   061E 12s00r00           1663 	lcall	__gptrget
+   0621 F9                 1664 	mov	r1,a
+   0622 A3                 1665 	inc	dptr
+   0623 12s00r00           1666 	lcall	__gptrget
+   0626 FA                 1667 	mov	r2,a
+   0627 A3                 1668 	inc	dptr
+   0628 12s00r00           1669 	lcall	__gptrget
+   062B FB                 1670 	mov	r3,a
+                           1671 ;	genPlus
+                           1672 ;	genPlusIncr
+   062C 09                 1673 	inc	r1
+   062D B9 00 01           1674 	cjne	r1,#0x00,00164$
+   0630 0A                 1675 	inc	r2
+   0631                    1676 00164$:
+                           1677 ;	genPointerSet
+                           1678 ;	genGenPointerSet
+   0631 8E 82              1679 	mov	dpl,r6
+   0633 8F 83              1680 	mov	dph,r7
+   0635 88 F0              1681 	mov	b,r0
+   0637 E9                 1682 	mov	a,r1
+   0638 12s00r00           1683 	lcall	__gptrput
+   063B A3                 1684 	inc	dptr
+   063C EA                 1685 	mov	a,r2
+   063D 12s00r00           1686 	lcall	__gptrput
+   0640 A3                 1687 	inc	dptr
+   0641 EB                 1688 	mov	a,r3
+   0642 12s00r00           1689 	lcall	__gptrput
+                           1690 ;	genPointerGet
+                           1691 ;	genGenPointerGet
+   0645 89 82              1692 	mov	dpl,r1
+   0647 8A 83              1693 	mov	dph,r2
+   0649 8B F0              1694 	mov	b,r3
+   064B 12s00r00           1695 	lcall	__gptrget
+   064E FD                 1696 	mov	r5,a
+                           1697 ;	genAssign
+   064F 90s01r48           1698 	mov	dptr,#_xatoi_c_1_1
+   0652 ED                 1699 	mov	a,r5
+   0653 F0                 1700 	movx	@dptr,a
+                    0654   1701 	C$misc.c$135$2$3 ==.
+                           1702 ;	../misc.c:135: switch (c) {
+                           1703 ;	genCmpEq
+                           1704 ;	gencjne
+                           1705 ;	gencjneshort
+   0654 BD 42 04           1706 	cjne	r5,#0x42,00165$
+   0657 74 01              1707 	mov	a,#0x01
+   0659 80 01              1708 	sjmp	00166$
+   065B                    1709 00165$:
+   065B E4                 1710 	clr	a
+   065C                    1711 00166$:
+                           1712 ;	genIpop
+   065C D0 04              1713 	pop	ar4
+   065E D0 03              1714 	pop	ar3
+   0660 D0 02              1715 	pop	ar2
+                           1716 ;	genIfx
+                           1717 ;	genIfxJump
+   0662 60 03              1718 	jz	00167$
+   0664 02s06rD7           1719 	ljmp	00109$
+   0667                    1720 00167$:
+                           1721 ;	genCmpEq
+                           1722 ;	gencjneshort
+   0667 BD 58 03           1723 	cjne	r5,#0x58,00168$
+   066A 02s06r7B           1724 	ljmp	00107$
+   066D                    1725 00168$:
+                           1726 ;	genCmpEq
+                           1727 ;	gencjneshort
+   066D BD 62 03           1728 	cjne	r5,#0x62,00169$
+   0670 02s06rD7           1729 	ljmp	00109$
+   0673                    1730 00169$:
+                           1731 ;	genCmpEq
+                           1732 ;	gencjneshort
+   0673 BD 78 02           1733 	cjne	r5,#0x78,00170$
+   0676 80 03              1734 	sjmp	00171$
+   0678                    1735 00170$:
+   0678 02s07r33           1736 	ljmp	00110$
+   067B                    1737 00171$:
+                    067B   1738 	C$misc.c$137$3$4 ==.
+                           1739 ;	../misc.c:137: case 'X':
+   067B                    1740 00107$:
+                    067B   1741 	C$misc.c$139$1$1 ==.
+                           1742 ;	../misc.c:139: r = 16; c = *(++(*str));
+                           1743 ;	genIpush
+   067B C0 02              1744 	push	ar2
+   067D C0 03              1745 	push	ar3
+   067F C0 04              1746 	push	ar4
+                           1747 ;	genAssign
+   0681 90s01r49           1748 	mov	dptr,#_xatoi_r_1_1
+   0684 74 10              1749 	mov	a,#0x10
+   0686 F0                 1750 	movx	@dptr,a
+                           1751 ;	genAssign
+   0687 90s01r41           1752 	mov	dptr,#_xatoi_str_1_1
+   068A E0                 1753 	movx	a,@dptr
+   068B FE                 1754 	mov	r6,a
+   068C A3                 1755 	inc	dptr
+   068D E0                 1756 	movx	a,@dptr
+   068E FF                 1757 	mov	r7,a
+   068F A3                 1758 	inc	dptr
+   0690 E0                 1759 	movx	a,@dptr
+   0691 F8                 1760 	mov	r0,a
+                           1761 ;	genPointerGet
+                           1762 ;	genGenPointerGet
+   0692 8E 82              1763 	mov	dpl,r6
+   0694 8F 83              1764 	mov	dph,r7
+   0696 88 F0              1765 	mov	b,r0
+   0698 12s00r00           1766 	lcall	__gptrget
+   069B F9                 1767 	mov	r1,a
+   069C A3                 1768 	inc	dptr
+   069D 12s00r00           1769 	lcall	__gptrget
+   06A0 FA                 1770 	mov	r2,a
+   06A1 A3                 1771 	inc	dptr
+   06A2 12s00r00           1772 	lcall	__gptrget
+   06A5 FB                 1773 	mov	r3,a
+                           1774 ;	genPlus
+                           1775 ;	genPlusIncr
+   06A6 09                 1776 	inc	r1
+   06A7 B9 00 01           1777 	cjne	r1,#0x00,00172$
+   06AA 0A                 1778 	inc	r2
+   06AB                    1779 00172$:
+                           1780 ;	genPointerSet
+                           1781 ;	genGenPointerSet
+   06AB 8E 82              1782 	mov	dpl,r6
+   06AD 8F 83              1783 	mov	dph,r7
+   06AF 88 F0              1784 	mov	b,r0
+   06B1 E9                 1785 	mov	a,r1
+   06B2 12s00r00           1786 	lcall	__gptrput
+   06B5 A3                 1787 	inc	dptr
+   06B6 EA                 1788 	mov	a,r2
+   06B7 12s00r00           1789 	lcall	__gptrput
+   06BA A3                 1790 	inc	dptr
+   06BB EB                 1791 	mov	a,r3
+   06BC 12s00r00           1792 	lcall	__gptrput
+                           1793 ;	genPointerGet
+                           1794 ;	genGenPointerGet
+   06BF 89 82              1795 	mov	dpl,r1
+   06C1 8A 83              1796 	mov	dph,r2
+   06C3 8B F0              1797 	mov	b,r3
+   06C5 12s00r00           1798 	lcall	__gptrget
+   06C8 F9                 1799 	mov	r1,a
+                           1800 ;	genAssign
+   06C9 90s01r48           1801 	mov	dptr,#_xatoi_c_1_1
+   06CC E9                 1802 	mov	a,r1
+   06CD F0                 1803 	movx	@dptr,a
+                    06CE   1804 	C$misc.c$140$1$1 ==.
+                           1805 ;	../misc.c:140: break;
+                           1806 ;	genIpop
+   06CE D0 04              1807 	pop	ar4
+   06D0 D0 03              1808 	pop	ar3
+   06D2 D0 02              1809 	pop	ar2
+   06D4 02s07r88           1810 	ljmp	00122$
+                    06D7   1811 	C$misc.c$142$3$4 ==.
+                           1812 ;	../misc.c:142: case 'B':
+   06D7                    1813 00109$:
+                    06D7   1814 	C$misc.c$144$1$1 ==.
+                           1815 ;	../misc.c:144: r = 2; c = *(++(*str));
+                           1816 ;	genIpush
+   06D7 C0 02              1817 	push	ar2
+   06D9 C0 03              1818 	push	ar3
+   06DB C0 04              1819 	push	ar4
+                           1820 ;	genAssign
+   06DD 90s01r49           1821 	mov	dptr,#_xatoi_r_1_1
+   06E0 74 02              1822 	mov	a,#0x02
+   06E2 F0                 1823 	movx	@dptr,a
+                           1824 ;	genAssign
+   06E3 90s01r41           1825 	mov	dptr,#_xatoi_str_1_1
+   06E6 E0                 1826 	movx	a,@dptr
+   06E7 FE                 1827 	mov	r6,a
+   06E8 A3                 1828 	inc	dptr
+   06E9 E0                 1829 	movx	a,@dptr
+   06EA FF                 1830 	mov	r7,a
+   06EB A3                 1831 	inc	dptr
+   06EC E0                 1832 	movx	a,@dptr
+   06ED F8                 1833 	mov	r0,a
+                           1834 ;	genPointerGet
+                           1835 ;	genGenPointerGet
+   06EE 8E 82              1836 	mov	dpl,r6
+   06F0 8F 83              1837 	mov	dph,r7
+   06F2 88 F0              1838 	mov	b,r0
+   06F4 12s00r00           1839 	lcall	__gptrget
+   06F7 F9                 1840 	mov	r1,a
+   06F8 A3                 1841 	inc	dptr
+   06F9 12s00r00           1842 	lcall	__gptrget
+   06FC FA                 1843 	mov	r2,a
+   06FD A3                 1844 	inc	dptr
+   06FE 12s00r00           1845 	lcall	__gptrget
+   0701 FB                 1846 	mov	r3,a
+                           1847 ;	genPlus
+                           1848 ;	genPlusIncr
+   0702 09                 1849 	inc	r1
+   0703 B9 00 01           1850 	cjne	r1,#0x00,00173$
+   0706 0A                 1851 	inc	r2
+   0707                    1852 00173$:
+                           1853 ;	genPointerSet
+                           1854 ;	genGenPointerSet
+   0707 8E 82              1855 	mov	dpl,r6
+   0709 8F 83              1856 	mov	dph,r7
+   070B 88 F0              1857 	mov	b,r0
+   070D E9                 1858 	mov	a,r1
+   070E 12s00r00           1859 	lcall	__gptrput
+   0711 A3                 1860 	inc	dptr
+   0712 EA                 1861 	mov	a,r2
+   0713 12s00r00           1862 	lcall	__gptrput
+   0716 A3                 1863 	inc	dptr
+   0717 EB                 1864 	mov	a,r3
+   0718 12s00r00           1865 	lcall	__gptrput
+                           1866 ;	genPointerGet
+                           1867 ;	genGenPointerGet
+   071B 89 82              1868 	mov	dpl,r1
+   071D 8A 83              1869 	mov	dph,r2
+   071F 8B F0              1870 	mov	b,r3
+   0721 12s00r00           1871 	lcall	__gptrget
+   0724 F9                 1872 	mov	r1,a
+                           1873 ;	genAssign
+   0725 90s01r48           1874 	mov	dptr,#_xatoi_c_1_1
+   0728 E9                 1875 	mov	a,r1
+   0729 F0                 1876 	movx	@dptr,a
+                    072A   1877 	C$misc.c$145$1$1 ==.
+                           1878 ;	../misc.c:145: break;
+                           1879 ;	genIpop
+   072A D0 04              1880 	pop	ar4
+   072C D0 03              1881 	pop	ar3
+   072E D0 02              1882 	pop	ar2
+   0730 02s07r88           1883 	ljmp	00122$
+                    0733   1884 	C$misc.c$146$3$4 ==.
+                           1885 ;	../misc.c:146: default:
+   0733                    1886 00110$:
+                    0733   1887 	C$misc.c$147$3$4 ==.
+                           1888 ;	../misc.c:147: if (c <= ' ') return 1;          /* single zero */
+                           1889 ;	genCmpGt
+                           1890 ;	genCmp
+   0733 C3                 1891 	clr	c
+   0734 74 20              1892 	mov	a,#0x20
+   0736 9D                 1893 	subb	a,r5
+                           1894 ;	genIfxJump
+   0737 50 03              1895 	jnc	00174$
+   0739 02s07r45           1896 	ljmp	00112$
+   073C                    1897 00174$:
+                           1898 ;	genRet
+   073C 75 82 01           1899 	mov	dpl,#0x01
+   073F 75 83 00           1900 	mov	dph,#0x00
+   0742 02s08rFB           1901 	ljmp	00136$
+   0745                    1902 00112$:
+                    0745   1903 	C$misc.c$148$3$4 ==.
+                           1904 ;	../misc.c:148: if (c < '0' || c > '9') return 0;          /* invalid char */
+                           1905 ;	genCmpLt
+                           1906 ;	genCmp
+   0745 BD 30 00           1907 	cjne	r5,#0x30,00175$
+   0748                    1908 00175$:
+                           1909 ;	genIfxJump
+   0748 50 03              1910 	jnc	00176$
+   074A 02s07r56           1911 	ljmp	00113$
+   074D                    1912 00176$:
+                           1913 ;	genCmpGt
+                           1914 ;	genCmp
+   074D C3                 1915 	clr	c
+   074E 74 39              1916 	mov	a,#0x39
+   0750 9D                 1917 	subb	a,r5
+                           1918 ;	genIfxJump
+   0751 40 03              1919 	jc	00177$
+   0753 02s07r5F           1920 	ljmp	00114$
+   0756                    1921 00177$:
+   0756                    1922 00113$:
+                           1923 ;	genRet
+   0756 75 82 00           1924 	mov	dpl,#0x00
+   0759 75 83 00           1925 	mov	dph,#0x00
+   075C 02s08rFB           1926 	ljmp	00136$
+   075F                    1927 00114$:
+                    075F   1928 	C$misc.c$149$3$4 ==.
+                           1929 ;	../misc.c:149: r = 8;                      /* octal */
+                           1930 ;	genAssign
+   075F 90s01r49           1931 	mov	dptr,#_xatoi_r_1_1
+   0762 74 08              1932 	mov	a,#0x08
+   0764 F0                 1933 	movx	@dptr,a
+                    0765   1934 	C$misc.c$150$1$1 ==.
+                           1935 ;	../misc.c:150: }
+   0765 02s07r88           1936 	ljmp	00122$
+   0768                    1937 00121$:
+                    0768   1938 	C$misc.c$152$2$5 ==.
+                           1939 ;	../misc.c:152: if (c < '0' || c > '9') return 0;          /* EOL or invalid char */
+                           1940 ;	genCmpLt
+                           1941 ;	genCmp
+   0768 BD 30 00           1942 	cjne	r5,#0x30,00178$
+   076B                    1943 00178$:
+                           1944 ;	genIfxJump
+   076B 50 03              1945 	jnc	00179$
+   076D 02s07r79           1946 	ljmp	00117$
+   0770                    1947 00179$:
+                           1948 ;	genCmpGt
+                           1949 ;	genCmp
+   0770 C3                 1950 	clr	c
+   0771 74 39              1951 	mov	a,#0x39
+   0773 9D                 1952 	subb	a,r5
+                           1953 ;	genIfxJump
+   0774 40 03              1954 	jc	00180$
+   0776 02s07r82           1955 	ljmp	00118$
+   0779                    1956 00180$:
+   0779                    1957 00117$:
+                           1958 ;	genRet
+   0779 75 82 00           1959 	mov	dpl,#0x00
+   077C 75 83 00           1960 	mov	dph,#0x00
+   077F 02s08rFB           1961 	ljmp	00136$
+   0782                    1962 00118$:
+                    0782   1963 	C$misc.c$153$2$5 ==.
+                           1964 ;	../misc.c:153: r = 10;                                    /* decimal */
+                           1965 ;	genAssign
+   0782 90s01r49           1966 	mov	dptr,#_xatoi_r_1_1
+   0785 74 0A              1967 	mov	a,#0x0A
+   0787 F0                 1968 	movx	@dptr,a
+   0788                    1969 00122$:
+                    0788   1970 	C$misc.c$156$1$1 ==.
+                           1971 ;	../misc.c:156: val = 0;
+                           1972 ;	genAssign
+   0788 90s01r44           1973 	mov	dptr,#_xatoi_val_1_1
+   078B E4                 1974 	clr	a
+   078C F0                 1975 	movx	@dptr,a
+   078D A3                 1976 	inc	dptr
+   078E F0                 1977 	movx	@dptr,a
+   078F A3                 1978 	inc	dptr
+   0790 F0                 1979 	movx	@dptr,a
+   0791 A3                 1980 	inc	dptr
+   0792 F0                 1981 	movx	@dptr,a
+                    0793   1982 	C$misc.c$157$1$1 ==.
+                           1983 ;	../misc.c:157: while (c > ' ') {
+   0793                    1984 00131$:
+                           1985 ;	genAssign
+   0793 90s01r48           1986 	mov	dptr,#_xatoi_c_1_1
+   0796 E0                 1987 	movx	a,@dptr
+   0797 FD                 1988 	mov	r5,a
+                           1989 ;	genCmpGt
+                           1990 ;	genCmp
+   0798 C3                 1991 	clr	c
+   0799 74 20              1992 	mov	a,#0x20
+   079B 9D                 1993 	subb	a,r5
+                           1994 ;	genIfxJump
+   079C 40 03              1995 	jc	00181$
+   079E 02s08rAC           1996 	ljmp	00133$
+   07A1                    1997 00181$:
+                    07A1   1998 	C$misc.c$158$2$6 ==.
+                           1999 ;	../misc.c:158: if (c >= 'a') c -= 0x20;
+                           2000 ;	genCmpLt
+                           2001 ;	genCmp
+   07A1 BD 61 00           2002 	cjne	r5,#0x61,00182$
+   07A4                    2003 00182$:
+                           2004 ;	genIfxJump
+   07A4 50 03              2005 	jnc	00183$
+   07A6 02s07rB0           2006 	ljmp	00124$
+   07A9                    2007 00183$:
+                           2008 ;	genMinus
+   07A9 ED                 2009 	mov	a,r5
+   07AA 24 E0              2010 	add	a,#0xe0
+                           2011 ;	genAssign
+   07AC 90s01r48           2012 	mov	dptr,#_xatoi_c_1_1
+   07AF F0                 2013 	movx	@dptr,a
+   07B0                    2014 00124$:
+                    07B0   2015 	C$misc.c$159$2$6 ==.
+                           2016 ;	../misc.c:159: c -= '0';
+                           2017 ;	genAssign
+   07B0 90s01r48           2018 	mov	dptr,#_xatoi_c_1_1
+   07B3 E0                 2019 	movx	a,@dptr
+   07B4 FD                 2020 	mov	r5,a
+                           2021 ;	genMinus
+   07B5 ED                 2022 	mov	a,r5
+   07B6 24 D0              2023 	add	a,#0xd0
+                           2024 ;	genAssign
+   07B8 90s01r48           2025 	mov	dptr,#_xatoi_c_1_1
+   07BB F0                 2026 	movx	@dptr,a
+                    07BC   2027 	C$misc.c$160$2$6 ==.
+                           2028 ;	../misc.c:160: if (c >= 17) {
+                           2029 ;	genAssign
+   07BC 90s01r48           2030 	mov	dptr,#_xatoi_c_1_1
+   07BF E0                 2031 	movx	a,@dptr
+   07C0 FD                 2032 	mov	r5,a
+                           2033 ;	genCmpLt
+                           2034 ;	genCmp
+   07C1 BD 11 00           2035 	cjne	r5,#0x11,00184$
+   07C4                    2036 00184$:
+                           2037 ;	genIfxJump
+   07C4 50 03              2038 	jnc	00185$
+   07C6 02s07rE7           2039 	ljmp	00128$
+   07C9                    2040 00185$:
+                    07C9   2041 	C$misc.c$161$3$7 ==.
+                           2042 ;	../misc.c:161: c -= 7;
+                           2043 ;	genMinus
+   07C9 ED                 2044 	mov	a,r5
+   07CA 24 F9              2045 	add	a,#0xf9
+                           2046 ;	genAssign
+   07CC 90s01r48           2047 	mov	dptr,#_xatoi_c_1_1
+   07CF F0                 2048 	movx	@dptr,a
+                    07D0   2049 	C$misc.c$162$3$7 ==.
+                           2050 ;	../misc.c:162: if (c <= 9) return 0;           /* invalid char */
+                           2051 ;	genAssign
+   07D0 90s01r48           2052 	mov	dptr,#_xatoi_c_1_1
+   07D3 E0                 2053 	movx	a,@dptr
+   07D4 FD                 2054 	mov	r5,a
+                           2055 ;	genCmpGt
+                           2056 ;	genCmp
+   07D5 C3                 2057 	clr	c
+   07D6 74 09              2058 	mov	a,#0x09
+   07D8 9D                 2059 	subb	a,r5
+                           2060 ;	genIfxJump
+   07D9 50 03              2061 	jnc	00186$
+   07DB 02s07rE7           2062 	ljmp	00128$
+   07DE                    2063 00186$:
+                           2064 ;	genRet
+   07DE 75 82 00           2065 	mov	dpl,#0x00
+   07E1 75 83 00           2066 	mov	dph,#0x00
+   07E4 02s08rFB           2067 	ljmp	00136$
+   07E7                    2068 00128$:
+                    07E7   2069 	C$misc.c$164$2$6 ==.
+                           2070 ;	../misc.c:164: if (c >= r) return 0;                           /* invalid char for current radix */
+                           2071 ;	genAssign
+   07E7 90s01r48           2072 	mov	dptr,#_xatoi_c_1_1
+   07EA E0                 2073 	movx	a,@dptr
+   07EB FD                 2074 	mov	r5,a
+                           2075 ;	genAssign
+   07EC 90s01r49           2076 	mov	dptr,#_xatoi_r_1_1
+   07EF E0                 2077 	movx	a,@dptr
+   07F0 FE                 2078 	mov	r6,a
+                           2079 ;	genCmpLt
+                           2080 ;	genCmp
+   07F1 C3                 2081 	clr	c
+   07F2 ED                 2082 	mov	a,r5
+   07F3 9E                 2083 	subb	a,r6
+                           2084 ;	genIfxJump
+   07F4 50 03              2085 	jnc	00187$
+   07F6 02s08r02           2086 	ljmp	00130$
+   07F9                    2087 00187$:
+                           2088 ;	genRet
+   07F9 75 82 00           2089 	mov	dpl,#0x00
+   07FC 75 83 00           2090 	mov	dph,#0x00
+   07FF 02s08rFB           2091 	ljmp	00136$
+   0802                    2092 00130$:
+                    0802   2093 	C$misc.c$165$1$1 ==.
+                           2094 ;	../misc.c:165: val = val * r + c;
+                           2095 ;	genIpush
+   0802 C0 02              2096 	push	ar2
+   0804 C0 03              2097 	push	ar3
+   0806 C0 04              2098 	push	ar4
+                           2099 ;	genAssign
+   0808 90s01r44           2100 	mov	dptr,#_xatoi_val_1_1
+   080B E0                 2101 	movx	a,@dptr
+   080C FF                 2102 	mov	r7,a
+   080D A3                 2103 	inc	dptr
+   080E E0                 2104 	movx	a,@dptr
+   080F F8                 2105 	mov	r0,a
+   0810 A3                 2106 	inc	dptr
+   0811 E0                 2107 	movx	a,@dptr
+   0812 F9                 2108 	mov	r1,a
+   0813 A3                 2109 	inc	dptr
+   0814 E0                 2110 	movx	a,@dptr
+   0815 FA                 2111 	mov	r2,a
+                           2112 ;	genCast
+   0816 90s00r00           2113 	mov	dptr,#__mullong_PARM_2
+   0819 EE                 2114 	mov	a,r6
+   081A F0                 2115 	movx	@dptr,a
+   081B A3                 2116 	inc	dptr
+   081C 74 00              2117 	mov	a,#0x00
+   081E F0                 2118 	movx	@dptr,a
+   081F A3                 2119 	inc	dptr
+   0820 74 00              2120 	mov	a,#0x00
+   0822 F0                 2121 	movx	@dptr,a
+   0823 A3                 2122 	inc	dptr
+   0824 74 00              2123 	mov	a,#0x00
+   0826 F0                 2124 	movx	@dptr,a
+                           2125 ;	genCall
+   0827 8F 82              2126 	mov	dpl,r7
+   0829 88 83              2127 	mov	dph,r0
+   082B 89 F0              2128 	mov	b,r1
+   082D EA                 2129 	mov	a,r2
+   082E C0 05              2130 	push	ar5
+   0830 12s00r00           2131 	lcall	__mullong
+   0833 AA 82              2132 	mov	r2,dpl
+   0835 AB 83              2133 	mov	r3,dph
+   0837 AC F0              2134 	mov	r4,b
+   0839 FE                 2135 	mov	r6,a
+   083A D0 05              2136 	pop	ar5
+                           2137 ;	genCast
+   083C 7F 00              2138 	mov	r7,#0x00
+   083E 78 00              2139 	mov	r0,#0x00
+   0840 79 00              2140 	mov	r1,#0x00
+                           2141 ;	genPlus
+   0842 90s01r44           2142 	mov	dptr,#_xatoi_val_1_1
+   0845 E5 05              2143 	mov	a,ar5
+   0847 25 02              2144 	add	a,ar2
+   0849 F0                 2145 	movx	@dptr,a
+   084A E5 07              2146 	mov	a,ar7
+   084C 35 03              2147 	addc	a,ar3
+   084E A3                 2148 	inc	dptr
+   084F F0                 2149 	movx	@dptr,a
+   0850 E5 00              2150 	mov	a,ar0
+   0852 35 04              2151 	addc	a,ar4
+   0854 A3                 2152 	inc	dptr
+   0855 F0                 2153 	movx	@dptr,a
+   0856 E5 01              2154 	mov	a,ar1
+   0858 35 06              2155 	addc	a,ar6
+   085A A3                 2156 	inc	dptr
+   085B F0                 2157 	movx	@dptr,a
+                    085C   2158 	C$misc.c$166$2$6 ==.
+                           2159 ;	../misc.c:166: c = *(++(*str));
+                           2160 ;	genAssign
+   085C 90s01r41           2161 	mov	dptr,#_xatoi_str_1_1
+   085F E0                 2162 	movx	a,@dptr
+   0860 FA                 2163 	mov	r2,a
+   0861 A3                 2164 	inc	dptr
+   0862 E0                 2165 	movx	a,@dptr
+   0863 FB                 2166 	mov	r3,a
+   0864 A3                 2167 	inc	dptr
+   0865 E0                 2168 	movx	a,@dptr
+   0866 FC                 2169 	mov	r4,a
+                           2170 ;	genPointerGet
+                           2171 ;	genGenPointerGet
+   0867 8A 82              2172 	mov	dpl,r2
+   0869 8B 83              2173 	mov	dph,r3
+   086B 8C F0              2174 	mov	b,r4
+   086D 12s00r00           2175 	lcall	__gptrget
+   0870 FD                 2176 	mov	r5,a
+   0871 A3                 2177 	inc	dptr
+   0872 12s00r00           2178 	lcall	__gptrget
+   0875 FE                 2179 	mov	r6,a
+   0876 A3                 2180 	inc	dptr
+   0877 12s00r00           2181 	lcall	__gptrget
+   087A FF                 2182 	mov	r7,a
+                           2183 ;	genPlus
+                           2184 ;	genPlusIncr
+   087B 0D                 2185 	inc	r5
+   087C BD 00 01           2186 	cjne	r5,#0x00,00188$
+   087F 0E                 2187 	inc	r6
+   0880                    2188 00188$:
+                           2189 ;	genPointerSet
+                           2190 ;	genGenPointerSet
+   0880 8A 82              2191 	mov	dpl,r2
+   0882 8B 83              2192 	mov	dph,r3
+   0884 8C F0              2193 	mov	b,r4
+   0886 ED                 2194 	mov	a,r5
+   0887 12s00r00           2195 	lcall	__gptrput
+   088A A3                 2196 	inc	dptr
+   088B EE                 2197 	mov	a,r6
+   088C 12s00r00           2198 	lcall	__gptrput
+   088F A3                 2199 	inc	dptr
+   0890 EF                 2200 	mov	a,r7
+   0891 12s00r00           2201 	lcall	__gptrput
+                           2202 ;	genPointerGet
+                           2203 ;	genGenPointerGet
+   0894 8D 82              2204 	mov	dpl,r5
+   0896 8E 83              2205 	mov	dph,r6
+   0898 8F F0              2206 	mov	b,r7
+   089A 12s00r00           2207 	lcall	__gptrget
+   089D FD                 2208 	mov	r5,a
+                           2209 ;	genAssign
+   089E 90s01r48           2210 	mov	dptr,#_xatoi_c_1_1
+   08A1 ED                 2211 	mov	a,r5
+   08A2 F0                 2212 	movx	@dptr,a
+                           2213 ;	genIpop
+   08A3 D0 04              2214 	pop	ar4
+   08A5 D0 03              2215 	pop	ar3
+   08A7 D0 02              2216 	pop	ar2
+   08A9 02s07r93           2217 	ljmp	00131$
+   08AC                    2218 00133$:
+                    08AC   2219 	C$misc.c$168$1$1 ==.
+                           2220 ;	../misc.c:168: if (s) val = 0 - val;                                               /* apply sign if needed */
+                           2221 ;	genAssign
+   08AC 90s01r4A           2222 	mov	dptr,#_xatoi_s_1_1
+   08AF E0                 2223 	movx	a,@dptr
+   08B0 FD                 2224 	mov	r5,a
+                           2225 ;	genIfx
+   08B1 ED                 2226 	mov	a,r5
+                           2227 ;	genIfxJump
+   08B2 70 03              2228 	jnz	00189$
+   08B4 02s08rD8           2229 	ljmp	00135$
+   08B7                    2230 00189$:
+                           2231 ;	genAssign
+   08B7 90s01r44           2232 	mov	dptr,#_xatoi_val_1_1
+   08BA E0                 2233 	movx	a,@dptr
+   08BB FD                 2234 	mov	r5,a
+   08BC A3                 2235 	inc	dptr
+   08BD E0                 2236 	movx	a,@dptr
+   08BE FE                 2237 	mov	r6,a
+   08BF A3                 2238 	inc	dptr
+   08C0 E0                 2239 	movx	a,@dptr
+   08C1 FF                 2240 	mov	r7,a
+   08C2 A3                 2241 	inc	dptr
+   08C3 E0                 2242 	movx	a,@dptr
+   08C4 F8                 2243 	mov	r0,a
+                           2244 ;	genUminus
+   08C5 90s01r44           2245 	mov	dptr,#_xatoi_val_1_1
+   08C8 C3                 2246 	clr	c
+   08C9 E4                 2247 	clr	a
+   08CA 9D                 2248 	subb	a,r5
+   08CB F0                 2249 	movx	@dptr,a
+   08CC E4                 2250 	clr	a
+   08CD 9E                 2251 	subb	a,r6
+   08CE A3                 2252 	inc	dptr
+   08CF F0                 2253 	movx	@dptr,a
+   08D0 E4                 2254 	clr	a
+   08D1 9F                 2255 	subb	a,r7
+   08D2 A3                 2256 	inc	dptr
+   08D3 F0                 2257 	movx	@dptr,a
+   08D4 E4                 2258 	clr	a
+   08D5 98                 2259 	subb	a,r0
+   08D6 A3                 2260 	inc	dptr
+   08D7 F0                 2261 	movx	@dptr,a
+   08D8                    2262 00135$:
+                    08D8   2263 	C$misc.c$170$1$1 ==.
+                           2264 ;	../misc.c:170: *res = val;
+                           2265 ;	genAssign
+   08D8 90s01r44           2266 	mov	dptr,#_xatoi_val_1_1
+   08DB E0                 2267 	movx	a,@dptr
+   08DC FD                 2268 	mov	r5,a
+   08DD A3                 2269 	inc	dptr
+   08DE E0                 2270 	movx	a,@dptr
+   08DF FE                 2271 	mov	r6,a
+   08E0 A3                 2272 	inc	dptr
+   08E1 E0                 2273 	movx	a,@dptr
+   08E2 FF                 2274 	mov	r7,a
+   08E3 A3                 2275 	inc	dptr
+   08E4 E0                 2276 	movx	a,@dptr
+   08E5 F8                 2277 	mov	r0,a
+                           2278 ;	genCast
+                           2279 ;	genPointerSet
+                           2280 ;	genGenPointerSet
+   08E6 8A 82              2281 	mov	dpl,r2
+   08E8 8B 83              2282 	mov	dph,r3
+   08EA 8C F0              2283 	mov	b,r4
+   08EC ED                 2284 	mov	a,r5
+   08ED 12s00r00           2285 	lcall	__gptrput
+   08F0 A3                 2286 	inc	dptr
+   08F1 EE                 2287 	mov	a,r6
+   08F2 12s00r00           2288 	lcall	__gptrput
+                    08F5   2289 	C$misc.c$171$1$1 ==.
+                           2290 ;	../misc.c:171: return 1;
+                           2291 ;	genRet
+   08F5 75 82 01           2292 	mov	dpl,#0x01
+   08F8 75 83 00           2293 	mov	dph,#0x00
+   08FB                    2294 00136$:
+                    08FB   2295 	C$misc.c$172$1$1 ==.
+                    08FB   2296 	XG$xatoi$0$0 ==.
+   08FB 22                 2297 	ret
+                           2298 ;------------------------------------------------------------
+                           2299 ;Allocation info for local variables in function 'getParity'
+                           2300 ;------------------------------------------------------------
+                           2301 ;n                         Allocated with name '_getParity_n_1_1'
+                           2302 ;parity                    Allocated with name '_getParity_parity_1_1'
+                           2303 ;------------------------------------------------------------
+                    08FC   2304 	G$getParity$0$0 ==.
+                    08FC   2305 	C$misc.c$175$1$1 ==.
+                           2306 ;	../misc.c:175: uint8_t  getParity(unsigned int n)
+                           2307 ;	-----------------------------------------
+                           2308 ;	 function getParity
+                           2309 ;	-----------------------------------------
+   08FC                    2310 _getParity:
+                           2311 ;	genReceive
+   08FC AA 83              2312 	mov	r2,dph
+   08FE E5 82              2313 	mov	a,dpl
+   0900 90s01r4B           2314 	mov	dptr,#_getParity_n_1_1
+   0903 F0                 2315 	movx	@dptr,a
+   0904 A3                 2316 	inc	dptr
+   0905 EA                 2317 	mov	a,r2
+   0906 F0                 2318 	movx	@dptr,a
+                    0907   2319 	C$misc.c$177$1$1 ==.
+                           2320 ;	../misc.c:177: uint8_t parity = 0;
+                           2321 ;	genAssign
+   0907 90s01r4D           2322 	mov	dptr,#_getParity_parity_1_1
+   090A 74 00              2323 	mov	a,#0x00
+   090C F0                 2324 	movx	@dptr,a
+                    090D   2325 	C$misc.c$178$1$1 ==.
+                           2326 ;	../misc.c:178: while (n)
+   090D                    2327 00101$:
+                           2328 ;	genAssign
+   090D 90s01r4B           2329 	mov	dptr,#_getParity_n_1_1
+   0910 E0                 2330 	movx	a,@dptr
+   0911 FA                 2331 	mov	r2,a
+   0912 A3                 2332 	inc	dptr
+   0913 E0                 2333 	movx	a,@dptr
+   0914 FB                 2334 	mov	r3,a
+                           2335 ;	genIfx
+   0915 EA                 2336 	mov	a,r2
+   0916 4B                 2337 	orl	a,r3
+                           2338 ;	genIfxJump
+   0917 70 03              2339 	jnz	00108$
+   0919 02s09r40           2340 	ljmp	00103$
+   091C                    2341 00108$:
+                    091C   2342 	C$misc.c$180$2$2 ==.
+                           2343 ;	../misc.c:180: parity = !parity;
+                           2344 ;	genAssign
+   091C 90s01r4D           2345 	mov	dptr,#_getParity_parity_1_1
+   091F E0                 2346 	movx	a,@dptr
+   0920 FC                 2347 	mov	r4,a
+                           2348 ;	genNot
+   0921 90s01r4D           2349 	mov	dptr,#_getParity_parity_1_1
+   0924 EC                 2350 	mov	a,r4
+   0925 B4 01 00           2351 	cjne	a,#0x01,00109$
+   0928                    2352 00109$:
+   0928 E4                 2353 	clr	a
+   0929 33                 2354 	rlc	a
+   092A F0                 2355 	movx	@dptr,a
+                    092B   2356 	C$misc.c$181$2$2 ==.
+                           2357 ;	../misc.c:181: n      = n & (n - 1);
+                           2358 ;	genMinus
+                           2359 ;	genMinusDec
+   092B EA                 2360 	mov	a,r2
+   092C 24 FF              2361 	add	a,#0xff
+   092E FC                 2362 	mov	r4,a
+   092F EB                 2363 	mov	a,r3
+   0930 34 FF              2364 	addc	a,#0xff
+   0932 FD                 2365 	mov	r5,a
+                           2366 ;	genAnd
+   0933 90s01r4B           2367 	mov	dptr,#_getParity_n_1_1
+   0936 EC                 2368 	mov	a,r4
+   0937 5A                 2369 	anl	a,r2
+   0938 F0                 2370 	movx	@dptr,a
+   0939 ED                 2371 	mov	a,r5
+   093A 5B                 2372 	anl	a,r3
+   093B A3                 2373 	inc	dptr
+   093C F0                 2374 	movx	@dptr,a
+   093D 02s09r0D           2375 	ljmp	00101$
+   0940                    2376 00103$:
+                    0940   2377 	C$misc.c$183$1$1 ==.
+                           2378 ;	../misc.c:183: return parity;
+                           2379 ;	genAssign
+   0940 90s01r4D           2380 	mov	dptr,#_getParity_parity_1_1
+   0943 E0                 2381 	movx	a,@dptr
+   0944 FA                 2382 	mov	r2,a
+                           2383 ;	genRet
+   0945 8A 82              2384 	mov	dpl,r2
+   0947                    2385 00104$:
+                    0947   2386 	C$misc.c$184$1$1 ==.
+                    0947   2387 	XG$getParity$0$0 ==.
+   0947 22                 2388 	ret
+                           2389 	.area CSEG    (CODE)
+                           2390 	.area CONST   (CODE)
+                    0000   2391 F___misc$_str_0$0$0 == .
+   0000                    2392 __str_0:
+   0000 20                 2393 	.ascii " "
+   0001 00                 2394 	.db 0x00
+                           2395 	.area XINIT   (CODE)
+                           2396 	.area CABS    (ABS,CODE)

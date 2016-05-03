@@ -1,0 +1,163 @@
+;!FILE hal/Core8051s/SDCC/hal_assert.asm
+XH
+H 18 areas 58 global symbols
+M ___hal_Core8051s_SDCC_hal_assert
+O -mmcs51 --model-large
+S __gptrget Ref0000
+A _CODE size 0 flags 0 addr 0
+A RSEG size 0 flags 0 addr 0
+A REG_BANK_0 size 8 flags 4 addr 45540073
+A DSEG size 0 flags 0 addr 0
+A OSEG size 0 flags 4 addr 545C6E69
+A ISEG size 0 flags 0 addr 0
+A IABS size 0 flags 8 addr 0
+A BSEG size 0 flags 80 addr 0
+A PSEG size 0 flags 50 addr 0
+A XSEG size F flags 40 addr 0
+S LHAL_assert_fail$dummy$2$2 Def000E
+S _HAL_assert_fail_PARM_2 Def0000
+S LHAL_assert_fail$assert_file$2$2 Def0007
+S LHAL_assert_fail$assert_line$2$2 Def000A
+S LHAL_assert_fail$file_name$1$1 Def0004
+S LHAL_assert_fail$line_no$1$1 Def0000
+A XISEG size 0 flags 40 addr 0
+A HOME size 0 flags 20 addr 0
+A GSINIT0 size 0 flags 20 addr 0
+A GSINIT1 size 0 flags 20 addr 0
+A GSINIT2 size 0 flags 20 addr 0
+A GSINIT3 size 0 flags 20 addr 0
+A GSINIT4 size 0 flags 20 addr 0
+A GSINIT5 size 0 flags 20 addr 0
+A GSINIT size 0 flags 20 addr 0
+A GSFINAL size 0 flags 20 addr 0
+A CSEG size 60 flags 20 addr 0
+S _HAL_assert_fail Def0000
+S XG$HAL_assert_fail$0$0 Def005F
+S G$HAL_assert_fail$0$0 Def0000
+S C$hal_assert.c$111$0$0 Def0000
+S C$hal_assert.c$120$2$1 Def0026
+S A$hal_assert$200 Def004B
+S A$hal_assert$210 Def0057
+S A$hal_assert$201 Def004C
+S C$hal_assert.c$123$1$1 Def005F
+S C$hal_assert.c$121$2$2 Def0042
+S A$hal_assert$211 Def005A
+S A$hal_assert$130 Def0009
+S A$hal_assert$212 Def005B
+S A$hal_assert$131 Def000A
+S A$hal_assert$213 Def005C
+S A$hal_assert$204 Def004D
+S A$hal_assert$150 Def0019
+S A$hal_assert$132 Def000B
+S C$hal_assert.c$117$1$1 Def0010
+S A$hal_assert$205 Def004F
+S A$hal_assert$160 Def0024
+S A$hal_assert$151 Def001A
+S A$hal_assert$133 Def000C
+S A$hal_assert$206 Def0051
+S A$hal_assert$170 Def002D
+S A$hal_assert$161 Def0025
+S A$hal_assert$143 Def0010
+S A$hal_assert$134 Def000D
+S A$hal_assert$207 Def0053
+S A$hal_assert$180 Def0038
+S A$hal_assert$171 Def002E
+S A$hal_assert$153 Def001B
+S A$hal_assert$144 Def0013
+S A$hal_assert$135 Def000E
+S A$hal_assert$126 Def0000
+S C$hal_assert.c$119$2$1 Def0010
+S A$hal_assert$217 Def005F
+S A$hal_assert$208 Def0056
+S A$hal_assert$181 Def0039
+S A$hal_assert$172 Def002F
+S A$hal_assert$154 Def001E
+S A$hal_assert$145 Def0014
+S A$hal_assert$136 Def000F
+S A$hal_assert$127 Def0002
+S A$hal_assert$182 Def003A
+S A$hal_assert$173 Def0030
+S A$hal_assert$155 Def001F
+S A$hal_assert$146 Def0015
+S A$hal_assert$128 Def0004
+S A$hal_assert$183 Def003B
+S A$hal_assert$174 Def0031
+S A$hal_assert$165 Def0026
+S A$hal_assert$156 Def0020
+S A$hal_assert$147 Def0016
+S A$hal_assert$129 Def0006
+S A$hal_assert$193 Def0042
+S A$hal_assert$184 Def003C
+S A$hal_assert$175 Def0032
+S A$hal_assert$166 Def0029
+S A$hal_assert$157 Def0021
+S A$hal_assert$148 Def0017
+S A$hal_assert$194 Def0045
+S A$hal_assert$185 Def003D
+S A$hal_assert$176 Def0033
+S A$hal_assert$167 Def002A
+S A$hal_assert$158 Def0022
+S A$hal_assert$149 Def0018
+S A$hal_assert$195 Def0046
+S A$hal_assert$186 Def003E
+S A$hal_assert$168 Def002B
+S A$hal_assert$159 Def0023
+S A$hal_assert$196 Def0047
+S A$hal_assert$187 Def003F
+S A$hal_assert$178 Def0034
+S A$hal_assert$169 Def002C
+S A$hal_assert$197 Def0048
+S A$hal_assert$188 Def0040
+S A$hal_assert$179 Def0037
+S A$hal_assert$198 Def0049
+S A$hal_assert$189 Def0041
+S A$hal_assert$199 Def004A
+A CONST size 0 flags 20 addr 0
+A XINIT size 0 flags 20 addr 0
+A CABS size 0 flags 28 addr 0
+T 00 00
+R 00 00 00 02
+T 00 00
+R 00 00 00 09
+T 00 00
+R 00 00 00 09
+T 00 04
+R 00 00 00 09
+T 00 04
+R 00 00 00 09
+T 00 07
+R 00 00 00 09
+T 00 07
+R 00 00 00 09
+T 00 0A
+R 00 00 00 09
+T 00 0A
+R 00 00 00 09
+T 00 0E
+R 00 00 00 09
+T 00 0E
+R 00 00 00 09
+T 00 00
+R 00 00 00 14
+T 00 00 AA F0 AB 83 E5 82 90 00 04 F0 A3 EB F0 A3
+R 00 00 00 14 00 09 00 09
+T 00 0E EA F0
+R 00 00 00 14
+T 00 10
+R 00 00 00 14
+T 00 10 90 00 04 E0 FA A3 E0 FB A3 E0 FC 90 00 07
+R 00 00 00 14 00 03 00 09 00 0E 00 09
+T 00 1E EA F0 A3 EB F0 A3 EC F0 90 00 00 E0 FA A3
+R 00 00 00 14 00 0B 00 09
+T 00 2C E0 FB A3 E0 FC A3 E0 FD 90 00 0A EA F0 A3
+R 00 00 00 14 00 0B 00 09
+T 00 3A EB F0 A3 EC F0 A3 ED F0 90 00 07 E0 FA A3
+R 00 00 00 14 00 0B 00 09
+T 00 48 E0 FB A3 E0 FC 8A 82 8B 83 8C F0 12 00 00
+R 00 00 00 14 02 0E 00 00
+T 00 56 FA 90 00 0E EA F0 02 00 10
+R 00 00 00 14 00 04 00 09 00 09 00 14
+T 00 5F
+R 00 00 00 14
+T 00 5F 22
+R 00 00 00 14

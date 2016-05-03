@@ -1,0 +1,1733 @@
+                              1 ;--------------------------------------------------------
+                              2 ; File Created by SDCC : FreeWare ANSI-C Compiler
+                              3 ; Version 2.6.3 #4543 (Dec 31 2006)
+                              4 ; This file generated Mon May 02 12:51:58 2016
+                              5 ;--------------------------------------------------------
+                              6 	.module ___drivers_CoreInterrupt_core_irq_ctrl
+                              7 	.optsdcc -mmcs51 --model-large
+                              8 	
+                              9 ;--------------------------------------------------------
+                             10 ; Public variables in this module
+                             11 ;--------------------------------------------------------
+                             12 	.globl _CIC_set_irq_handler_PARM_2
+                             13 	.globl _CIC_init
+                             14 	.globl _CIC_set_irq_handler
+                             15 	.globl _CIC_get_irq_status
+                             16 	.globl _CIC_enable_irq
+                             17 	.globl _CIC_disable_irq
+                             18 	.globl _CIC_irq_handler
+                             19 ;--------------------------------------------------------
+                             20 ; special function registers
+                             21 ;--------------------------------------------------------
+                             22 	.area RSEG    (DATA)
+                             23 ;--------------------------------------------------------
+                             24 ; special function bits
+                             25 ;--------------------------------------------------------
+                             26 	.area RSEG    (DATA)
+                             27 ;--------------------------------------------------------
+                             28 ; overlayable register banks
+                             29 ;--------------------------------------------------------
+                             30 	.area REG_BANK_0	(REL,OVR,DATA)
+   0000                      31 	.ds 8
+                             32 ;--------------------------------------------------------
+                             33 ; internal ram data
+                             34 ;--------------------------------------------------------
+                             35 	.area DSEG    (DATA)
+                             36 ;--------------------------------------------------------
+                             37 ; overlayable items in internal ram 
+                             38 ;--------------------------------------------------------
+                             39 	.area OSEG    (OVR,DATA)
+                             40 ;--------------------------------------------------------
+                             41 ; indirectly addressable internal ram data
+                             42 ;--------------------------------------------------------
+                             43 	.area ISEG    (DATA)
+                             44 ;--------------------------------------------------------
+                             45 ; absolute internal ram data
+                             46 ;--------------------------------------------------------
+                             47 	.area IABS    (ABS,DATA)
+                             48 	.area IABS    (ABS,DATA)
+                             49 ;--------------------------------------------------------
+                             50 ; bit data
+                             51 ;--------------------------------------------------------
+                             52 	.area BSEG    (BIT)
+                             53 ;--------------------------------------------------------
+                             54 ; paged external ram data
+                             55 ;--------------------------------------------------------
+                             56 	.area PSEG    (PAG,XDATA)
+                             57 ;--------------------------------------------------------
+                             58 ; external ram data
+                             59 ;--------------------------------------------------------
+                             60 	.area XSEG    (XDATA)
+                    0000     61 F___drivers_CoreInterrupt_core_irq_ctrl$g_irq_handler_table$0$0==.
+   0000                      62 _g_irq_handler_table:
+   0000                      63 	.ds 64
+                    0040     64 LCIC_init$address$1$1==.
+   0040                      65 _CIC_init_address_1_1:
+   0040                      66 	.ds 2
+                    0042     67 LCIC_init$irq_idx$1$1==.
+   0042                      68 _CIC_init_irq_idx_1_1:
+   0042                      69 	.ds 1
+                    0043     70 LCIC_set_irq_handler$handler$1$1==.
+   0043                      71 _CIC_set_irq_handler_PARM_2:
+   0043                      72 	.ds 2
+                    0045     73 LCIC_set_irq_handler$irq_number$1$1==.
+   0045                      74 _CIC_set_irq_handler_irq_number_1_1:
+   0045                      75 	.ds 1
+                    0046     76 LCIC_set_irq_handler$file_name$3$3==.
+   0046                      77 _CIC_set_irq_handler_file_name_3_3:
+   0046                      78 	.ds 41
+                    006F     79 LCIC_enable_irq$irq_number$1$1==.
+   006F                      80 _CIC_enable_irq_irq_number_1_1:
+   006F                      81 	.ds 1
+                    0070     82 LCIC_enable_irq$file_name$3$3==.
+   0070                      83 _CIC_enable_irq_file_name_3_3:
+   0070                      84 	.ds 41
+                    0099     85 LCIC_disable_irq$irq_number$1$1==.
+   0099                      86 _CIC_disable_irq_irq_number_1_1:
+   0099                      87 	.ds 1
+                    009A     88 LCIC_disable_irq$file_name$3$3==.
+   009A                      89 _CIC_disable_irq_file_name_3_3:
+   009A                      90 	.ds 41
+                    00C3     91 LCIC_irq_handler$irq_idx$1$1==.
+   00C3                      92 _CIC_irq_handler_irq_idx_1_1:
+   00C3                      93 	.ds 1
+                    00C4     94 LCIC_irq_handler$file_name$6$6==.
+   00C4                      95 _CIC_irq_handler_file_name_6_6:
+   00C4                      96 	.ds 41
+                             97 ;--------------------------------------------------------
+                             98 ; external initialized ram data
+                             99 ;--------------------------------------------------------
+                            100 	.area XISEG   (XDATA)
+                    0000    101 F___drivers_CoreInterrupt_core_irq_ctrl$g_cic_base_addr$0$0==.
+   0000                     102 _g_cic_base_addr:
+   0000                     103 	.ds 2
+                            104 	.area HOME    (CODE)
+                            105 	.area GSINIT0 (CODE)
+                            106 	.area GSINIT1 (CODE)
+                            107 	.area GSINIT2 (CODE)
+                            108 	.area GSINIT3 (CODE)
+                            109 	.area GSINIT4 (CODE)
+                            110 	.area GSINIT5 (CODE)
+                            111 	.area GSINIT  (CODE)
+                            112 	.area GSFINAL (CODE)
+                            113 	.area CSEG    (CODE)
+                            114 ;--------------------------------------------------------
+                            115 ; global & static initialisations
+                            116 ;--------------------------------------------------------
+                            117 	.area HOME    (CODE)
+                            118 	.area GSINIT  (CODE)
+                            119 	.area GSFINAL (CODE)
+                            120 	.area GSINIT  (CODE)
+                            121 ;--------------------------------------------------------
+                            122 ; Home
+                            123 ;--------------------------------------------------------
+                            124 	.area HOME    (CODE)
+                            125 	.area HOME    (CODE)
+                            126 ;--------------------------------------------------------
+                            127 ; code
+                            128 ;--------------------------------------------------------
+                            129 	.area CSEG    (CODE)
+                            130 ;------------------------------------------------------------
+                            131 ;Allocation info for local variables in function 'CIC_init'
+                            132 ;------------------------------------------------------------
+                            133 ;address                   Allocated with name '_CIC_init_address_1_1'
+                            134 ;irq_idx                   Allocated with name '_CIC_init_irq_idx_1_1'
+                            135 ;------------------------------------------------------------
+                    0000    136 	G$CIC_init$0$0 ==.
+                    0000    137 	C$core_irq_ctrl.c$41$0$0 ==.
+                            138 ;	../drivers/CoreInterrupt/core_irq_ctrl.c:41: CIC_init
+                            139 ;	-----------------------------------------
+                            140 ;	 function CIC_init
+                            141 ;	-----------------------------------------
+   0000                     142 _CIC_init:
+                    0002    143 	ar2 = 0x02
+                    0003    144 	ar3 = 0x03
+                    0004    145 	ar4 = 0x04
+                    0005    146 	ar5 = 0x05
+                    0006    147 	ar6 = 0x06
+                    0007    148 	ar7 = 0x07
+                    0000    149 	ar0 = 0x00
+                    0001    150 	ar1 = 0x01
+                            151 ;	genReceive
+   0000 AA 83               152 	mov	r2,dph
+   0002 E5 82               153 	mov	a,dpl
+   0004 90s00r40            154 	mov	dptr,#_CIC_init_address_1_1
+   0007 F0                  155 	movx	@dptr,a
+   0008 A3                  156 	inc	dptr
+   0009 EA                  157 	mov	a,r2
+   000A F0                  158 	movx	@dptr,a
+                    000B    159 	C$core_irq_ctrl.c$47$1$1 ==.
+                            160 ;	../drivers/CoreInterrupt/core_irq_ctrl.c:47: g_cic_base_addr = address;
+                            161 ;	genAssign
+   000B 90s00r40            162 	mov	dptr,#_CIC_init_address_1_1
+   000E E0                  163 	movx	a,@dptr
+   000F FA                  164 	mov	r2,a
+   0010 A3                  165 	inc	dptr
+   0011 E0                  166 	movx	a,@dptr
+   0012 FB                  167 	mov	r3,a
+                            168 ;	genAssign
+   0013 90s00r00            169 	mov	dptr,#_g_cic_base_addr
+   0016 EA                  170 	mov	a,r2
+   0017 F0                  171 	movx	@dptr,a
+   0018 A3                  172 	inc	dptr
+   0019 EB                  173 	mov	a,r3
+   001A F0                  174 	movx	@dptr,a
+                    001B    175 	C$core_irq_ctrl.c$50$1$1 ==.
+                            176 ;	../drivers/CoreInterrupt/core_irq_ctrl.c:50: HAL_set_32bit_reg( g_cic_base_addr, FIQEnableClear, CLEAR_ALL_BITS );
+                            177 ;	genPlus
+                            178 ;	genPlusIncr
+   001B 74 0C               179 	mov	a,#0x0C
+   001D 25 02               180 	add	a,ar2
+   001F FA                  181 	mov	r2,a
+   0020 74 00               182 	mov	a,#0x00
+   0022 35 03               183 	addc	a,ar3
+   0024 FB                  184 	mov	r3,a
+                            185 ;	genAssign
+   0025 90s00r00            186 	mov	dptr,#_HW_set_32bit_reg_PARM_2
+   0028 74 FF               187 	mov	a,#0xFF
+   002A F0                  188 	movx	@dptr,a
+   002B A3                  189 	inc	dptr
+   002C 74 FF               190 	mov	a,#0xFF
+   002E F0                  191 	movx	@dptr,a
+   002F A3                  192 	inc	dptr
+   0030 74 FF               193 	mov	a,#0xFF
+   0032 F0                  194 	movx	@dptr,a
+   0033 A3                  195 	inc	dptr
+   0034 74 FF               196 	mov	a,#0xFF
+   0036 F0                  197 	movx	@dptr,a
+                            198 ;	genCall
+   0037 8A 82               199 	mov	dpl,r2
+   0039 8B 83               200 	mov	dph,r3
+   003B 12s00r00            201 	lcall	_HW_set_32bit_reg
+                    003E    202 	C$core_irq_ctrl.c$53$1$1 ==.
+                            203 ;	../drivers/CoreInterrupt/core_irq_ctrl.c:53: HAL_set_32bit_reg( g_cic_base_addr, IRQEnableClear, CLEAR_ALL_BITS );
+                            204 ;	genAssign
+   003E 90s00r00            205 	mov	dptr,#_g_cic_base_addr
+   0041 E0                  206 	movx	a,@dptr
+   0042 FA                  207 	mov	r2,a
+   0043 A3                  208 	inc	dptr
+   0044 E0                  209 	movx	a,@dptr
+   0045 FB                  210 	mov	r3,a
+                            211 ;	genPlus
+                            212 ;	genPlusIncr
+   0046 74 24               213 	mov	a,#0x24
+   0048 25 02               214 	add	a,ar2
+   004A FA                  215 	mov	r2,a
+   004B 74 00               216 	mov	a,#0x00
+   004D 35 03               217 	addc	a,ar3
+   004F FB                  218 	mov	r3,a
+                            219 ;	genAssign
+   0050 90s00r00            220 	mov	dptr,#_HW_set_32bit_reg_PARM_2
+   0053 74 FF               221 	mov	a,#0xFF
+   0055 F0                  222 	movx	@dptr,a
+   0056 A3                  223 	inc	dptr
+   0057 74 FF               224 	mov	a,#0xFF
+   0059 F0                  225 	movx	@dptr,a
+   005A A3                  226 	inc	dptr
+   005B 74 FF               227 	mov	a,#0xFF
+   005D F0                  228 	movx	@dptr,a
+   005E A3                  229 	inc	dptr
+   005F 74 FF               230 	mov	a,#0xFF
+   0061 F0                  231 	movx	@dptr,a
+                            232 ;	genCall
+   0062 8A 82               233 	mov	dpl,r2
+   0064 8B 83               234 	mov	dph,r3
+   0066 12s00r00            235 	lcall	_HW_set_32bit_reg
+                    0069    236 	C$core_irq_ctrl.c$56$1$1 ==.
+                            237 ;	../drivers/CoreInterrupt/core_irq_ctrl.c:56: for ( irq_idx = 0; irq_idx < CIC_NB_IRQ_SOURCES; irq_idx++ )
+                            238 ;	genAssign
+   0069 90s00r42            239 	mov	dptr,#_CIC_init_irq_idx_1_1
+   006C 74 00               240 	mov	a,#0x00
+   006E F0                  241 	movx	@dptr,a
+   006F                     242 00101$:
+                            243 ;	genAssign
+   006F 90s00r42            244 	mov	dptr,#_CIC_init_irq_idx_1_1
+   0072 E0                  245 	movx	a,@dptr
+   0073 FA                  246 	mov	r2,a
+                            247 ;	genCmpLt
+                            248 ;	genCmp
+   0074 BA 20 00            249 	cjne	r2,#0x20,00109$
+   0077                     250 00109$:
+                            251 ;	genIfxJump
+   0077 40 03               252 	jc	00110$
+   0079 02s00r9C            253 	ljmp	00105$
+   007C                     254 00110$:
+                    007C    255 	C$core_irq_ctrl.c$58$2$2 ==.
+                            256 ;	../drivers/CoreInterrupt/core_irq_ctrl.c:58: g_irq_handler_table[irq_idx] = NO_HANDLER;
+                            257 ;	genLeftShift
+                            258 ;	genLeftShiftLiteral
+                            259 ;	genlshOne
+   007C EA                  260 	mov	a,r2
+   007D 25 E0               261 	add	a,acc
+   007F FB                  262 	mov	r3,a
+                            263 ;	genPlus
+   0080 E5 03               264 	mov	a,ar3
+   0082 24r00               265 	add	a,#_g_irq_handler_table
+   0084 F5 82               266 	mov	dpl,a
+   0086 74 00               267 	mov	a,#0x00
+   0088 34s00               268 	addc	a,#(_g_irq_handler_table >> 8)
+   008A F5 83               269 	mov	dph,a
+                            270 ;	genPointerSet
+                            271 ;     genFarPointerSet
+   008C 74 00               272 	mov	a,#0x00
+   008E F0                  273 	movx	@dptr,a
+   008F A3                  274 	inc	dptr
+   0090 74 00               275 	mov	a,#0x00
+   0092 F0                  276 	movx	@dptr,a
+                    0093    277 	C$core_irq_ctrl.c$56$1$1 ==.
+                            278 ;	../drivers/CoreInterrupt/core_irq_ctrl.c:56: for ( irq_idx = 0; irq_idx < CIC_NB_IRQ_SOURCES; irq_idx++ )
+                            279 ;	genPlus
+   0093 90s00r42            280 	mov	dptr,#_CIC_init_irq_idx_1_1
+                            281 ;	genPlusIncr
+   0096 EA                  282 	mov	a,r2
+   0097 04                  283 	inc	a
+   0098 F0                  284 	movx	@dptr,a
+   0099 02s00r6F            285 	ljmp	00101$
+   009C                     286 00105$:
+                    009C    287 	C$core_irq_ctrl.c$60$1$1 ==.
+                    009C    288 	XG$CIC_init$0$0 ==.
+   009C 22                  289 	ret
+                            290 ;------------------------------------------------------------
+                            291 ;Allocation info for local variables in function 'CIC_set_irq_handler'
+                            292 ;------------------------------------------------------------
+                            293 ;handler                   Allocated with name '_CIC_set_irq_handler_PARM_2'
+                            294 ;irq_number                Allocated with name '_CIC_set_irq_handler_irq_number_1_1'
+                            295 ;file_name                 Allocated with name '_CIC_set_irq_handler_file_name_3_3'
+                            296 ;------------------------------------------------------------
+                    009D    297 	G$CIC_set_irq_handler$0$0 ==.
+                    009D    298 	C$core_irq_ctrl.c$67$1$1 ==.
+                            299 ;	../drivers/CoreInterrupt/core_irq_ctrl.c:67: CIC_set_irq_handler
+                            300 ;	-----------------------------------------
+                            301 ;	 function CIC_set_irq_handler
+                            302 ;	-----------------------------------------
+   009D                     303 _CIC_set_irq_handler:
+                            304 ;	genReceive
+   009D E5 82               305 	mov	a,dpl
+   009F 90s00r45            306 	mov	dptr,#_CIC_set_irq_handler_irq_number_1_1
+   00A2 F0                  307 	movx	@dptr,a
+                    00A3    308 	C$core_irq_ctrl.c$73$2$2 ==.
+                            309 ;	../drivers/CoreInterrupt/core_irq_ctrl.c:73: HAL_ASSERT( irq_number < CIC_NB_IRQ_SOURCES )
+                            310 ;	genAssign
+   00A3 90s00r45            311 	mov	dptr,#_CIC_set_irq_handler_irq_number_1_1
+   00A6 E0                  312 	movx	a,@dptr
+   00A7 FA                  313 	mov	r2,a
+                            314 ;	genCmpLt
+                            315 ;	genCmp
+   00A8 BA 20 00            316 	cjne	r2,#0x20,00109$
+   00AB                     317 00109$:
+                            318 ;	genIfxJump
+   00AB 50 03               319 	jnc	00110$
+   00AD 02s01rBF            320 	ljmp	00104$
+   00B0                     321 00110$:
+                            322 ;	genPointerSet
+                            323 ;     genFarPointerSet
+   00B0 90s00r46            324 	mov	dptr,#_CIC_set_irq_handler_file_name_3_3
+   00B3 74 2E               325 	mov	a,#0x2E
+   00B5 F0                  326 	movx	@dptr,a
+                            327 ;	genPointerSet
+                            328 ;     genFarPointerSet
+   00B6 90s00r47            329 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x0001)
+   00B9 74 2E               330 	mov	a,#0x2E
+   00BB F0                  331 	movx	@dptr,a
+                            332 ;	genPointerSet
+                            333 ;     genFarPointerSet
+   00BC 90s00r48            334 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x0002)
+   00BF 74 2F               335 	mov	a,#0x2F
+   00C1 F0                  336 	movx	@dptr,a
+                            337 ;	genPointerSet
+                            338 ;     genFarPointerSet
+   00C2 90s00r49            339 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x0003)
+   00C5 74 64               340 	mov	a,#0x64
+   00C7 F0                  341 	movx	@dptr,a
+                            342 ;	genPointerSet
+                            343 ;     genFarPointerSet
+   00C8 90s00r4A            344 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x0004)
+   00CB 74 72               345 	mov	a,#0x72
+   00CD F0                  346 	movx	@dptr,a
+                            347 ;	genPointerSet
+                            348 ;     genFarPointerSet
+   00CE 90s00r4B            349 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x0005)
+   00D1 74 69               350 	mov	a,#0x69
+   00D3 F0                  351 	movx	@dptr,a
+                            352 ;	genPointerSet
+                            353 ;     genFarPointerSet
+   00D4 90s00r4C            354 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x0006)
+   00D7 74 76               355 	mov	a,#0x76
+   00D9 F0                  356 	movx	@dptr,a
+                            357 ;	genPointerSet
+                            358 ;     genFarPointerSet
+   00DA 90s00r4D            359 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x0007)
+   00DD 74 65               360 	mov	a,#0x65
+   00DF F0                  361 	movx	@dptr,a
+                            362 ;	genPointerSet
+                            363 ;     genFarPointerSet
+   00E0 90s00r4E            364 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x0008)
+   00E3 74 72               365 	mov	a,#0x72
+   00E5 F0                  366 	movx	@dptr,a
+                            367 ;	genPointerSet
+                            368 ;     genFarPointerSet
+   00E6 90s00r4F            369 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x0009)
+   00E9 74 73               370 	mov	a,#0x73
+   00EB F0                  371 	movx	@dptr,a
+                            372 ;	genPointerSet
+                            373 ;     genFarPointerSet
+   00EC 90s00r50            374 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x000a)
+   00EF 74 2F               375 	mov	a,#0x2F
+   00F1 F0                  376 	movx	@dptr,a
+                            377 ;	genPointerSet
+                            378 ;     genFarPointerSet
+   00F2 90s00r51            379 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x000b)
+   00F5 74 43               380 	mov	a,#0x43
+   00F7 F0                  381 	movx	@dptr,a
+                            382 ;	genPointerSet
+                            383 ;     genFarPointerSet
+   00F8 90s00r52            384 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x000c)
+   00FB 74 6F               385 	mov	a,#0x6F
+   00FD F0                  386 	movx	@dptr,a
+                            387 ;	genPointerSet
+                            388 ;     genFarPointerSet
+   00FE 90s00r53            389 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x000d)
+   0101 74 72               390 	mov	a,#0x72
+   0103 F0                  391 	movx	@dptr,a
+                            392 ;	genPointerSet
+                            393 ;     genFarPointerSet
+   0104 90s00r54            394 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x000e)
+   0107 74 65               395 	mov	a,#0x65
+   0109 F0                  396 	movx	@dptr,a
+                            397 ;	genPointerSet
+                            398 ;     genFarPointerSet
+   010A 90s00r55            399 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x000f)
+   010D 74 49               400 	mov	a,#0x49
+   010F F0                  401 	movx	@dptr,a
+                            402 ;	genPointerSet
+                            403 ;     genFarPointerSet
+   0110 90s00r56            404 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x0010)
+   0113 74 6E               405 	mov	a,#0x6E
+   0115 F0                  406 	movx	@dptr,a
+                            407 ;	genPointerSet
+                            408 ;     genFarPointerSet
+   0116 90s00r57            409 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x0011)
+   0119 74 74               410 	mov	a,#0x74
+   011B F0                  411 	movx	@dptr,a
+                            412 ;	genPointerSet
+                            413 ;     genFarPointerSet
+   011C 90s00r58            414 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x0012)
+   011F 74 65               415 	mov	a,#0x65
+   0121 F0                  416 	movx	@dptr,a
+                            417 ;	genPointerSet
+                            418 ;     genFarPointerSet
+   0122 90s00r59            419 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x0013)
+   0125 74 72               420 	mov	a,#0x72
+   0127 F0                  421 	movx	@dptr,a
+                            422 ;	genPointerSet
+                            423 ;     genFarPointerSet
+   0128 90s00r5A            424 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x0014)
+   012B 74 72               425 	mov	a,#0x72
+   012D F0                  426 	movx	@dptr,a
+                            427 ;	genPointerSet
+                            428 ;     genFarPointerSet
+   012E 90s00r5B            429 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x0015)
+   0131 74 75               430 	mov	a,#0x75
+   0133 F0                  431 	movx	@dptr,a
+                            432 ;	genPointerSet
+                            433 ;     genFarPointerSet
+   0134 90s00r5C            434 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x0016)
+   0137 74 70               435 	mov	a,#0x70
+   0139 F0                  436 	movx	@dptr,a
+                            437 ;	genPointerSet
+                            438 ;     genFarPointerSet
+   013A 90s00r5D            439 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x0017)
+   013D 74 74               440 	mov	a,#0x74
+   013F F0                  441 	movx	@dptr,a
+                            442 ;	genPointerSet
+                            443 ;     genFarPointerSet
+   0140 90s00r5E            444 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x0018)
+   0143 74 2F               445 	mov	a,#0x2F
+   0145 F0                  446 	movx	@dptr,a
+                            447 ;	genPointerSet
+                            448 ;     genFarPointerSet
+   0146 90s00r5F            449 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x0019)
+   0149 74 63               450 	mov	a,#0x63
+   014B F0                  451 	movx	@dptr,a
+                            452 ;	genPointerSet
+                            453 ;     genFarPointerSet
+   014C 90s00r60            454 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x001a)
+   014F 74 6F               455 	mov	a,#0x6F
+   0151 F0                  456 	movx	@dptr,a
+                            457 ;	genPointerSet
+                            458 ;     genFarPointerSet
+   0152 90s00r61            459 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x001b)
+   0155 74 72               460 	mov	a,#0x72
+   0157 F0                  461 	movx	@dptr,a
+                            462 ;	genPointerSet
+                            463 ;     genFarPointerSet
+   0158 90s00r62            464 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x001c)
+   015B 74 65               465 	mov	a,#0x65
+   015D F0                  466 	movx	@dptr,a
+                            467 ;	genPointerSet
+                            468 ;     genFarPointerSet
+   015E 90s00r63            469 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x001d)
+   0161 74 5F               470 	mov	a,#0x5F
+   0163 F0                  471 	movx	@dptr,a
+                            472 ;	genPointerSet
+                            473 ;     genFarPointerSet
+   0164 90s00r64            474 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x001e)
+   0167 74 69               475 	mov	a,#0x69
+   0169 F0                  476 	movx	@dptr,a
+                            477 ;	genPointerSet
+                            478 ;     genFarPointerSet
+   016A 90s00r65            479 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x001f)
+   016D 74 72               480 	mov	a,#0x72
+   016F F0                  481 	movx	@dptr,a
+                            482 ;	genPointerSet
+                            483 ;     genFarPointerSet
+   0170 90s00r66            484 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x0020)
+   0173 74 71               485 	mov	a,#0x71
+   0175 F0                  486 	movx	@dptr,a
+                            487 ;	genPointerSet
+                            488 ;     genFarPointerSet
+   0176 90s00r67            489 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x0021)
+   0179 74 5F               490 	mov	a,#0x5F
+   017B F0                  491 	movx	@dptr,a
+                            492 ;	genPointerSet
+                            493 ;     genFarPointerSet
+   017C 90s00r68            494 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x0022)
+   017F 74 63               495 	mov	a,#0x63
+   0181 F0                  496 	movx	@dptr,a
+                            497 ;	genPointerSet
+                            498 ;     genFarPointerSet
+   0182 90s00r69            499 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x0023)
+   0185 74 74               500 	mov	a,#0x74
+   0187 F0                  501 	movx	@dptr,a
+                            502 ;	genPointerSet
+                            503 ;     genFarPointerSet
+   0188 90s00r6A            504 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x0024)
+   018B 74 72               505 	mov	a,#0x72
+   018D F0                  506 	movx	@dptr,a
+                            507 ;	genPointerSet
+                            508 ;     genFarPointerSet
+   018E 90s00r6B            509 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x0025)
+   0191 74 6C               510 	mov	a,#0x6C
+   0193 F0                  511 	movx	@dptr,a
+                            512 ;	genPointerSet
+                            513 ;     genFarPointerSet
+   0194 90s00r6C            514 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x0026)
+   0197 74 2E               515 	mov	a,#0x2E
+   0199 F0                  516 	movx	@dptr,a
+                            517 ;	genPointerSet
+                            518 ;     genFarPointerSet
+   019A 90s00r6D            519 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x0027)
+   019D 74 63               520 	mov	a,#0x63
+   019F F0                  521 	movx	@dptr,a
+                            522 ;	genPointerSet
+                            523 ;     genFarPointerSet
+   01A0 90s00r6E            524 	mov	dptr,#(_CIC_set_irq_handler_file_name_3_3 + 0x0028)
+   01A3 74 00               525 	mov	a,#0x00
+   01A5 F0                  526 	movx	@dptr,a
+                            527 ;	genAssign
+   01A6 90s00r00            528 	mov	dptr,#_HAL_assert_fail_PARM_2
+   01A9 74 49               529 	mov	a,#0x49
+   01AB F0                  530 	movx	@dptr,a
+   01AC E4                  531 	clr	a
+   01AD A3                  532 	inc	dptr
+   01AE F0                  533 	movx	@dptr,a
+   01AF A3                  534 	inc	dptr
+   01B0 F0                  535 	movx	@dptr,a
+   01B1 A3                  536 	inc	dptr
+   01B2 F0                  537 	movx	@dptr,a
+                            538 ;	genCall
+   01B3 75 82r46            539 	mov	dpl,#_CIC_set_irq_handler_file_name_3_3
+   01B6 75 83s00            540 	mov	dph,#(_CIC_set_irq_handler_file_name_3_3 >> 8)
+   01B9 75 F0 00            541 	mov	b,#0x00
+   01BC 12s00r00            542 	lcall	_HAL_assert_fail
+   01BF                     543 00104$:
+                    01BF    544 	C$core_irq_ctrl.c$75$1$1 ==.
+                            545 ;	../drivers/CoreInterrupt/core_irq_ctrl.c:75: g_irq_handler_table[irq_number] = handler;
+                            546 ;	genAssign
+   01BF 90s00r45            547 	mov	dptr,#_CIC_set_irq_handler_irq_number_1_1
+   01C2 E0                  548 	movx	a,@dptr
+   01C3 FA                  549 	mov	r2,a
+                            550 ;	genLeftShift
+                            551 ;	genLeftShiftLiteral
+                            552 ;	genlshOne
+   01C4 EA                  553 	mov	a,r2
+   01C5 25 E0               554 	add	a,acc
+   01C7 FA                  555 	mov	r2,a
+                            556 ;	genPlus
+   01C8 E5 02               557 	mov	a,ar2
+   01CA 24r00               558 	add	a,#_g_irq_handler_table
+   01CC FA                  559 	mov	r2,a
+   01CD 74 00               560 	mov	a,#0x00
+   01CF 34s00               561 	addc	a,#(_g_irq_handler_table >> 8)
+   01D1 FB                  562 	mov	r3,a
+                            563 ;	genAssign
+   01D2 90s00r43            564 	mov	dptr,#_CIC_set_irq_handler_PARM_2
+   01D5 E0                  565 	movx	a,@dptr
+   01D6 FC                  566 	mov	r4,a
+   01D7 A3                  567 	inc	dptr
+   01D8 E0                  568 	movx	a,@dptr
+   01D9 FD                  569 	mov	r5,a
+                            570 ;	genPointerSet
+                            571 ;     genFarPointerSet
+   01DA 8A 82               572 	mov	dpl,r2
+   01DC 8B 83               573 	mov	dph,r3
+   01DE EC                  574 	mov	a,r4
+   01DF F0                  575 	movx	@dptr,a
+   01E0 A3                  576 	inc	dptr
+   01E1 ED                  577 	mov	a,r5
+   01E2 F0                  578 	movx	@dptr,a
+   01E3                     579 00106$:
+                    01E3    580 	C$core_irq_ctrl.c$76$1$1 ==.
+                    01E3    581 	XG$CIC_set_irq_handler$0$0 ==.
+   01E3 22                  582 	ret
+                            583 ;------------------------------------------------------------
+                            584 ;Allocation info for local variables in function 'CIC_get_irq_status'
+                            585 ;------------------------------------------------------------
+                            586 ;irq_status                Allocated with name '_CIC_get_irq_status_irq_status_1_1'
+                            587 ;------------------------------------------------------------
+                    01E4    588 	G$CIC_get_irq_status$0$0 ==.
+                    01E4    589 	C$core_irq_ctrl.c$83$1$1 ==.
+                            590 ;	../drivers/CoreInterrupt/core_irq_ctrl.c:83: CIC_get_irq_status
+                            591 ;	-----------------------------------------
+                            592 ;	 function CIC_get_irq_status
+                            593 ;	-----------------------------------------
+   01E4                     594 _CIC_get_irq_status:
+                    01E4    595 	C$core_irq_ctrl.c$90$1$1 ==.
+                            596 ;	../drivers/CoreInterrupt/core_irq_ctrl.c:90: irq_status = HAL_get_32bit_reg( g_cic_base_addr, IRQStatus );
+                            597 ;	genAssign
+   01E4 90s00r00            598 	mov	dptr,#_g_cic_base_addr
+   01E7 E0                  599 	movx	a,@dptr
+   01E8 FA                  600 	mov	r2,a
+   01E9 A3                  601 	inc	dptr
+   01EA E0                  602 	movx	a,@dptr
+   01EB FB                  603 	mov	r3,a
+                            604 ;	genPlus
+                            605 ;	genPlusIncr
+   01EC 74 2C               606 	mov	a,#0x2C
+   01EE 25 02               607 	add	a,ar2
+   01F0 FA                  608 	mov	r2,a
+   01F1 74 00               609 	mov	a,#0x00
+   01F3 35 03               610 	addc	a,ar3
+   01F5 FB                  611 	mov	r3,a
+                            612 ;	genCall
+   01F6 8A 82               613 	mov	dpl,r2
+   01F8 8B 83               614 	mov	dph,r3
+   01FA 12s00r00            615 	lcall	_HW_get_32bit_reg
+   01FD AA 82               616 	mov	r2,dpl
+   01FF AB 83               617 	mov	r3,dph
+   0201 AC F0               618 	mov	r4,b
+   0203 FD                  619 	mov	r5,a
+                    0204    620 	C$core_irq_ctrl.c$92$1$1 ==.
+                            621 ;	../drivers/CoreInterrupt/core_irq_ctrl.c:92: return irq_status;
+                            622 ;	genRet
+   0204 8A 82               623 	mov	dpl,r2
+   0206 8B 83               624 	mov	dph,r3
+   0208 8C F0               625 	mov	b,r4
+   020A ED                  626 	mov	a,r5
+   020B                     627 00101$:
+                    020B    628 	C$core_irq_ctrl.c$93$1$1 ==.
+                    020B    629 	XG$CIC_get_irq_status$0$0 ==.
+   020B 22                  630 	ret
+                            631 ;------------------------------------------------------------
+                            632 ;Allocation info for local variables in function 'CIC_enable_irq'
+                            633 ;------------------------------------------------------------
+                            634 ;irq_number                Allocated with name '_CIC_enable_irq_irq_number_1_1'
+                            635 ;enabled_irqs              Allocated with name '_CIC_enable_irq_enabled_irqs_1_1'
+                            636 ;file_name                 Allocated with name '_CIC_enable_irq_file_name_3_3'
+                            637 ;------------------------------------------------------------
+                    020C    638 	G$CIC_enable_irq$0$0 ==.
+                    020C    639 	C$core_irq_ctrl.c$100$1$1 ==.
+                            640 ;	../drivers/CoreInterrupt/core_irq_ctrl.c:100: CIC_enable_irq
+                            641 ;	-----------------------------------------
+                            642 ;	 function CIC_enable_irq
+                            643 ;	-----------------------------------------
+   020C                     644 _CIC_enable_irq:
+                            645 ;	genReceive
+   020C E5 82               646 	mov	a,dpl
+   020E 90s00r6F            647 	mov	dptr,#_CIC_enable_irq_irq_number_1_1
+   0211 F0                  648 	movx	@dptr,a
+                    0212    649 	C$core_irq_ctrl.c$107$2$2 ==.
+                            650 ;	../drivers/CoreInterrupt/core_irq_ctrl.c:107: HAL_ASSERT( irq_number < CIC_NB_IRQ_SOURCES )
+                            651 ;	genAssign
+   0212 90s00r6F            652 	mov	dptr,#_CIC_enable_irq_irq_number_1_1
+   0215 E0                  653 	movx	a,@dptr
+   0216 FA                  654 	mov	r2,a
+                            655 ;	genCmpLt
+                            656 ;	genCmp
+   0217 BA 20 00            657 	cjne	r2,#0x20,00109$
+   021A                     658 00109$:
+                            659 ;	genIfxJump
+   021A 50 03               660 	jnc	00110$
+   021C 02s03r2E            661 	ljmp	00104$
+   021F                     662 00110$:
+                            663 ;	genPointerSet
+                            664 ;     genFarPointerSet
+   021F 90s00r70            665 	mov	dptr,#_CIC_enable_irq_file_name_3_3
+   0222 74 2E               666 	mov	a,#0x2E
+   0224 F0                  667 	movx	@dptr,a
+                            668 ;	genPointerSet
+                            669 ;     genFarPointerSet
+   0225 90s00r71            670 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x0001)
+   0228 74 2E               671 	mov	a,#0x2E
+   022A F0                  672 	movx	@dptr,a
+                            673 ;	genPointerSet
+                            674 ;     genFarPointerSet
+   022B 90s00r72            675 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x0002)
+   022E 74 2F               676 	mov	a,#0x2F
+   0230 F0                  677 	movx	@dptr,a
+                            678 ;	genPointerSet
+                            679 ;     genFarPointerSet
+   0231 90s00r73            680 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x0003)
+   0234 74 64               681 	mov	a,#0x64
+   0236 F0                  682 	movx	@dptr,a
+                            683 ;	genPointerSet
+                            684 ;     genFarPointerSet
+   0237 90s00r74            685 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x0004)
+   023A 74 72               686 	mov	a,#0x72
+   023C F0                  687 	movx	@dptr,a
+                            688 ;	genPointerSet
+                            689 ;     genFarPointerSet
+   023D 90s00r75            690 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x0005)
+   0240 74 69               691 	mov	a,#0x69
+   0242 F0                  692 	movx	@dptr,a
+                            693 ;	genPointerSet
+                            694 ;     genFarPointerSet
+   0243 90s00r76            695 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x0006)
+   0246 74 76               696 	mov	a,#0x76
+   0248 F0                  697 	movx	@dptr,a
+                            698 ;	genPointerSet
+                            699 ;     genFarPointerSet
+   0249 90s00r77            700 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x0007)
+   024C 74 65               701 	mov	a,#0x65
+   024E F0                  702 	movx	@dptr,a
+                            703 ;	genPointerSet
+                            704 ;     genFarPointerSet
+   024F 90s00r78            705 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x0008)
+   0252 74 72               706 	mov	a,#0x72
+   0254 F0                  707 	movx	@dptr,a
+                            708 ;	genPointerSet
+                            709 ;     genFarPointerSet
+   0255 90s00r79            710 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x0009)
+   0258 74 73               711 	mov	a,#0x73
+   025A F0                  712 	movx	@dptr,a
+                            713 ;	genPointerSet
+                            714 ;     genFarPointerSet
+   025B 90s00r7A            715 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x000a)
+   025E 74 2F               716 	mov	a,#0x2F
+   0260 F0                  717 	movx	@dptr,a
+                            718 ;	genPointerSet
+                            719 ;     genFarPointerSet
+   0261 90s00r7B            720 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x000b)
+   0264 74 43               721 	mov	a,#0x43
+   0266 F0                  722 	movx	@dptr,a
+                            723 ;	genPointerSet
+                            724 ;     genFarPointerSet
+   0267 90s00r7C            725 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x000c)
+   026A 74 6F               726 	mov	a,#0x6F
+   026C F0                  727 	movx	@dptr,a
+                            728 ;	genPointerSet
+                            729 ;     genFarPointerSet
+   026D 90s00r7D            730 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x000d)
+   0270 74 72               731 	mov	a,#0x72
+   0272 F0                  732 	movx	@dptr,a
+                            733 ;	genPointerSet
+                            734 ;     genFarPointerSet
+   0273 90s00r7E            735 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x000e)
+   0276 74 65               736 	mov	a,#0x65
+   0278 F0                  737 	movx	@dptr,a
+                            738 ;	genPointerSet
+                            739 ;     genFarPointerSet
+   0279 90s00r7F            740 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x000f)
+   027C 74 49               741 	mov	a,#0x49
+   027E F0                  742 	movx	@dptr,a
+                            743 ;	genPointerSet
+                            744 ;     genFarPointerSet
+   027F 90s00r80            745 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x0010)
+   0282 74 6E               746 	mov	a,#0x6E
+   0284 F0                  747 	movx	@dptr,a
+                            748 ;	genPointerSet
+                            749 ;     genFarPointerSet
+   0285 90s00r81            750 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x0011)
+   0288 74 74               751 	mov	a,#0x74
+   028A F0                  752 	movx	@dptr,a
+                            753 ;	genPointerSet
+                            754 ;     genFarPointerSet
+   028B 90s00r82            755 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x0012)
+   028E 74 65               756 	mov	a,#0x65
+   0290 F0                  757 	movx	@dptr,a
+                            758 ;	genPointerSet
+                            759 ;     genFarPointerSet
+   0291 90s00r83            760 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x0013)
+   0294 74 72               761 	mov	a,#0x72
+   0296 F0                  762 	movx	@dptr,a
+                            763 ;	genPointerSet
+                            764 ;     genFarPointerSet
+   0297 90s00r84            765 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x0014)
+   029A 74 72               766 	mov	a,#0x72
+   029C F0                  767 	movx	@dptr,a
+                            768 ;	genPointerSet
+                            769 ;     genFarPointerSet
+   029D 90s00r85            770 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x0015)
+   02A0 74 75               771 	mov	a,#0x75
+   02A2 F0                  772 	movx	@dptr,a
+                            773 ;	genPointerSet
+                            774 ;     genFarPointerSet
+   02A3 90s00r86            775 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x0016)
+   02A6 74 70               776 	mov	a,#0x70
+   02A8 F0                  777 	movx	@dptr,a
+                            778 ;	genPointerSet
+                            779 ;     genFarPointerSet
+   02A9 90s00r87            780 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x0017)
+   02AC 74 74               781 	mov	a,#0x74
+   02AE F0                  782 	movx	@dptr,a
+                            783 ;	genPointerSet
+                            784 ;     genFarPointerSet
+   02AF 90s00r88            785 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x0018)
+   02B2 74 2F               786 	mov	a,#0x2F
+   02B4 F0                  787 	movx	@dptr,a
+                            788 ;	genPointerSet
+                            789 ;     genFarPointerSet
+   02B5 90s00r89            790 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x0019)
+   02B8 74 63               791 	mov	a,#0x63
+   02BA F0                  792 	movx	@dptr,a
+                            793 ;	genPointerSet
+                            794 ;     genFarPointerSet
+   02BB 90s00r8A            795 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x001a)
+   02BE 74 6F               796 	mov	a,#0x6F
+   02C0 F0                  797 	movx	@dptr,a
+                            798 ;	genPointerSet
+                            799 ;     genFarPointerSet
+   02C1 90s00r8B            800 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x001b)
+   02C4 74 72               801 	mov	a,#0x72
+   02C6 F0                  802 	movx	@dptr,a
+                            803 ;	genPointerSet
+                            804 ;     genFarPointerSet
+   02C7 90s00r8C            805 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x001c)
+   02CA 74 65               806 	mov	a,#0x65
+   02CC F0                  807 	movx	@dptr,a
+                            808 ;	genPointerSet
+                            809 ;     genFarPointerSet
+   02CD 90s00r8D            810 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x001d)
+   02D0 74 5F               811 	mov	a,#0x5F
+   02D2 F0                  812 	movx	@dptr,a
+                            813 ;	genPointerSet
+                            814 ;     genFarPointerSet
+   02D3 90s00r8E            815 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x001e)
+   02D6 74 69               816 	mov	a,#0x69
+   02D8 F0                  817 	movx	@dptr,a
+                            818 ;	genPointerSet
+                            819 ;     genFarPointerSet
+   02D9 90s00r8F            820 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x001f)
+   02DC 74 72               821 	mov	a,#0x72
+   02DE F0                  822 	movx	@dptr,a
+                            823 ;	genPointerSet
+                            824 ;     genFarPointerSet
+   02DF 90s00r90            825 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x0020)
+   02E2 74 71               826 	mov	a,#0x71
+   02E4 F0                  827 	movx	@dptr,a
+                            828 ;	genPointerSet
+                            829 ;     genFarPointerSet
+   02E5 90s00r91            830 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x0021)
+   02E8 74 5F               831 	mov	a,#0x5F
+   02EA F0                  832 	movx	@dptr,a
+                            833 ;	genPointerSet
+                            834 ;     genFarPointerSet
+   02EB 90s00r92            835 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x0022)
+   02EE 74 63               836 	mov	a,#0x63
+   02F0 F0                  837 	movx	@dptr,a
+                            838 ;	genPointerSet
+                            839 ;     genFarPointerSet
+   02F1 90s00r93            840 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x0023)
+   02F4 74 74               841 	mov	a,#0x74
+   02F6 F0                  842 	movx	@dptr,a
+                            843 ;	genPointerSet
+                            844 ;     genFarPointerSet
+   02F7 90s00r94            845 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x0024)
+   02FA 74 72               846 	mov	a,#0x72
+   02FC F0                  847 	movx	@dptr,a
+                            848 ;	genPointerSet
+                            849 ;     genFarPointerSet
+   02FD 90s00r95            850 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x0025)
+   0300 74 6C               851 	mov	a,#0x6C
+   0302 F0                  852 	movx	@dptr,a
+                            853 ;	genPointerSet
+                            854 ;     genFarPointerSet
+   0303 90s00r96            855 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x0026)
+   0306 74 2E               856 	mov	a,#0x2E
+   0308 F0                  857 	movx	@dptr,a
+                            858 ;	genPointerSet
+                            859 ;     genFarPointerSet
+   0309 90s00r97            860 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x0027)
+   030C 74 63               861 	mov	a,#0x63
+   030E F0                  862 	movx	@dptr,a
+                            863 ;	genPointerSet
+                            864 ;     genFarPointerSet
+   030F 90s00r98            865 	mov	dptr,#(_CIC_enable_irq_file_name_3_3 + 0x0028)
+   0312 74 00               866 	mov	a,#0x00
+   0314 F0                  867 	movx	@dptr,a
+                            868 ;	genAssign
+   0315 90s00r00            869 	mov	dptr,#_HAL_assert_fail_PARM_2
+   0318 74 6B               870 	mov	a,#0x6B
+   031A F0                  871 	movx	@dptr,a
+   031B E4                  872 	clr	a
+   031C A3                  873 	inc	dptr
+   031D F0                  874 	movx	@dptr,a
+   031E A3                  875 	inc	dptr
+   031F F0                  876 	movx	@dptr,a
+   0320 A3                  877 	inc	dptr
+   0321 F0                  878 	movx	@dptr,a
+                            879 ;	genCall
+   0322 75 82r70            880 	mov	dpl,#_CIC_enable_irq_file_name_3_3
+   0325 75 83s00            881 	mov	dph,#(_CIC_enable_irq_file_name_3_3 >> 8)
+   0328 75 F0 00            882 	mov	b,#0x00
+   032B 12s00r00            883 	lcall	_HAL_assert_fail
+   032E                     884 00104$:
+                    032E    885 	C$core_irq_ctrl.c$109$1$1 ==.
+                            886 ;	../drivers/CoreInterrupt/core_irq_ctrl.c:109: enabled_irqs = HAL_get_32bit_reg( g_cic_base_addr, IRQEnable );
+                            887 ;	genAssign
+   032E 90s00r00            888 	mov	dptr,#_g_cic_base_addr
+   0331 E0                  889 	movx	a,@dptr
+   0332 FA                  890 	mov	r2,a
+   0333 A3                  891 	inc	dptr
+   0334 E0                  892 	movx	a,@dptr
+   0335 FB                  893 	mov	r3,a
+                            894 ;	genPlus
+                            895 ;	genPlusIncr
+   0336 74 20               896 	mov	a,#0x20
+   0338 25 02               897 	add	a,ar2
+   033A FA                  898 	mov	r2,a
+   033B 74 00               899 	mov	a,#0x00
+   033D 35 03               900 	addc	a,ar3
+   033F FB                  901 	mov	r3,a
+                            902 ;	genCall
+   0340 8A 82               903 	mov	dpl,r2
+   0342 8B 83               904 	mov	dph,r3
+   0344 12s00r00            905 	lcall	_HW_get_32bit_reg
+   0347 AA 82               906 	mov	r2,dpl
+   0349 AB 83               907 	mov	r3,dph
+   034B AC F0               908 	mov	r4,b
+   034D FD                  909 	mov	r5,a
+                    034E    910 	C$core_irq_ctrl.c$110$1$1 ==.
+                            911 ;	../drivers/CoreInterrupt/core_irq_ctrl.c:110: enabled_irqs |= 1 << irq_number;
+                            912 ;	genAssign
+   034E 90s00r6F            913 	mov	dptr,#_CIC_enable_irq_irq_number_1_1
+   0351 E0                  914 	movx	a,@dptr
+   0352 FE                  915 	mov	r6,a
+                            916 ;	genLeftShift
+   0353 8E F0               917 	mov	b,r6
+   0355 05 F0               918 	inc	b
+   0357 7E 01               919 	mov	r6,#0x01
+   0359 7F 00               920 	mov	r7,#0x00
+   035B 80 07               921 	sjmp	00112$
+   035D                     922 00111$:
+   035D EE                  923 	mov	a,r6
+   035E 25 E0               924 	add	a,acc
+   0360 FE                  925 	mov	r6,a
+   0361 EF                  926 	mov	a,r7
+   0362 33                  927 	rlc	a
+   0363 FF                  928 	mov	r7,a
+   0364                     929 00112$:
+   0364 D5 F0 F6            930 	djnz	b,00111$
+                            931 ;	genCast
+   0367 EF                  932 	mov	a,r7
+   0368 33                  933 	rlc	a
+   0369 95 E0               934 	subb	a,acc
+   036B F8                  935 	mov	r0,a
+   036C F9                  936 	mov	r1,a
+                            937 ;	genOr
+   036D EE                  938 	mov	a,r6
+   036E 42 02               939 	orl	ar2,a
+   0370 EF                  940 	mov	a,r7
+   0371 42 03               941 	orl	ar3,a
+   0373 E8                  942 	mov	a,r0
+   0374 42 04               943 	orl	ar4,a
+   0376 E9                  944 	mov	a,r1
+   0377 42 05               945 	orl	ar5,a
+                    0379    946 	C$core_irq_ctrl.c$111$1$1 ==.
+                            947 ;	../drivers/CoreInterrupt/core_irq_ctrl.c:111: HAL_set_32bit_reg( g_cic_base_addr, IRQEnable, enabled_irqs );
+                            948 ;	genAssign
+   0379 90s00r00            949 	mov	dptr,#_g_cic_base_addr
+   037C E0                  950 	movx	a,@dptr
+   037D FE                  951 	mov	r6,a
+   037E A3                  952 	inc	dptr
+   037F E0                  953 	movx	a,@dptr
+   0380 FF                  954 	mov	r7,a
+                            955 ;	genPlus
+                            956 ;	genPlusIncr
+   0381 74 20               957 	mov	a,#0x20
+   0383 25 06               958 	add	a,ar6
+   0385 FE                  959 	mov	r6,a
+   0386 74 00               960 	mov	a,#0x00
+   0388 35 07               961 	addc	a,ar7
+   038A FF                  962 	mov	r7,a
+                            963 ;	genAssign
+   038B 90s00r00            964 	mov	dptr,#_HW_set_32bit_reg_PARM_2
+   038E EA                  965 	mov	a,r2
+   038F F0                  966 	movx	@dptr,a
+   0390 A3                  967 	inc	dptr
+   0391 EB                  968 	mov	a,r3
+   0392 F0                  969 	movx	@dptr,a
+   0393 A3                  970 	inc	dptr
+   0394 EC                  971 	mov	a,r4
+   0395 F0                  972 	movx	@dptr,a
+   0396 A3                  973 	inc	dptr
+   0397 ED                  974 	mov	a,r5
+   0398 F0                  975 	movx	@dptr,a
+                            976 ;	genCall
+   0399 8E 82               977 	mov	dpl,r6
+   039B 8F 83               978 	mov	dph,r7
+   039D 12s00r00            979 	lcall	_HW_set_32bit_reg
+   03A0                     980 00106$:
+                    03A0    981 	C$core_irq_ctrl.c$112$1$1 ==.
+                    03A0    982 	XG$CIC_enable_irq$0$0 ==.
+   03A0 22                  983 	ret
+                            984 ;------------------------------------------------------------
+                            985 ;Allocation info for local variables in function 'CIC_disable_irq'
+                            986 ;------------------------------------------------------------
+                            987 ;irq_number                Allocated with name '_CIC_disable_irq_irq_number_1_1'
+                            988 ;clear_bit                 Allocated with name '_CIC_disable_irq_clear_bit_1_1'
+                            989 ;file_name                 Allocated with name '_CIC_disable_irq_file_name_3_3'
+                            990 ;------------------------------------------------------------
+                    03A1    991 	G$CIC_disable_irq$0$0 ==.
+                    03A1    992 	C$core_irq_ctrl.c$119$1$1 ==.
+                            993 ;	../drivers/CoreInterrupt/core_irq_ctrl.c:119: CIC_disable_irq
+                            994 ;	-----------------------------------------
+                            995 ;	 function CIC_disable_irq
+                            996 ;	-----------------------------------------
+   03A1                     997 _CIC_disable_irq:
+                            998 ;	genReceive
+   03A1 E5 82               999 	mov	a,dpl
+   03A3 90s00r99           1000 	mov	dptr,#_CIC_disable_irq_irq_number_1_1
+   03A6 F0                 1001 	movx	@dptr,a
+                    03A7   1002 	C$core_irq_ctrl.c$126$2$2 ==.
+                           1003 ;	../drivers/CoreInterrupt/core_irq_ctrl.c:126: HAL_ASSERT( irq_number < CIC_NB_IRQ_SOURCES )
+                           1004 ;	genAssign
+   03A7 90s00r99           1005 	mov	dptr,#_CIC_disable_irq_irq_number_1_1
+   03AA E0                 1006 	movx	a,@dptr
+   03AB FA                 1007 	mov	r2,a
+                           1008 ;	genCmpLt
+                           1009 ;	genCmp
+   03AC BA 20 00           1010 	cjne	r2,#0x20,00109$
+   03AF                    1011 00109$:
+                           1012 ;	genIfxJump
+   03AF 50 03              1013 	jnc	00110$
+   03B1 02s04rC3           1014 	ljmp	00104$
+   03B4                    1015 00110$:
+                           1016 ;	genPointerSet
+                           1017 ;     genFarPointerSet
+   03B4 90s00r9A           1018 	mov	dptr,#_CIC_disable_irq_file_name_3_3
+   03B7 74 2E              1019 	mov	a,#0x2E
+   03B9 F0                 1020 	movx	@dptr,a
+                           1021 ;	genPointerSet
+                           1022 ;     genFarPointerSet
+   03BA 90s00r9B           1023 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x0001)
+   03BD 74 2E              1024 	mov	a,#0x2E
+   03BF F0                 1025 	movx	@dptr,a
+                           1026 ;	genPointerSet
+                           1027 ;     genFarPointerSet
+   03C0 90s00r9C           1028 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x0002)
+   03C3 74 2F              1029 	mov	a,#0x2F
+   03C5 F0                 1030 	movx	@dptr,a
+                           1031 ;	genPointerSet
+                           1032 ;     genFarPointerSet
+   03C6 90s00r9D           1033 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x0003)
+   03C9 74 64              1034 	mov	a,#0x64
+   03CB F0                 1035 	movx	@dptr,a
+                           1036 ;	genPointerSet
+                           1037 ;     genFarPointerSet
+   03CC 90s00r9E           1038 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x0004)
+   03CF 74 72              1039 	mov	a,#0x72
+   03D1 F0                 1040 	movx	@dptr,a
+                           1041 ;	genPointerSet
+                           1042 ;     genFarPointerSet
+   03D2 90s00r9F           1043 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x0005)
+   03D5 74 69              1044 	mov	a,#0x69
+   03D7 F0                 1045 	movx	@dptr,a
+                           1046 ;	genPointerSet
+                           1047 ;     genFarPointerSet
+   03D8 90s00rA0           1048 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x0006)
+   03DB 74 76              1049 	mov	a,#0x76
+   03DD F0                 1050 	movx	@dptr,a
+                           1051 ;	genPointerSet
+                           1052 ;     genFarPointerSet
+   03DE 90s00rA1           1053 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x0007)
+   03E1 74 65              1054 	mov	a,#0x65
+   03E3 F0                 1055 	movx	@dptr,a
+                           1056 ;	genPointerSet
+                           1057 ;     genFarPointerSet
+   03E4 90s00rA2           1058 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x0008)
+   03E7 74 72              1059 	mov	a,#0x72
+   03E9 F0                 1060 	movx	@dptr,a
+                           1061 ;	genPointerSet
+                           1062 ;     genFarPointerSet
+   03EA 90s00rA3           1063 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x0009)
+   03ED 74 73              1064 	mov	a,#0x73
+   03EF F0                 1065 	movx	@dptr,a
+                           1066 ;	genPointerSet
+                           1067 ;     genFarPointerSet
+   03F0 90s00rA4           1068 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x000a)
+   03F3 74 2F              1069 	mov	a,#0x2F
+   03F5 F0                 1070 	movx	@dptr,a
+                           1071 ;	genPointerSet
+                           1072 ;     genFarPointerSet
+   03F6 90s00rA5           1073 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x000b)
+   03F9 74 43              1074 	mov	a,#0x43
+   03FB F0                 1075 	movx	@dptr,a
+                           1076 ;	genPointerSet
+                           1077 ;     genFarPointerSet
+   03FC 90s00rA6           1078 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x000c)
+   03FF 74 6F              1079 	mov	a,#0x6F
+   0401 F0                 1080 	movx	@dptr,a
+                           1081 ;	genPointerSet
+                           1082 ;     genFarPointerSet
+   0402 90s00rA7           1083 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x000d)
+   0405 74 72              1084 	mov	a,#0x72
+   0407 F0                 1085 	movx	@dptr,a
+                           1086 ;	genPointerSet
+                           1087 ;     genFarPointerSet
+   0408 90s00rA8           1088 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x000e)
+   040B 74 65              1089 	mov	a,#0x65
+   040D F0                 1090 	movx	@dptr,a
+                           1091 ;	genPointerSet
+                           1092 ;     genFarPointerSet
+   040E 90s00rA9           1093 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x000f)
+   0411 74 49              1094 	mov	a,#0x49
+   0413 F0                 1095 	movx	@dptr,a
+                           1096 ;	genPointerSet
+                           1097 ;     genFarPointerSet
+   0414 90s00rAA           1098 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x0010)
+   0417 74 6E              1099 	mov	a,#0x6E
+   0419 F0                 1100 	movx	@dptr,a
+                           1101 ;	genPointerSet
+                           1102 ;     genFarPointerSet
+   041A 90s00rAB           1103 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x0011)
+   041D 74 74              1104 	mov	a,#0x74
+   041F F0                 1105 	movx	@dptr,a
+                           1106 ;	genPointerSet
+                           1107 ;     genFarPointerSet
+   0420 90s00rAC           1108 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x0012)
+   0423 74 65              1109 	mov	a,#0x65
+   0425 F0                 1110 	movx	@dptr,a
+                           1111 ;	genPointerSet
+                           1112 ;     genFarPointerSet
+   0426 90s00rAD           1113 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x0013)
+   0429 74 72              1114 	mov	a,#0x72
+   042B F0                 1115 	movx	@dptr,a
+                           1116 ;	genPointerSet
+                           1117 ;     genFarPointerSet
+   042C 90s00rAE           1118 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x0014)
+   042F 74 72              1119 	mov	a,#0x72
+   0431 F0                 1120 	movx	@dptr,a
+                           1121 ;	genPointerSet
+                           1122 ;     genFarPointerSet
+   0432 90s00rAF           1123 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x0015)
+   0435 74 75              1124 	mov	a,#0x75
+   0437 F0                 1125 	movx	@dptr,a
+                           1126 ;	genPointerSet
+                           1127 ;     genFarPointerSet
+   0438 90s00rB0           1128 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x0016)
+   043B 74 70              1129 	mov	a,#0x70
+   043D F0                 1130 	movx	@dptr,a
+                           1131 ;	genPointerSet
+                           1132 ;     genFarPointerSet
+   043E 90s00rB1           1133 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x0017)
+   0441 74 74              1134 	mov	a,#0x74
+   0443 F0                 1135 	movx	@dptr,a
+                           1136 ;	genPointerSet
+                           1137 ;     genFarPointerSet
+   0444 90s00rB2           1138 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x0018)
+   0447 74 2F              1139 	mov	a,#0x2F
+   0449 F0                 1140 	movx	@dptr,a
+                           1141 ;	genPointerSet
+                           1142 ;     genFarPointerSet
+   044A 90s00rB3           1143 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x0019)
+   044D 74 63              1144 	mov	a,#0x63
+   044F F0                 1145 	movx	@dptr,a
+                           1146 ;	genPointerSet
+                           1147 ;     genFarPointerSet
+   0450 90s00rB4           1148 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x001a)
+   0453 74 6F              1149 	mov	a,#0x6F
+   0455 F0                 1150 	movx	@dptr,a
+                           1151 ;	genPointerSet
+                           1152 ;     genFarPointerSet
+   0456 90s00rB5           1153 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x001b)
+   0459 74 72              1154 	mov	a,#0x72
+   045B F0                 1155 	movx	@dptr,a
+                           1156 ;	genPointerSet
+                           1157 ;     genFarPointerSet
+   045C 90s00rB6           1158 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x001c)
+   045F 74 65              1159 	mov	a,#0x65
+   0461 F0                 1160 	movx	@dptr,a
+                           1161 ;	genPointerSet
+                           1162 ;     genFarPointerSet
+   0462 90s00rB7           1163 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x001d)
+   0465 74 5F              1164 	mov	a,#0x5F
+   0467 F0                 1165 	movx	@dptr,a
+                           1166 ;	genPointerSet
+                           1167 ;     genFarPointerSet
+   0468 90s00rB8           1168 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x001e)
+   046B 74 69              1169 	mov	a,#0x69
+   046D F0                 1170 	movx	@dptr,a
+                           1171 ;	genPointerSet
+                           1172 ;     genFarPointerSet
+   046E 90s00rB9           1173 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x001f)
+   0471 74 72              1174 	mov	a,#0x72
+   0473 F0                 1175 	movx	@dptr,a
+                           1176 ;	genPointerSet
+                           1177 ;     genFarPointerSet
+   0474 90s00rBA           1178 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x0020)
+   0477 74 71              1179 	mov	a,#0x71
+   0479 F0                 1180 	movx	@dptr,a
+                           1181 ;	genPointerSet
+                           1182 ;     genFarPointerSet
+   047A 90s00rBB           1183 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x0021)
+   047D 74 5F              1184 	mov	a,#0x5F
+   047F F0                 1185 	movx	@dptr,a
+                           1186 ;	genPointerSet
+                           1187 ;     genFarPointerSet
+   0480 90s00rBC           1188 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x0022)
+   0483 74 63              1189 	mov	a,#0x63
+   0485 F0                 1190 	movx	@dptr,a
+                           1191 ;	genPointerSet
+                           1192 ;     genFarPointerSet
+   0486 90s00rBD           1193 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x0023)
+   0489 74 74              1194 	mov	a,#0x74
+   048B F0                 1195 	movx	@dptr,a
+                           1196 ;	genPointerSet
+                           1197 ;     genFarPointerSet
+   048C 90s00rBE           1198 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x0024)
+   048F 74 72              1199 	mov	a,#0x72
+   0491 F0                 1200 	movx	@dptr,a
+                           1201 ;	genPointerSet
+                           1202 ;     genFarPointerSet
+   0492 90s00rBF           1203 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x0025)
+   0495 74 6C              1204 	mov	a,#0x6C
+   0497 F0                 1205 	movx	@dptr,a
+                           1206 ;	genPointerSet
+                           1207 ;     genFarPointerSet
+   0498 90s00rC0           1208 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x0026)
+   049B 74 2E              1209 	mov	a,#0x2E
+   049D F0                 1210 	movx	@dptr,a
+                           1211 ;	genPointerSet
+                           1212 ;     genFarPointerSet
+   049E 90s00rC1           1213 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x0027)
+   04A1 74 63              1214 	mov	a,#0x63
+   04A3 F0                 1215 	movx	@dptr,a
+                           1216 ;	genPointerSet
+                           1217 ;     genFarPointerSet
+   04A4 90s00rC2           1218 	mov	dptr,#(_CIC_disable_irq_file_name_3_3 + 0x0028)
+   04A7 74 00              1219 	mov	a,#0x00
+   04A9 F0                 1220 	movx	@dptr,a
+                           1221 ;	genAssign
+   04AA 90s00r00           1222 	mov	dptr,#_HAL_assert_fail_PARM_2
+   04AD 74 7E              1223 	mov	a,#0x7E
+   04AF F0                 1224 	movx	@dptr,a
+   04B0 E4                 1225 	clr	a
+   04B1 A3                 1226 	inc	dptr
+   04B2 F0                 1227 	movx	@dptr,a
+   04B3 A3                 1228 	inc	dptr
+   04B4 F0                 1229 	movx	@dptr,a
+   04B5 A3                 1230 	inc	dptr
+   04B6 F0                 1231 	movx	@dptr,a
+                           1232 ;	genCall
+   04B7 75 82r9A           1233 	mov	dpl,#_CIC_disable_irq_file_name_3_3
+   04BA 75 83s00           1234 	mov	dph,#(_CIC_disable_irq_file_name_3_3 >> 8)
+   04BD 75 F0 00           1235 	mov	b,#0x00
+   04C0 12s00r00           1236 	lcall	_HAL_assert_fail
+   04C3                    1237 00104$:
+                    04C3   1238 	C$core_irq_ctrl.c$128$1$1 ==.
+                           1239 ;	../drivers/CoreInterrupt/core_irq_ctrl.c:128: clear_bit = 1 << irq_number;
+                           1240 ;	genAssign
+   04C3 90s00r99           1241 	mov	dptr,#_CIC_disable_irq_irq_number_1_1
+   04C6 E0                 1242 	movx	a,@dptr
+   04C7 FA                 1243 	mov	r2,a
+                           1244 ;	genLeftShift
+   04C8 8A F0              1245 	mov	b,r2
+   04CA 05 F0              1246 	inc	b
+   04CC 7A 01              1247 	mov	r2,#0x01
+   04CE 7B 00              1248 	mov	r3,#0x00
+   04D0 80 07              1249 	sjmp	00112$
+   04D2                    1250 00111$:
+   04D2 EA                 1251 	mov	a,r2
+   04D3 25 E0              1252 	add	a,acc
+   04D5 FA                 1253 	mov	r2,a
+   04D6 EB                 1254 	mov	a,r3
+   04D7 33                 1255 	rlc	a
+   04D8 FB                 1256 	mov	r3,a
+   04D9                    1257 00112$:
+   04D9 D5 F0 F6           1258 	djnz	b,00111$
+                           1259 ;	genCast
+   04DC EB                 1260 	mov	a,r3
+   04DD 33                 1261 	rlc	a
+   04DE 95 E0              1262 	subb	a,acc
+   04E0 FC                 1263 	mov	r4,a
+   04E1 FD                 1264 	mov	r5,a
+                    04E2   1265 	C$core_irq_ctrl.c$129$1$1 ==.
+                           1266 ;	../drivers/CoreInterrupt/core_irq_ctrl.c:129: HAL_set_32bit_reg( g_cic_base_addr, IRQEnableClear, clear_bit );
+                           1267 ;	genAssign
+   04E2 90s00r00           1268 	mov	dptr,#_g_cic_base_addr
+   04E5 E0                 1269 	movx	a,@dptr
+   04E6 FE                 1270 	mov	r6,a
+   04E7 A3                 1271 	inc	dptr
+   04E8 E0                 1272 	movx	a,@dptr
+   04E9 FF                 1273 	mov	r7,a
+                           1274 ;	genPlus
+                           1275 ;	genPlusIncr
+   04EA 74 24              1276 	mov	a,#0x24
+   04EC 25 06              1277 	add	a,ar6
+   04EE FE                 1278 	mov	r6,a
+   04EF 74 00              1279 	mov	a,#0x00
+   04F1 35 07              1280 	addc	a,ar7
+   04F3 FF                 1281 	mov	r7,a
+                           1282 ;	genAssign
+   04F4 90s00r00           1283 	mov	dptr,#_HW_set_32bit_reg_PARM_2
+   04F7 EA                 1284 	mov	a,r2
+   04F8 F0                 1285 	movx	@dptr,a
+   04F9 A3                 1286 	inc	dptr
+   04FA EB                 1287 	mov	a,r3
+   04FB F0                 1288 	movx	@dptr,a
+   04FC A3                 1289 	inc	dptr
+   04FD EC                 1290 	mov	a,r4
+   04FE F0                 1291 	movx	@dptr,a
+   04FF A3                 1292 	inc	dptr
+   0500 ED                 1293 	mov	a,r5
+   0501 F0                 1294 	movx	@dptr,a
+                           1295 ;	genCall
+   0502 8E 82              1296 	mov	dpl,r6
+   0504 8F 83              1297 	mov	dph,r7
+   0506 12s00r00           1298 	lcall	_HW_set_32bit_reg
+   0509                    1299 00106$:
+                    0509   1300 	C$core_irq_ctrl.c$130$1$1 ==.
+                    0509   1301 	XG$CIC_disable_irq$0$0 ==.
+   0509 22                 1302 	ret
+                           1303 ;------------------------------------------------------------
+                           1304 ;Allocation info for local variables in function 'CIC_irq_handler'
+                           1305 ;------------------------------------------------------------
+                           1306 ;irq_idx                   Allocated with name '_CIC_irq_handler_irq_idx_1_1'
+                           1307 ;irq_status                Allocated with name '_CIC_irq_handler_irq_status_1_1'
+                           1308 ;irq_fired                 Allocated with name '_CIC_irq_handler_irq_fired_2_2'
+                           1309 ;file_name                 Allocated with name '_CIC_irq_handler_file_name_6_6'
+                           1310 ;------------------------------------------------------------
+                    050A   1311 	G$CIC_irq_handler$0$0 ==.
+                    050A   1312 	C$core_irq_ctrl.c$137$1$1 ==.
+                           1313 ;	../drivers/CoreInterrupt/core_irq_ctrl.c:137: CIC_irq_handler
+                           1314 ;	-----------------------------------------
+                           1315 ;	 function CIC_irq_handler
+                           1316 ;	-----------------------------------------
+   050A                    1317 _CIC_irq_handler:
+                    050A   1318 	C$core_irq_ctrl.c$145$1$1 ==.
+                           1319 ;	../drivers/CoreInterrupt/core_irq_ctrl.c:145: irq_status = HAL_get_32bit_reg( g_cic_base_addr, IRQStatus );
+                           1320 ;	genAssign
+   050A 90s00r00           1321 	mov	dptr,#_g_cic_base_addr
+   050D E0                 1322 	movx	a,@dptr
+   050E FA                 1323 	mov	r2,a
+   050F A3                 1324 	inc	dptr
+   0510 E0                 1325 	movx	a,@dptr
+   0511 FB                 1326 	mov	r3,a
+                           1327 ;	genPlus
+                           1328 ;	genPlusIncr
+   0512 74 2C              1329 	mov	a,#0x2C
+   0514 25 02              1330 	add	a,ar2
+   0516 FA                 1331 	mov	r2,a
+   0517 74 00              1332 	mov	a,#0x00
+   0519 35 03              1333 	addc	a,ar3
+   051B FB                 1334 	mov	r3,a
+                           1335 ;	genCall
+   051C 8A 82              1336 	mov	dpl,r2
+   051E 8B 83              1337 	mov	dph,r3
+   0520 12s00r00           1338 	lcall	_HW_get_32bit_reg
+   0523 AA 82              1339 	mov	r2,dpl
+   0525 AB 83              1340 	mov	r3,dph
+   0527 AC F0              1341 	mov	r4,b
+   0529 FD                 1342 	mov	r5,a
+                    052A   1343 	C$core_irq_ctrl.c$147$1$1 ==.
+                           1344 ;	../drivers/CoreInterrupt/core_irq_ctrl.c:147: for ( irq_idx = 0; irq_idx < CIC_NB_IRQ_SOURCES; irq_idx++ )
+                           1345 ;	genAssign
+   052A 90s00rC3           1346 	mov	dptr,#_CIC_irq_handler_irq_idx_1_1
+   052D 74 00              1347 	mov	a,#0x00
+   052F F0                 1348 	movx	@dptr,a
+   0530                    1349 00111$:
+                           1350 ;	genAssign
+   0530 90s00rC3           1351 	mov	dptr,#_CIC_irq_handler_irq_idx_1_1
+   0533 E0                 1352 	movx	a,@dptr
+   0534 FE                 1353 	mov	r6,a
+                           1354 ;	genCmpLt
+                           1355 ;	genCmp
+   0535 BE 20 00           1356 	cjne	r6,#0x20,00121$
+   0538                    1357 00121$:
+                           1358 ;	genIfxJump
+   0538 40 03              1359 	jc	00122$
+   053A 02s06rFA           1360 	ljmp	00115$
+   053D                    1361 00122$:
+                    053D   1362 	C$core_irq_ctrl.c$149$2$2 ==.
+                           1363 ;	../drivers/CoreInterrupt/core_irq_ctrl.c:149: uint32_t irq_fired = irq_status & (1 << irq_idx);
+                           1364 ;	genLeftShift
+   053D 8E F0              1365 	mov	b,r6
+   053F 05 F0              1366 	inc	b
+   0541 7F 01              1367 	mov	r7,#0x01
+   0543 78 00              1368 	mov	r0,#0x00
+   0545 80 07              1369 	sjmp	00124$
+   0547                    1370 00123$:
+   0547 EF                 1371 	mov	a,r7
+   0548 25 E0              1372 	add	a,acc
+   054A FF                 1373 	mov	r7,a
+   054B E8                 1374 	mov	a,r0
+   054C 33                 1375 	rlc	a
+   054D F8                 1376 	mov	r0,a
+   054E                    1377 00124$:
+   054E D5 F0 F6           1378 	djnz	b,00123$
+                           1379 ;	genIpush
+   0551 C0 06              1380 	push	ar6
+                           1381 ;	genCast
+   0553 E8                 1382 	mov	a,r0
+   0554 33                 1383 	rlc	a
+   0555 95 E0              1384 	subb	a,acc
+   0557 F9                 1385 	mov	r1,a
+   0558 FE                 1386 	mov	r6,a
+                           1387 ;	genAnd
+   0559 EA                 1388 	mov	a,r2
+   055A 52 07              1389 	anl	ar7,a
+   055C EB                 1390 	mov	a,r3
+   055D 52 00              1391 	anl	ar0,a
+   055F EC                 1392 	mov	a,r4
+   0560 52 01              1393 	anl	ar1,a
+   0562 ED                 1394 	mov	a,r5
+   0563 52 06              1395 	anl	ar6,a
+                    0565   1396 	C$core_irq_ctrl.c$150$1$1 ==.
+                           1397 ;	../drivers/CoreInterrupt/core_irq_ctrl.c:150: if ( irq_fired )
+                           1398 ;	genIfx
+   0565 EF                 1399 	mov	a,r7
+   0566 48                 1400 	orl	a,r0
+   0567 49                 1401 	orl	a,r1
+   0568 4E                 1402 	orl	a,r6
+                           1403 ;	genIpop
+   0569 D0 06              1404 	pop	ar6
+                           1405 ;	genIfxJump
+   056B 70 03              1406 	jnz	00125$
+   056D 02s06rEC           1407 	ljmp	00113$
+   0570                    1408 00125$:
+                    0570   1409 	C$core_irq_ctrl.c$152$3$3 ==.
+                           1410 ;	../drivers/CoreInterrupt/core_irq_ctrl.c:152: if ( g_irq_handler_table[irq_idx] == NO_HANDLER )
+                           1411 ;	genLeftShift
+                           1412 ;	genLeftShiftLiteral
+                           1413 ;	genlshOne
+   0570 EE                 1414 	mov	a,r6
+   0571 25 E0              1415 	add	a,acc
+   0573 FF                 1416 	mov	r7,a
+                           1417 ;	genPlus
+   0574 E5 07              1418 	mov	a,ar7
+   0576 24r00              1419 	add	a,#_g_irq_handler_table
+   0578 F5 82              1420 	mov	dpl,a
+   057A 74 00              1421 	mov	a,#0x00
+   057C 34s00              1422 	addc	a,#(_g_irq_handler_table >> 8)
+   057E F5 83              1423 	mov	dph,a
+                           1424 ;	genPointerGet
+                           1425 ;	genFarPointerGet
+   0580 E0                 1426 	movx	a,@dptr
+   0581 FF                 1427 	mov	r7,a
+   0582 A3                 1428 	inc	dptr
+   0583 E0                 1429 	movx	a,@dptr
+   0584 F8                 1430 	mov	r0,a
+                           1431 ;	genIfx
+   0585 EF                 1432 	mov	a,r7
+   0586 48                 1433 	orl	a,r0
+                           1434 ;	genIfxJump
+   0587 60 03              1435 	jz	00126$
+   0589 02s06rC7           1436 	ljmp	00107$
+   058C                    1437 00126$:
+                    058C   1438 	C$core_irq_ctrl.c$154$6$5 ==.
+                           1439 ;	../drivers/CoreInterrupt/core_irq_ctrl.c:154: HAL_ASSERT(0)
+                           1440 ;	genPointerSet
+                           1441 ;     genFarPointerSet
+   058C 90s00rC4           1442 	mov	dptr,#_CIC_irq_handler_file_name_6_6
+   058F 74 2E              1443 	mov	a,#0x2E
+   0591 F0                 1444 	movx	@dptr,a
+                           1445 ;	genPointerSet
+                           1446 ;     genFarPointerSet
+   0592 90s00rC5           1447 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x0001)
+   0595 74 2E              1448 	mov	a,#0x2E
+   0597 F0                 1449 	movx	@dptr,a
+                           1450 ;	genPointerSet
+                           1451 ;     genFarPointerSet
+   0598 90s00rC6           1452 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x0002)
+   059B 74 2F              1453 	mov	a,#0x2F
+   059D F0                 1454 	movx	@dptr,a
+                           1455 ;	genPointerSet
+                           1456 ;     genFarPointerSet
+   059E 90s00rC7           1457 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x0003)
+   05A1 74 64              1458 	mov	a,#0x64
+   05A3 F0                 1459 	movx	@dptr,a
+                           1460 ;	genPointerSet
+                           1461 ;     genFarPointerSet
+   05A4 90s00rC8           1462 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x0004)
+   05A7 74 72              1463 	mov	a,#0x72
+   05A9 F0                 1464 	movx	@dptr,a
+                           1465 ;	genPointerSet
+                           1466 ;     genFarPointerSet
+   05AA 90s00rC9           1467 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x0005)
+   05AD 74 69              1468 	mov	a,#0x69
+   05AF F0                 1469 	movx	@dptr,a
+                           1470 ;	genPointerSet
+                           1471 ;     genFarPointerSet
+   05B0 90s00rCA           1472 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x0006)
+   05B3 74 76              1473 	mov	a,#0x76
+   05B5 F0                 1474 	movx	@dptr,a
+                           1475 ;	genPointerSet
+                           1476 ;     genFarPointerSet
+   05B6 90s00rCB           1477 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x0007)
+   05B9 74 65              1478 	mov	a,#0x65
+   05BB F0                 1479 	movx	@dptr,a
+                           1480 ;	genPointerSet
+                           1481 ;     genFarPointerSet
+   05BC 90s00rCC           1482 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x0008)
+   05BF 74 72              1483 	mov	a,#0x72
+   05C1 F0                 1484 	movx	@dptr,a
+                           1485 ;	genPointerSet
+                           1486 ;     genFarPointerSet
+   05C2 90s00rCD           1487 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x0009)
+   05C5 74 73              1488 	mov	a,#0x73
+   05C7 F0                 1489 	movx	@dptr,a
+                           1490 ;	genPointerSet
+                           1491 ;     genFarPointerSet
+   05C8 90s00rCE           1492 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x000a)
+   05CB 74 2F              1493 	mov	a,#0x2F
+   05CD F0                 1494 	movx	@dptr,a
+                           1495 ;	genPointerSet
+                           1496 ;     genFarPointerSet
+   05CE 90s00rCF           1497 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x000b)
+   05D1 74 43              1498 	mov	a,#0x43
+   05D3 F0                 1499 	movx	@dptr,a
+                           1500 ;	genPointerSet
+                           1501 ;     genFarPointerSet
+   05D4 90s00rD0           1502 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x000c)
+   05D7 74 6F              1503 	mov	a,#0x6F
+   05D9 F0                 1504 	movx	@dptr,a
+                           1505 ;	genPointerSet
+                           1506 ;     genFarPointerSet
+   05DA 90s00rD1           1507 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x000d)
+   05DD 74 72              1508 	mov	a,#0x72
+   05DF F0                 1509 	movx	@dptr,a
+                           1510 ;	genPointerSet
+                           1511 ;     genFarPointerSet
+   05E0 90s00rD2           1512 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x000e)
+   05E3 74 65              1513 	mov	a,#0x65
+   05E5 F0                 1514 	movx	@dptr,a
+                           1515 ;	genPointerSet
+                           1516 ;     genFarPointerSet
+   05E6 90s00rD3           1517 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x000f)
+   05E9 74 49              1518 	mov	a,#0x49
+   05EB F0                 1519 	movx	@dptr,a
+                           1520 ;	genPointerSet
+                           1521 ;     genFarPointerSet
+   05EC 90s00rD4           1522 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x0010)
+   05EF 74 6E              1523 	mov	a,#0x6E
+   05F1 F0                 1524 	movx	@dptr,a
+                           1525 ;	genPointerSet
+                           1526 ;     genFarPointerSet
+   05F2 90s00rD5           1527 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x0011)
+   05F5 74 74              1528 	mov	a,#0x74
+   05F7 F0                 1529 	movx	@dptr,a
+                           1530 ;	genPointerSet
+                           1531 ;     genFarPointerSet
+   05F8 90s00rD6           1532 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x0012)
+   05FB 74 65              1533 	mov	a,#0x65
+   05FD F0                 1534 	movx	@dptr,a
+                           1535 ;	genPointerSet
+                           1536 ;     genFarPointerSet
+   05FE 90s00rD7           1537 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x0013)
+   0601 74 72              1538 	mov	a,#0x72
+   0603 F0                 1539 	movx	@dptr,a
+                           1540 ;	genPointerSet
+                           1541 ;     genFarPointerSet
+   0604 90s00rD8           1542 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x0014)
+   0607 74 72              1543 	mov	a,#0x72
+   0609 F0                 1544 	movx	@dptr,a
+                           1545 ;	genPointerSet
+                           1546 ;     genFarPointerSet
+   060A 90s00rD9           1547 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x0015)
+   060D 74 75              1548 	mov	a,#0x75
+   060F F0                 1549 	movx	@dptr,a
+                           1550 ;	genPointerSet
+                           1551 ;     genFarPointerSet
+   0610 90s00rDA           1552 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x0016)
+   0613 74 70              1553 	mov	a,#0x70
+   0615 F0                 1554 	movx	@dptr,a
+                           1555 ;	genPointerSet
+                           1556 ;     genFarPointerSet
+   0616 90s00rDB           1557 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x0017)
+   0619 74 74              1558 	mov	a,#0x74
+   061B F0                 1559 	movx	@dptr,a
+                           1560 ;	genPointerSet
+                           1561 ;     genFarPointerSet
+   061C 90s00rDC           1562 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x0018)
+   061F 74 2F              1563 	mov	a,#0x2F
+   0621 F0                 1564 	movx	@dptr,a
+                           1565 ;	genPointerSet
+                           1566 ;     genFarPointerSet
+   0622 90s00rDD           1567 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x0019)
+   0625 74 63              1568 	mov	a,#0x63
+   0627 F0                 1569 	movx	@dptr,a
+                           1570 ;	genPointerSet
+                           1571 ;     genFarPointerSet
+   0628 90s00rDE           1572 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x001a)
+   062B 74 6F              1573 	mov	a,#0x6F
+   062D F0                 1574 	movx	@dptr,a
+                           1575 ;	genPointerSet
+                           1576 ;     genFarPointerSet
+   062E 90s00rDF           1577 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x001b)
+   0631 74 72              1578 	mov	a,#0x72
+   0633 F0                 1579 	movx	@dptr,a
+                           1580 ;	genPointerSet
+                           1581 ;     genFarPointerSet
+   0634 90s00rE0           1582 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x001c)
+   0637 74 65              1583 	mov	a,#0x65
+   0639 F0                 1584 	movx	@dptr,a
+                           1585 ;	genPointerSet
+                           1586 ;     genFarPointerSet
+   063A 90s00rE1           1587 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x001d)
+   063D 74 5F              1588 	mov	a,#0x5F
+   063F F0                 1589 	movx	@dptr,a
+                           1590 ;	genPointerSet
+                           1591 ;     genFarPointerSet
+   0640 90s00rE2           1592 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x001e)
+   0643 74 69              1593 	mov	a,#0x69
+   0645 F0                 1594 	movx	@dptr,a
+                           1595 ;	genPointerSet
+                           1596 ;     genFarPointerSet
+   0646 90s00rE3           1597 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x001f)
+   0649 74 72              1598 	mov	a,#0x72
+   064B F0                 1599 	movx	@dptr,a
+                           1600 ;	genPointerSet
+                           1601 ;     genFarPointerSet
+   064C 90s00rE4           1602 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x0020)
+   064F 74 71              1603 	mov	a,#0x71
+   0651 F0                 1604 	movx	@dptr,a
+                           1605 ;	genPointerSet
+                           1606 ;     genFarPointerSet
+   0652 90s00rE5           1607 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x0021)
+   0655 74 5F              1608 	mov	a,#0x5F
+   0657 F0                 1609 	movx	@dptr,a
+                           1610 ;	genPointerSet
+                           1611 ;     genFarPointerSet
+   0658 90s00rE6           1612 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x0022)
+   065B 74 63              1613 	mov	a,#0x63
+   065D F0                 1614 	movx	@dptr,a
+                           1615 ;	genPointerSet
+                           1616 ;     genFarPointerSet
+   065E 90s00rE7           1617 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x0023)
+   0661 74 74              1618 	mov	a,#0x74
+   0663 F0                 1619 	movx	@dptr,a
+                           1620 ;	genPointerSet
+                           1621 ;     genFarPointerSet
+   0664 90s00rE8           1622 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x0024)
+   0667 74 72              1623 	mov	a,#0x72
+   0669 F0                 1624 	movx	@dptr,a
+                           1625 ;	genPointerSet
+                           1626 ;     genFarPointerSet
+   066A 90s00rE9           1627 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x0025)
+   066D 74 6C              1628 	mov	a,#0x6C
+   066F F0                 1629 	movx	@dptr,a
+                           1630 ;	genPointerSet
+                           1631 ;     genFarPointerSet
+   0670 90s00rEA           1632 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x0026)
+   0673 74 2E              1633 	mov	a,#0x2E
+   0675 F0                 1634 	movx	@dptr,a
+                           1635 ;	genPointerSet
+                           1636 ;     genFarPointerSet
+   0676 90s00rEB           1637 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x0027)
+   0679 74 63              1638 	mov	a,#0x63
+   067B F0                 1639 	movx	@dptr,a
+                           1640 ;	genPointerSet
+                           1641 ;     genFarPointerSet
+   067C 90s00rEC           1642 	mov	dptr,#(_CIC_irq_handler_file_name_6_6 + 0x0028)
+   067F 74 00              1643 	mov	a,#0x00
+   0681 F0                 1644 	movx	@dptr,a
+                           1645 ;	genAssign
+   0682 90s00r00           1646 	mov	dptr,#_HAL_assert_fail_PARM_2
+   0685 74 9A              1647 	mov	a,#0x9A
+   0687 F0                 1648 	movx	@dptr,a
+   0688 E4                 1649 	clr	a
+   0689 A3                 1650 	inc	dptr
+   068A F0                 1651 	movx	@dptr,a
+   068B A3                 1652 	inc	dptr
+   068C F0                 1653 	movx	@dptr,a
+   068D A3                 1654 	inc	dptr
+   068E F0                 1655 	movx	@dptr,a
+                           1656 ;	genCall
+   068F 75 82rC4           1657 	mov	dpl,#_CIC_irq_handler_file_name_6_6
+   0692 75 83s00           1658 	mov	dph,#(_CIC_irq_handler_file_name_6_6 >> 8)
+   0695 75 F0 00           1659 	mov	b,#0x00
+   0698 C0 02              1660 	push	ar2
+   069A C0 03              1661 	push	ar3
+   069C C0 04              1662 	push	ar4
+   069E C0 05              1663 	push	ar5
+   06A0 C0 06              1664 	push	ar6
+   06A2 12s00r00           1665 	lcall	_HAL_assert_fail
+   06A5 D0 06              1666 	pop	ar6
+   06A7 D0 05              1667 	pop	ar5
+   06A9 D0 04              1668 	pop	ar4
+   06AB D0 03              1669 	pop	ar3
+   06AD D0 02              1670 	pop	ar2
+                    06AF   1671 	C$core_irq_ctrl.c$155$4$4 ==.
+                           1672 ;	../drivers/CoreInterrupt/core_irq_ctrl.c:155: CIC_disable_irq( irq_idx );
+                           1673 ;	genCall
+   06AF 8E 82              1674 	mov	dpl,r6
+   06B1 C0 02              1675 	push	ar2
+   06B3 C0 03              1676 	push	ar3
+   06B5 C0 04              1677 	push	ar4
+   06B7 C0 05              1678 	push	ar5
+   06B9 12s03rA1           1679 	lcall	_CIC_disable_irq
+   06BC D0 05              1680 	pop	ar5
+   06BE D0 04              1681 	pop	ar4
+   06C0 D0 03              1682 	pop	ar3
+   06C2 D0 02              1683 	pop	ar2
+   06C4 02s06rEC           1684 	ljmp	00113$
+   06C7                    1685 00107$:
+                    06C7   1686 	C$core_irq_ctrl.c$160$4$7 ==.
+                           1687 ;	../drivers/CoreInterrupt/core_irq_ctrl.c:160: (*g_irq_handler_table[irq_idx])();
+                           1688 ;	genPcall
+   06C7 C0 02              1689 	push	ar2
+   06C9 C0 03              1690 	push	ar3
+   06CB C0 04              1691 	push	ar4
+   06CD C0 05              1692 	push	ar5
+   06CF C0 07              1693 	push	ar7
+   06D1 C0 00              1694 	push	ar0
+   06D3 74rE0              1695 	mov	a,#00127$
+   06D5 C0 E0              1696 	push	acc
+   06D7 74s06              1697 	mov	a,#(00127$ >> 8)
+   06D9 C0 E0              1698 	push	acc
+   06DB C0 07              1699 	push	ar7
+   06DD C0 00              1700 	push	ar0
+   06DF 22                 1701 	ret
+   06E0                    1702 00127$:
+   06E0 D0 00              1703 	pop	ar0
+   06E2 D0 07              1704 	pop	ar7
+   06E4 D0 05              1705 	pop	ar5
+   06E6 D0 04              1706 	pop	ar4
+   06E8 D0 03              1707 	pop	ar3
+   06EA D0 02              1708 	pop	ar2
+   06EC                    1709 00113$:
+                    06EC   1710 	C$core_irq_ctrl.c$147$1$1 ==.
+                           1711 ;	../drivers/CoreInterrupt/core_irq_ctrl.c:147: for ( irq_idx = 0; irq_idx < CIC_NB_IRQ_SOURCES; irq_idx++ )
+                           1712 ;	genAssign
+   06EC 90s00rC3           1713 	mov	dptr,#_CIC_irq_handler_irq_idx_1_1
+   06EF E0                 1714 	movx	a,@dptr
+   06F0 FE                 1715 	mov	r6,a
+                           1716 ;	genPlus
+   06F1 90s00rC3           1717 	mov	dptr,#_CIC_irq_handler_irq_idx_1_1
+                           1718 ;	genPlusIncr
+   06F4 EE                 1719 	mov	a,r6
+   06F5 04                 1720 	inc	a
+   06F6 F0                 1721 	movx	@dptr,a
+   06F7 02s05r30           1722 	ljmp	00111$
+   06FA                    1723 00115$:
+                    06FA   1724 	C$core_irq_ctrl.c$164$1$1 ==.
+                    06FA   1725 	XG$CIC_irq_handler$0$0 ==.
+   06FA 22                 1726 	ret
+                           1727 	.area CSEG    (CODE)
+                           1728 	.area CONST   (CODE)
+                           1729 	.area XINIT   (CODE)
+                    0000   1730 F___drivers_CoreInterrupt_core_irq_ctrl$__xinit_g_cic_base_addr$0$0 == .
+   0000                    1731 __xinit__g_cic_base_addr:
+   0000 00 00              1732 	.byte #0x00,#0x00
+                           1733 	.area CABS    (ABS,CODE)
