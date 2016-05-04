@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<SynplifyOutput>
+	<result>Success</result>
+	<design>Core8051s_ExtSRAM_BRT</design>
+	<target_edif>C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\synthesis\Core8051s_ExtSRAM_BRT.edn</target_edif>
+</SynplifyOutput>

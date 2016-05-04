@@ -1,0 +1,14 @@
+Microsemi Corporation - Microsemi Libero Software Release v11.7 (Version 11.7.0.119)
+
+Date      :  Tue May 03 12:13:15 2016
+Project   :  C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2
+Component :  Core8051s_ExtSRAM_BRT
+Family    :  Fusion
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/work/Core8051s_ExtSRAM_BRT/Core8051s_ExtSRAM_BRT.vhd
+
+Stimulus files for all Simulation tools:
+    C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/work/Core8051s_ExtSRAM_BRT/subsystem.bfm
+

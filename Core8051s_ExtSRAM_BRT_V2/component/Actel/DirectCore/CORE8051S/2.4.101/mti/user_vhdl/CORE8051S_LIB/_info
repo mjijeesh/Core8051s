@@ -1,0 +1,289 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\svn\hoppin\IP\soft\DirectCores\Core8051s\trunk\mti\user_vhdl
+Pcore8051_pkg
+Z1 DPx3 std 6 textio 0 22 m2KQDRRhmF833<<DjYdL70
+Z2 DPx8 synopsys 10 attributes 0 22 2Q8I4L@H0S1aHEXkjUYDC1
+Z3 DPx4 ieee 14 std_logic_misc 0 22 D2f;@P3IKJA9T^H8HI[9K0
+Z4 DPx4 ieee 18 std_logic_unsigned 0 22 hEMVMlaNCR^<OOoVNV;m90
+Z5 DPx4 ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
+Z6 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z7 w1232725385
+Z8 8../../verification/vhdl/core8051_pkg.vhd
+Z9 F../../verification/vhdl/core8051_pkg.vhd
+l0
+L28
+VQ?ijGWJPGm=2E=`LTML=k2
+Z10 OW;C;6.5d;42
+32
+b1
+Z11 Mx6 4 ieee 14 std_logic_1164
+Z12 Mx5 4 ieee 15 std_logic_arith
+Z13 Mx4 4 ieee 18 std_logic_unsigned
+Z14 Mx3 4 ieee 14 std_logic_misc
+Z15 Mx2 8 synopsys 10 attributes
+Z16 Mx1 3 std 6 textio
+Z17 o-work CORE8051S_LIB_tmp -O0
+Z18 tExplicit 1
+!s100 F8d4e287b3VcV[zh:fWSH1
+Bbody
+DBx4 work 12 core8051_pkg 0 22 Q?ijGWJPGm=2E=`LTML=k2
+R1
+R2
+R3
+R4
+R5
+R6
+l0
+L167
+VM=Hae4]4cGje7N8HAM>AK1
+R10
+32
+R11
+R12
+R13
+R14
+R15
+R16
+R17
+R18
+nbody
+!s100 <0z]h8o:08316If3h0CSU0
+Eexternal_access_comparator
+Z19 w1243684780
+R1
+R6
+Z20 8../../verification/vhdl/extacs.vhd
+Z21 F../../verification/vhdl/extacs.vhd
+l0
+L24
+VeZRB:dR3hn6SBb3zWn>BJ1
+R10
+32
+R17
+R18
+!s100 [dZc84HOhY56[WC@GVM363
+Asim
+R1
+R6
+DEx4 work 26 external_access_comparator 0 22 eZRB:dR3hn6SBb3zWn>BJ1
+l173
+L53
+VdVB?:kNQ`LgDgIB@?_afh3
+R10
+32
+Z22 Mx2 4 ieee 14 std_logic_1164
+R16
+R17
+R18
+!s100 g8c6H3<mbMe^_J;`lJThK0
+Eexternal_clock_generator
+Z23 w1232725386
+R6
+Z24 8../../verification/vhdl/extclock.vhd
+Z25 F../../verification/vhdl/extclock.vhd
+l0
+L24
+VdeD0jDVCYMQ1e=>F=YA8M0
+R10
+32
+R17
+R18
+!s100 ;6V:7bk:oeaf4hF^ADL6;2
+Asim
+R6
+DEx4 work 24 external_clock_generator 0 22 deD0jDVCYMQ1e=>F=YA8M0
+l37
+L36
+VIIbb<<YXGYPe1c1OD785C0
+R10
+32
+Z26 Mx1 4 ieee 14 std_logic_1164
+R17
+R18
+!s100 b_0j2[bIfG6lJ:M6I3IVC1
+Pjtagdef
+R5
+R6
+R7
+8../../verification/vhdl/jtagdef.vhd
+F../../verification/vhdl/jtagdef.vhd
+l0
+L23
+VVi^JI?S=IFm0Okol:XH6M2
+R10
+32
+R22
+Z27 Mx1 4 ieee 15 std_logic_arith
+R17
+R18
+!s100 =SV?WoA^Qe3<0J5kS8=0`3
+Eoci_sys
+Z28 w1245866231
+Z29 DPx4 work 7 jtagdef 0 22 Vi^JI?S=IFm0Okol:XH6M2
+R5
+R6
+Z30 DPx4 ieee 16 std_logic_textio 0 22 8YS?iX`WD1REQG`ZRYQGB2
+R1
+Z31 8../../verification/vhdl/oci_sys.vhd
+Z32 F../../verification/vhdl/oci_sys.vhd
+l0
+L31
+V[?ELFRmzzc5aW>@[;9dC90
+R10
+32
+R17
+R18
+!s100 DUzFHJ1Ci3gaomRW2U[Uh2
+Artl
+R29
+R5
+R6
+R30
+R1
+DEx4 work 7 oci_sys 0 22 [?ELFRmzzc5aW>@[;9dC90
+l285
+L98
+VHihKF9B@fMlo3aQ=zPD[O3
+R10
+32
+Z33 Mx5 3 std 6 textio
+Z34 Mx4 4 ieee 16 std_logic_textio
+Z35 Mx3 4 ieee 14 std_logic_1164
+Z36 Mx2 4 ieee 15 std_logic_arith
+Z37 Mx1 4 work 7 jtagdef
+R17
+R18
+!s100 <f0;OZZWoB[LU8XOjz92H2
+Etb_oci_sys
+Z38 w1245866202
+R29
+R5
+R6
+R30
+R1
+Z39 8../../verification/vhdl/tb_oci_sys.vhd
+Z40 F../../verification/vhdl/tb_oci_sys.vhd
+l0
+L31
+V@6Xi?j=JZm`>bGEohBh_Y0
+R10
+32
+R17
+R18
+!s100 Zal59WKldenMP`TEP33_Q3
+Artl
+R29
+R5
+R6
+R30
+R1
+DEx4 work 10 tb_oci_sys 0 22 @6Xi?j=JZm`>bGEohBh_Y0
+l2525
+L64
+V@EV9d`g6]FXMaCV;9e`d71
+R10
+32
+R33
+R34
+R35
+R36
+R37
+R17
+R18
+!s100 [BfZ[Nf2@:jfn36<z@3fO2
+Etb_verif
+Z41 w1245667506
+R6
+Z42 8../../verification/vhdl/tb_verif.vhd
+Z43 F../../verification/vhdl/tb_verif.vhd
+l0
+L22
+VLI31Q_Nm>oi7jLdlk`JVi0
+R10
+32
+R17
+R18
+!s100 Rf6V<7oFG]5WG?b3Rf[VW1
+Asim
+R6
+DEx4 work 8 tb_verif 0 22 LI31Q_Nm>oi7jLdlk`JVi0
+l338
+L81
+V]h^A7kG62M;PAl_3^TDo@2
+R10
+32
+R26
+R17
+R18
+!s100 zOeL>Pe5h5422z<e1CHE70
+Euser_ram
+R23
+R1
+R4
+R5
+R6
+Z44 8../../verification/vhdl/user_ram.vhd
+Z45 F../../verification/vhdl/user_ram.vhd
+l0
+L27
+V7[6GScXMmffI=SUhTL6R`1
+R10
+32
+R17
+R18
+!s100 46^XOzaA^]?SRXWzZX39:2
+Abehv
+R1
+R4
+R5
+R6
+DEx4 work 8 user_ram 0 22 7[6GScXMmffI=SUhTL6R`1
+l55
+L48
+V;_1O^`VXFef1^8h3<WiC>0
+R10
+32
+Z46 Mx4 4 ieee 14 std_logic_1164
+Z47 Mx3 4 ieee 15 std_logic_arith
+Z48 Mx2 4 ieee 18 std_logic_unsigned
+R16
+R17
+R18
+!s100 <MGC[E?L5hM3>F_BfY1]J3
+Euser_rom
+R23
+R1
+R4
+R5
+R6
+Z49 8../../verification/vhdl/user_rom.vhd
+Z50 F../../verification/vhdl/user_rom.vhd
+l0
+L28
+V7cUM>a<`RX1E4Y`2_V^Q53
+!s100 92JjLc`<C?NNP2mSkQn?S1
+R10
+32
+R17
+R18
+Abehv
+R1
+R4
+R5
+R6
+DEx4 work 8 user_rom 0 22 7cUM>a<`RX1E4Y`2_V^Q53
+l192
+L46
+V?BFmQhS=>TmHlH3?6CiDX1
+!s100 FnoV1;BfAQ82WP=:SWz@m1
+R10
+32
+R46
+R47
+R48
+R16
+R17
+R18

@@ -1,0 +1,89 @@
+Microsemi Libero Software
+Version: 11.7.0.119
+Release: v11.7
+
+Info: The design Core8051s_ExtSRAM_BRT.adb was last modified by software version 11.7.0.119.
+Opened an existing Libero design Core8051s_ExtSRAM_BRT.adb.
+'BA_NAME' set to 'Core8051s_ExtSRAM_BRT_ba'
+'IDE_DESIGNERVIEW_NAME' set to 'Impl1'
+'IDE_DESIGNERVIEW_COUNT' set to '1'
+'IDE_DESIGNERVIEW_REV0' set to 'Impl1'
+'IDE_DESIGNERVIEW_REVNUM0' set to '1'
+'IDE_DESIGNERVIEW_ROOTDIR' set to
+'C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\designer'
+'IDE_DESIGNERVIEW_LASTREV' set to '1'
+***** Layout Variables *********************************************
+
+Mode: TIMING_DRIVEN
+Power-driven Layout: OFF
+Incremental Placement: OFF
+Incremental Route: OFF
+
+
+Info: I/O Bank Assigner detected (1) out of (5) I/O Bank(s) with locked I/O technologies.
+
+Running I/O Bank Assigner.
+
+I/O Bank Assigner completed successfully.
+ 
+
+Planning global net placement...
+
+
+Global net placement completed successfully.
+
+                        o - o - o - o - o - o
+
+Timing-driven Placer Started: Tue May 03 13:37:10 2016
+
+Placer Finished: Tue May 03 13:40:20 2016
+Total Placer CPU Time:     00:03:10
+
+                        o - o - o - o - o - o
+
+
+Timing-driven Router 
+Design: Core8051s_ExtSRAM_BRT           Started: Tue May 03 13:40:30 2016
+
+ 
+Iterative improvement...
+
+Timing-driven Router completed successfully.
+
+Design: Core8051s_ExtSRAM_BRT           
+Finished: Tue May 03 13:43:32 2016
+Total CPU Time:     00:02:58            Total Elapsed Time: 00:03:02
+Total Memory Usage: 697.2 Mbytes
+                        o - o - o - o - o - o
+
+Loading the Timing data for the design.
+Finished loading the Timing data.
+TIMER: Max delay timing requirements have been met.
+TIMER: Min delay timing requirements have been met.
+
+The Layout command succeeded ( 00:06:42 )
+Wrote status report to file: Core8051s_ExtSRAM_BRT_place_and_route_report.txt
+
+The Report command succeeded ( 00:00:00 )
+Wrote globalnet report to file: Core8051s_ExtSRAM_BRT_globalnet_report.txt
+
+The Report command succeeded ( 00:00:00 )
+Wrote globalusage report to file: Core8051s_ExtSRAM_BRT_globalusage_report.txt
+
+The Report command succeeded ( 00:00:01 )
+Wrote iobank report to file: Core8051s_ExtSRAM_BRT_iobank_report.txt
+
+The Report command succeeded ( 00:00:01 )
+Wrote pin report to file: Core8051s_ExtSRAM_BRT_report_pin_byname.txt
+
+The Report command succeeded ( 00:00:03 )
+Wrote pin report to file: Core8051s_ExtSRAM_BRT_report_pin_bynumber.txt
+
+The Report command succeeded ( 00:00:00 )
+Design saved to file
+C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\designer\impl1\
+\Core8051s_ExtSRAM_BRT.adb.
+
+The Execute Script command succeeded ( 00:06:54 )
+Design closed.
+

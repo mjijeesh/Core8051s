@@ -1,0 +1,255 @@
+# Microsemi I/O Physical Design Constraints file
+# Auto Generated User I/O Constraints file
+
+# Version: v11.7 11.7.0.119
+# Family: Fusion , Die: M1AFS1500 , Package: 484 FBGA
+# Date generated: Tue May 03 12:13:08 2016 
+
+
+# 
+# User Groups
+# 
+
+define_group -name JTAG
+
+define_group -name SRAM_IF
+
+define_group -name FLASH_IF
+
+define_group -name PHY
+
+define_group -name BRT_PHY
+
+
+# 
+# User Locked I/O Bank Settings
+# 
+
+
+# 
+# Unlocked I/O Bank Settings
+# The I/O Bank Settings can be locked by directly editing this file
+# or by making changes in the I/O Attribute Editor
+# 
+
+
+# 
+# User Locked I/O settings
+# 
+
+
+# 
+# Dedicated Peripheral I/O Settings
+# 
+
+
+# 
+# Unlocked I/O settings
+# The I/Os in this section are unplaced or placed but are not locked
+# the other listed attributes have been applied
+# 
+
+# User Group FLASH_IF
+
+set_io FLASH_BYTEn        \
+    -GROUP_NAME FLASH_IF  \
+    -DIRECTION OUTPUT
+
+
+set_io FLASH_CEn          \
+    -GROUP_NAME FLASH_IF  \
+    -DIRECTION OUTPUT
+
+
+set_io FLASH_OEn          \
+    -GROUP_NAME FLASH_IF  \
+    -DIRECTION OUTPUT
+
+
+set_io FLASH_RPn          \
+    -GROUP_NAME FLASH_IF  \
+    -DIRECTION OUTPUT
+
+
+set_io FLASH_VPEN         \
+    -GROUP_NAME FLASH_IF  \
+    -DIRECTION OUTPUT
+
+
+set_io FLASH_WEn          \
+    -GROUP_NAME FLASH_IF  \
+    -DIRECTION OUTPUT
+
+
+# User Group JTAG
+
+set_io DebugIf_TCK    \
+    -GROUP_NAME JTAG  \
+    -DIRECTION INPUT
+
+
+set_io DebugIf_TDI    \
+    -GROUP_NAME JTAG  \
+    -DIRECTION INPUT
+
+
+set_io DebugIf_TDO     \
+    -GROUP_NAME JTAG   \
+    -DIRECTION OUTPUT
+
+
+set_io DebugIf_TMS    \
+    -GROUP_NAME JTAG  \
+    -DIRECTION INPUT
+
+
+set_io DebugIf_TRSTN  \
+    -GROUP_NAME JTAG  \
+    -DIRECTION INPUT
+
+
+# User Group PHY
+
+set_io BUSAINEN        \
+    -GROUP_NAME PHY    \
+    -DIRECTION OUTPUT
+
+
+set_io BUSAINN        \
+    -GROUP_NAME PHY   \
+    -DIRECTION INPUT
+
+
+set_io BUSAINP        \
+    -GROUP_NAME PHY   \
+    -DIRECTION INPUT
+
+
+set_io BUSAOUTIN       \
+    -GROUP_NAME PHY    \
+    -DIRECTION OUTPUT
+
+
+set_io BUSAOUTN        \
+    -GROUP_NAME PHY    \
+    -DIRECTION OUTPUT
+
+
+set_io BUSAOUTP        \
+    -GROUP_NAME PHY    \
+    -DIRECTION OUTPUT
+
+
+set_io BUSBINEN        \
+    -GROUP_NAME PHY    \
+    -DIRECTION OUTPUT
+
+
+set_io BUSBINN        \
+    -GROUP_NAME PHY   \
+    -DIRECTION INPUT
+
+
+set_io BUSBINP        \
+    -GROUP_NAME PHY   \
+    -DIRECTION INPUT
+
+
+set_io BUSBOUTIN       \
+    -GROUP_NAME PHY    \
+    -DIRECTION OUTPUT
+
+
+set_io BUSBOUTN        \
+    -GROUP_NAME PHY    \
+    -DIRECTION OUTPUT
+
+
+set_io BUSBOUTP        \
+    -GROUP_NAME PHY    \
+    -DIRECTION OUTPUT
+
+
+# User Group SRAM_IF
+
+set_io SRAM_BHEn0        \
+    -GROUP_NAME SRAM_IF  \
+    -DIRECTION OUTPUT
+
+
+set_io SRAM_BHEn1        \
+    -GROUP_NAME SRAM_IF  \
+    -DIRECTION OUTPUT
+
+
+set_io SRAM_BLEn0        \
+    -GROUP_NAME SRAM_IF  \
+    -DIRECTION OUTPUT
+
+
+set_io SRAM_BLEn1        \
+    -GROUP_NAME SRAM_IF  \
+    -DIRECTION OUTPUT
+
+
+set_io SRAM_CE2          \
+    -GROUP_NAME SRAM_IF  \
+    -DIRECTION OUTPUT
+
+
+set_io SRAM_CEn1         \
+    -GROUP_NAME SRAM_IF  \
+    -DIRECTION OUTPUT
+
+
+set_io SRAM_OEn          \
+    -GROUP_NAME SRAM_IF  \
+    -DIRECTION OUTPUT
+
+
+set_io SRAM_WEn          \
+    -GROUP_NAME SRAM_IF  \
+    -DIRECTION OUTPUT
+
+
+
+#
+# Non IO constraints
+#
+
+
+#
+# Old IO constraints, commented out for reference
+#
+
+# set_io FLASH_BYTEn -GROUP_NAME FLASH_IF -DIRECTION OUTPUT 
+# set_io FLASH_CEn -GROUP_NAME FLASH_IF -DIRECTION OUTPUT 
+# set_io FLASH_OEn -GROUP_NAME FLASH_IF -DIRECTION OUTPUT 
+# set_io FLASH_RPn -GROUP_NAME FLASH_IF -DIRECTION OUTPUT 
+# set_io FLASH_VPEN -GROUP_NAME FLASH_IF -DIRECTION OUTPUT 
+# set_io FLASH_WEn -GROUP_NAME FLASH_IF -DIRECTION OUTPUT 
+# set_io DebugIf_TCK -GROUP_NAME JTAG -DIRECTION INPUT 
+# set_io DebugIf_TDI -GROUP_NAME JTAG -DIRECTION INPUT 
+# set_io DebugIf_TDO -GROUP_NAME JTAG -DIRECTION OUTPUT 
+# set_io DebugIf_TMS -GROUP_NAME JTAG -DIRECTION INPUT 
+# set_io DebugIf_TRSTN -GROUP_NAME JTAG -DIRECTION INPUT 
+# set_io BUSAINEN -GROUP_NAME PHY -DIRECTION OUTPUT 
+# set_io BUSAINN -GROUP_NAME PHY -DIRECTION INPUT 
+# set_io BUSAINP -GROUP_NAME PHY -DIRECTION INPUT 
+# set_io BUSAOUTIN -GROUP_NAME PHY -DIRECTION OUTPUT 
+# set_io BUSAOUTN -GROUP_NAME PHY -DIRECTION OUTPUT 
+# set_io BUSAOUTP -GROUP_NAME PHY -DIRECTION OUTPUT 
+# set_io BUSBINEN -GROUP_NAME PHY -DIRECTION OUTPUT 
+# set_io BUSBINN -GROUP_NAME PHY -DIRECTION INPUT 
+# set_io BUSBINP -GROUP_NAME PHY -DIRECTION INPUT 
+# set_io BUSBOUTIN -GROUP_NAME PHY -DIRECTION OUTPUT 
+# set_io BUSBOUTN -GROUP_NAME PHY -DIRECTION OUTPUT 
+# set_io BUSBOUTP -GROUP_NAME PHY -DIRECTION OUTPUT 
+# set_io SRAM_BHEn0 -GROUP_NAME SRAM_IF -DIRECTION OUTPUT 
+# set_io SRAM_BHEn1 -GROUP_NAME SRAM_IF -DIRECTION OUTPUT 
+# set_io SRAM_BLEn0 -GROUP_NAME SRAM_IF -DIRECTION OUTPUT 
+# set_io SRAM_BLEn1 -GROUP_NAME SRAM_IF -DIRECTION OUTPUT 
+# set_io SRAM_CE2 -GROUP_NAME SRAM_IF -DIRECTION OUTPUT 
+# set_io SRAM_CEn1 -GROUP_NAME SRAM_IF -DIRECTION OUTPUT 
+# set_io SRAM_OEn -GROUP_NAME SRAM_IF -DIRECTION OUTPUT 
+# set_io SRAM_WEn -GROUP_NAME SRAM_IF -DIRECTION OUTPUT 

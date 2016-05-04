@@ -1,0 +1,353 @@
+#Build: Synplify Pro J-2015.03M-SP1-2, Build 266R, Dec 14 2015
+#install: C:\Microsemi\Libero_SoC_v11.7\Synplify
+#OS: Windows 7 6.1
+#Hostname: JIJEESH-PC
+
+#Implementation: synthesis
+
+Synopsys HDL Compiler, version comp201503sp1p1, Build 240R, built Dec  1 2015
+@N|Running in 64-bit mode
+Copyright (C) 1994-2015 Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+
+Synopsys VHDL Compiler, version comp201503sp1p1, Build 240R, built Dec  1 2015
+@N|Running in 64-bit mode
+Copyright (C) 1994-2015 Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+
+@N: CD720 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\vhd\std.vhd":123:18:123:21|Setting time resolution to ns
+@N:"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\hdl\memory_mux.vhd":6:7:6:16|Top entity is set to memory_mux.
+VHDL syntax check successful!
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\hdl\memory_mux.vhd":6:7:6:16|Synthesizing work.memory_mux.one 
+@W: CD638 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\hdl\memory_mux.vhd":57:7:57:20|Signal flash_memdatai is undriven 
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\smartgen\RAM4Kx8\RAM4Kx8.vhd":8:7:8:13|Synthesizing work.ram4kx8.def_arch 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\proasic\fusion.vhd":3182:10:3182:15|Synthesizing fusion.ram4k9.syn_black_box 
+Post processing for fusion.ram4k9.syn_black_box
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\proasic\fusion.vhd":3019:10:3019:12|Synthesizing fusion.vcc.syn_black_box 
+Post processing for fusion.vcc.syn_black_box
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\proasic\fusion.vhd":1899:10:1899:12|Synthesizing fusion.gnd.syn_black_box 
+Post processing for fusion.gnd.syn_black_box
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\proasic\fusion.vhd":2240:10:2240:14|Synthesizing fusion.nand3.syn_black_box 
+Post processing for fusion.nand3.syn_black_box
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\proasic\fusion.vhd":2179:10:2179:12|Synthesizing fusion.mx2.syn_black_box 
+Post processing for fusion.mx2.syn_black_box
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\proasic\fusion.vhd":3149:10:3149:13|Synthesizing fusion.buff.syn_black_box 
+Post processing for fusion.buff.syn_black_box
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\proasic\fusion.vhd":1584:10:1584:17|Synthesizing fusion.dfn1e1c0.syn_black_box 
+Post processing for fusion.dfn1e1c0.syn_black_box
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\proasic\fusion.vhd":2381:10:2381:12|Synthesizing fusion.or2.syn_black_box 
+Post processing for fusion.or2.syn_black_box
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\proasic\fusion.vhd":2267:10:2267:15|Synthesizing fusion.nand3c.syn_black_box 
+Post processing for fusion.nand3c.syn_black_box
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\proasic\fusion.vhd":2389:10:2389:13|Synthesizing fusion.or2a.syn_black_box 
+Post processing for fusion.or2a.syn_black_box
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\proasic\fusion.vhd":2249:10:2249:15|Synthesizing fusion.nand3a.syn_black_box 
+Post processing for fusion.nand3a.syn_black_box
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\proasic\fusion.vhd":2258:10:2258:15|Synthesizing fusion.nand3b.syn_black_box 
+Post processing for fusion.nand3b.syn_black_box
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\proasic\fusion.vhd":2117:10:2117:12|Synthesizing fusion.inv.syn_black_box 
+Post processing for fusion.inv.syn_black_box
+Post processing for work.ram4kx8.def_arch
+@W: CL168 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\smartgen\RAM4Kx8\RAM4Kx8.vhd":910:4:910:12|Pruning instance 	AFF1[0] -- not in use ... 
+@W: CL168 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\smartgen\RAM4Kx8\RAM4Kx8.vhd":836:4:836:24|Pruning instance 	ORB_READ_EN_GATE[5] -- not in use ... 
+@W: CL168 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\smartgen\RAM4Kx8\RAM4Kx8.vhd":772:4:772:24|Pruning instance 	ORB_READ_EN_GATE[4] -- not in use ... 
+@W: CL168 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\smartgen\RAM4Kx8\RAM4Kx8.vhd":720:4:720:12|Pruning instance 	AFF1[2] -- not in use ... 
+@W: CL168 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\smartgen\RAM4Kx8\RAM4Kx8.vhd":673:4:673:24|Pruning instance 	ORB_READ_EN_GATE[6] -- not in use ... 
+@W: CL168 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\smartgen\RAM4Kx8\RAM4Kx8.vhd":657:4:657:24|Pruning instance 	ORA_READ_EN_GATE[5] -- not in use ... 
+@W: CL168 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\smartgen\RAM4Kx8\RAM4Kx8.vhd":593:4:593:24|Pruning instance 	ORA_READ_EN_GATE[4] -- not in use ... 
+@W: CL168 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\smartgen\RAM4Kx8\RAM4Kx8.vhd":589:4:589:24|Pruning instance 	ORB_READ_EN_GATE[7] -- not in use ... 
+@W: CL168 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\smartgen\RAM4Kx8\RAM4Kx8.vhd":490:4:490:24|Pruning instance 	ORB_READ_EN_GATE[3] -- not in use ... 
+@W: CL168 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\smartgen\RAM4Kx8\RAM4Kx8.vhd":439:4:439:24|Pruning instance 	ORA_READ_EN_GATE[1] -- not in use ... 
+@W: CL168 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\smartgen\RAM4Kx8\RAM4Kx8.vhd":431:4:431:24|Pruning instance 	ORA_READ_EN_GATE[6] -- not in use ... 
+@W: CL168 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\smartgen\RAM4Kx8\RAM4Kx8.vhd":331:4:331:24|Pruning instance 	ORA_READ_EN_GATE[7] -- not in use ... 
+@W: CL168 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\smartgen\RAM4Kx8\RAM4Kx8.vhd":303:4:303:24|Pruning instance 	ORA_READ_EN_GATE[2] -- not in use ... 
+@W: CL168 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\smartgen\RAM4Kx8\RAM4Kx8.vhd":299:4:299:12|Pruning instance 	AFF1[1] -- not in use ... 
+@W: CL168 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\smartgen\RAM4Kx8\RAM4Kx8.vhd":280:4:280:24|Pruning instance 	ORA_READ_EN_GATE[0] -- not in use ... 
+@W: CL168 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\smartgen\RAM4Kx8\RAM4Kx8.vhd":276:4:276:24|Pruning instance 	ORA_READ_EN_GATE[3] -- not in use ... 
+Post processing for work.memory_mux.one
+
+At c_vhdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 71MB peak: 72MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Tue May 03 11:51:25 2016
+
+###########################################################]
+Synopsys Netlist Linker, version comp201503sp1p1, Build 240R, built Dec  1 2015
+@N|Running in 64-bit mode
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Tue May 03 11:51:25 2016
+
+###########################################################]
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 3MB peak: 4MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Tue May 03 11:51:25 2016
+
+###########################################################]
+Synopsys Netlist Linker, version comp201503sp1p1, Build 240R, built Dec  1 2015
+@N|Running in 64-bit mode
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Tue May 03 11:51:26 2016
+
+###########################################################]
+Pre-mapping Report
+
+Synopsys Microsemi Technology Pre-mapping, Version mapact, Build 1659R, Built Dec 10 2015 09:42:41
+Copyright (C) 1994-2015, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+Product Version J-2015.03M-SP1-2
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
+
+@L: C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\synthesis\memory_mux_scck.rpt 
+Printing clock  summary report in "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\synthesis\memory_mux_scck.rpt" file 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled 
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 102MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 102MB)
+
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 111MB)
+
+
+
+@S |Clock Summary
+*****************
+
+Start                 Requested     Requested     Clock        Clock              
+Clock                 Frequency     Period        Type         Group              
+----------------------------------------------------------------------------------
+memory_mux|SYSCLK     100.0 MHz     10.000        inferred     Inferred_clkgroup_0
+==================================================================================
+
+@W: MT530 :"c:\proj\dev-kits\m1afs-adv-dev-kit\core8051s-core1553rt\core8051s_extsram_brt_v2\smartgen\ram4kx8\ram4kx8.vhd":832:4:832:12|Found inferred clock memory_mux|SYSCLK which controls 0 sequential elements including XDATA.\\BFF1\[1\]\\. This clock has no specified timing constraint which may adversely impact design performance. 
+
+Finished Pre Mapping Phase.
+@N: BN225 |Writing default property annotation file C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\synthesis\memory_mux.sap.
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 47MB peak: 111MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Tue May 03 11:51:26 2016
+
+###########################################################]
+Map & Optimize Report
+
+Synopsys Microsemi Technology Mapper, Version mapact, Build 1659R, Built Dec 10 2015 09:42:41
+Copyright (C) 1994-2015, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+Product Version J-2015.03M-SP1-2
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
+
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled 
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 101MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 101MB)
+
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 111MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 111MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 111MB)
+
+
+Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 111MB)
+
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 111MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 111MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 111MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 111MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 111MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 111MB)
+
+@N: FP130 |Promoting Net SYSCLK_c on CLKBUF  SYSCLK_pad 
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 111MB)
+
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 111MB)
+
+
+
+#### START OF CLOCK OPTIMIZATION REPORT #####[
+
+Clock optimization not enabled
+1 non-gated/non-generated clock tree(s) driving 19 clock pin(s) of sequential element(s)
+0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+0 instances converted, 0 sequential instances remain driven by gated/generated clocks
+
+=========================== Non-Gated/Non-Generated Clocks ============================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance
+---------------------------------------------------------------------------------------
+@K:CKID0001       SYSCLK              port                   19         XDATA.\BFF1[2]\
+=======================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######]
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 111MB)
+
+Writing Analyst data base C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\synthesis\synwork\memory_mux_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 111MB)
+
+Writing EDIF Netlist and constraint files
+J-2015.03M-SP1-2
+
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 111MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 111MB)
+
+@W: MT420 |Found inferred clock memory_mux|SYSCLK with period 10.00ns. Please declare a user-defined clock on object "p:SYSCLK"
+
+
+
+@S |##### START OF TIMING REPORT #####[
+# Timing Report written on Tue May 03 11:51:27 2016
+#
+
+
+Top view:               memory_mux
+Library name:           fusion
+Operating conditions:   COMWCSTD ( T = 70.0, V = 1.42, P = 1.74, tree_type = balanced_tree )
+Requested Frequency:    100.0 MHz
+Wire load mode:         top
+Wire load model:        fusion
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |Timing report estimates place and route data. Please look at the place and route timing report for final timing.
+
+@N: MT322 |Clock constraints cover only FF-to-FF paths associated with the clock.
+
+
+
+Performance Summary 
+*******************
+
+
+Worst slack in design: NA
+
+                      Requested     Estimated     Requested     Estimated               Clock        Clock              
+Starting Clock        Frequency     Frequency     Period        Period        Slack     Type         Group              
+------------------------------------------------------------------------------------------------------------------------
+memory_mux|SYSCLK     100.0 MHz     NA            10.000        NA            NA        inferred     Inferred_clkgroup_0
+========================================================================================================================
+@N: MT582 |Estimated period and frequency not reported for given clock unless the clock has at least one timing path which is not a false or a max delay path and that does not have excessive slack
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks            |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+--------------------------------------------------------------------------------------------------------
+Starting  Ending  |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+--------------------------------------------------------------------------------------------------------
+========================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+##### END OF TIMING REPORT #####]
+
+
+Finished final timing analysis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 111MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 111MB)
+
+--------------------------------------------------------------------------------
+Target Part: M1AFS1500_FBGA484_STD
+Report for cell memory_mux.one
+  Core Cell usage:
+              cell count     area count*area
+              BUFF     5      1.0        5.0
+               GND     2      0.0        0.0
+               INV     4      1.0        4.0
+               MX2    64      1.0       64.0
+             NAND3     2      1.0        2.0
+            NAND3A     6      1.0        6.0
+            NAND3B     6      1.0        6.0
+            NAND3C     2      1.0        2.0
+               OR2    16      1.0       16.0
+              OR2A     3      1.0        3.0
+               VCC     2      0.0        0.0
+
+
+          DFN1E1C0     3      1.0        3.0
+            RAM4K9     8      0.0        0.0
+                   -----          ----------
+             TOTAL   123               111.0
+
+
+  IO Cell usage:
+              cell count
+             BIBUF     8
+            CLKBUF     1
+             INBUF    28
+            OUTBUF    46
+                   -----
+             TOTAL    83
+
+
+Core Cells         : 111 of 38400 (0%)
+IO Cells           : 83
+
+  RAM/ROM Usage Summary
+Block Rams : 8 of 60 (13%)
+
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 48MB peak: 111MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Tue May 03 11:51:27 2016
+
+###########################################################]

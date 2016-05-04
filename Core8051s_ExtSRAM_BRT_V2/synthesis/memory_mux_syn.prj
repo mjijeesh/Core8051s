@@ -1,0 +1,62 @@
+#--  Synopsys, Inc.
+#--  Version J-2015.03M-SP1-2
+#--  Project file C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\synthesis\memory_mux_syn.prj
+
+#project files
+add_file -vhdl -lib work "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/smartgen/RAM4Kx8/RAM4Kx8.vhd"
+add_file -vhdl -lib work "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/hdl/memory_mux.vhd"
+
+
+
+#implementation: "synthesis"
+impl -add synthesis -type fpga
+
+#device options
+set_option -technology Fusion
+set_option -part M1AFS1500
+set_option -package FBGA484
+set_option -speed_grade STD
+set_option -part_companion ""
+
+#compilation/mapping options
+set_option -use_fsm_explorer 0
+set_option -top_module "work.memory_mux"
+
+# mapper_options
+set_option -frequency 100.000
+set_option -write_verilog 0
+set_option -write_vhdl 0
+set_option -srs_instrumentation 1
+
+# actel_options
+set_option -rw_check_on_ram 0
+
+# Microsemi 500K
+set_option -run_prop_extract 1
+set_option -maxfan 24
+set_option -disable_io_insertion 0
+set_option -retiming 0
+set_option -report_path 4000
+set_option -opcond COMWC
+set_option -update_models_cp 0
+set_option -preserve_registers 0
+
+# Microsemi 500K
+set_option -globalthreshold 50
+
+# sequential_optimization_options
+set_option -symbolic_fsm_compiler 1
+
+# Compiler Options
+set_option -compiler_compatible 0
+set_option -resource_sharing 1
+
+# Compiler Options
+set_option -auto_infer_blackbox 0
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 1
+
+#set result format/file last
+project -result_file "./memory_mux.edn"
+impl -active "synthesis"

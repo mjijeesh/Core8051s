@@ -1,0 +1,42 @@
+FlashPro
+Version: 11.7.0.119
+Release: v11.7
+
+Software Version: 11.7.0.119
+PDB file
+'C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\designer\impl\
+1\Core8051s_ExtSRAM_BRT.pdb' has been loaded successfully.
+DESIGN : Core8051s_ExtSRAM_BRT;  CHECKSUM : 99BF;  PDB_VERSION : 1.9
+Driver : 3.0.0 build 1
+programmer '77331' : FlashPro3
+Opened
+'C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/designer/impl\
+1/Core8051s_ExtSRAM_BRT_fp/Core8051s_ExtSRAM_BRT.pro'
+The 'open_project' command succeeded.
+The 'set_programming_action' command succeeded.
+programmer '77331' : Scan Chain...
+Warning: programmer '77331' : Vpump has been selected on programmer AND an externally provided
+         Vpump has also been detected. Using externally provided Vpump voltage source.
+programmer '77331' : Scan Chain PASSED.
+programmer '77331' : Executing action PROGRAM
+programmer '77331' : EXPORT FSN[48] = 8101a460207c
+programmer '77331' : Checking for Master Calibration Data...
+programmer '77331' : Found Master Calibration data
+programmer '77331' : Checking for Backup Calibration Data...
+programmer '77331' : Found backup calibration data
+programmer '77331' : Data Authentication
+programmer '77331' : Erase ...
+programmer '77331' : Completed erase
+programmer '77331' : EXPORT CHECKSUM: [16] = 99bf
+programmer '77331' : Programming FPGA Array
+programmer '77331' : Verifying FPGA Array
+programmer '77331' :             Verifying FPGA Array -- PASS
+programmer '77331' : Finished: Tue May 03 14:00:18 2016 (Elapsed time 00:02:15)
+programmer '77331' : Executing action PROGRAM PASSED.
+
+                        o - o - o - o - o - o
+
+The 'run_selected_actions' command succeeded.
+Project saved.
+The 'save_project' command succeeded.
+Project closed.

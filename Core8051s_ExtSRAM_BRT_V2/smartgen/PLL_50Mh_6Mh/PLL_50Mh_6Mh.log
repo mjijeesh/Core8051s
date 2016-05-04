@@ -1,0 +1,99 @@
+ ** Message System Log
+ ** Database: 
+ ** Date:   Mon May 02 17:57:24 2016
+
+
+****************
+Macro Parameters
+****************
+
+Name                            : PLL_50Mh_6Mh
+Family                          : PA3SOC
+Output Format                   : VHDL
+Type                            : Static PLL
+PowerDown                       : Active Low
+Lock                            : Active High
+Input Freq(Mhz)                 : 100.000000
+CLKA Source                     : RC Oscillator
+Feedback Delay Value Index      : 1
+Feedback Mux Select             : 1
+XDLY Mux Select                 : No
+Primary Freq(Mhz)               : 6.000000
+Primary PhaseShift              : 0
+Primary Delay Value Index       : 1
+Primary Mux Select              : 4
+Secondary1 Freq(Mhz)            : 24.000000
+Use GLB                         : YES
+Use YB                          : NO
+GLB Delay Value Index           : 1
+YB Delay Value Index            : 1
+Secondary1 PhaseShift           : 0
+Secondary1 Mux Select           : 2
+Secondary2 Freq(Mhz)            : 0.000000
+Use GLC                         : NO
+Use YC                          : NO
+GLC Delay Value Index           : 32
+YC Delay Value Index            : 32
+Secondary2 PhaseShift           : 0
+Secondary2 Mux Select           : 0
+Lock Control                    : No
+
+Configuration Bits:
+FINDIV[6:0]     0010011
+FBDIV[6:0]      0010111
+OADIV[4:0]      10011
+OADIVHALF       0
+OBDIV[4:0]      00100
+OCDIV[4:0]      00000
+OAMUX[2:0]      100
+OBMUX[2:0]      010
+OCMUX[2:0]      000
+FBSEL[1:0]      01
+FBDLY[4:0]      00000
+XDLYSEL         0
+DLYGLA[4:0]     00000
+DLYGLB[4:0]     00000
+DLYGLC[4:0]     00000
+DLYYB[4:0]      00000
+DLYYC[4:0]      00000
+VCOSEL[2:0]     100
+
+Primary Clock Frequency 6.000
+Primary Clock Phase Shift 0.000
+Primary Clock Output Delay from CLKA 1.695
+
+Secondary1 Clock Frequency 24.000
+Secondary1 Clock Phase Shift 0.000
+Secondary1 Clock Global Output Delay from CLKA 2.230
+
+
+**************
+Compile Report
+**************
+
+Info:  BLK007: No CoreConsole Database file imported for an M1 device.
+
+Netlist Resource Report
+=======================
+
+    CORE                       Used:      0  Total:  38400   (0.00%)
+    IO (W/ clocks)             Used:      0  Total:    223   (0.00%)
+    Differential IO            Used:      0  Total:    109   (0.00%)
+    GLOBAL (Chip+Quadrant)     Used:      2  Total:     18   (11.11%)
+    PLL                        Used:      1  Total:      2   (50.00%)
+    RAM/FIFO                   Used:      0  Total:     60   (0.00%)
+    Low Static ICC             Used:      0  Total:      1   (0.00%)
+    FlashROM                   Used:      0  Total:      1   (0.00%)
+    User JTAG                  Used:      0  Total:      1   (0.00%)
+    RC oscillator              Used:      0  Total:      1   (0.00%)
+    XTL oscillator             Used:      0  Total:      1   (0.00%)
+    NVM                        Used:      0  Total:      4   (0.00%)
+    AB                         Used:      0  Total:      1   (0.00%)
+    AnalogIO                   Used:      0  Total:     46   (0.00%)
+    VRPSM                      Used:      0  Total:      1   (0.00%)
+    No-Glitch MUX              Used:      0  Total:      2   (0.00%)
+
+Wrote VHDL netlist to C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_1553RT/smartgen\PLL_50Mh_6Mh\PLL_50Mh_6Mh.vhd.
+
+ ** Log Ended:   Mon May 02 17:57:25 2016
+

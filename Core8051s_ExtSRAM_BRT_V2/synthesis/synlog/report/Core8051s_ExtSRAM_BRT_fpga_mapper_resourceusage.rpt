@@ -1,0 +1,117 @@
+Target Part: M1AFS1500_FBGA484_STD
+Report for cell Core8051s_ExtSRAM_BRT.rtl
+  Core Cell usage:
+              cell count     area count*area
+              AND2   109      1.0      109.0
+             AND2A    18      1.0       18.0
+              AND3    62      1.0       62.0
+               AO1   580      1.0      580.0
+              AO13    23      1.0       23.0
+              AO16     3      1.0        3.0
+              AO17     1      1.0        1.0
+              AO18    16      1.0       16.0
+              AO1A   145      1.0      145.0
+              AO1B    10      1.0       10.0
+              AO1C    17      1.0       17.0
+              AO1D    20      1.0       20.0
+              AOI1    26      1.0       26.0
+             AOI1A    35      1.0       35.0
+             AOI1B    23      1.0       23.0
+               AX1    16      1.0       16.0
+              AX1A     6      1.0        6.0
+              AX1B    11      1.0       11.0
+              AX1C     3      1.0        3.0
+              AX1D    35      1.0       35.0
+              AX1E     4      1.0        4.0
+             AXOI4     1      1.0        1.0
+             AXOI7     2      1.0        2.0
+              BUFF     8      1.0        8.0
+            CLKINT     3      0.0        0.0
+               GND    45      0.0        0.0
+               INV    20      1.0       20.0
+              MAJ3     9      1.0        9.0
+              MIN3     5      1.0        5.0
+               MX2  1691      1.0     1691.0
+              MX2A    85      1.0       85.0
+              MX2B    34      1.0       34.0
+              MX2C    74      1.0       74.0
+             NAND3     2      1.0        2.0
+            NAND3A     6      1.0        6.0
+            NAND3B     6      1.0        6.0
+            NAND3C     2      1.0        2.0
+              NOR2   218      1.0      218.0
+             NOR2A   717      1.0      717.0
+             NOR2B  1304      1.0     1304.0
+              NOR3   142      1.0      142.0
+             NOR3A   268      1.0      268.0
+             NOR3B   334      1.0      334.0
+             NOR3C   334      1.0      334.0
+               OA1   123      1.0      123.0
+              OA1A    50      1.0       50.0
+              OA1B    32      1.0       32.0
+              OA1C    25      1.0       25.0
+              OAI1    16      1.0       16.0
+               OR2   317      1.0      317.0
+              OR2A   184      1.0      184.0
+              OR2B    50      1.0       50.0
+               OR3   537      1.0      537.0
+              OR3A    31      1.0       31.0
+              OR3B    32      1.0       32.0
+              OR3C    10      1.0       10.0
+               PLL     1      0.0        0.0
+             RCOSC     1      0.0        0.0
+               VCC    45      0.0        0.0
+               XA1    55      1.0       55.0
+              XA1A    38      1.0       38.0
+              XA1B    17      1.0       17.0
+              XA1C    29      1.0       29.0
+              XAI1     1      1.0        1.0
+             XAI1A     1      1.0        1.0
+             XNOR2   107      1.0      107.0
+             XNOR3    20      1.0       20.0
+               XO1    60      1.0       60.0
+              XO1A     8      1.0        8.0
+              XOR2   388      1.0      388.0
+              XOR3    21      1.0       21.0
+
+
+              DFI1     1      1.0        1.0
+              DFN0     2      1.0        2.0
+            DFN0P0     1      1.0        1.0
+              DFN1     3      1.0        3.0
+            DFN1C0   433      1.0      433.0
+            DFN1C1    93      1.0       93.0
+            DFN1E0     1      1.0        1.0
+          DFN1E0C0   113      1.0      113.0
+          DFN1E0C1    41      1.0       41.0
+          DFN1E0P0    34      1.0       34.0
+            DFN1E1   306      1.0      306.0
+          DFN1E1C0   828      1.0      828.0
+          DFN1E1C1   203      1.0      203.0
+          DFN1E1P0   177      1.0      177.0
+          DFN1E1P1     4      1.0        4.0
+            DFN1P0    27      1.0       27.0
+            DFN1P1    13      1.0       13.0
+            RAM4K9    19      0.0        0.0
+                   -----          ----------
+             TOTAL 10971             10857.0
+
+
+  IO Cell usage:
+              cell count
+             BIBUF     8
+            CLKBUF     1
+             INBUF    13
+            OUTBUF    47
+           TRIBUFF     8
+             UJTAG     1
+                   -----
+             TOTAL    78
+
+
+Core Cells         : 10857 of 38400 (28%)
+IO Cells           : 78
+
+  RAM/ROM Usage Summary
+Block Rams : 19 of 60 (31%)
+

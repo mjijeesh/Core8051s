@@ -1,0 +1,944 @@
+-- *********************************************************************/ 
+-- Copyright 2007 Actel Corporation.  All rights reserved.
+-- IP Solutions Group
+--  
+-- File:  core1553brt.bfm
+--     
+-- Description: 1553B RT
+--              APB BFM Test Script  
+--
+-- Rev: 3.0  01Aug05 IPB  : All state machines made safe 
+-- Rev: 3.1  01Mar07 IPB  : CoreConsole Release 
+-- Rev: 3.2  01Oct07 IPB  : APB Wrapped Core 
+--
+-- Notes:  
+--
+-- *********************************************************************/ 
+
+
+#############################################
+# Core1553BRT APB Test Harness 
+#   Version 3.2   1 October 07  IPB
+#############################################
+
+#setpoint 2048,1024,32,1   # 1553B CW formatting 31.1.31.31
+
+# Global Variables
+# These are inherited from the Parameters set in CC
+int  FAMILY       
+int  CLKSPD       
+int  CLKSYNC      
+int  LOCKRT       
+int  BCASTEN      
+int  LEGMODE      
+int  SA30LOOP     
+int  INTENBBR     
+int  TESTTXTOUTEN 
+int  INT_POLARITY 
+int  VERIF
+int  TBNRTS
+
+# APB base address of each RT
+memmap base_RT0 0x10000000
+memmap base_RT1 0x11000000
+memmap base_RT2 0x12000000
+memmap base_RT3 0x13000000
+memmap base_RT4 0x14000000
+memmap base_RT5 0x15000000
+memmap base_RT6 0x16000000
+memmap base_RT7 0x17000000
+
+# Registers 
+constant R_CONTROL   0x1F80
+constant R_INTERRUPT 0x1F84
+constant R_VWORD     0x1F88
+constant R_LEGREG0   0x1FC0
+
+constant NRTS  4
+int  READBACK 
+int CWORD
+
+----------------------------------------------------------------------------------
+
+procedure main
+  int doall
+  int vw;
+  int RT;
+  int SA;
+  int WC;
+  int base;
+
+  # get parameter settings
+  set  VERIF        $ARGVALUE0       
+  set  TBNRTS       $ARGVALUE1       
+  set  FAMILY       $ARGVALUE2  
+  set  CLKSPD       $ARGVALUE3  
+  set  CLKSYNC      $ARGVALUE4  
+  set  LOCKRT       $ARGVALUE5  
+  set  BCASTEN      $ARGVALUE6  
+  set  LEGMODE      $ARGVALUE7  
+  set  SA30LOOP     $ARGVALUE8  
+  set  INTENBBR     $ARGVALUE9  
+  set  TESTTXTOUTEN $ARGVALUE10  
+  set  INT_POLARITY $ARGVALUE11 
+
+  set  READBACK  FAMILY >= 15           # Only A3P families allow RAM readback
+  if FAMILY == 0                        # Also if RTL code the readback allowed
+    set READBACK 1
+  endif
+  set CWORD 1                           # Initial transmissions on Bus A
+
+
+  header "Core1553BRT APB Test Harness 10Oct08"
+  print "  CLKSPD:%0d", CLKSPD
+  print "  CLKSYNC:%0d", CLKSYNC 
+  print "  LEGMODE:%0d",LEGMODE
+  print "  LOCKRT:%0d",LOCKRT
+  print "  TESTTXTOUTEN:%0d",TESTTXTOUTEN
+  print "  INT_POLARITY:%0d",INT_POLARITY 
+  print "   "
+  
+  if READBACK
+    print "  RAM Readback Allowed "
+  else
+    print "  RAM Readback Not Allowed "
+  endif
+   
+  setup 1 1 4            -- Set the BFM to operate bursts using Half Words 
+                         -- with an address increment of 4
+  timeout (50*20*50)     -- increase default tiemout to allow >50 1553B Words
+  debug 1
+
+
+  #---------------------------------------------------------------------------------
+  # Simple Test Example using RT1
+ 
+  # Check core Version
+  readmask  x base_rt1 R_INTERRUPT 0x4800 0xF900  # Check correct core version
+ 
+  # Enable all sub addresses on RT1
+  call setup_legal_mode base_RT1
+
+  # create two messages and set up data patterns
+  #        Addr   Control   CW     CW2     SW     SW     DP     Status Reserved
+  extwrite 0x0100 0x0002  1.0.1.4  0.0.0.0 0x0000 0x0000 0x0200 0       0   # BC to RT
+  extwrite 0x0108 0x0002  1.1.1.3  0.0.0.0 0x0000 0x0000 0x0300 0       0   # RT to BC
+  extwrite 0x0110 0x0000
+  extwrite 0x0200  1 2 3 4 5 6 7 8 9 10        # Test Data in BC
+  fill x base_RT1 0x1080 32 0x1000 1           # Test data in the RT SA 1 for TX command
+  
+  # Cause the 1553B BC BFM to transmit the message and wait for completion
+  extwrite 0 0x0001 0x0100          
+  extwait                        
+
+  # Check returned data
+  extcheck 0x0300 0x1000          
+  extcheck 0x0301 0x1001
+  extcheck 0x0302 0x1002
+
+
+  #---------------------------------------------------------------------------------
+  # Verification Tests
+
+  if verif
+    header "Running More Complex Set of Verification Tests"
+    call setup_legal_mode base_RT0
+    call setup_legal_mode base_RT1
+    call setup_legal_mode base_RT2
+    call setup_legal_mode base_RT3
+    call testmemory base_RT1 0000 64
+
+    call test_rxtx;
+    call test_control
+    call test_interrupt
+
+    call test_legality_mode
+
+    call test_bcbfm
+
+    header "Verification Tests Complete"
+    print "  CLKSPD:%0d", CLKSPD
+    print "  CLKSYNC:%0d", CLKSYNC 
+    print "  LEGMODE:%0d",LEGMODE
+    print "  LOCKRT:%0d",LOCKRT
+    print "  TESTTXTOUTEN:%0d",TESTTXTOUTEN
+    print "  INT_POLARITY:%0d",INT_POLARITY 
+
+  endif;
+
+  print "End of tests"
+
+return
+
+
+###########################################################################
+# Test 1553B message Support in BC BFM
+
+procedure test_bcbfm
+
+#Set up Message Tables
+#        Addr      Control     CW     CW2   SW     SW     DP     Status Reserved
+extwrite 0x0100    0x0002  1.0.1.4  0.0.0.0 0x0000 0x0000 0x0200 0      0       ! BC to RT
+extwrite 0x0108    0x0002  1.1.1.3  0.0.0.0 0x0000 0x0000 0x0300 0      0       ! RT to BC
+extwrite 0x0110    0x0012  2.0.2.4  1.1.1.4 0x0000 0x0000 0x0400 0      0       ! RT1 to RT2
+extwrite 0x0118    0x0002 31.0.1.3  0.0.0.0 0x0000 0x0000 0x0500 0      0       ! BC to RT BCast
+extwrite 0x0120    0x0012 31.0.2.5  1.1.1.5 0x0000 0x0000 0x0600 0      0       ! RT to RT BCast
+extwrite 0x0128    0x0002  1.1.0.1  0.0.0.0 0x0000 0x0000 0x0800 0      0       ! Mode Code NODATA
+extwrite 0x0130    0x0002  1.1.0.16 0.0.0.0 0x0000 0x0000 0x0000 0      0       ! Mode Code RT TX VW
+extwrite 0x0138    0x0002  1.0.0.17 0.0.0.0 0x0000 0x0000 0x1234 0      0       ! Mode Code RT RX 
+extwrite 0x0140    0x0002 31.1.0.1  0.0.0.0 0x0000 0x0000 0x0000 0      0       ! Bcast Mode Code NODATA
+extwrite 0x0148    0x0002 31.0.0.17 0.0.0.0 0x0000 0x0000 0x5678 0      0       ! Bcast Mode Code RT RX 
+extwrite 0x0150    0x0000
+
+extwrite 0x0200  1 2 3 4 5 6 7 8 9 10
+extwrite 0x0500  9 8 7 6 5 4 
+
+# Put known data in RT 1 SA 1 and Vector Word
+fill x  base_RT1 0x1080 32 0x1000 1
+write x base_RT1 R_VWORD 0xCAFE
+                                          
+#Now do the messages one by one
+extwrite 0 0x0003 0x0100         # BC to RT
+extwait
+extwrite 0 0x0003 0x0108         # RT to BC
+extwait
+extcheck 0x0300 0x1000           # and check returned data
+extcheck 0x0301 0x1001
+extcheck 0x0302 0x1002
+extwrite 0 0x0003 0x0110         # RT1 to RT2
+extwait
+extwrite 0 0x0003 0x0118         # BC to RT BCast
+extwait
+extwrite 0 0x0003 0x0120         ! RT to RT BCast
+extwait
+extwrite 0 0x0003 0x0128         ! Mode Code NODATA
+extwait
+extwrite 0 0x0003 0x0130         ! Mode Code RT TX VW
+extwait
+extcheck 0x0135 0xCAFE           ! check VW
+extwrite 0 0x0003 0x0138         ! Mode Code RT RX
+extwait
+extwrite 0 0x0003 0x0140         ! Bcast Mode Code NODATA
+extwait
+extwrite 0 0x0003 0x0148         ! Bcast Mode Code RT RX
+extwait
+
+header "All messages as a burst"
+timeout (50*20*10*10)
+extwrite 0 0x0001 0x0100         # Repeat all messages
+extwait
+
+
+wait 100 
+
+return
+
+
+###########################################################################
+# Test Control Register
+
+procedure test_control
+int sw;
+int bit;
+
+  #No Bits
+  write x base_rt0 R_CONTROL 0x8000
+  call rx_message 0 8 1 0x0000 1
+  set sw $RETVALUE;
+  compare sw 0x0000
+
+  #SREQUEST
+  write x base_rt0 R_CONTROL 0x8001
+  call rx_message 0 8 1 0x0000 1
+  set sw $RETVALUE;
+  compare sw 0x0100
+
+  #RTBUSY
+  write x base_rt0 R_CONTROL 0x8002
+  call rx_message 0 8 1 0x0000 1
+  set sw $RETVALUE;
+  compare sw 0x0008
+
+  #SSFLAG
+  write x base_rt0 R_CONTROL 0x8004
+  call rx_message 0 8 1 0x0000 1
+  set sw $RETVALUE;
+  compare sw 0x0004
+
+  #TFLAG
+  write x base_rt0 R_CONTROL 0x8008
+  call rx_message 0 8 1 0x0000 1
+  set sw $RETVALUE;
+  compare sw 0x0001
+
+  #TESTORUN
+  if TESTTXTOUTEN                ! If this is disabled then we cant test
+    call use_busA
+    write x base_rt0 R_CONTROL 0x8010
+    call rx_message 0 8 32 0x0000 1
+    call tx_message_nochk 0 8 30 0x0000 1
+    write x base_rt0 R_CONTROL 0x8000  
+    call use_busB
+    call get_bit 0
+    compare $RETVALUE 0xA989     # Expected Return BIT Value
+    call use_busA
+    call get_bit 0
+    compare $RETVALUE 0x2189     # Expected Return BIT Value now
+  else
+    call use_busA
+    write x base_rt0 R_CONTROL 0x8010
+    call rx_message 0 8 32 0x0000 1
+    call tx_message_nochk 0 8 30 0x0000 1
+    write x base_rt0 R_CONTROL 0x8000  
+    call use_busB
+    call get_bit 0
+    compare $RETVALUE 0x8009     # Expected Return BIT Value
+    call use_busA
+    call get_bit 0
+    compare $RETVALUE 0x0009     # Expected Return BIT Value now
+  endif
+
+
+  #CLRERR - since bits are set
+  write x base_rt0 R_INTERRUPT 0x0400
+  wait 4
+  write x base_rt0 R_INTERRUPT 0x0000
+  call get_bit 0
+  compare $RETVALUE 0x0009     # Expected Return BIT Value now
+  call get_bit 0
+
+  #BUSY bit
+  readmask x base_rt0 R_CONTROL 0x0000 0x0080     # should be non busy
+  call get_bit_nowait 0                           # Should cause RT to busy
+  waitus 30                                       # after CW received
+  readmask x base_rt0 R_CONTROL 0x0080 0x0080     # should be busy now
+  pollbit  x base_rt0 R_CONTROL 7 0               # wait for bit to zero
+  readmask x base_rt0 R_CONTROL 0x0000 0x0080     # should be non busy now
+  waitus 60                                       # Allow BC to recover
+
+  if LOCKRT
+    #RTADDR Bits RT0 has LOCK generic set
+    write     x base_rt0 R_CONTROL 0x0908           # Try and change to RT9 plus terminal flag
+    readcheck x base_rt0 R_CONTROL 0xA008           # Should fail to set, bit 15 always set + parity
+    call sync_nodata 0                              # Returns SW
+    compare $RETVALUE 0x0001                        # Should Return SW from RT 0 
+    call sync_nodata 9                              # Returns SW
+    compare $RETVALUE 0xFFFF                        # No SW as no RT9 
+
+    iosetbit 0
+                                                    # make sure RT legalizes CW
+    #RTADDR Bits RT1 has LOCK  set
+    write     x base_rt1 R_CONTROL 0x8800           # Try and change to RT8 with lock on
+    readcheck x base_rt1 R_CONTROL 0x8100           # Should fail to set, bit 15 always set + parity
+    call sync_nodata 1                              # Returns SW
+    compare $RETVALUE 0x0800                        # Should Return SW from RT 1 
+    call sync_nodata 8                              # Returns SW
+    compare $RETVALUE 0xFFFF                        # No SW as no RT8 
+  else
+    #RTADDR Bits RT1 has LOCK not set
+    write     x base_rt1 R_CONTROL 0x0800           # Try and change to RT8 with lock on
+    readcheck x base_rt1 R_CONTROL 0x0800           # Should now be set
+    call sync_nodata 1                              # Returns SW
+    compare $RETVALUE 0xFFFF                        # Should not Return SW from RT 1 
+    call sync_nodata 8                              # Returns SW
+    compare $RETVALUE 0x4000                        # RT8 returns status 
+
+    #RTADDR Bits RT1 has LOCK not set
+    write     x base_rt1 R_CONTROL 0x1000           # Try and change to RT16 
+    readcheck x base_rt1 R_CONTROL 0x1000           # Should now be set
+    call sync_nodata 16                             # Returns SW
+    compare $RETVALUE 0x8000                        # RT16 returns status 
+
+    #RTADDR Bits RT1 has LOCK not set
+    write     x base_rt1 R_CONTROL 0x3100           # Try and change to RT17 
+    readcheck x base_rt1 R_CONTROL 0x3100           # Should now be set
+    call sync_nodata 17                             # Returns SW
+    compare $RETVALUE 0x8800                        # RT16 returns status 
+
+    #RTADDR Bits RT1 has LOCK not set
+    write     x base_rt1 R_CONTROL 0x3200           # Try and change to RT18 
+    readcheck x base_rt1 R_CONTROL 0x3200           # Should now be set
+    call sync_nodata 18                             # Returns SW
+    compare $RETVALUE 0x9000                        # RT16 returns status 
+
+    #RTADDR Bits RT1 has LOCK not set
+    write     x base_rt1 R_CONTROL 0x3400           # Try and change to RT20 
+    readcheck x base_rt1 R_CONTROL 0x3400           # Should now be set
+    call sync_nodata 20                             # Returns SW
+    compare $RETVALUE 0xA000                        # RT16 returns status 
+
+    #RTADDR Bits RT1 has LOCK not set
+    write     x base_rt1 R_CONTROL 0x3800           # Try and change to RT24 
+    readcheck x base_rt1 R_CONTROL 0x3800           # Should now be set
+    call sync_nodata 24                             # Returns SW
+    compare $RETVALUE 0xC000                        # RT16 returns status 
+
+    #RTADDR Bits RT1 has LOCK not set
+    write     x base_rt1 R_CONTROL 0x1800           # Try and change to RT24 incorrect parity 
+    wait 10                                         # Allow for setting to cross clock domains
+    readcheck x base_rt1 R_CONTROL 0x5800           # Incorrect Parity set
+
+    write     x base_rt1 R_CONTROL 0x8000           # Back to RT1 external set 
+  endif
+
+return
+
+###########################################################################
+# Test Interrupt Register
+
+procedure test_interrupt
+
+  iosetbit 0                                       # make sure RT1 legalized
+
+  write     x base_rt1 R_INTERRUPT 0xFFFF          # Clear Interrupt Register 
+  write     x base_rt1 R_INTERRUPT 0x0000          # make sure enables clear 
+  readmask  x base_rt1 R_INTERRUPT 0x0000 0x0780   # Should be clear
+
+  call rx_message 1 1 1 0x5060 3                   # rt sa len dstart dinc
+  readmask  x base_rt1 R_INTERRUPT 0x00C1 0x07FF   # Interrupt Received
+  iotstbit 1 0                                     # No external interrupt
+  write     x base_rt1 R_INTERRUPT 0x0080          # Clear Interrupt Register 
+  readmask  x base_rt1 R_INTERRUPT 0x0041 0x07FF   # Interrupt Cleared
+
+  call rx_message 1 2 1 0x5060 3                   # rt sa len dstart dinc
+  readmask  x base_rt1 R_INTERRUPT 0x00C2 0x07FF   # Interrupt Received
+  iotstbit 1 0                                     # No external interrupt
+  write     x base_rt1 R_INTERRUPT 0x0080          # Clear Interrupt Register 
+  readmask  x base_rt1 R_INTERRUPT 0x0042 0x07FF   # Interrupt Cleared
+
+  call rx_message 1 4 1 0x5060 3                   # rt sa len dstart dinc
+  readmask  x base_rt1 R_INTERRUPT 0x00C4 0x07FF   # Interrupt Received
+  iotstbit 1 0                                     # No external interrupt
+  write     x base_rt1 R_INTERRUPT 0x0080          # Clear Interrupt Register 
+  readmask  x base_rt1 R_INTERRUPT 0x0044 0x07FF   # Interrupt Cleared
+
+  call rx_message 1 8 1 0x5060 3                   # rt sa len dstart dinc
+  readmask  x base_rt1 R_INTERRUPT 0x00C8 0x07FF   # Interrupt Received
+  iotstbit 1 0                                     # No external interrupt
+  write     x base_rt1 R_INTERRUPT 0x0080          # Clear Interrupt Register 
+  readmask  x base_rt1 R_INTERRUPT 0x0048 0x07FF   # Interrupt Cleared
+
+  call rx_message 1 16 1 0x5060 3                  # rt sa len dstart dinc
+  readmask  x base_rt1 R_INTERRUPT 0x00D0 0x07FF   # Interrupt Received
+  iotstbit 1 0                                     # No external interrupt
+  write     x base_rt1 R_INTERRUPT 0x0080          # Clear Interrupt Register 
+  readmask  x base_rt1 R_INTERRUPT 0x0050 0x07FF   # Interrupt Cleared
+
+  call tx_message 1 16 1 0x5060 3                  # rt sa len dstart dinc
+  readmask  x base_rt1 R_INTERRUPT 0x00E0 0x07FF   # Interrupt Received
+  iotstbit 1 0                                     # No external interrupt
+  write     x base_rt1 R_INTERRUPT 0x0080          # Clear Interrupt Register 
+  readmask  x base_rt1 R_INTERRUPT 0x0070 0x07FF   # Interrupt Cleared
+
+  write     x base_rt1 R_INTERRUPT 0x0100          # Enable External Interrupt  
+  call rx_message 1 1 1 0x5060 3                   # rt sa len dstart dinc
+  readmask  x base_rt1 R_INTERRUPT 0x01C1 0x07FF   # Interrupt Received
+  iotstbit 1 1                                     # external interrupt
+  write     x base_rt1 R_INTERRUPT 0x0180          # Clear Interrupt Register 
+  flush  4
+  iotstbit 1 0                                     # No external interrupt
+  readmask  x base_rt1 R_INTERRUPT 0x0141 0x07FF   # Interrupt Cleared
+
+  call rx_message 1 1 1 0x5060 3                   # rt sa len dstart dinc
+  readmask  x base_rt1 R_INTERRUPT 0x01C1 0x07FF   # Interrupt Received
+  iotstbit 1 1                                     # external interrupt
+  call tx_message 1 2 1 0x5060 3                   # rt sa len dstart dinc
+  readmask  x base_rt1 R_INTERRUPT 0x03E2 0x07FF   # Interrupt overrun
+  write     x base_rt1 R_INTERRUPT 0x0200          # Clear Interrupt overrun 
+  readmask  x base_rt1 R_INTERRUPT 0x02E2 0x07FF   # Interrupt Cleared
+  write     x base_rt1 R_INTERRUPT 0x0080          # Clear Interrupt Register 
+  readmask  x base_rt1 R_INTERRUPT 0x0062 0x07FF   # Interrupt Cleared
+
+return
+
+
+###########################################################################
+
+procedure testmemory RTbase addr size
+
+ if readback
+   memtest RTbase 0x0100 256 2 500 0x23494579 
+ endif
+
+return
+
+###########################################################################
+
+procedure test_vword base rt
+int exp_vword
+int got_vword
+int ok
+
+   set exp_vword rt * 256
+   write w base R_VWORD exp_vword
+   call get_vw rt
+   compare $RETVALUE exp_vword
+return
+
+###########################################################################
+
+procedure test_rxtx;
+ int RT;
+ int SA;
+ int WC;
+ int base;
+
+    wait 6
+    header "Testing RX TX"
+    # Set up RTs
+    loop RT 0 (NRTS-1)
+      set base RT * 0x01000000 + 0x10000000
+      write h base R_CONTROL   0x8000
+      write h base R_INTERRUPT 0x0000
+    endloop
+    
+    # Fetch the vector Word from each RT
+    loop RT 0 (NRTS-1)
+      set base RT * 0x01000000 + 0x10000000
+      call test_vword base RT
+    endloop
+
+    # Test RX/TX varing RT
+    loop RT 0 (NRTS-1)
+      call rx_message RT 1 10 0x5060 RT
+      call tx_message RT 1  6 0x5060 RT
+    endloop
+
+    # Test RX/TX varing SA
+    loop SA 1 22
+      call rx_message 1 SA 10 0x5060 SA
+      call tx_message 1 SA  6 0x5060 SA
+    endloop
+
+    # Test RX/TX varing WC
+    loop WC 1 32
+      call rx_message 1 1 WC 0x5060 WC
+      call tx_message 1 1 WC 0x5060 WC
+    endloop
+
+return
+
+
+###########################################################################
+# Set up legalisation registers
+
+-- 0: Internal to RT core 
+-- 1: External Input
+-- 2: APB Registers
+-- 3: APB RAM block
+
+-- reset legalisation table  0 enables message
+table LEGALISATION  0x0000 0x0000 0x0000 0x0000 \
+                    0x0000 0x0000 0xffff 0xffff \ 
+                    0xffff 0xfffd 0xfe01 0xfff2 \
+                    0xffff 0xfffd 0xfe05 0xffff  
+
+
+
+procedure setup_legal_mode baseaddr
+
+  case LEGMODE
+    when 0 
+      call  setup_legal_mode0 baseaddr
+    when 1 
+      call  setup_legal_mode1 baseaddr
+    when 2 
+      call  setup_legal_mode2 baseaddr
+    when 3 
+      call  setup_legal_mode3 baseaddr
+  endcase
+
+return
+
+
+procedure setup_legal_mode0 baseaddr
+ # no need to do anything
+return
+
+procedure setup_legal_mode1 baseaddr
+ iosetbit 0   -- CMDOK is driven by GPIO bit 0
+return
+
+
+procedure setup_legal_mode2 baseaddr
+
+ readtable x baseaddr 0x1fc0 LEGALISATION 16      -- check reset values
+ 
+ fill       x  baseaddr 0x1fc0 16 0x0003 0x1234   -- Verify writeable and readable
+ fillcheck  x  baseaddr 0x1fc0 16 0x0003 0x1234   -- fill with pattern
+
+ writetable x baseaddr 0x1fc0 LEGALISATION 16     -- write back reset values
+ readtable  x baseaddr 0x1fc0 LEGALISATION 16
+
+return
+
+procedure setup_legal_mode3 baseaddr
+
+ writetable x baseaddr 0x1fc0 LEGALISATION 16
+ if readback
+   readtable  x baseaddr 0x1fc0 LEGALISATION 16
+ endif
+return
+
+###########################################################################
+# test Legality logic
+
+
+procedure test_legality_mode
+
+  case LEGMODE
+    when 0 
+      call  test_legality_mode0 
+    when 1 
+      call  test_legality_mode1 
+    when 2 
+      call  test_legality_mode2 
+    when 3 
+      call  test_legality_mode3 
+  endcase
+
+return
+
+
+procedure test_legality_mode0
+int sw;
+ 
+ write w base_RT0 R_CONTROL 0x8000       -- Reset State
+ ioclrbit 0                              -- This should have no effect
+ call rx_message_nochk 0 8 10 0x0000 1
+ set sw $RETVALUE
+ compare sw 0x0000                       -- should be Legal message                
+ iosetbit 0                        
+
+return
+
+
+procedure test_legality_mode1
+int sw;
+ 
+ iosetbit 0                              -- CMDOK is driven by GPIO bit 0
+ call rx_message 1 8 10 0x0000 1
+ set sw $RETVALUE
+ compare sw 0x0800
+
+ ioclrbit 0                              -- CMDOK is driven by GPIO bit 0
+ call rx_message_nochk 1 8 10 0x0000 1
+ set sw $RETVALUE
+ compare sw 0x0c00                       -- Message Error
+ iosetbit 0                             
+ iomask 0x010A0000 0x0FFF0000            -- Check the CMDVAL value as well
+
+return
+
+
+procedure test_legality_mode2
+int sw;
+ 
+ write w base_RT2 R_LEGREG0 0xFEFF       -- Enable SA 8 Receive
+ call rx_message 2 8 10 0x0000 1
+ set sw $RETVALUE
+ compare sw 0x1000
+
+ write w base_RT2 R_LEGREG0 0x0100       -- Disable SA 8 Receive
+ call rx_message_nochk 2 8 10 0x0000 1
+ set sw $RETVALUE
+ compare sw 0x1400                       -- Message Error
+
+ write w base_RT2 R_LEGREG0 0x0000       -- Reenable
+
+return
+
+
+procedure test_legality_mode3
+int sw;
+ 
+ write w base_RT3 R_LEGREG0 0xFEFF       -- Enable SA 8 Receive
+ call rx_message 3 8 10 0x0000 1
+ set sw $RETVALUE
+ compare sw 0x1800
+
+ write w base_RT3 R_LEGREG0 0x0100       -- Disable SA 8 Receive
+ call rx_message_nochk 3 8 10 0x0000 1
+ set sw $RETVALUE
+ compare sw 0x1C00                       -- Message Error
+
+ write w base_RT3 R_LEGREG0 0x0000       -- Reenable
+
+return
+
+
+###########################################################################
+# THESE ARE THE LOW LEVEL DRIVERS TO THE 1553B BUS CONTROLLER TEST MODULE
+---------------------------------------------------------------------
+-- Extention Bus Register Set for 1553B BC
+
+-- Addr 0 : Bit 0 = Start
+--          Bit 1 = Busy
+-- Addr 1 : Block Pointer  (BP)
+-- 
+-- Block Address Mapping - pointed to by BP
+-- BP+0 : Blk control   
+--        bit  0: RTRT  
+--        bit  1: Do next message
+--        bit 16: okay
+-- BP+1 : CW1
+-- BP+2 : CW2
+-- BP+3 : SW1
+-- BP+4 : SW2
+-- BP+5 : DataPtr or Data 
+-- BP+6 : Num DW received
+-- BP+7 : Pointer to next message
+
+--------------------------------------------------------------------
+
+
+procedure use_busA 
+ set CWORD 0x0001
+return
+
+procedure use_busB
+ set CWORD 0x0021
+return
+
+procedure sync_nodata RT
+int sw;
+int cw;
+
+ print "Sync No Data"
+ set cw RT << 11 + 0x0401
+
+ extwrite 8 CWORD
+ extwrite 9 CW
+ extwrite 13 16
+ extwrite 1 8
+ extwrite 0 1
+ waitus 10
+ extwait 
+ extread 11 sw
+
+return sw;
+
+procedure get_lastsw RT
+int sw;
+int cw;
+
+ print "Get Last SW"
+ set cw RT << 11 + 0x0402
+
+ extwrite 8 CWORD
+ extwrite 9 CW
+ extwrite 13 16
+ extwrite 1 8
+ extwrite 0 1
+ waitus 10
+ extwait 
+ extread 11 sw
+
+return sw;
+
+procedure get_vw RT
+int vw;
+int cw;
+
+ print "Transmit Vector Word"
+ set cw RT << 11 + 0x0410
+
+ extwrite 8 CWORD
+ extwrite 9 CW
+ extwrite 13 16
+ extwrite 1 8
+ extwrite 0 1
+ waitus 10
+ extwait 
+ extread 13 vw
+
+return vw;
+
+procedure get_bit RT
+int bit;
+int cw;
+
+ print "Transmit Bit"
+ set cw RT << 11 + 0x0413
+
+ extwrite 8 CWORD
+ extwrite 9 CW
+ extwrite 13 0
+ extwrite 1 8
+ extwrite 0 1
+ extwait 
+ extread 13 bit
+
+return bit;
+
+
+procedure get_bit_nowait RT
+int vw;
+int cw;
+
+ print "Transmit Bit"
+ set cw RT << 11 + 0x0413
+
+ extwrite 8 CWORD
+ extwrite 9 CW
+ extwrite 13 16
+ extwrite 1 8
+ extwrite 0 1
+return;
+
+procedure rx_message rt sa len dstart dinc
+int cw; 
+int sw;   
+int len5;
+int eaddr;
+int edata;
+int i;
+int base;
+int addr;
+
+ print "Receive Message"
+ set len5 len and 0x1F
+ set cw RT << 1 + 0 << 5 
+ set cw cw + SA << 5 
+ set cw cw + len5
+
+ extwrite 8 CWORD
+ extwrite 9 CW
+ extwrite 13 16
+
+ set eaddr 16       -- write pattern to external device
+ set edata dstart
+ loop i 1 len 1
+   extwrite eaddr edata
+   set eaddr eaddr + 1
+   set edata edata + dinc
+ endloop 
+
+ extwrite 1 8
+ extwrite 0 3
+ waitus 10
+ extwait 
+ extread 11 sw
+
+ # Check the data
+ set base RT * 0x01000000 + 0x10000000
+ set addr SA * 0x80
+ fillcheck x base addr len dstart dinc
+
+return sw;
+
+
+procedure rx_message_nochk rt sa len dstart dinc
+int cw; 
+int sw;   
+int len5;
+int eaddr;
+int edata;
+int i;
+int base;
+int addr;
+
+ print "Receive Message"
+ set len5 len and 0x1F
+ set cw RT << 1 + 0 << 5 
+ set cw cw + SA << 5 
+ set cw cw + len5
+
+ extwrite 8 CWORD
+ extwrite 9 CW
+ extwrite 13 16
+
+ set eaddr 16       -- write pattern to external device
+ set edata dstart
+ loop i 1 len 1
+   extwrite eaddr edata
+   set eaddr eaddr + 1
+   set edata edata + dinc
+ endloop 
+
+ extwrite 1 8
+ extwrite 0 3
+ waitus 10
+ extwait 
+ extread 11 sw
+
+return sw;
+
+
+procedure tx_message rt sa len dstart dinc
+int cw; 
+int sw;   
+int len5;
+int eaddr;
+int edata;
+int i;
+int base;
+int addr;
+
+ print "Transmit Message"
+
+ # Create the data
+ set base RT * 0x01000000 + 0x10000000
+ set addr SA * 0x80 + 0x1000
+ fill x base addr len dstart dinc
+
+ set len5 len and 0x1F
+ set cw RT << 1 + 1 << 5 
+ set cw cw + SA << 5 
+ set cw cw + len5
+
+ extwrite 8 CWORD
+ extwrite 9 CW
+ extwrite 13 16
+
+ extwrite 1 8
+ extwrite 0 3
+ waitus 10
+ extwait 
+ extread 11 sw
+
+ # Check the data
+ set eaddr 16       -- read and check pattern from external device
+ set edata dstart
+ loop i 1 len 1
+   extcheck eaddr edata
+   set eaddr eaddr + 1
+   set edata edata + dinc
+ endloop 
+
+return sw;
+
+
+procedure tx_message_nochk rt sa len dstart dinc
+int cw; 
+int sw;   
+int len5;
+int eaddr;
+int edata;
+int i;
+int base;
+int addr;
+
+ print "Transmit Message"
+
+ # Create the data
+ set base RT * 0x01000000 + 0x10000000
+ set addr SA * 0x80 + 0x1000
+ fill x base addr len dstart dinc
+
+ set len5 len and 0x1F
+ set cw RT << 1 + 1 << 5 
+ set cw cw + SA << 5 
+ set cw cw + len5
+
+ extwrite 8 CWORD
+ extwrite 9 CW
+ extwrite 13 16
+
+ extwrite 1 8
+ extwrite 0 3
+ waitus 10
+ extwait 
+ extread 11 sw
+
+return sw;

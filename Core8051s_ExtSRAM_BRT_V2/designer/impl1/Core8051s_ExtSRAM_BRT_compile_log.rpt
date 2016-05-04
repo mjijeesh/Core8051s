@@ -1,0 +1,520 @@
+Microsemi Libero Software
+Version: 11.7.0.119
+Release: v11.7
+
+Created a new design.
+'BA_NAME' set to 'Core8051s_ExtSRAM_BRT_ba'
+'IDE_DESIGNERVIEW_NAME' set to 'Impl1'
+'IDE_DESIGNERVIEW_COUNT' set to '1'
+'IDE_DESIGNERVIEW_REV0' set to 'Impl1'
+'IDE_DESIGNERVIEW_REVNUM0' set to '1'
+'IDE_DESIGNERVIEW_ROOTDIR' set to
+'C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\designer'
+'IDE_DESIGNERVIEW_LASTREV' set to '1'
+'DESDIR' set to
+'C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/designer/impl\
+1'
+'BA_DIR' set to
+'C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/designer/impl\
+1'
+'BA_NETLIST_ALSO' set to '1'
+'EDNINFLAVOR' set to 'GENERIC'
+'NETLIST_NAMING_STYLE' set to 'VHDL93'
+'EXPORT_STATUS_REPORT' set to '1'
+'EXPORT_STATUS_REPORT_FILENAME' set to 'Core8051s_ExtSRAM_BRT.rpt'
+'AUDIT_NETLIST_FILE' set to '1'
+'AUDIT_DCF_FILE' set to '1'
+'AUDIT_PIN_FILE' set to '1'
+'AUDIT_ADL_FILE' set to '1'
+
+ Netlist Reading Time = 0.0 seconds
+Imported the files:
+
+C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\synthesis\Core\
+8051s_ExtSRAM_BRT.edn
+
+C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\constraint\Cor\
+e8051s_ExtSRAM_BRT.pdc
+
+The Import command succeeded ( 00:00:02 )
+Design saved to file Core8051s_ExtSRAM_BRT.adb.
+=====================================================================
+Parameters used to run compile:
+===============================
+
+Family      : Fusion
+Device      : M1AFS1500
+Package     : 484 FBGA
+Source      :
+C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\synthesis\Core\
+8051s_ExtSRAM_BRT.edn
+
+C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\constraint\Cor\
+e8051s_ExtSRAM_BRT.pdc
+Format      : EDIF
+Topcell     : Core8051s_ExtSRAM_BRT
+Speed grade : STD
+Temp        : 0:25:70
+Voltage     : 1.58:1.50:1.42
+
+Keep Existing Physical Constraints : No
+Keep Existing Timing Constraints   : Yes
+
+pdc_abort_on_error                 : Yes
+pdc_eco_display_unmatched_objects  : No
+pdc_eco_max_warnings               : 10000
+
+demote_globals                     : No
+promote_globals                    : No
+localclock_max_shared_instances    : 12
+localclock_buffer_tree_max_fanout  : 12
+
+combine_register                   : No
+delete_buffer_tree                 : No
+
+report_high_fanout_nets_limit      : 10
+
+=====================================================================
+Compile starts ...
+
+Info: BLK007: No CoreConsole Database file imported for an M1 device.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R2C0_DOUTA0 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R2C0_DOUTA1 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R2C0_DOUTA2 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R2C0_DOUTA3 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R2C0_DOUTA4 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R2C0_DOUTA5 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R2C0_DOUTA6 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R2C0_DOUTA7 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R2C0_DOUTA8 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R2C0_DOUTB8 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R0C0_DOUTA0 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R0C0_DOUTA1 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R0C0_DOUTA2 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R0C0_DOUTA3 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R0C0_DOUTA4 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R0C0_DOUTA5 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R0C0_DOUTA6 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R0C0_DOUTA7 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R0C0_DOUTA8 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R0C0_DOUTB8 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R3C0_DOUTA0 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R3C0_DOUTA1 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R3C0_DOUTA2 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R3C0_DOUTA3 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R3C0_DOUTA4 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R3C0_DOUTA5 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R3C0_DOUTA6 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R3C0_DOUTA7 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R3C0_DOUTA8 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R3C0_DOUTB8 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R4C0_DOUTA0 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R4C0_DOUTA1 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R4C0_DOUTA2 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R4C0_DOUTA3 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R4C0_DOUTA4 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R4C0_DOUTA5 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R4C0_DOUTA6 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R4C0_DOUTA7 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R4C0_DOUTA8 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R4C0_DOUTB8 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R6C0_DOUTA0 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R6C0_DOUTA1 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R6C0_DOUTA2 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R6C0_DOUTA3 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R6C0_DOUTA4 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R6C0_DOUTA5 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R6C0_DOUTA6 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R6C0_DOUTA7 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R6C0_DOUTA8 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R6C0_DOUTB8 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R7C0_DOUTA0 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R7C0_DOUTA1 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R7C0_DOUTA2 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R7C0_DOUTA3 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R7C0_DOUTA4 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R7C0_DOUTA5 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R7C0_DOUTA6 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R7C0_DOUTA7 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R7C0_DOUTA8 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R7C0_DOUTB8 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R5C0_DOUTA0 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R5C0_DOUTA1 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R5C0_DOUTA2 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R5C0_DOUTA3 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R5C0_DOUTA4 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R5C0_DOUTA5 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R5C0_DOUTA6 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R5C0_DOUTA7 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R5C0_DOUTA8 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R5C0_DOUTB8 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R1C0_DOUTA0 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R1C0_DOUTA1 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R1C0_DOUTA2 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R1C0_DOUTA3 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R1C0_DOUTA4 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R1C0_DOUTA5 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R1C0_DOUTA6 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R1C0_DOUTA7 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R1C0_DOUTA8 drives no load.
+Warning: CMP201: Net memory_mux_0/XDATA/RAM4Kx8_R1C0_DOUTB8 drives no load.
+Warning: CMP201: Net sys_0/CORE8051S_0/intram_instt_ram_internal_ram/RAM256X8_R0C0_DOUTA0 drives
+         no load.
+Warning: CMP201: Net sys_0/CORE8051S_0/intram_instt_ram_internal_ram/RAM256X8_R0C0_DOUTA1 drives
+         no load.
+Warning: CMP201: Net sys_0/CORE8051S_0/intram_instt_ram_internal_ram/RAM256X8_R0C0_DOUTA2 drives
+         no load.
+Warning: CMP201: Net sys_0/CORE8051S_0/intram_instt_ram_internal_ram/RAM256X8_R0C0_DOUTA3 drives
+         no load.
+Warning: CMP201: Net sys_0/CORE8051S_0/intram_instt_ram_internal_ram/RAM256X8_R0C0_DOUTA4 drives
+         no load.
+Warning: CMP201: Net sys_0/CORE8051S_0/intram_instt_ram_internal_ram/RAM256X8_R0C0_DOUTA5 drives
+         no load.
+Warning: CMP201: Net sys_0/CORE8051S_0/intram_instt_ram_internal_ram/RAM256X8_R0C0_DOUTA6 drives
+         no load.
+Warning: CMP201: Net sys_0/CORE8051S_0/intram_instt_ram_internal_ram/RAM256X8_R0C0_DOUTA7 drives
+         no load.
+Warning: CMP201: Net sys_0/CORE8051S_0/intram_instt_ram_internal_ram/RAM256X8_R0C0_DOUTA8 drives
+         no load.
+Warning: CMP201: Net sys_0/CORE8051S_0/intram_instt_ram_internal_ram/RAM256X8_R0C0_DOUTB8 drives
+         no load.
+Warning: CMP201: Net sys_0/COREAPBSRAM_0/gen_dwidth16_sram_block1/block0_DOUTA0 drives no load.
+Warning: CMP201: Net sys_0/COREAPBSRAM_0/gen_dwidth16_sram_block1/block0_DOUTA1 drives no load.
+Warning: CMP201: Net sys_0/COREAPBSRAM_0/gen_dwidth16_sram_block1/block0_DOUTA2 drives no load.
+Warning: CMP201: Net sys_0/COREAPBSRAM_0/gen_dwidth16_sram_block1/block0_DOUTA3 drives no load.
+Warning: CMP201: Net sys_0/COREAPBSRAM_0/gen_dwidth16_sram_block1/block0_DOUTA4 drives no load.
+Warning: CMP201: Net sys_0/COREAPBSRAM_0/gen_dwidth16_sram_block1/block0_DOUTA5 drives no load.
+Warning: CMP201: Net sys_0/COREAPBSRAM_0/gen_dwidth16_sram_block1/block0_DOUTA6 drives no load.
+Warning: CMP201: Net sys_0/COREAPBSRAM_0/gen_dwidth16_sram_block1/block0_DOUTA7 drives no load.
+Warning: CMP201: Net sys_0/COREAPBSRAM_0/gen_dwidth16_sram_block1/block0_DOUTA8 drives no load.
+Warning: CMP201: Net sys_0/COREAPBSRAM_0/gen_dwidth16_sram_block1/block0_DOUTB8 drives no load.
+Warning: CMP201: Net sys_0/COREAPBSRAM_0/gen_dwidth16_sram_block0/block0_DOUTA0_0 drives no
+         load.
+Warning: CMP201: Net sys_0/COREAPBSRAM_0/gen_dwidth16_sram_block0/block0_DOUTA1_0 drives no
+         load.
+Warning: CMP201: Net sys_0/COREAPBSRAM_0/gen_dwidth16_sram_block0/block0_DOUTA2_0 drives no
+         load.
+Warning: CMP201: Net sys_0/COREAPBSRAM_0/gen_dwidth16_sram_block0/block0_DOUTA3_0 drives no
+         load.
+Warning: CMP201: Net sys_0/COREAPBSRAM_0/gen_dwidth16_sram_block0/block0_DOUTA4_0 drives no
+         load.
+Warning: CMP201: Net sys_0/COREAPBSRAM_0/gen_dwidth16_sram_block0/block0_DOUTA5_0 drives no
+         load.
+Warning: CMP201: Net sys_0/COREAPBSRAM_0/gen_dwidth16_sram_block0/block0_DOUTA6_0 drives no
+         load.
+Warning: CMP201: Net sys_0/COREAPBSRAM_0/gen_dwidth16_sram_block0/block0_DOUTA7_0 drives no
+         load.
+Warning: CMP201: Net sys_0/COREAPBSRAM_0/gen_dwidth16_sram_block0/block0_DOUTA8_0 drives no
+         load.
+Warning: CMP201: Net sys_0/COREAPBSRAM_0/gen_dwidth16_sram_block0/block0_DOUTB8_0 drives no
+         load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C1_DOUTA2 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C1_DOUTA3 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C1_DOUTA4 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C1_DOUTA5 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C1_DOUTA6 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C1_DOUTA7 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C1_DOUTA8 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C1_DOUTB2 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C1_DOUTB3 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C1_DOUTB4 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C1_DOUTB5 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C1_DOUTB6 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C1_DOUTB7 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C1_DOUTB8 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C7_DOUTA2 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C7_DOUTA3 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C7_DOUTA4 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C7_DOUTA5 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C7_DOUTA6 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C7_DOUTA7 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C7_DOUTA8 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C7_DOUTB2 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C7_DOUTB3 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C7_DOUTB4 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C7_DOUTB5 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C7_DOUTB6 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C7_DOUTB7 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C7_DOUTB8 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C5_DOUTA2 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C5_DOUTA3 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C5_DOUTA4 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C5_DOUTA5 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C5_DOUTA6 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C5_DOUTA7 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C5_DOUTA8 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C5_DOUTB2 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C5_DOUTB3 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C5_DOUTB4 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C5_DOUTB5 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C5_DOUTB6 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C5_DOUTB7 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C5_DOUTB8 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C0_DOUTA2 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C0_DOUTA3 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C0_DOUTA4 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C0_DOUTA5 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C0_DOUTA6 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C0_DOUTA7 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C0_DOUTA8 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C0_DOUTB2 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C0_DOUTB3 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C0_DOUTB4 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C0_DOUTB5 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C0_DOUTB6 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C0_DOUTB7 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C0_DOUTB8 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C6_DOUTA2 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C6_DOUTA3 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C6_DOUTA4 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C6_DOUTA5 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C6_DOUTA6 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C6_DOUTA7 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C6_DOUTA8 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C6_DOUTB2 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C6_DOUTB3 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C6_DOUTB4 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C6_DOUTB5 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C6_DOUTB6 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C6_DOUTB7 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C6_DOUTB8 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C4_DOUTA2 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C4_DOUTA3 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C4_DOUTA4 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C4_DOUTA5 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C4_DOUTA6 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C4_DOUTA7 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C4_DOUTA8 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C4_DOUTB2 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C4_DOUTB3 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C4_DOUTB4 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C4_DOUTB5 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C4_DOUTB6 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C4_DOUTB7 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C4_DOUTB8 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C3_DOUTA2 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C3_DOUTA3 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C3_DOUTA4 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C3_DOUTA5 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C3_DOUTA6 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C3_DOUTA7 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C3_DOUTA8 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C3_DOUTB2 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C3_DOUTB3 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C3_DOUTB4 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C3_DOUTB5 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C3_DOUTB6 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C3_DOUTB7 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C3_DOUTB8 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C2_DOUTA2 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C2_DOUTA3 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C2_DOUTA4 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C2_DOUTA5 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C2_DOUTA6 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C2_DOUTA7 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C2_DOUTA8 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C2_DOUTB2 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C2_DOUTB3 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C2_DOUTB4 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C2_DOUTB5 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C2_DOUTB6 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C2_DOUTB7 drives no load.
+Warning: CMP201: Net sys_0/BRT_0_0/CORE1553BRT_APB_0/URAM/RAM2K16_R0C2_DOUTB8 drives no load.
+Warning: CMP201: Net PLL_50Mh_6Mh_0/Core_GLC drives no load.
+Warning: CMP201: Net PLL_50Mh_6Mh_0/LOCK drives no load.
+Warning: CMP201: Net PLL_50Mh_6Mh_0/Core_YB drives no load.
+Warning: CMP201: Net PLL_50Mh_6Mh_0/Core_YC drives no load.
+
+Netlist Optimization Report
+===========================
+
+Optimized macros:
+  - Dangling net drivers:   0
+  - Buffers:                0
+  - Inverters:              0
+  - Tieoff:                 0
+  - Logic combining:        275
+
+    Total macros optimized  275
+
+Warning: CMP503: Remapped 9 enable flip-flop(s) to a 2-tile implementation because the CLR/PRE
+         pin on the enable flip-flop is not being driven by a global net.
+
+There were 0 error(s) and 227 warning(s) in this design.
+=====================================================================
+
+Reading user pdc (Physical Design Constraints) file(s) postcompile
+
+
+There were 0 error(s) and 0 warning(s) in reading the user pdc.
+
+=====================================================================
+Compile report:
+===============
+
+    CORE                       Used:  10591  Total:  38400   (27.58%)
+    IO (W/ clocks)             Used:     77  Total:    223   (34.53%)
+    Differential IO            Used:      0  Total:    109   (0.00%)
+    GLOBAL (Chip+Quadrant)     Used:      6  Total:     18   (33.33%)
+    PLL                        Used:      1  Total:      2   (50.00%)
+    RAM/FIFO                   Used:     19  Total:     60   (31.67%)
+    Low Static ICC             Used:      0  Total:      1   (0.00%)
+    FlashROM                   Used:      0  Total:      1   (0.00%)
+    User JTAG                  Used:      1  Total:      1   (100.00%)
+    RC oscillator              Used:      1  Total:      1   (100.00%)
+    XTL oscillator             Used:      0  Total:      1   (0.00%)
+    NVM                        Used:      0  Total:      4   (0.00%)
+    AB                         Used:      0  Total:      1   (0.00%)
+    AnalogIO                   Used:      0  Total:     46   (0.00%)
+    VRPSM                      Used:      0  Total:      1   (0.00%)
+    No-Glitch MUX              Used:      0  Total:      2   (0.00%)
+
+Global Information:
+
+    Type            | Used   | Total
+    ----------------|--------|--------------
+    Chip global     | 6      | 6  (100.00%)*
+    Quadrant global | 0      | 12 (0.00%)
+
+    (*) Chip globals may be assigned to Quadrant globals using the Multi-View Navigator (MVN)
+        or Physical Design Constraints (PDC).
+        They may also be assigned to Quadrant globals automatically during Layout.
+
+Core Information:
+
+    Type    | Instances    | Core tiles
+    --------|--------------|-----------
+    COMB    | 8311         | 8311
+    SEQ     | 2280         | 2280
+
+I/O Function:
+
+    Type                                  | w/o register  | w/ register  | w/ DDR register
+    --------------------------------------|---------------|--------------|----------------
+    Input I/O                             | 14            | 0            | 0
+    Output I/O                            | 55            | 0            | 0
+    Bidirectional I/O                     | 8             | 0            | 0
+    Differential Input I/O Pairs          | 0             | 0            | 0
+    Differential Output I/O Pairs         | 0             | 0            | 0
+
+I/O Technology:
+
+                                    |   Voltages    |             I/Os
+    --------------------------------|-------|-------|-------|--------|--------------
+    I/O Standard(s)                 | Vcci  | Vref  | Input | Output | Bidirectional
+    --------------------------------|-------|-------|-------|--------|--------------
+    LVTTL                           | 3.30v | N/A   | 14    | 55     | 8
+
+I/O Placement:
+
+    Locked  :  77 ( 100.00% )
+    Placed  :   0
+    UnPlaced:   0
+
+Net information report:
+=======================
+
+The following nets drive enable flip-flops that have been remapped to a 2-tile implementation:
+    EffCnt  Type          Name
+    --------------------------
+    8       SET/RESET_NET Net   :
+sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/urstb_0
+                          Driver:
+sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst_RNI0ODD_0
+    1       SET/RESET_NET Net   : sys_0/CORE8051S_0_WDOGRESN
+                          Driver: sys_0/CORE8051S_0/MAIN8051_inst/U_RSTCTRL/WDOGRESN
+
+The following nets have been assigned to a chip global resource:
+    Fanout  Type          Name
+    --------------------------
+    1855    CLK_NET       Net   : GLA
+                          Driver: PLL_50Mh_6Mh_0/Core
+                          Source: ESSENTIAL
+    1358    SET/RESET_NET Net   : sys_0/Core8051s_00_PRESETN
+                          Driver: sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/nrsto_RNIBVGD/U_CLKSRC
+                          Source: NETLIST
+    413     CLK_NET       Net   : GLB
+                          Driver: PLL_50Mh_6Mh_0/Core
+                          Source: ESSENTIAL
+    354     SET/RESET_NET Net   : sys_0/BRT_0_0/CORE1553BRT_APB_0/U300/rstn
+                          Driver: sys_0/BRT_0_0/CORE1553BRT_APB_0/U300/RSTREG_RNIMDAR_0/U_CLKSRC
+                          Source: NETLIST
+    322     INT_NET       Net   : MEM_ADDR_c[2]
+                          Driver:
+sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/memaddr_i_RNI3GU5[2]/U_CLKSRC
+                          Source: NETLIST
+    211     SET/RESET_NET Net   : NSYSRESET_c
+                          Driver: NSYSRESET_pad
+                          Source: NETLIST
+
+High fanout nets in the post compile netlist:
+    Fanout  Type          Name
+    --------------------------
+    50      CLK_NET       Net   :
+sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/udrck
+                          Driver:
+sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst
+    24      INT_NET       Net   : MEM_ADDR_c[4]
+                          Driver: sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/memaddr_i[4]
+    24      INT_NET       Net   : MEM_ADDR_c_0[6]
+                          Driver: sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/memaddr_i_0[6]
+    24      INT_NET       Net   : MEM_ADDR_c_1[6]
+                          Driver: sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/memaddr_i_1[6]
+    24      INT_NET       Net   : MEM_ADDR_c_0[4]
+                          Driver: sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/memaddr_i_0[4]
+    24      INT_NET       Net   : MEM_ADDR_c_1[4]
+                          Driver: sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/memaddr_i_1[4]
+    24      INT_NET       Net   : MEM_ADDR_c_0[3]
+                          Driver: sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/memaddr_i_0[3]
+    24      INT_NET       Net   : MEM_ADDR_c_1[3]
+                          Driver: sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/memaddr_i_1[3]
+    24      INT_NET       Net   : MEM_ADDR_c_0[1]
+                          Driver: sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/memaddr_i_0[1]
+    24      INT_NET       Net   : MEM_ADDR_c_0[0]
+                          Driver: sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/memaddr_i_0[0]
+
+Nets that are candidates for clock assignment and the resulting fanout:
+    Fanout  Type          Name
+    --------------------------
+    51      SET/RESET_NET Net   :
+sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/urstb
+                          Driver:
+sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst
+    50      CLK_NET       Net   :
+sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/udrck
+                          Driver:
+sys_0/CORE8051S_0/oci1_trace0.ocia51_inst/ujtag1.jtagu_inst/UJTAG_inst
+    32      INT_NET       Net   : memory_mux_0/XDATA/Z\\ADDRB_FF2[0]\\
+                          Driver: memory_mux_0/XDATA/\\BFF1[0]\\
+    32      INT_NET       Net   : sys_0/BRT_0_0/CORE1553BRT_APB_0/U300/BUSAENC/STATE[0]
+                          Driver: sys_0/BRT_0_0/CORE1553BRT_APB_0/U300/BUSAENC/STATE[0]
+    27      INT_NET       Net   : sys_0/CoreAPB3_0_APBmslave0_PWRITE
+                          Driver: sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/pwrite_i
+    24      INT_NET       Net   : MEM_ADDR_c[4]
+                          Driver: sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/memaddr_i[4]
+    24      INT_NET       Net   : MEM_ADDR_c_0[6]
+                          Driver: sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/memaddr_i_0[6]
+    24      INT_NET       Net   : MEM_ADDR_c_1[6]
+                          Driver: sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/memaddr_i_1[6]
+    24      INT_NET       Net   : MEM_ADDR_c_0[4]
+                          Driver: sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/memaddr_i_0[4]
+    24      INT_NET       Net   : MEM_ADDR_c_1[4]
+                          Driver: sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/memaddr_i_1[4]
+
+The Compile command succeeded ( 00:00:05 )
+Wrote status report to file: Core8051s_ExtSRAM_BRT_compile_report.txt
+
+The Report command succeeded ( 00:00:00 )
+Wrote pin report to file: Core8051s_ExtSRAM_BRT_report_pin_byname.txt
+
+The Report command succeeded ( 00:00:02 )
+Wrote pin report to file: Core8051s_ExtSRAM_BRT_report_pin_bynumber.txt
+
+The Report command succeeded ( 00:00:01 )
+Design saved to file
+C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\designer\impl1\
+\Core8051s_ExtSRAM_BRT.adb.
+
+The Execute Script command succeeded ( 00:00:13 )
+Design closed.
+

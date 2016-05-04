@@ -1,0 +1,127 @@
+# Microsemi I/O Physical Design Constraints file
+# Auto Generated User I/O Constraints file
+
+# Version: v11.7 11.7.0.119
+# Family: Fusion , Die: M1AFS1500 , Package: 484 FBGA
+# Date generated: Tue May 03 12:11:17 2016 
+
+
+# 
+# User Groups
+# 
+
+define_group -name BRT_PHY
+
+
+# 
+# User Locked I/O Bank Settings
+# 
+
+
+# 
+# Unlocked I/O Bank Settings
+# The I/O Bank Settings can be locked by directly editing this file
+# or by making changes in the I/O Attribute Editor
+# 
+
+
+# 
+# User Locked I/O settings
+# 
+
+
+# 
+# Dedicated Peripheral I/O Settings
+# 
+
+
+# 
+# Unlocked I/O settings
+# The I/Os in this section are unplaced or placed but are not locked
+# the other listed attributes have been applied
+# 
+
+# User Group BRT_PHY
+
+set_io BUSAINEN          \
+    -GROUP_NAME BRT_PHY  \
+    -DIRECTION OUTPUT
+
+
+set_io BUSAINN           \
+    -GROUP_NAME BRT_PHY  \
+    -DIRECTION INPUT
+
+
+set_io BUSAINP           \
+    -GROUP_NAME BRT_PHY  \
+    -DIRECTION INPUT
+
+
+set_io BUSAOUTIN         \
+    -GROUP_NAME BRT_PHY  \
+    -DIRECTION OUTPUT
+
+
+set_io BUSAOUTN          \
+    -GROUP_NAME BRT_PHY  \
+    -DIRECTION OUTPUT
+
+
+set_io BUSAOUTP          \
+    -GROUP_NAME BRT_PHY  \
+    -DIRECTION OUTPUT
+
+
+set_io BUSBINEN          \
+    -GROUP_NAME BRT_PHY  \
+    -DIRECTION OUTPUT
+
+
+set_io BUSBINN           \
+    -GROUP_NAME BRT_PHY  \
+    -DIRECTION INPUT
+
+
+set_io BUSBINP           \
+    -GROUP_NAME BRT_PHY  \
+    -DIRECTION INPUT
+
+
+set_io BUSBOUTIN         \
+    -GROUP_NAME BRT_PHY  \
+    -DIRECTION OUTPUT
+
+
+set_io BUSBOUTN          \
+    -GROUP_NAME BRT_PHY  \
+    -DIRECTION OUTPUT
+
+
+set_io BUSBOUTP          \
+    -GROUP_NAME BRT_PHY  \
+    -DIRECTION OUTPUT
+
+
+
+#
+# Non IO constraints
+#
+
+
+#
+# Old IO constraints, commented out for reference
+#
+
+# set_io BUSAINEN -GROUP_NAME BRT_PHY -DIRECTION OUTPUT 
+# set_io BUSAINN -GROUP_NAME BRT_PHY -DIRECTION INPUT 
+# set_io BUSAINP -GROUP_NAME BRT_PHY -DIRECTION INPUT 
+# set_io BUSAOUTIN -GROUP_NAME BRT_PHY -DIRECTION OUTPUT 
+# set_io BUSAOUTN -GROUP_NAME BRT_PHY -DIRECTION OUTPUT 
+# set_io BUSAOUTP -GROUP_NAME BRT_PHY -DIRECTION OUTPUT 
+# set_io BUSBINEN -GROUP_NAME BRT_PHY -DIRECTION OUTPUT 
+# set_io BUSBINN -GROUP_NAME BRT_PHY -DIRECTION INPUT 
+# set_io BUSBINP -GROUP_NAME BRT_PHY -DIRECTION INPUT 
+# set_io BUSBOUTIN -GROUP_NAME BRT_PHY -DIRECTION OUTPUT 
+# set_io BUSBOUTN -GROUP_NAME BRT_PHY -DIRECTION OUTPUT 
+# set_io BUSBOUTP -GROUP_NAME BRT_PHY -DIRECTION OUTPUT 

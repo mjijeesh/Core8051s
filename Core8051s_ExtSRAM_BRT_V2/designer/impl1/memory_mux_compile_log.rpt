@@ -1,0 +1,239 @@
+Microsemi Libero Software
+Version: 11.7.0.119
+Release: v11.7
+
+Created a new design.
+'BA_NAME' set to 'memory_mux_ba'
+'IDE_DESIGNERVIEW_NAME' set to 'Impl1'
+'IDE_DESIGNERVIEW_COUNT' set to '1'
+'IDE_DESIGNERVIEW_REV0' set to 'Impl1'
+'IDE_DESIGNERVIEW_REVNUM0' set to '1'
+'IDE_DESIGNERVIEW_ROOTDIR' set to
+'C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\designer'
+'IDE_DESIGNERVIEW_LASTREV' set to '1'
+'DESDIR' set to
+'C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/designer/impl\
+1'
+'BA_DIR' set to
+'C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/designer/impl\
+1'
+'BA_NETLIST_ALSO' set to '1'
+'EDNINFLAVOR' set to 'GENERIC'
+'NETLIST_NAMING_STYLE' set to 'VHDL93'
+'EXPORT_STATUS_REPORT' set to '1'
+'EXPORT_STATUS_REPORT_FILENAME' set to 'memory_mux.rpt'
+'AUDIT_NETLIST_FILE' set to '1'
+'AUDIT_DCF_FILE' set to '1'
+'AUDIT_PIN_FILE' set to '1'
+'AUDIT_ADL_FILE' set to '1'
+
+ Netlist Reading Time = 0.0 seconds
+Imported the files:
+
+C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\synthesis\memo\
+ry_mux.edn
+
+C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\constraint\Cor\
+e8051s_ExtSRAM_BRT.pdc
+
+The Import command succeeded ( 00:00:01 )
+Design saved to file memory_mux.adb.
+=====================================================================
+Parameters used to run compile:
+===============================
+
+Family      : Fusion
+Device      : M1AFS1500
+Package     : 484 FBGA
+Source      :
+C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\synthesis\memo\
+ry_mux.edn
+
+C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\constraint\Cor\
+e8051s_ExtSRAM_BRT.pdc
+Format      : EDIF
+Topcell     : memory_mux
+Speed grade : STD
+Temp        : 0:25:70
+Voltage     : 1.58:1.50:1.42
+
+Keep Existing Physical Constraints : No
+Keep Existing Timing Constraints   : Yes
+
+pdc_abort_on_error                 : Yes
+pdc_eco_display_unmatched_objects  : No
+pdc_eco_max_warnings               : 10000
+
+demote_globals                     : No
+promote_globals                    : No
+localclock_max_shared_instances    : 12
+localclock_buffer_tree_max_fanout  : 12
+
+combine_register                   : No
+delete_buffer_tree                 : No
+
+report_high_fanout_nets_limit      : 10
+
+=====================================================================
+Compile starts ...
+
+Info: BLK007: No CoreConsole Database file imported for an M1 device.
+Warning: CMP201: Net XDATA/RAM4Kx8_R2C0_DOUTA0 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R2C0_DOUTA1 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R2C0_DOUTA2 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R2C0_DOUTA3 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R2C0_DOUTA4 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R2C0_DOUTA5 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R2C0_DOUTA6 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R2C0_DOUTA7 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R2C0_DOUTA8 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R2C0_DOUTB8 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R0C0_DOUTA0 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R0C0_DOUTA1 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R0C0_DOUTA2 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R0C0_DOUTA3 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R0C0_DOUTA4 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R0C0_DOUTA5 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R0C0_DOUTA6 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R0C0_DOUTA7 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R0C0_DOUTA8 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R0C0_DOUTB8 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R3C0_DOUTA0 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R3C0_DOUTA1 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R3C0_DOUTA2 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R3C0_DOUTA3 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R3C0_DOUTA4 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R3C0_DOUTA5 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R3C0_DOUTA6 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R3C0_DOUTA7 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R3C0_DOUTA8 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R3C0_DOUTB8 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R4C0_DOUTA0 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R4C0_DOUTA1 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R4C0_DOUTA2 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R4C0_DOUTA3 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R4C0_DOUTA4 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R4C0_DOUTA5 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R4C0_DOUTA6 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R4C0_DOUTA7 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R4C0_DOUTA8 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R4C0_DOUTB8 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R6C0_DOUTA0 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R6C0_DOUTA1 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R6C0_DOUTA2 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R6C0_DOUTA3 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R6C0_DOUTA4 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R6C0_DOUTA5 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R6C0_DOUTA6 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R6C0_DOUTA7 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R6C0_DOUTA8 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R6C0_DOUTB8 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R7C0_DOUTA0 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R7C0_DOUTA1 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R7C0_DOUTA2 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R7C0_DOUTA3 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R7C0_DOUTA4 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R7C0_DOUTA5 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R7C0_DOUTA6 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R7C0_DOUTA7 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R7C0_DOUTA8 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R7C0_DOUTB8 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R5C0_DOUTA0 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R5C0_DOUTA1 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R5C0_DOUTA2 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R5C0_DOUTA3 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R5C0_DOUTA4 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R5C0_DOUTA5 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R5C0_DOUTA6 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R5C0_DOUTA7 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R5C0_DOUTA8 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R5C0_DOUTB8 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R1C0_DOUTA0 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R1C0_DOUTA1 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R1C0_DOUTA2 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R1C0_DOUTA3 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R1C0_DOUTA4 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R1C0_DOUTA5 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R1C0_DOUTA6 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R1C0_DOUTA7 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R1C0_DOUTA8 drives no load.
+Warning: CMP201: Net XDATA/RAM4Kx8_R1C0_DOUTB8 drives no load.
+
+Netlist Optimization Report
+===========================
+
+Optimized macros:
+  - Dangling net drivers:   0
+  - Buffers:                0
+  - Inverters:              0
+  - Tieoff:                 0
+  - Logic combining:        0
+
+    Total macros optimized  0
+
+There were 0 error(s) and 80 warning(s) in this design.
+=====================================================================
+
+Reading user pdc (Physical Design Constraints) file(s) postcompile
+
+Error: PDC-01: port name doesn't exist in the netlist or is not connected to an IoCell macro at
+       PDC Line : set_io LED[0] -pinname J2 -fixed yes -DIRECTION Output
+Error: PDC-01: port name doesn't exist in the netlist or is not connected to an IoCell macro at
+       PDC Line : set_io LED[1] -pinname J3 -fixed yes -DIRECTION Output
+Error: PDC-01: port name doesn't exist in the netlist or is not connected to an IoCell macro at
+       PDC Line : set_io LED[2] -pinname J4 -fixed yes -DIRECTION Output
+Error: PDC-01: port name doesn't exist in the netlist or is not connected to an IoCell macro at
+       PDC Line : set_io LED[3] -pinname M7 -fixed yes -DIRECTION Output
+Error: PDC-01: port name doesn't exist in the netlist or is not connected to an IoCell macro at
+       PDC Line : set_io LED[4] -pinname K4 -fixed yes -DIRECTION Output
+Error: PDC-01: port name doesn't exist in the netlist or is not connected to an IoCell macro at
+       PDC Line : set_io LED[5] -pinname L5 -fixed yes -DIRECTION Output
+Error: PDC-01: port name doesn't exist in the netlist or is not connected to an IoCell macro at
+       PDC Line : set_io LED[6] -pinname L7 -fixed yes -DIRECTION Output
+Error: PDC-01: port name doesn't exist in the netlist or is not connected to an IoCell macro at
+       PDC Line : set_io LED[7] -pinname M5 -fixed yes -DIRECTION Output
+Error: PDC-01: port name doesn't exist in the netlist or is not connected to an IoCell macro at
+       PDC Line : set_io NSYSRESET -pinname H19 -fixed yes -DIRECTION Input
+Error: PDC-01: port name doesn't exist in the netlist or is not connected to an IoCell macro at
+       PDC Line : set_io SWITCH[0] -pinname R2 -fixed yes -DIRECTION Input
+Error: PDC-01: port name doesn't exist in the netlist or is not connected to an IoCell macro at
+       PDC Line : set_io SWITCH[1] -pinname P1 -fixed yes -DIRECTION Input
+Error: PDC-01: port name doesn't exist in the netlist or is not connected to an IoCell macro at
+       PDC Line : set_io SWITCH[2] -pinname P2 -fixed yes -DIRECTION Input
+Error: PDC-01: port name doesn't exist in the netlist or is not connected to an IoCell macro at
+       PDC Line : set_io SWITCH[3] -pinname L1 -fixed yes -DIRECTION Input
+Error: PDC-01: port name doesn't exist in the netlist or is not connected to an IoCell macro at
+       PDC Line : set_io SWITCH[4] -pinname K1 -fixed yes -DIRECTION Input
+Error: PDC-01: port name doesn't exist in the netlist or is not connected to an IoCell macro at
+       PDC Line : set_io SWITCH[5] -pinname R1 -fixed yes -DIRECTION Input
+Error: PDC-01: port name doesn't exist in the netlist or is not connected to an IoCell macro at
+       PDC Line : set_io SWITCH[6] -pinname N3 -fixed yes -DIRECTION Input
+Error: PDC-01: port name doesn't exist in the netlist or is not connected to an IoCell macro at
+       PDC Line : set_io SWITCH[7] -pinname K3 -fixed yes -DIRECTION Input
+Error: PDC-01: port name doesn't exist in the netlist or is not connected to an IoCell macro at
+       PDC Line : set_io UART_RX -pinname M1 -fixed yes -DIRECTION Input
+Error: PDC-01: port name doesn't exist in the netlist or is not connected to an IoCell macro at
+       PDC Line : set_io UART_TX -pinname N1 -fixed yes -DIRECTION Output
+Error: PDC-01: port name doesn't exist in the netlist or is not connected to an IoCell macro at
+       PDC Line : set_io BUSAINEN -pinname B9 -fixed yes -DIRECTION Output
+Error: PDC-01: port name doesn't exist in the netlist or is not connected to an IoCell macro at
+       PDC Line : set_io BUSAINN -pinname G12 -fixed yes -DIRECTION Input
+Error: PDC-01: port name doesn't exist in the netlist or is not connected to an IoCell macro at
+       PDC Line : set_io BUSAINP -pinname A4 -fixed yes -DIRECTION Input
+Error: PDC-01: port name doesn't exist in the netlist or is not connected to an IoCell macro at
+       PDC Line : set_io BUSAOUTIN -pinname D10 -fixed yes -DIRECTION Output
+Error: PDC-01: port name doesn't exist in the netlist or is not connected to an IoCell macro at
+       PDC Line : set_io BUSAOUTN -pinname B11 -fixed yes -DIRECTION Output
+Error: PDC-01: port name doesn't exist in the netlist or is not connected to an IoCell macro at
+       PDC Line : set_io BUSAOUTP -pinname B5 -fixed yes -DIRECTION Output
+
+There were 31 error(s) and 0 warning(s) in reading the user pdc.
+
+
+The Compile command failed ( 00:00:00 )
+Error: Failure when executing Tcl script. [ Line 54 ]
+
+The Execute Script command failed ( 00:00:04 )
+Warning: The database was closed without a save, modifications are lost
+Design closed.
+

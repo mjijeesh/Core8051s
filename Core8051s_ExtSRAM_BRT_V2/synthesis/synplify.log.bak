@@ -1,0 +1,101 @@
+sourcing C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\message_override.tcl
+
+
+Starting:    C:\Microsemi\Libero_SoC_v11.7\Synplify\bin64\mbin\synbatch.exe
+Install:     C:\Microsemi\Libero_SoC_v11.7\Synplify
+Hostname:    JIJEESH-PC
+Date:        Tue May 03 11:51:24 2016
+Version:     J-2015.03M-SP1-2
+
+Arguments:   -product synplify_pro -licensetype synplifypro_actel -batch -log synplify.log memory_mux_syn.tcl
+ProductType: synplify_pro
+
+License checkout: synplifypro_actel
+License: synplifypro_actel node-locked 
+Licensed Vendor: actel
+License Option: actel_oem
+
+Running in Vendor Mode
+
+
+ is invalid value for opcond
+valid settings: Default COM-WC IND-WC MIL-WC COMWC COMTC COMBC INDWC INDTC INDBC MILWC MILTC MILBC TGrade1WC TGrade1TC TGrade1BC TGrade2WC TGrade2TC TGrade2BC
+Implementation not found: synthesis
+
+log file: "C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\synthesis\memory_mux.srr"
+
+Running: synthesis in foreground
+
+
+
+Running memory_mux_syn|synthesis
+
+
+Running: compile (Compile) on memory_mux_syn|synthesis
+
+
+Running: compile_flow (Compile Process) on memory_mux_syn|synthesis
+
+
+Running: compiler (Compile Input) on memory_mux_syn|synthesis
+
+Copied C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\synthesis\synwork\memory_mux_comp.srs to C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\synthesis\memory_mux.srs
+
+
+compiler Completed
+Return Code: 0
+Run Time:0h:00m:02s
+
+
+Running: multi_srs_gen (Multi-srs Generator) on memory_mux_syn|synthesis
+
+Copied C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\synthesis\synwork\memory_mux_comp.srs to C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\synthesis\synwork\memory_mux_s.srs
+
+
+multi_srs_gen Completed
+Return Code: 0
+Run Time:0h:00m:00s
+
+Copied C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\synthesis\synwork\memory_mux_mult.srs to C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\synthesis\memory_mux.srs
+
+Complete: Compile Process on memory_mux_syn|synthesis
+
+
+Running: premap (Pre-mapping) on memory_mux_syn|synthesis
+
+Copied C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\synthesis\memory_mux.sap to C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\synthesis\synwork\memory_mux_s.sap
+
+
+premap Completed with warnings
+Return Code: 1
+Run Time:0h:00m:00s
+
+Complete: Compile on memory_mux_syn|synthesis
+
+
+Running: map (Map) on memory_mux_syn|synthesis
+
+
+Running: fpga_mapper (Map & Optimize) on memory_mux_syn|synthesis
+
+Copied C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\synthesis\synwork\memory_mux_m.srm to C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\synthesis\memory_mux.srm
+
+
+fpga_mapper Completed with warnings
+Return Code: 1
+Run Time:0h:00m:01s
+
+Complete: Map on memory_mux_syn|synthesis
+
+Complete: Logic Synthesis on memory_mux_syn|synthesis
+
+Copied C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\synthesis\memory_mux.srr to C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\synthesis\backup\memory_mux.srr
+
+TCL script complete: "memory_mux_syn.tcl"
+
+exit status=0
+
+exit status=0
+
+License checkin: synplifypro_actel
+

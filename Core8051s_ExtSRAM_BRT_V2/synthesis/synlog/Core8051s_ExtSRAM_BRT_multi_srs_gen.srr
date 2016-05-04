@@ -1,0 +1,10 @@
+Synopsys Netlist Linker, version comp201503sp1p1, Build 240R, built Dec  1 2015
+@N|Running in 64-bit mode
+File C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\synthesis\synwork\Core8051s_ExtSRAM_BRT_comp.srs changed - recompiling
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 83MB peak: 84MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Tue May 03 13:34:18 2016
+
+###########################################################]

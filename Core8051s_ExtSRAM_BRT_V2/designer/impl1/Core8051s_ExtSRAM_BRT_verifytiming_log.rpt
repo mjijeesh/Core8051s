@@ -1,0 +1,35 @@
+Microsemi Libero Software
+Version: 11.7.0.119
+Release: v11.7
+
+Info: The design Core8051s_ExtSRAM_BRT.adb was last modified by software version 11.7.0.119.
+Opened an existing Libero design Core8051s_ExtSRAM_BRT.adb.
+'BA_NAME' set to 'Core8051s_ExtSRAM_BRT_ba'
+'IDE_DESIGNERVIEW_NAME' set to 'Impl1'
+'IDE_DESIGNERVIEW_COUNT' set to '1'
+'IDE_DESIGNERVIEW_REV0' set to 'Impl1'
+'IDE_DESIGNERVIEW_REVNUM0' set to '1'
+'IDE_DESIGNERVIEW_ROOTDIR' set to
+'C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\designer'
+'IDE_DESIGNERVIEW_LASTREV' set to '1'
+Wrote timing report to file: Core8051s_ExtSRAM_BRT_maxdelay_timing_report.txt
+
+The Report command succeeded ( 00:00:14 )
+Wrote timing report to file: Core8051s_ExtSRAM_BRT_mindelay_timing_report.txt
+
+The Report command succeeded ( 00:00:03 )
+Wrote timing_violations report to file:
+Core8051s_ExtSRAM_BRT_maxdelay_timingviolations_report.txt
+
+The Report command succeeded ( 00:00:00 )
+Wrote timing_violations report to file:
+Core8051s_ExtSRAM_BRT_mindelay_timingviolations_report.txt
+
+The Report command succeeded ( 00:00:01 )
+Design saved to file
+C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\designer\impl1\
+\Core8051s_ExtSRAM_BRT.adb.
+
+The Execute Script command succeeded ( 00:00:21 )
+Design closed.
+

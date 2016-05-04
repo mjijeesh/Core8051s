@@ -1,0 +1,20 @@
+Microsemi Corporation - Microsemi Libero Software Release v11.7 (Version 11.7.0.119)
+
+Date      :  Tue May 03 13:33:33 2016
+Project   :  C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2
+Component :  BRT_0
+Family    :  Fusion
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE1553BRT_APB/3.2.122/rtl/vhdl/amba/Core1553BRT_apb.vhd
+    C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE1553BRT_APB/3.2.122/rtl/vhdl/amba/components.vhd
+    C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE1553BRT_APB/3.2.122/rtl/vhdl/amba/ram2k16_fusion.vhd
+    C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE1553BRT_APB/3.2.122/rtl/vhdl/core300/RT1553B.vhd
+    C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE1553BRT_APB/3.2.122/rtl/vhdl/core300/backend.vhd
+    C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE1553BRT_APB/3.2.122/rtl/vhdl/core300/cwlegality.vhd
+    C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE1553BRT_APB/3.2.122/rtl/vhdl/core300/decoder.vhd
+    C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE1553BRT_APB/3.2.122/rtl/vhdl/core300/encoder.vhd
+    C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE1553BRT_APB/3.2.122/rtl/vhdl/core300/rtcomps.vhd
+    C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/work/BRT_0/BRT_0.vhd
+

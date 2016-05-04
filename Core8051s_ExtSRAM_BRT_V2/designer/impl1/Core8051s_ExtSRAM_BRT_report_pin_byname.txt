@@ -1,0 +1,94 @@
+*****************************************************************
+Pin Report - Date: Tue May 03 13:43:51 2016 Pinchecksum: NOT-AVAILABLE
+Product: Designer
+Release: v11.7
+Version: 11.7.0.119
+Design Name: Core8051s_ExtSRAM_BRT
+Family: Fusion
+Die: M1AFS1500
+Package: 484 FBGA
+*****************************************************************
+Port          |Pin |Fixed |Function         |I/O Std |Output Drive (mA) |Slew |Resistor Pull |Schmitt Trigger |Input Delay |Skew |Output Load (pF) |Use I/O Reg |Hot Swappable |
+--------------|----|------|-----------------|--------|------------------|-----|--------------|----------------|------------|-----|-----------------|------------|--------------|
+BUSAINEN       B9   Yes    IO11PDB0V1        LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+BUSAINN        G12  Yes    IO16PDB0V2        LVTTL    ---                ---   None           No               Off          ---   ---               No           Yes
+BUSAINP        A4   Yes    GAB0/IO02NDB0V0   LVTTL    ---                ---   None           No               Off          ---   ---               No           Yes
+BUSAOUTIN      D10  Yes    IO14NDB0V2        LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+BUSAOUTN       B11  Yes    IO24NDB1V0        LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+BUSAOUTP       B5   Yes    IO04NDB0V0        LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+BUSBINEN       D9   Yes    IO10PDB0V1        LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+BUSBINN        D11  Yes    IO23NDB1V0        LVTTL    ---                ---   None           No               Off          ---   ---               No           Yes
+BUSBINP        A11  Yes    IO24PDB1V0        LVTTL    ---                ---   None           No               Off          ---   ---               No           Yes
+BUSBOUTIN      G10  Yes    IO06PDB0V1        LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+BUSBOUTN       A10  Yes    IO13PDB0V2        LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+BUSBOUTP       E11  Yes    IO22NDB1V0        LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+DebugIf_TCK    W20  Fixed  TCK
+DebugIf_TDI    U17  Fixed  TDI
+DebugIf_TDO    V22  Fixed  TDO
+DebugIf_TMS    V18  Fixed  TMS
+DebugIf_TRSTN  V21  Fixed  TRST
+FLASH_BYTEn    F19  Yes    IO49NDB2V0        LVTTL    12                 High  None           ---              ---          No    35                No           No
+FLASH_CEn      K17  Yes    IO58PDB2V0        LVTTL    12                 High  None           ---              ---          No    35                No           No
+FLASH_OEn      G13  Yes    IO28NDB1V1        LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+FLASH_RPn      H17  Yes    IO53NDB2V0        LVTTL    12                 High  None           ---              ---          No    35                No           No
+FLASH_VPEN     J17  Yes    IO58NDB2V0        LVTTL    12                 High  None           ---              ---          No    35                No           No
+FLASH_WEn      E12  Yes    IO22PDB1V0        LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+LED[0]         J2   Yes    IO113NDB4V0       LVTTL    12                 High  None           ---              ---          No    35                No           No
+LED[1]         J3   Yes    GFB2/IO109PDB4V0  LVTTL    12                 High  None           ---              ---          No    35                No           No
+LED[2]         J4   Yes    GFA2/IO110PDB4V0  LVTTL    12                 High  None           ---              ---          No    35                No           No
+LED[3]         M7   Yes    GFB0/IO106NDB4V0  LVTTL    12                 High  None           ---              ---          No    35                No           No
+LED[4]         K4   Yes    IO110NDB4V0       LVTTL    12                 High  None           ---              ---          No    35                No           No
+LED[5]         L5   Yes    GFC1/IO107PDB4V0  LVTTL    12                 High  None           ---              ---          No    35                No           No
+LED[6]         L7   Yes    GFB1/IO106PDB4V0  LVTTL    12                 High  None           ---              ---          No    35                No           No
+LED[7]         M5   Yes    GFC0/IO107NDB4V0  LVTTL    12                 High  None           ---              ---          No    35                No           No
+MEM_ADDR[0]    E19  Yes    IO49PDB2V0        LVTTL    12                 High  None           ---              ---          No    35                No           No
+MEM_ADDR[1]    E22  Yes    GBC2/IO46PDB2V0   LVTTL    12                 High  None           ---              ---          No    35                No           No
+MEM_ADDR[2]    F20  Yes    IO50PDB2V0        LVTTL    12                 High  None           ---              ---          No    35                No           No
+MEM_ADDR[3]    F21  Yes    IO50NDB2V0        LVTTL    12                 High  None           ---              ---          No    35                No           No
+MEM_ADDR[4]    F22  Yes    IO51PDB2V0        LVTTL    12                 High  None           ---              ---          No    35                No           No
+MEM_ADDR[5]    B18  Yes    GBA1/IO42PDB1V2   LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+MEM_ADDR[6]    B17  Yes    GBC1/IO40PDB1V2   LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+MEM_ADDR[7]    C16  Yes    IO37NDB1V2        LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+MEM_ADDR[8]    B15  Yes    IO31PDB1V1        LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+MEM_ADDR[9]    B14  Yes    IO31NDB1V1        LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+MEM_ADDR[10]   C22  Yes    GBB2/IO45PDB2V0   LVTTL    12                 High  None           ---              ---          No    35                No           No
+MEM_ADDR[11]   C21  Yes    IO48PSB2V0        LVTTL    12                 High  None           ---              ---          No    35                No           No
+MEM_ADDR[12]   A18  Yes    GBA0/IO42NDB1V2   LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+MEM_ADDR[13]   A17  Yes    GBC0/IO40NDB1V2   LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+MEM_ADDR[14]   A16  Yes    IO35PDB1V2        LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+MEM_ADDR[15]   B12  Yes    IO26NDB1V0        LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+MEM_ADDR[16]   A12  Yes    IO26PDB1V0        LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+MEM_ADDR[17]   A13  Yes    IO27NDB1V1        LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+MEM_ADDR[18]   A14  Yes    IO27PDB1V1        LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+MEM_ADDR[19]   A15  Yes    IO35NDB1V2        LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+MEM_ADDR[20]   C14  Yes    IO29PDB1V1        LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+MEM_ADDR[21]   C13  Yes    IO29NDB1V1        LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+MEM_ADDR[22]   D12  Yes    IO23PDB1V0        LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+MEM_ADDR[23]   J7   Yes    IO111PDB4V0       LVTTL    12                 High  None           ---              ---          No    35                No           No
+MEM_DATA[0]    D19  Yes    IO47PPB2V0        LVTTL    12                 High  None           No               Off          No    35                No           No
+MEM_DATA[1]    D17  Yes    GBB1/IO41PDB1V2   LVTTL    12                 High  None           No               Off          No    35                No           Yes
+MEM_DATA[2]    D16  Yes    IO37PDB1V2        LVTTL    12                 High  None           No               Off          No    35                No           Yes
+MEM_DATA[3]    G17  Yes    IO53PDB2V0        LVTTL    12                 High  None           No               Off          No    35                No           No
+MEM_DATA[4]    G16  Yes    IO38PPB1V2        LVTTL    12                 High  None           No               Off          No    35                No           Yes
+MEM_DATA[5]    E15  Yes    IO36NPB1V2        LVTTL    12                 High  None           No               Off          No    35                No           Yes
+MEM_DATA[6]    D14  Yes    IO34NDB1V1        LVTTL    12                 High  None           No               Off          No    35                No           Yes
+MEM_DATA[7]    F14  Yes    IO30PDB1V1        LVTTL    12                 High  None           No               Off          No    35                No           Yes
+NSYSRESET      H19  Yes    GCA2/IO59PDB2V0   LVTTL    ---                ---   None           No               Off          ---   ---               No           No
+SRAM_BHEn0     G20  Yes    IO52NDB2V0        LVTTL    12                 High  None           ---              ---          No    35                No           No
+SRAM_BHEn1     N22  Yes    IO71PDB2V0        LVTTL    12                 High  None           ---              ---          No    35                No           No
+SRAM_BLEn0     J18  Yes    IO57NDB2V0        LVTTL    12                 High  None           ---              ---          No    35                No           No
+SRAM_BLEn1     N20  Yes    IO72PDB2V0        LVTTL    12                 High  None           ---              ---          No    35                No           No
+SRAM_CE2       H18  Yes    IO57PDB2V0        LVTTL    12                 High  None           ---              ---          No    35                No           No
+SRAM_CEn1      J19  Yes    IO59NDB2V0        LVTTL    12                 High  None           ---              ---          No    35                No           No
+SRAM_OEn       K16  Yes    IO60NDB2V0        LVTTL    12                 High  None           ---              ---          No    35                No           No
+SRAM_WEn       E21  Yes    IO46NDB2V0        LVTTL    12                 High  None           ---              ---          No    35                No           No
+SWITCH[0]      R2   Yes    IO102NDB4V0       LVTTL    ---                ---   None           No               Off          ---   ---               No           No
+SWITCH[1]      P1   Yes    GFA1/IO105PDB4V0  LVTTL    ---                ---   None           No               Off          ---   ---               No           No
+SWITCH[2]      P2   Yes    GFA0/IO105NDB4V0  LVTTL    ---                ---   None           No               Off          ---   ---               No           No
+SWITCH[3]      L1   Yes    IO108NDB4V0       LVTTL    ---                ---   None           No               Off          ---   ---               No           No
+SWITCH[4]      K1   Yes    GFC2/IO108PDB4V0  LVTTL    ---                ---   None           No               Off          ---   ---               No           No
+SWITCH[5]      R1   Yes    IO102PDB4V0       LVTTL    ---                ---   None           No               Off          ---   ---               No           No
+SWITCH[6]      N3   Yes    IO101PDB4V0       LVTTL    ---                ---   None           No               Off          ---   ---               No           No
+SWITCH[7]      K3   Yes    IO109NDB4V0       LVTTL    ---                ---   None           No               Off          ---   ---               No           No
+UART_RX        M1   Yes    IO103PDB4V0       LVTTL    ---                ---   None           No               Off          ---   ---               No           No
+UART_TX        N1   Yes    IO103NDB4V0       LVTTL    12                 High  None           ---              ---          No    35                No           No

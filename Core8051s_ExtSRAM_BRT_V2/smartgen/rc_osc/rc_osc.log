@@ -1,0 +1,45 @@
+ ** Message System Log
+ ** Database: 
+ ** Date:   Fri Apr 29 17:26:51 2016
+
+
+****************
+Macro Parameters
+****************
+
+Name                            : rc_osc
+Family                          : PA3SOC
+Output Format                   : VHDL
+Type                            : RC Oscillator
+Drive Mode                      : CCC Macros
+
+**************
+Compile Report
+**************
+
+Info:  BLK007: No CoreConsole Database file imported for an M1 device.
+
+Netlist Resource Report
+=======================
+
+    CORE                       Used:      0  Total:  38400   (0.00%)
+    IO (W/ clocks)             Used:      0  Total:    223   (0.00%)
+    Differential IO            Used:      0  Total:    109   (0.00%)
+    GLOBAL (Chip+Quadrant)     Used:      0  Total:     18   (0.00%)
+    PLL                        Used:      0  Total:      2   (0.00%)
+    RAM/FIFO                   Used:      0  Total:     60   (0.00%)
+    Low Static ICC             Used:      0  Total:      1   (0.00%)
+    FlashROM                   Used:      0  Total:      1   (0.00%)
+    User JTAG                  Used:      0  Total:      1   (0.00%)
+    RC oscillator              Used:      1  Total:      1   (100.00%)
+    XTL oscillator             Used:      0  Total:      1   (0.00%)
+    NVM                        Used:      0  Total:      4   (0.00%)
+    AB                         Used:      0  Total:      1   (0.00%)
+    AnalogIO                   Used:      0  Total:     46   (0.00%)
+    VRPSM                      Used:      0  Total:      1   (0.00%)
+    No-Glitch MUX              Used:      0  Total:      2   (0.00%)
+
+Wrote VHDL netlist to C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051_Ext_SRAM_Int_XData/smartgen\rc_osc\rc_osc.vhd.
+
+ ** Log Ended:   Fri Apr 29 17:26:52 2016
+

@@ -1,0 +1,49 @@
+********************************************************************
+                            I/O Bank Report
+********************************************************************
+  
+Product: Designer
+Release: v11.7
+Version: 11.7.0.119
+Date: Tue May 03 13:43:48 2016
+Design Name: Core8051s_ExtSRAM_BRT  Family: Fusion  Die: M1AFS1500  Package: 484 FBGA
+
+
+I/O Function:
+
+    Type                                  | w/o register  | w/ register  | w/ DDR register
+    --------------------------------------|---------------|--------------|----------------
+    Input I/O                             | 14            | 0            | 0
+    Output I/O                            | 55            | 0            | 0
+    Bidirectional I/O                     | 8             | 0            | 0
+    Differential Input I/O Pairs          | 0             | 0            | 0
+    Differential Output I/O Pairs         | 0             | 0            | 0
+
+I/O Technology:
+
+                                    |   Voltages    |             I/Os
+    --------------------------------|-------|-------|-------|--------|--------------
+    I/O Standard(s)                 | Vcci  | Vref  | Input | Output | Bidirectional
+    --------------------------------|-------|-------|-------|--------|--------------
+    LVTTL                           | 3.30v | N/A   | 14    | 55     | 8
+
+I/O Bank Resource Usage:
+
+          |   Voltages    | Single I/Os  | Diff I/O Pairs |        Vref I/Os
+          |-------|-------|------|-------|-------|--------|------|-------|----------
+          | Vcci  | Vref  | Used | Total | Used  | Total  | Used | Total | Vref Pins
+    ------|-------|-------|------|-------|-------|--------|------|-------|----------
+    Bank0 | 3.30v | N/A   | 8    | 32    | 0     | 16     | N/A  | N/A   | N/A
+    Bank1 | 3.30v | N/A   | 28   | 38    | 0     | 19     | N/A  | N/A   | N/A
+    Bank2 | 3.30v | N/A   | 22   | 74    | 0     | 36     | N/A  | N/A   | N/A
+    Bank3 | ANALOG| N/A   | N/A  | N/A   | N/A   | N/A    | N/A  | N/A   | N/A
+    Bank4 | 3.30v | N/A   | 19   | 79    | 0     | 38     | N/A  | N/A   | N/A
+
+I/O Voltage Usage:
+
+       Voltages    |     I/Os
+    -------|-------|------|-------
+     Vcci  | Vref  | Used | Total
+    -------|-------|------|-------
+     3.30v | N/A   | 77   | 223
+

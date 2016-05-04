@@ -1,0 +1,1 @@
+@W: MT420 |Found inferred clock memory_mux|SYSCLK with period 10.00ns. Please declare a user-defined clock on object "p:SYSCLK"

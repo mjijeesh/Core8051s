@@ -1,0 +1,21 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N: CD720 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\vhd\std.vhd":123:18:123:21|Setting time resolution to ns
+@N:"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\hdl\memory_mux.vhd":6:7:6:16|Top entity is set to memory_mux.
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\hdl\memory_mux.vhd":6:7:6:16|Synthesizing work.memory_mux.one 
+@N: CD630 :"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\smartgen\RAM4Kx8\RAM4Kx8.vhd":8:7:8:13|Synthesizing work.ram4kx8.def_arch 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\proasic\fusion.vhd":3182:10:3182:15|Synthesizing fusion.ram4k9.syn_black_box 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\proasic\fusion.vhd":3019:10:3019:12|Synthesizing fusion.vcc.syn_black_box 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\proasic\fusion.vhd":1899:10:1899:12|Synthesizing fusion.gnd.syn_black_box 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\proasic\fusion.vhd":2240:10:2240:14|Synthesizing fusion.nand3.syn_black_box 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\proasic\fusion.vhd":2179:10:2179:12|Synthesizing fusion.mx2.syn_black_box 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\proasic\fusion.vhd":3149:10:3149:13|Synthesizing fusion.buff.syn_black_box 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\proasic\fusion.vhd":1584:10:1584:17|Synthesizing fusion.dfn1e1c0.syn_black_box 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\proasic\fusion.vhd":2381:10:2381:12|Synthesizing fusion.or2.syn_black_box 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\proasic\fusion.vhd":2267:10:2267:15|Synthesizing fusion.nand3c.syn_black_box 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\proasic\fusion.vhd":2389:10:2389:13|Synthesizing fusion.or2a.syn_black_box 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\proasic\fusion.vhd":2249:10:2249:15|Synthesizing fusion.nand3a.syn_black_box 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\proasic\fusion.vhd":2258:10:2258:15|Synthesizing fusion.nand3b.syn_black_box 
+@N: CD630 :"C:\Microsemi\Libero_SoC_v11.7\Synplify\lib\proasic\fusion.vhd":2117:10:2117:12|Synthesizing fusion.inv.syn_black_box 
+@N|Running in 64-bit mode
+

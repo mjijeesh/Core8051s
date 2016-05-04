@@ -1,0 +1,24 @@
+Timing Violation Report Min Delay Analysis
+
+SmartTime Version v11.7
+Microsemi Corporation - Microsemi Libero Software Release v11.7 (Version 11.7.0.119)
+Date: Tue May 03 13:56:58 2016
+
+
+Design: Core8051s_ExtSRAM_BRT
+Family: Fusion
+Die: M1AFS1500
+Package: 484 FBGA
+Temperature Range: 0 - 70 C
+Voltage Range: 1.425 - 1.575 V
+Speed Grade: STD
+Design State: Post-Layout
+Data source: Silicon verified
+Min Operating Conditions: BEST - 1.575 V - 0 C
+Max Operating Conditions: WORST - 1.425 V - 70 C
+Using Enhanced Min Delay Analysis
+Scenario for Timing Analysis: Primary
+
+
+No Path
+

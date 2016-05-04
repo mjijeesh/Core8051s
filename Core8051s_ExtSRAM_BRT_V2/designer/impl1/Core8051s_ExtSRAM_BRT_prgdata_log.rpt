@@ -1,0 +1,25 @@
+Microsemi Libero Software
+Version: 11.7.0.119
+Release: v11.7
+
+Info: The design
+      C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/designer\
+      /impl1/Core8051s_ExtSRAM_BRT.adb was last modified by software version 11.7.0.119.
+Opened an existing Libero design
+C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/designer/impl1\
+/Core8051s_ExtSRAM_BRT.adb.
+
+The Export-map command succeeded ( 00:00:37 )
+Wrote to the file:
+C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\designer\impl1\
+\Core8051s_ExtSRAM_BRT.pdb
+CHECKSUM: 99BF
+
+The Generate programming file command succeeded ( 00:00:42 )
+Design saved to file
+C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/designer/impl1\
+/Core8051s_ExtSRAM_BRT.adb.
+
+The Execute Script command succeeded ( 00:00:47 )
+Design closed.
+

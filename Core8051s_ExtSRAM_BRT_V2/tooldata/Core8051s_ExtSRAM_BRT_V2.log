@@ -1,0 +1,16 @@
+Project Name: Core8051s_ExtSRAM_BRT_V2
+Location: C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2
+Description: 
+Preferred HDL Type: VHDL
+
+#-----------------------------------------------------
+                  Device Details
+#-----------------------------------------------------
+
+Part Number    : M1AFS1500-FG484
+Family         : Fusion
+Die            : M1AFS1500
+Package        : 484 FBGA
+Speed          : STD
+Core Voltage   : 1.5
+Range          : COM

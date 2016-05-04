@@ -1,0 +1,27 @@
+#OPTIONS:"|-layerid|0|-orig_srs|C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051s-Core1553RT\\Core8051s_ExtSRAM_BRT_V2\\synthesis\\synwork\\memory_mux_comp.srs|-top|work.memory_mux|-prodtype|synplify_pro|-nram|-fixsmult|-divnmod|-encrypt|-pro|-lite|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-ignore_undefined_lib|-lib|work|-lib|work"
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.7\\Synplify\\bin64\\c_vhdl.exe":1449201926
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.7\\Synplify\\lib\\vhd\\location.map":1449201932
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.7\\Synplify\\lib\\vhd\\std.vhd":1449201932
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.7\\Synplify\\lib\\vhd\\snps_haps_pkg.vhd":1449201932
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.7\\Synplify\\lib\\vhd\\std1164.vhd":1449201932
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.7\\Synplify\\lib\\vhd\\numeric.vhd":1449201932
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.7\\Synplify\\lib\\vhd\\umr_capim.vhd":1449201932
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.7\\Synplify\\lib\\vhd\\arith.vhd":1449201932
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.7\\Synplify\\lib\\vhd\\unsigned.vhd":1449201932
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.7\\Synplify\\lib\\vhd\\hyperents.vhd":1449201932
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051s-Core1553RT\\Core8051s_ExtSRAM_BRT_V2\\smartgen\\RAM4Kx8\\RAM4Kx8.vhd":1462254993
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.7\\Synplify\\lib\\proasic\\fusion.vhd":1449201928
+#CUR:"C:\\proj\\dev-kits\\m1afs-adv-dev-kit\\Core8051s-Core1553RT\\Core8051s_ExtSRAM_BRT_V2\\hdl\\memory_mux.vhd":1462254864
+0			"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\smartgen\RAM4Kx8\RAM4Kx8.vhd" vhdl
+1			"C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\hdl\memory_mux.vhd" vhdl
+#Dependency Lists(Uses List)
+0 -1
+1 0
+#Dependency Lists(Users Of)
+0 1
+1 -1
+#Design Unit to File Association
+module work memory_mux 1
+arch work memory_mux one 1
+module work ram4kx8 0
+arch work ram4kx8 def_arch 0

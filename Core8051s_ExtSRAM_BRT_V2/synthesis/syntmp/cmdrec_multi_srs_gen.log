@@ -1,0 +1,7 @@
+C:\Microsemi\Libero_SoC_v11.7\Synplify\bin64\syn_nfilter.exe  -link  -top  work.Core8051s_ExtSRAM_BRT  -multisrs  C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\synthesis\synwork\Core8051s_ExtSRAM_BRT_comp.srs  -osyn  C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\synthesis\synwork\Core8051s_ExtSRAM_BRT_mult.srs  -log  C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\synthesis\synlog\Core8051s_ExtSRAM_BRT_multi_srs_gen.srr 
+rc:0 success:1
+C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\synthesis\synwork\Core8051s_ExtSRAM_BRT_comp.srs|i|1462262656|336731
+C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\synthesis\synwork\Core8051s_ExtSRAM_BRT_mult.srs|o|1462262658|11332
+C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\synthesis\synlog\Core8051s_ExtSRAM_BRT_multi_srs_gen.srr|o|1462262658|535
+C:\Microsemi\Libero_SoC_v11.7\Synplify\bin\syn_nfilter.exe|i|1449201924|3007488
+C:\Microsemi\Libero_SoC_v11.7\Synplify\bin64\syn_nfilter.exe|i|1449201926|3974144

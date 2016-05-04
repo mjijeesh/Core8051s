@@ -1,0 +1,4 @@
+CKID0001:@|S:PLL_50Mh_6Mh_0.Core@|E:sys_0.CoreWatchdog_0.iPRDATA[31]@|F:@syn_sample_clock_path==CKID0001@|M:ClockId0001 
+CKID0002:@|S:PLL_50Mh_6Mh_0.Core@|E:sys_0.BRT_0_0.CORE1553BRT_APB_0.U300.MCDMUX[1]@|F:@syn_sample_clock_path1==CKID0002@|M:ClockId0002 
+CKID0003:@|S:sys_0.CORE8051S_0.oci1_trace0.ocia51_inst.ujtag1.jtagu_inst.UJTAG_inst@|E:sys_0.CORE8051S_0.oci1_trace0.ocia51_inst.ujtag1.jtagu_inst.IR_xhdl[0]@|F:@syn_sample_clock_path==CKID0003@|M:ClockId0003 
+CKID0004:@|S:DebugIf_TCK@|E:sys_0.CORE8051S_0.oci1_trace0.ocia51_inst.ujtag1.jtagu_inst.UJTAG_inst@|F:@syn_sample_clock_path1==CKID0004@|M:ClockId0004 

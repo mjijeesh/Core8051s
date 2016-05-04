@@ -1,0 +1,124 @@
+#--  Synopsys, Inc.
+#--  Version J-2015.03M-SP1-2
+#--  Project file C:\proj\dev-kits\m1afs-adv-dev-kit\Core8051s-Core1553RT\Core8051s_ExtSRAM_BRT_V2\synthesis\Core8051s_ExtSRAM_BRT_syn.prj
+
+#project files
+add_file -vhdl -lib work "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/smartgen/PLL_50Mh_6Mh/PLL_50Mh_6Mh.vhd"
+add_file -vhdl -lib work "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/smartgen/RAM4Kx8/RAM4Kx8.vhd"
+add_file -vhdl -lib work "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/hdl/memory_mux.vhd"
+add_file -vhdl -lib work "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/smartgen/rc_osc/rc_osc.vhd"
+add_file -vhdl -lib work "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/vhdl/u/core8051s_globs_fusion.vhd"
+add_file -vhdl -lib work "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/vhdl/u/core8051s_utility.vhd"
+add_file -vhdl -lib work "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/vhdl/u/alu.vhd"
+add_file -vhdl -lib work "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/vhdl/u/clkctrl.vhd"
+add_file -vhdl -lib work "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/vhdl/u/cpu.vhd"
+add_file -vhdl -lib work "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/vhdl/u/intctrl.vhd"
+add_file -vhdl -lib work "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/vhdl/u/isr.vhd"
+add_file -vhdl -lib work "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/vhdl/u/memctrl.vhd"
+add_file -vhdl -lib work "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/vhdl/u/oci.vhd"
+add_file -vhdl -lib work "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/vhdl/u/pmu.vhd"
+add_file -vhdl -lib work "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/vhdl/u/ramsfrctrl.vhd"
+add_file -vhdl -lib work "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/vhdl/u/rstctrl.vhd"
+add_file -vhdl -lib work "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/vhdl/u/instrdec.vhd"
+add_file -vhdl -lib work "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/vhdl/u/main8051.vhd"
+add_file -vhdl -lib work "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/vhdl/u/ram256x20_fusion.vhd"
+add_file -vhdl -lib work "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/vhdl/u/ram256x8_fusion.vhd"
+add_file -vhdl -lib work "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/vhdl/u/ram256x8_block_ram.vhd"
+add_file -vhdl -lib work "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/vhdl/u/ram256x8_registers.vhd"
+add_file -vhdl -lib work "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/vhdl/u/jtagdef.vhd"
+add_file -vhdl -lib work "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/vhdl/u/debug.vhd"
+add_file -vhdl -lib work "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/vhdl/u/jtag.vhd"
+add_file -vhdl -lib work "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/vhdl/u/jtagu_fusion.vhd"
+add_file -vhdl -lib work "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/vhdl/u/trace.vhd"
+add_file -vhdl -lib work "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/vhdl/u/trigger.vhd"
+add_file -vhdl -lib work "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/vhdl/u/ocia51.vhd"
+add_file -vhdl -lib work "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/vhdl/u/core8051s.vhd"
+add_file -vhdl -lib work "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CoreWatchdog/1.1.101/rtl/vhdl/u/CoreWatchdog.vhd"
+add_file -vhdl -lib COREAPB3_LIB "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vhdl/core/coreapb3_muxptob3.vhd"
+add_file -vhdl -lib COREAPB3_LIB "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vhdl/core/coreapb3_iaddr_reg.vhd"
+add_file -vhdl -lib COREAPB3_LIB "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vhdl/core/coreapb3.vhd"
+add_file -vhdl -lib COREAPBSRAM_LIB "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/COREAPBSRAM/2.0.102/rtl/vhdl/core/sram_512to8192x8_fusion.vhd"
+add_file -vhdl -lib COREAPBSRAM_LIB "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/COREAPBSRAM/2.0.102/rtl/vhdl/core/coreapbsram.vhd"
+add_file -vhdl -lib COREGPIO_LIB "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CoreGPIO/3.1.101/rtl/vhdl/core/coregpio_pkg.vhd"
+add_file -vhdl -lib COREGPIO_LIB "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CoreGPIO/3.1.101/rtl/vhdl/core/coregpio.vhd"
+add_file -vhdl -lib CORETIMER_LIB "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CoreTimer/2.0.103/rtl/vhdl/core/coretimer_pkg.vhd"
+add_file -vhdl -lib CORETIMER_LIB "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CoreTimer/2.0.103/rtl/vhdl/core/coretimer.vhd"
+add_file -vhdl -lib COREUARTAPB_LIB "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/work/sys/CoreUARTapb_0/rtl/vhdl/core/Clock_gen.vhd"
+add_file -vhdl -lib COREUARTAPB_LIB "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/work/sys/CoreUARTapb_0/rtl/vhdl/core/Rx_async.vhd"
+add_file -vhdl -lib COREUARTAPB_LIB "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/work/sys/CoreUARTapb_0/rtl/vhdl/core/Tx_async.vhd"
+add_file -vhdl -lib COREUARTAPB_LIB "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/work/sys/CoreUARTapb_0/rtl/vhdl/core/fifo_256x8_fusion.vhd"
+add_file -vhdl -lib COREUARTAPB_LIB "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/work/sys/CoreUARTapb_0/rtl/vhdl/core/coreuart_pkg.vhd"
+add_file -vhdl -lib COREUARTAPB_LIB "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/work/sys/CoreUARTapb_0/rtl/vhdl/core/CoreUART.vhd"
+add_file -vhdl -lib COREUARTAPB_LIB "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/work/sys/CoreUARTapb_0/rtl/vhdl/core/CoreUARTapb.vhd"
+add_file -vhdl -lib work "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/hdl/Core8051s_BRT_ADDR_REMAP.vhd"
+add_file -vhdl -lib CORE1553BRT_APB_LIB "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE1553BRT_APB/3.2.122/rtl/vhdl/amba/ram2k16_fusion.vhd"
+add_file -vhdl -lib CORE1553BRT_APB_LIB "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE1553BRT_APB/3.2.122/rtl/vhdl/core300/backend.vhd"
+add_file -vhdl -lib CORE1553BRT_APB_LIB "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE1553BRT_APB/3.2.122/rtl/vhdl/core300/cwlegality.vhd"
+add_file -vhdl -lib CORE1553BRT_APB_LIB "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE1553BRT_APB/3.2.122/rtl/vhdl/core300/decoder.vhd"
+add_file -vhdl -lib CORE1553BRT_APB_LIB "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE1553BRT_APB/3.2.122/rtl/vhdl/core300/encoder.vhd"
+add_file -vhdl -lib CORE1553BRT_APB_LIB "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE1553BRT_APB/3.2.122/rtl/vhdl/core300/rtcomps.vhd"
+add_file -vhdl -lib CORE1553BRT_APB_LIB "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE1553BRT_APB/3.2.122/rtl/vhdl/core300/RT1553B.vhd"
+add_file -vhdl -lib CORE1553BRT_APB_LIB "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE1553BRT_APB/3.2.122/rtl/vhdl/amba/Core1553BRT_apb.vhd"
+add_file -vhdl -lib CORE1553BRT_APB_LIB "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CORE1553BRT_APB/3.2.122/rtl/vhdl/amba/components.vhd"
+add_file -vhdl -lib work "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/work/BRT_0/BRT_0.vhd"
+add_file -vhdl -lib COREAPB3_LIB "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vhdl/core/components.vhd"
+add_file -vhdl -lib COREAPBSRAM_LIB "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/COREAPBSRAM/2.0.102/rtl/vhdl/core/components.vhd"
+add_file -vhdl -lib COREGPIO_LIB "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/Actel/DirectCore/CoreGPIO/3.1.101/rtl/vhdl/core/components.vhd"
+add_file -vhdl -lib COREUARTAPB_LIB "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/work/sys/CoreUARTapb_0/rtl/vhdl/core/components.vhd"
+add_file -vhdl -lib work "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/work/sys/sys.vhd"
+add_file -vhdl -lib work "C:/proj/dev-kits/m1afs-adv-dev-kit/Core8051s-Core1553RT/Core8051s_ExtSRAM_BRT_V2/component/work/Core8051s_ExtSRAM_BRT/Core8051s_ExtSRAM_BRT.vhd"
+
+
+
+#implementation: "synthesis"
+impl -add synthesis -type fpga
+
+#device options
+set_option -technology Fusion
+set_option -part M1AFS1500
+set_option -package FBGA484
+set_option -speed_grade STD
+set_option -part_companion ""
+
+#compilation/mapping options
+set_option -use_fsm_explorer 0
+set_option -top_module "work.Core8051s_ExtSRAM_BRT"
+
+# mapper_options
+set_option -frequency 100.000
+set_option -write_verilog 0
+set_option -write_vhdl 0
+set_option -srs_instrumentation 1
+
+# actel_options
+set_option -rw_check_on_ram 0
+
+# Microsemi 500K
+set_option -run_prop_extract 1
+set_option -maxfan 24
+set_option -disable_io_insertion 0
+set_option -retiming 0
+set_option -report_path 4000
+set_option -opcond COMWC
+set_option -update_models_cp 0
+set_option -preserve_registers 0
+
+# Microsemi 500K
+set_option -globalthreshold 50
+
+# sequential_optimization_options
+set_option -symbolic_fsm_compiler 1
+
+# Compiler Options
+set_option -compiler_compatible 0
+set_option -resource_sharing 1
+
+# Compiler Options
+set_option -auto_infer_blackbox 0
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 1
+
+#set result format/file last
+project -result_file "./Core8051s_ExtSRAM_BRT.edn"
+impl -active "synthesis"

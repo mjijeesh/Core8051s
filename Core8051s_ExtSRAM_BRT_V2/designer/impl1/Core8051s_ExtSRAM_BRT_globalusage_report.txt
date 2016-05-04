@@ -1,0 +1,31 @@
+********************************************************************
+                            Global Usage Report
+********************************************************************
+  
+Product: Designer
+Release: v11.7
+Version: 11.7.0.119
+Date: Tue May 03 13:43:47 2016
+Design Name: Core8051s_ExtSRAM_BRT  Family: Fusion  Die: M1AFS1500  Package: 484 FBGA
+Design State: Post-Layout
+
+The following nets have been routed to a chip global resource:
+
+    Fanout            Name
+    ----------------------
+    1855              Net   : GLA
+                      Driver: PLL_50Mh_6Mh_0/Core/U_PLL
+    413               Net   : GLB
+                      Driver: PLL_50Mh_6Mh_0/Core/U_GLB
+    211               Net   : NSYSRESET_c
+                      Driver: NSYSRESET_pad/U0/U1/U_GL
+    322               Net   : MEM_ADDR_c[2]
+                      Driver: sys_0/CORE8051S_0/MAIN8051_inst/U_MEMCTRL/memaddr_i_RNI3GU5[2]/U_CLKSRC/U_GL
+    1358              Net   : sys_0/Core8051s_00_PRESETN
+                      Driver: sys_0/CORE8051S_0/MAIN8051_inst/U_PMU/nrsto_RNIBVGD/U_CLKSRC/U_GL
+    354               Net   : sys_0/BRT_0_0/CORE1553BRT_APB_0/U300/rstn
+                      Driver: sys_0/BRT_0_0/CORE1553BRT_APB_0/U300/RSTREG_RNIMDAR_0/U_CLKSRC/U_GL
+
+
+
+

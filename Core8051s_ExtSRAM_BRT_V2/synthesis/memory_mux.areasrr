@@ -1,0 +1,35 @@
+----------------------------------------------------------------------
+Report for cell memory_mux.one
+                                          Cell usage:
+                               cell       count     area    count*area
+                              BIBUF         8       0.0        0.0
+                             CLKBUF         1       0.0        0.0
+                                GND         1       0.0        0.0
+                              INBUF        28       0.0        0.0
+                                INV         2       1.0        2.0
+                                MX2         8       1.0        8.0
+                             OUTBUF        46       0.0        0.0
+                            RAM4Kx8         1     101.0      101.0
+                                VCC         1       0.0        0.0
+                            
+                         TOTAL             96                111.0
+----------------------------------------------------------------------
+Report for cell RAM4Kx8.netlist
+     Instance path:  XDATA
+                                          Cell usage:
+                               cell       count     area    count*area
+                               BUFF         5       1.0        5.0
+                           DFN1E1C0         3       1.0        3.0
+                                GND         1       0.0        0.0
+                                INV         2       1.0        2.0
+                                MX2        56       1.0       56.0
+                              NAND3         2       1.0        2.0
+                             NAND3A         6       1.0        6.0
+                             NAND3B         6       1.0        6.0
+                             NAND3C         2       1.0        2.0
+                                OR2        16       1.0       16.0
+                               OR2A         3       1.0        3.0
+                             RAM4K9         8       0.0        0.0
+                                VCC         1       0.0        0.0
+                            
+                         TOTAL            111                101.0
